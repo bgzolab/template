@@ -57,7 +57,7 @@ class Solution {
 //        }
 //        return min==Integer.MAX_VALUE? 0: min;
 
-//        3. double point
+//        3. sliding windows
         int left=0, right=0, sum = 0;
         int min = Integer.MAX_VALUE;
 
