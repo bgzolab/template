@@ -1,9 +1,26 @@
 ## Trashing
+```java
+# java
+path: \\wsl$\Ubuntu\home\bgzocg\demo\tasks\leetcode\java\src\cc\bgzo
+template: $!velocityTool.camelCaseName(${question.frontendQuestionId})$!velocityTool.camelCaseName(${question.title})
+package cc.bgzo.leetcode.editor.cn;
+public class $!velocityTool.camelCaseName(${question.frontendQuestionId})$!velocityTool.camelCaseName(${question.title}){
+    public static void main(String[] args) {
+        Solution solution = new $!velocityTool.camelCaseName(${question.frontendQuestionId})$!velocityTool.camelCaseName(${question.title})().new Solution();
+    }
+    ${question.code}
+}
+// ${question.title}
+${question.content}
+
+```
+
 - 无法自由命名类名
   - > 包的定义与路径无关，为了保护其他文件，固定前缀路径为leetcode/editor/(en|cn)
     > via: via [Issue #509-shuzijun/leetcode-editor](https://github.com/shuzijun/leetcode-editor/issues/509 )
   - 怎么不生成包名? Sucks.
 - 题目出现非字母字符的话, 类需要重新命名, 但是提交就又是个问题.
+  - 每次本地 debug 需要配置`忽略错误检查`/打入小黑屋...
 - 一次只能刷一种题目, 混刷需要反复在设置中切换.
 
 ## Contents
