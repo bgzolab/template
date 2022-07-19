@@ -12,7 +12,6 @@ public class $!velocityTool.camelCaseName(${question.frontendQuestionId})$!veloc
 }
 // ${question.title}
 ${question.content}
-
 ```
 
 - 无法自由命名类名
