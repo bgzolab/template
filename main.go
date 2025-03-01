@@ -20,9 +20,15 @@ import (
 var logger *log.Logger
 var outputPath string
 
-func init() {
+func initLog() {
+	output := filepath.Join(outputPath, "bot.log")
+	err := os.MkdirAll(outputPath, os.ModePerm) // 创建目录
+	if err != nil {
+		log.Println("Error creating directory:", outputPath, err)
+	}
+
 	// 初始化日志
-	logFile, err := os.OpenFile("bot.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	logFile, err := os.OpenFile(output, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatal("无法创建日志文件: ", err)
 	}
@@ -257,6 +263,7 @@ func main() {
 		Long:  `Sync the message from tg bot.`,
 		Args:  cobra.MinimumNArgs(0),
 		Run: func(cmd *cobra.Command, args []string) {
+			initLog()
 			start(BOT_TOKEN)
 		},
 	}
