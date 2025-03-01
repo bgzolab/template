@@ -32,7 +32,7 @@ func main() {
 	opts := []bot.Option{
 		bot.WithDefaultHandler(handler),
 		bot.WithMessageTextHandler("/start", bot.MatchTypeExact, startHandler),
-		bot.WithMessageTextHandler("/version", bot.MatchTypeExact, versionHandler),
+		bot.WithMessageTextHandler("/status", bot.MatchTypeExact, versionHandler),
 	}
 
 	// 加载 .env 文件
@@ -54,8 +54,8 @@ func main() {
 
 	_, err = b.SetMyCommands(ctx, &bot.SetMyCommandsParams{
 		Commands: []models.BotCommand{
-			{Command: "start", Description: "Hello world!"},
-			{Command: "version", Description: "I'm working!"},
+			{Command: "start", Description: "Start bot"},
+			{Command: "status", Description: "Check bot status"},
 		},
 	})
 	if err != nil {
@@ -68,11 +68,21 @@ func main() {
 /** 消息默认处理器，默认缓存所有消息
  */
 func handler(ctx context.Context, b *bot.Bot, update *models.Update) {
-	logMessage(update)
+	if update.Message == nil {
+		return
+	}
+	ok, msg := persistMessage(update)
+	if !ok {
+		logger.Println(msg)
+	} else {
+		b.SendMessage(ctx, &bot.SendMessageParams{
+			ChatID: update.Message.Chat.ID,
+			Text:   fmt.Sprintf("信息已备案至: %s!", msg),
+		})
+	}
 }
 
 func versionHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
-	logMessage(update)
 	b.SendMessage(ctx, &bot.SendMessageParams{
 		ChatID: update.Message.Chat.ID,
 		Text:   "I'm working!",
@@ -80,67 +90,64 @@ func versionHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 }
 
 func startHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
-	logMessage(update)
 	b.SendMessage(ctx, &bot.SendMessageParams{
 		ChatID: update.Message.Chat.ID,
 		Text:   "Hello world!",
 	})
 }
 
-func logMessage(update *models.Update) {
+func persistMessage(update *models.Update) (bool, string) {
 	if update.Message == nil {
-		return
-	}
-	logEntry := fmt.Sprintf("ChatID: %d, User: %s, Message: %s",
-		update.Message.Chat.ID,
-		update.Message.From.Username,
-		update.Message.Text,
-	)
-	logger.Println(logEntry)
-	persistMessage(update)
-}
-
-func persistMessage(update *models.Update) {
-	if update.Message == nil {
-		return
+		return false, "接受消息为空"
 	}
 
-	var fileName string
+	title := fmt.Sprintf("chat_%d.md", update.Message.Chat.ID)
+	msgText := update.Message.Text
+	if msgText == "" {
+		msgText = update.Message.Caption
+	}
 	sourceLink := ""
 	sourceDate := time.Now()
 
 	if update.Message.ForwardOrigin != nil && update.Message.ForwardOrigin.Type == "channel" {
-		// 消息为转发，进入特殊处理
+		// 消息为转发，特殊处理
 		origin := update.Message.ForwardOrigin.MessageOriginChannel
+		title = origin.Chat.Title
 
-		fileName = fmt.Sprintf("%s.md", origin.Chat.Title)
 		sourceLink = fmt.Sprintf("https://t.me/%s/%d",
 			origin.Chat.Username,
 			origin.MessageID)
 		sourceDate = time.Unix(int64(origin.Date), 0)
-	} else {
-		fileName = fmt.Sprintf("chat_%d.md", update.Message.Chat.ID)
 	}
 
-	file, err := os.OpenFile(fileName, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	file, err := os.OpenFile(fmt.Sprintf("%s.md", title),
+		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		logger.Println("Error opening file for writing: ", err)
-		return
+		return false, "无法打开文件以写入"
 	}
+
+	logCommandline := fmt.Sprintf("ChatID: %d, User: %s, Message: %s",
+		update.Message.Chat.ID,
+		title,
+		msgText,
+	)
+	logger.Print(logCommandline)
 
 	defer file.Close() // 关闭时会刷新缓冲区
 
-	logEntry := fmt.Sprintf("\n## %s\n\n%s\n\n%s\n",
+	logMarkdown := fmt.Sprintf("\n## %s\n\n%s\n\n%s\n",
 		sourceDate.Format("2006-01-02 15:04:05"),
-		update.Message.Text,
+		msgText,
 		sourceLink,
 	)
 
-	_, err = file.WriteString(logEntry)
+	_, err = file.WriteString(logMarkdown)
 	if err != nil {
 		logger.Println("Error writing to file: ", err)
-		return
+		return false, "写入文件失败"
 	}
 
 	file.Sync() // 强制写入磁盘
+	return true, title
 }
