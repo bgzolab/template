@@ -11,6 +11,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"strings"
 	"time"
 	"unicode"
 )
@@ -161,17 +162,6 @@ func selectMsgText(update *models.Update) string {
 	return handleMsgLink(msgText, msgEntities)
 }
 
-// 泛型 Filter
-func Filter[T any](arr []T, predicate func(T) bool) []T {
-	var result []T
-	for _, v := range arr {
-		if predicate(v) {
-			result = append(result, v)
-		}
-	}
-	return result
-}
-
 // 判断 `string` 是否是 Emoji
 func isEmoji(grapheme string) bool {
 	runes := []rune(grapheme)
@@ -187,7 +177,7 @@ func isEmoji(grapheme string) bool {
 		unicode.Is(unicode.Sk, r) // 符号和变音符
 }
 
-func msgToStrList(msg string) []string {
+func msgToGraphemes(msg string) []string {
 	gr := uniseg.NewGraphemes(msg)
 	var runeMsg []string
 	for gr.Next() {
@@ -201,58 +191,61 @@ func handleMsgLink(msg string, entities []models.MessageEntity) string {
 		return msg
 	}
 
-	// 超链接
-	links := Filter(entities, func(n models.MessageEntity) bool { return n.Type == models.MessageEntityTypeTextLink })
+	// 过滤出超链接
+	links := make([]models.MessageEntity, 0, len(entities))
+	for _, entity := range entities {
+		if entity.Type == models.MessageEntityTypeTextLink {
+			links = append(links, entity)
+		}
+	}
 	if len(links) == 0 {
 		return msg
 	}
 
-	var result string
-	strList := msgToStrList(msg)
-	strLen := len(strList)
-	entityIndex, tgIndex := 0, 0
-	// tgIndex 	tg 识别 emoji 默认占位 2，手工维护以和 offset/length 对齐
-	// index	links 的下标索引
+	var result strings.Builder
+	graphemes := msgToGraphemes(msg)
+	linkIndex, tgOffset := 0, 0
+	// tgOffset 	tg 识别 emoji 默认占位 2，手工维护以和 offset/length 对齐
+	// linkIndex	links 的下标索引
 
-	for i := 0; i < strLen; i++ {
-		ch := strList[i]
-		if entityIndex < len(links) {
-			entity := links[entityIndex]
+	for i := 0; i < len(graphemes); i++ {
+		ch := graphemes[i]
+		if linkIndex < len(links) {
+			entity := links[linkIndex]
 			offset, length := entity.Offset, entity.Length
 
-			if tgIndex == offset {
-				result += "["
+			if tgOffset == offset {
+				result.WriteString("[")
 				for j := 0; j < length; j++ {
-					if i < strLen {
-						// NOTE: 防止最后一位偶发的越界问题
-						ch = strList[i]
+					if i < len(graphemes) { // NOTE: 防止最后一位偶发的越界问题
+						ch = graphemes[i]
 					}
 					if j != length-1 {
 						i++
 						if isEmoji(ch) {
-							tgIndex += 2
-							j++
+							tgOffset += 2 // Telegram 认为 Emoji 长度为 2
+							j++           // offset 技术也应该保持相同步长
 						} else {
-							tgIndex++
+							tgOffset++
 						}
 					}
-					result += ch
+					result.WriteString(ch)
 				}
 
-				result += fmt.Sprintf("](%s)", entity.URL)
-				entityIndex++
+				result.WriteString(fmt.Sprintf("](%s)", entity.URL))
+				linkIndex++
 			} else {
-				result += ch
+				result.WriteString(ch)
 			}
 		} else {
-			result += ch
+			result.WriteString(ch)
 		}
 
 		if isEmoji(ch) {
-			tgIndex += 2
+			tgOffset += 2 // Telegram 认为 Emoji 长度为 2
 		} else {
-			tgIndex++
+			tgOffset++
 		}
 	}
-	return result
+	return result.String()
 }
