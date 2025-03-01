@@ -6,11 +6,13 @@ import (
 	"github.com/go-telegram/bot"
 	"github.com/go-telegram/bot/models"
 	"github.com/joho/godotenv"
+	"github.com/rivo/uniseg"
 	"io"
 	"log"
 	"os"
 	"os/signal"
 	"time"
+	"unicode"
 )
 
 var logger *log.Logger
@@ -102,10 +104,7 @@ func persistMessage(update *models.Update) (bool, string) {
 	}
 
 	title := fmt.Sprintf("chat_%d.md", update.Message.Chat.ID)
-	msgText := update.Message.Text
-	if msgText == "" {
-		msgText = update.Message.Caption
-	}
+	msgText := selectMsgText(update)
 	sourceLink := ""
 	sourceDate := time.Now()
 
@@ -150,4 +149,110 @@ func persistMessage(update *models.Update) (bool, string) {
 
 	file.Sync() // 强制写入磁盘
 	return true, title
+}
+
+func selectMsgText(update *models.Update) string {
+	msgText := update.Message.Text
+	msgEntities := update.Message.Entities
+	if msgText == "" {
+		msgText = update.Message.Caption
+		msgEntities = update.Message.CaptionEntities
+	}
+	return handleMsgLink(msgText, msgEntities)
+}
+
+// 泛型 Filter
+func Filter[T any](arr []T, predicate func(T) bool) []T {
+	var result []T
+	for _, v := range arr {
+		if predicate(v) {
+			result = append(result, v)
+		}
+	}
+	return result
+}
+
+// 判断 `string` 是否是 Emoji
+func isEmoji(grapheme string) bool {
+	runes := []rune(grapheme)
+	if len(runes) > 1 {
+		return true // 复合 Emoji（如 👨‍👩‍👧‍👦）
+	}
+	r := runes[0]
+	return (r >= 0x1F600 && r <= 0x1F64F) || // 表情符号 😊
+		(r >= 0x1F300 && r <= 0x1F5FF) || // 其他符号 🌀
+		(r >= 0x1F680 && r <= 0x1F6FF) || // 交通 🚌
+		(r >= 0x1F700 && r <= 0x1F77F) || // 其他 🛐
+		(r >= 0x1F900 && r <= 0x1F9FF) || // 动物 🦊
+		unicode.Is(unicode.Sk, r) // 符号和变音符
+}
+
+func msgToStrList(msg string) []string {
+	gr := uniseg.NewGraphemes(msg)
+	var runeMsg []string
+	for gr.Next() {
+		runeMsg = append(runeMsg, gr.Str())
+	}
+	return runeMsg
+}
+
+func handleMsgLink(msg string, entities []models.MessageEntity) string {
+	if entities == nil || len(entities) == 0 {
+		return msg
+	}
+
+	// 超链接
+	links := Filter(entities, func(n models.MessageEntity) bool { return n.Type == models.MessageEntityTypeTextLink })
+	if len(links) == 0 {
+		return msg
+	}
+
+	var result string
+	strList := msgToStrList(msg)
+	strLen := len(strList)
+	entityIndex, tgIndex := 0, 0
+	// tgIndex 	tg 识别 emoji 默认占位 2，手工维护以和 offset/length 对齐
+	// index	links 的下标索引
+
+	for i := 0; i < strLen; i++ {
+		ch := strList[i]
+		if entityIndex < len(links) {
+			entity := links[entityIndex]
+			offset, length := entity.Offset, entity.Length
+
+			if tgIndex == offset {
+				result += "["
+				for j := 0; j < length; j++ {
+					if i < strLen {
+						// NOTE: 防止最后一位偶发的越界问题
+						ch = strList[i]
+					}
+					if j != length-1 {
+						i++
+						if isEmoji(ch) {
+							tgIndex += 2
+							j++
+						} else {
+							tgIndex++
+						}
+					}
+					result += ch
+				}
+
+				result += fmt.Sprintf("](%s)", entity.URL)
+				entityIndex++
+			} else {
+				result += ch
+			}
+		} else {
+			result += ch
+		}
+
+		if isEmoji(ch) {
+			tgIndex += 2
+		} else {
+			tgIndex++
+		}
+	}
+	return result
 }

@@ -23,3 +23,38 @@ Tg bot api go version have many implements via: https://core.telegram.org/bots/a
 # install dep
 go get github.com/joho/godotenv
 ```
+
+## Build
+
+```shell
+go build -o mybot main.go
+```
+
+## Run background
+
+```shell
+nohup ./mybot > bot.log 2>&1 &     
+```
+
+
+```bash
+ sudo vim /lib/systemd/system/tgbot@.service 
+```
+
+```bash
+[Unit]
+Description=tgbot for %i.
+After=network.target
+
+[Service]
+Type=simple
+User=%i
+Restart=on-abort
+Environment=DISPLAY=:0
+ExecStart=/home/bgzo/opt/sunshine.AppImage
+
+[Install]
+# WantedBy=multi-user.target
+WantedBy=graphical-session.target
+
+```
