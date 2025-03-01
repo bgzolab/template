@@ -1,60 +1,62 @@
-# Telegram bot go version
+# Telegram message sync bot
 
-## Quick Start
-1. rename `.env.bak` to `.env`.
-2. Input your bot BOT_TOKEN.
-3. Then run following:
-```bash
-# install dep
+## Quick start
+
+![](https://raw.githack.com/bGZo/assets/dev/2025/202503011548103.png)
+
+```shell
+# install dependencies
 go mod tidy
-# run
-go run main.go
+
+# build the result
+go build -o tg main.go
+
+# give the right to run. 
+chmod +x ./tg
+
+# run bot
+./tg sync -t TG_BOT_TOKEN
 ```
 
-## TODO
-Tg bot api go version have many implements via: https://core.telegram.org/bots/api
-- [ ] Dockfile
-- [ ] Webhook
-- [ ] Middlewares
-
-## Develop
-
-```bash
-# install dep
-go get github.com/joho/godotenv
-```
-
-## Build
+### Optional: run in background using nohup
 
 ```shell
-go build -o mybot main.go
+nohup ./tg sync -t 5883330296:AAFCI0jtgH1iHU1zDaL2p3Hj5Z6fkqaRWaU > bot.log 2>&1 &
+
+# kill background
+pkill -f tg
 ```
 
-## Run background
+### Optional: run in background using nohup
 
 ```shell
-nohup ./mybot > bot.log 2>&1 &     
+sudo vim /lib/systemd/system/tg@.service
 ```
 
+Add following config:
 
-```bash
- sudo vim /lib/systemd/system/tgbot@.service 
-```
-
-```bash
+```shell
 [Unit]
-Description=tgbot for %i.
+Description=tg message sync bot for %i.
 After=network.target
 
 [Service]
 Type=simple
 User=%i
 Restart=on-abort
-Environment=DISPLAY=:0
-ExecStart=/home/bgzo/opt/sunshine.AppImage
+Environment=http_proxy=192.168.31.20:10800
+Environment=https_proxy=192.168.31.20:10800
+ExecStart=/home/bgzo/workspaces/telegram-message-sync/tg sync -t 58833029:AAFCI0jiHU1zDaL2p3HaRWaU -o /home/bgzo/workspaces/telegram-message-sync/archives
 
 [Install]
 # WantedBy=multi-user.target
 WantedBy=graphical-session.target
+```
 
+Then restart systemd and enable `tg@username`
+
+```shell
+systemctl daemon-reload
+systenctl start tg@bgzo
+systenctl enable tg@bgzo
 ```
