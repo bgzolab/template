@@ -2,7 +2,7 @@
 
 ## Quick Start
 1. rename `.env.bak` to `.env`.
-2. Input your bot token.
+2. Input your bot BOT_TOKEN.
 3. Then run following:
 ```bash
 # install dep

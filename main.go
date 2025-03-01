@@ -5,18 +5,20 @@ import (
 	"fmt"
 	"github.com/go-telegram/bot"
 	"github.com/go-telegram/bot/models"
-	"github.com/joho/godotenv"
 	"github.com/rivo/uniseg"
+	"github.com/spf13/cobra"
 	"io"
 	"log"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"strings"
 	"time"
 	"unicode"
 )
 
 var logger *log.Logger
+var outputPath string
 
 func init() {
 	// 初始化日志
@@ -28,7 +30,7 @@ func init() {
 	logger = log.New(multiWriter, "[Bot] ", log.LstdFlags|log.Lshortfile)
 }
 
-func main() {
+func start(botToken string) {
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer cancel()
 
@@ -36,18 +38,6 @@ func main() {
 		bot.WithDefaultHandler(handler),
 		bot.WithMessageTextHandler("/start", bot.MatchTypeExact, startHandler),
 		bot.WithMessageTextHandler("/status", bot.MatchTypeExact, versionHandler),
-	}
-
-	// 加载 .env 文件
-	if err := godotenv.Load(); err != nil {
-		logger.Println("加载环境变量失败:", err)
-		return
-	}
-
-	botToken := os.Getenv("TG_BOT_TOKEN")
-	if botToken == "" {
-		logger.Println("TG_BOT_TOKEN 未设置")
-		return
 	}
 
 	b, err := bot.New(botToken, opts...)
@@ -120,8 +110,16 @@ func persistMessage(update *models.Update) (bool, string) {
 		sourceDate = time.Unix(int64(origin.Date), 0)
 	}
 
-	file, err := os.OpenFile(fmt.Sprintf("%s.md", title),
-		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	output := filepath.Join(outputPath, fmt.Sprintf("%s.md", title))
+
+	// 确保输出目录存在
+	err := os.MkdirAll(outputPath, os.ModePerm) // 创建目录
+	if err != nil {
+		logger.Println("Error creating directory:", outputPath, err)
+		return false, "无法创建目录"
+	}
+
+	file, err := os.OpenFile(output, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		logger.Println("Error opening file for writing: ", err)
 		return false, "无法打开文件以写入"
@@ -248,4 +246,26 @@ func handleMsgLink(msg string, entities []models.MessageEntity) string {
 		}
 	}
 	return result.String()
+}
+
+func main() {
+	var BOT_TOKEN string
+
+	var cmdSync = &cobra.Command{
+		Use:   "sync",
+		Short: "Sync the message from tg bot",
+		Long:  `Sync the message from tg bot.`,
+		Args:  cobra.MinimumNArgs(0),
+		Run: func(cmd *cobra.Command, args []string) {
+			start(BOT_TOKEN)
+		},
+	}
+
+	cmdSync.Flags().StringVarP(&outputPath, "output", "o", "./archives", "Output file for archive.")
+	cmdSync.Flags().StringVarP(&BOT_TOKEN, "token", "t", "", "Token for telegram bot.")
+	cmdSync.MarkFlagRequired("token")
+
+	var rootCmd = &cobra.Command{Use: "sync"}
+	rootCmd.AddCommand(cmdSync)
+	rootCmd.Execute()
 }
