@@ -256,6 +256,7 @@ func handleMsgLink(msg string, entities []models.MessageEntity) string {
 
 func main() {
 	var BOT_TOKEN string
+	var OUTPUT_PATH string
 
 	var cmdSync = &cobra.Command{
 		Use:   "sync",
@@ -263,12 +264,13 @@ func main() {
 		Long:  `Sync the message from tg bot.`,
 		Args:  cobra.MinimumNArgs(0),
 		Run: func(cmd *cobra.Command, args []string) {
+			outputPath = OUTPUT_PATH
 			initLog()
 			start(BOT_TOKEN)
 		},
 	}
 
-	cmdSync.Flags().StringVarP(&outputPath, "output", "o", "./archives", "Output file for archive.")
+	cmdSync.Flags().StringVarP(&OUTPUT_PATH, "output", "o", "./archives", "Output file for archive.")
 	cmdSync.Flags().StringVarP(&BOT_TOKEN, "token", "t", "", "Token for telegram bot.")
 	cmdSync.MarkFlagRequired("token")
 
