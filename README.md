@@ -11,6 +11,23 @@ site-to-md is a Python tool that uses the crawl4ai library to:
 3. Visit each URL and convert the content to Markdown
 4. Save each page as a separate Markdown file in domain-specific folders under the "outputs" directory
 
+## Use Cases
+
+### Retrieval-Augmented Generation (RAG)
+
+One of the primary use cases for site-to-md is to prepare content for Retrieval-Augmented Generation (RAG) systems. RAG is a technique that enhances Large Language Models (LLMs) by:
+
+1. **Retrieving** relevant information from a knowledge base of documents
+2. **Augmenting** the model's prompt with this retrieved information
+3. **Generating** responses that incorporate both the model's parametric knowledge and the retrieved context
+
+By converting website content to Markdown files:
+
+- Content becomes easily parsable for vector embedding creation
+- Documentation is transformed into a format ideal for chunk-based retrieval
+- Knowledge bases can be kept up-to-date with the latest website information
+- Domain-specific knowledge can be integrated into AI assistants and chatbots
+
 ## Installation
 
 ### Prerequisites
