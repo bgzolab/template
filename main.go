@@ -9,6 +9,7 @@ import (
 	"github.com/spf13/cobra"
 	"io"
 	"log"
+	"net/http"
 	"os"
 	"os/signal"
 	"path/filepath"
@@ -19,6 +20,67 @@ import (
 
 var logger *log.Logger
 var outputPath string
+
+func downloadFile(ctx context.Context, b *bot.Bot, fileID string, dirname string) string {
+	// 获取文件信息
+	params := bot.GetFileParams{FileID: fileID}
+	file, err := b.GetFile(ctx, &params)
+	if err != nil {
+		logger.Println("获取文件信息失败: %v", err)
+		return ""
+	}
+
+	// 确保 assets 目录存在
+	assetsDir := filepath.Join(outputPath, "assets", dirname)
+	err = os.MkdirAll(assetsDir, os.ModePerm)
+	if err != nil {
+		logger.Println("创建 assets 目录失败: %v", err)
+		return ""
+	}
+
+	token := b.Token()
+
+	// 构造下载 URL
+	downloadURL := fmt.Sprintf("https://api.telegram.org/file/bot%s/%s", token, file.FilePath)
+	//logger.Printf("下载URL: %s", downloadURL)
+
+	// 获取文件扩展名
+	ext := filepath.Ext(file.FilePath)
+	if ext == "" {
+		ext = ".dat" // 如果没有扩展名，则存为 .dat
+	}
+
+	// 使用时间戳生成唯一文件名
+	timestamp := time.Now().Format("20060102_150405") + fmt.Sprintf("_%d", time.Now().UnixNano()%1e6)
+	savePath := filepath.Join(assetsDir, fmt.Sprintf("%s%s", timestamp, ext))
+
+	// 下载文件
+	resp, err := http.Get(downloadURL)
+	if err != nil {
+		logger.Println("下载文件失败: %v", err)
+		return ""
+	}
+	defer resp.Body.Close()
+
+	// 保存到本地
+	outFile, err := os.Create(savePath)
+	if err != nil {
+		logger.Println("无法创建文件: %v", err)
+
+		return ""
+	}
+	defer outFile.Close()
+
+	_, err = io.Copy(outFile, resp.Body)
+	if err != nil {
+		logger.Println("保存文件失败: %v", err)
+		return ""
+	}
+
+	// 记录文件路径
+	fmt.Printf("文件下载成功: %s\n", savePath)
+	return filepath.Join("assets", dirname, fmt.Sprintf("%s%s", timestamp, ext))
+}
 
 func initLog() {
 	output := filepath.Join(outputPath, "bot.log")
@@ -70,7 +132,7 @@ func handler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	if update.Message == nil {
 		return
 	}
-	ok, msg := persistMessage(update)
+	ok, msg := persistMessage(ctx, b, update)
 	if !ok {
 		logger.Println(msg)
 	} else {
@@ -79,6 +141,7 @@ func handler(ctx context.Context, b *bot.Bot, update *models.Update) {
 			Text:   fmt.Sprintf("信息已备案至: %s!", msg),
 		})
 	}
+
 }
 
 func versionHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
@@ -89,13 +152,24 @@ func versionHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 }
 
 func startHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
+
 	b.SendMessage(ctx, &bot.SendMessageParams{
 		ChatID: update.Message.Chat.ID,
 		Text:   "Hello world!",
 	})
 }
 
-func persistMessage(update *models.Update) (bool, string) {
+func formatDownloadedFiles(files []string) string {
+	var builder strings.Builder
+	for _, file := range files {
+		builder.WriteString("![](")
+		builder.WriteString(file)
+		builder.WriteString(") ")
+	}
+	return builder.String()
+}
+
+func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (bool, string) {
 	if update.Message == nil {
 		return false, "接受消息为空"
 	}
@@ -104,11 +178,24 @@ func persistMessage(update *models.Update) (bool, string) {
 	msgText := selectMsgText(update)
 	sourceLink := ""
 	sourceDate := time.Now()
+	photoLink := ""
 
 	if update.Message.ForwardOrigin != nil && update.Message.ForwardOrigin.Type == "channel" {
 		// 消息为转发，特殊处理
 		origin := update.Message.ForwardOrigin.MessageOriginChannel
 		title = origin.Chat.Title
+
+		var files []string
+		photos := update.Message.Photo
+		if len(photos) > 0 {
+			highestResolutionPhoto := photos[len(photos)-1]
+			file := downloadFile(ctx, b, highestResolutionPhoto.FileID, origin.Chat.Username)
+			if file != "" {
+				files = append(files, file)
+			}
+		}
+
+		photoLink = formatDownloadedFiles(files)
 
 		sourceLink = fmt.Sprintf("https://t.me/%s/%d",
 			origin.Chat.Username,
@@ -140,8 +227,9 @@ func persistMessage(update *models.Update) (bool, string) {
 
 	defer file.Close() // 关闭时会刷新缓冲区
 
-	logMarkdown := fmt.Sprintf("\n## %s\n\n%s\n\n%s\n",
+	logMarkdown := fmt.Sprintf("\n## %s\n\n%s\n\n%s\n%s\n",
 		sourceDate.Format("2006-01-02 15:04:05"),
+		photoLink,
 		msgText,
 		sourceLink,
 	)
