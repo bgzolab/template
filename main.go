@@ -1,12 +1,15 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
 	"context"
 	"fmt"
 	"github.com/go-telegram/bot"
 	"github.com/go-telegram/bot/models"
 	"github.com/rivo/uniseg"
 	"github.com/spf13/cobra"
+	"html/template"
 	"io"
 	"log"
 	"net/http"
@@ -38,10 +41,8 @@ func downloadFile(ctx context.Context, b *bot.Bot, fileID string, dirname string
 		return ""
 	}
 
-	token := b.Token()
-
 	// 构造下载 URL
-	downloadURL := fmt.Sprintf("https://api.telegram.org/file/bot%s/%s", token, file.FilePath)
+	downloadURL := fmt.Sprintf("https://api.telegram.org/file/bot%s/%s", b.Token(), file.FilePath)
 	//logger.Printf("下载URL: %s", downloadURL)
 
 	// 获取文件扩展名
@@ -135,8 +136,12 @@ func handler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	ok, msg := persistMessage(ctx, b, update)
 	if !ok {
 		logger.Println(msg)
+		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+			ChatID: update.Message.Chat.ID,
+			Text:   fmt.Sprintf("信息备份出现异常: %s!", msg),
+		})
 	} else {
-		b.SendMessage(ctx, &bot.SendMessageParams{
+		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
 			ChatID: update.Message.Chat.ID,
 			Text:   fmt.Sprintf("信息已备案至: %s!", msg),
 		})
@@ -167,6 +172,38 @@ func formatDownloadedFiles(files []string) string {
 		builder.WriteString(") ")
 	}
 	return builder.String()
+}
+
+// searchInFile 读取文件并搜索目标字符串
+func searchInFile(filePath, searchString string) bool {
+	// 尝试打开文件
+	file, err := os.Open(filePath)
+	if err != nil {
+		if os.IsNotExist(err) {
+			fmt.Println("文件不存在")
+			return false
+		}
+		fmt.Printf("打开文件失败: %v\n", err)
+		return false
+	}
+	defer file.Close()
+
+	// 使用 bufio 逐行读取文件
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		if strings.Contains(scanner.Text(), searchString) {
+			return true
+		}
+	}
+
+	// 检查读取文件时的错误
+	if err := scanner.Err(); err != nil {
+		fmt.Printf("读取文件时出错: %v\n", err)
+		return false
+	}
+
+	fmt.Println("未找到匹配内容")
+	return false
 }
 
 func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (bool, string) {
@@ -201,6 +238,12 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 			origin.Chat.Username,
 			origin.MessageID)
 		sourceDate = time.Unix(int64(origin.Date), 0)
+
+		// 去重,提前短路
+		if searchInFile(filepath.Join(outputPath, fmt.Sprintf("%s.md", title)), sourceLink) {
+			return false, fmt.Sprint("消息已存在")
+		}
+
 	}
 
 	output := filepath.Join(outputPath, fmt.Sprintf("%s.md", title))
@@ -227,17 +270,39 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 
 	defer file.Close() // 关闭时会刷新缓冲区
 
-	logMarkdown := fmt.Sprintf("\n## %s\n\n%s\n\n%s\n%s\n",
-		sourceDate.Format("2006-01-02 15:04:05"),
-		photoLink,
-		msgText,
-		sourceLink,
-	)
+	timeFormat := "2006-01-02 15:04:05"
+	data := map[string]interface{}{
+		"title":          sourceDate.Format(timeFormat),
+		"photo":          photoLink,
+		"content":        msgText,
+		"sourceTelegram": sourceLink,
+		"now":            time.Now().Format(timeFormat),
+		"date":           sourceDate.Format(timeFormat),
+	}
 
-	_, err = file.WriteString(logMarkdown)
+	// 读取模板文件
+	tmplData, err := os.ReadFile("config/template.txt")
+	if err != nil {
+		return false, fmt.Sprintf("读取模板失败, %v", err)
+	}
+
+	// 创建并解析模板
+	tmpl, err := template.New("example").Parse(string(tmplData))
+	if err != nil {
+		return false, fmt.Sprintf("解析模板失败, %v", err)
+	}
+
+	// 使用 bytes.Buffer 捕获渲染结果
+	var buf bytes.Buffer
+	err = tmpl.Execute(&buf, data)
+	if err != nil {
+		return false, fmt.Sprintf("渲染模板失败, %v", err)
+	}
+
+	_, err = file.WriteString(buf.String())
 	if err != nil {
 		logger.Println("Error writing to file: ", err)
-		return false, "写入文件失败"
+		return false, fmt.Sprintf("写入文件失败, %v", err)
 	}
 
 	file.Sync() // 强制写入磁盘
