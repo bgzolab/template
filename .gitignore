@@ -1,5 +1,4 @@
 .idea/
 archives/
 
-.env
-bot.log
+config/config.yaml

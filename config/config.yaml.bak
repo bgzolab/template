@@ -1,0 +1,17 @@
+## 输出目录
+output:
+  json: true # 是否输出 JSON
+  json_dir: /home/bgzo/workspaces/telegram-message-sync/archives/json
+  person_dir: /home/bgzo/workspaces/telegram-message-sync/archives/person
+  channel_dir: /home/bgzo/workspaces/telegram-message-sync/archives/channel
+
+## 日志
+log:
+  enable: true
+  dir: /home/bgzo/workspaces/telegram-message-sync/archives
+
+template:
+  dir: /home/bgzo/workspaces/telegram-message-sync/config/template.txt
+
+token: 588396:AAFCI0jtgaRWaU
+
