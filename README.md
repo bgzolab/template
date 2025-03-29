@@ -15,13 +15,13 @@ go build -o tg main.go
 chmod +x ./tg
 
 # run bot
-./tg sync -t TG_BOT_TOKEN
+./tg sync -c ./config/config.yaml
 ```
 
 ### Optional: run in background using nohup
 
 ```shell
-nohup ./tg sync -t 58833029:AAFCI0jiHU1zDaL2p3HaRWaU > bot.log 2>&1 &
+nohup ./tg sync -c ./config/config.yaml > bot.log 2>&1 &
 
 # kill background
 pkill -f tg
@@ -46,7 +46,7 @@ User=%i
 Restart=on-abort
 Environment=http_proxy=192.168.31.20:10800
 Environment=https_proxy=192.168.31.20:10800
-ExecStart=/home/bgzo/workspaces/telegram-message-sync/tg sync -t 58833029:AAFCI0jiHU1zDaL2p3HaRWaU -o /home/bgzo/workspaces/telegram-message-sync/archives
+ExecStart=/home/bgzo/workspaces/telegram-message-sync/tg sync -c /home/bgzo/workspaces/telegram-message-sync/config/config.yaml
 
 [Install]
 # WantedBy=multi-user.target
