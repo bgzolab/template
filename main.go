@@ -109,49 +109,53 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 		return false, "接受消息为空"
 	}
 
-	title := fmt.Sprintf("chat_%d.md", update.Message.Chat.ID)
+	// 默认为私人消息
+	outputPath := globalConfig.Output.PersonDir
+	sourceId := fmt.Sprintf("%d", update.Message.Chat.ID)
+	fileName := fmt.Sprintf("%s.md", sourceId)
 	msgText := selectMsgText(update)
 	sourceLink := ""
 	sourceDate := time.Now()
 	photoLink := ""
 
-	// 默认为私人消息
-	outputPath := globalConfig.Output.PersonDir
-
 	if update.Message.ForwardOrigin != nil && update.Message.ForwardOrigin.Type == "channel" {
 		// 消息为转发，特殊处理
 		outputPath = globalConfig.Output.ChannelDir
 		origin := update.Message.ForwardOrigin.MessageOriginChannel
-		title = origin.Chat.Title
+
+		if origin.Chat.Username != "" {
+			sourceId = origin.Chat.Username
+			fileName = fmt.Sprintf("%s.md", sourceId)
+		} else {
+			sourceId = fmt.Sprintf("%d", origin.Chat.ID)
+			fileName = fmt.Sprintf("%s.md", sourceId)
+		}
+
+		sourceLink = fmt.Sprintf("https://t.me/%s/%d",
+			sourceId,
+			origin.MessageID)
+		sourceDate = time.Unix(int64(origin.Date), 0)
+
+		if StrUtils.SearchInFile(filepath.Join(outputPath, fileName), sourceLink) {
+			return false, fmt.Sprint("消息已存在")
+		}
 
 		var files []string
 		photos := update.Message.Photo
 		if len(photos) > 0 {
 			highestResolutionPhoto := photos[len(photos)-1]
-			file := persistFile(ctx, b, highestResolutionPhoto.FileID, origin.Chat.Username, outputPath)
+			file := persistFile(ctx, b, highestResolutionPhoto.FileID, sourceId, outputPath)
 			if file != "" {
 				files = append(files, file)
 			}
 		}
 
 		photoLink = formatDownloadedFiles(files)
-
-		sourceLink = fmt.Sprintf("https://t.me/%s/%d",
-			origin.Chat.Username,
-			origin.MessageID)
-		sourceDate = time.Unix(int64(origin.Date), 0)
-
-		if StrUtils.SearchInFile(filepath.Join(outputPath, fmt.Sprintf("%s.md", title)), sourceLink) {
-			return false, fmt.Sprint("消息已存在")
-		}
-
 	}
 
-	fileName := fmt.Sprintf("%s.md", title)
-
-	logCommandline := fmt.Sprintf("ChatID: %d, User: %s, Message: %s",
+	logCommandline := fmt.Sprintf("ChatID: %d, Channel: %s, Message: %s",
 		update.Message.Chat.ID,
-		title,
+		sourceId,
 		msgText,
 	)
 
@@ -188,7 +192,7 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 
 	FileUtils.OutputString(outputPath, fileName, buf.String())
 
-	return true, title
+	return true, fileName
 }
 
 func persistJSON(update *models.Update) (bool, string) {
