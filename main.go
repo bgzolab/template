@@ -256,7 +256,7 @@ func selectMsgText(update *models.Update) string {
 		msgText = update.Message.Caption
 		msgEntities = update.Message.CaptionEntities
 	}
-	return TgUtils.HandleMsgLink(msgText, msgEntities)
+	return StrUtils.EscapeHashtags(TgUtils.HandleMsgLink(msgText, msgEntities))
 }
 
 func main() {

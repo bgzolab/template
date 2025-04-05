@@ -38,3 +38,7 @@ func SearchInFile(filePath, searchString string) bool {
 	fmt.Println("未找到匹配内容")
 	return false
 }
+
+func EscapeHashtags(text string) string {
+	return strings.ReplaceAll(text, "#", "\\#")
+}
