@@ -79,19 +79,25 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	}
 
 	ok, msg := persistMessage(ctx, b, update)
-	if !ok {
-		LogUtils.GetLogger().Println(msg)
-		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-			ChatID: update.Message.Chat.ID,
-			Text:   fmt.Sprintf("信息备份出现异常: %s!", msg),
-		})
-	} else {
-		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-			ChatID: update.Message.Chat.ID,
-			Text:   fmt.Sprintf("信息已备案至: %s!", msg),
-		})
+	targetChatIdList := []int64{update.Message.Chat.ID}
+	if len(globalConfig.TargetUserList) > 0 {
+		targetChatIdList = globalConfig.TargetUserList
 	}
 
+	responseTxt := ""
+	if !ok {
+		LogUtils.GetLogger().Println(msg)
+		responseTxt = fmt.Sprintf("信息备份出现异常: %s!", msg)
+	} else {
+		responseTxt = fmt.Sprintf("信息已备案至: %s!", msg)
+	}
+
+	for _, chatId := range targetChatIdList {
+		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+			ChatID: chatId,
+			Text:   responseTxt,
+		})
+	}
 }
 
 func formatDownloadedFiles(files []string) string {

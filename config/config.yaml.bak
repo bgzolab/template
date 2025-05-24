@@ -15,3 +15,6 @@ template:
 
 token: 588396:AAFCI0jtgaRWaU
 
+targetUserList:
+  - 1234
+

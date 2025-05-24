@@ -20,4 +20,6 @@ type Config struct {
 	} `yaml:"template"`
 
 	Token string `yaml:"token"`
+
+	TargetUserList []int64 `yaml:"targetUserList"`
 }
