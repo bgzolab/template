@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # 需要这个权限才能发布 release
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        arch: [amd64, arm64]
+    env:
+      GOOS: ${{ matrix.os == 'windows-latest' && 'windows' || matrix.os == 'macos-latest' && 'darwin' || 'linux' }}
+      GOARCH: ${{ matrix.arch }}
 
     steps:
       - uses: actions/checkout@v4
@@ -28,18 +35,30 @@ jobs:
 
       - name: Build
         run: |
-          mkdir -p dist
-          go build -o dist/tg .
+          output_name="tg-${{ matrix.os }}-${{ matrix.arch }}"
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            output_name="${output_name}.exe"
+          fi
+          GOOS=${{ env.GOOS }} GOARCH=${{ env.GOARCH }} go build -o dist/$output_name ./...
 
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: dist/
 
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "dist/tg"            # 上传的构建产物
           tag: ${{ github.ref_type == 'tag' && github.ref_name || 'Lastest' }}
-            # ↑ 如果是 tag 触发，则使用；否则为空，避免乱打 tag
-          allowUpdates: true              # 如果已有 Release 则更新它
+          # ↑ 如果是 tag 触发，则使用；否则为空，避免乱打 tag
+          artifacts: "dist/*"
           draft: false
           prerelease: false
+          allowUpdates: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
