@@ -51,6 +51,8 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 需要这个权限才能发布 release
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
