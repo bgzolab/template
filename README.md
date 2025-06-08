@@ -1,5 +1,49 @@
 # Telegram message sync bot
 
+
+## Roadmap
+
+### Message Archive
+
+#### Rich text from Telegram #gtd/done
+
+#### Media Download from Telegram #gtd/done
+
+#### Notification #gtd/done
+
+### Database Support #gtd/doing
+
+SQLite
+
+### Sync Social Media #gtd/doing
+
+So why?
+
+1. I don't like the online service.
+2. I need self-host & local & privacy.
+
+- Target: https://github.com/leaperone/MultiPost-Extension
+- Global
+  - [x] Telegram
+  - [x] Twitter
+  - [x] Mastodon
+  - [x] BlueSky
+  - [ ] Instagram
+  - [ ] Facebook
+  - [ ] Thread
+  - [ ] Reddit
+- Chinese
+  - [ ] Douban
+  - [ ] Okjike
+  - [ ] Weibo
+  - [ ] Douyin
+  - [ ] Bilibili
+  - [ ] Xiaohongshu
+  - [ ] Coolapk
+  - [ ] Zhihu
+  - [ ] V2Ex
+
+
 ## Quick start
 
 ![](https://raw.githack.com/bGZo/assets/dev/2025/202503011548103.png)
