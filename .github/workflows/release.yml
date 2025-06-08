@@ -64,7 +64,7 @@ jobs:
         with:
           tag: ${{ github.ref_type == 'tag' && github.ref_name || 'Lastest' }}
           # ↑ 如果是 tag 触发，则使用；否则为空，避免乱打 tag
-          artifacts: "dist/*"
+          artifacts: "dist/*/*"
           draft: false
           prerelease: false
           allowUpdates: true
