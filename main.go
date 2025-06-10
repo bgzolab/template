@@ -19,6 +19,7 @@ import (
 	"telegram-message-sync-bot/internal/entity"
 	"telegram-message-sync-bot/pkg/FileUtils"
 	"telegram-message-sync-bot/pkg/LogUtils"
+	//"telegram-message-sync-bot/pkg/SocialMediaUtils"
 	"telegram-message-sync-bot/pkg/StrUtils"
 	"telegram-message-sync-bot/pkg/TgUtils"
 	"time"
@@ -78,7 +79,7 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		persistJSON(update)
 	}
 
-	ok, msg := persistMessage(ctx, b, update)
+	ok, msg, sourceLink := persistMessage(ctx, b, update)
 	targetChatIdList := []int64{update.Message.Chat.ID}
 	if len(globalConfig.TargetUserList) > 0 {
 		targetChatIdList = globalConfig.TargetUserList
@@ -87,9 +88,9 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	responseTxt := ""
 	if !ok {
 		LogUtils.GetLogger().Println(msg)
-		responseTxt = fmt.Sprintf("信息备份出现异常: %s!", msg)
+		responseTxt = fmt.Sprintf("%s\n消息备份出现异常: %s!", sourceLink, msg)
 	} else {
-		responseTxt = fmt.Sprintf("信息已备案至: %s!", msg)
+		responseTxt = fmt.Sprintf("%s\n消息已备案至: %s!", sourceLink, msg)
 	}
 
 	for _, chatId := range targetChatIdList {
@@ -110,9 +111,9 @@ func formatDownloadedFiles(files []string) string {
 	return builder.String()
 }
 
-func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (bool, string) {
+func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (bool, string, string) {
 	if update.Message == nil {
-		return false, "接受消息为空"
+		return false, "接受消息为空", ""
 	}
 
 	// 默认为私人消息
@@ -143,7 +144,7 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 		sourceDate = time.Unix(int64(origin.Date), 0)
 
 		if StrUtils.SearchInFile(filepath.Join(outputPath, fileName), sourceLink) {
-			return false, fmt.Sprint("消息已存在")
+			return false, fmt.Sprint("消息已存在"), sourceLink
 		}
 
 		var files []string
@@ -180,25 +181,25 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 	// 读取模板文件
 	tmplData, err := os.ReadFile(globalConfig.Template.Dir)
 	if err != nil {
-		return false, fmt.Sprintf("读取模板失败, %v", err)
+		return false, fmt.Sprintf("读取模板失败, %v", err), sourceLink
 	}
 
 	// 创建并解析模板
 	tmpl, err := template.New("example").Parse(string(tmplData))
 	if err != nil {
-		return false, fmt.Sprintf("解析模板失败, %v", err)
+		return false, fmt.Sprintf("解析模板失败, %v", err), sourceLink
 	}
 
 	// 使用 bytes.Buffer 捕获渲染结果
 	var buf bytes.Buffer
 	err = tmpl.Execute(&buf, data)
 	if err != nil {
-		return false, fmt.Sprintf("渲染模板失败, %v", err)
+		return false, fmt.Sprintf("渲染模板失败, %v", err), sourceLink
 	}
 
 	FileUtils.OutputString(outputPath, fileName, buf.String())
 
-	return true, fileName
+	return true, fileName, sourceLink
 }
 
 func persistJSON(update *models.Update) (bool, string) {
@@ -292,4 +293,9 @@ func main() {
 	if err != nil {
 		return
 	}
+
+	//message := "Hello world from script!"
+	//fmt.Println(SocialMediaUtils.SendBlueSky(message))
+	//fmt.Println(SocialMediaUtils.SendMastodon(message))
+
 }
