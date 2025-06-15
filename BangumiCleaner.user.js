@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BangumiCleaner
 // @namespace    https://github.com/Adachi-Git/BangumiCleaner
-// @version      0.2
+// @version      0.3
 // @description  删除页面中所有时间线记录和条目
 // @author       Adachi
 // @match        *://bangumi.tv/user/*/timeline
@@ -24,7 +24,7 @@
             return button.href + '?gh='+ '&ajax=1';
         },
         game: function(gameId, ghParam) {
-            return 'https://bangumi.tv/subject/' + gameId + '/remove?gh=' + ghParam;
+            return window.location.origin + '/subject/' + gameId + '/remove?gh=' + ghParam;
         }
     };
 
