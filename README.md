@@ -48,4 +48,183 @@ err = db.AutoMigrate(&User{}, &Order{})
 
 #### 控制事务
 
+> [!tip]
+> 没有 Spring 注解那样自动捕捉异常回滚的的功能，需要显式控制事务。
 
+##### 并发事务
+
+```go
+package main
+
+import (
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
+	"log"
+	"sync"
+)
+
+type User struct {
+	ID   uint   `gorm:"primaryKey"`
+	Name string
+	Age  int
+}
+
+func main() {
+	db, err := gorm.Open(sqlite.Open("example.db"), &gorm.Config{})
+	if err != nil {
+		log.Fatal("无法连接到数据库:", err)
+	}
+
+	// 自动迁移
+	err = db.AutoMigrate(&User{})
+	if err != nil {
+		log.Fatal("迁移失败:", err)
+	}
+
+	// 并发事务处理
+	var wg sync.WaitGroup
+	for i := 0; i < 10; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			tx := db.Begin()
+			defer func() {
+				if r := recover(); r != nil {
+					tx.Rollback()
+					log.Println("事务回滚:", r)
+				}
+			}()
+
+			user := User{Name: "用户" + string(i), Age: 20 + i}
+			if err := tx.Create(&user).Error; err != nil {
+				tx.Rollback()
+				log.Println("插入失败，事务回滚:", err)
+				return
+			}
+
+			if err := tx.Commit().Error; err != nil {
+				log.Println("提交失败:", err)
+			} else {
+				log.Println("事务成功")
+			}
+		}(i)
+	}
+	wg.Wait()
+}
+```
+
+#### 乐观锁
+
+
+```go
+package main
+
+import (
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
+	"log"
+)
+
+type User struct {
+	ID      uint   `gorm:"primaryKey"`
+	Name    string
+	Age     int
+	Version int `gorm:"version"` // 乐观锁字段
+}
+
+func main() {
+	db, err := gorm.Open(sqlite.Open("example.db"), &gorm.Config{})
+	if err != nil {
+		log.Fatal("无法连接到数据库:", err)
+	}
+
+	// 自动迁移
+	err = db.AutoMigrate(&User{})
+	if err != nil {
+		log.Fatal("迁移失败:", err)
+	}
+
+	// 插入数据
+	user := User{Name: "张三", Age: 25}
+	db.Create(&user)
+
+	// 模拟更新操作
+	err = db.Model(&user).Where("version = ?", user.Version).Updates(User{Age: 30}).Error
+	if err != nil {
+		log.Println("更新失败，可能是版本冲突:", err)
+	} else {
+		log.Println("更新成功")
+	}
+}
+```
+
+1. Version 字段：用于记录版本号，每次更新时自动递增。
+2. 条件更新：通过 WHERE version = ? 确保只有版本号匹配的数据才能被更新。
+3. 冲突处理：如果版本号不匹配，更新操作会失败，可以捕获错误并处理。
+
+#### 悲观锁
+
+```go
+package main
+
+import (
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
+	"log"
+)
+
+type User struct {
+	ID   uint   `gorm:"primaryKey"`
+	Name string
+	Age  int
+}
+
+func main() {
+	db, err := gorm.Open(sqlite.Open("example.db"), &gorm.Config{})
+	if err != nil {
+		log.Fatal("无法连接到数据库:", err)
+	}
+
+	// 自动迁移
+	err = db.AutoMigrate(&User{})
+	if err != nil {
+		log.Fatal("迁移失败:", err)
+	}
+
+	// 插入测试数据
+	db.Create(&User{Name: "张三", Age: 25})
+
+	// 开始事务
+	tx := db.Begin()
+
+	// 使用悲观锁查询
+	var user User
+	err = tx.Raw("SELECT * FROM users WHERE id = ? FOR UPDATE", 1).Scan(&user).Error
+	if err != nil {
+		tx.Rollback()
+		log.Println("查询失败:", err)
+		return
+	}
+
+	// 更新数据
+	user.Age = 30
+	err = tx.Save(&user).Error
+	if err != nil {
+		tx.Rollback()
+		log.Println("更新失败:", err)
+		return
+	}
+
+	// 提交事务
+	err = tx.Commit().Error
+	if err != nil {
+		log.Println("提交失败:", err)
+	} else {
+		log.Println("事务成功")
+	}
+}
+```
+
+1. FOR UPDATE：在查询时锁定记录，其他事务无法修改这些记录。
+2. 事务管理：悲观锁需要在事务中使用，否则锁定无效。 
+3. 适用场景：适合高并发场景，确保数据一致性。
