@@ -88,3 +88,33 @@ func main() {
 	}
 
 }
+
+func createTransaction() {
+	db, err := gorm.Open(sqlite.Open("example.db"), &gorm.Config{})
+	if err != nil {
+		log.Fatal("无法连接到数据库:", err)
+	}
+
+	// 使用事务
+	err = db.Transaction(func(tx *gorm.DB) error {
+		// 插入用户
+		user := User{Name: "张三", Age: 25}
+		if err := tx.Create(&user).Error; err != nil {
+			return err // 回滚事务
+		}
+
+		// 更新用户
+		if err := tx.Model(&User{}).Where("name = ?", "张三").Update("age", 30).Error; err != nil {
+			return err // 回滚事务
+		}
+
+		// 如果没有错误，事务会自动提交
+		return nil
+	})
+
+	if err != nil {
+		log.Println("事务失败:", err)
+	} else {
+		log.Println("事务成功")
+	}
+}
