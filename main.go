@@ -118,3 +118,33 @@ func createTransaction() {
 		log.Println("事务成功")
 	}
 }
+
+func createTransactionMoreKindful() {
+	db, err := gorm.Open(sqlite.Open("example.db"), &gorm.Config{})
+	if err != nil {
+		log.Fatal("无法连接到数据库:", err)
+	}
+
+	tx := db.Begin()
+	defer func() {
+		if r := recover(); r != nil {
+			tx.Rollback()
+			log.Println("事务回滚:", r)
+		}
+	}()
+
+	// 操作1
+	if err := tx.Create(&User{Name: "张三", Age: 25}).Error; err != nil {
+		panic(err)
+	}
+
+	// 操作2
+	if err := tx.Model(&User{}).Where("name = ?", "张三").Update("age", 30).Error; err != nil {
+		panic(err)
+	}
+
+	if err := tx.Commit().Error; err != nil {
+		panic(err)
+	}
+	log.Println("事务成功")
+}
