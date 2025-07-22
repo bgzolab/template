@@ -3,6 +3,9 @@
 ```shell
 go mod init sqlite-connect-go 
 go get github.com/mattn/go-sqlite3 
+# 如果你想使用 GORM 作为 ORM 框架，可以添加以下依赖
+go get -u gorm.io/gorm
+go get -u gorm.io/driver/sqlite
 ```
 
 
