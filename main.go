@@ -30,13 +30,18 @@ func main() {
 	}
 
 	// 自动迁移（创建表）
-	// NOTE:
-	// 1. AutoMigrate 用于自动创建或更新表结构，适合初始化数据库时使用。
-	//		它会根据结构体自动建表或调整字段，但不会删除字段或表。初始化时可以直接用它。
-	err = db.AutoMigrate(&User{}, &Order{})
+	models := []interface{}{
+		&User{},
+		&Order{},
+		// 其他模型
+	}
+	err = db.AutoMigrate(models...)
 	if err != nil {
 		log.Fatal("迁移失败:", err)
 	}
+
+	// 开始事务
+	tx := db.Begin()
 
 	// 插入数据
 	users := []User{
@@ -44,9 +49,13 @@ func main() {
 		{Name: "李四", Age: 30},
 		{Name: "王五", Age: 28},
 	}
-	//for _, user := range users {
-	//	db.Create(&user)
-	//}
+	for _, user := range users {
+		if err := tx.Create(&user).Error; err != nil {
+			tx.Rollback() // 回滚事务
+			log.Println("插入失败，事务回滚:", err)
+			return
+		}
+	}
 
 	var result []User
 	db.Find(&result)
@@ -63,5 +72,19 @@ func main() {
 	db.Preload("Orders").Find(&usersTarget)
 	db.Raw("SELECT u.name, o.item FROM users u JOIN orders o ON u.id = o.user_id WHERE o.item = ?", "商品A").Scan(&result)
 	log.Println("订单:", result)
+
+	// 更新用户
+	if err := tx.Model(&User{}).Where("name = ?", "李四").Update("age", 35).Error; err != nil {
+		tx.Rollback() // 回滚事务
+		log.Println("更新失败，事务回滚:", err)
+		return
+	}
+
+	// 提交事务
+	if err := tx.Commit().Error; err != nil {
+		log.Println("提交失败:", err)
+	} else {
+		log.Println("事务成功")
+	}
 
 }
