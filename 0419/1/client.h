@@ -1,0 +1,1 @@
+void client(const char* msgname, const long msgtype);

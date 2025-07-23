@@ -1,0 +1,1 @@
+void server(const char* ser, const char*cli);

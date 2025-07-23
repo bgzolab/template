@@ -1,0 +1,5 @@
+#include "client.h"
+int main(int argc, char *argv[]){
+    client(argv[1], argv[2]);
+    return 0;
+}
