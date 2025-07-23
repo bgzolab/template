@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Coding Train Extension",
+    "version": "0.0.1",
+    "web_accessible_resources": [
+        "asserts/*.png"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "<all_urls>"],
+            "js": [ "content.js"]
+        }
+    ],
+    "background": {
+        "scripts": [ "background.js"]
+    },
+    "browser_action": {
+        "default_icon": "asserts/rainbow.png",
+        "default_popup": "popup.html",
+        "default_title": "A popup will come here."
+    }
+}
