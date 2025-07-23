@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MyBatis.StudentMapper">
+
+    <resultMap type="JDBC.Student" id="studentMap">
+        <id column="id" property="id"/>
+        <id column="USER_NAME" property="userName"/>
+        <id column="AGE" property="age"/>
+        <id column="ACORE" property="score"/>
+        <id column="TEACHER_ID" property="teacherId"/>
+    </resultMap>
+
+    <sql id="cloumn">
+        id, userName, age, score, teacher_id as teacherId
+    </sql>
+
+    <insert id="saveStudent" parameterType="JDBC.Student">
+        insert into student values(#{id}, #{username}, #{age}, #{score},#{teacherId})
+    </insert>
+
+    <insert id="saveStudentList" useGeneratedKeys="true" keyProperty="id">
+        insert into student values
+        <foreach collection="list" item="item" separator=",">
+            {#{item.id},#{item.userName},#{item.age}, #{item.score}, #{item.teacherId}}
+        </foreach>
+    </insert>
+
+    <delete id="removeStudent" parameterType="string">
+        delete from student where id=#{id}
+    </delete>
+
+    <select id="queryList" resultType="JDBC.Student">
+        select id, userName, age, scroe, teacher_id, as teacherId from student
+    </select>
+
+    <update id="updateStudent" parameterType="JDBC.Student">
+        update student
+        <set>
+            <if test="userName!=null">userName=#{userName}</if>
+            <if test="age!=null"> age=#{age}</if>
+            <if test="score!=null">score=#{score}</if>
+            <if test="teacher_id!=null">teacher_id=#{teacherId}</if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <select id="queryStudent" parameterType="string" resultType="JDBC.Student">
+        select * from student where teacher_id=#{teacher_id}
+    </select>
+
+    <select id="querySearch" parameterType="JDBC.Student" resultType="JDBC.Student">
+        select * from student
+        <where>
+            <if test="userName!=null">userName=#{userName}</if>
+            <if test="age!=null">and age=#{age}</if>
+            <if test="score!=null">and score=#{score}</if>
+        </where>
+    </select>
+
+    <select id="queryCount" parameterType="int">
+        select count(*) from student where teacher_id=#{teacher_id}
+    </select>
+
+</mapper>

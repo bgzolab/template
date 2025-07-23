@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//MyBatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- ??? -->
+
+<configuration>
+<!--    <typeAliases>-->
+<!--        <typeAlias alias = "class_alias_Name" type = "absolute_clas_Name"/>-->
+<!--    </typeAliases>-->
+
+    <environments default = "default_environment _name">
+        <environment id = "environment_id">
+            <transactionManager type = "JDBC/MANAGED"/>
+
+            <dataSource type = "UNPOOLED/POOLED/JNDI">
+                <property name = "driver" value = "com.mysql.cj.jdbc.Driver"/>
+                <property name = "url" value = "jdbc:mysql://127.0.0.1:3306/test_mall?useSSL=false"/>
+                <property name = "username" value = "bgzocg"/>
+                <property name = "password" value = "0"/>
+            </dataSource>
+
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource = "mybatis/Student.xml"/>
+    </mappers>
+
+</configuration>
