@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.bgzo.cms.back.mapper.SysUserMapper">
+    <!--Author: 王谕明, 鲁丰华-->
+    <resultMap id="userMap" type="SysUser">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="mobile" column="mobile"/>
+        <collection property="roles" ofType="SysRole">
+            <id property="id" column="role_id"></id>
+            <result property="name" column="role_name"/>
+        </collection>
+    </resultMap>
+
+    <select id="findUserByName" parameterType="java.lang.String" resultMap="userMap">
+        select u.*, r.name role_name, r.id role_id
+        from sys_user u
+                 LEFT JOIN sys_user_role sru on u.id= sru.sys_user_id
+                 LEFT JOIN sys_role r on sru.sys_role_id=r.id
+        where u.username= #{username} and u.status = '1'
+    </select>
+
+
+    <!-- 保存角色 -->
+    <insert id="insertRoles" parameterType="SysUser">
+        insert into sys_user_role (sys_user_id,sys_role_id)
+        <foreach collection="roles" item="role" separator=" union all ">
+            SELECT #{id}, #{role.id} from dual
+        </foreach>
+    </insert>
+
+    <!-- 删除角色 -->
+    <delete id="deleteRoles" parameterType="SysUser">
+        delete from sys_user_role where sys_user_id = #{id}
+    </delete>
+
+
+    <select id="findUserById" parameterType="int" resultMap="userMap">
+        select u.*
+             ,r.name role_name,r.id role_id
+        from sys_user u
+                 LEFT JOIN sys_user_role sru on u.id= sru.sys_user_id
+                 LEFT JOIN sys_role r on sru.sys_role_id=r.id
+        where u.id= #{value}
+    </select>
+</mapper>

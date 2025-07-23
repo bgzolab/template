@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.bgzo.cms.back.mapper.SysMenuMapper">
+    <!--Author:李俊奇, 鲁丰华-->
+    <!-- 根据用户名获取对应的菜单 -->
+    <select id="findByUserName" parameterType="java.lang.String" resultType="SysMenu">
+        SELECT DISTINCT
+            a.*
+        FROM sys_menu a
+                 LEFT JOIN sys_menu p ON p.id = a.pid
+                 JOIN sys_role_menu rm ON rm.sys_menu_id = a.id
+                 JOIN sys_role r ON r.id = rm.sys_role_id
+                 JOIN sys_user_role ur ON ur.sys_role_id = r.id
+                 JOIN sys_user u ON u.id = ur.sys_user_id AND u.username = #{username} AND a.del_flag="0"
+        order by id asc
+    </select>
+
+</mapper>

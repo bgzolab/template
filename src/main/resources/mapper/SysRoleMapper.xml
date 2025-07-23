@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.bgzo.cms.back.mapper.SysRoleMapper">
+    <!--Author: 赵仁毫, 鲁丰华-->
+    <resultMap id="roleMap" type="SysRole">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <collection property="menus" ofType="SysMenu">
+            <id property="id" column="menu_id"></id>
+        </collection>
+
+    </resultMap>
+    <delete id="deleteRoleMenus" parameterType="SysRole">
+        delete from sys_role_menu where sys_role_id = #{id}
+    </delete>
+
+    <update id="updateRoleDelFlag" parameterType="SysRole">
+        update sys_role set del_flag="1" where sys_role.id = #{id}
+    </update>
+<!--        delete from sys_role_menu where  -->
+
+    <!--批量更新角色-->
+    <insert id="insertRoleMenus" parameterType="SysRole">
+        insert into sys_role_menu (sys_role_id,sys_menu_id)
+        <foreach collection="menus" item="menu" separator=" union all ">
+            SELECT #{id}, #{menu.id} from dual
+        </foreach>
+    </insert>
+
+    <select id="findRoleAndMenu" parameterType="int" resultMap="roleMap">
+        SELECT sr.*,srm.sys_menu_id menu_id
+        from sys_role sr
+                 LEFT JOIN sys_role_menu srm on srm.sys_role_id = sr.id
+        where sr.id = #{value}
+    </select>
+
+
+</mapper>
