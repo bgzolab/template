@@ -76,3 +76,6 @@ Gopkg.lock
 *.rvmrc
 *.ruby-version
 *.ruby-gemset
+
+# Databse
+demo.db
