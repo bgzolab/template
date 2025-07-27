@@ -1,7 +1,7 @@
 from cnblog.blog_post import get_cnblog_post_body_by_url
 from cnblog.bookmark import get_bookmark_list
 from utils.file_utils import output_content_to_file_path
-from utils.md_utils import html_to_markdown_with_html2text
+from utils.md_utils import html_to_markdown_with_html2text, html_to_markdown_with_bs
 from utils.template import WebPage
 from utils.md_utils import dump_markdown_with_frontmatter
 
@@ -22,7 +22,7 @@ def cnblog_export():
             )
 
             md = dump_markdown_with_frontmatter(webpage.__dict__,
-                                                    html_to_markdown_with_html2text(
+                                                    html_to_markdown_with_bs(
                                                         get_cnblog_post_body_by_url(bm.LinkUrl)
                                                     )
                                                 )
