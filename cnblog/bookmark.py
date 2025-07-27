@@ -49,6 +49,21 @@ def get_bookmark_list() -> list:
     else:
         response.raise_for_status()  # Raise an error for bad responses
 
+# TODO 好像没有办法处理事务...
+def delete_by_id(id: int):
+    """
+    Deletes a bookmark by its ID.
+
+    Args:
+        id (int): The ID of the bookmark to delete.
+    """
+    client = CnblogClient()
+    response = client.session.delete(f"{client.api_endpoints.BOOKMARK_DELETE}/{id}")
+    if response.status_code == 204:
+        print(f"Bookmark with ID {id} deleted successfully.")
+    else:
+        response.raise_for_status()  # Raise an error for bad responses
+
 if __name__ == '__main__':
     try:
         bookmarks = get_bookmark_list()
