@@ -1,0 +1,17 @@
+[project]
+name = "export-to-obsidian"
+version = "0.1.0"
+description = "A tool to export all you need to obsidian"
+authors = [
+    {name = "hx",email = "im@bgzo.cc"}
+]
+license = {text = "AGPL-3.0"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
