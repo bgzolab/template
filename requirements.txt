@@ -1,0 +1,5 @@
+pytest~=8.4.1
+python-frontmatter~=1.1.0
+html2text~=2025.4.15
+beautifulsoup4~=4.13.4
+requests~=2.32.4

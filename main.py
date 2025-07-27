@@ -1,16 +1,41 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+from cnblog.blog_post import get_cnblog_post_body_by_url
+from cnblog.bookmark import get_bookmark_list
+from utils.file_utils import output_content_to_file_path
+from utils.md_utils import html_to_markdown_with_html2text
+from utils.template import WebPage
+from utils.md_utils import dump_markdown_with_frontmatter
 
 
-# Press the green button in the gutter to run the script.
+# CNBLOG 博客园
+def cnblog_export():
+    bookmarks = get_bookmark_list()
+    for bm in bookmarks:
+        if bm.FromCNBlogs:
+            print(f"Process start: {bm.Title}")
+
+            webpage = WebPage(
+                title=bm.Title,
+                source=bm.LinkUrl,
+                created=bm.DateAdded,
+                modified=bm.DateAdded,
+                type="archive-web"
+            )
+
+            md = dump_markdown_with_frontmatter(webpage.__dict__,
+                                                    html_to_markdown_with_html2text(
+                                                        get_cnblog_post_body_by_url(bm.LinkUrl)
+                                                    )
+                                                )
+            output_content_to_file_path(bm.Title, md, "md")
+
+            print(f"Process done: {bm.Title}")
+            # utils.md_utils.html_to_markdown_with_html2text(bm.url)
+        else:
+            print(f"Process skip: {bm.Title}")
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    try:
+        cnblog_export()
+    except Exception as e:
+        print(f"An error occurred: {e}")
