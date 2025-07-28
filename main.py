@@ -1,6 +1,6 @@
 from cnblog.blog_post import get_cnblog_post_body_by_url
 from cnblog.bookmark import get_bookmark_list
-from utils.file_utils import output_content_to_file_path
+from utils.file_utils import output_content_to_file_path, get_clean_filename
 from utils.md_utils import html_to_markdown_with_html2text, html_to_markdown_with_bs
 from utils.template import WebPage
 from utils.md_utils import dump_markdown_with_frontmatter
@@ -11,8 +11,6 @@ def cnblog_export():
     bookmarks = get_bookmark_list()
     for bm in bookmarks:
         if bm.FromCNBlogs:
-            print(f"Process start: {bm.Title}")
-
             webpage = WebPage(
                 title=bm.Title,
                 source=bm.LinkUrl,
@@ -26,12 +24,13 @@ def cnblog_export():
                                                         get_cnblog_post_body_by_url(bm.LinkUrl)
                                                     )
                                                 )
-            output_content_to_file_path(bm.Title, md, "md")
+            output_content_to_file_path(
+                get_clean_filename(bm.Title), md, "md")
 
-            print(f"Process done: {bm.Title}")
+            print(f"Done: {bm.Title}")
             # utils.md_utils.html_to_markdown_with_html2text(bm.url)
         else:
-            print(f"Process skip: {bm.Title}")
+            print(f"Skip: {bm.Title}")
 
 
 if __name__ == '__main__':

@@ -5,6 +5,7 @@
 @Date : 2025-07-27
 @Links : https://github.com/bGZo
 """
+import re
 
 
 def output_content_to_file_path(file_name: str, content: str, file_type: str = "md") -> str:
@@ -53,3 +54,15 @@ def ensure_output_directory_exists(output_dir: str):
         print(f"Output directory '{output_dir}' created.")
     else:
         print(f"Output directory '{output_dir}' already exists.")
+
+
+def get_clean_filename(filename: str) -> str:
+    try:
+        filename = re.sub(r'[@…：.？，！\|｜【】\[\]:!“”《》_、「」#——<>:"/\\|\-。（）&•]', ' ', filename)
+    except AttributeError:
+        pass
+
+    filename = re.sub(r'[ ]+', ' ', filename)
+    filename = filename.strip()
+    filename = re.sub(r' ', '-', filename)
+    return filename
