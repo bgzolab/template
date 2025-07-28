@@ -1,28 +1,10 @@
-# 垃圾场
+# 让我们快乐地点格子
 
-![](https://img.shields.io/github/repo-size/bGZo/playground?style=flat-square)
 
-![](https://raw.githack.com/bGZo/assets/dev/2025/1753254271482.JPG)
+## 参考项目
 
-## Merge me
+- https://github.com/LCMs-YoRHa/From-Bangumi-to-Obsidian
 
-Add the remote repository:
-
-```shell
-git remote add origin git@github.com:bGZo/playground.git
-```
-
-Fetch the `dev` branch from the remote repository:
-
-```shell
-git fetch origin dev
-```
-
-Merge the `dev` branch into your local repository to get started:
-
-```shell
-git merge origin/dev --allow-unrelated-histories
-```
 
 ## License
 
