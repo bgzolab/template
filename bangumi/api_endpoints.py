@@ -11,4 +11,4 @@ BASE_URL = "https://api.bgm.tv"
 USER_CURRENT = f"{BASE_URL}/v0/me"
 
 # Collection API Endpoints
-
+COLLECTIONS_UPSERT = f"{BASE_URL}/v0/users/-/collections/%s"

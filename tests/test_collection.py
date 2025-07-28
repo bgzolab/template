@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author : bGZo
+@Date : 2025-07-28
+@Links : https://github.com/bGZo
+"""
+from bangumi.collection import mark_subject
+from bangumi.enum import SubjectCollectionType
+
+
+def test_mark_subject():
+    from bangumi.client import BangumiClient
+
+    client = BangumiClient()
+    user = client.get_user()
+    print(user)
+
+    subject_id = 515880  # Replace with a valid subject ID
+    status = 3  # Replace with the desired status
+
+    response = mark_subject(subject_id, SubjectCollectionType.DONE.value)
+    print(response)  # Print the response to verify the operation
