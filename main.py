@@ -10,6 +10,9 @@ import re
 
 from bs4 import BeautifulSoup
 
+from bangumi.collection import mark_subject
+from bangumi.enum import SubjectCollectionType
+
 
 def get_all_bgm_id_from_html_files(directory: str) -> set:
     pattern = re.compile(r'/subject/(\d+)$')
@@ -29,7 +32,11 @@ def get_all_bgm_id_from_html_files(directory: str) -> set:
                             print(f'文件: {filename}, ID: {match.group(1)}')
     return result
 
+
 if __name__ == '__main__':
     target_set = get_all_bgm_id_from_html_files('./history')
     print(len(target_set))
-    print(target_set)
+
+    for item in target_set:
+        response = mark_subject(item, SubjectCollectionType.DONE.value)
+        print(response)
