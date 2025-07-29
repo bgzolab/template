@@ -76,3 +76,5 @@ Gopkg.lock
 *.rvmrc
 *.ruby-version
 *.ruby-gemset
+
+outputs/
