@@ -33,10 +33,20 @@ def get_all_bgm_id_from_html_files(directory: str) -> set:
     return result
 
 
-if __name__ == '__main__':
-    target_set = get_all_bgm_id_from_html_files('./history')
+def mark_want_subjects_form_files():
+    target_set = get_all_bgm_id_from_html_files('./history/want')
     print(len(target_set))
+    for item in target_set:
+        response = mark_subject(item, SubjectCollectionType.WANT.value)
+        print(response)
 
+def mark_done_subjects_form_files():
+    target_set = get_all_bgm_id_from_html_files('./history/done')
+    print(len(target_set))
     for item in target_set:
         response = mark_subject(item, SubjectCollectionType.DONE.value)
         print(response)
+
+if __name__ == '__main__':
+    mark_want_subjects_form_files()
+    mark_done_subjects_form_files()
