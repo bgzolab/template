@@ -12,6 +12,8 @@
 2. https://github.com/hristovskii/sitemap-crawler-python
 3. https://github.com/GateNLP/ultimate-sitemap-parser
 4. https://github.com/clydesantiago/site-to-md
+   5. 依赖浏览器，滚犊子吧～
+
 
 当然还有反向生成的库，用的人比较多，如：
 
