@@ -64,7 +64,7 @@ def fetch_and_save(url: str):
         print(f"无法解析主机名: {url}")
         return
     os.makedirs(hostname, exist_ok=True)
-    name = title +'.md'
+    name = get_clean_filename(title) +'.md'
     filename = os.path.join(hostname, name)
     with open(filename, "w", encoding="utf-8") as f:
         f.write(result)
@@ -97,7 +97,43 @@ def fetch_from_url_list(url_list: list[str]):
     with open(index_filename, "w", encoding="utf-8") as f:
         f.write(index_content)
 
+def get_all_url_from_archives(url: str) -> list[str]:
+    """
+    从指定的 URL 中获取所有文章链接
+    """
+    hostname = urlparse(url).hostname
+    downloaded = trafilatura.fetch_url(url)
+    if not downloaded:
+        print(f"无法下载: {url}")
+        return []
+
+    soup = BeautifulSoup(downloaded, "html.parser")
+    links = soup.find_all('a', href=True)
+    # urls = [link['href'] for link in links if link['href'].startswith('http')]
+    urls = [link['href'] for link in links if 'href' in link.attrs]
+    valid_urls = {'http://' + hostname + u for u in urls if u.endswith('.html')}
+    return list(valid_urls)
+
+def fetch_from_sitemap(url):
+    url_list = get_all_public_pages_url(url)
+    fetch_from_url_list(url_list)
+
+def fetch_from_archive_page(url):
+    url_list = get_all_url_from_archives(url)
+    fetch_from_url_list(url_list)
+
+def get_clean_filename(filename: str) -> str:
+    try:
+        filename = re.sub(r'[@…：.？，！\|｜【】\[\]:!“”《》_、「」#——<>:"/\\|\-。（）&•]', ' ', filename)
+    except AttributeError:
+        pass
+
+    filename = re.sub(r'[ ]+', ' ', filename)
+    filename = filename.strip()
+    filename = re.sub(r' ', '-', filename)
+    return filename
+
 
 if __name__ == '__main__':
-    url_list = get_all_public_pages_url('https://cn.apkjam.com/')
-    fetch_from_url_list(url_list)
+    # fetch_from_sitemap('http://www.hecaitou.com/')
+    fetch_from_archive_page('https://cn.apkjam.com/archives/')
