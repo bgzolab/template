@@ -19,3 +19,22 @@ title: "{}"
 type: archive-web
 ---
 """
+
+
+
+"""
+aliases:
+    - "{}目录"
+created: "{}"
+modified: "{}"
+source: "{}"
+tags: 
+    - "index"
+title: "{}目录"
+type: index
+---
+"""
+TEMPLATE_INDEX = """# 目录
+
+"""
+

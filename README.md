@@ -11,15 +11,21 @@
 - [x] 支持 Sitemap 自动匹配
   - https://ultimate-sitemap-parser.readthedocs.io/en/stable/
 - [x] 获取 URL 内容
-  - 想用 crawl4ai，但是依赖浏览器
-  - trafilatura 提取文章内容，但是失败了
-  - BS 直接转换 HTML 全部内容
+  - ~~想用 crawl4ai，但是依赖浏览器~~
+  - [x] trafilatura 提取文章内容，但是失败了
+  - [x] BS 直接转换 HTML 全部内容
 - [ ] 异步下载文章内容
   - 目前是同步下载，速度很慢
-- [ ] 支持 Frontmatter, 最好可以做到自定义模板
+- [x] 支持 Frontmatter
+  - [ ] 最好可以做到自定义模板，无需改动代码，自由度更高
 - [ ] 支持自定义下载目录
-- [ ] 支持输出一个 index.md 文件，里面包含所有文章的链接 
-   - 用 Wikilink 还是 Markdown 链接？
+- [x] 支持输出一个 index.md 文件，里面包含所有文章的链接 
+   - 用 Wikilink 还是 ==Markdown 链接==？
+
+## 测试网站
+
+1. http://www.hecaitou.com
+2. https://cn.apkjam.com
 
 ## 参考
 

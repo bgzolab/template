@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 import trafilatura
 from markdownify import markdownify as md
 
-from template import TEMPLATE_FRONT_MATTER
+from template import TEMPLATE_FRONT_MATTER, TEMPLATE_INDEX
 
 
 def get_all_public_pages_url(url: str) -> list[str]:
@@ -64,18 +64,40 @@ def fetch_and_save(url: str):
         print(f"无法解析主机名: {url}")
         return
     os.makedirs(hostname, exist_ok=True)
-    filename = os.path.join(hostname, title +'.md')
+    name = title +'.md'
+    filename = os.path.join(hostname, name)
     with open(filename, "w", encoding="utf-8") as f:
         f.write(result)
     print(f"已保存: {filename}")
+    return hostname, name
 
 def test_download_from(url):
     # TEMPLATE_FRONT_MATTER
     fetch_and_save(url)
 
+def test_url_list_fetch():
+    url_list = [
+        'https://www.hecaitou.com/2025/07/in-the-eternal-flow.html',
+        'https://www.hecaitou.com/2025/07/what-music-are-you-listening-to-lately.html'
+    ]
+    fetch_from_url_list(url_list)
+
+def fetch_from_url_list(url_list: list[str]):
+    if len(url_list) == 0:
+        return
+
+    index_content = TEMPLATE_INDEX
+    index_dir = urlparse(url_list[0]).hostname
+
+    for url in url_list:
+        hostname, name = fetch_and_save(url)
+        index_content = (index_content + f"- [{name[:-3]}](./{name})\n" )
+
+    index_filename = os.path.join(index_dir, "index.md")
+    with open(index_filename, "w", encoding="utf-8") as f:
+        f.write(index_content)
+
+
 if __name__ == '__main__':
-    # url_list = get_all_public_pages_url('https://www.hecaitou.com/')
-    # for url in url_list:
-    #     fetch_and_save(url)
-    url = 'https://www.hecaitou.com/2025/07/in-the-eternal-flow.html'
-    test_download_from(url)
+    url_list = get_all_public_pages_url('https://cn.apkjam.com/')
+    fetch_from_url_list(url_list)
