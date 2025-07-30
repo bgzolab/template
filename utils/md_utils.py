@@ -10,7 +10,14 @@ import frontmatter
 import sys
 import html2text
 from bs4 import BeautifulSoup
+from markdownify import markdownify as md
 
+"""
+=========================================================================
+From html to markdown
+"""
+
+# using BeautifulSoup to convert HTML to Markdown
 def html_to_markdown_with_bs(html):
     soup = BeautifulSoup(html, 'html.parser')
     lines = []
@@ -32,10 +39,19 @@ def html_to_markdown_with_bs(html):
                     lines.append(f"{idx}. {li.get_text(strip=True)}")
     return '\n'.join(lines)
 
+# using markdownify to convert HTML to Markdown
+def html_to_markdown_with_md(html: str) -> str:
+    return md(html, strip=['a'])
 
+# using html2text to convert HTML to Markdown
 def html_to_markdown_with_html2text(html:str):
     # 使用 html2text 库将 HTML 转换为 Markdown
     return html2text.html2text(html)
+
+"""
+=========================================================================
+"""
+
 
 def read(path: str):
     # 读取并解析 Markdown 文件
