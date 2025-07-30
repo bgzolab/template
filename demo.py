@@ -6,6 +6,7 @@
 @Links : https://github.com/bGZo
 """
 import datetime
+import re
 
 from bs4 import BeautifulSoup
 from usp.tree import sitemap_tree_for_homepage
