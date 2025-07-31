@@ -31,3 +31,28 @@ def test_query_users_collection():
         limit=200,
         offset=0)
     print(response)
+
+
+def test_query_users_collection_paged():
+    username = 'dandelion_fs'
+    subject_type = SubjectType.BOOK.value
+    collection_type = CollectionType.WANT.value
+    limit = 50
+    offset = 0
+    all_results = []
+    while True:
+        results = get_all_collections_by_pages(
+            username,
+            subject_type,
+            collection_type,
+            limit=limit,
+            offset=offset
+        )
+        if not results:
+            break
+        all_results.extend(results)
+        if len(results) < limit:
+            break
+        offset += limit
+    print(f"总数: {len(all_results)}")
+    # print(all_results)  # 如需输出全部内容可取消注释

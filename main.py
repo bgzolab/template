@@ -54,19 +54,27 @@ def get_user_all_collections_with_status(subject_type: int, collection_type: int
     limit = 30
     offset = 0
 
-    response = get_all_collections_by_pages(
-        'dandelion_fs',
-        subject_type,
-        collection_type,
-        limit=limit,
-        offset=offset,
-    )
-    print("get response", response)
-    for res in response:
+    all_results = []
+    while True:
+        results = get_all_collections_by_pages(
+            'dandelion_fs',
+            subject_type,
+            collection_type,
+            limit=limit,
+            offset=offset
+        )
+        if not results:
+            break
+        all_results.extend(results)
+        if len(results) < limit:
+            break
+        offset += limit
+
+    print("get response", all_results)
+    for res in all_results:
         mark_subject(res.subject_id, CollectionType.DONE.value)
         print("Handling done:{}", res.subject_id)
 
-    print(response)
 
 def clone_user_collection_with_subject_type(subject_type: int):
     get_user_all_collections_with_status(
