@@ -6,9 +6,11 @@
 @Links : https://github.com/bGZo
 """
 from http.client import responses
+from datetime import datetime
 
 from bangumi.api_endpoints import COLLECTIONS_UPSERT, COLLECTIONS_QUERY_USERS
 from bangumi.client import BangumiClient
+from bangumi.entity import UserSubjectCollection, SlimSubjectV0, SubjectImages, SubjectTag
 
 
 def mark_subject(subject_id: int, status: int, comment: str = "", tags: list[str] = None) -> bool:
@@ -46,6 +48,45 @@ def mark_subject(subject_id: int, status: int, comment: str = "", tags: list[str
         print(f"Error marking subject: {response.status_code} {responses[response.status_code]}")  # noqa: E501
         return False
 
+def _dict_to_subject_images(d: dict) -> SubjectImages:
+    return SubjectImages(**d)
+
+def _dict_to_subject_tag_list(lst: list) -> list:
+    return [SubjectTag(**tag) for tag in lst]
+
+def _dict_to_slim_subject_v0(d: dict) -> SlimSubjectV0:
+    return SlimSubjectV0(
+        date=d.get("date"),
+        images=_dict_to_subject_images(d["images"]),
+        name=d["name"],
+        name_cn=d["name_cn"],
+        short_summary=d["short_summary"],
+        tags=_dict_to_subject_tag_list(d.get("tags", [])),
+        score=d["score"],
+        type=d["type"],
+        id=d["id"],
+        eps=d["eps"],
+        volumes=d["volumes"],
+        collection_total=d["collection_total"],
+        rank=d["rank"]
+    )
+
+def _dict_to_user_subject_collection(d: dict) -> UserSubjectCollection:
+    return UserSubjectCollection(
+        id=d.get("id", 0),
+        updated_at=datetime.fromisoformat(d["updated_at"]),
+        comment=d.get("comment"),
+        tags=d.get("tags", []),
+        vol_status=d["vol_status"],
+        ep_status=d["ep_status"],
+        subject_id=d["subject_id"],
+        subject_type=d["subject_type"],
+        rate=d["rate"],
+        type=d["type"],
+        private=d["private"],
+        subject=_dict_to_slim_subject_v0(d["subject"])
+    )
+
 def get_all_collections_by_pages(username: str, subject_type: str, type: str, limit: int = 100, offset: int = 0) -> list:
     """
     Get all collections for a specific subject type and type by pages.
@@ -67,7 +108,11 @@ def get_all_collections_by_pages(username: str, subject_type: str, type: str, li
         }
     )
     if response.status_code == 200:
-        return response.json()
+        result = response.json()
+        return [
+            _dict_to_user_subject_collection(item)
+            for item in result.get("data", [])
+        ]
     else:
         print(f"Error fetching collections: {response.status_code} {responses[response.status_code]}")
         return []

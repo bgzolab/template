@@ -24,11 +24,10 @@ def test_mark_subject():
 
 
 def test_query_users_collection():
-    print(
-        get_all_collections_by_pages(
-            'dandelion_fs',
-            SubjectType.BOOK.value,
-            CollectionType.WANT.value,
-            limit=10,
-            offset=0)
-    )
+    response = get_all_collections_by_pages(
+        'dandelion_fs',
+        SubjectType.BOOK.value,
+        CollectionType.WANT.value,
+        limit=1,
+        offset=0)
+    print(response)
