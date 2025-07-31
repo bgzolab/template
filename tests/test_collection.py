@@ -28,6 +28,6 @@ def test_query_users_collection():
         'dandelion_fs',
         SubjectType.BOOK.value,
         CollectionType.WANT.value,
-        limit=1,
+        limit=200,
         offset=0)
     print(response)

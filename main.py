@@ -10,8 +10,8 @@ import re
 
 from bs4 import BeautifulSoup
 
-from bangumi.collection import mark_subject
-from bangumi.enum import CollectionType
+from bangumi.collection import mark_subject, get_all_collections_by_pages
+from bangumi.enum import CollectionType, SubjectType
 
 
 def get_all_bgm_id_from_html_files(directory: str) -> set:
@@ -47,6 +47,44 @@ def mark_done_subjects_form_files():
         response = mark_subject(item, CollectionType.DONE.value)
         print(response)
 
+
+def get_user_all_collections_with_status(subject_type: int, collection_type: int):
+    # 想看
+    print("get user all collections with status: {} and subject type: {}")
+    limit = 30
+    offset = 0
+
+    response = get_all_collections_by_pages(
+        'dandelion_fs',
+        subject_type,
+        collection_type,
+        limit=limit,
+        offset=offset,
+    )
+    print("get response", response)
+    for res in response:
+        mark_subject(res.subject_id, CollectionType.DONE.value)
+        print("Handling done:{}", res.subject_id)
+
+    print(response)
+
+def clone_user_collection_with_subject_type(subject_type: int):
+    get_user_all_collections_with_status(
+        subject_type, CollectionType.WANT.value)
+    get_user_all_collections_with_status(
+        subject_type, CollectionType.DONE.value)
+    get_user_all_collections_with_status(
+        subject_type, CollectionType.DOING.value)
+    get_user_all_collections_with_status(
+        subject_type, CollectionType.WAITING.value)
+    get_user_all_collections_with_status(
+        subject_type, CollectionType.CANCEL.value)
+
 if __name__ == '__main__':
-    mark_want_subjects_form_files()
-    mark_done_subjects_form_files()
+    # mark_want_subjects_form_files()
+    # mark_done_subjects_form_files()
+    clone_user_collection_with_subject_type(SubjectType.BOOK.value)
+    clone_user_collection_with_subject_type(SubjectType.GAME.value)
+    clone_user_collection_with_subject_type(SubjectType.ANIME.value)
+    clone_user_collection_with_subject_type(SubjectType.MUSIC.value)
+    clone_user_collection_with_subject_type(SubjectType.REAL_LIFE.value)

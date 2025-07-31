@@ -87,12 +87,12 @@ def _dict_to_user_subject_collection(d: dict) -> UserSubjectCollection:
         subject=_dict_to_slim_subject_v0(d["subject"])
     )
 
-def get_all_collections_by_pages(username: str, subject_type: str, type: str, limit: int = 100, offset: int = 0) -> list:
+def get_all_collections_by_pages(username: str, subject_type: int, collection_type: int, limit: int = 30, offset: int = 0) -> list[UserSubjectCollection]:
     """
     Get all collections for a specific subject type and type by pages.
 
     :param subject_type: The type of the subject (e.g., "anime", "book").
-    :param type: The collection type (e.g., "collect", "wish").
+    :param collection_type: The collection type (e.g., "collect", "wish").
     :param limit: The number of items to return per page.
     :param offset: The offset for pagination.
     :return: A list of collections.
@@ -102,7 +102,7 @@ def get_all_collections_by_pages(username: str, subject_type: str, type: str, li
         COLLECTIONS_QUERY_USERS % username,
         params={
             "subject_type":subject_type,
-            "type":type,
+            "type":collection_type,
             "limit": limit,
             "offset": offset
         }
