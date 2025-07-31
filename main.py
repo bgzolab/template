@@ -11,7 +11,7 @@ import re
 from bs4 import BeautifulSoup
 
 from bangumi.collection import mark_subject
-from bangumi.enum import SubjectCollectionType
+from bangumi.enum import CollectionType
 
 
 def get_all_bgm_id_from_html_files(directory: str) -> set:
@@ -37,14 +37,14 @@ def mark_want_subjects_form_files():
     target_set = get_all_bgm_id_from_html_files('./history/want')
     print(len(target_set))
     for item in target_set:
-        response = mark_subject(item, SubjectCollectionType.WANT.value)
+        response = mark_subject(item, CollectionType.WANT.value)
         print(response)
 
 def mark_done_subjects_form_files():
     target_set = get_all_bgm_id_from_html_files('./history/done')
     print(len(target_set))
     for item in target_set:
-        response = mark_subject(item, SubjectCollectionType.DONE.value)
+        response = mark_subject(item, CollectionType.DONE.value)
         print(response)
 
 if __name__ == '__main__':

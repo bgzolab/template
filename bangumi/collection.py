@@ -7,7 +7,7 @@
 """
 from http.client import responses
 
-from bangumi.api_endpoints import COLLECTIONS_UPSERT
+from bangumi.api_endpoints import COLLECTIONS_UPSERT, COLLECTIONS_QUERY_USERS
 from bangumi.client import BangumiClient
 
 
@@ -46,3 +46,28 @@ def mark_subject(subject_id: int, status: int, comment: str = "", tags: list[str
         print(f"Error marking subject: {response.status_code} {responses[response.status_code]}")  # noqa: E501
         return False
 
+def get_all_collections_by_pages(username: str, subject_type: str, type: str, limit: int = 100, offset: int = 0) -> list:
+    """
+    Get all collections for a specific subject type and type by pages.
+
+    :param subject_type: The type of the subject (e.g., "anime", "book").
+    :param type: The collection type (e.g., "collect", "wish").
+    :param limit: The number of items to return per page.
+    :param offset: The offset for pagination.
+    :return: A list of collections.
+    """
+    client = BangumiClient()
+    response = client.session.get(
+        COLLECTIONS_QUERY_USERS % username,
+        params={
+            "subject_type":subject_type,
+            "type":type,
+            "limit": limit,
+            "offset": offset
+        }
+    )
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Error fetching collections: {response.status_code} {responses[response.status_code]}")
+        return []

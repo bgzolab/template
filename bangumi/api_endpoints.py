@@ -12,3 +12,5 @@ USER_CURRENT = f"{BASE_URL}/v0/me"
 
 # Collection API Endpoints
 COLLECTIONS_UPSERT = f"{BASE_URL}/v0/users/-/collections/%s"
+# https://api.bgm.tv/v0/users/dandelion_fs/collections?subject_type&type&limit=1&offset=0
+COLLECTIONS_QUERY_USERS = f"{BASE_URL}/v0/users/%s/collections"
