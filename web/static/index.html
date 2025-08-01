@@ -20,27 +20,6 @@
     <div id="item-list" class="item-list"></div>
     <script>
         let selectedIds = [];
-        function loadData() {
-            const year = document.getElementById('year').value;
-            const month = document.getElementById('month').value;
-            fetch(`/api/data?year=${year}&month=${month}`)
-                .then(res => res.json())
-                .then(data => {
-                    const list = document.getElementById('item-list');
-                    list.innerHTML = '';
-                    selectedIds = [];
-                    if (data.data && data.data.length > 0) {
-                        data.data.forEach(item => {
-                            const div = document.createElement('div');
-                            div.className = 'item';
-                            div.innerHTML = `<input type='checkbox' value='${item.id}' onchange='toggleSelect(this)'> ${getName(item)} (ID: ${getBgmId(item)})`;
-                            list.appendChild(div);
-                        });
-                    } else {
-                        list.innerHTML = '无数据';
-                    }
-                });
-        }
         function getName(item){
             if (item.titleTranslate && item.titleTranslate["zh-Hans"] && item.titleTranslate["zh-Hans"].length > 0) {
                 return item.titleTranslate["zh-Hans"][0];
@@ -59,7 +38,7 @@
                     return i['id'];
                 }
             }
-
+            return '';
         }
         function toggleSelect(checkbox) {
             const id = parseInt(checkbox.value);
@@ -84,7 +63,35 @@
                 alert(`已处理 ${data.count} 个条目`);
             });
         }
+        function renderItem(item) {
+            const div = document.createElement('div');
+            div.className = 'item';
+            const bgmId = getBgmId(item);
+            let imgHtml = '';
+            if (bgmId) {
+                imgHtml = `<img src="https://api.bgm.tv/v0/subjects/${bgmId}/image?type=common" alt="cover" style="width:200px;height:auto;vertical-align:middle;margin-right:8px;" onerror="this.style.display='none'">`;
+            }
+            div.innerHTML = `${imgHtml}<input type='checkbox' value='${bgmId}' onchange='toggleSelect(this)'> ${getName(item)} (ID: ${bgmId})`;
+            return div;
+        }
+        function loadData() {
+            const year = document.getElementById('year').value;
+            const month = document.getElementById('month').value;
+            fetch(`/api/data?year=${year}&month=${month}`)
+                .then(res => res.json())
+                .then(data => {
+                    const list = document.getElementById('item-list');
+                    list.innerHTML = '';
+                    selectedIds = [];
+                    if (data.data && data.data.length > 0) {
+                        data.data.forEach(item => {
+                            list.appendChild(renderItem(item));
+                        });
+                    } else {
+                        list.innerHTML = '无数据';
+                    }
+                });
+        }
     </script>
 </body>
 </html>
-
