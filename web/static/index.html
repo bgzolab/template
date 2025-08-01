@@ -42,10 +42,10 @@
                 });
         }
         function getName(item){
-            if (item.titleTranslate.'zh-Hans'[0]){
-                return item.titleTranslate.'zh-Hans'[0]
+            if (item.titleTranslate && item.titleTranslate["zh-Hans"] && item.titleTranslate["zh-Hans"].length > 0) {
+                return item.titleTranslate["zh-Hans"][0];
             }
-            return item.title
+            return item.title;
         }
         function toggleSelect(checkbox) {
             const id = parseInt(checkbox.value);
