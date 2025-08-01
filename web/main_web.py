@@ -4,7 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from typing import List
 import uvicorn
 import os
+
+from bangumi.enum import CollectionType
 from bangumi_data.data import get_data_by_year_month
+from bangumi.collection import mark_subject
 
 app = FastAPI()
 
@@ -28,6 +31,11 @@ async def batch_process(request: Request):
     body = await request.json()
     ids: List[int] = body.get("ids", [])
     # 这里可以做统一处理，比如返回处理结果
+
+    for id in ids:
+        response = mark_subject(id, CollectionType.DONE.value)
+        print("process id = {}, response = {}", id, response)
+
     result = {"processed": ids, "count": len(ids)}
     return JSONResponse(content=result)
 
