@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Bangumi Data 批量操作</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .controls { margin-bottom: 20px; }
+        .item-list { margin-top: 20px; }
+        .item { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        年份：<input type="number" id="year" value="2024" min="2000" max="2100">
+        月份：<input type="number" id="month" value="1" min="1" max="12">
+        <button onclick="loadData()">加载数据</button>
+        <button onclick="submitBatch()">批量提交</button>
+    </div>
+    <div id="item-list" class="item-list"></div>
+    <script>
+        let selectedIds = [];
+        function loadData() {
+            const year = document.getElementById('year').value;
+            const month = document.getElementById('month').value;
+            fetch(`/api/data?year=${year}&month=${month}`)
+                .then(res => res.json())
+                .then(data => {
+                    const list = document.getElementById('item-list');
+                    list.innerHTML = '';
+                    selectedIds = [];
+                    if (data.data && data.data.length > 0) {
+                        data.data.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'item';
+                            div.innerHTML = `<input type='checkbox' value='${item.id}' onchange='toggleSelect(this)'> ${item.name} (ID: ${item.id})`;
+                            list.appendChild(div);
+                        });
+                    } else {
+                        list.innerHTML = '无数据';
+                    }
+                });
+        }
+        function toggleSelect(checkbox) {
+            const id = parseInt(checkbox.value);
+            if (checkbox.checked) {
+                if (!selectedIds.includes(id)) selectedIds.push(id);
+            } else {
+                selectedIds = selectedIds.filter(i => i !== id);
+            }
+        }
+        function submitBatch() {
+            if (selectedIds.length === 0) {
+                alert('请至少选择一个条目');
+                return;
+            }
+            fetch('/api/batch', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ids: selectedIds })
+            })
+            .then(res => res.json())
+            .then(data => {
+                alert(`已处理 ${data.count} 个条目`);
+            });
+        }
+    </script>
+</body>
+</html>
+
