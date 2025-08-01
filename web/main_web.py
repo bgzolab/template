@@ -18,9 +18,10 @@ def index():
 
 @app.get("/api/data")
 def get_data(year: int, month: int):
-    # 获取 bangumi-data 数据，假设有 get_data_by_year_month 方法
     data = get_data_by_year_month(year, month)
-    return JSONResponse(content={"data": data})
+    # dataclass对象转为dict
+    serializable_data = [bd.__dict__ | {"sites": [site.__dict__ for site in bd.sites]} for bd in data]
+    return JSONResponse(content={"data": serializable_data})
 
 @app.post("/api/batch")
 async def batch_process(request: Request):
