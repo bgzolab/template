@@ -33,13 +33,19 @@
                         data.data.forEach(item => {
                             const div = document.createElement('div');
                             div.className = 'item';
-                            div.innerHTML = `<input type='checkbox' value='${item.id}' onchange='toggleSelect(this)'> ${item.name} (ID: ${item.id})`;
+                            div.innerHTML = `<input type='checkbox' value='${item.id}' onchange='toggleSelect(this)'> ${getName(item)} (ID: ${item.id})`;
                             list.appendChild(div);
                         });
                     } else {
                         list.innerHTML = '无数据';
                     }
                 });
+        }
+        function getName(item){
+            if (item.titleTranslate.'zh-Hans'[0]){
+                return item.titleTranslate.'zh-Hans'[0]
+            }
+            return item.title
         }
         function toggleSelect(checkbox) {
             const id = parseInt(checkbox.value);
