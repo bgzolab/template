@@ -6,13 +6,14 @@
 @Links : https://github.com/bGZo
 """
 from bangumi_data.entity import BangumiData, SiteInfo
+import requests
 
-def get_data_by_year_month(self, year: int, month: int) -> list[BangumiData]:
+def get_data_by_year_month(year: int, month: int) -> list[BangumiData]:
     """
     请求指定年份和月份的 BangumiData 数据，并返回 BangumiData 对象列表
     """
     url = f"https://raw.githubusercontent.com/bangumi-data/bangumi-data/refs/heads/master/data/items/{year:04d}/{month:02d}.json"
-    resp = self.session.get(url)
+    resp = requests.get(url)
     resp.raise_for_status()
     data_list = resp.json()
     # 反序列化为 BangumiData 对象列表
