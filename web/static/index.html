@@ -33,7 +33,7 @@
                         data.data.forEach(item => {
                             const div = document.createElement('div');
                             div.className = 'item';
-                            div.innerHTML = `<input type='checkbox' value='${item.id}' onchange='toggleSelect(this)'> ${getName(item)} (ID: ${item.id})`;
+                            div.innerHTML = `<input type='checkbox' value='${item.id}' onchange='toggleSelect(this)'> ${getName(item)} (ID: ${getBgmId(item)})`;
                             list.appendChild(div);
                         });
                     } else {
@@ -45,7 +45,21 @@
             if (item.titleTranslate && item.titleTranslate["zh-Hans"] && item.titleTranslate["zh-Hans"].length > 0) {
                 return item.titleTranslate["zh-Hans"][0];
             }
+            if (item.titleTranslate && item.titleTranslate["zh-Hant"] && item.titleTranslate["zh-Hant"].length > 0) {
+                return item.titleTranslate["zh-Hant"][0];
+            }
             return item.title;
+        }
+        function getBgmId(item){
+            if (!item.sites){
+                return null
+            }
+            for (const i of item['sites']) {
+                if (i && i['site'] === 'bangumi') {
+                    return i['id'];
+                }
+            }
+
         }
         function toggleSelect(checkbox) {
             const id = parseInt(checkbox.value);
