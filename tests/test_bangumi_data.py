@@ -5,9 +5,8 @@
 @Date : 2025-08-01
 @Links : https://github.com/bGZo
 """
-from bangumi_data.client import BangumiDataClient
+from bangumi_data.data import get_data_by_year_month
 
 def test_bangumi_data():
-    dataClient = BangumiDataClient()
-    data = dataClient.get_bangumi_data(2024, 8)
+    data = get_data_by_year_month(2024, 8)
     print(data)
