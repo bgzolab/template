@@ -13,7 +13,8 @@ app.mount("/static", StaticFiles(directory=os.path.join(os.path.dirname(__file__
 
 @app.get("/")
 def index():
-    return FileResponse("web/static/index.html")
+    index_path = os.path.join(os.path.dirname(__file__), "static", "index.html")
+    return FileResponse(index_path)
 
 @app.get("/api/data")
 def get_data(year: int, month: int):
