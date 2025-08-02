@@ -2,9 +2,6 @@
 
 ![](https://raw.githack.com/bGZo/assets/dev/2025/202508021025451.png)
 
-> [!note]
-> `access_token` for https://bgm.tv/ required, you can get it from https://next.bgm.tv/demo/access-token
-> export it on your `.env` file as `BGM_ACCESS_TOKEN`.
 
 ## Roadmap
 
@@ -22,12 +19,35 @@
 
 ## Quick Start
 
+需要 Bangumi 的 `access_token`，可以从 https://next.bgm.tv/demo/access-token 获取。
+
+如果从命令行中运行，需要声明环境变量，IDE 中请配置 Environment Variables。以 nix 类系统为例：
+
+```shell
+# 必填
+export BGM_ACCESS_TOKEN=xxx
+
+# 可选
+export http_proxy=192.168.31.20:10800
+export https_proxy=192.168.31.20:10800
+```
+
+### 往季新番点格子
+
 ```shell
 git clone -b 2025/07/bangumi-recovery-scripts --single-branch git@github.com:bGZo/playground.git
 cd playground
 pip install -r requirements.txt
 cd web
 python3 main_web.py
+```
+
+### 恢复数据（克隆账号）
+
+`main.py` 中已包含克隆账号的代码，替换目标账号运行即可，坐和等待。
+
+```python
+'dandelion_fs',
 ```
 
 ## 参考项目
