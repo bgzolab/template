@@ -12,12 +12,14 @@
 </head>
 <body>
     <div class="controls">
-        年份：<input type="number" id="year" value="2024" min="2000" max="2100">
-        月份：<input type="number" id="month" value="1" min="1" max="12">
+        年份：<input type="number" id="year" value="2025" min="2000" max="2100">
+        月份：<input type="number" id="month" value="8" min="1" max="12">
         <button onclick="loadData()">加载数据</button>
-        <button onclick="submitBatch()">批量提交</button>
     </div>
     <div id="item-list" class="item-list"></div>
+    <div class="controls">
+        <button onclick="submitBatch()">批量提交</button>
+    </div>
     <script>
         let selectedIds = [];
         function getName(item){
