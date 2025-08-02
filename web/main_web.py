@@ -30,12 +30,11 @@ def get_data(year: int, month: int):
 async def batch_process(request: Request):
     body = await request.json()
     ids: List[int] = body.get("ids", [])
+    type_str = body.get("type", str(CollectionType.DONE.value))
     # 这里可以做统一处理，比如返回处理结果
-
     for id in ids:
-        response = mark_subject(id, CollectionType.DONE.value)
-        print("process id = {}, response = {}", id, response)
-
+        response = mark_subject(id, int(type_str))
+        print(f"process id = {id}, type = {type_str}, response = {response}")
     result = {"processed": ids, "count": len(ids)}
     return JSONResponse(content=result)
 

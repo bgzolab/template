@@ -63,6 +63,17 @@
         图片大小：<input type="range" id="img-size-slider" min="60" max="240" value="100" step="1" style="width:200px;vertical-align:middle;">
         <span id="img-size-label">100px</span>
     </div>
+    <div class="controls">
+        <label for="default-type">批量收藏类型：</label>
+        <select id="default-type">
+            <option value="1">想看</option>
+            <option value="2" selected>看过</option>
+            <option value="3">在看</option>
+            <option value="4">搁置</option>
+            <option value="5">抛弃</option>
+        </select>
+<!--        <span style="color:#888;font-size:12px;">（可在下方已选中条目单独修改）</span>-->
+    </div>
     <div id="item-list" class="item-list"></div>
     <div class="controls">
         <button onclick="submitBatch()">批量提交</button>
@@ -72,6 +83,7 @@
         let selectedIds = [];
         let itemMap = {};
         let imgSize = 100;
+        let selectedTypes = {};
         function getName(item){
             if (item.titleTranslate && item.titleTranslate["zh-Hans"] && item.titleTranslate["zh-Hans"].length > 0) {
                 return item.titleTranslate["zh-Hans"][0];
@@ -100,19 +112,30 @@
                 selectedIds = selectedIds.filter(i => i !== id);
             }
         }
+        document.getElementById('default-type').addEventListener('change', function() {
+            // 仅���于调试，打印当前类型
+            console.log('批量收藏类型已切换为:', this.value);
+        });
         function submitBatch() {
             if (selectedIds.length === 0) {
                 alert('请至少选择一个条目');
                 return;
             }
+            // 获取批量收藏类型（每次提交时都重新获取当前值）
+            const type = document.getElementById('default-type').value;
+            console.log('提交时 type =', type);
             fetch('/api/batch', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ids: selectedIds })
+                body: JSON.stringify({ ids: selectedIds, type })
             })
             .then(res => res.json())
             .then(data => {
                 alert(`已处理 ${data.count} 个条目`);
+                // 清空选中数据
+                selectedIds = [];
+                renderSelectedList();
+                document.querySelectorAll('.item').forEach(card => card.classList.remove('selected'));
             });
         }
         function renderSelectedList() {
@@ -177,10 +200,12 @@
                 }
                 if (selectedIds.includes(bgmId)) {
                     selectedIds = selectedIds.filter(i => i !== bgmId);
+                    delete selectedTypes[bgmId];
                     div.classList.remove('selected');
                     console.log('取消选中:', bgmId);
                 } else {
                     selectedIds.push(bgmId);
+                    selectedTypes[bgmId] = document.getElementById('default-type').value;
                     div.classList.add('selected');
                     console.log('选中:', bgmId);
                 }
@@ -216,6 +241,7 @@
                     list.innerHTML = '';
                     selectedIds = [];
                     itemMap = {};
+                    selectedTypes = {};
                     if (data.data && data.data.length > 0) {
                         data.data.forEach(item => {
                             const bgmId = getBgmId(item);
