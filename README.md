@@ -1,5 +1,11 @@
 # 让我们快乐地点格子
 
+![](https://raw.githack.com/bGZo/assets/dev/2025/202508020914461.png)
+
+> [!note]
+> `access_token` for https://bgm.tv/ required, you can get it from https://next.bgm.tv/demo/access-token
+> export it on your `.env` file as `BGM_ACCESS_TOKEN`.
+
 ## Roadmap
 
 - [ ] 恢复数据
