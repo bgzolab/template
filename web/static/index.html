@@ -62,6 +62,19 @@
             border: 1px solid #ddd;
             border-radius: 8px;
         }
+        .mask {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.7);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #409eff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +93,7 @@
         年份：<input type="number" id="year" value="2025" min="1943" max="2100">
         月份：<input type="number" id="month" value="8" min="1" max="12">
         <button onclick="loadData()">加载数据</button>
+        <button onclick="addMonthAndReload()">下个月</button>
     </div>
     <div class="controls" id="img-size-controls" style="display:none;">
         图片大小：<input type="range" id="img-size-slider" min="60" max="240" value="100" step="1" style="width:200px;vertical-align:middle;">
@@ -87,6 +101,7 @@
     </div>
     <div id="item-list" class="item-list"></div>
     <div id="selected-list" class="selected-list" style="display:none;"></div>
+    <div id="mask" class="mask" style="display:none;">正在处理，请稍候...</div>
     <script>
         let selectedIds = [];
         let itemMap = {};
@@ -121,9 +136,15 @@
             }
         }
         document.getElementById('default-type').addEventListener('change', function() {
-            // 仅���于调试，打印当前类型
+            // 仅用于调试，打印当前类型
             console.log('批量收藏类型已切换为:', this.value);
         });
+        function showMask() {
+            document.getElementById('mask').style.display = '';
+        }
+        function hideMask() {
+            document.getElementById('mask').style.display = 'none';
+        }
         function submitBatch() {
             if (selectedIds.length === 0) {
                 alert('请至少选择一个条目');
@@ -132,6 +153,7 @@
             // 获取批量收藏类型（每次提交时都重新获取当前值）
             const type = document.getElementById('default-type').value;
             console.log('提交时 type =', type);
+            showMask();
             fetch('/api/batch', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -144,6 +166,9 @@
                 selectedIds = [];
                 renderSelectedList();
                 document.querySelectorAll('.item').forEach(card => card.classList.remove('selected'));
+            })
+            .finally(() => {
+                hideMask();
             });
         }
         function renderSelectedList() {
@@ -270,6 +295,18 @@
                     document.getElementById('item-list').style.gridTemplateColumns = `repeat(auto-fill, minmax(${imgSize + 80}px, 1fr))`;
                     renderSelectedList();
                 });
+        }
+        function addMonthAndReload() {
+            let monthInput = document.getElementById('month');
+            let month = parseInt(monthInput.value);
+            if (month < 12) {
+                monthInput.value = month + 1;
+            } else {
+                monthInput.value = 1;
+                let yearInput = document.getElementById('year');
+                yearInput.value = parseInt(yearInput.value) + 1;
+            }
+            loadData();
         }
     </script>
 </body>

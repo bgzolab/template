@@ -1,6 +1,6 @@
 # 让我们快乐地点格子
 
-![](https://raw.githack.com/bGZo/assets/dev/2025/202508020914461.png)
+![](https://raw.githack.com/bGZo/assets/dev/2025/202508021025451.png)
 
 > [!note]
 > `access_token` for https://bgm.tv/ required, you can get it from https://next.bgm.tv/demo/access-token

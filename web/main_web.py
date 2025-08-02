@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from typing import List
 import uvicorn
 import os
+from concurrent.futures import ThreadPoolExecutor
 
 from bangumi.enum import CollectionType
 from bangumi_data.data import get_data_by_year_month
@@ -31,10 +32,12 @@ async def batch_process(request: Request):
     body = await request.json()
     ids: List[int] = body.get("ids", [])
     type_str = body.get("type", str(CollectionType.DONE.value))
-    # 这里可以做统一处理，比如返回处理结果
-    for id in ids:
+    def process_one(id):
         response = mark_subject(id, int(type_str))
         print(f"process id = {id}, type = {type_str}, response = {response}")
+        return response
+    with ThreadPoolExecutor() as executor:
+        results = list(executor.map(process_one, ids))
     result = {"processed": ids, "count": len(ids)}
     return JSONResponse(content=result)
 
