@@ -6,8 +6,51 @@
     <style>
         body { font-family: Arial, sans-serif; }
         .controls { margin-bottom: 20px; }
-        .item-list { margin-top: 20px; }
-        .item { margin-bottom: 5px; }
+        .item-list {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .item {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .item.selected {
+            border-color: #409eff;
+            box-shadow: 0 2px 12px rgba(64,158,255,0.15);
+        }
+        .item img {
+            width: 100px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .item-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+        .item-id {
+            font-size: 12px;
+            color: #888;
+        }
+        .selected-list {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -20,8 +63,10 @@
     <div class="controls">
         <button onclick="submitBatch()">批量提交</button>
     </div>
+    <div id="selected-list" class="selected-list"></div>
     <script>
         let selectedIds = [];
+        let itemMap = {};
         function getName(item){
             if (item.titleTranslate && item.titleTranslate["zh-Hans"] && item.titleTranslate["zh-Hans"].length > 0) {
                 return item.titleTranslate["zh-Hans"][0];
@@ -65,15 +110,83 @@
                 alert(`已处理 ${data.count} 个条目`);
             });
         }
+        function renderSelectedList() {
+            const selectedDiv = document.getElementById('selected-list');
+            selectedDiv.innerHTML = '';
+            console.log('当前选中ID:', selectedIds);
+            if (selectedIds.length === 0) {
+                selectedDiv.innerHTML = '<span style="color:#888">未选中任何条目</span>';
+                return;
+            }
+            selectedDiv.innerHTML = '<b>已选中条目：</b>';
+            selectedIds.forEach(id => {
+                const item = itemMap[id];
+                if (!item) return;
+                const div = document.createElement('div');
+                div.style.display = 'inline-block';
+                div.style.margin = '4px';
+                div.style.padding = '4px 8px';
+                div.style.border = '1px solid #409eff';
+                div.style.borderRadius = '6px';
+                div.style.background = '#f0f7ff';
+                div.style.cursor = 'pointer';
+                div.innerHTML = `${getName(item)} <span style='color:#888;font-size:12px;'>(${id})</span> <span style='color:red;cursor:pointer;' title='移除'>&times;</span>`;
+                div.querySelector('span[title]')?.addEventListener('click', function(e) {
+                    console.log('移除选中:', id);
+                    selectedIds = selectedIds.filter(i => i !== id);
+                    document.querySelectorAll('.item').forEach(card => {
+                        if (card.querySelector('.item-id')?.textContent === `ID: ${id}`) {
+                            card.classList.remove('selected');
+                        }
+                    });
+                    renderSelectedList();
+                });
+                selectedDiv.appendChild(div);
+            });
+        }
         function renderItem(item) {
             const div = document.createElement('div');
             div.className = 'item';
             const bgmId = getBgmId(item);
             let imgHtml = '';
             if (bgmId) {
-                imgHtml = `<img src="https://api.bgm.tv/v0/subjects/${bgmId}/image?type=common" alt="cover" style="width:200px;height:auto;vertical-align:middle;margin-right:8px;" onerror="this.style.display='none'">`;
+                imgHtml = `<img src="https://api.bgm.tv/v0/subjects/${bgmId}/image?type=common" alt="cover" onerror="this.style.display='none'">`;
             }
-            div.innerHTML = `${imgHtml}<input type='checkbox' value='${bgmId}' onchange='toggleSelect(this)'> ${getName(item)} (ID: ${bgmId})`;
+            div.innerHTML = `${imgHtml}<div class="item-title">${getName(item)}</div><div class="item-id">ID: ${bgmId}</div>`;
+            function toggle() {
+                if (!bgmId) {
+                    console.log('无效ID，无法选中');
+                    return;
+                }
+                if (selectedIds.includes(bgmId)) {
+                    selectedIds = selectedIds.filter(i => i !== bgmId);
+                    div.classList.remove('selected');
+                    console.log('取消选中:', bgmId);
+                } else {
+                    selectedIds.push(bgmId);
+                    div.classList.add('selected');
+                    console.log('选中:', bgmId);
+                }
+                renderSelectedList();
+            }
+            const img = div.querySelector('img');
+            if (img) img.onclick = function(e) {
+                e.stopPropagation();
+                toggle();
+            };
+            div.querySelector('.item-title').onclick = function(e) {
+                e.stopPropagation();
+                toggle();
+            };
+            div.onclick = function(e) {
+                // 只在点击图片或标题时触发
+                if (e.target === img || e.target === div.querySelector('.item-title')) {
+                    toggle();
+                }
+            };
+            if (selectedIds.includes(bgmId)) {
+                div.classList.add('selected');
+            }
             return div;
         }
         function loadData() {
@@ -85,13 +198,17 @@
                     const list = document.getElementById('item-list');
                     list.innerHTML = '';
                     selectedIds = [];
+                    itemMap = {};
                     if (data.data && data.data.length > 0) {
                         data.data.forEach(item => {
+                            const bgmId = getBgmId(item);
+                            if (bgmId) itemMap[bgmId] = item;
                             list.appendChild(renderItem(item));
                         });
                     } else {
                         list.innerHTML = '无数据';
                     }
+                    renderSelectedList();
                 });
         }
     </script>
