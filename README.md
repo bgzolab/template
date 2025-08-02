@@ -17,6 +17,15 @@
 - [ ] 每日轮训删除时间线
   - 可以用这个 API： https://bgm.tv/feed/user/bool/timeline
 
+## Quick Start
+
+```shell
+git clone -b 2025/07/bangumi-recovery-scripts --single-branch git@github.com:bGZo/playground.git
+cd playground
+pip install -r requirements.txt
+cd web
+python3 main_web.py
+```
 
 ## 参考项目
 
