@@ -5,7 +5,18 @@
     <title>Bangumi Data 批量操作</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        .controls { margin-bottom: 20px; }
+        .head {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
         .item-list {
             margin-top: 20px;
             display: grid;
@@ -54,17 +65,11 @@
     </style>
 </head>
 <body>
-    <div class="controls">
-        年份：<input type="number" id="year" value="2025" min="2000" max="2100">
-        月份：<input type="number" id="month" value="8" min="1" max="12">
-        <button onclick="loadData()">加载数据</button>
+    <div class="head">
+        <h1>让我们快乐地 Cheating</h1>
     </div>
     <div class="controls">
-        图片大小：<input type="range" id="img-size-slider" min="60" max="240" value="100" step="1" style="width:200px;vertical-align:middle;">
-        <span id="img-size-label">100px</span>
-    </div>
-    <div class="controls">
-        <label for="default-type">批量收藏类型：</label>
+        <label for="default-type">操作类型：</label>
         <select id="default-type">
             <option value="1">想看</option>
             <option value="2" selected>看过</option>
@@ -72,13 +77,16 @@
             <option value="4">搁置</option>
             <option value="5">抛弃</option>
         </select>
-<!--        <span style="color:#888;font-size:12px;">（可在下方已选中条目单独修改）</span>-->
+        年份：<input type="number" id="year" value="2025" min="1943" max="2100">
+        月份：<input type="number" id="month" value="8" min="1" max="12">
+        <button onclick="loadData()">加载数据</button>
+    </div>
+    <div class="controls" id="img-size-controls" style="display:none;">
+        图片大小：<input type="range" id="img-size-slider" min="60" max="240" value="100" step="1" style="width:200px;vertical-align:middle;">
+        <span id="img-size-label">100px</span>
     </div>
     <div id="item-list" class="item-list"></div>
-    <div class="controls">
-        <button onclick="submitBatch()">批量提交</button>
-    </div>
-    <div id="selected-list" class="selected-list"></div>
+    <div id="selected-list" class="selected-list" style="display:none;"></div>
     <script>
         let selectedIds = [];
         let itemMap = {};
@@ -140,13 +148,14 @@
         }
         function renderSelectedList() {
             const selectedDiv = document.getElementById('selected-list');
-            selectedDiv.innerHTML = '';
-            console.log('当前选中ID:', selectedIds);
+            selectedDiv.style.display = '';
             if (selectedIds.length === 0) {
-                selectedDiv.innerHTML = '<span style="color:#888">未选中任何条目</span>';
+                selectedDiv.style.display = 'none';
+                selectedDiv.innerHTML = '';
                 return;
             }
-            selectedDiv.innerHTML = '<b>已选中条目：</b>';
+            selectedDiv.style.display = '';
+            selectedDiv.innerHTML = ' <button onclick="submitBatch()">批量提交</button> <b>已选中条目：</b>';
             selectedIds.forEach(id => {
                 const item = itemMap[id];
                 if (!item) return;
@@ -192,7 +201,11 @@
             if (bgmId) {
                 imgHtml = `<img src="https://api.bgm.tv/v0/subjects/${bgmId}/image?type=common" alt="cover" style="width:${imgSize}px;height:${Math.round(imgSize*1.4)}px;" onerror="this.style.display='none'">`;
             }
-            div.innerHTML = `${imgHtml}<div class="item-title">${getName(item)}</div><div class="item-id">ID: ${bgmId}</div>`;
+            let urlHtml = '';
+            if (bgmId) {
+                urlHtml = `<a href='https://bgm.tv/subject/${bgmId}' target='_blank' style='display:block;font-size:12px;color:#409eff;text-decoration:underline;margin-top:2px;'>https://bgm.tv/subject/${bgmId}</a>`;
+            }
+            div.innerHTML = `${imgHtml}<div class="item-title">${getName(item)}</div><div class="item-id">ID: ${bgmId}</div>${urlHtml}`;
             function toggle() {
                 if (!bgmId) {
                     console.log('无效ID，无法选中');
@@ -243,12 +256,14 @@
                     itemMap = {};
                     selectedTypes = {};
                     if (data.data && data.data.length > 0) {
+                        document.getElementById('img-size-controls').style.display = '';
                         data.data.forEach(item => {
                             const bgmId = getBgmId(item);
                             if (bgmId) itemMap[bgmId] = item;
                             list.appendChild(renderItem(item));
                         });
                     } else {
+                        document.getElementById('img-size-controls').style.display = 'none';
                         list.innerHTML = '无数据';
                     }
                     // 初始容器宽度
