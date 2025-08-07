@@ -16,12 +16,27 @@ pipx install export_to_obsidian
 
 ## Scope
 
+- [x] 博客园
+- [ ] Bangumi
+- [ ] Social Media Fed
+- [ ] V2ex
+- [ ] Zhihu
+- [ ] Weibo
+
+## Examples
+
 ### 博客园
 
 ```python
 export CNBLOG_ACCESS_TOKEN=xxx
 eto cnblog --output output/cnblog
 ```
+
+## Alternatives
+
+- Telegram via: https://github.com/bGZo/telegram-message-sync-bot
+- Snipd via: https://github.com/bGZo/snipd-podcast-format-for-obsidian
+
 
 ## License
 
