@@ -11,7 +11,7 @@ BASE_URL = "https://api.cnblogs.com/api"
 USER = f"{BASE_URL}/users"
 
 # Bookmarks API Endpoints
-BOOKMARK = f"{BASE_URL}/Bookmarks?pageIndex=1&pageSize=100"
+BOOKMARK = f"{BASE_URL}/Bookmarks"
 BOOKMARK_DELETE = f"{BASE_URL}/bookmarks/"
 
 # Articles API Endpoints

@@ -1,28 +1,8 @@
-# 垃圾场
+# Export your data into Obsidian
 
-![](https://img.shields.io/github/repo-size/bGZo/playground?style=flat-square)
+## Roadmap
 
-![](https://raw.githack.com/bGZo/assets/dev/2025/1753254271482.JPG)
-
-## Merge me
-
-Add the remote repository:
-
-```shell
-git remote add origin git@github.com:bGZo/playground.git
-```
-
-Fetch the `dev` branch from the remote repository:
-
-```shell
-git fetch origin dev
-```
-
-Merge the `dev` branch into your local repository to get started:
-
-```shell
-git merge origin/dev --allow-unrelated-histories
-```
+只做导出，不做删除；因为如果未来有拓展需求，可以重复导出，否则你的数据将会面临永久丢失的风险。
 
 ## License
 

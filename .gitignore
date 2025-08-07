@@ -44,6 +44,7 @@ venv/
 .env.development
 .env.test
 .env.production
+poetry.lock
 
 
 # Logs

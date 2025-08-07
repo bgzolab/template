@@ -31,7 +31,7 @@ class Bookmark:
             FromCNBlogs=data.get("FromCNBlogs"),
         )
 
-def get_bookmark_list() -> list:
+def get_bookmark_list(page_index: int, page_size: int) -> list:
     """
     Fetches the list of bookmarks from the CNBlog API.
 
@@ -39,7 +39,10 @@ def get_bookmark_list() -> list:
         list: A list of bookmarks.
     """
     client = CnblogClient()
-    response = client.session.get(client.api_endpoints.BOOKMARK)
+    response = client.session.get(client.api_endpoints.BOOKMARK, params={
+        'pageIndex': page_index,
+        'pageSize': page_size
+    })
     if response.status_code == 200:
         data = response.json()
         # 支持单个对象或对象列表
@@ -47,7 +50,8 @@ def get_bookmark_list() -> list:
             return [Bookmark.from_dict(data)]
         return [Bookmark.from_dict(item) for item in data]
     else:
-        response.raise_for_status()  # Raise an error for bad responses
+        # Raise an error for bad responses
+        response.raise_for_status()
 
 # TODO 好像没有办法处理事务...
 def delete_by_id(id: int):

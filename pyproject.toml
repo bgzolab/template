@@ -1,5 +1,5 @@
 [project]
-name = "export-to-obsidian"
+name = "main"
 version = "0.1.0"
 description = "A tool to export all you need to obsidian"
 authors = [
@@ -11,7 +11,9 @@ requires-python = ">=3.12"
 dependencies = [
 ]
 
-
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+eto="main:eto"
