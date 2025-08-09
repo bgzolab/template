@@ -1,6 +1,6 @@
 [project]
 name = "bangumi_recovery"
-version = "0.1.0"
+version = "0.2.0"
 description = "A tool for migrate bangumi tool"
 authors = [
     {name = "hx",email = "im@bgzo.cc"}
@@ -12,9 +12,18 @@ dependencies = [
     "requests (>=2.32.4,<2.33.0)",
     "beautifulsoup4 (>=4.13.4,<4.14.0)",
     "uvicorn (>=0.35.0,<0.36.0)",
-    "fastapi (>=0.116.1,<0.117.0)"
+    "fastapi (>=0.116.1,<0.117.0)",
+    "click (>=8.2.1,<9.0.0)"
 ]
+
+[project.urls]
+"Repository" = "https://github.com/bGZo/playground/tree/2025/07/bangumi-recovery-scripts"
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bgm-clone="bangumi_recovery:clone_someone"
+bgm-click-server="bangumi_recovery:server"

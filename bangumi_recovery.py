@@ -8,8 +8,11 @@
 import os
 import re
 
+import click
+import uvicorn
 from bs4 import BeautifulSoup
 
+import web.main_web
 from bangumi.collection import mark_subject, get_all_collections_by_pages
 from bangumi.enum import CollectionType, SubjectType
 
@@ -48,16 +51,16 @@ def mark_done_subjects_form_files():
         print(response)
 
 
-def get_user_all_collections_with_status(subject_type: int, collection_type: int):
+def get_user_all_collections_with_status(username: str, subject_type: int, collection_type: int):
     # 想看
-    print("get user all collections with status: {} and subject type: {}")
+    print(f"get user={username} collections({subject_type}) with status: {collection_type}")
     limit = 30
     offset = 0
 
     all_results = []
     while True:
         results = get_all_collections_by_pages(
-            'dandelion_fs',
+            username,
             subject_type,
             collection_type,
             limit=limit,
@@ -70,29 +73,38 @@ def get_user_all_collections_with_status(subject_type: int, collection_type: int
             break
         offset += limit
 
-    print("get response", all_results)
+    print("get response=", all_results)
     for res in all_results:
         mark_subject(res.subject_id, CollectionType.DONE.value)
-        print("Handling done:{}", res.subject_id)
+        print(f"Handling done={res.subject_id}")
 
 
-def clone_user_collection_with_subject_type(subject_type: int):
-    get_user_all_collections_with_status(
+def clone_user_collection_with_subject_type(username: str, subject_type: int):
+    get_user_all_collections_with_status(username,
         subject_type, CollectionType.WANT.value)
-    get_user_all_collections_with_status(
+    get_user_all_collections_with_status(username,
         subject_type, CollectionType.DONE.value)
-    get_user_all_collections_with_status(
+    get_user_all_collections_with_status(username,
         subject_type, CollectionType.DOING.value)
-    get_user_all_collections_with_status(
+    get_user_all_collections_with_status(username,
         subject_type, CollectionType.WAITING.value)
-    get_user_all_collections_with_status(
+    get_user_all_collections_with_status(username,
         subject_type, CollectionType.CANCEL.value)
 
-if __name__ == '__main__':
-    # mark_want_subjects_form_files()
-    # mark_done_subjects_form_files()
-    clone_user_collection_with_subject_type(SubjectType.BOOK.value)
-    clone_user_collection_with_subject_type(SubjectType.GAME.value)
-    clone_user_collection_with_subject_type(SubjectType.ANIME.value)
-    clone_user_collection_with_subject_type(SubjectType.MUSIC.value)
-    clone_user_collection_with_subject_type(SubjectType.REAL_LIFE.value)
+def clone_from_html_archives():
+    mark_want_subjects_form_files()
+    mark_done_subjects_form_files()
+
+@click.command()
+@click.argument('username')
+def clone_someone(username: str):
+    clone_user_collection_with_subject_type(username, SubjectType.BOOK.value)
+    clone_user_collection_with_subject_type(username, SubjectType.GAME.value)
+    clone_user_collection_with_subject_type(username, SubjectType.ANIME.value)
+    clone_user_collection_with_subject_type(username, SubjectType.MUSIC.value)
+    clone_user_collection_with_subject_type(username, SubjectType.REAL_LIFE.value)
+
+@click.command()
+def server():
+    uvicorn.run(web.main_web.app, host="0.0.0.0", port=8000)
+
