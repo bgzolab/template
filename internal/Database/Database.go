@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
-	"log"
 	"telegram-message-sync-bot/internal/Entity"
+	"telegram-message-sync-bot/pkg/LogUtils"
 )
 
 var DB *gorm.DB
@@ -22,6 +22,6 @@ func InitORMDB(dataDir string) error {
 		return fmt.Errorf("auto migrate failed: %w", err)
 	}
 	DB = db
-	log.Println("Database initialized.")
+	LogUtils.GetLogger().Println("Database initialized.")
 	return nil
 }

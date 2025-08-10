@@ -210,7 +210,23 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 		return false, fmt.Sprintf("渲染模板失败, %v", err), sourceLink, msgText, sourceId
 	}
 
+	// 输出本次消息
 	FileUtils.OutputString(outputPath, fileName, buf.String())
+	// 记录到数据库
+	savedMsg := Entity.Message{
+		Content:     msgText,
+		SourceUrl:   sourceLink,
+		CreatedId:   sourceId,
+		CreatedTime: sourceDate,
+		SavedTime:   time.Now(),
+		Attachments: nil,
+	}
+	message, err := Database.SaveMessage(&savedMsg)
+	if err != nil {
+		LogUtils.GetLogger().Println(err)
+	} else {
+		LogUtils.GetLogger().Println(fmt.Sprintf("Save successful with: %d", message))
+	}
 
 	return true, fileName, sourceLink, msgText, sourceId
 }
@@ -293,7 +309,10 @@ func main() {
 			// 初始化日志
 			LogUtils.InitLogger(globalConfig.Log.Dir)
 			// 初始化数据目录
-			Database.InitORMDB("archives")
+			err := Database.InitORMDB("archives")
+			if err != nil {
+				LogUtils.GetLogger().Println(err)
+			}
 			// 启动机器人
 			start(globalConfig.Token)
 		},
