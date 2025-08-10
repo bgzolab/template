@@ -15,18 +15,18 @@ import (
 	"os/signal"
 	"path/filepath"
 	"strings"
+	"telegram-message-sync-bot/internal/Entity"
 	"telegram-message-sync-bot/internal/Handler"
-	"telegram-message-sync-bot/internal/entity"
 	"telegram-message-sync-bot/pkg/FileUtils"
 	"telegram-message-sync-bot/pkg/LogUtils"
-	//"telegram-message-sync-bot/pkg/SocialMediaUtils"
+	"telegram-message-sync-bot/pkg/SocialMediaUtils"
 	"telegram-message-sync-bot/pkg/StrUtils"
 	"telegram-message-sync-bot/pkg/TgUtils"
 	"time"
 )
 
 // 全局配置
-var globalConfig entity.Config
+var globalConfig Entity.Config
 
 func initSetting(configFile string) {
 	data, err := os.ReadFile(configFile)
@@ -79,7 +79,7 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		persistJSON(update)
 	}
 
-	ok, msg, sourceLink := persistMessage(ctx, b, update)
+	ok, msg, sourceLink, msgText, sourceId := persistMessage(ctx, b, update)
 	targetChatIdList := []int64{update.Message.Chat.ID}
 	if len(globalConfig.TargetUserList) > 0 {
 		targetChatIdList = globalConfig.TargetUserList
@@ -98,6 +98,17 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 			ChatID: chatId,
 			Text:   responseTxt,
 		})
+		if sourceId == "imbGZo" {
+			/**
+			 * TODO 提取配置
+				1. 适配每个社交媒体的内容限制，
+				2. 转换成纯文本，不再支持 Markdown
+			*/
+			SocialMediaUtils.SendBlueSky(globalConfig, msgText)
+			SocialMediaUtils.SendMastodon(globalConfig, msgText)
+			SocialMediaUtils.SendTwitter(globalConfig, msgText)
+		}
+
 	}
 }
 
@@ -111,9 +122,9 @@ func formatDownloadedFiles(files []string) string {
 	return builder.String()
 }
 
-func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (bool, string, string) {
+func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (bool, string, string, string, string) {
 	if update.Message == nil {
-		return false, "接受消息为空", ""
+		return false, "接受消息为空", "", "", ""
 	}
 
 	// 默认为私人消息
@@ -144,7 +155,7 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 		sourceDate = time.Unix(int64(origin.Date), 0)
 
 		if StrUtils.SearchInFile(filepath.Join(outputPath, fileName), sourceLink) {
-			return false, fmt.Sprint("消息已存在"), sourceLink
+			return false, fmt.Sprint("消息已存在"), sourceLink, msgText, sourceId
 		}
 
 		var files []string
@@ -181,25 +192,25 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 	// 读取模板文件
 	tmplData, err := os.ReadFile(globalConfig.Template.Dir)
 	if err != nil {
-		return false, fmt.Sprintf("读取模板失败, %v", err), sourceLink
+		return false, fmt.Sprintf("读取模板失败, %v", err), sourceLink, msgText, sourceId
 	}
 
 	// 创建并解析模板
 	tmpl, err := template.New("example").Parse(string(tmplData))
 	if err != nil {
-		return false, fmt.Sprintf("解析模板失败, %v", err), sourceLink
+		return false, fmt.Sprintf("解析模板失败, %v", err), sourceLink, msgText, sourceId
 	}
 
 	// 使用 bytes.Buffer 捕获渲染结果
 	var buf bytes.Buffer
 	err = tmpl.Execute(&buf, data)
 	if err != nil {
-		return false, fmt.Sprintf("渲染模板失败, %v", err), sourceLink
+		return false, fmt.Sprintf("渲染模板失败, %v", err), sourceLink, msgText, sourceId
 	}
 
 	FileUtils.OutputString(outputPath, fileName, buf.String())
 
-	return true, fileName, sourceLink
+	return true, fileName, sourceLink, msgText, sourceId
 }
 
 func persistJSON(update *models.Update) (bool, string) {
