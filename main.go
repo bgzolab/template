@@ -331,7 +331,7 @@ func main() {
 			// 初始化日志
 			LogUtils.InitLogger(globalConfig.Log.Dir)
 			// 初始化数据目录
-			err := Database.InitORMDB("archives")
+			err := Database.InitORMDB(filepath.Join(globalConfig.Log.Dir))
 			if err != nil {
 				LogUtils.GetLogger().Println(err)
 			}
