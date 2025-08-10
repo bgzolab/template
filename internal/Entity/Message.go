@@ -28,9 +28,10 @@ type Message struct {
 }
 
 type Attachment struct {
-	ID          int64
-	MessageID   int64 // 关联的消息ID，并非频道的消息ID
-	FilePath    string
-	FileSize    int64
-	MessageType MessageType
+	ID        int64
+	MessageID int64 // 关联的消息ID，并非频道的消息ID
+	FileName  string
+	FilePath  string
+	FileSize  int64
+	Type      MessageType
 }

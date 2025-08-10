@@ -64,3 +64,11 @@ func checkExists(filePath string, fileName string) (bool, string, string, *os.Fi
 	}
 	return true, "", saveFile, file
 }
+
+func GetFileSize(filePath string) (int64, error) {
+	info, err := os.Stat(filePath)
+	if err != nil {
+		return 0, err
+	}
+	return info.Size(), nil
+}

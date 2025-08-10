@@ -167,20 +167,13 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 		photos := update.Message.Photo
 		if len(photos) > 0 {
 			highestResolutionPhoto := photos[len(photos)-1]
-			file := persistFile(ctx, b, highestResolutionPhoto.FileID, sourceId, outputPath)
-			if file != "" {
-				files = append(files, file)
+			file := persistFile(ctx, b, highestResolutionPhoto.FileID, sourceId, outputPath, Entity.ImageMessage)
+			if file != nil {
+				files = append(files, file.FilePath)
+				assets = append(assets, *file)
 			}
-			assets = append(assets, Entity.Attachment{
-				ID:          0,
-				MessageID:   int64(messageId),
-				FilePath:    file,
-				FileSize:    0,
-				MessageType: "",
-			})
+			photoLink = formatDownloadedFiles(files)
 		}
-
-		photoLink = formatDownloadedFiles(files)
 	}
 
 	logCommandline := fmt.Sprintf("ChatID: %d, Channel: %s, Message: %s",
@@ -266,13 +259,13 @@ func persistJSON(update *models.Update) (bool, string) {
 	return true, "JSON序列化成功"
 }
 
-func persistFile(ctx context.Context, b *bot.Bot, fileID string, dirname string, outputPath string) string {
+func persistFile(ctx context.Context, b *bot.Bot, fileID string, dirname string, outputPath string, messageType Entity.MessageType) *Entity.Attachment {
 	// 获取文件信息
 	params := bot.GetFileParams{FileID: fileID}
 	file, err := b.GetFile(ctx, &params)
 	if err != nil {
 		LogUtils.GetLogger().Println("获取文件信息失败: %v", err)
-		return ""
+		return nil
 	}
 
 	// 构造下载 URL
@@ -288,14 +281,30 @@ func persistFile(ctx context.Context, b *bot.Bot, fileID string, dirname string,
 	resp, err := http.Get(downloadURL)
 	if err != nil {
 		LogUtils.GetLogger().Println("下载文件失败: %v", err)
-		return ""
+		return nil
 	}
 
 	// 使用时间戳生成唯一文件名
 	timestamp := time.Now().Format("20060102_150405") + fmt.Sprintf("_%d", time.Now().UnixNano()%1e6)
-	FileUtils.OutputResponse(filepath.Join(outputPath, "assets", dirname), fmt.Sprintf("%s%s", timestamp, ext), resp)
-
-	return filepath.Join("assets", dirname, fmt.Sprintf("%s%s", timestamp, ext))
+	fileName := fmt.Sprintf("%s%s", timestamp, ext)
+	// 全路径
+	fullOutputDir := filepath.Join(outputPath, "assets", dirname)
+	fullOutputFilename := filepath.Join(fullOutputDir, fileName)
+	// 相对路径
+	relatedPath := filepath.Join("assets", dirname, fileName)
+	// 保存文件
+	FileUtils.OutputResponse(fullOutputDir, fmt.Sprintf("%s%s", timestamp, ext), resp)
+	// 返回
+	size, err := FileUtils.GetFileSize(fullOutputFilename)
+	if err != nil {
+		size = 0
+	}
+	return &Entity.Attachment{
+		FileName: fileName,
+		FilePath: relatedPath,
+		FileSize: size,
+		Type:     messageType,
+	}
 }
 
 func selectMsgText(update *models.Update) string {
