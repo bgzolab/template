@@ -21,12 +21,13 @@ type Message struct {
 	MediaPath   string
 	MessageType MessageType
 	Timestamp   time.Time
-	Attachments []Attachment
+	Attachments []Attachment `gorm:"foreignKey:MessageID"`
 }
 
 type Attachment struct {
-	ID       int64
-	FilePath string
-	FileSize int64
-	MimeType string
+	ID        int64
+	MessageID int64
+	FilePath  string
+	FileSize  int64
+	MimeType  string
 }

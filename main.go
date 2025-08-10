@@ -15,6 +15,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"strings"
+	"telegram-message-sync-bot/internal/Database"
 	"telegram-message-sync-bot/internal/Entity"
 	"telegram-message-sync-bot/internal/Handler"
 	"telegram-message-sync-bot/pkg/FileUtils"
@@ -40,6 +41,7 @@ func initSetting(configFile string) {
 	fmt.Printf("解析配置成功: 配置内容: %+v\n", globalConfig)
 }
 
+// start 启动 Telegram Bot
 func start(botToken string) {
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer cancel()
@@ -286,8 +288,13 @@ func main() {
 		Long:  `Sync the message from tg bot.`,
 		Args:  cobra.MinimumNArgs(0),
 		Run: func(cmd *cobra.Command, args []string) {
+			// 初始化配置
 			initSetting(configFile)
+			// 初始化日志
 			LogUtils.InitLogger(globalConfig.Log.Dir)
+			// 初始化数据目录
+			Database.InitORMDB("archives")
+			// 启动机器人
 			start(globalConfig.Token)
 		},
 	}

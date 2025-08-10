@@ -1,122 +1,50 @@
 package Database
 
 import (
-	"database/sql"
-	"fmt"
 	"telegram-message-sync-bot/internal/Entity"
 )
 
+// 保存消息及附件
 func SaveMessage(msg *Entity.Message) (int64, error) {
-	tx, err := DB.Begin()
+	err := DB.Create(msg).Error
 	if err != nil {
-		return 0, fmt.Errorf("failed to begin transaction: %w", err)
+		return 0, err
 	}
-	defer func() {
-		if err != nil {
-			err := tx.Rollback()
-			if err != nil {
-				return
-			}
-		}
-	}()
-
-	// 插入主消息
-	result, err := tx.Exec(`
-		INSERT INTO messages (sender_id, receiver_id, content, media_path, message_type, timestamp)
-		VALUES (?, ?, ?, ?, ?, ?)`,
-		msg.SenderID, msg.ReceiverID, msg.Content, msg.MediaPath, msg.MessageType, msg.Timestamp,
-	)
-
-	if err != nil {
-		return 0, fmt.Errorf("failed to insert message: %w", err)
-	}
-
-	msgID, err := result.LastInsertId()
-	if err != nil {
-		return 0, fmt.Errorf("failed to get last insert ID: %w", err)
-	}
-
-	// 插入附件
-	for _, attachment := range msg.Attachments {
-		_, err := tx.Exec(`
-			INSERT INTO attachments (message_id, file_path, file_size, mime_type)
-			VALUES (?, ?, ?, ?)`,
-			msgID, attachment.FilePath, attachment.FileSize, attachment.MimeType,
-		)
-		if err != nil {
-			return 0, fmt.Errorf("failed to insert attachment: %w", err)
-		}
-	}
-
-	if err := tx.Commit(); err != nil {
-		return 0, fmt.Errorf("failed to commit transaction: %w", err)
-	}
-
-	return msgID, nil
+	return msg.ID, nil
 }
 
-func GetMessagesByUser(userID string, limit int) ([]Entity.Message, error) {
-	rows, err := DB.Query(`
-		SELECT m.id, m.sender_id, m.receiver_id, m.content, m.media_path, m.message_type, m.timestamp,
-		       a.id, a.file_path, a.file_size, a.mime_type
-		FROM messages m
-		LEFT JOIN attachments a ON m.id = a.message_id
-		WHERE m.sender_id = ? OR m.receiver_id = ?
-		ORDER BY m.timestamp DESC
-		LIMIT ?`, userID, userID, limit)
-
+// 按ID查找消息（含附件）
+func GetMessageByID(id int64) (*Entity.Message, error) {
+	var msg Entity.Message
+	err := DB.Preload("Attachments").First(&msg, id).Error
 	if err != nil {
-		return nil, fmt.Errorf("failed to query messages: %w", err)
+		return nil, err
 	}
-	defer rows.Close()
+	return &msg, nil
+}
 
-	messagesMap := make(map[int64]*Entity.Message)
-
-	for rows.Next() {
-		var msg Entity.Message
-		var _ Entity.Attachment
-		var attachmentID sql.NullInt64
-		var filePath, mimeType sql.NullString
-		var fileSize sql.NullInt64
-
-		err := rows.Scan(
-			&msg.ID, &msg.SenderID, &msg.ReceiverID, &msg.Content,
-			&msg.MediaPath, &msg.MessageType, &msg.Timestamp,
-			&attachmentID, &filePath, &fileSize, &mimeType,
-		)
-
-		if err != nil {
-			return nil, fmt.Errorf("failed to scan message: %w", err)
-		}
-
-		if existingMsg, ok := messagesMap[msg.ID]; ok {
-			if attachmentID.Valid {
-				attachment := Entity.Attachment{
-					ID:       attachmentID.Int64,
-					FilePath: filePath.String,
-					FileSize: fileSize.Int64,
-					MimeType: mimeType.String,
-				}
-				existingMsg.Attachments = append(existingMsg.Attachments, attachment)
-			}
-		} else {
-			if attachmentID.Valid {
-				attachment := Entity.Attachment{
-					ID:       attachmentID.Int64,
-					FilePath: filePath.String,
-					FileSize: fileSize.Int64,
-					MimeType: mimeType.String,
-				}
-				msg.Attachments = append(msg.Attachments, attachment)
-			}
-			messagesMap[msg.ID] = &msg
-		}
+// 按用户查找消息（含附件）
+func GetMessagesByUser(userID string, limit int) ([]Entity.Message, error) {
+	var msgs []Entity.Message
+	err := DB.Preload("Attachments").
+		Where("sender_id = ? OR receiver_id = ?", userID, userID).
+		Order("timestamp DESC").
+		Limit(limit).
+		Find(&msgs).Error
+	if err != nil {
+		return nil, err
 	}
+	return msgs, nil
+}
 
-	messages := make([]Entity.Message, 0, len(messagesMap))
-	for _, msg := range messagesMap {
-		messages = append(messages, *msg)
-	}
+// 更新消息内容
+func UpdateMessage(msg *Entity.Message) error {
+	return DB.Save(msg).Error
+}
 
-	return messages, nil
+// 删除消息及附件
+func DeleteMessage(id int64) error {
+	// 先删除附件
+	DB.Where("message_id = ?", id).Delete(&Entity.Attachment{})
+	return DB.Delete(&Entity.Message{}, id).Error
 }
