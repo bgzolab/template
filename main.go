@@ -137,6 +137,8 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 	sourceLink := ""
 	sourceDate := time.Now()
 	photoLink := ""
+	messageId := update.Message.ID
+	assets := []Entity.Attachment{}
 
 	if update.Message.ForwardOrigin != nil && update.Message.ForwardOrigin.Type == "channel" {
 		// 消息为转发，特殊处理
@@ -155,6 +157,7 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 			sourceId,
 			origin.MessageID)
 		sourceDate = time.Unix(int64(origin.Date), 0)
+		messageId = origin.MessageID
 
 		if StrUtils.SearchInFile(filepath.Join(outputPath, fileName), sourceLink) {
 			return false, fmt.Sprint("消息已存在"), sourceLink, msgText, sourceId
@@ -168,6 +171,13 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 			if file != "" {
 				files = append(files, file)
 			}
+			assets = append(assets, Entity.Attachment{
+				ID:          0,
+				MessageID:   int64(messageId),
+				FilePath:    file,
+				FileSize:    0,
+				MessageType: "",
+			})
 		}
 
 		photoLink = formatDownloadedFiles(files)
@@ -214,12 +224,15 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 	FileUtils.OutputString(outputPath, fileName, buf.String())
 	// 记录到数据库
 	savedMsg := Entity.Message{
-		Content:     msgText,
-		SourceUrl:   sourceLink,
-		CreatedId:   sourceId,
-		CreatedTime: sourceDate,
-		SavedTime:   time.Now(),
-		Attachments: nil,
+		Content: msgText,
+
+		MessageID:   int64(messageId),
+		Username:    sourceId,
+		MessageUrl:  sourceLink,
+		MessageDate: sourceDate,
+		Attachments: assets,
+
+		CreatedTime: time.Now(),
 	}
 	message, err := Database.SaveMessage(&savedMsg)
 	if err != nil {
