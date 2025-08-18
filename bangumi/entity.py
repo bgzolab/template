@@ -101,3 +101,6 @@ class SubjectV0:
     nsfw: bool
     type_id: int
     redirect: Optional[int]
+
+# V0wiki 仅为 infobox 的类型别名，等价于 List[Any]
+V0wiki = List[Any]
