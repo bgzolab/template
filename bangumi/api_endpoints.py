@@ -17,3 +17,4 @@ COLLECTIONS_QUERY_USERS = f"{BASE_URL}/v0/users/%s/collections"
 
 # Subject API Endpoints
 SUBJECT_QUERY = f"{BASE_URL}/v0/subjects/%s"
+SUBJECT_CHARACTER_QUERY = f"{BASE_URL}/v0/subjects/%s/characters"

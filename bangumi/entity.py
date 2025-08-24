@@ -21,6 +21,14 @@ class SubjectImages:
     medium: str
     common: str
 
+@dataclass
+class PersonImages:
+    small: str
+    grid: str
+    large: str
+    medium: str
+    common: str
+
 # https://github.com/bangumi/server/blob/fb44e70f9fac931fc29964cab9c5b5aec41433b0/web/res/subject.go#L38-L42
 @dataclass
 class SubjectTag:
@@ -101,6 +109,25 @@ class SubjectV0:
     nsfw: bool
     type_id: int
     redirect: Optional[int]
+
+@dataclass
+class Actor:
+    id: int
+    name: str
+    images: Optional[PersonImages] = None
+    short_summary: str = ""
+    career: List[str] = None
+    type: int = 0
+    locked: bool = False
+
+@dataclass
+class SubjectRelatedCharacter:
+    images: PersonImages
+    name: str
+    relation: str
+    actors: List[Actor]
+    type: int
+    id: int
 
 # V0wiki 仅为 infobox 的类型别名，等价于 List[Any]
 V0wiki = List[Any]
