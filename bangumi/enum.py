@@ -30,6 +30,39 @@ class CollectionType(Enum):
                 return item
         raise ValueError(f"Invalid value for CollectionTypeEnum: {value}")
 
+    @classmethod
+    def all(cls) -> list[int]:
+        return list(cls)
+
+    @classmethod
+    def get_name(cls, value) -> str:
+        """
+        根据 value 返回对应的收藏类型中文名
+        """
+        mapping = {
+            cls.WANT.value: "想看",
+            cls.DONE.value: "看过",
+            cls.DOING.value: "正在看",
+            cls.WAITING.value: "搁置",
+            cls.CANCEL.value: "抛弃"
+        }
+        return mapping.get(value, "未知")
+
+    @classmethod
+    def get_name_en(cls, value) -> str:
+        """
+        根据 value 返回对应的收藏类型英文名
+        """
+        mapping = {
+            cls.WANT.value: "want",
+            cls.DONE.value: "done",
+            cls.DOING.value: "doing",
+            cls.WAITING.value: "waiting",
+            cls.CANCEL.value: "canncel"
+        }
+        return mapping.get(value, "unknown")
+
+
 
 class SubjectType(Enum):
     """
@@ -53,3 +86,31 @@ class SubjectType(Enum):
             if item.value == value:
                 return item
         raise ValueError(f"Invalid value for SubjectTypeEnum: {value}")
+
+    @classmethod
+    def get_name(cls, value) -> str:
+        """
+        根据 value 返回对应的类型中文名
+        """
+        mapping = {
+            cls.BOOK.value: "书籍",
+            cls.ANIME.value: "动画",
+            cls.MUSIC.value: "音乐",
+            cls.GAME.value: "游戏",
+            cls.REAL_LIFE.value: "三次元"
+        }
+        return mapping.get(value, "未知")
+
+    @classmethod
+    def get_name_en(cls, value) -> str:
+        """
+        根据 value 返回对应的类型中���名
+        """
+        mapping = {
+            cls.BOOK.value: "book",
+            cls.ANIME.value: "anime",
+            cls.MUSIC.value: "music",
+            cls.GAME.value: "game",
+            cls.REAL_LIFE.value: "real"
+        }
+        return mapping.get(value, "unknown")
