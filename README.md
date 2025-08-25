@@ -30,6 +30,17 @@ pipx install export_to_obsidian
 ```python
 export CNBLOG_ACCESS_TOKEN=xxx
 eto cnblog --output output/cnblog
+#debug
+python3 ./export_to_obsidian.py cnblog --output output/cnblog
+```
+
+### Bangumi
+
+```python
+export BGM_ACCESS_TOKEN=xxx
+eto bangumi -t ./config/bangumi_template.md -s 1 -o output/bangumi
+# debug
+python3 ./export_to_obsidian.py bangumi -t ./config/bangumi_template.md -s 1 -o output/bangumi
 ```
 
 ## Alternatives
