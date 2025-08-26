@@ -5,7 +5,7 @@
 @Date : 2025-08-19
 @Links : https://github.com/bGZo
 """
-from bangumi.subject import get_subject_info, get_subject_character
+from bangumi.bangumi import get_subject_info, get_subject_character
 
 def test_subject_get():
     res = get_subject_info(1)
