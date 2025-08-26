@@ -19,7 +19,7 @@ def get_subject_info(subject_id: int) -> SubjectV0:
         result = res.json()
         return _dict_to_subject(result)
     else:
-        print(f"Error fetching collections: {res.status_code} {res[res.status_code]}")
+        print(f"Error fetching {subject_id} info with response: {res.status_code} {res[res.status_code]}")
         return None
 
 def _dict_to_subject(data: dict) -> SubjectV0:
@@ -125,5 +125,5 @@ def get_subject_character(subject_id: int) -> list[SubjectRelatedCharacter]:
         result = res.json()
         return [_dict_to_subject_character(item) for item in result]
     else:
-        print(f"Error fetching collections: {res.status_code} {res[res.status_code]}")
+        print(f"Error fetching character of {subject} with response: {res.status_code} {res[res.status_code]}")
         return []

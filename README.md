@@ -17,7 +17,7 @@ pipx install export_to_obsidian
 ## Scope
 
 - [x] 博客园
-- [ ] Bangumi
+- [x] Bangumi
 - [ ] Social Media Fed
 - [ ] V2ex
 - [ ] Zhihu
@@ -41,6 +41,7 @@ export BGM_ACCESS_TOKEN=xxx
 eto bangumi -t ./config/bangumi_template.md -s 1 -o output/bangumi
 # debug
 python3 ./export_to_obsidian.py bangumi -t ./config/bangumi_template.md -s 1 -o output/bangumi
+python3 ./export_to_obsidian.py bangumi -t ./config/bangumi_template.md -s 2 -c 3 -o output/bangumi --force
 ```
 
 ## Alternatives
