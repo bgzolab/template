@@ -1,6 +1,6 @@
 [project]
 name = "export_to_obsidian"
-version = "0.3.1"
+version = "0.3.2"
 description = "A tool to export all you need to obsidian"
 authors = [
     {name = "hx",email = "im@bgzo.cc"}
@@ -13,7 +13,10 @@ dependencies = [
     "python-frontmatter (>=1.1.0,<1.2.0)",
     "html2text (>=2025.4.15,<2025.5.0)",
     "beautifulsoup4 (>=4.13.4,<4.14.0)",
-    "requests (>=2.32.4,<2.33.0)"
+    "requests (>=2.32.4,<2.33.0)",
+    "markdownify (>=1.1.0,<1.2.0)",
+    "urllib3 (>=2.5.0,<2.6.0)",
+    "click (>=8.2.1,<8.3.0)"
 ]
 
 
