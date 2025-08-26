@@ -1,6 +1,6 @@
 [project]
 name = "export_to_obsidian"
-version = "0.3.2"
+version = "0.3.3"
 description = "A tool to export all you need to obsidian"
 authors = [
     {name = "hx",email = "im@bgzo.cc"}
@@ -19,6 +19,12 @@ dependencies = [
     "click (>=8.2.1,<8.3.0)"
 ]
 
+# 指定需要包含的包
+packages = [
+    { include = "bangumi" },
+    { include = "cnblog" },
+    { include = "utils" }
+]
 
 [project.urls]
 "Repository" = "https://github.com/bGZo/playground/tree/2025/07/export-to-obsidian"
