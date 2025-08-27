@@ -104,7 +104,7 @@ class SubjectType(Enum):
     @classmethod
     def get_name_en(cls, value) -> str:
         """
-        根据 value 返回对应的类型中���名
+        根据 value 返回对应的类型中英文名
         """
         mapping = {
             cls.BOOK.value: "book",

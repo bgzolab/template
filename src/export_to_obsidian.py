@@ -101,11 +101,11 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     subject_type = subject.type_id
     subject_type_en = SubjectType.get_name_en(subject_type)
     collection_type_en = CollectionType.get_name_en(collection_type)
-    tags = ['bangumi/'+collection_type_en]
+    tags = ['bangumi/'+collection_type_en, 'bangumi/' + subject_type_en]
     filename = str(subject_id) + "-" + get_clean_filename(subject.name_cn or subject.name or str(subject.id)) + '.md'
     output_path = os.path.join(output_dir, subject_type_en, filename)
     if os.path.exists(output_path) and not force:
-        print(f"已存在，提前结束: {filename}.md")
+        print(f"已存在，提前结束: {filename}")
         return False
 
     # 2. 读取模板内容
@@ -121,7 +121,7 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     content = content.replace('{{created}}', subject.date + datetime.now().strftime('T%H:%M:%S%z') or datetime.now().strftime('%Y-%m-%dT%H:%M:%S%z'))
     content = content.replace('{{modified}}', datetime.now().strftime('%Y-%m-%dT%H:%M:%S%z'))
     content = content.replace('{{rating}}', str(subject.rating.score) if subject.rating and subject.rating.score else "")
-    content = content.replace('{{type}}', str(subject.type_id))
+    content = content.replace('{{type}}', 'bangumi/' + subject_type_en)
     content = content.replace('{{aliases}}', subject.name)
     content = content.replace('{{tags}}', str(tags))
     content = content.replace('{{characters}}', get_output_character_string(subject_id))
@@ -174,7 +174,7 @@ def bangumi(subject_type, collection_type, output, template, force):
     else:
         sync_all_collection_under_subject_type(subject_type, output, template, force)
 
-def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = FALSE):
+def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
     collection_type_list = CollectionType.all()
     for collection_type in collection_type_list:
         print("正在处理: ", collection_type)
@@ -182,7 +182,8 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
             subject_type=subject_type,
             collection_type=collection_type.value,
             output_dir=output_dir,
-            template_path=template_path
+            template_path=template_path,
+            force=force
         )
         print("处理完成: ", collection_type)
 
