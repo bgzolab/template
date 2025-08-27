@@ -128,7 +128,7 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
             aliases_set.update(
                 parse_infobox_value(item) if item.get("key") == "别名" else []
             )
-
+    created_date = (subject.date or datetime.now().strftime('%Y-%m-%d')) + datetime.now().strftime('T%H:%M:%S%z')
     filename = str(subject_id) + "-" + get_clean_filename(subject.name_cn or subject.name or str(subject.id)) + '.md'
     output_path = os.path.join(output_dir, subject_type_en, filename)
     if os.path.exists(output_path) and not force:
@@ -148,7 +148,7 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     content = content.replace('{{title}}', subject.name_cn or subject.name or "")
     content = content.replace('{{bangumi}}', str(subject.id))
     content = content.replace('{{cover}}', subject.images.medium if subject.images else "")
-    content = content.replace('{{created}}', subject.date + datetime.now().strftime('T%H:%M:%S%z') or datetime.now().strftime('%Y-%m-%dT%H:%M:%S%z'))
+    content = content.replace('{{created}}', created_date)
     content = content.replace('{{modified}}', datetime.now().strftime('%Y-%m-%dT%H:%M:%S%z'))
     content = content.replace('{{rating}}', str(subject.rating.score) if subject.rating and subject.rating.score else "")
     content = content.replace('{{type}}', 'bangumi/' + subject_type_en)
@@ -228,13 +228,13 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
         print("处理完成: ", collection_type)
 
 if __name__ == '__main__':
-    eto()
-    # write_bangumi_data_from_id(
-    #     subject_id=208754,
-    #     collection_type=2,
-    #     output_dir="output/bangumi",
-    #     template_path="config/bangumi_template.md"
-    # )
+    # eto()
+    write_bangumi_data_from_id(
+        subject_id=334105,
+        collection_type=2,
+        output_dir="output/bangumi",
+        template_path="config/bangumi_template.md"
+    )
     # sync_all_collection_under_subject_type(
     #     subject_type=SubjectType.ANIME.value,
     #     output_dir="output/bangumi",
