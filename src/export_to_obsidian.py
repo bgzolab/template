@@ -102,6 +102,33 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     subject_type_en = SubjectType.get_name_en(subject_type)
     collection_type_en = CollectionType.get_name_en(collection_type)
     tags = ['bangumi/'+collection_type_en, 'bangumi/' + subject_type_en]
+    # 处理别名
+    aliases_set = { subject.name }
+    website_set = set() # {}
+    if subject.name_cn:
+        aliases_set.add(subject.name_cn)
+    # if subject.infobox:
+    #     for item in subject.infobox:
+    #         if item['key'] == '别名':
+    #             for v in item['value']:
+    #                 if v['v'] != '':
+    #                     aliases_set.add(v['v'])
+
+    if subject.infobox:
+        for item in subject.infobox:
+            # 添加官方网站1
+            website_set.update(
+                parse_infobox_value(item) if item.get("key") == "官方网站" else []
+            )
+            # 添加官方网站2
+            website_set.update(
+                parse_infobox_value(item) if item.get("key") == "website" else []
+            )
+            # 更新别名
+            aliases_set.update(
+                parse_infobox_value(item) if item.get("key") == "别名" else []
+            )
+
     filename = str(subject_id) + "-" + get_clean_filename(subject.name_cn or subject.name or str(subject.id)) + '.md'
     output_path = os.path.join(output_dir, subject_type_en, filename)
     if os.path.exists(output_path) and not force:
@@ -115,6 +142,9 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     # 3. 渲染模板（这里只做简单替换，可根据需要扩展）
     # 你可以根据模板变量名和 subject 字段进行映射
     content = template
+    content = content.replace('{{tags}}', str(tags))
+    content = content.replace('{{aliases}}', str(list(aliases_set)))
+    content = content.replace('{{website}}', str(list(website_set)))
     content = content.replace('{{title}}', subject.name_cn or subject.name or "")
     content = content.replace('{{bangumi}}', str(subject.id))
     content = content.replace('{{cover}}', subject.images.medium if subject.images else "")
@@ -122,8 +152,6 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     content = content.replace('{{modified}}', datetime.now().strftime('%Y-%m-%dT%H:%M:%S%z'))
     content = content.replace('{{rating}}', str(subject.rating.score) if subject.rating and subject.rating.score else "")
     content = content.replace('{{type}}', 'bangumi/' + subject_type_en)
-    content = content.replace('{{aliases}}', subject.name)
-    content = content.replace('{{tags}}', str(tags))
     content = content.replace('{{characters}}', get_output_character_string(subject_id))
     content = content.replace('{{summary}}', subject.summary or "")
 
@@ -135,6 +163,18 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     print(f"写入完成: {output_path}")
     return True
 
+
+def parse_infobox_value(item):
+    value = item.get("value")
+    if isinstance(value, str):
+        # 直接返回字符串
+        return [value]
+    elif isinstance(value, list):
+        # 提取每个字典的 'v' 字段
+        return [v.get("v") for v in value if isinstance(v, dict) and "v" in v]
+    else:
+        # 其他类型，返回空列表或自定义处理
+        return []
 
 def get_output_character_string(subject_id: int) -> str:
     result = ""

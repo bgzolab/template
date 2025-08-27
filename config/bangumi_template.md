@@ -1,13 +1,14 @@
 ---
 aliases: {{aliases}}
 bangumi: https://bgm.tv/subject/{{bangumi}}
+bangumi-rating: {{rating}}
 cover: {{cover}}
 created: {{created}}
 modified: {{modified}}
-rating: {{rating}}
 tags: {{tags}}
 title: {{title}}
 type: {{type}}
+website: {{website}}
 ---
 
 # {{title}}
