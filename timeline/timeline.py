@@ -40,3 +40,22 @@ def delete_timeline_item(item_id: str) -> bool:
     except Exception as e:
         print(e)
         return False
+
+
+def delete_user_timeline(username: str, max_page: int = 100):
+    for page in range(1, max_page + 1):
+        html = get_timeline_page_html(page, username)
+        id_list = get_page_item_id_list(html)
+        if len(id_list) == 0:
+            print(f"No more items found on page {page}. Stopping.")
+            break
+        print(f"Deleting items from page {page}, found {len(id_list)} items.")
+        for item_id in id_list:
+            try:
+                success = delete_timeline_item(item_id)
+                if success:
+                    print(f"Successfully deleted item with ID: {item_id}")
+                else:
+                    print(f"Failed to delete item with ID: {item_id}")
+            except Exception as e:
+                print(f"Error deleting item with ID {item_id}: {e}")

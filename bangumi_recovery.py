@@ -12,6 +12,7 @@ import click
 import uvicorn
 from bs4 import BeautifulSoup
 
+import timeline.timeline
 import web.main_web
 from bangumi.collection import mark_subject, get_all_collections_by_pages
 from bangumi.enum import CollectionType, SubjectType
@@ -108,3 +109,8 @@ def clone_someone(username: str):
 def server():
     uvicorn.run(web.main_web.app, host="0.0.0.0", port=8000)
 
+
+@click.command()
+@click.argument('username', required=True)
+def timeline_delele(username: str):
+    timeline.timeline.delete_user_timeline(username)

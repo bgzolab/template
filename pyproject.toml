@@ -1,6 +1,6 @@
 [project]
 name = "bangumi_recovery"
-version = "0.2.0"
+version = "0.3.0"
 description = "A tool for migrate bangumi tool"
 authors = [
     {name = "hx",email = "im@bgzo.cc"}
@@ -27,3 +27,14 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 bgm-clone="bangumi_recovery:clone_someone"
 bgm-click-server="bangumi_recovery:server"
+bgm-timeline-delete="bangumi_recovery:timeline_delele"
+
+# 指定需要包含的包
+[tool.poetry]
+packages = [
+    {include = "bangumi"},
+    {include = "bangumi_data"},
+    {include = "timeline"},
+    {include = "web"},
+]
+

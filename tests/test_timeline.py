@@ -24,3 +24,7 @@ def test_get_id_list_from_page_1():
 def test_delete_timeline_item():
     from timeline.timeline import delete_timeline_item
     print(delete_timeline_item('57291228'))
+
+def test_delete_user_timeline():
+    from timeline.timeline import delete_user_timeline
+    delete_user_timeline("bool", max_page=100)
