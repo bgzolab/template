@@ -12,5 +12,11 @@ def test_get_timeline_page_html():
     page = 1
     html_content = get_timeline_page_html(page, username)
     print(html_content)  # Print the HTML content to verify the operation
+    return html_content
 
+def test_get_id_list_from_page_1():
+    html = test_get_timeline_page_html()
+    from timeline.timeline import get_timeline_page_html, get_page_item_id
+    id_list = get_page_item_id(html)
+    print(id_list)
 
