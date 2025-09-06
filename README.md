@@ -33,6 +33,12 @@ bgm-click-server
 bgm-clone dandelion_fs
 ```
 
+### 删除时间线
+
+```shell
+bgm-timeline-delete bool
+```
+
 ## Roadmap
 
 - [x] 恢复数据
@@ -44,7 +50,7 @@ bgm-clone dandelion_fs
 - [x] 往季新番批量标记 250801
   - API 使用： https://github.com/bangumi-data/bangumi-data, 大力感谢
   - 数据结构展示： https://github.com/bangumi-data/bangumi-data/blob/master/data/items/1943/04.json
-- [ ] 每日轮训删除时间线
+- [x] 每日轮训删除时间线
   - 可以用这个 API： https://bgm.tv/feed/user/bool/timeline
 
 ## 参考项目
