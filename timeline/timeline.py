@@ -16,8 +16,10 @@ def get_timeline_page_html(page: int, username: str) -> str:
     response = client.session.get(request_url, params={"page": page})
     return response.text
 
-def get_page_item_ids(html_content: str) -> list[str]:
+def get_page_item_id_list(html_content: str) -> list[str]:
     soup = BeautifulSoup(html_content, "html.parser")
-    item_ids = [li.get('id')[4:] for li in soup.find(id='timeline').findAll('li') if li.get('id')]
-    return item_ids
+    timeline_html = soup.find(id='timeline')
+    if not timeline_html:
+        return []
+    return  [li.get('id')[4:] for li in timeline_html.findAll('li') if li.get('id')]
 

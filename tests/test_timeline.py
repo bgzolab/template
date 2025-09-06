@@ -16,7 +16,7 @@ def test_get_timeline_page_html():
 
 def test_get_id_list_from_page_1():
     html = test_get_timeline_page_html()
-    from timeline.timeline import get_timeline_page_html, get_page_item_id
-    id_list = get_page_item_id(html)
+    from timeline.timeline import get_timeline_page_html, get_page_item_id_list
+    id_list = get_page_item_id_list(html)
     print(id_list)
 
