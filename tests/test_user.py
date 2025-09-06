@@ -10,4 +10,4 @@ from bangumi.client import BangumiClient
 
 def test_get_user():
     client = BangumiClient()
-    print(client.get_user())
+    print(client.get_user()['username'])
