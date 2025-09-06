@@ -1,6 +1,6 @@
 [project]
 name = "bangumi_recovery"
-version = "0.3.0"
+version = "0.3.1"
 description = "A tool for migrate bangumi tool"
 authors = [
     {name = "hx",email = "im@bgzo.cc"}
@@ -36,5 +36,6 @@ packages = [
     {include = "bangumi_data"},
     {include = "timeline"},
     {include = "web"},
+    {include = "bangumi_recovery.py"},
 ]
 
