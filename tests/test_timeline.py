@@ -20,3 +20,7 @@ def test_get_id_list_from_page_1():
     id_list = get_page_item_id_list(html)
     print(id_list)
 
+
+def test_delete_timeline_item():
+    from timeline.timeline import delete_timeline_item
+    print(delete_timeline_item('57291228'))

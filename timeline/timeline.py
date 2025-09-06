@@ -8,6 +8,7 @@
 from timeline.api_endpoints import TIMELINE_PAGE
 from timeline.client import BangumiCookieClient
 from bs4 import BeautifulSoup
+from timeline.api_endpoints import TIMELINE_DELETE
 
 
 def get_timeline_page_html(page: int, username: str) -> str:
@@ -23,3 +24,19 @@ def get_page_item_id_list(html_content: str) -> list[str]:
         return []
     return  [li.get('id')[4:] for li in timeline_html.findAll('li') if li.get('id')]
 
+def delete_timeline_item(item_id: str) -> bool:
+    client = BangumiCookieClient()
+    request_url = TIMELINE_DELETE % item_id
+    response = client.session.get(request_url, params={
+        "ajax": 1,
+        "gh": "eef61b71"
+    })
+    print(response.text)
+    try:
+        if response.status_code == 200 and response.json().get('status') == 'ok':
+            return True
+        else:
+            return False
+    except Exception as e:
+        print(e)
+        return False
