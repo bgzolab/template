@@ -2,6 +2,7 @@ import os
 import json
 import requests
 import base64
+import re
 
 # GitHub配置
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # 从环境变量获取GitHub token
@@ -99,6 +100,42 @@ def get_readme_content(owner, repo, branch="main"):
 
     return ""
 
+def extract_title_from_readme(readme_content):
+    """从 README 内容中提取 H1 标题"""
+    if not readme_content:
+        return None
+
+    # 匹配 Markdown H1 标题 (# 标题)
+    h1_pattern = r'^#\s+(.+?)(?:\r?\n|$)'
+    match = re.search(h1_pattern, readme_content, re.MULTILINE)
+
+    if match:
+        title = match.group(1).strip()
+        # 清理标题中的特殊字符和多余空格
+        title = re.sub(r'[^\w\s\-_\u4e00-\u9fff]', '', title)
+        return title
+
+    return None
+
+def extract_name_from_branch(branch_name):
+    """从分支名称中提取项目名称"""
+    if not branch_name:
+        return "Unknown Project"
+
+    # 匹配 xxxx/xx/项目名 格式
+    parts = branch_name.split('/')
+    if len(parts) >= 3:
+        # 取最后一部分作为项目名
+        project_name = parts[-1]
+        # 替换连字符和下划线为空格，并转换为标题格式
+        project_name = project_name.replace('-', ' ').replace('_', ' ')
+        # 首字母大写
+        project_name = ' '.join(word.capitalize() for word in project_name.split())
+        return project_name
+
+    # 如果格式不匹配，直接返回分支名
+    return branch_name
+
 def get_repo_stats(owner, repo):
     """获取仓库统计信息"""
     branches = get_branches(owner, repo)
@@ -108,12 +145,19 @@ def get_repo_stats(owner, repo):
 
     stats = []
 
+    # 限制处理的分支数量，避免过多数据
+    max_branches = 50
+    processed_count = 0
+
     for branch in branches:
+        if processed_count >= max_branches:
+            print(f"已处理 {max_branches} 个分支，跳过剩余分支以避免数据过大")
+            break
+
         branch_name = branch["name"]
-        print(f"处理分支: {branch_name}")
+        print(f"处理分支: {branch_name} ({processed_count + 1}/{min(len(branches), max_branches)})")
+
         try:
-
-
             # 获取提交数量
             commit_count = get_commits_count(owner, repo, branch_name)
 
@@ -123,17 +167,29 @@ def get_repo_stats(owner, repo):
             if not latest_commit:
                 continue
 
-            # 获取README内容
+            # 获取README内容（已限制长度）
             readme_content = get_readme_content(owner, repo, branch_name)
+
+            # 提取项目名称
+            project_name = extract_title_from_readme(readme_content)
+            if not project_name:
+                project_name = extract_name_from_branch(branch_name)
 
             stats.append({
                 "branch": branch_name,
+                "name": project_name,
                 "commit_count": commit_count,
                 "latest_commit": latest_commit,
                 "readme": readme_content
             })
+
+            processed_count += 1
+
         except Exception as e:
             print(f"发生异常: {e}，跳过分支 {branch_name}")
+
+    # 按照提交日期倒序排列
+    stats.sort(key=lambda x: x["latest_commit"]["date"], reverse=True)
 
     return stats
 
