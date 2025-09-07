@@ -3,19 +3,16 @@ package SocialMediaUtils
 import (
 	"context"
 	"fmt"
-	"github.com/michimani/gotwi/tweet/managetweet"
-	"github.com/michimani/gotwi/tweet/managetweet/types"
 	"log"
 	"telegram-message-sync-bot/internal/Entity"
+
+	"github.com/michimani/gotwi/tweet/managetweet"
+	"github.com/michimani/gotwi/tweet/managetweet/types"
 
 	"github.com/michimani/gotwi"
 )
 
 func initTwitter(config Entity.Config) gotwi.NewClientInput {
-	if config.SocialMediaSync.Twitter.Enabled == false {
-		log.Println("Twitter is not enabled in the configuration.")
-		return gotwi.NewClientInput{}
-	}
 
 	Twitter := config.SocialMediaSync.Twitter
 	return gotwi.NewClientInput{
@@ -26,6 +23,12 @@ func initTwitter(config Entity.Config) gotwi.NewClientInput {
 }
 
 func SendTwitter(globalConfig Entity.Config, Message string) bool {
+	// 提前返回结果失败
+	if globalConfig.SocialMediaSync.Twitter.Enable == false {
+		log.Println("Twitter is not enabled in the configuration.")
+		return false
+	}
+
 	config := initTwitter(globalConfig)
 	/**
 	* more config for

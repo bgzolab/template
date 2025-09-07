@@ -10,10 +10,6 @@ import (
 )
 
 func initMastodon(config Entity.Config) mastodon.Config {
-	if config.SocialMediaSync.Mastodon.Enabled == false {
-		log.Println("Mastodon is not enabled in the configuration.")
-		return mastodon.Config{}
-	}
 	Mastodon := config.SocialMediaSync.Mastodon
 	return mastodon.Config{
 		Server:       Mastodon.Instance,
@@ -24,6 +20,11 @@ func initMastodon(config Entity.Config) mastodon.Config {
 }
 
 func SendMastodon(globalConfig Entity.Config, Message string) bool {
+	if globalConfig.SocialMediaSync.Mastodon.Enable == false {
+		log.Println("Mastodon is not enabled in the configuration.")
+		return false
+	}
+
 	config := initMastodon(globalConfig)
 
 	// Create the client

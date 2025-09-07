@@ -1,22 +1,24 @@
 package SocialMediaUtils
 
 import (
-	"github.com/reiver/go-atproto/com/atproto/repo"
-	"github.com/reiver/go-atproto/com/atproto/server"
 	"telegram-message-sync-bot/internal/Entity"
 	"time"
 	_ "time"
+
+	"github.com/reiver/go-atproto/com/atproto/repo"
+	"github.com/reiver/go-atproto/com/atproto/server"
 )
 
 func initBlueSky(config Entity.Config) (username string, password string) {
-	if config.SocialMediaSync.BlueSky.Enabled == false {
-		return "", ""
-	}
 	BlueSky := config.SocialMediaSync.BlueSky
 	return BlueSky.Identifier, BlueSky.Password
 }
 
 func SendBlueSky(config Entity.Config, Message string) bool {
+	if config.SocialMediaSync.BlueSky.Enable == false {
+		return false
+	}
+
 	/**
 	 * 开启了二步验证怎么办？
 	 */

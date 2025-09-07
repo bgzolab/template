@@ -24,29 +24,29 @@ type Config struct {
 	TargetUserList []int64 `yaml:"targetUserList"`
 
 	SocialMediaSync struct {
-		Enabled        bool     `yaml:"enabled"`
-		TargetUserList []string `yaml:"targetUserList"`
+		Enable        bool     `yaml:"enable"`
+		TargetChannel []string `yaml:"targetChannel"`
 
 		Mastodon struct {
-			Enabled      bool   `yaml:"enabled"`
+			Enable       bool   `yaml:"enable"`
 			Instance     string `yaml:"instance"`
 			ClientId     string `yaml:"clientId"`
 			ClientSecret string `yaml:"clientSecret"`
 			AccessToken  string `yaml:"accessToken"`
-		}
+		} `yaml:"mastodon"`
 
 		Twitter struct {
-			Enabled           bool   `yaml:"enabled"`
+			Enable            bool   `yaml:"enable"`
 			OauthToken        string `yaml:"oauthToken"`
 			OauthTokenSecret  string `yaml:"oauthTokenSecret"`
 			GotwtApiKey       string `yaml:"gotwtApiKey"`
 			GotwtApiKeySecret string `yaml:"gotwtApiKeySecret"`
-		}
+		} `yaml:"twitter"`
 
 		BlueSky struct {
-			Enabled    bool   `yaml:"enabled"`
+			Enable     bool   `yaml:"enable"`
 			Identifier string `yaml:"identifier"`
 			Password   string `yaml:"password"`
-		}
-	}
+		} `yaml:"bluesky"`
+	} `yaml:"socialMediaSync"`
 }

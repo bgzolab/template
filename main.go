@@ -5,10 +5,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/go-telegram/bot"
-	"github.com/go-telegram/bot/models"
-	"github.com/spf13/cobra"
-	"gopkg.in/yaml.v3"
 	"html/template"
 	"net/http"
 	"os"
@@ -24,6 +20,11 @@ import (
 	"telegram-message-sync-bot/pkg/StrUtils"
 	"telegram-message-sync-bot/pkg/TgUtils"
 	"time"
+
+	"github.com/go-telegram/bot"
+	"github.com/go-telegram/bot/models"
+	"github.com/spf13/cobra"
+	"gopkg.in/yaml.v3"
 )
 
 // 全局配置
