@@ -35,7 +35,7 @@
         <div class="flex flex-col sm:flex-row gap-4">
           <input
             v-model="searchQuery"
-            placeholder="搜索分支名称..."
+            placeholder="搜索项目名称或分支..."
             class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
           <select
@@ -54,16 +54,23 @@
         <div
           v-for="repo in paginatedRepos"
           :key="repo.branch"
-          class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
+          :class="{ 'cursor-pointer group': hasReadme(repo) }"
+          @click="hasReadme(repo) ? openReadmeModal(repo) : null"
         >
           <!-- Card Header -->
           <div class="p-6 border-b border-gray-200">
             <div class="flex items-start justify-between">
               <div class="flex-1">
-                <h3 class="text-lg font-semibold text-gray-900 truncate" :title="repo.branch">
-                  {{ repo.branch }}
+                <h3 class="text-lg font-semibold text-gray-900"
+                    :class="{ 'group-hover:text-blue-600 transition-colors duration-200': hasReadme(repo) }"
+                    :title="repo.name">
+                  {{ repo.name || repo.branch }}
                 </h3>
-                <div class="mt-2 flex items-center space-x-4 text-sm text-gray-500">
+                <p class="text-sm text-gray-500 mt-1 truncate" :title="repo.branch">
+                  {{ repo.branch }}
+                </p>
+                <div class="mt-3 flex items-center space-x-4 text-sm text-gray-500">
                   <span class="flex items-center">
                     <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
@@ -104,23 +111,19 @@
 
           <!-- README Preview -->
           <div class="p-6">
-            <h4 class="text-sm font-medium text-gray-900 mb-3">README 预览</h4>
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-sm font-medium text-gray-900">README</h4>
+              <span v-if="hasReadme(repo)" class="text-xs text-blue-600"
+                    :class="{ 'group-hover:text-blue-800': hasReadme(repo) }">
+                点击查看详情 →
+              </span>
+            </div>
+
             <div class="text-sm text-gray-600">
-              <div v-if="repo.readme && repo.readme.trim()" class="space-y-2">
-                <p class="line-clamp-3">
-                  {{ getReadmePreview(repo.readme) }}
+              <div v-if="hasReadme(repo)" class="space-y-2">
+                <p class="text-green-600 font-medium">
+                  📄 包含 README 文件
                 </p>
-                <button
-                  v-if="repo.readme.length > 150"
-                  @click="toggleReadme(repo.branch)"
-                  class="text-blue-600 hover:text-blue-800 text-xs font-medium"
-                >
-                  {{ expandedReadmes[repo.branch] ? '收起' : '展开更多' }}
-                </button>
-                <!-- Expanded README (懒加载) -->
-                <div v-if="expandedReadmes[repo.branch]" class="mt-3 p-3 bg-gray-50 rounded text-xs max-h-64 overflow-y-auto">
-                  <pre class="whitespace-pre-wrap">{{ truncateReadme(repo.readme) }}</pre>
-                </div>
               </div>
               <p v-else class="text-gray-400 italic">
                 暂无 README 文件
@@ -132,12 +135,13 @@
           <div class="px-6 py-3 bg-gray-50 border-t border-gray-200">
             <div class="flex items-center justify-between">
               <span class="text-xs text-gray-500">
-                分支: {{ repo.branch.split('/').pop() }}
+                {{ formatDate(repo.latest_commit.date) }}
               </span>
               <a
                 :href="`https://github.com/bGZo/playground/tree/${repo.branch}`"
                 target="_blank"
                 class="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                @click.stop
               >
                 查看源码
                 <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -198,10 +202,72 @@
         </div>
       </div>
     </main>
+
+    <!-- README Modal -->
+    <div v-if="showReadmeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50" @click="closeReadmeModal">
+      <div class="bg-white rounded-lg max-w-4xl max-h-[90vh] w-full overflow-hidden" @click.stop>
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">
+              {{ selectedRepo?.name || selectedRepo?.branch }}
+            </h3>
+            <p class="text-sm text-gray-500 mt-1">{{ selectedRepo?.branch }}</p>
+          </div>
+          <button
+            @click="closeReadmeModal"
+            class="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+          <div v-if="selectedRepo?.readme && selectedRepo.readme.trim()"
+               class="prose prose-slate max-w-none prose-headings:text-gray-900 prose-h1:border-b prose-h1:border-gray-200 prose-h1:pb-2 prose-h2:mt-8 prose-h2:mb-4 prose-h3:mt-6 prose-h3:mb-3 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-ul:list-disc prose-ol:list-decimal prose-li:my-1 prose-table:table-auto prose-th:bg-gray-50 prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-gray-200"
+               v-html="renderMarkdown(selectedRepo.readme)">
+          </div>
+          <div v-else class="text-center py-12 text-gray-500">
+            <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <p class="text-lg">暂无 README 文件</p>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4 text-sm text-gray-500">
+              <span>{{ selectedRepo?.commit_count }} commits</span>
+              <span>{{ formatDate(selectedRepo?.latest_commit?.date) }}</span>
+            </div>
+            <a
+              :href="`https://github.com/bGZo/playground/tree/${selectedRepo?.branch}`"
+              target="_blank"
+              class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+            >
+              查看源码
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-1a1 1 0 10-2 0v1H5V7h1a1 1 0 000-2H5z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { marked } from 'marked'
+import 'highlight.js/styles/github.css'
+import hljs from 'highlight.js'
+
 // 设置页面标题
 useHead({
   title: 'GitHub 仓库统计仪表板',
@@ -210,26 +276,38 @@ useHead({
   ]
 })
 
+// 配置 marked
+marked.setOptions({
+  highlight: function(code, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(code, { language: lang }).value
+      } catch (__) {}
+    }
+    return hljs.highlightAuto(code).value
+  },
+  breaks: true,
+  gfm: true
+})
+
 // 获取仓库统计数据 - 移除 await，让它异步加载
 const { data: repoStats, pending, error, refresh } = useFetch('/repo_stats.json', {
   server: false, // 只在客户端加载
   default: () => [], // 提供默认值
   transform: (data) => {
     if (!data || !Array.isArray(data)) return []
-    // 预处理数据，截断过长的 README 内容以节省内存
-    return data.map(repo => ({
-      ...repo,
-      readme: repo.readme ? (repo.readme.length > 5000 ? repo.readme.substring(0, 5000) + '...' : repo.readme) : ''
-    }))
+    // 数据已经在后端按时��排序，这里直接返回
+    return data
   }
 })
 
 // 响应式数据
-const expandedReadmes = ref({})
 const searchQuery = ref('')
 const filterOption = ref('all')
 const currentPage = ref(1)
 const itemsPerPage = 12
+const showReadmeModal = ref(false)
+const selectedRepo = ref(null)
 
 // 计算属性
 const displayedRepos = computed(() => {
@@ -237,10 +315,12 @@ const displayedRepos = computed(() => {
 
   let filtered = repoStats.value
 
-  // 搜索过滤
+  // 搜索过滤 - 支持项目名称和分支名称搜索
   if (searchQuery.value) {
+    const query = searchQuery.value.toLowerCase()
     filtered = filtered.filter(repo =>
-      repo.branch && repo.branch.toLowerCase().includes(searchQuery.value.toLowerCase())
+      (repo.name && repo.name.toLowerCase().includes(query)) ||
+      (repo.branch && repo.branch.toLowerCase().includes(query))
     )
   }
 
@@ -303,6 +383,11 @@ const refreshData = () => {
   refresh()
 }
 
+// 检查是否有 README 内容
+const hasReadme = (repo) => {
+  return repo.readme && repo.readme.trim().length > 0
+}
+
 const formatDate = (dateString) => {
   if (!dateString) return '未知日期'
   try {
@@ -320,17 +405,6 @@ const getReadmePreview = (readme) => {
   if (!readme) return ''
   const cleaned = readme.replace(/[\r\n]+/g, ' ').trim()
   return cleaned.length > 150 ? cleaned.substring(0, 150) + '...' : cleaned
-}
-
-const truncateReadme = (readme) => {
-  if (!readme) return ''
-  // 限制展开的 README 长度，避免性能问题
-  return readme.length > 2000 ? readme.substring(0, 2000) + '\n\n... (内容过长，已截断)' : readme
-}
-
-const toggleReadme = (branch) => {
-  if (!branch) return
-  expandedReadmes.value[branch] = !expandedReadmes.value[branch]
 }
 
 const getStatusBadgeClass = (repo) => {
@@ -368,6 +442,51 @@ const getStatusText = (repo) => {
     return 'Unknown'
   }
 }
+
+// README 弹窗相关方法
+const openReadmeModal = (repo) => {
+  // 只有在有 README 内容时才打开弹窗
+  if (!hasReadme(repo)) {
+    return
+  }
+
+  selectedRepo.value = repo
+  showReadmeModal.value = true
+  // 防止背景滚动
+  document.body.style.overflow = 'hidden'
+}
+
+const closeReadmeModal = () => {
+  showReadmeModal.value = false
+  selectedRepo.value = null
+  // 恢复背景滚动
+  document.body.style.overflow = 'auto'
+}
+
+const renderMarkdown = (content) => {
+  if (!content) return ''
+  try {
+    return marked(content)
+  } catch (e) {
+    console.error('Markdown rendering error:', e)
+    return '<pre>' + content + '</pre>'
+  }
+}
+
+// 键盘事件监听
+onMounted(() => {
+  const handleKeydown = (e) => {
+    if (e.key === 'Escape' && showReadmeModal.value) {
+      closeReadmeModal()
+    }
+  }
+  document.addEventListener('keydown', handleKeydown)
+
+  onUnmounted(() => {
+    document.removeEventListener('keydown', handleKeydown)
+    document.body.style.overflow = 'auto'
+  })
+})
 </script>
 
 <style scoped>
@@ -383,5 +502,99 @@ const getStatusText = (repo) => {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Prose styles for markdown content */
+.prose {
+  color: #374151;
+  max-width: none;
+}
+
+.prose h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.prose pre {
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.prose a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #1d4ed8;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.prose th, .prose td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.prose th {
+  background-color: #f9fafb;
+  font-weight: 600;
 }
 </style>
