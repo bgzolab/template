@@ -1,30 +1,37 @@
 # Telegram message sync bot
 
+![](https://raw.githack.com/bGZo/assets/dev/2025/202503011548103.png)
+
+
+This is a telegram bot for archiving message from bot and sync to social media.
+
+Of course, you can use it as a simple telegram bot for syncing message from telegram.
+
+## Why
+
+Telegram have a great API and contents than other social media. There's less bot, business and ads.
+
+So I spend a lot of time on it. The messges saved in `SavedMessage` is not enough. You should manage what you read. And post what you think to more social media.
+
+That's what this bot do.
+
+## How 
+
+- Golang
+- Gorm
+- Sqlite
+- Telebot
+- Social media API
+- Vibe code
 
 ## Roadmap
 
-### Message Archive
-
-#### Rich text from Telegram #gtd/done
-
-#### Media Download from Telegram #gtd/done
-
-#### Notification #gtd/done
-
-### Database Support #gtd/doing
-
-SQLite
-
-### Sync Social Media #gtd/doing
-
-So why?
-
-1. I don't like the online service.
-2. I need self-host & local & privacy.
-
-- Target: https://github.com/leaperone/MultiPost-Extension
-- Global
-  - [x] Telegram
+- [x] Messages archive
+  - [x] Rich text from Telegram
+  - [x] Media download
+- [x] Notification
+- [x] Database supported(sqlite)
+- [x] Sync social media
   - [x] Twitter
   - [x] Mastodon
   - [x] BlueSky
@@ -32,7 +39,6 @@ So why?
   - [ ] Facebook
   - [ ] Thread
   - [ ] Reddit
-- Chinese
   - [ ] Douban
   - [ ] Okjike
   - [ ] Weibo
@@ -43,10 +49,7 @@ So why?
   - [ ] Zhihu
   - [ ] V2Ex
 
-
 ## Quick start
-
-![](https://raw.githack.com/bGZo/assets/dev/2025/202503011548103.png)
 
 ```shell
 # install dependencies
@@ -104,3 +107,8 @@ systemctl daemon-reload
 systenctl start tg@bgzo
 systenctl enable tg@bgzo
 ```
+
+## ALternatives
+
+- https://github.com/leaperone/MultiPost-Extension
+
