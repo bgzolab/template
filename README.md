@@ -31,7 +31,7 @@ That's what this bot do.
   - [x] Media download
 - [x] Notification
 - [x] Database supported(sqlite)
-- [x] Sync social media
+- [ ] Sync social media (beta)
   - [x] Twitter
   - [x] Mastodon
   - [x] BlueSky
