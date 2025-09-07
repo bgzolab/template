@@ -107,9 +107,41 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 				1. 适配每个社交媒体的内容限制，
 				2. 转换成纯文本，不再支持 Markdown
 			*/
-			SocialMediaUtils.SendBlueSky(globalConfig, msgText)
-			SocialMediaUtils.SendMastodon(globalConfig, msgText)
-			SocialMediaUtils.SendTwitter(globalConfig, msgText)
+			if SocialMediaUtils.SendBlueSky(globalConfig, msgText) == true {
+				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+					ChatID: chatId,
+					Text:   "消息已同步至 BlueSky!",
+				})
+			} else {
+				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+					ChatID: chatId,
+					Text:   "同步 BlueSky 失败",
+				})
+			}
+
+			if SocialMediaUtils.SendMastodon(globalConfig, msgText) == true {
+				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+					ChatID: chatId,
+					Text:   "消息已同步至 Mastodon!",
+				})
+			} else {
+				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+					ChatID: chatId,
+					Text:   "同步 Mastodon 失败",
+				})
+			}
+
+			if SocialMediaUtils.SendTwitter(globalConfig, msgText) == true {
+				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+					ChatID: chatId,
+					Text:   "消息已同步至 Twitter!",
+				})
+			} else {
+				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+					ChatID: chatId,
+					Text:   "同步 Twitter 失败",
+				})
+			}
 		}
 
 	}
