@@ -7,7 +7,9 @@
     "dev": "node --max-old-space-size=4096 ./node_modules/.bin/nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy:github": "npm run generate",
+    "deploy:vercel": "vercel --prod"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
