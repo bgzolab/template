@@ -22,12 +22,35 @@ def get_branches(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}/branches"
     headers = get_github_headers()
 
-    response = requests.get(url, headers=headers)
-    if response.status_code != 200:
-        print(f"获取分支失败: {response.status_code}")
-        return []
+    all_branches = []
+    page = 1
+    per_page = 100  # 设置每页返回更多结果
 
-    return response.json()
+    while True:
+        params = {"page": page, "per_page": per_page}
+        response = requests.get(url, headers=headers, params=params)
+
+        if response.status_code != 200:
+            print(f"获取分支失败: {response.status_code}")
+            if response.status_code == 403:
+                print("API 限制错误，请检查 GitHub Token 或等待限制重置")
+            break
+
+        branches = response.json()
+        if not branches:
+            break  # 没有更多分支了
+
+        all_branches.extend(branches)
+        print(f"获取第 {page} 页分支，本页 {len(branches)} 个")
+
+        # 如果本页分支数少于每页限制，说明这是最后一页
+        if len(branches) < per_page:
+            break
+
+        page += 1
+
+    print(f"总共获取到 {len(all_branches)} 个分支")
+    return all_branches
 
 def get_commits_count(owner, repo, branch):
     """获取指定分支的提交数量"""
