@@ -1,0 +1,362 @@
+[
+  {
+    "branch": "2025/02/telegram-message-sync-bot",
+    "name": "Telegram message sync bot",
+    "commit_count": 41,
+    "latest_commit": {
+      "sha": "f3b95bbaebb11f23c5f160ce53542e83fc84c9b8",
+      "message": "docs: update README",
+      "author": "hx",
+      "date": "2025-09-07T03:25:37Z"
+    },
+    "readme": "# Telegram message sync bot\n\n![](https://raw.githack.com/bGZo/assets/dev/2025/202503011548103.png)\n\n\nThis is a telegram bot for archiving message from bot and sync to social media.\n\nOf course, you can use it as a simple telegram bot for syncing message from telegram.\n\n## Why\n\nTelegram have a great API and contents than other social media. There's less bot, business and ads.\n\nSo I spend a lot of time on it. The messges saved in `SavedMessage` is not enough. You should manage what you read. And post what you think to more social media.\n\nThat's what this bot do.\n\n## How \n\n- Golang\n- Gorm\n- Sqlite\n- Telebot\n- Social media API\n- Vibe code\n\n## Roadmap\n\n- [x] Messages archive\n  - [x] Rich text from Telegram\n  - [x] Media download\n- [x] Notification\n- [x] Database supported(sqlite)\n- [ ] Sync social media (beta)\n  - [x] Twitter\n  - [x] Mastodon\n  - [x] BlueSky\n  - [ ] Instagram\n  - [ ] Facebook\n  - [ ] Thread\n  - [ ] Reddit\n  - [ ] Douban\n  - [ ] Okjike\n  - [ ] Weibo\n  - [ ] Douyin\n  - [ ] Bilibili\n  - [ ] Xiaohongshu\n  - [ ] Coolapk\n  - [ ] Zhihu\n  - [ ] V2Ex\n\n## Quick start\n\n```shell\n# install dependencies\ngo mod tidy\n\n# build the result\ngo build -o tg main.go\n\n# give the right to run. \nchmod +x ./tg\n\n# run bot\n./tg sync -c ./config/config.yaml\n```\n\n### Optional: run in background using nohup\n\n```shell\nnohup ./tg sync -c ./config/config.yaml > bot.log 2>&1 &\n\n# kill background\npkill -f tg\n```\n\n### Optional: run in background using nohup\n\n```shell\nsudo vim /lib/systemd/system/tg@.service\n```\n\nAdd following config:\n\n```shell\n[Unit]\nDescription=tg message sync bot for %i.\nAfter=network.target\n\n[Service]\nType=simple\nUser=%i\nRestart=on-abort\nEnvironment=http_proxy=192.168.31.20:10800\nEnvironment=https_proxy=192.168.31.20:10800\nExecStart=/home/bgzo/workspaces/telegram-message-sync/tg sync -c /home/bgzo/workspaces/telegram-message-sync/config/config.yaml\n\n[Install]\n# WantedBy=multi-user.target\nWantedBy=graphical-session.target\n```\n\nThen restart systemd and enable `tg@username`\n\n```shell\nsystemctl daemon-reload\nsystenctl start tg@bgzo\nsystenctl enable tg@bgzo\n```\n\n## ALternatives\n\n- https://github.com/leaperone/MultiPost-Extension\n\n"
+  },
+  {
+    "branch": "2025/07/bangumi-recovery-scripts",
+    "name": "让我们快乐地点格子",
+    "commit_count": 51,
+    "latest_commit": {
+      "sha": "edf1a57da70df18f72667c025894b6786daa2557",
+      "message": "docs: update",
+      "author": "hx",
+      "date": "2025-09-06T16:20:45Z"
+    },
+    "readme": "# 让我们快乐地点格子\n\n![](https://raw.githack.com/bGZo/assets/dev/2025/202508021025451.png)\n\n\n## Quick Start\n\n需要 Bangumi 的 `access_token`，可以从 https://next.bgm.tv/demo/access-token 获取。\n\n如果从命令行中运行，需要声明环境变量，IDE 中请配置 Environment Variables。以 nix 类系统为例：\n\n```shell\n# 必填\nexport BGM_ACCESS_TOKEN=xxx\n\n# 可选\nexport http_proxy=192.168.31.20:10800\nexport https_proxy=192.168.31.20:10800\n\n# 安装本项目\npipx install bangumi_recovery\n```\n\n### 往季新番点格子\n\n```shell\nbgm-click-server\n```\n\n### 恢复数据（克隆账号）\n\n```python\nbgm-clone dandelion_fs\n```\n\n### 删除时间线\n\n```shell\nbgm-timeline-delete bool\n```\n\n## Roadmap\n\n- [x] 恢复数据\n  - [x] 从 SingleFile 中恢复数据 250728\n    - 下载了历史备份，需要这次一次性上传上去\n  - [x] 克隆旧账号 250731\n    - 多个账号的问题，需要从对应账号里面拉数据；\n  - ~~从时间线恢复数据~~\n- [x] 往季新番批量标记 250801\n  - API 使用： https://github.com/bangumi-data/bangumi-data, 大力感谢\n  - 数据结构展示： https://github.com/bangumi-data/bangumi-data/blob/master/data/items/1943/04.json\n- [x] 每日轮训删除时间线\n  - 可以用这个 API： https://bgm.tv/feed/user/bool/timeline\n\n## 参考项目\n\n- https://github.com/LCMs-YoRHa/From-Bangumi-to-Obsidian\n- https://github.com/BGmi/BGmi\n\n## License\n\nAll code is licensed under the AGPL-3.0 license.\n"
+  },
+  {
+    "branch": "2025/07/blog-downloader",
+    "name": "博客批量下载器",
+    "commit_count": 17,
+    "latest_commit": {
+      "sha": "4ae8ae28fe2713287141d2d63d071a6d3fb4dee2",
+      "message": "docs: update",
+      "author": "hx",
+      "date": "2025-07-30T13:40:01Z"
+    },
+    "readme": "# 博客批量下载器\n\n一般来说，我读人家的博客都是从存档开始的，因为里面不会有太多的内容。甚至连简短的 Beirf 都没有，就是个标题。\n\n但是很多博客并没有提供这个页面，我又没有办法真的写信给人家说“请你把存档页面放出来”，所以我就只能写了这个脚本。\n\n脚本的原理很简单，就是用 Sitemap.xml 来获取博客的所有文章链接，然后再逐个下载。\n\n## Roadmap\n\n- [x] 支持 Sitemap 自动匹配\n  - https://ultimate-sitemap-parser.readthedocs.io/en/stable/\n- [x] 获取 URL 内容\n  - ~~想用 crawl4ai，但是依赖浏览器~~\n  - [x] trafilatura 提取文章内容，但是失败了\n  - [x] BS 直接转换 HTML 全部内容\n- [ ] 异步下载文章内容\n  - 目前是同步下载，速度很慢\n- [x] 支持 Frontmatter\n  - [ ] 最好可以做到自定义模板，无需改动代码，自由度更高\n- [ ] 支持自定义下载目录\n- [x] 支持输出一个 index.md 文件，里面包含所有文章的链接 \n   - 用 Wikilink 还是 ==Markdown 链接==？\n\n## 测试网站\n\n1. http://www.hecaitou.com\n2. https://cn.apkjam.com\n\n## 参考\n\n参考的项目不限于下面这些：\n\n1. https://gist.github.com/NoWorries/d8d2946d626df0061616db307beeb6d2#file-sitemap_crawler-py-L7\n2. https://github.com/hristovskii/sitemap-crawler-python\n3. https://github.com/GateNLP/ultimate-sitemap-parser\n4. https://github.com/clydesantiago/site-to-md\n5. https://github.com/buriy/python-readability\n\n\n当然还有反向生成的库，用的人比较多，如：\n\n- https://github.com/c4software/python-sitemap"
+  },
+  {
+    "branch": "2023/02/leetcode-demo",
+    "name": "Leetcode Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "489798b0b94a039d59f6ab4e8419ec8423c90b9d",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-24T13:15:50Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2023/12/rust-demo",
+    "name": "Rust Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "f3474cdcf3b18ed02e720871327ee07e2b4cf54b",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-24T11:46:39Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2021/01/projects-collections-demo",
+    "name": "Projects Collections Demo",
+    "commit_count": 183,
+    "latest_commit": {
+      "sha": "d98f5500087e069cdd0bb624b14bfd96b72aee3b",
+      "message": "chore: update solution",
+      "author": "hx",
+      "date": "2025-07-24T11:37:50Z"
+    },
+    "readme": "Mega Project List\r\n========\r\n\r\nA list of practical projects that anyone can solve in any programming language (See [solutions](https://github.com/thekarangoel/Projects-Solutions)). These projects are divided in multiple categories, and each category has its own folder.\r\n\r\nTo get started, simply fork this repo.\r\n\r\n## [CONTRIBUTING](https://github.com/thekarangoel/Projects/blob/master/CONTRIBUTING.md)\r\n\r\nSee ways of [contributing](https://github.com/thekarangoel/Projects/blob/master/CONTRIBUTING.md) to this repo. You can contribute **solutions** (will be published in this [repo](https://github.com/thekarangoel/Projects-Solutions)) to existing problems, **add new projects** or remove existing ones. Make sure you follow all instructions properly.\r\n\r\n\r\n## [Solutions](https://github.com/thekarangoel/Projects-Solutions)\r\n\r\nYou can find implementations of these projects in many other languages by other users in [this repo](https://github.com/thekarangoel/Projects-Solutions).\r\n\r\n## Credits\r\n\r\nThis repo was compiled by [Karan Goel](http://twitter.com/karangoel).\r\n\r\nProblems are motivated by the ones shared at:\r\n\r\n* [Martyr2’s Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/)\r\n* [Rosetta Code](http://rosettacode.org/)\r\n\r\n## Table of Contents\r\n\r\n- [Numbers](https://github.com/karan/Projects#numbers)\r\n- [Classic Algorithms](https://github.com/karan/Projects#classic-algorithms)\r\n- [Graph](https://github.com/karan/Projects#graph)\r\n- [Data Structures](https://github.com/karan/Projects#data-structures)\r\n- [Text](https://github.com/karan/Projects#text)\r\n- [Networking](https://github.com/karan/Projects#networking)\r\n- [Classes](https://github.com/karan/Projects#classes)\r\n- [Threading](https://github.com/karan/Projects#threading)\r\n- [Web](https://github.com/karan/Projects#web)\r\n- [Files](https://github.com/karan/Projects#files)\r\n- [Databases](https://github.com/karan/Projects#databases)\r\n- [Graphics and Multimedia](https://github.com/karan/Projects#graphics-and-multimedia)\r\n- [Security](https://github.com/karan/Projects#security)\r\n\r\nNumbers\r\n---------\r\n\r\n**Find PI to the Nth Digit** - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.\r\n\r\n**Find e to the Nth Digit** - Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go.\r\n\r\n**Fibonacci Sequence** - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.\r\n\r\n**Prime Factorization** - Have the user enter a number and find all Prime Factors (if there are any) and display them.\r\n\r\n**Next Prime Number** - Have the program find prime numbers until the user chooses to stop asking for the next one.\r\n\r\n**Find Cost of Tile to Cover W x H Floor** - Calculate the total cost of tile it would take to cover a floor plan of width and height, using a cost entered by the user.\r\n\r\n**Mortgage Calculator** - Calculate the monthly payments of a fixed term mortgage over given Nth terms at a given interest rate. Also figure out how long it will take the user to pay back the loan. For added complexity, add an option for users to select the compounding interval (Monthly, Weekly, Daily, Continually).\r\n\r\n**Change Return Program** - The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.\r\n\r\n**Binary to Decimal and Back Converter** - Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.\r\n\r\n**Calculator** - A simple calculator to do basic operators. Make it a scientific calculator for added complexity.\r\n\r\n**Unit Converter (temp, currency, volume, mass and more)** - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.\r\n\r\n**Alarm Clock** - A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.\r\n\r\n**Distance Between Two Cities** - Calculates the distance between two cities and allows the user to specify a unit of distance. This program may require finding coordinates for the cities like latitude and longitude.\r\n\r\n**Credit Card Validator** - Takes in a credit card number from a common credit card vendor (Visa, MasterCard, American Express, Discoverer) and validates it to make sure that it is a valid number (look into how credit cards use a checksum).\r\n\r\n**Tax Calculator** - Asks the user to enter a cost and either a country or state tax. It then returns the tax plus the total cost with tax.\r\n\r\n**Factorial Finder** - The Factorial of a positive integer, n, is defined as the product of the sequence n, n-1, n-2, ...1 and the factorial of zero, 0, is defined as being 1. Solve this using both loops and recursion.\r\n\r\n**Complex Number Algebra** - Show addition, multiplication, negation, and inversion of complex numbers in separate functions. (Subtraction and division operations can be made with pairs of these operations.) Print the results for each operation tested.\r\n\r\n**Happy Numbers** - A happy number is defined by the following process. Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers. Display an example of your output here. Find first 8 happy numbers.\r\n\r\n**Number Names** - Show how to spell out a number in English. You can use a preexisting implementation or roll your own, but you should support inputs up to at least one million (or the maximum value of your language's default bounded integer type, if that's less). *Optional: Support for inputs other than positive integers (like zero, negative integers, and floating-point numbers).*\r\n\r\n**Coin Flip Simulation** - Write some code that simulates flipping a single coin however many times the user decides. The code should record the outcomes and count the number of tails and heads.\r\n\r\n**Limit Calculator** - Ask the user to enter f(x) and the limit value, then return the value of the limit statement *Optional: Make the calculator capable of supporting infinite limits.*\r\n\r\n**Fast Exponentiation** - Ask the user to enter 2 integers a and b and output a^b (i.e. pow(a,b)) in O(lg n) time complexity.\r\n\r\nClassic Algorithms\r\n-----------------\r\n\r\n**Collatz Conjecture** - Start with a number *n > 1*. Find the number of steps it takes to reach one using the following process: If *n* is even, divide it by 2. If *n* is odd, multiply it by 3 and add 1.\r\n\r\n**Sorting** - Implement two types of sorting algorithms: Merge sort and bubble sort.\r\n\r\n**Closest pair problem** - The closest pair of points problem or closest pair problem is a problem of computational geometry: given *n* points in metric space, find a pair of points with the smallest distance between them.\r\n\r\n**Sieve of Eratosthenes** - The sieve of Eratosthenes is one of the most efficient ways to find all of the smaller primes (below 10 million or so).\r\n\r\n\r\nGraph\r\n--------\r\n\r\n**Graph from links** - Create a program that will create a graph or network from a series of links.\r\n\r\n**Eulerian Path** - Create a program which will take as an input a graph and output either a Eulerian path or a Eulerian cycle, or state that it is not possible.  A Eulerian Path starts at one node and traverses every edge of a graph  through every node and finishes at another node.  A Eulerian cycle is a eulerian Path that starts and finishes at the same node.\r\n\r\n**Connected Graph** - Create a program which takes a graph as an input and outputs whether every node is connected or not.\r\n\r\n**Dijkstra’s Algorithm** - Create a program that finds the shortest path through a graph using its edges.\r\n\r\n**Minimum Spanning Tree** - Create a program which takes a connected, undirected graph with weights and outputs the minimum spanning tree of the graph i.e., a\r\nsubgraph that is a tree, contains all the vertices, and the sum of its weights is the least possible.\r\n\r\n\r\nData Structures\r\n---------\r\n\r\n**Inverted index** - An [Inverted Index](http://en.wikipedia.org/wiki/Inverted_index) is a data structure used to create full text search. Given a set of text files, implement a program to create an inverted index. Also create a user interface to do a search using that inverted index which returns a list of files that contain the query term / terms. The search index can be in memory.\r\n\r\n\r\nText\r\n---------\r\n\r\n**Fizz Buzz** - Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.\r\n\r\n**Reverse a String** - Enter a string and the program will reverse it and print it out.\r\n\r\n**Pig Latin** - Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: \"banana\" would yield anana-bay). Read Wikipedia for more information on rules.\r\n\r\n**Count Vowels** - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.\r\n\r\n**Check if Palindrome** - Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”\r\n\r\n**Count Words in a String** - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.\r\n\r\n**Text Editor** - Notepad style application that can open, edit, and save text documents. *Optional: Add syntax highlighting and other features.*\r\n\r\n**RSS Feed Creator** - Given a link to RSS/Atom Feed, get all posts and display them.\r\n\r\n**Quote Tracker (market symbols etc)** - A program which can go out and check the current value of stocks for a list of symbols entered by the user. The user can set how often the stocks are checked. For CLI, show whether the stock has moved up or down. *Optional: If GUI, the program can show green up and red down arrows to show which direction the stock value has moved.*\r\n\r\n**Guestbook / Journal** - A simple application that allows people to add comments or write journal entries. It can allow comments or not and timestamps for all entries. Could also be made into a shout box. *Optional: Deploy it on Google App Engine or Heroku or any other PaaS (if possible, of course).*\r\n\r\n**Vigenere / Vernam / Ceasar Ciphers** - Functions for encrypting and decrypting data messages. Then send them to a friend.\r\n\r\n**Regex Query Tool** - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.\r\n\r\n\r\nNetworking\r\n---------\r\n\r\n**FTP Program** - A file transfer program which can transfer files back and forth from a remote web sever.\r\n\r\n**Bandwidth Monitor** - A small utility program that tracks how much data you have uploaded and downloaded from the net during the course of your current online session. See if you can find out what periods of the day you use more and less and generate a report or graph that shows it.\r\n\r\n**Port Scanner** - Enter an IP address and a port range where the program will then attempt to find open ports on the given computer by connecting to each of them. On any successful connections mark the port as open.\r\n\r\n**Mail Checker (POP3 / IMAP)** - The user enters various account information include web server and IP, protocol type (POP3 or IMAP) and the application will check for email at a given interval.\r\n\r\n**Country from IP Lookup** - Enter an IP address and find the country that IP is registered in. *Optional: Find the Ip automatically.*\r\n\r\n**Whois Search Tool** - Enter an IP or host address and have it look it up through whois and return the results to you.\r\n\r\n**Site Checker with Time Scheduling** - An application that attempts to connect to a website or server every so many minutes or a given time and check if it is up. If it is down, it will notify you by email or by posting a notice on screen.\r\n\r\n\r\nClasses\r\n---------\r\n\r\n**Product Inventory Project** - Create an application which manages an inventory of products. Create a product class which has a price, id, and quantity on hand. Then create an *inventory* class which keeps track of various products and can sum up the inventory value.\r\n\r\n**Airline / Hotel Reservation System** - Create a reservation system which books airline seats or hotel rooms. It charges various rates for particular sections of the plane or hotel. Example, first class is going to cost more than coach. Hotel rooms have penthouse suites which cost more. Keep track of when rooms will be available and can be scheduled.\r\n\r\n**Company Manager** - Create an hierarchy of classes - abstract class Employee and subclasses HourlyEmployee, SalariedEmployee, Manager and Executive. Every one's pay is calculated differently, research a bit about it.\r\nAfter you've established an employee hierarchy, create a Company class that allows you to manage the employees. You should be able to hire, fire and raise employees. \r\n\r\n**Bank Account Manager** - Create a class called Account which will be an abstract class for three other classes called CheckingAccount, SavingsAccount and BusinessAccount. Manage credits and debits from these accounts through an ATM style program.\r\n\r\n**Patient / Doctor Scheduler** - Create a patient class and a doctor class. Have a doctor that can handle multiple patients and setup a scheduling program where a doctor can only handle 16 patients during an 8 hr work day.\r\n\r\n**Recipe Creator and Manager** - Create a recipe class with ingredients and a put them in a recipe manager program that organizes them into categories like deserts, main courses or by ingredients like chicken, beef, soups, pies etc.\r\n\r\n**Image Gallery** - Create an image abstract class and then a class that inherits from it for each image type. Put them in a program which displays them in a gallery style format for viewing.\r\n\r\n**Shape Area and Perimeter Classes** - Create an abstract class called Shape and then inherit from it other shapes like diamond, rectangle, circle, triangle etc. Then have each class override the area and perimeter functionality to handle each shape type.\r\n\r\n**Flower Shop Ordering To Go** - Create a flower shop application which deals in flower objects and use those flower objects in a bouquet object which can then be sold. Keep track of the number of objects and when you may need to order more.\r\n\r\n**Family Tree Creator** - Create a class called Person which will have a name, when they were born and when (and if) they died. Allow the user to create these Person classes and put them into a family tree structure. Print out the tree to the screen.\r\n\r\n\r\nThreading\r\n---------\r\n\r\n**Create A Progress Bar for Downloads** - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.\r\n\r\n**Bulk Thumbnail Creator** - Picture processing can take a bit of time for some transformations. Especially if the image is large. Create an image program which can take hundreds of images and converts them to a specified size in the background thread while you do other things. For added complexity, have one thread handling re-sizing, have another bulk renaming of thumbnails etc.\r\n\r\n\r\nWeb\r\n---------\r\n\r\n**Page Scraper** - Create an application which connects to a site and pulls out all links, or images, and saves them to a list. *Optional: Organize the indexed content and don’t allow duplicates. Have it put the results into an easily searchable index file.*\r\n\r\n**Online White Board** - Create an application which allows you to draw pictures, write notes and use various colors to flesh out ideas for projects. *Optional: Add feature to invite friends to collaborate on a white board online.*\r\n\r\n**Get Atomic Time from Internet Clock** - This program will get the true atomic time from an atomic time clock on the Internet. Use any one of the atomic clocks returned by a simple Google search.\r\n\r\n**Fetch Current Weather** - Get the current weather for a given zip/postal code. *Optional: Try locating the user automatically.*\r\n\r\n**Scheduled Auto Login and Action** - Make an application which logs into a given site on a schedule and invokes a certain action and then logs out. This can be useful for checking web mail, posting regular content, or getting info for other applications and saving it to your computer.\r\n\r\n**E-Card Generator** - Make a site that allows people to generate their own little e-cards and send them to other people. Do not use Flash. Use a picture library and perhaps insightful mottos or quotes.\r\n\r\n**Content Management System** - Create a content management system (CMS) like Joomla, Drupal, PHP Nuke etc. Start small. *Optional: Allow for the addition of modules/addons.*\r\n\r\n**Web Board (Forum)** - Create a forum for you and your buddies to post, administer and share thoughts and ideas.\r\n\r\n**CAPTCHA Maker** - Ever see those images with letters a numbers when you signup for a service and then asks you to enter what you see? It keeps web bots from automatically signing up and spamming. Try creating one yourself for online forms.\r\n\r\n\r\nFiles\r\n---------\r\n\r\n**Quiz Maker** - Make an application which takes various questions from a file, picked randomly, and puts together a quiz for students. Each quiz can be different and then reads a key to grade the quizzes.\r\n\r\n**Sort Excel/CSV File Utility** - Reads a file of records, sorts them, and then writes them back to the file. Allow the user to choose various sort style and sorting based on a particular field.\r\n\r\n**Create Zip File Maker** - The user enters various files from different directories and the program zips them up into a zip file. *Optional: Apply actual compression to the files. Start with Huffman Algorithm.*\r\n\r\n**PDF Generator** - An application which can read in a text file, html file or some other file and generates a PDF file out of it. Great for a web based service where the user uploads the file and the program returns a PDF of the file. *Optional: Deploy on GAE or Heroku if possible.*\r\n\r\n**Mp3 Tagger** - Modify and add ID3v1 tags to MP3 files. See if you can also add in the album art into the MP3 file’s header as well as other ID3v2 tags.\r\n\r\n**Code Snippet Manager** - Another utility program that allows coders to put in functions, classes or other tidbits to save for use later. Organized by the type of snippet or language the coder can quickly look up code. *Optional: For extra practice try adding syntax highlighting based on the language.*\r\n\r\n\r\nDatabases\r\n---------\r\n\r\n**SQL Query Analyzer** - A utility application which a user can enter a query and have it run against a local database and look for ways to make it more efficient.\r\n\r\n**Remote SQL Tool** - A utility that can execute queries on remote servers from your local computer across the Internet. It should take in a remote host, user name and password, run the query and return the results.\r\n\r\n**Report Generator** - Create a utility that generates a report based on some tables in a database. Generates a sales reports based on the order/order details tables or sums up the days current database activity.\r\n\r\n**Event Scheduler and Calendar** - Make an application which allows the user to enter a date and time of an event, event notes and then schedule those events on a calendar. The user can then browse the calendar or search the calendar for specific events. *Optional: Allow the application to create re-occurrence events that reoccur every day, week, month, year etc.*\r\n\r\n**Budget Tracker** - Write an application that keeps track of a household’s budget. The user can add expenses, income, and recurring costs to find out how much they are saving or losing over a period of time. *Optional: Allow the user to specify a date range and see the net flow of money in and out of the house budget for that time period.*\r\n\r\n**TV Show Tracker** - Got a favorite show you don’t want to miss? Don’t have a PVR or want to be able to find the show to then PVR it later? Make an application which can search various online TV Guide sites, locate the shows/times/channels and add them to a database application. The database/website then can send you email reminders that a show is about to start and which channel it will be on.\r\n\r\n**Travel Planner System** - Make a system that allows users to put together their own little travel itinerary and keep track of the airline / hotel arrangements, points of interest, budget and schedule.\r\n\r\n\r\nGraphics and Multimedia\r\n---------\r\n\r\n**Slide Show** - Make an application that shows various pictures in a slide show format. *Optional: Try adding various effects like fade in/out, star wipe and window blinds transitions.*\r\n\r\n**Stream Video from Online** - Try to create your own online streaming video player.\r\n\r\n**Mp3 Player** - A simple program for playing your favorite music files. Add features you think are missing from your favorite music player.\r\n\r\n**Watermarking Application** - Have some pictures you want copyright protected? Add your own logo or text lightly across the background so that no one can simply steal your graphics off your site. Make a program that will add this watermark to the picture. *Optional: Use threading to process multiple images simultaneously.*\r\n\r\n**Turtle Graphics** - This is a common project where you create a floor of 20 x 20 squares. Using various commands you tell a turtle to draw a line on the floor. You have move forward, left or right, lift or drop pen etc. Do a search online for \"Turtle Graphics\" for more information. *Optional: Allow the program to read in the list of commands from a file.*\r\n\r\n**GIF Creator** A program that puts together multiple images (PNGs, JPGs, TIFFs) to make a smooth GIF that can be exported. *Optional: Make the program convert small video files to GIFs as well.*\r\n\r\n\r\nSecurity\r\n-------------\r\n\r\n**Caesar cipher** - Implement a Caesar cipher, both encoding and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts \"HI\" to \"JK\", but key 20 encrypts \"HI\" to \"BC\". This simple \"monoalphabetic substitution cipher\" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.\r\n"
+  },
+  {
+    "branch": "2022/07/learn-spring",
+    "name": "Learn Spring",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "558f59ca00f23f238af37a50767bac402bfe074e",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T23:41:59Z"
+    },
+    "readme": "- spring全家桶\n  - spring\n  - springmvc\n  - spring boot\n  - spring cloud\n- 核心技术\n  - ioc, Inversion of Control\n    - 控制反转, 一个理论, 概念, 思想\n    - 描述的\n      - 把对象的创建，赋值，管理工作都交给代码之外的容器实现， 也就是对象的创建是有其它外部资源完成\n    - 控制\n      - 创建对象，对象的属性赋值，对象之间的关系管理\n    - 反转\n      - 把管理, 创建对象, 给属性赋值的权限转移给代码之外的容器实现\n      - 由容器代替开发人员\n      - 正转\n        - 开发人员 new 主动构造方法\n      - 容器\n        - 一个服务器软件， 一个框架 (spring)\n    - 例子: servlet\n      - 创建类继承 HttpServelt \n      - 在 web.xml 注册servlet\n        ```xml\n        <servlet-name> myservlet </servlet-name>\n        <servelt-class>com.bjpwernode.controller.MyServlet1</servlet-class>\n        ```\n      - 没有主动创建 Servlet对象.\n      - Servlet 是Tomcat服务器它能你创建的。 Tomcat也称为容器, Tomcat作为容器：里面存放的有Servlet对象， Listener ， Filter对象\n    - 技术实现 -- DI, Dependency Injection\n      - 只需要在程序中提供要使用的对象名称就可以, 至于对象如何在容器中创建, 赋值，查找都由容器内部实现\n      - spring底层创建对象，使用的是反射机制。\n      - spring是一个容器，管理对象，给属性赋值， 底层是反射创建对象\n      - 基于注解的 di\n        - 使用步骤\n          - 加入maven的依赖 `spring-context`\n            - 在你加入spring-context的同时， 间接加入spring-aop的依赖。使用注解必须使用spring-aop依赖\n          - 类中加入spring的注解 (多个不同功能的注解)\n          - 在spring的配置文件中，加入一个组件扫描器的标签，说明注解在你的项目中的位置\n      - 重要的注解\n        - `@Component`\n        - `@Respotory`\n        - `@Service`\n        - `@Controller`\n        - `@Value`\n        - `@Autowired`\n        - `@Resource`\n  - aop, Aspect Orient Programming, 面向切面编程\n    - 基于动态代理\n      - 实现方式\n        - jdk动态代理\n          - 使用jdk中的Proxy，Method，InvocaitonHanderl创建代理对象。\n            - jdk动态代理要求目标类必须实现接口\n        - cglib动态代理\n          - 第三方的工具库，创建代理对象，原理是继承。 通过继承目标类，创建子类。\n          - 子类就是代理对象。 要求目标类不能是final的， 方法也不能是final的\n      - 作用\n        - 在目标类源代码不改变的情况下，增加功能。\n        - 减少代码的重复\n        - 专注业务逻辑代码\n        - 解耦合，让你的业务功能和日志，事务非业务功能分离。\n    - 理解切面\n      - 特点\n        - 一般都是非业务方法，独立使用的\n      - 需要在分析项目功能时，找出切面。\n      - 合理的安排切面的执行时间（在目标方法前， 还是目标方法后）\n      - 合理的安全切面执行的位置，在哪个类，哪个方法增加增强功能\n    - 术语\n      - Aspect\n        - 切面，表示增强的功能， 就是一堆代码，完成某个一个功能。非业务功能，\n          - 常见的切面功能有日志， 事务， 统计信息， 参数检查， 权限验证。\n      - JoinPoint\n        - 连接点 ，连接业务方法和切面的位置。 就某类中的业务方法\n      - Pointcut\n        - 切入点 ，指多个连接点方法的集合。多个方法\n      - 目标对象\n        - 给哪个类的方法增加功能， 这个类就是目标对象\n      - Advice\n        - 通知，通知表示切面功能执行的时间\n    - 三要素\n      - 切面的功能代码，切面干什么\n      - 切面的执行位置，使用Pointcut表示切面执行的位置\n      - 切面的执行时间，使用Advice表示时间，在目标方法之前，还是目标方法之后。\n    - 实现\n      - spring\n        - 内部实现了 aop 规范\n        - 主要在事务处理时使用 aop\n          - 较笨重\n      - aspectJ\n        - 一个开源的专门做aop的框架。spring框架中集成了aspectj框架，通过spring就能使用aspectj的功能。\n        - aspectJ框架实现aop有两种方式：\n          - 使用xml的配置文件\n            - 配置全局事务\n          - 使用注解, aspectj有5个注解\n            - 切面的执行时间， 这个执行时间在规范中叫做Advice(通知，增强)\n            - 在aspectj框架中使用注解表示的。也可以使用xml配置文件中的标签\n              - @Before\n              - @AfterReturning\n              - @Around\n              - @AfterThrowing\n              - @After\n            - 表示切面执行的位置，使用的是切入点表达式\n              ```java\n              com.service.impl\n              com.bjpowrnode.service.impl\n              cn.crm.bjpowernode.service\n              \n              execution(* *..service.*.*(..))\n              ```\n\n- mybatis + spring\n  - 技术 Stack\n    - IoC\n      - ioc能创建对象, 可以把mybatis框架中的对象交给spring统一创建， 开发人员从spring中获取对象。开发人员就不用同时面对两个或多个框架了， 就面对一个spring\n  - 使用步骤\n    - 定义 `dao` 接口 `StudentDao`\n    - 定义 `mapper` 文件 `StudentDao.xml`\n    - 定义 `mybatis` 的主配置文件 `mybatis.xml`\n    - 创建 `dao` 的代理对象 \n      - `StudentDao dao = SqlSession.getMapper(StudentDao.class);`\n      - `List<Student> students  = dao.selectStudents();`\n  - 连接池\n    - 多个连接Connection对象的集合\n      ```java\n      List<Connection>  connlist; // connList就是连接池\n      \n      // 通常使用Connection访问数据库\n      Connection conn =DriverManger.getConnection(url,username,password);\n      Statemenet stmt = conn.createStatement(sql);\n      stmt.executeQuery();\n      conn.close();\n      ```\n\n\n\n要使用dao对象，需要使用getMapper()方法，怎么能使用getMapper()方法，需要哪些条件\n1.获取SqlSession对象， 需要使用SqlSessionFactory的openSession()方法。\n2.创建SqlSessionFactory对象。 通过读取mybatis的主配置文件，能创建SqlSessionFactory对象\n\n需要SqlSessionFactory对象， 使用Factory能获取SqlSession ，有了SqlSession就能有dao ， 目的就是获取dao对象\nFactory创建需要读取主配置文件\n\n我们会使用独立的连接池类替换mybatis默认自己带的， 把连接池类也交给spring创建。\n\n\n- 事务处理\n  - 事务\n    - mysql \n      - 指一组sql语句的集合, 集合中有多条sql语句\n      - 可能是insert ， update ，select ，delete， 我们希望这些多个sql语句都能成功，或者都失败， 这些sql语句的执行是一致的，作为一个整体执行\n  - 什么时候用事务\n    - 涉及得到多个表，或者是多个sql语句的insert，update，delete。需要保证这些语句都是成功才能完成我的功能，或者都失败，保证操作是符合要求的\n  - 事务架构\n    - 应该放在 service 类的业务方法上，因为业务方法会调用多个dao方法，执行多个sql语句\n  - 使用流程\n    ```java\n    // jdbc\n    Connection conn;\n    conn.commit();\n    conn.rollback();\n    \n    // mybatis\n    SqlSession.commit();\n    SqlSession.rollback();\n\n    // hibernate\n    Session.commit();\n    Session.rollback();\n    ```\n    - 不足: 多种数据库的访问技术，有不同的事务处理的机制，对象，方法。\n      - 不同的数据库访问技术，处理事务的对象，方法不同，需要了解不同数据库访问技术使用事务的原理\n      - 掌握多种数据库中事务的处理逻辑。什么时候提交事务，什么时候回顾事务\n      - 处理事务的多种方法\n      - 解决方案\n        - spring的事务处理机制\n        - \n  - ......\n\n\n- web 项目中使用容器对象\n  - 需求\n    - web项目中容器对象只需要创建一次, 把容器对象放入到全局作用域ServletContext中\n    - 实现\n      - 监听器\n        - 当全局作用域对象被创建时 创建容器 存入ServletContext\n        - 作用\n          - 创建容器对象，执行 `ApplicationContext ctx = new ClassPathXmlApplicationContext(\"applicationContext.xml\");`\n          - 把容器对象放入到`ServletContext， ServletContext.setAttribute(key,ctx)`\n        - 可以自己创建，也可以使用框架中提供好的ContextLoaderListener\n        - `ApplicationContext`: Javase\n        - `WebApplicationContext`: Web\n\n\n\n\n\n\n\n\n\n\n\n\n=========================================\n- java中创建对象有哪些方式：\n  - 构造方法\n    - `new Student()`\n  - 反射\n  - 序列化\n  - 克隆\n  - ioc\n    - 容器创建对象\n  - 动态代理\n=========================================\n- 用户处理请求：\n  - 用户form (参数name, age)\n    - Servlet (接收请求name, age)\n      - Service类 (处理name, age操作)\n        - dao类(访问数据库的)\n          - mysql\n=========================================\n"
+  },
+  {
+    "branch": "2022/11/relearn-java-demo",
+    "name": "Relearn Java Demo",
+    "commit_count": 2,
+    "latest_commit": {
+      "sha": "2fb763d8318861ac5b24696b28fae9e83232b012",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T15:28:05Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2020/07/what-worth-to-buy-demo",
+    "name": "Quick_Launch",
+    "commit_count": 5,
+    "latest_commit": {
+      "sha": "2eeb850383b44f1065e39268e55e29d3c70aeac7",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T15:24:30Z"
+    },
+    "readme": "# Quick_Launch\r\n## PREFACE\r\n> 原 兼职整合APP , 项目失败暂停, 找个地方备份代码, 聊表纪念...\r\n> \r\n> --2020.10.31\r\n\r\n"
+  },
+  {
+    "branch": "2022/04/algorithms-4e-demo",
+    "name": "Algorithms 4e Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "db3dee9d16cab62e518bb564f18c04a3801394ca",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T15:09:02Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2022/06/design-pattern",
+    "name": "Design Pattern",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "241178d0b64042d0c721beffcef53cdd7c86d928",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T15:00:28Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2022/06/cstack-db-demo",
+    "name": "Cstack Db Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "97b5fdadbd368225ee644859771039bb2121171b",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:57:27Z"
+    },
+    "readme": "\n- front-end\n  - tokenizer\n  - parser\n  - code generator\n- back-end\n  - virtual machine\n  - B-tree\n  - pager\n  - os interface\n\n## P01\n\n- **REPL** (read-execute-print loop)\n  - 读取﹣求值﹣输出循环 / **交互式顶层构件**\n  - 一个编程环境. 因它能立刻对初学者做出回应. 对学习一门语言具有很大的帮助.\n  - via: [wikipedia](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).\n- ✖ B Tree\n  - via: [Youtube-29:45](https://www.youtube.com/watch?v=aZjYr87r1b8).\n- `size_t` & `ssize_t`\n  - `size_t `\n    - 32 Bit: `typedef unsigned int size_t;`.\n    - 64 Bit: `typedef unsigned long size_t;`.\n    - 注意写函数的时候, 无符号数不要和符号数比较.\n      ```c\n      #include <stdio.h>\n      #include <string.h>\n      int main(){\n          int i = -1;\n          if(i > strlen(\"Demon\")) printf(\"Hello World\");\n          else printf(\"Hello Demon\");\n          return 0;\n      } //Hello World via http://demon.tw/programming/c-size_t-pitfall.html\n      ```\n  - `ssize_t `\n    - 32 Bit: `int`.\n    - 64 Bit: `long int`.\n    - via: https://blog.csdn.net/bzhxuexi/article/details/19899803 & https://stackoverflow.com/questions/2550774/what-is-size-t-in-c\n- getline in C.\n  - ```c\n    // from https://c-for-dummies.com/blog/?p=1112\n    #include <stdio.h>\n    \n    int input(char *s,int length);\n    \n    int main(){\n        char *buffer;\n        size_t bufsize = 32;\n        size_t characters;\n    \n        buffer = (char *)malloc(bufsize * sizeof(char));\n        if( buffer == NULL){\n            perror(\"Unable to allocate buffer\");\n            exit(1);\n        }\n    \n        printf(\"Type something: \");\n        characters = getline(&buffer,&bufsize,stdin);\n        printf(\"%zu characters were read.\\n\",characters);\n        printf(\"You typed: '%s'\\n\",buffer);\n    \n        return(0);\n    }\n    // case two\n    #include <stdio.h>\n    \n    int input(char *s,int length);\n    \n    int main()\n    {    \n        char *b;\n        size_t bufsize = 0;\n        size_t characters;\n    \n        printf(\"Type something: \");\n        characters = getline(&b, &bufsize, stdin);\n        printf(\"%ld\\n\", bufsize);\n        printf(\"%zu characters were read.\\n\", characters);\n        printf(\"You typed: '%s'\\n\", b);\n    \n        return(0);\n    }\n    ```\n    - 会发现在 `char` 指针做缓冲区的时候, `bufsize` 默认为 `120`, 就算读入缓冲超过 `120` , 也会加倍为`240`. 但是, char 指针可以\n\n      ```\n      > ./test\n      Type something: dsdsa\n      120\n      6 characters were read.\n      You typed: '����'\n      \n      > ./test\n      Type something: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestt\n      240\n      130 characters were read.\n      You typed: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestt\n      '\n      ```\n    - more via: https://stackoverflow.com/questions/20036074/length-of-line-in-getline-function-c.\n\n## P02\n\n- `.exit`: \"meta-commands\"\n- `strncmp`: the “insert” keyword will be followed by data.\n\n\n## P03\n\n- storage in memory plan\n  - Store rows in blocks of memory called pages\n  - Each page stores as many rows as it can fit\n  - Rows are serialized into a compact representation with each page\n  - Pages are only allocated as needed\n  - Keep a fixed-size array of pointers to pages\n- [浅析C语言之uint8_t / uint16_t / uint32_t /uint64_t - 知乎](https://zhuanlan.zhihu.com/p/37422763 )\n\n  - 1、这些类型的来源：这些数据类型中都带有_t, _t 表示这些数据类型是通过typedef定义的，而不是新的数据类型。也就是说，它们其实是我们已知的类型的别名。\n  - 2、使用这些类型的原因：方便代码的维护。比如，在C中没有bool型，于是在一个软件中，一个程序员使用int，一个程序员使用short，会比较混乱。最好用一个typedef来定义一个统一的bool：\n  - 在涉及到跨平台时，不同的平台会有不同的字长，所以利用预编译和typedef可以方便的维护代码。\n  - 在C99标准中定义了这些数据类型，具体定义在：`/usr/include/stdint.h` ISO C99: 7.18 Integer types\n    ```c\n    #ifndef __int8_t_defined\n    # define __int8_t_defined\n    typedef signed char             int8_t;\n    typedef short int               int16_t;\n    typedef int                     int32_t;\n        # if __WORDSIZE == 64\n            typedef long int                int64_t;\n        # else\n        __extension__\n        typedef long long int           int64_t;\n        # endif\n    #endif\n    \n    typedef unsigned char           uint8_t;\n    typedef unsigned short int      uint16_t;\n    \n    #ifndef __uint32_t_defined\n        typedef unsigned int            uint32_t;\n        # define __uint32_t_defined\n    #endif\n    \n    #if __WORDSIZE == 64\n        typedef unsigned long int       uint64_t;\n    #else\n        __extension__\n        typedef unsigned long long int  uint64_t;\n    #endif\n    ```\n    - > [When should one use the datatypes from stdint.h?](https://stackoverflow.com/questions/20077313)\n      - When the programming tasks specify the integer width especially to accommodate some file or communication protocol format.\n      - When high degree of *portability* between platforms is required over *performance*.\n    - `uint32_t` means `unsigned int 32 type`. via: https://stackoverflow.com/questions/48833976 & https://stackoverflow.com/questions/231760\n\n- Strcut, Typedef\n  ```c\n  // via: https://stackoverflow.com/questions/17720223\n  truct {\n     ...\n  } myNameStruct;  // defines myNameStruct as a variable with this struct\n                   // definition, but the struct definition cannot be re-used.\n  \n  struct Name {\n     ...\n  } myNameStruct;\t // define a struct, and declare/define a struct variable \n  \t\t\t\t // at the same time:\n  \n  typedef struct {\n     ...\n  } Name_t;\t\t // use an untagged struct type inside a typedef:\n  \n  typedef struct Name {\n     ...\n  } Name_t;\t\t // begin with typedef, NewTypeName will be Name_t, \n  \t\t\t\t // not a varible\n  ```\n\n- 序列化: 把对象转化为可传输的字节序列过程称为序列化\n- 反序列化: 把字节序列还原为对象的过程称为反序列化\n\n\n## P04 Our First Tests (and Bugs)\n\n- `scanf` has some disadvantages.\n  - If the string it’s reading is larger than the buffer it’s reading into, it will cause a buffer overflow and start writing into unexpected places. We want to check the length of each string before we copy it into a Row structure. And to do that, we need to divide the input by spaces.\n\n## Bugs\n\n- [How to use `#pragma GCC diagnostic ignored` to ignore a warning in GCC?](https://stackoverflow.com/questions/1801081/how-to-use-pragma-gcc-diagnostic-ignored-to-ignore-a-warning-in-gcc)\n- `1410 is the max number of rows in a table` of `main_spec.rb`\n\n## P05 Persistence to Disk\n\n*“Nothing in the world can take the place of persistence.” –* [Calvin Coolidge](https://en.wikiquote.org/wiki/Calvin_Coolidge)\n\n- To add persistence, we can simply write those blocks of memory to a file, and read them back into memory the next time the program starts up.\n  - To make this easier, we’re going to make an abstraction called the pager. We ask the pager for page number x, and the pager gives us back a block of memory. It first looks in its cache. On a cache miss, it copies data from disk into memory (by reading the database file).\n\n- `off_t`:  [c - Where to find the complete definition of off_t type?](https://stackoverflow.com/questions/9073667/where-to-find-the-complete-definition-of-off-t-type )\n  - it's a standard. found [The Open Group Base Specifications Issue 7, 2018 edition](https://pubs.opengroup.org/onlinepubs/9699919799/ )\n- We assume pages are saved one after the other in the database file: Page 0 at offset 0, page 1 at offset 4096, page 2 at offset 8192, etc. If the requested page lies outside the bounds of the file, we know it should be blank, so we just allocate some memory and return it. The page will be added to the file when we flush the cache to disk later.\n\n## P06 The Cursor Abstraction\n\n- We’re going to add a `Cursor` object which represents a location in the table. Things you might want to do with cursors:\n  - Create a cursor at the beginning of the table\n  - Create a cursor at the end of the table\n  - Access the row the cursor is pointing to\n  - Advance the cursor to the next row\n- Those are the behaviors we’re going to implement now. Later, we will also want to:\n  - Delete the row pointed to by a cursor\n  - Modify the row pointed to by a cursor\n  - Search a table for a given ID, and create a cursor pointing to the row with that ID\n\n## P07 Introduction to the B-Tree\n\n### B Tree vs B+Tree\n\n|                               | B-tree         | B+ tree             |\n| :---------------------------- | :------------- | :------------------ |\n| Pronounced                    | “Bee Tree”     | “Bee Plus Tree”     |\n| Used to store                 | Indexes        | Tables              |\n| Internal nodes store keys     | Yes            | Yes                 |\n| Internal nodes store values   | Yes            | No                  |\n| Number of children per node   | Less           | More                |\n| Internal nodes vs. leaf nodes | Same structure | Different structure |\n\n###  Internal nodes vs leaf nodes\n\n| For an order-m tree… | Internal Node                 | Leaf Node           |\n| :------------------- | :---------------------------- | :------------------ |\n| Stores               | keys and pointers to children | keys and values     |\n| Number of keys       | up to m-1                     | as many as will fit |\n| Number of pointers   | number of keys + 1            | none                |\n| Number of values     | none                          | number of keys      |\n| Key purpose          | used for routing              | paired with value   |\n| Stores values?       | No                            | Yes                 |\n\n- The depth of the tree only increases when we split the root node. Every leaf node has the same depth and close to the same number of key/value pairs, so the tree remains balanced and quick to search.\n\n## P08 B-Tree Leaf Node Format\n\n- Nodes need to store some metadata in a header at the beginning of the page. Every node will store what type of node it is, whether or not it is the root node, and a pointer to its parent (to allow finding a node’s siblings)\n\n![](https://cstack.github.io/db_tutorial/assets/images/leaf-node-format.png)\n"
+  },
+  {
+    "branch": "2022/07/cms-imu",
+    "name": "Cms Imu",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "9ab11d127a9bdb35bc9473ab7af34517bf0fd254",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:55:43Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2022/05/java-programming-imu",
+    "name": "Java Programming Imu",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "24e6935bdc9826b2a9262f1ddd03b0873d36423a",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:47:49Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2022/01/linux-programming-imu",
+    "name": "Linux Programming Imu",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "9c62e40cc57b88c10eda89b38e1ea61448c68ea7",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:39:59Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2021/06/flask-blog-demo",
+    "name": "flask-tutorial",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "b6ca105f5dd719c9f290cec08f862525a96a97b7",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:18:50Z"
+    },
+    "readme": "# flask-tutorial \r\n\r\nAll Code From: https://flask.palletsprojects.com/en/2.0.x/tutorial/\r\n\r\nuse this command to run app\r\n\r\n```shell\r\nexport FLASK_APP=flaskr\r\nexport FLASK_ENV=development\r\nflask run\r\n```\r\n\r\n## Some Notes\r\n\r\nOkey, let's write something to against the memory.\r\n\r\n- [ ] the `temlpate` couldn't write the comments, which means that\r\nI have to write another. That sounds not good enough. And this the\r\nurl for that tutorial: https://flask.palletsprojects.com/en/2.0.x/tutorial/templates/\r\n\r\n```html\r\n<!doctype html>\r\n<title>{% block title %}{% endblock %} - Flaskr</title>\r\n<link rel=\"stylesheet\" href=\"{{ url_for('static', filename='style.css') }}\">\r\n<nav>\r\n  <h1>Flaskr</h1>\r\n  <ul>\r\n    {% if g.user %}\r\n      <li><span>{{ g.user['username'] }}</span>\r\n      <li><a href=\"{{ url_for('auth.logout') }}\">Log Out</a>\r\n    {% else %}\r\n      <li><a href=\"{{ url_for('auth.register') }}\">Register</a>\r\n      <li><a href=\"{{ url_for('auth.login') }}\">Log In</a>\r\n    {% endif %}\r\n  </ul>\r\n</nav>\r\n<section class=\"content\">\r\n  <header>\r\n    {% block header %}{% endblock %}\r\n  </header>\r\n  {% for message in get_flashed_messages() %}\r\n    <div class=\"flash\">{{ message }}</div>\r\n  {% endfor %}\r\n  {% block content %}{% endblock %}\r\n</section>\r\n\r\n<!-- \r\n    1. {% block title %} will change the title displayed in the browser’s tab and window title.\r\n    2. {% block header %} is similar to title but will change the title displayed on the page.\r\n    3. {% block content %} is where the content of each page goes, such as the login form or a blog post. \r\n    \r\n    the {% block %} tags define blocks that child templates can fill in. All the block tag does is tell the template engine that a child template may override those placeholders in the template. block tags can be inside other blocks such as if, but they will always be executed regardless of if the if block is actually rendered.-->\r\n```\r\n\r\n```html\r\n{% extends 'base.html' %}\r\n<!-- {% extends 'base.html' %} tells Jinja that this template should replace the blocks from the base template. All the rendered content must appear inside {% block %} tags that override blocks from the base template. -->\r\n\r\n{% block header %}\r\n <h1>{% block title %}Register{% endblock %}</h1>\r\n{% endblock %}\r\n<!-- A useful pattern used here is to place {% block title %} inside {% block header %}. This will set the title block and then output the value of it into the header block, so that both the window and page share the same title without writing it twice. -->\r\n\r\n{% block content %}\r\n <form method=\"post\">\r\n   <label for=\"username\">Username</label>\r\n   <input name=\"username\" id=\"username\" required>\r\n   <!-- The input tags are using the required attribute here. This tells the browser not to submit the form until those fields are filled in. If the user is using an older browser that doesn’t support that attribute, or if they are using something besides a browser to make requests, you still want to validate the data in the Flask view. It’s important to always fully validate the data on the server, even if the client does some validation as well. -->\r\n   <label for=\"password\">Password</label>\r\n   <input type=\"password\" name=\"password\" id=\"password\" required>\r\n   <input type=\"submit\" value=\"Register\">\r\n </form>\r\n{% endblock %}\r\n```\r\n\r\n- [X] `pytest` couldn't run when you not package it and install \r\nit. just like the issue said:\r\n\r\n> Sounds like you didn't install the project (pip install -e .)\r\n> and you're running from inside the tests directory.\r\n> \r\n> I do know all steps complete successfully when followed in \r\n> order, so without information about the issue there's not \r\n> much I can do here. If you figure out what's going on and \r\n> think the tutorial can be clearer, please submit a PR for \r\n> review.\r\n> from: https://github.com/pallets/flask/issues/2908\r\n\r\nthe result is following:\r\n\r\n```shell\r\n$ pytest\r\n============================================= test session starts =============================================platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1\r\nrootdir: /mnt/c/Users/15517/OneDrive/codelib/ILDemos, configfile: setup.cfg\r\ncollected 0 items / 1 error\r\n\r\n=================================================== ERRORS ====================================================________________________________________ ERROR collecting test session ________________________________________/usr/lib/python3.8/importlib/__init__.py:127: in import_module\r\n    return _bootstrap._gcd_import(name[level:], package, level)\r\n<frozen importlib._bootstrap>:1014: in _gcd_import\r\n    ???\r\n<frozen importlib._bootstrap>:991: in _find_and_load\r\n    ???\r\n<frozen importlib._bootstrap>:975: in _find_and_load_unlocked\r\n    ???\r\n<frozen importlib._bootstrap>:671: in _load_unlocked\r\n    ???\r\n/home/bgzocg/.local/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:170: in exec_module\r\n    exec(co, module.__dict__)\r\n/mnt/c/Users/15517/OneDrive/codelib/ILDemos/flask-tutorial/test/conftest.py:5: in <module>\r\n    ???\r\nE   ModuleNotFoundError: No module named 'flaskr'\r\n=========================================== short test summary info ===========================================ERROR .. - ModuleNotFoundError: No module named 'flaskr'\r\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!============================================== 1 error in 0.24s ===============================================\r\n```\r\n\r\n\r\n## link\r\n\r\n- If you intrested in *Test Coverage*, you could see: [zh] https://www.infoq.cn/article/test-coverage-rate-role.\r\n  - In my perspective, the test mostly playing a role in checking for useless part of code. Is this part of code necessary really? And how to simplify the code and finding the more useful schema and thinking is crucial."
+  },
+  {
+    "branch": "2021/04/oracle-sql-imu",
+    "name": "Oracle Sql Imu",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "18821acd906b4e4e6c612acd0429dc2d656fb483",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:13:46Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2022/03/make-demo",
+    "name": "Make Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "9947d1a82951b9302b3849713d38bd737e6a7992",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:09:29Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2021/10/cmake-demo",
+    "name": "Make Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "bfcef6dc54fe1a7b9955fa7e09c99e7870342770",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T13:34:48Z"
+    },
+    "readme": "# Make Demo \n\nNo idea for VS and Clion to complier a cpp project. So even though having learnt coding 2 years I still not know how to write a makefile. So wirte a demo to learn again.\n\n\n# make VS cmake VS nmake\n\n- make: 相当于智能批处理工具, 本身并没有编译和链接的功能, 而是用类似于批处理的方式 -> 通过**调用 makefile 中用户指定的命令**来进行编译和链接的. \n- makefile: 文件**包含调用 gcc(编译器)编译某个源文件的命令**. makefile在简单的工程可手写, 但是当工程非常大的时候, 就会很复杂.\n- cmake: 根据一个叫 `CMakeLists.txt` 文件(组态档)跨平台生成对应平台能用的makefile.\n\n> Make (or rather a Makefile) is a buildsystem - it drives the compiler and other build tools to build your code.\n> \n> CMake is a generator of buildsystems. It can produce Makefiles, it can produce Ninja build files, it can produce KDEvelop or Xcode projects, it can produce Visual Studio solutions. From the same starting point, the same CMakeLists.txt file. So if you have a platform-independent project, CMake is a way to make it buildsystem-independent as well.\n> \n> If you have Windows developers used to Visual Studio and Unix developers who swear by GNU Make, CMake is (one of) the way(s) to go.\n> \n> I would always recommend using CMake (or another buildsystem generator, but CMake is my personal preference) if you intend your project to be multi-platform or widely usable. CMake itself also provides some nice features like dependency detection, library interface management, or integration with CTest, CDash and CPack.\n>\n> Using a buildsystem generator makes your project more future-proof. Even if you're GNU-Make-only now, what if you later decide to expand to other platforms (be it Windows or something embedded), or just want to use an IDE?\n> \n> via https://stackoverflow.com/questions/25789644/difference-between-using-makefile-and-cmake-to-compile-the-code/25790020#25790020\n\n- nmake: `Microsoft Visual Studio` 附带命令, 需VS, 实际上可以说相当于 linux 的 make.\n\n\n# Reference\n\n1. Linux下C语言编程实践(Makefile入门), 张齐勋,  https://mp.weixin.qq.com/s/TbiaacY3h8SutWVNeNEdeQ\n"
+  },
+  {
+    "branch": "2022/05/chrome-extension",
+    "name": "Chrome Extension",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "cf87f463cd15923a438a359eeb7ab9e31f8179bf",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T13:29:02Z"
+    },
+    "readme": "### Tree Construction\n\n```shell\nmainifest.json          # all configuration of the Chrome extension\n    - content.js        # run script after finishing page.\n    - background.js     # load when chrome open up and listen some events(action).\n                        # get more than page things which could be given through \n                        # message.\n    - pop-up            # pop up view html\n                        # ! notice: popup view is conflict\n                        # with above click listener, view \n                        # more info via:\n                        # https://stackoverflow.com/questions/17737263/how-to-tell-when-a-page-action-is-clicked-when-the-page-action-has-a-popup\n```\n\n```json\n{\n    \"manifest_version\": 2,                      /* Chrome API etc.*/\n    \"name\": \"Coding Train Extension\",\n    \"version\": \"0.0.1\",\n    \"content_scripts\": [\n        {\n            \"match\": [\n                \"<all_urls>\"                    /* Where js Run. Regex as well.*/\n            ],\n            \"js\": [\n                \"content.js\"                    /* Which Would be Loaded.*/\n            ]\n        }\n    ]\n}\n```\n\n## Tampermonkey vs. Extension\n\n> A practical solution is to start with whatever solution you like then see if has problems, and if there is none then you're fine.\n\n\n- Tampermonkey gives `GM_` functions to using Chrome/Browser APIs.\n- Tampermonkey's security could not be guaranteed.\n- Extension must cross different browser platform.\n  - Extension code\n    - - Full access to all permitted `chrome.*` APIs.\n  - Content scripts (via the manifest file or chrome.tabs.executeScript)\n    - Executed in an \"isolated world\" environment.\n    - Partial access to some of the chrome APIs, full access to the page's DOM (not to any of the window objects, including frames).\n  - Injected scripts (via this method in a Content script) \n    - Full access to all properties in the page.\n    - No access to any of the `chrome.*` APIs.\n- Chrome apis such as bookmarks, cross-domain XMLHttpRequest etc.\n\n## Refs\n\n- [Chrome Extensions | Daniel Shiffman](https://shiffman.net/a2z/chrome-ext/ )\n- [API Reference - Chrome Developers](https://developer.chrome.com/docs/extensions/reference/ )\n- [javascript - Chrome extension code vs Content scripts vs Injected scripts - Stack Overflow](https://stackoverflow.com/questions/9915311/chrome-extension-code-vs-content-scripts-vs-injected-scripts )\n- [Userscripts vs. Chrome Extension - Stack Overflow](https://stackoverflow.com/questions/13487661/userscripts-vs-chrome-extension )\n- [browser - Should I write an extension or a tampermonkey script? - Stack Overflow](https://stackoverflow.com/questions/61420545/should-i-write-an-extension-or-a-tampermonkey-script )\n- [javascript - Can Tampermonkey Userscript access Chrome API? - Stack Overflow](https://stackoverflow.com/questions/52497039/can-tampermonkey-userscript-access-chrome-api )\n- icon via: https://www.iconfont.cn/collections/detail?cid=29558"
+  },
+  {
+    "branch": "2020/01/activity-system-imudge",
+    "name": "Activity System Imudge",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "451ed934f686363ed486b92891d5374e8758b66f",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T13:17:35Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2021/08/gomoku-imu",
+    "name": "Gomoku Imu",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "7697aa48288be18c07bf7ac7b4ba0794ca31c197",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T13:14:26Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2024/11/tgbot-go-template",
+    "name": "Telegram bot go version",
+    "commit_count": 2,
+    "latest_commit": {
+      "sha": "32a8c6e8e77fa9946e2cdba4804b4b1438785947",
+      "message": "docs: update readme",
+      "author": "菜就多練練",
+      "date": "2024-11-25T13:42:19Z"
+    },
+    "readme": "# Telegram bot go version\n\n## Quick Start\n1. rename `.env.bak` to `.env`.\n2. Input your bot token.\n3. Then run following:\n```bash\n# install dep\ngo mod tidy\n# run\ngo run main.go\n```\n\n## TODO\nTg bot api go version have many implements via: https://core.telegram.org/bots/api\n- [ ] Dockfile\n- [ ] Webhook\n- [ ] Middlewares\n\n## Develop\n\n```bash\n# install dep\ngo get github.com/joho/godotenv\n```\n"
+  },
+  {
+    "branch": "2024/08/logseq-plugin-url-decode",
+    "name": "Logseq Plugin Url Decode",
+    "commit_count": 2,
+    "latest_commit": {
+      "sha": "dd785e766fa4c60d3b884d49ea0fa76110a00610",
+      "message": "style: remove comment debug",
+      "author": "菜就多練練",
+      "date": "2024-08-31T02:13:04Z"
+    },
+    "readme": "## logseq decode url\n\nThis is a simple plugin, which provide a command named `decode-url` to decode your url make up not English native.\n\n\n## Usage\n\n`Load unpacked plugin` in Logseq Desktop client.\n\n## References\n\n1. https://plugins-doc.logseq.com/logseq/Editor/updateBlock\n2. https://github.com/logseq/logseq-plugin-samples\n"
+  },
+  {
+    "branch": "2023/06/base64-convert",
+    "name": "Base64 Convert",
+    "commit_count": 2,
+    "latest_commit": {
+      "sha": "5f2f1efc1f49ea701fe2ea863e7641297034ff43",
+      "message": "feat: English & Chinese supported. Error hint",
+      "author": "bGZo",
+      "date": "2023-06-06T03:39:56Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2023/02/main-archive",
+    "name": "Main Archive",
+    "commit_count": 150,
+    "latest_commit": {
+      "sha": "b7d7ad58ac003aec2e0d9541c950ab9c105fc6a6",
+      "message": "leetcode: 230207 DONE",
+      "author": "bGZo",
+      "date": "2023-02-07T12:13:46Z"
+    },
+    "readme": "![](https://img.shields.io/github/repo-size/bgzocg/demo-hell)\r\n\r\n```diff\r\n! a set of the demo-projects referring to web tutorials\r\n+ Practice makes perfect!\r\n```"
+  },
+  {
+    "branch": "2022/10/404-jump",
+    "name": "404 Jump",
+    "commit_count": 4,
+    "latest_commit": {
+      "sha": "8c5c6aca41098cffcaf3cb808de5a4c2b15ae962",
+      "message": "fix: ad block",
+      "author": "bGZo",
+      "date": "2023-01-03T09:05:01Z"
+    },
+    "readme": ""
+  },
+  {
+    "branch": "2022/01/rssant-backup",
+    "name": "Anyant Backup",
+    "commit_count": 31,
+    "latest_commit": {
+      "sha": "5c31f468445c6edefc6b1c5bc49fc52c71c3e825",
+      "message": "feat: add anyant-backup-local (backup cookie)",
+      "author": "bGZo",
+      "date": "2022-05-20T09:03:12Z"
+    },
+    "readme": "# Anyant Backup\n\nAnyant, unfav/unstar all and storing your data/cookie local.\n\n蚁阅, 取消所有收藏并备份 json+cookie 文件.\n\n## Usage\n\n### Github Actions\n\nFork and try to config `G_A` & `G_P` & `G_T` in `settings>secerts>actions`. Then it would works weekly well. 😁 \n\nRemember to remove my backup file in `/data/` path.\n\n### Local\n\n2 ways works:\n\n- Clone repo.\n- [Recommand] Download `anyant-backup-local.py` & `requirement.txt` file in a new directory. Then try with helpful prompt: \n\n```shell\n$python3 anyant-backup-local.py -h\nusage: anyant-backup.py [-h] [-p PASSWORD] account\n\nAnyant Script.\n\npositional arguments:\n  account               input your account\n\noptional arguments:\n  -h, --help            show this help message and exit\n  -p PASSWORD, -password PASSWORD\n                        password                                       \n```\n\n![image](https://user-images.githubusercontent.com/57313137/169489050-11913d93-5f75-437f-9690-ec1b66ca1c8c.png)\n\n\n## Notices Your Cookies!\n\nCheck followings code whether comment out or not.\n\nIf not, Remember remove `config.json`, someone could us cookie do anything. \n\nNotice don't push cookie on network.\n\n```python\nf = open('./data/config.json', 'w')\nf.write(json.dumps(backup, ensure_ascii=False)) \n# NOTE: ' to \", via:https://wxnacy.com/2020/05/01/python-print-dict-double-quotation-marks/\nf.close()\nprint('config.json created.')\n```\n"
+  },
+  {
+    "branch": "2021/11/compiler-c0-imu",
+    "name": "Compiler Set",
+    "commit_count": 30,
+    "latest_commit": {
+      "sha": "a35eacc9716fa4f0af94be51f1a1e57fcd2f67f5",
+      "message": ":tada: final version, thx all help of imu",
+      "author": "bGZoCg",
+      "date": "2021-12-14T04:35:22Z"
+    },
+    "readme": "# Compiler Set\n\n- [ ] C0 compiler\n- [ ] Stone compiler\n"
+  },
+  {
+    "branch": "2021/12/os-paging-virtual-memory-simulator",
+    "name": "Demand-Paging-Virtual-Memory-Simulator",
+    "commit_count": 12,
+    "latest_commit": {
+      "sha": "0ccf9552bdcda9b004f3415689beeb080277f8ed",
+      "message": ":pencil: update readme and add test data",
+      "author": "bGZoCg",
+      "date": "2021-11-30T16:39:56Z"
+    },
+    "readme": "# Demand-Paging-Virtual-Memory-Simulator\nImplements FIFO, OPT, LRU, and LFU algorithms in C++ to operate demand paging in Virtual Memory. Accepts a reference string\nvia user input and performs demand paging using various algorithms, providing victim frames and faults. \n\n## diff with raw repo\n\nBy the way, `test.cpp` under source is my test file. just ignore it. ;_;\n\n- change `opt`, `lru`, `lfu` some logic struction to justify my task.\n  - add test function for above algo.\n- general test data: `7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1`.\n  - `opt`\n```\n        ##########  Simulating FIFO  ##########\n\n ----------------------------------------------------------------------------------------------------------\n|Reference_string| 7| 0| 1| 2| 0| 3| 0| 4| 2| 3| 0| 3| 2| 1| 2| 0| 1| 7| 0| 1|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n|Physical_Frame_0| 7| 7| 7| 2| 2| 2| 2| 4| 4| 4| 0| 0| 0| 0| 0| 0| 0| 7| 7| 7|  |  |  |  |  |  |  |  |  |  |\n|Physical_Frame_1|  | 0| 0| 0| 0| 3| 3| 3| 2| 2| 2| 2| 2| 1| 1| 1| 1| 1| 0| 0|  |  |  |  |  |  |  |  |  |  |\n|Physical_Frame_2|  |  | 1| 1| 1| 1| 0| 0| 0| 3| 3| 3| 3| 3| 2| 2| 2| 2| 2| 1|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n| Victim_frames  |  |  |  | 7|  | 0| 1| 2| 3| 0| 4|  |  | 2| 3|  |  | 0| 1| 2|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n|    Faults      | 1| 2| 3| 4| 4| 5| 6| 7| 8| 9|10|10|10|11|12|12|12|13|14|15|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n\nEnd of reference string!\n```\n  - `lru`\n```\n        ##########  Simulating LRU  ##########\n\n ----------------------------------------------------------------------------------------------------------\n|Reference_string| 7| 0| 1| 2| 0| 3| 0| 4| 2| 3| 0| 3| 2| 1| 2| 0| 1| 7| 0| 1|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n|Physical_Frame_0| 7| 7| 7| 2| 2| 2| 2| 4| 2| 2| 2| 2| 2| 2| 2| 2| 2| 7| 7| 7|  |  |  |  |  |  |  |  |  |  |\n|Physical_Frame_1|  | 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 1| 1| 0| 0| 0| 0| 0|  |  |  |  |  |  |  |  |  |  |\n|Physical_Frame_2|  |  | 1| 1| 1| 3| 3| 3| 3| 3| 3| 3| 3| 3| 3| 3| 1| 1| 1| 1|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n| Victim_frames  |  |  |  | 7|  | 1|  | 2| 4|  |  |  |  | 0|  | 1| 3| 2|  |  |  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n|    Faults      | 1| 2| 3| 4| 4| 5| 5| 6| 7| 7| 7| 7| 7| 8| 8| 9|10|11|11|11|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n\nEnd of reference string!\n```\n  - `lfu`\n```\n        ##########  Simulating LFU  ##########\n\n ----------------------------------------------------------------------------------------------------------\n|Reference_string| 7| 0| 1| 2| 0| 3| 0| 4| 2| 3| 0| 3| 2| 1| 2| 0| 1| 7| 0| 1|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n|Physical_Frame_0| 7| 7| 7| 2| 2| 3| 3| 4| 2| 2| 2| 2| 2| 1| 2| 2| 2| 2| 2| 2|  |  |  |  |  |  |  |  |  |  |\n|Physical_Frame_1|  | 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0| 0|  |  |  |  |  |  |  |  |  |  |\n|Physical_Frame_2|  |  | 1| 1| 1| 1| 1| 1| 1| 3| 3| 3| 3| 3| 3| 3| 1| 7| 7| 1|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n| Victim_frames  |  |  |  | 7|  | 2|  | 3| 4| 1|  |  |  | 2| 1|  | 3| 1|  | 7|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n|    Faults      | 1| 2| 3| 4| 4| 5| 5| 6| 7| 8| 8| 8| 8| 9|10|10|11|12|12|13|  |  |  |  |  |  |  |  |  |  |\n ----------------------------------------------------------------------------------------------------------\n\nEnd of reference string!\n```\n"
+  }
+]
