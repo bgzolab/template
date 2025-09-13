@@ -1,52 +1,13 @@
 {
   "version": 2,
-  "framework": "nuxtjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".output/public",
   "installCommand": "npm install",
-  "functions": {
-    "app/**": {
-      "maxDuration": 30
-    }
-  },
+  "framework": "nuxtjs",
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
-    },
-    {
-      "source": "/repo_stats.json",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=3600, stale-while-revalidate"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
     }
   ]
 }
