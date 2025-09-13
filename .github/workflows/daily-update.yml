@@ -11,9 +11,9 @@ on:
         required: false
         default: 'dashboard'
         type: string
-#  push:
-#    branches:
-#      - main
+  push:
+    branches:
+      - dashboard  # 面板主分支
 #      - master
 #      - develop  # 添加开发分支
 #    paths:
