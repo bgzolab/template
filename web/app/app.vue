@@ -42,9 +42,9 @@
             v-model="filterOption"
             class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
           >
-            <option value="all">所��分支</option>
+            <option value="all">所有分支</option>
             <option value="with-readme">包含 README</option>
-            <option value="active">����目</option>
+            <option value="active">活跃项目</option>
           </select>
         </div>
       </div>
@@ -144,7 +144,7 @@
           </button>
 
           <span class="px-4 py-2 text-sm text-gray-700">
-            第 {{ currentPage }} 页，共 {{ totalPages }} ��
+            第 {{ currentPage }} 页，共 {{ totalPages }} 页
           </span>
 
           <button
@@ -260,7 +260,7 @@ marked.setOptions({
   gfm: true
 })
 
-// 使用原生数据管理，完全避免 Nuxt 组合式 API
+// 使用原生数据管理
 const repoStats = ref([])
 const pending = ref(true)
 const error = ref(null)
@@ -274,10 +274,14 @@ const selectedRepo = ref(null)
 // 页面标题
 const pageTitle = "bGZo's Playground"
 
+// 读取运行时 baseURL（兼容 GitHub Pages 与 Vercel）
+const { public: publicConfig } = useRuntimeConfig()
+const baseURL = (publicConfig && publicConfig.baseURL) || '/'
+
 // 在客户端手动获取数据
 onMounted(async () => {
   try {
-    const response = await fetch('/repo_stats.json')
+    const response = await fetch(`${baseURL}repo_stats.json`)
     if (response.ok) {
       const data = await response.json()
       repoStats.value = Array.isArray(data) ? data : []
@@ -360,11 +364,10 @@ watch([searchQuery, filterOption], () => {
 
 // 方法
 const refreshData = () => {
-  // 重新获取数据
   pending.value = true
   error.value = null
 
-  fetch('/repo_stats.json')
+  fetch(`${baseURL}repo_stats.json`)
     .then(response => {
       if (!response.ok) throw new Error('Network response was not ok')
       return response.json()
@@ -442,19 +445,11 @@ const getStatusText = (repo) => {
 
 // README 弹窗相关方法
 const openReadmeModal = (repo) => {
-  // 只有在有 README 内容时才打开弹窗
-  if (!hasReadme(repo)) {
-    return
-  }
+  if (!hasReadme(repo)) return
 
   selectedRepo.value = repo
   showReadmeModal.value = true
-  // 防止背景滚动
-  nextTick(() => {
-    if (typeof document !== 'undefined') {
-      document.body.style.overflow = 'hidden'
-    }
-  })
+  nextTick(() => { if (typeof document !== 'undefined') document.body.style.overflow = 'hidden' })
 }
 
 const closeReadmeModal = () => {

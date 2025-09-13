@@ -60,20 +60,13 @@ export default defineNuxtConfig({
     }
   },
 
-  // 路由配置
-  router: {
-    options: {
-      hashMode: false
-    }
-  },
-
   // Vercel 构建优化
   vite: {
     build: {
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['vue', 'marked', 'highlight.js'],
+            vendor: ['marked', 'highlight.js'],
             ui: ['@tailwindcss/typography']
           }
         }
