@@ -4,10 +4,10 @@
     <header class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <h1 class="text-3xl font-bold text-gray-900">
-          GitHub 仓库统计仪表板
+          {{meta.title}}
         </h1>
         <p class="mt-2 text-gray-600">
-          展示 {{ displayedRepos.length }} 个分支的详细信息
+          一共探索、实现了 {{ displayedRepos.length }} 个小想法，希望对你有用 ✨
         </p>
       </div>
     </header>
@@ -54,7 +54,7 @@
         <div
           v-for="repo in paginatedRepos"
           :key="repo.branch"
-          class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
+          class="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
           :class="{ 'cursor-pointer group': hasReadme(repo) }"
           @click="hasReadme(repo) ? openReadmeModal(repo) : null"
         >
@@ -106,28 +106,6 @@
               <code class="text-xs bg-gray-100 px-2 py-1 rounded font-mono">
                 {{ repo.latest_commit.sha.substring(0, 8) }}
               </code>
-            </div>
-          </div>
-
-          <!-- README Preview -->
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-3">
-              <h4 class="text-sm font-medium text-gray-900">README</h4>
-              <span v-if="hasReadme(repo)" class="text-xs text-blue-600"
-                    :class="{ 'group-hover:text-blue-800': hasReadme(repo) }">
-                点击查看详情 →
-              </span>
-            </div>
-
-            <div class="text-sm text-gray-600">
-              <div v-if="hasReadme(repo)" class="space-y-2">
-                <p class="text-green-600 font-medium">
-                  📄 包含 README 文件
-                </p>
-              </div>
-              <p v-else class="text-gray-400 italic">
-                暂无 README 文件
-              </p>
             </div>
           </div>
 
@@ -227,7 +205,7 @@
         <!-- Modal Content -->
         <div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
           <div v-if="selectedRepo?.readme && selectedRepo.readme.trim()"
-               class="prose prose-slate max-w-none prose-headings:text-gray-900 prose-h1:border-b prose-h1:border-gray-200 prose-h1:pb-2 prose-h2:mt-8 prose-h2:mb-4 prose-h3:mt-6 prose-h3:mb-3 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-ul:list-disc prose-ol:list-decimal prose-li:my-1 prose-table:table-auto prose-th:bg-gray-50 prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-gray-200"
+               class="prose prose-slate max-w-none prose-headings:text-gray-900 prose-h1:border-b prose-h1:border-gray-200 prose-h1:pb-2 prose-h2:mt-8 prose-h2:mb-4 prose-h3:mt-6 prose-h3:mb-3 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-ul:list-disc prose-ol:list-decimal prose-li:my-1 prose-table:table-auto prose-th:bg-gray-50 prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-gray-200"
                v-html="renderMarkdown(selectedRepo.readme)">
           </div>
           <div v-else class="text-center py-12 text-gray-500">
@@ -268,13 +246,15 @@ import { marked } from 'marked'
 import 'highlight.js/styles/github.css'
 import hljs from 'highlight.js'
 
-// 设置页面标题
-useHead({
-  title: 'GitHub 仓库统计仪表板',
+const meta = {
+  title: "bGZo's Playground",
   meta: [
-    { name: 'description', content: '展示 GitHub 仓库的分支统计信息' }
+    { name: 'description', content: "Show what I've build recently" }
   ]
-})
+}
+
+// 设置页面标题
+useHead(meta)
 
 // 配置 marked
 marked.setOptions({
