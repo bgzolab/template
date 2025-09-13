@@ -77,8 +77,13 @@ jobs:
     - name: Build web application
       working-directory: ./web
       run: |
-        npm run build
         npm run generate
+
+    - name: Copy .nojekyll to output directory
+      run: |
+        cp .nojekyll ./web/.output/public/
+        echo "Copied .nojekyll to output directory"
+        ls -la ./web/.output/public/
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3

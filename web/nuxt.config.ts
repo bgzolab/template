@@ -11,9 +11,9 @@ export default defineNuxtConfig({
     }
   },
 
-  // GitHub Pages 配置
+  // GitHub Pages 配置 - 修复本地测试路径问题
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/playground/' : '/',
+    baseURL: process.env.NUXT_APP_BASE_URL || (process.env.NODE_ENV === 'production' ? '/playground/' : '/'),
     buildAssetsDir: '/assets/'
   },
 
@@ -35,8 +35,5 @@ export default defineNuxtConfig({
   // 生成配置
   generate: {
     fallback: '404.html'
-  },
-
-  // 确保客户端渲染
-  mode: 'spa'
+  }
 })
