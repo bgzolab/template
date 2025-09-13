@@ -204,6 +204,18 @@
     "readme": ""
   },
   {
+    "branch": "2022/03/make-demo",
+    "name": "Make Demo",
+    "commit_count": 1,
+    "latest_commit": {
+      "sha": "9947d1a82951b9302b3849713d38bd737e6a7992",
+      "message": "final commit",
+      "author": "hx",
+      "date": "2025-07-23T14:09:29Z"
+    },
+    "readme": ""
+  },
+  {
     "branch": "2021/10/cmake-demo",
     "name": "Make Demo",
     "commit_count": 1,
@@ -310,6 +322,18 @@
       "date": "2023-01-03T09:05:01Z"
     },
     "readme": ""
+  },
+  {
+    "branch": "2022/01/rssant-backup",
+    "name": "Anyant Backup",
+    "commit_count": 31,
+    "latest_commit": {
+      "sha": "5c31f468445c6edefc6b1c5bc49fc52c71c3e825",
+      "message": "feat: add anyant-backup-local (backup cookie)",
+      "author": "bGZo",
+      "date": "2022-05-20T09:03:12Z"
+    },
+    "readme": "# Anyant Backup\n\nAnyant, unfav/unstar all and storing your data/cookie local.\n\n蚁阅, 取消所有收藏并备份 json+cookie 文件.\n\n## Usage\n\n### Github Actions\n\nFork and try to config `G_A` & `G_P` & `G_T` in `settings>secerts>actions`. Then it would works weekly well. 😁 \n\nRemember to remove my backup file in `/data/` path.\n\n### Local\n\n2 ways works:\n\n- Clone repo.\n- [Recommand] Download `anyant-backup-local.py` & `requirement.txt` file in a new directory. Then try with helpful prompt: \n\n```shell\n$python3 anyant-backup-local.py -h\nusage: anyant-backup.py [-h] [-p PASSWORD] account\n\nAnyant Script.\n\npositional arguments:\n  account               input your account\n\noptional arguments:\n  -h, --help            show this help message and exit\n  -p PASSWORD, -password PASSWORD\n                        password                                       \n```\n\n![image](https://user-images.githubusercontent.com/57313137/169489050-11913d93-5f75-437f-9690-ec1b66ca1c8c.png)\n\n\n## Notices Your Cookies!\n\nCheck followings code whether comment out or not.\n\nIf not, Remember remove `config.json`, someone could us cookie do anything. \n\nNotice don't push cookie on network.\n\n```python\nf = open('./data/config.json', 'w')\nf.write(json.dumps(backup, ensure_ascii=False)) \n# NOTE: ' to \", via:https://wxnacy.com/2020/05/01/python-print-dict-double-quotation-marks/\nf.close()\nprint('config.json created.')\n```\n"
   },
   {
     "branch": "2021/11/compiler-c0-imu",

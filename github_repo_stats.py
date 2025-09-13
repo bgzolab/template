@@ -3,12 +3,9 @@ import json
 import requests
 import base64
 import re
+import click
 
-# GitHub配置
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # 从环境变量获取GitHub token
-REPO_OWNER = "bGZo"
-REPO_NAME = "playground"
-OUTPUT_FILE = "repo_stats.json"
 
 def get_github_headers():
     """获取GitHub API请求头"""
@@ -146,9 +143,10 @@ def get_repo_stats(owner, repo):
     stats = []
 
     # 限制处理的分支数量，避免过多数据
-    max_branches = 50
+    max_branches = len(branches)
     processed_count = 0
 
+    print(f"找到 {len(branches)} 个分支，分别是[{[b['name'] for b in branches]}]")
     for branch in branches:
         if processed_count >= max_branches:
             print(f"已处理 {max_branches} 个分支，跳过剩余分支以避免数据过大")
@@ -193,25 +191,26 @@ def get_repo_stats(owner, repo):
 
     return stats
 
-
-if __name__ == "__main__":
-    print("开始获取GitHub仓库统计信息...")
-
-    # 检查配置
-    if REPO_OWNER == "your-username" or REPO_NAME == "your-repo":
-        print("请先配置REPO_OWNER和REPO_NAME变量")
-        exit(1)
-
+@click.command()
+@click.option('--username', '-u', required=True, type=str, help='用户名')
+@click.option('--repo', '-p', required=True, type=str, help='仓库')
+@click.option('--output', '-o', required=True, type=str, help='仓库')
+def start_fetch_data(username, repo, output):
     if not GITHUB_TOKEN:
         print("警告：未设置GITHUB_TOKEN环境变量，API调用可能受到速率限制")
 
-    repo_stats = get_repo_stats(REPO_OWNER, REPO_NAME)
+    print("开始获取GitHub仓库统计信息...")
+    output_path = os.path.join(output, "repo_stats.json")
+
+    repo_stats = get_repo_stats(username, repo)
 
     if repo_stats:
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(repo_stats, f, indent=2, ensure_ascii=False)
-
-        print(f"统计完成，结果已保存到 {OUTPUT_FILE}")
+        print(f"统计完成，结果已保存到 {output_path}")
         print(f"共处理了 {len(repo_stats)} 个分支")
     else:
         print("未获取到任何统计信息")
+
+if __name__ == "__main__":
+    start_fetch_data()
