@@ -62,9 +62,12 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install Node.js dependencies
+    - name: Clean and install Node.js dependencies
       working-directory: ./web
-      run: npm install
+      run: |
+        npm cache clean --force
+        rm -rf node_modules package-lock.json
+        npm install --legacy-peer-deps
 
     - name: Build web application
       working-directory: ./web
