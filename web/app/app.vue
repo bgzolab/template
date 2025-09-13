@@ -270,13 +270,13 @@ marked.setOptions({
   gfm: true
 })
 
-// 获取仓库统计数据 - 移除 await，让它异步加载
-const { data: repoStats, pending, error, refresh } = useFetch('/repo_stats.json', {
+// 获取仓库统计数据 - 适配 SPA 模式
+const { data: repoStats, pending, error, refresh } = await useFetch('/repo_stats.json', {
   server: false, // 只在客户端加载
   default: () => [], // 提供默认值
+  lazy: true, // 延迟加载，避免初始化阻塞
   transform: (data) => {
     if (!data || !Array.isArray(data)) return []
-    // 数据已经在后端按时��排序，这里直接返回
     return data
   }
 })

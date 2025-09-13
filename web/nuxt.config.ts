@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false }, // 生产环境关闭 devtools
   modules: ['@nuxtjs/tailwindcss'],
 
-  // 启用静态站点生成
+  // 静态站点生成配置
   nitro: {
     prerender: {
       routes: ['/']
@@ -17,8 +17,8 @@ export default defineNuxtConfig({
     buildAssetsDir: '/assets/'
   },
 
-  // SSR 配置
-  ssr: true,
+  // 关闭 SSR，启用静态生成
+  ssr: false,
 
   // 构建配置
   build: {
@@ -30,5 +30,13 @@ export default defineNuxtConfig({
     public: {
       apiBase: '/api'
     }
-  }
+  },
+
+  // 生成配置
+  generate: {
+    fallback: '404.html'
+  },
+
+  // 确保客户端渲染
+  mode: 'spa'
 })
