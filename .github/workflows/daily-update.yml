@@ -14,15 +14,6 @@ on:
   push:
     branches:
       - dashboard  # 面板主分支
-#      - master
-#      - develop  # 添加开发分支
-#    paths:
-#      - 'github_repo_stats.py'
-#      - 'web/**'
-#      - '.github/workflows/**'
-#  pull_request:
-#    branches: [ main, master ]
-#    types: [opened, synchronize]
 
 jobs:
   update-and-deploy:
