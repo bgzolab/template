@@ -279,21 +279,21 @@ const { public: publicConfig } = useRuntimeConfig()
 const baseURL = (publicConfig && publicConfig.baseURL) || '/'
 
 // 在客户端手动获取数据
-onMounted(async () => {
-  try {
-    const response = await fetch(`${baseURL}repo_stats.json`)
-    if (response.ok) {
-      const data = await response.json()
-      repoStats.value = Array.isArray(data) ? data : []
-    } else {
-      error.value = 'Failed to load data'
-    }
-  } catch (e) {
-    error.value = e.message
-  } finally {
-    pending.value = false
-  }
-})
+// onMounted(async () => {
+//   try {
+//     const response = await fetch(`${baseURL}repo_stats.json`)
+//     if (response.ok) {
+//       const data = await response.json()
+//       repoStats.value = Array.isArray(data) ? data : []
+//     } else {
+//       error.value = 'Failed to load data'
+//     }
+//   } catch (e) {
+//     error.value = e.message
+//   } finally {
+//     pending.value = false
+//   }
+// })
 
 // 计算属性
 const displayedRepos = computed(() => {

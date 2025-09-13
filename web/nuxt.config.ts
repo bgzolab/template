@@ -72,10 +72,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-
-  // 实验性功能
-  experimental: {
-    payloadExtraction: false
   }
+
 })
