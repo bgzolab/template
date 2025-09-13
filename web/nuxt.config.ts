@@ -1,39 +1,34 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: false }, // 生产环境关闭 devtools
+  // 基础配置
+  devtools: { enabled: false },
+
+  // 模块配置
   modules: ['@nuxtjs/tailwindcss'],
 
-  // 静态站点生成配置
-  nitro: {
-    prerender: {
-      routes: ['/']
-    }
-  },
-
-  // GitHub Pages 配置 - 修复本地测试路径问题
-  app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || (process.env.NODE_ENV === 'production' ? '/playground/' : '/'),
-    buildAssetsDir: '/assets/'
-  },
-
-  // 关闭 SSR，启用静态生成
+  // 完全禁用 SSR，启用纯 SPA
   ssr: false,
 
-  // 构建配置
-  build: {
-    analyze: false
-  },
-
-  // 运行时配置
-  runtimeConfig: {
-    public: {
-      apiBase: '/api'
+  // 应用配置
+  app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/playground/' : '/',
+    head: {
+      title: "bGZo's Playground",
+      meta: [
+        { name: 'description', content: "Show what I've built recently" }
+      ]
     }
   },
 
-  // 生成配置
-  generate: {
-    fallback: '404.html'
+  // Nitro 配置 - 静态预设
+  nitro: {
+    preset: 'github-pages'
+  },
+
+  // 路由配置
+  router: {
+    options: {
+      hashMode: false
+    }
   }
 })

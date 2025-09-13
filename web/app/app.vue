@@ -4,7 +4,7 @@
     <header class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <h1 class="text-3xl font-bold text-gray-900">
-          {{meta.title}}
+          {{ pageTitle }}
         </h1>
         <p class="mt-2 text-gray-600">
           一共探索、实现了 {{ displayedRepos.length }} 个小想法，希望对你有用 ✨
@@ -44,7 +44,7 @@
           >
             <option value="all">所��分支</option>
             <option value="with-readme">包含 README</option>
-            <option value="active">活��项目</option>
+            <option value="active">����目</option>
           </select>
         </div>
       </div>
@@ -144,7 +144,7 @@
           </button>
 
           <span class="px-4 py-2 text-sm text-gray-700">
-            第 {{ currentPage }} 页，共 {{ totalPages }} 页
+            第 {{ currentPage }} 页，共 {{ totalPages }} ��
           </span>
 
           <button
@@ -246,16 +246,6 @@ import { marked } from 'marked'
 import 'highlight.js/styles/github.css'
 import hljs from 'highlight.js'
 
-const meta = {
-  title: "bGZo's Playground",
-  meta: [
-    { name: 'description', content: "Show what I've build recently" }
-  ]
-}
-
-// 设置页面标题
-useHead(meta)
-
 // 配置 marked
 marked.setOptions({
   highlight: function(code, lang) {
@@ -270,18 +260,10 @@ marked.setOptions({
   gfm: true
 })
 
-// 获取仓库统计数据 - 修复 SPA 模式下的初始化问题
-const { data: repoStats, pending, error, refresh } = useFetch('/repo_stats.json', {
-  server: false, // 只在客户端加载
-  default: () => [], // 提供默认值
-  lazy: true, // 延迟加载，避免初始化阻塞
-  transform: (data) => {
-    if (!data || !Array.isArray(data)) return []
-    return data
-  }
-})
-
-// 响应式数据
+// 使用原生数据管理，完全避免 Nuxt 组合式 API
+const repoStats = ref([])
+const pending = ref(true)
+const error = ref(null)
 const searchQuery = ref('')
 const filterOption = ref('all')
 const currentPage = ref(1)
@@ -289,10 +271,28 @@ const itemsPerPage = 12
 const showReadmeModal = ref(false)
 const selectedRepo = ref(null)
 
+// 页面标题
+const pageTitle = "bGZo's Playground"
+
+// 在客户端手动获取数据
+onMounted(async () => {
+  try {
+    const response = await fetch('/repo_stats.json')
+    if (response.ok) {
+      const data = await response.json()
+      repoStats.value = Array.isArray(data) ? data : []
+    } else {
+      error.value = 'Failed to load data'
+    }
+  } catch (e) {
+    error.value = e.message
+  } finally {
+    pending.value = false
+  }
+})
+
 // 计算属性
 const displayedRepos = computed(() => {
-  if (!repoStats.value || !Array.isArray(repoStats.value)) return []
-
   let filtered = repoStats.value
 
   // 搜索过滤 - 支持项目名称和分支名称搜索
@@ -360,7 +360,24 @@ watch([searchQuery, filterOption], () => {
 
 // 方法
 const refreshData = () => {
-  refresh()
+  // 重新获取数据
+  pending.value = true
+  error.value = null
+
+  fetch('/repo_stats.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok')
+      return response.json()
+    })
+    .then(data => {
+      repoStats.value = Array.isArray(data) ? data : []
+    })
+    .catch(err => {
+      error.value = err.message
+    })
+    .finally(() => {
+      pending.value = false
+    })
 }
 
 // 检查是否有 README 内容
