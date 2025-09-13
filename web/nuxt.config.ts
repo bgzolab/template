@@ -11,7 +11,8 @@ export default defineNuxtConfig({
 
   // 应用配置
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/playground/' : '/',
+    // baseURL: process.env.NODE_ENV === 'production' ? '/playground/' : '/',
+    baseURL: '/playground/',  // <-- 一定要和仓库名一致
     head: {
       title: "bGZo's Playground",
       meta: [
