@@ -19,7 +19,7 @@ node_modules/
 # Build output
 dist/
 build/
-
+.output/
 
 # Java
 *.class

@@ -42,9 +42,9 @@
             v-model="filterOption"
             class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
           >
-            <option value="all">所有分支</option>
+            <option value="all">所��分支</option>
             <option value="with-readme">包含 README</option>
-            <option value="active">活跃项目</option>
+            <option value="active">活��项目</option>
           </select>
         </div>
       </div>
@@ -270,8 +270,8 @@ marked.setOptions({
   gfm: true
 })
 
-// 获取仓库统计数据 - 适配 SPA 模式
-const { data: repoStats, pending, error, refresh } = await useFetch('/repo_stats.json', {
+// 获取仓库统计数据 - 修复 SPA 模式下的初始化问题
+const { data: repoStats, pending, error, refresh } = useFetch('/repo_stats.json', {
   server: false, // 只在客户端加载
   default: () => [], // 提供默认值
   lazy: true, // 延迟加载，避免初始化阻塞
