@@ -30,5 +30,11 @@ export default defineNuxtConfig({
     options: {
       hashMode: false
     }
-  }
+  },
+
+  // https://stackoverflow.com/questions/77618435/building-nuxt-ionic-app-give-me-error-not-initialization-typeerror-cannot-read
+  experimental:{
+    payloadExtraction: false
+  },
+
 })
