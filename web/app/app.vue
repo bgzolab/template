@@ -185,7 +185,7 @@
     <div v-if="showReadmeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50" @click="closeReadmeModal">
       <div class="bg-white rounded-lg max-w-4xl max-h-[90vh] w-full overflow-hidden" @click.stop>
         <!-- Modal Header -->
-        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+        <div class="flex items-center justify-between px-6 py-6 pt-1 pb-1 border-b border-gray-200">
           <div>
             <h3 class="text-lg font-semibold text-gray-900">
               {{ selectedRepo?.name || selectedRepo?.branch }}
@@ -433,14 +433,22 @@ const openReadmeModal = (repo) => {
   selectedRepo.value = repo
   showReadmeModal.value = true
   // 防止背景滚动
-  document.body.style.overflow = 'hidden'
+  nextTick(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'hidden'
+    }
+  })
 }
 
 const closeReadmeModal = () => {
   showReadmeModal.value = false
   selectedRepo.value = null
   // 恢复背景滚动
-  document.body.style.overflow = 'auto'
+  nextTick(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'auto'
+    }
+  })
 }
 
 const renderMarkdown = (content) => {
@@ -452,21 +460,6 @@ const renderMarkdown = (content) => {
     return '<pre>' + content + '</pre>'
   }
 }
-
-// 键盘事件监听
-onMounted(() => {
-  const handleKeydown = (e) => {
-    if (e.key === 'Escape' && showReadmeModal.value) {
-      closeReadmeModal()
-    }
-  }
-  document.addEventListener('keydown', handleKeydown)
-
-  onUnmounted(() => {
-    document.removeEventListener('keydown', handleKeydown)
-    document.body.style.overflow = 'auto'
-  })
-})
 </script>
 
 <style scoped>
