@@ -1,0 +1,25 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Page from '../components/Page.astro';
+import Home from '../layouts/Home.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+
+<Home>
+	<Header />
+	<Page>
+		<p>文章归档：</p>
+		<ul>
+			{posts.map((post) => (
+				<li>
+					<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+				</li>
+			))}
+		</ul>
+	</Page>
+	<Footer />
+</Home>
+

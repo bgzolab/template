@@ -1,0 +1,30 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Page from '../../components/Page.astro';
+import Home from '../../layouts/Home.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Home>
+	<Header />
+	<Page mdComponent>
+		<article class="prose">
+			<!-- <h1>{post.data.title}</h1> -->
+			<Content />
+		</article>
+	</Page>
+	<Footer />
+</Home>
