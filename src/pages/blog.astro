@@ -44,7 +44,7 @@ const categoryList = Array.from(categories).sort();
       Object.keys(postsByYear)
         .sort((a: string, b: string) => parseInt(b) - parseInt(a))
         .map((year: string) => (
-          <div class="mb-8">
+          <div class="year-section mb-8">
             <h2 class="text-2xl font-bold mb-4">{year}</h2>
             <ul class="space-y-2">
               {postsByYear[parseInt(year)].map((post: any) => (
@@ -79,6 +79,10 @@ const categoryList = Array.from(categories).sort();
     const listItems = document.querySelectorAll(
       "li[data-category]"
     ) as NodeListOf<HTMLElement>;
+    const yearDivs = document.querySelectorAll(
+      ".year-section"
+    ) as NodeListOf<HTMLElement>;
+
     select.addEventListener("change", () => {
       const selected = select.value;
       listItems.forEach((li: HTMLElement) => {
@@ -88,6 +92,18 @@ const categoryList = Array.from(categories).sort();
         } else {
           li.style.display = "none";
         }
+      });
+
+      // 检查每个年份div是否有可见的li
+      yearDivs.forEach((div: HTMLElement) => {
+        const lis = div.querySelectorAll("li");
+        let hasVisible = false;
+        lis.forEach((li) => {
+          if ((li as HTMLElement).style.display !== "none") {
+            hasVisible = true;
+          }
+        });
+        div.style.display = hasVisible ? "" : "none";
       });
     });
   });
