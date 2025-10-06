@@ -1,24 +1,94 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Page from '../components/Page.astro';
-import Home from '../layouts/Home.astro';
-import { getCollection } from 'astro:content';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Page from "../components/Page.astro";
+import Home from "../layouts/Home.astro";
+import { getCollection } from "astro:content";
+import dayjs from "../lib/dayjs.js";
 
-const posts = await getCollection('blog');
+const posts = await getCollection("blog");
+posts.sort(
+  (a: any, b: any) =>
+    new Date(b.data.created).getTime() - new Date(a.data.created).getTime()
+);
+
+const postsByYear: { [key: number]: any[] } = {};
+posts.forEach((post: any) => {
+  const year = dayjs(post.data.created).year();
+  if (!postsByYear[year]) postsByYear[year] = [];
+  postsByYear[year].push(post);
+});
+
+const categories = new Set<string>();
+posts.forEach((post: any) => categories.add(post.data.category));
+const categoryList = Array.from(categories).sort();
 ---
 
 <Home>
-	<Header />
-	<Page>
-		<ul>
-			{posts.map((post) => (
-				<li>
-					<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-				</li>
-			))}
-		</ul>
-	</Page>
-	<Footer />
+  <Header />
+  <Page>
+    <div class="mb-4">
+      <label
+        for="category-select"
+        class="block text-sm font-medium text-gray-700 mb-2">Category:</label
+      >
+      <select
+        id="category-select"
+        class="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+      >
+        <option value="">All</option>
+        {categoryList.map((cat: string) => <option value={cat}>{cat}</option>)}
+      </select>
+    </div>
+    {
+      Object.keys(postsByYear)
+        .sort((a: string, b: string) => parseInt(b) - parseInt(a))
+        .map((year: string) => (
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">{year}</h2>
+            <ul class="space-y-2">
+              {postsByYear[parseInt(year)].map((post: any) => (
+                <li
+                  class="flex justify-between items-center"
+                  data-category={post.data.category}
+                >
+                  <a
+                    href={`/blog/${post.slug}/`}
+                    class="text-left hover:text-blue-600"
+                  >
+                    {post.data.title}
+                  </a>
+                  <span class="text-right text-gray-500">
+                    {dayjs(post.data.created).format("YYYY/MM/DD")}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+    }
+  </Page>
 </Home>
+<Footer />
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const select = document.getElementById(
+      "category-select"
+    ) as HTMLSelectElement;
+    const listItems = document.querySelectorAll(
+      "li[data-category]"
+    ) as NodeListOf<HTMLElement>;
+    select.addEventListener("change", () => {
+      const selected = select.value;
+      listItems.forEach((li: HTMLElement) => {
+        const category = li.dataset.category;
+        if (selected === "" || category === selected) {
+          li.style.display = "";
+        } else {
+          li.style.display = "none";
+        }
+      });
+    });
+  });
+</script>

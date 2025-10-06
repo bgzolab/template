@@ -1,9 +1,9 @@
 ---
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import Page from '../../components/Page.astro';
 import Home from '../../layouts/Home.astro';
 import { getCollection } from 'astro:content';
+import Article from '../../components/Article.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -20,7 +20,7 @@ const { Content } = await post.render();
 
 <Home>
 	<Header />
-	<Page mdComponent>
+	<Article mdComponent>
 		<article class="prose">
 			<!-- <h1>{post.data.title}</h1> -->
 			<Content />

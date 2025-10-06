@@ -6,6 +6,7 @@ import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import Page from "../../../components/Page.astro";
 import Home from "../../../layouts/Home.astro";
+import Article from "../../../components/Article.astro";
 
 // export async function getStaticPaths() {
 //   const channel = await getChannelInfo(
@@ -36,9 +37,9 @@ export const prerender = false;
 
 <Home>
   <Header />
-  <Page>
+  <Article>
     <List channel={channel} before={false} after={false} isItem={true} />
-  </Page>
+  </Article>
   <Footer />
 </Home>
 
