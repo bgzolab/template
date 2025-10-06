@@ -1,21 +1,10 @@
 ---
-import List from "../../../components/list.astro";
+import List from "../../../components/TalkList.astro";
 import { getChannelInfo } from "../../../lib/telegram";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import Page from "../../../components/Page.astro";
 import Home from "../../../layouts/Home.astro";
-
-// export async function getStaticPaths() {
-//   const channel = await getChannelInfo(
-//     { request: { headers: new Headers() } },
-//     {}
-//   );
-//   const paths = channel.posts.map((post: any) => ({
-//     params: { cursor: post.id },
-//   }));
-//   return paths;
-// }
 
 const channel = await getChannelInfo(Astro, {
   after: Astro.params.cursor,

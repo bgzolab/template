@@ -2,9 +2,7 @@
 import "../assets/css/normalize.css";
 import "../assets/css/talk-style.css";
 import "../assets/css/talk-item.css";
-// import Layout from "../layouts/Talk.astro";
-// import Header from './Header.astro'
-import Item from "../components/item.astro";
+import Item from "../components/TalkItem.astro";
 
 const { SITE_URL } = Astro.locals;
 const { channel, before = true, after = true, isItem = false } = Astro.props;
@@ -12,13 +10,11 @@ const posts = channel.posts ?? [];
 
 const beforeCursor = posts[posts.length - 1]?.id;
 const afterCursor = posts[0]?.id;
-// const cursor = +Astro.params.cursor
 ---
 
-<!-- <Layout channel={channel} id="main-container"> --><!-- <slot name="header"> --><!-- <Header channel={channel} /> --><!-- </slot> --><!-- <div id="wrapper"> --><!-- <div id="container"> -->
 <div id="main-container">
   <div class="items">
-    {posts.map((post) => <Item post={post} isItem={isItem} />)}
+    {posts.map((post: any) => <Item post={post} isItem={isItem} />)}
   </div>
 
   <div class="pages-container">
@@ -52,6 +48,3 @@ const afterCursor = posts[0]?.id;
     }
   </div>
 </div>
-<!-- </div> -->
-<!-- </div> -->
-<!-- </Layout> -->

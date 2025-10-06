@@ -1,5 +1,5 @@
 ---
-import List from "../../../components/list.astro";
+import List from "../../../components/TalkList.astro";
 import { getChannelInfo } from "../../../lib/telegram";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
@@ -13,17 +13,7 @@ const channel = await getChannelInfo(Astro, {
 channel.seo = {
   noindex: true,
 };
-// 动态处理，不生成静态页面
-// export async function getStaticPaths() {
-//   const channel = await getChannelInfo(
-//     { request: { headers: new Headers() } },
-//     {}
-//   );
-//   const paths = channel.posts.map((post: any) => ({
-//     params: { cursor: post.id },
-//   }));
-//   return paths;
-// }
+
 export const prerender = false;
 ---
 

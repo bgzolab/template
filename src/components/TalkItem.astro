@@ -29,32 +29,4 @@ const timeago = datetime.isBefore(dayjs().subtract(1, 'w')) ? datetime.format('H
     </div>
   </div>
   {post.content.length > 0 && <div class={`text-box content`} set:html={post.content} />}
-  <!-- {
-    post.tags.length > 0 && (
-      <div class="tag-box" style={post.content.length === 0 ? 'padding-top: 30px;' : ''}>
-        <div class="tag-icon" />
-        {post.tags.map((tag) => (
-          <a href={`talk/search/%23${tag}`} title={tag} class="tag">
-            {tag}
-          </a>
-        ))}
-      </div>
-    )
-  } -->
-<!-- 
-  {
-    COMMENTS && isItem && (
-      <div class="comments">
-        <script
-          is:inline
-          async
-          src="https://telegram.org/js/telegram-widget.js"
-          data-telegram-discussion={`${channel}/${post.id}`}
-          data-comments-limit="50"
-          data-colorful="1"
-          data-color="454545"
-        />
-      </div>
-    )
-  } -->
 </div>
