@@ -254,3 +254,17 @@ body {
   background: var(--background-primary);
   color: var(--text-normal);
 }
+
+.title {
+	color: var(--tw-prose-headings);
+  font-weight: 800;
+  font-size: 2.25em;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+}
+
+article > h1 {
+	display: none;
+}
+

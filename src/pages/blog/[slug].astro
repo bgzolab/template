@@ -4,6 +4,7 @@ import Footer from '../../components/Footer.astro';
 import Home from '../../layouts/Home.astro';
 import { getCollection } from 'astro:content';
 import Article from '../../components/Article.astro';
+import dayjs from 'dayjs';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -22,7 +23,8 @@ const { Content } = await post.render();
 	<Header />
 	<Article mdComponent>
 		<article class="prose">
-			<!-- <h1>{post.data.title}</h1> -->
+			<span class="title">{post.data.title}</span>
+			<p class="text-gray-600 text-sm">Created: {dayjs(post.data.created).format('YYYY-MM-DD')} | Updated: {dayjs(post.data.modified).format('YYYY-MM-DD')}</p>
 			<Content />
 		</article>
 	</Page>
