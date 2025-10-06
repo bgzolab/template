@@ -1,0 +1,19 @@
+---
+import List from '../../components/list.astro'
+import { getChannelInfo } from '../../lib/telegram'
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Page from '../../components/Page.astro';
+import Home from '../../layouts/Home.astro';
+
+const channel = await getChannelInfo(Astro)
+---
+
+<Home>
+	<Header />
+	<Page>
+    <List channel={channel} after={false} />
+	</Page>
+	<Footer />
+</Home>
+

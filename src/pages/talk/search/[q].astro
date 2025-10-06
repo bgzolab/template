@@ -1,0 +1,39 @@
+---
+import List from '../../../components/list.astro'
+import { getChannelInfo } from '../../../lib/telegram'
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import Page from "../../../components/Page.astro";
+import Home from "../../../layouts/Home.astro";
+
+const q = Astro.url.searchParams.get('q') || Astro.params.q
+const decodedQ = q ? decodeURIComponent(q) : '' 
+// Add null check to handle undefined
+const channel = await getChannelInfo(Astro, {
+  q: decodedQ,
+})
+
+channel.seo = {
+  title: `${decodedQ}`,
+}
+
+// 动态处理，不生成静态页面
+export const prerender = false;
+// export async function getStaticPaths() {
+//   const channel = await getChannelInfo({ request: { headers: new Headers() } }, {})
+//   const paths = channel.posts.map((post: any) => ({
+//     params: { q: post.id }
+//   }))
+//   return paths
+// }
+---
+
+<Home>
+	<Header />
+	<Page>
+    <List channel={channel} before={false} after={false} />
+  </Page>
+	<Footer />
+</Home>
+
+

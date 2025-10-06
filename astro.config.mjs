@@ -1,7 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import vue from '@astrojs/vue'; 
+import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
+import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,5 +11,9 @@ export default defineConfig({
     vue(),
     // 集成 Tailwind
     tailwind(),
-  ]
+  ],
+
+  adapter: node({
+    mode: 'standalone'
+  })
 });

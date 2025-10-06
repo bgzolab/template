@@ -10,8 +10,8 @@ import { profile } from '../config/profile.ts';
 	<div class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900">
 		<div class="text-center max-w-md mx-auto">
 			<img src={profile.avatar} alt="Avatar" class="w-32 h-32 rounded-full mx-auto mb-4" />
-			<h1 class="text-3xl font-bold mb-2">@{profile.name}</h1>
-			<div class="flex justify-center space-x-4 mb-4">
+			<h1 class="text-3xl font-bold mb-2">{profile.name}</h1>
+			<div class="flex justify-center space-x-4 mb-4 text-gray-500">
 				<span class="text-lg">{profile.location}</span>
 				<span class="text-lg">/</span>
 				<span class="text-lg">{profile.languages.join(', ')}</span>
