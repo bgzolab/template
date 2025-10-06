@@ -53,3 +53,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - https://gravatar.com/bgzo
 
 
+## no jekyll file added.
+
+https://github.com/withastro/starlight/issues/3339
+

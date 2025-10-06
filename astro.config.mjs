@@ -6,6 +6,11 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
+  // [option]: build for github pages
+  // via: https://docs.astro.build/en/guides/deploy/github/
+  site: 'https://bgzo.github.io',
+  base: '/github-pages',
+
   integrations: [
     // 集成Vue
     vue(),
