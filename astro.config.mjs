@@ -8,7 +8,7 @@ import node from '@astrojs/node';
 export default defineConfig({
   // [option]: build for github pages
   // via: https://docs.astro.build/en/guides/deploy/github/
-  site: 'https://bgzo.github.io',
+  site: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:4321' : 'https://bgzo.github.io',
   base: '/github-pages',
 
   integrations: [

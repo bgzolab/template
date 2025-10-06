@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build && touch dist/client/.nojekyll",
+    "dev": "NODE_ENV=development astro dev",
+    "build": "NODE_ENV=production astro build && touch dist/client/.nojekyll",
     "preview": "astro preview",
     "astro": "astro"
   },
