@@ -1,4 +1,6 @@
 # !/bin/bash
+# 构建并预览 Astro 项目，然后将其部署到 GitHub Pages
+npm run build
 # 构建目录
 cd /home/bgzo/workspaces/playground/astro-demo/dist/client
 # 初始化git
