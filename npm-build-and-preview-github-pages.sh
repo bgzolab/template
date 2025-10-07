@@ -1,6 +1,6 @@
-# !/bin/bash
-owner = bGZo
-repo = github-pages
+#!/bin/bash
+owner=bgzo
+repo=github-pages
 
 # 构建并预览 Astro 项目，然后将其部署到 GitHub Pages
 npm run build
