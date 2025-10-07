@@ -23,7 +23,7 @@ const timeago = datetime.isBefore(dayjs().subtract(1, 'w')) ? datetime.format('H
   <div class="time-box">
     <div class="dot"></div>
     <div class="time">
-      <a href={`${SITE_URL}talk/posts/${post.id}`} title={post.datetime} class="item-link">
+      <a href={`${SITE_URL}/talk/posts/${post.id}`} title={post.datetime} class="item-link">
         <time datetime={post.datetime} title={timeago}>{timeago}</time>
       </a>
     </div>
