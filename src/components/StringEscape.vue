@@ -1,37 +1,67 @@
 <template>
-  <div class="string-escape-tool">
-    <h1>字符串转义工具</h1>
-    <p>支持多种编码格式的双向转义转换</p>
+  <!-- <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg"> -->
+  <h1 class="text-3xl font-bold text-gray-800 mb-2">字符串转义工具</h1>
+  <p class="text-gray-600 mb-6">支持多种编码格式的双向转义转换</p>
 
-    <div class="input-section">
-      原始字符串：
-      <textarea id="input" v-model="inputText" rows="4" cols="50" placeholder="输入原始字符串，点击左侧进行转义"></textarea>
-    </div>
+  <!-- 输入区域 -->
+  <div class="mb-6">
+    <label class="block text-sm font-medium text-gray-700 mb-2">原始字符串：</label>
+    <textarea v-model="inputText" rows="4"
+      class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm resize-vertical"
+      placeholder="输入原始字符串，点击左侧进行转义"></textarea>
+  </div>
 
-    <button @click="processString('encode')"">转义</button>
-        <!-- 转义模式选择 -->
-    <div class=" mode-selector">
-      <label>转义模式：</label>
-      <select v-model="escapeMode">
+  <!-- 操作控制区域 -->
+  <div class="flex flex-col sm:flex-row items-center gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+    <button @click="processString('encode')"
+      class="px-6 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      :disabled="!inputText.trim()">
+      转义
+    </button>
+
+    <div class="flex items-center gap-2">
+      <label class="text-sm font-medium text-gray-700">转义模式：</label>
+      <select v-model="escapeMode"
+        class="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
         <option value="html">HTML 实体</option>
         <option value="url">URL 编码</option>
         <option value="uri">URI 编码</option>
         <option value="json">JSON 转义</option>
         <option value="base64">Base64</option>
       </select>
+    </div>
+
+    <button @click="processString('decode')"
+      class="px-6 py-2 bg-green-600 text-white font-medium rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      :disabled="!outputText.trim()">
+      反转义
+    </button>
   </div>
-  <button @click="processString('decode')"">反转义</button>
 
-    <div class=" output-section">
-    转义字符串：
-    <textarea id="output" v-model="outputText" rows="4" cols="50" placeholder="输入转义字符串，点击右侧按钮进行恢复"></textarea>
-    </div>
+  <!-- 输出区域 -->
+  <div class="mb-6">
+    <label class="block text-sm font-medium text-gray-700 mb-2">转义字符串：</label>
+    <textarea v-model="outputText" rows="4"
+      class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm resize-vertical"
+      placeholder="输入转义字符串，点击右侧按钮进行恢复"></textarea>
+  </div>
 
-    <!-- 错误提示 -->
-    <div v-if="errorMessage" class="error-message">
-      {{ errorMessage }}
+  <!-- 错误提示 -->
+  <div v-if="errorMessage" class="p-4 bg-red-50 border border-red-200 rounded-md">
+    <div class="flex">
+      <div class="flex-shrink-0">
+        <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="ml-3">
+        <p class="text-sm text-red-800">{{ errorMessage }}</p>
+      </div>
     </div>
-    </div>
+  </div>
+  <!-- </div> -->
 </template>
 
 <script setup lang="ts">
@@ -56,14 +86,14 @@ const htmlDecode = (str: string): string => {
 };
 
 // 处理字符串转换
-const processString = (operate: String) => {
+const processString = (operate: string) => {
   errorMessage.value = '';
 
   try {
     let result = '';
     if (operate === 'encode') {
       const input = inputText.value;
-      console.log('Encoding with mode:', escapeMode.value);
+      // console.log('Encoding with mode:', escapeMode.value);
       // 编码
       switch (escapeMode.value) {
         case 'html':
@@ -86,7 +116,7 @@ const processString = (operate: String) => {
       }
       outputText.value = result;
     } else if (operate === 'decode') {
-      console.log('Decoding with mode:', escapeMode.value);
+      // console.log('Decoding with mode:', escapeMode.value);
       const output = outputText.value;
       // 解码
       switch (escapeMode.value) {
@@ -116,115 +146,3 @@ const processString = (operate: String) => {
   }
 };
 </script>
-
-<style scoped>
-.string-escape-tool {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.mode-selector {
-  margin-bottom: 15px;
-}
-
-.mode-selector select {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-left: 10px;
-}
-
-.direction-selector {
-  margin-bottom: 20px;
-}
-
-.radio-group {
-  display: flex;
-  gap: 20px;
-  margin-left: 10px;
-}
-
-.radio-group label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: normal;
-  cursor: pointer;
-}
-
-.input-section,
-.output-section {
-  margin-bottom: 15px;
-}
-
-textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-size: 14px;
-  line-height: 1.4;
-  resize: vertical;
-}
-
-button {
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 10px 0;
-  transition: background-color 0.2s;
-}
-
-button:hover:not(:disabled) {
-  background-color: #0056b3;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #333;
-}
-
-.error-message {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .string-escape-tool {
-    padding: 15px;
-  }
-
-  .radio-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  textarea {
-    font-size: 16px;
-    /* 防止iOS缩放 */
-  }
-}
-</style>

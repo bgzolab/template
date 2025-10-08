@@ -27,13 +27,51 @@ const tools = await Promise.all(toolPromises);
 <Home>
 	<Header />
 	<Page>
-		<ul>
-			{tools.map(tool => (
-				<li>
-					<a href={`${SITE_URL}/${tool.slug}`}>{tool.title}</a> - {tool.description}
-				</li>
-			))}
-		</ul>
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-12">
+				<h1 class="text-4xl font-bold text-gray-900 mb-4">工具索引</h1>
+				<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+					这里聚合了各种网页小工具，方便日常使用。选择一个工具开始使用吧！
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+				{tools.map(tool => (
+					<a
+						href={`${SITE_URL}/${tool.slug}`}
+						class="group block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all duration-200 transform hover:-translate-y-1"
+						title={`点击访问 ${tool.title} - ${tool.description}`}
+					>
+						<div class="flex flex-col h-full">
+							<h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-2">
+								{tool.title}
+							</h3>
+							<p class="text-sm text-gray-600 group-hover:text-gray-700 flex-grow leading-relaxed">
+								{tool.description}
+							</p>
+							<div class="mt-4 flex items-center text-blue-600 group-hover:text-blue-700">
+								<span class="text-sm font-medium">开始使用</span>
+								<svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</div>
+						</div>
+					</a>
+				))}
+			</div>
+
+			{tools.length === 0 && (
+				<div class="text-center py-12">
+					<div class="text-gray-400 mb-4">
+						<svg class="mx-auto h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-medium text-gray-900 mb-2">暂无工具</h3>
+					<p class="text-gray-600">敬请期待更多实用工具！</p>
+				</div>
+			)}
+		</div>
 	</Page>
 	<Footer />
 </Home>
