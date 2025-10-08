@@ -3,12 +3,37 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Page from '../components/Page.astro';
 import Home from '../layouts/Home.astro';
+const { SITE_URL } = Astro.locals;
+
+// 动态获取所有工具页面
+const toolModules = import.meta.glob('./tool/*.astro');
+
+// 过滤掉索引页面本身，只保留工具页面
+const toolPromises = Object.entries(toolModules)
+	.filter(([path]) => path !== './tool.astro') // 排除当前文件
+	.map(async ([path, module]) => {
+		const page = await module() as any;
+		return {
+			slug: path.replace('./', '').replace('.astro', ''), // 获取文件名作为 slug
+			title: page.title || '未命名工具',
+			description: page.description || '暂无描述'
+		};
+	});
+
+// 等待所有异步操作完成
+const tools = await Promise.all(toolPromises);
 ---
 
 <Home>
 	<Header />
 	<Page>
-		This is tool page. 
+		<ul>
+			{tools.map(tool => (
+				<li>
+					<a href={`${SITE_URL}/${tool.slug}`}>{tool.title}</a> - {tool.description}
+				</li>
+			))}
+		</ul>
 	</Page>
 	<Footer />
 </Home>

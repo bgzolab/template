@@ -22,7 +22,7 @@ const { Content } = await post.render();
 <Home>
 	<Header />
 	<Article mdComponent>
-		<article class="prose">
+		<article>
 			<span class="title">{post.data.title}</span>
 			<p class="text-gray-600 text-sm">Created: {dayjs(post.data.created).format('YYYY-MM-DD')} | Updated: {dayjs(post.data.modified).format('YYYY-MM-DD')}</p>
 			<Content />
