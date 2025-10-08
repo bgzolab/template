@@ -268,3 +268,7 @@ article > h1 {
 	display: none;
 }
 
+/* 修正 code 块的方向，避免中文环境下渲染异常 */
+.prose :where(pre, code) {
+  direction: ltr;
+}
