@@ -84,7 +84,7 @@
           <!-- Card Header -->
           <div class="p-6 border-b border-gray-200">
             <div class="flex items-start justify-between">
-              <div class="flex-1">
+              <div class="flex-1 max-w-[80%]">
                 <h3 class="text-lg font-semibold text-gray-900"
                     :class="{ 'group-hover:text-blue-600 transition-colors duration-200': hasReadme(repo) }"
                     :title="repo.name">

@@ -12,11 +12,11 @@
   </div>
 
   <!-- 操作控制区域 -->
-  <div class="flex flex-col sm:flex-row items-center gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+  <div class="flex flex-col sm:flex-row items-center gap-4 mb-6 p-4 rounded-lg">
     <button @click="processString('encode')"
       class="px-6 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       :disabled="!inputText.trim()">
-      转义
+      转义↓
     </button>
 
     <div class="flex items-center gap-2">
@@ -34,7 +34,7 @@
     <button @click="processString('decode')"
       class="px-6 py-2 bg-green-600 text-white font-medium rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       :disabled="!outputText.trim()">
-      反转义
+      反转义↑
     </button>
   </div>
 
