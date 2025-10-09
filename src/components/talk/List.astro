@@ -1,8 +1,8 @@
 ---
-import "../assets/css/normalize.css";
-import "../assets/css/talk-style.css";
-import "../assets/css/talk-item.css";
-import Item from "../components/TalkItem.astro";
+import "../../assets/css/normalize.css";
+import "../../assets/css/talk-style.css";
+import "../../assets/css/talk-item.css";
+import Item from "../talk/Item.astro";
 
 const { SITE_URL } = Astro.locals;
 const { channel, before = true, after = true, isItem = false } = Astro.props;
