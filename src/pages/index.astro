@@ -3,6 +3,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Home from '../layouts/Home.astro';
 import { profile } from '../config/profile.ts';
+import Location from '../components/profile/Location.vue';
+import Language from '../components/profile/Language.vue';
 ---
 
 <Home>
@@ -11,16 +13,24 @@ import { profile } from '../config/profile.ts';
 		<div class="text-center max-w-md mx-auto">
 			<img src={profile.avatar} alt="Avatar" class="w-32 h-32 rounded-full mx-auto mb-4" />
 			<h1 class="text-3xl font-bold mb-2">{profile.name}</h1>
-			<div class="flex justify-center space-x-4 mb-4 text-gray-500">
-				<span class="text-lg">{profile.location}</span>
+			<div class="flex justify-center items-center space-x-4 mb-4 text-gray-500">
+				<span class="text-lg flex items-center">
+					<span class="mr-1"><Location /></span>
+					{profile.location}
+				</span>
 				<span class="text-lg">/</span>
-				<span class="text-lg">{profile.languages.join(', ')}</span>
+				<span class="text-lg flex items-center">
+					<span class="mr-1"><Language /></span>
+					{profile.languages.join(', ')}
+				</span>
 			</div>
 			<p class="text-lg mb-4">{profile.aboutMe}</p>
 			<div class="flex justify-center space-x-4">
 				{profile.socialMedia.map(social => (
+					
 					<a href={social.url} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">
-						{social.name}
+						<img src={`../assets/icons/${social.icon}`} alt={social.name} class="inline-block mr-1" />
+						{/* {social.name} */}
 					</a>
 				))}
 			</div>

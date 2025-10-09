@@ -6,10 +6,10 @@ export const profile = {
   aboutMe: 'You could be anyone, as long as you possess the knowledge. A full-stack developer, I am now.',
   interests: ['Coding', 'Reading', 'Traveling'],
   socialMedia: [
-    { name: 'Telegram', url: 'https://t.me/imbgzo' },
-    { name: 'GitHub', url: 'https://github.com/bGZo' },
-    // { name: "Twitter", url: "https://twitter.com/bgzo" },
-    // { name: "Mastodon", url: "https://mastodon.social/@bgzo" },
-    // { name: "Bluesky", url: "https://bgzo.bsky.social" },
+    { name: 'Telegram', icon: 'telegram.svg', url: 'https://t.me/imbgzo' },
+    { name: 'GitHub', icon: 'github.svg', url: 'https://github.com/bGZo' },
+    // { name: "Twitter", icon: "twitter.svg", url: "https://twitter.com/bgzo" },
+    // { name: "Mastodon", icon: "mastodon.svg", url: "https://mastodon.social/@bgzo" },
+    // { name: "Bluesky", icon: "bluesky.svg", url: "https://bgzo.bsky.social" },
   ],
 };
