@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "NODE_ENV=development astro dev",
-    "build": "NODE_ENV=production astro build && touch dist/client/.nojekyll",
+    "build": "NODE_ENV=production astro build && cp .nojekyll dist/client/",
     "preview": "astro preview",
     "astro": "astro"
   },
