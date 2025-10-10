@@ -1,41 +1,173 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Home from '../layouts/Home.astro';
-import { profile } from '../config/profile.ts';
-import Location from '../components/profile/Location.vue';
-import Language from '../components/profile/Language.vue';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Home from "../layouts/Home.astro";
+import { profile } from "../config/profile.ts";
+import Location from "../components/profile/Location.vue";
+import Language from "../components/profile/Language.vue";
+import github from "../assets/icon/github.svg";
+import telegram from "../assets/icon/telegram.svg";
+import twitter from "../assets/icon/twitter.svg";
+import mastodon from "../assets/icon/mastodon.svg";
+import bluesky from "../assets/icon/bluesky.svg";
+import rss from "../assets/icon/rss.svg";
+import podcast from "../assets/icon/podcast.svg";
+import discord from "../assets/icon/discord.svg";
 ---
 
 <Home>
-	<Header />
-	<div class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900">
-		<div class="text-center max-w-md mx-auto">
-			<img src={profile.avatar} alt="Avatar" class="w-32 h-32 rounded-full mx-auto mb-4" />
-			<h1 class="text-3xl font-bold mb-2">{profile.name}</h1>
-			<div class="flex justify-center items-center space-x-4 mb-4 text-gray-500">
-				<span class="text-lg flex items-center">
-					<span class="mr-1"><Location /></span>
-					{profile.location}
-				</span>
-				<span class="text-lg">/</span>
-				<span class="text-lg flex items-center">
-					<span class="mr-1"><Language /></span>
-					{profile.languages.join(', ')}
-				</span>
-			</div>
-			<p class="text-lg mb-4">{profile.aboutMe}</p>
-			<div class="flex justify-center space-x-4">
-				{profile.socialMedia.map(social => (
-					
-					<a href={social.url} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">
-						<img src={`../assets/icons/${social.icon}`} alt={social.name} class="inline-block mr-1" />
-						{/* {social.name} */}
-					</a>
-				))}
-			</div>
-		</div>
-	</div>
-	<Footer />
+  <Header />
+  <div
+    class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900"
+  >
+    <div class="text-center max-w-md mx-auto">
+      <img
+        src={profile.avatar}
+        alt="Avatar"
+        class="w-32 h-32 rounded-full mx-auto mb-4"
+      />
+      <h1 class="text-3xl font-bold mb-2">{profile.name}</h1>
+      <div
+        class="flex justify-center items-center space-x-4 mb-4 text-gray-500"
+      >
+        <span class="text-lg flex items-center">
+          <span class="mr-1"><Location /></span>
+          {profile.location}
+        </span>
+        <span class="text-lg">/</span>
+        <span class="text-lg flex items-center">
+          <span class="mr-1"><Language /></span>
+          {profile.languages.join(", ")}
+        </span>
+      </div>
+      <p class="text-lg mb-4">{profile.aboutMe}</p>
+      <div class="flex justify-center space-x-4">
+        {
+          profile.socialMedia["GitHub"] &&
+            profile.socialMedia["GitHub"].length > 0 && (
+              <a
+                href={`https://github.com/${profile.socialMedia["GitHub"]}`}
+                title="Github"
+                target="_blank"
+              >
+                <img
+                  {...github}
+                  alt={`github.com/${profile.socialMedia["GitHub"]}`}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["Telegram"] &&
+            profile.socialMedia["Telegram"].length > 0 && (
+              <a
+                href={`https://t.me/${profile.socialMedia["Telegram"]}`}
+                title="Telegram"
+                target="_blank"
+              >
+                <img
+                  {...telegram}
+                  alt={`t.me/${profile.socialMedia["Telegram"]}`}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["Mastodon"] &&
+            profile.socialMedia["Mastodon"].length > 0 && (
+              <a
+                href={profile.socialMedia["Mastodon"]}
+                title="Mastodon"
+                target="_blank"
+              >
+                <img
+                  {...mastodon}
+                  alt={profile.socialMedia["Mastodon"]}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["Bluesky"] &&
+            profile.socialMedia["Bluesky"].length > 0 && (
+              <a
+                href={`https://bsky.app/profile/${profile.socialMedia["Bluesky"]}`}
+                title="Bluesky"
+                target="_blank"
+              >
+                <img
+                  {...bluesky}
+                  alt={`bsky.app/profile/${profile.socialMedia["Bluesky"]}`}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["Twitter"] &&
+            profile.socialMedia["Twitter"].length > 0 && (
+              <a
+                href={`https://twitter.com/${profile.socialMedia["Twitter"]}`}
+                title="Twitter"
+                target="_blank"
+              >
+                <img
+                  {...twitter}
+                  alt={`twitter.com/${profile.socialMedia["Twitter"]}`}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["Discord"] &&
+            profile.socialMedia["Discord"].length > 0 && (
+              <a
+                href={profile.socialMedia["Discord"]}
+                title="Discord"
+                target="_blank"
+              >
+                <img
+                  {...discord}
+                  alt={profile.socialMedia["Discord"]}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["RSS"] &&
+            profile.socialMedia["RSS"].length > 0 && (
+              <a href={profile.socialMedia["RSS"]} title="RSS" target="_blank">
+                <img
+                  {...rss}
+                  alt={profile.socialMedia["RSS"]}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+        {
+          profile.socialMedia["Podcast"] &&
+            profile.socialMedia["Podcast"].length > 0 && (
+              <a
+                href={profile.socialMedia["Podcast"]}
+                title="Podcast"
+                target="_blank"
+              >
+                <img
+                  {...podcast}
+                  alt={profile.socialMedia["Podcast"]}
+                  class="social-icon w-6"
+                />
+              </a>
+            )
+        }
+      </div>
+    </div>
+  </div>
+  <Footer />
 </Home>
-

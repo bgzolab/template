@@ -5,11 +5,14 @@ export const profile = {
   languages: ['English', 'Chinese'],
   aboutMe: 'You could be anyone, as long as you possess the knowledge. A full-stack developer, I am now.',
   interests: ['Coding', 'Reading', 'Traveling'],
-  socialMedia: [
-    { name: 'Telegram', icon: 'telegram.svg', url: 'https://t.me/imbgzo' },
-    { name: 'GitHub', icon: 'github.svg', url: 'https://github.com/bGZo' },
-    // { name: "Twitter", icon: "twitter.svg", url: "https://twitter.com/bgzo" },
-    // { name: "Mastodon", icon: "mastodon.svg", url: "https://mastodon.social/@bgzo" },
-    // { name: "Bluesky", icon: "bluesky.svg", url: "https://bgzo.bsky.social" },
-  ],
+  socialMedia: {
+    'Telegram': 'imbgzo',
+    'GitHub': 'bGZo',
+    'Bluesky': 'bgzo.bsky.social',
+    'Mastodon': 'mastodon.social/@bgzo',
+    'Twitter': 'bgzo',
+    'Discord': '',
+    'RSS': '',
+    'Podcast': '',
+  }
 };
