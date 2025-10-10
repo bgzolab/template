@@ -1,4 +1,5 @@
 ---
+import '../../assets/css/admonition.css';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Home from '../../layouts/Home.astro';
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
 <Home>
@@ -24,7 +25,8 @@ const { Content } = await post.render();
 	<Article mdComponent>
 		<article>
 			<span class="title">{post.data.title}</span>
-			<p class="text-gray-600 text-sm">Created: {dayjs(post.data.created).format('YYYY-MM-DD')} | Updated: {dayjs(post.data.modified).format('YYYY-MM-DD')}</p>
+			<p class="text-gray-600 text-sm">Created: {dayjs(post.data.created).format('YYYY/MM/DD')} | Updated: {dayjs(post.data.modified).format('YYYY/MM/DD')} | Reading Time: {remarkPluginFrontmatter.minutesRead}
+			</p>
 			<Content />
 		</article>
 	</Page>

@@ -1,0 +1,46 @@
+.admonition {
+  border-left:4px solid #8b8b8b;
+  padding:8px 16px;
+  margin:1.25em 0
+}
+.admonition>p {
+  margin:0
+}
+.admonition>.admonition-title {
+  color:#8b8b8b;
+  margin-bottom:16px;
+  font-weight:700
+}
+.admonition.note {
+  border-color:#539bf5
+}
+.admonition.note>.admonition-title {
+  color:#539bf5
+}
+.admonition.important {
+  border-color:#986ee2
+}
+.admonition.important>.admonition-title {
+  color:#986ee2
+}
+.admonition.tip {
+  border-color:#57ab5a
+}
+.admonition.warning {
+  border-color:#c69026
+}
+.admonition.warning>.admonition-title {
+  color:#c69026
+}
+.admonition.caution {
+  border-color:#e5534b
+}
+.admonition.caution>.admonition-title {
+  color:#e5534b
+}
+.admonition.danger {
+  border-color:#e5534b
+}
+.admonition.danger>.admonition-title {
+  color:#e5534b
+}
