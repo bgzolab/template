@@ -2,17 +2,17 @@
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Home from '../../layouts/Home.astro';
-import StringEscape from '../../components/tools/StringEscape.vue';
+import DoublePinYinDecode from '../../components/tools/DoublePinYinDecode.vue';
 import Article from '../../components/Article.astro';
 
-export const title = '字符串转义工具';
+export const title = '双拼解码';
 export const description = '用于转义字符串中的特殊字符，如 HTML 实体编码。';
 ---
 
 <Home>
 	<Header />
 	<Article >
-		<StringEscape client:load/>
+		<DoublePinYinDecode client:load/>
 	</Article>
 	<Footer />
 </Home>
