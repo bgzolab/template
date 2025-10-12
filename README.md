@@ -22,3 +22,8 @@ Feel free to explore and connect with me!
   - https://github.com/atinux/content-wind
 - https://gravatar.com/bgzo
 
+## License
+
+All code is licensed under the AGPL-3.0 license.
+
+See [LICENSE](./LICENSE) for more information.
