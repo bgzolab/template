@@ -5,6 +5,7 @@ import "../../assets/css/talk-item.css";
 import Item from "../talk/Item.astro";
 
 const { SITE_URL } = Astro.locals;
+const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 const { channel, before = true, after = true, isItem = false } = Astro.props;
 const posts = channel.posts ?? [];
 
@@ -21,7 +22,7 @@ const afterCursor = posts[0]?.id;
     {
       before && beforeCursor > 1 ? (
         <a
-          href={`${SITE_URL}/talk/before/${beforeCursor}`}
+          href={`${SITE_URL_NO_SLASH}/talk/before/${beforeCursor}`}
           title="Before"
           class="page"
         >
@@ -36,7 +37,7 @@ const afterCursor = posts[0]?.id;
     {
       after && afterCursor ? (
         <a
-          href={`${SITE_URL}/talk/after/${afterCursor}`}
+          href={`${SITE_URL_NO_SLASH}/talk/after/${afterCursor}`}
           title="After"
           class="page"
         >

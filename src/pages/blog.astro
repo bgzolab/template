@@ -7,6 +7,7 @@ import { getCollection } from "astro:content";
 import dayjs from "../lib/dayjs.js";
 
 const { SITE_URL } = Astro.locals
+const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 
 const posts = await getCollection("blog");
 posts.sort(
@@ -29,6 +30,8 @@ const categoryList = Array.from(categories).sort();
 <Home>
   <Header />
   <Page>
+    <!-- TODO -->
+    <!-- <h1 class="text-3xl font-bold mb-6">Blog</h1> -->
     <div class="mb-4">
       <label
         for="category-select"
@@ -55,7 +58,7 @@ const categoryList = Array.from(categories).sort();
                   data-category={post.data.category}
                 >
                   <a
-                    href={`${SITE_URL}/blog/${post.slug}/`}
+                    href={`${SITE_URL_NO_SLASH}/blog/${post.slug}/`}
                     class="text-left hover:text-blue-600"
                   >
                     {post.data.title}

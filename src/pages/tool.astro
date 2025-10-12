@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Page from '../components/Page.astro';
 import Home from '../layouts/Home.astro';
 const { SITE_URL } = Astro.locals;
+const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 
 // 动态获取所有工具页面
 const toolModules = import.meta.glob('./tool/*.astro');
@@ -38,7 +39,7 @@ const tools = await Promise.all(toolPromises);
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
 				{tools.map(tool => (
 					<a
-						href={`${SITE_URL}/${tool.slug}`}
+						href={`${SITE_URL_NO_SLASH}/${tool.slug}`}
 						class="group block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all duration-200 transform hover:-translate-y-1"
 						title={`点击访问 ${tool.title} - ${tool.description}`}
 					>

@@ -10,6 +10,7 @@ const timezone = getEnv(import.meta.env, Astro, 'TIMEZONE')
 locale && dayjs.locale(locale)
 
 const { SITE_URL } = Astro.locals
+const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 const { post } = Astro.props
 
 const datetime = dayjs(post.datetime).tz(timezone)
@@ -20,7 +21,7 @@ const timeago = datetime.isBefore(dayjs().subtract(1, 'w')) ? datetime.format('H
   <div class="time-box">
     <div class="dot"></div>
     <div class="time">
-      <a href={`${SITE_URL}/talk/posts/${post.id}`} title={post.datetime} class="item-link">
+      <a href={`${SITE_URL_NO_SLASH}/talk/posts/${post.id}`} title={post.datetime} class="item-link">
         <time datetime={post.datetime} title={timeago}>{timeago}</time>
       </a>
     </div>

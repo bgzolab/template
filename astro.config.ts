@@ -61,7 +61,8 @@ export default defineConfig({
   // [option]: build for github pages
   // via: https://docs.astro.build/en/guides/deploy/github/
   site: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:4321' : 'https://bgzo.github.io',
-  base: '/github-pages',
+  base: '',
+  // base: '/github-pages',
 
   integrations: [
     // 集成Vue
@@ -79,7 +80,7 @@ export default defineConfig({
       // remarkMath,
       // remarkUnwrapImages,
       // 自动生成目录（只对博客文章）
-      remarkAutoToc,
+      // remarkAutoToc,
       // 处理目录占位符
       [remarkToc, { tight: true, ordered: true, heading: "目录" }],
       // remarkMarkPlus,

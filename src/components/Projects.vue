@@ -278,7 +278,8 @@ export default {
     const selectedRepo = ref(null)
 
     // 通过 Vite 的 BASE_URL 适配根路径或子路径
-    const baseURL = (import.meta.env && import.meta.env.BASE_URL) || '/'
+    // const baseURL = (import.meta.env && import.meta.env.SITE_URL) || '/'
+    const baseURL = ref('/')
 
     // 计算属性
     const displayedRepos = computed(() => {
@@ -343,7 +344,7 @@ export default {
     // 方法
     const loadData = async () => {
       try {
-        const response = await fetch(`${baseURL}/repo_stats.json`)
+        const response = await fetch(`${baseURL.value}/repo_stats.json`)
         if (response.ok) {
           const data = await response.json()
           repoStats.value = Array.isArray(data) ? data : []
@@ -442,8 +443,6 @@ export default {
 
     // 生命周期
     onMounted(() => {
-      loadData()
-
       // 键盘事件监听
       const handleKeydown = (e) => {
         if (e.key === 'Escape' && showReadmeModal.value) {
@@ -452,6 +451,10 @@ export default {
       }
 
       document.addEventListener('keydown', handleKeydown)
+
+      baseURL.value = window.location.origin
+
+      loadData()
 
       return () => {
         document.removeEventListener('keydown', handleKeydown)
