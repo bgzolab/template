@@ -1,4 +1,5 @@
-// src/config/navLinks.ts
+// src/config/nav.ts
+// 导航栏
 export const navLinks = [
   { name: "Home", path: "/" },
   // Fetch blog + weekly from notes repo
@@ -6,8 +7,10 @@ export const navLinks = [
   // Telegram channel
   { name: "Talk", path: "/talk" },
   // Online tools
-  { name: "Tool", path: "/tool" },
-  // Project showcase
-  { name: "Project", path: "/project" },
+  { name: "Tools", path: "/tools" },
+  // Projects showcase
+  { name: "Projects", path: "/projects" },
+  // Playground
+  { name: "Playground", path: "/playground" },
 ];
 
