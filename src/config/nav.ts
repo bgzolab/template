@@ -8,8 +8,6 @@ export const navLinks = [
   { name: "Talk", path: "/talk" },
   // Online tools
   { name: "Tools", path: "/tools" },
-  // Projects showcase
-  { name: "Projects", path: "/projects" },
   // Playground
   { name: "Playground", path: "/playground" },
 ];
