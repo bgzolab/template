@@ -6,6 +6,8 @@ import Home from "../layouts/Home.astro";
 import { getCollection } from "astro:content";
 import dayjs from "../lib/dayjs.js";
 
+const title = "blog";
+
 const { SITE_URL } = Astro.locals
 const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 
@@ -27,7 +29,7 @@ posts.forEach((post: any) => categories.add(post.data.category));
 const categoryList = Array.from(categories).sort();
 ---
 
-<Home>
+<Home title = {title}>
   <Header />
   <Page>
     <!-- TODO -->

@@ -4,9 +4,11 @@ import Footer from '../components/Footer.astro';
 import Projects from '../components/Projects.vue';
 import Page from '../components/Page.astro';
 import Home from '../layouts/Home.astro';
+
+const title = "playground";
 ---
 
-<Home>
+<Home title = {title}>
 	<Header />
 	<Page >
 		<Projects client:load/>

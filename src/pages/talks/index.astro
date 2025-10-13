@@ -6,10 +6,11 @@ import Footer from '../../components/Footer.astro';
 import Page from '../../components/Page.astro';
 import Home from '../../layouts/Home.astro';
 
+const title = "talks";
 const channel = await getChannelInfo(Astro)
 ---
 
-<Home>
+<Home title={title}>
 	<Header />
 	<Page>
     <List channel={channel} after={false} />

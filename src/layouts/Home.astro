@@ -1,8 +1,11 @@
 ---
 import '../assets/css/normalize.css'
 import '../assets/css/main.css'
-const { SITE_URL } = Astro.locals
 import { profile } from '../config/profile'
+
+const { SITE_URL } = Astro.locals
+const { title } = Astro.props;  // 新增：接收 title prop
+const PAGE_TITLE = title ? `${profile.title}'s ${title}` : profile.title; // 动态设置标题
 ---
 <!doctype html>
 <html lang="en">
@@ -11,7 +14,7 @@ import { profile } from '../config/profile'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={ SITE_URL + '/favicon.svg'}/>
 		<meta name="generator" content={Astro.generator} />
-		<title>{profile.title}</title>
+		<title>{PAGE_TITLE}</title>
 	</head>
 	<body>
 		<slot />

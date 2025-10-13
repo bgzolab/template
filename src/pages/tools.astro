@@ -3,6 +3,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Page from '../components/Page.astro';
 import Home from '../layouts/Home.astro';
+
+const title = "tools";
+
 const { SITE_URL } = Astro.locals;
 const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 
@@ -25,7 +28,7 @@ const toolPromises = Object.entries(toolModules)
 const tools = await Promise.all(toolPromises);
 ---
 
-<Home>
+<Home title = {title}>
 	<Header />
 	<Page>
 		<div class="max-w-7xl mx-auto">
