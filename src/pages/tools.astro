@@ -7,7 +7,7 @@ const { SITE_URL } = Astro.locals;
 const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
 
 // 动态获取所有工具页面
-const toolModules = import.meta.glob('./tool/*.astro');
+const toolModules = import.meta.glob('./tools/*.astro');
 
 // 过滤掉索引页面本身，只保留工具页面
 const toolPromises = Object.entries(toolModules)

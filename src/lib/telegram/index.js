@@ -139,7 +139,7 @@ function getPost($, item, { channel, staticProxy, index = 0 }) {
   const id = $(item).attr('data-post')?.replace(new RegExp(`${channel}/`, 'i'), '')
 
   const tags = $(content).find('a[href^="?q="]')?.each((_index, a) => {
-    $(a)?.attr('href', `/talk/search/${encodeURIComponent($(a)?.text())}`)
+    $(a)?.attr('href', `/talks/search/${encodeURIComponent($(a)?.text())}`)
   })?.map((_index, a) => $(a)?.text()?.replace('#', ''))?.get()
 
   return {

@@ -5,7 +5,7 @@ export const navLinks = [
   // Fetch blog + weekly from notes repo
   { name: "Blog", path: "/blog" },
   // Telegram channel
-  { name: "Talk", path: "/talk" },
+  { name: "Talks", path: "/talks" },
   // Online tools
   { name: "Tools", path: "/tools" },
   // Playground

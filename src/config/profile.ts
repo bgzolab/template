@@ -1,4 +1,5 @@
 export const profile = {
+  title: 'bGZo',
   avatar: 'https://1.gravatar.com/avatar/73aeee0811dcdd5a1d26f68845feca0139c78f80c31bb70047bc9c6878ec20f7?size=256&d=initials',
   name: 'bGZo(菜就多練練)',
   location: 'West Korea',

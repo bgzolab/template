@@ -2,6 +2,7 @@
 import '../assets/css/normalize.css'
 import '../assets/css/main.css'
 const { SITE_URL } = Astro.locals
+import { profile } from '../config/profile'
 ---
 <!doctype html>
 <html lang="en">
@@ -10,7 +11,7 @@ const { SITE_URL } = Astro.locals
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={ SITE_URL + '/favicon.svg'}/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{profile.title}</title>
 	</head>
 	<body>
 		<slot />
