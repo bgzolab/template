@@ -9,6 +9,6 @@ export const navLinks = [
   // Online tools
   { name: "Tools", path: "/tools" },
   // Playground
-  { name: "Playground", path: "/playground" },
+  { name: "Labs", path: "/labs" },
 ];
 
