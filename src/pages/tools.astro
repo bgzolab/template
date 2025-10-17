@@ -26,6 +26,26 @@ const toolPromises = Object.entries(toolModules)
 
 // 等待所有异步操作完成
 const tools = await Promise.all(toolPromises);
+
+const friendLinks = [
+	{
+		title: '代理命令速查',
+		description: 'Gist - proxy command references',
+		url: 'https://gist.github.com/bGZo/82a76ecbebf81b556a1d20a91a6bd21a'
+	},
+	{
+		title: '证件照生成',
+		description: 'Idify - Make ID photo right in the browser. ',
+		url: 'https://idify.netlify.app',
+		source: 'https://github.com/zhbhun/idify'
+	},
+	{
+		title: '网站图标生成',
+		description: ' Favycon - A favicon generator tool ',
+		url: 'https://favycon.vercel.app',
+		source: 'https://github.com/ruisaraiva19/favycon',
+	}
+];
 ---
 
 <Home title = {title}>
@@ -62,6 +82,37 @@ const tools = await Promise.all(toolPromises);
 						</div>
 					</a>
 				))}
+			</div>
+
+			<!-- 友情链接部分 -->
+			<div class="mt-12">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6">友情链接</h2>
+				<p class="text-xl text-gray-600 mb-6">未开源的工具不会放在这里，请放宽使用</p>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+					{friendLinks.map(link => (
+						<a
+							href={link.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="group block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all duration-200 transform hover:-translate-y-1"
+							title={`点击访问 ${link.title} - ${link.description}`}>
+						<div class="flex flex-col h-full">
+							<h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-2">
+								{link.title}
+							</h3>
+							<p class="text-sm text-gray-600 group-hover:text-gray-700 flex-grow leading-relaxed">
+								{link.description}
+							</p>
+							<div class="mt-4 flex items-center text-blue-600 group-hover:text-blue-700">
+								<span class="text-sm font-medium">访问工具</span>
+								<svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+								</svg>
+							</div>
+						</div>
+					</a>
+				))}
+				</div>
 			</div>
 
 			{tools.length === 0 && (

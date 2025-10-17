@@ -85,6 +85,21 @@
       <li>• 注意：URL Scheme 在移动设备上效果更佳</li>
     </ul>
   </div>
+
+  <!-- 示例测试 -->
+  <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-md">
+    <h3 class="text-lg font-medium text-green-800 mb-3">示例测试</h3>
+    <p class="text-sm text-green-700 mb-4">点击下方按钮测试常用应用的 URL Scheme：</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+      <button
+        v-for="example in exampleSchemes"
+        :key="example.key"
+        @click="testExampleScheme(example.scheme)"
+        class="px-3 py-2 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200">
+        {{ example.name }}
+      </button>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -96,6 +111,12 @@ interface Rule {
   name: string;
   pattern: RegExp;
   replacement: string;
+}
+
+interface ExampleScheme {
+  key: string;
+  name: string;
+  scheme: string;
 }
 
 const rules: Rule[] = [
@@ -129,6 +150,14 @@ const rules: Rule[] = [
     pattern: /^https?:\/\/(?:www\.)?github\.com\/([^\/]+)\/([^\/]+)$/,
     replacement: 'github://$1/$2'
   }
+];
+
+const exampleSchemes: ExampleScheme[] = [
+  { key: '支付宝扫一扫', name: '支付宝扫一扫', scheme: 'alipayqr://platformapi/startapp?saId=10000007' },
+  { key: '支付宝付款码', name: '支付宝付款码', scheme: 'alipayqr://platformapi/startapp?saId=20000056' },
+  { key: '哈啰扫码', name: '哈啰扫码', scheme: 'hellobike://hellobike.com/scan_qr' },
+  { key: '微信扫一扫', name: '微信扫一扫(iOS)', scheme: 'weixin://scanqrcode' },
+  { key: 'telegram', name: 'Telegram', scheme: 'tg://resolve?domain=imbgzo' },
 ];
 
 const inputText = ref('');
@@ -196,5 +225,10 @@ const clearAll = () => {
 const testScheme = (index: number) => {
   testedSchemes.value[index] = true;
   window.open(outputSchemes.value[index], '_blank', 'noopener,noreferrer');
+};
+
+// 测试示例 URL Scheme
+const testExampleScheme = (scheme: string) => {
+  window.open(scheme, '_blank', 'noopener,noreferrer');
 };
 </script>
