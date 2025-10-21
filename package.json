@@ -1,12 +1,13 @@
 {
-  "name": "",
+  "name": "bgzo-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "packageManager": "bun@1.2.23",
   "scripts": {
-    "dev": "NODE_ENV=development astro dev",
-    "build": "NODE_ENV=production astro build && cp .nojekyll dist/client/ && cp CNAME dist/client/",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "NODE_ENV=development bunx astro dev",
+    "build": "NODE_ENV=production bunx astro build && cp .nojekyll dist/client/ && cp CNAME dist/client/",
+    "preview": "bunx astro preview",
+    "astro": "bunx astro"
   },
   "dependencies": {
     "@astrojs/node": "^9.4.4",
