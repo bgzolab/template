@@ -6,6 +6,8 @@ import { profile } from '../config/profile'
 const { SITE_URL } = Astro.locals
 const { title } = Astro.props;  // 新增：接收 title prop
 const PAGE_TITLE = title ? `${profile.title}'s ${title}` : profile.title; // 动态设置标题
+const googleAnalytics = profile.googleAnalytics || null;
+
 ---
 <!doctype html>
 <html lang="en">
@@ -15,6 +17,17 @@ const PAGE_TITLE = title ? `${profile.title}'s ${title}` : profile.title; // 动
 		<link rel="icon" type="image/svg+xml" href={ SITE_URL + '/favicon.svg'}/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{PAGE_TITLE}</title>
+		{ googleAnalytics && (
+      <script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics}`} type="text/partytown"></script>
+      <script is:inline define:vars={{ googleAnalytics }} type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+              dataLayer.push(arguments);
+          };
+        window.gtag('js', new Date());
+        window.gtag('config', googleAnalytics);
+      </script>
+      )}
 	</head>
 	<body>
 		<slot />

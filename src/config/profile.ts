@@ -11,9 +11,10 @@ export const profile = {
     'GitHub': 'bGZo',
     'Bluesky': 'bgzo.bsky.social',
     'Mastodon': 'mastodon.social/@bgzo',
-    'Twitter': 'bgzo',
+    // 'Twitter': 'bgzo',
     'Discord': '',
     'RSS': '',
     'Podcast': '',
-  }
+  },
+  googleAnalytics: 'G-MYBV8B3KNC',
 };

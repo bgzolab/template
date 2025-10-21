@@ -1,6 +1,10 @@
 import { $fetch } from 'ofetch'
 import * as cheerio from 'cheerio'
-import { LRUCache } from 'lru-cache'
+// lru-cache has changed its exports across versions (named export vs default export).
+// Import defensively so this file works with different bundlers (Node, Bun) and
+// different installed versions of lru-cache.
+import * as LRUModule from 'lru-cache'
+const LRUCache = LRUModule?.LRUCache ?? LRUModule?.default ?? LRUModule
 import flourite from 'flourite'
 import prism from '../prism'
 import { getEnv } from '../env'

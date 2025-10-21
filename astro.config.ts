@@ -4,6 +4,7 @@ import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
 import node from '@astrojs/node';
 import remarkAdmonitions from 'remark-github-beta-blockquote-admonitions'
+import partytown from '@astrojs/partytown'
 
 
 // Markdown Reading Time
@@ -69,6 +70,9 @@ export default defineConfig({
     vue(),
     // 集成 Tailwind
     tailwind(),
+    // Partytown 集成
+    partytown({ config: { forward: ['dataLayer.push', 'gtag'] } }),
+
   ],
 
   adapter: node({
