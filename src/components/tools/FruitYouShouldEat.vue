@@ -1,74 +1,71 @@
 <template>
   <div class="w-full">
-    <!-- 头部信息 -->
-    <div class="mb-8">
-      <div class="mb-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-        <div class="flex items-center justify-between">
-          <div>
-            <h2 class="text-xl font-semibold text-gray-900 mb-1">当前月份</h2>
-            <p class="text-sm text-gray-600">{{ currentMonthName }} ({{ currentMonth }}月)</p>
-          </div>
-          <div class="text-4xl">📅</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 本月当季水果 -->
+    <!-- 本月推荐 -->
     <div class="mb-8 p-6 bg-white rounded-lg border border-gray-200 shadow-sm">
-      <h2 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-        <span class="mr-2">🌟</span>
-        本月推荐水果
+      <h2 class="text-base font-semibold text-gray-900 mb-4">
+        本月推荐 · {{ currentMonthName }}
       </h2>
-      <div v-if="currentSeasonFruits.length > 0" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+      <div v-if="currentSeasonFruits.length > 0" class="flex flex-wrap gap-3">
         <div v-for="fruit in currentSeasonFruits" :key="fruit.id"
-             class="p-3 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors">
-          <div class="text-3xl mb-1">{{ fruit.emoji }}</div>
-          <div class="text-sm font-medium text-gray-700">{{ fruit.name }}</div>
+             class="relative flex items-center space-x-2 px-3 py-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+             :title="getBadgeTitle(fruit)">
+          <!-- Badge group (top-right) -->
+          <div class="absolute -top-2 -right-2 flex items-center space-x-1">
+            <span v-if="isNewThisMonth(fruit)" class="bg-green-600 text-white text-xs font-semibold px-2 py-0.5 rounded-full">New</span>
+            <span v-if="willEndNextMonth(fruit)" class="bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full">Exp</span>
+          </div>
+          <span class="text-xl">{{ fruit.emoji }}</span>
+          <span class="text-sm font-medium text-gray-700">{{ fruit.name }}</span>
         </div>
       </div>
-      <div v-else class="text-center text-gray-500 py-6">
+      <div v-else class="text-center text-gray-500 py-4 text-sm">
         本月暂无推荐水果
       </div>
     </div>
 
-    <!-- 时间线说明 -->
-    <div class="mb-4">
-      <h2 class="text-lg font-semibold text-gray-900 mb-2">全年水果时令表</h2>
-      <p class="text-sm text-gray-600">从当前月份向未来12个月的水果成熟时间线</p>
-    </div>
-
-    <!-- 时间线 - 纵向布局 -->
-    <div class="space-y-6">
-      <div v-for="month in displayMonths" :key="month.index"
-           class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
-        <!-- 月份头部 -->
-        <div class="px-4 py-3 border-b border-gray-200 flex items-center justify-between"
-             :class="month.isCurrent ? 'bg-blue-50' : 'bg-gray-50'">
-          <div class="flex items-center space-x-3">
-            <div class="text-2xl font-bold"
-                 :class="month.isCurrent ? 'text-blue-600' : 'text-gray-700'">
+    <!-- 时间线 -->
+    <div class="relative">
+      <!-- 时间轴线 -->
+      <div class="absolute left-[60px] top-0 bottom-0 w-px bg-gray-200"></div>
+      
+      <!-- 时间线项目 -->
+      <div class="space-y-0">
+        <div v-for="month in displayMonths" :key="month.index" class="relative flex">
+          <!-- 左侧：月份标签 -->
+          <div class="flex-shrink-0 w-[60px] pt-6 pr-4 text-right">
+            <div class="text-sm font-medium"
+                 :class="month.isCurrent ? 'text-blue-600' : 'text-gray-500'">
               {{ month.name }}
             </div>
-            <div v-if="month.isCurrent" 
-                 class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
-              当前月份
+            <div v-if="month.showYear" class="text-xs text-gray-400 mt-0.5">
+              {{ month.year }}
             </div>
           </div>
-          <div class="text-sm text-gray-500">{{ month.year }}年</div>
-        </div>
 
-        <!-- 该月水果列表 -->
-        <div class="p-4">
-          <div v-if="getFruitsInMonth(month.realMonth).length > 0" 
-               class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            <div v-for="fruit in getFruitsInMonth(month.realMonth)" :key="fruit.id"
-                 class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
-              <span class="text-2xl">{{ fruit.emoji }}</span>
-              <span class="text-sm font-medium text-gray-700">{{ fruit.name }}</span>
+          <!-- 时间轴节点 -->
+          <div class="absolute left-[60px] top-6 transform -translate-x-1/2 z-10">
+            <div class="w-3 h-3 rounded-full border-2"
+                 :class="month.isCurrent 
+                   ? 'bg-blue-600 border-blue-600' 
+                   : 'bg-white border-gray-300'">
             </div>
           </div>
-          <div v-else class="text-center py-4 text-gray-400 text-sm">
-            本月暂无应季水果
+
+          <!-- 右侧：水果卡片 -->
+          <div class="flex-1 pl-6 pb-6">
+            <div v-if="getFruitsInMonth(month.realMonth).length > 0"
+                 class="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+              <div class="flex flex-wrap gap-2">
+                <div v-for="fruit in getFruitsInMonth(month.realMonth)" :key="fruit.id"
+                     class="flex items-center space-x-1.5 px-2.5 py-1.5 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
+                  <span class="text-lg">{{ fruit.emoji }}</span>
+                  <span class="text-sm text-gray-700">{{ fruit.name }}</span>
+                </div>
+              </div>
+            </div>
+            <div v-else class="text-sm text-gray-400 pt-1">
+              暂无应季水果
+            </div>
           </div>
         </div>
       </div>
@@ -91,16 +88,26 @@ const currentMonthName = computed(() => monthNames[currentDate.value.getMonth()]
 const displayMonths = computed(() => {
   const months = []
   const now = new Date()
+  const currentYear = now.getFullYear()
   
   for (let i = 0; i < 12; i++) {
     const date = new Date(now.getFullYear(), now.getMonth() + i, 1)
     const monthIndex = date.getMonth() + 1
+    const year = date.getFullYear()
+    
+    // 显示年份的条件：
+    // 1. 第一个月总是显示年份
+    // 2. 1月时显示年份（新年）
+    // 3. 年份变化时显示年份
+    const showYear = i === 0 || monthIndex === 1 || (i > 0 && year !== months[i - 1].year)
+    
     months.push({
       index: i,
       realMonth: monthIndex,
       name: monthNames[date.getMonth()],
-      year: date.getFullYear(),
-      isCurrent: i === 0
+      year: year,
+      isCurrent: i === 0,
+      showYear: showYear
     })
   }
   
@@ -139,7 +146,7 @@ const fruits = ref([
   { id: 23, name: '石榴', emoji: '🟥', months: [9, 10] },
   { id: 24, name: '梨', emoji: '🍐', months: [8, 9, 10, 11] },
   { id: 25, name: '柿子', emoji: '🟠', months: [9, 10, 11] },
-  { id: 26, name: '柚子', emoji: '🟡', months: [9, 10, 11] },
+  { id: 26, name: '柚子', emoji: '🟡', months: [9, 10, 11, 12, 1] },
   { id: 27, name: '猕猴桃', emoji: '🥝', months: [9, 10, 11] },
   { id: 28, name: '苹果', emoji: '🍎', months: [9, 10, 11, 12] },
   { id: 29, name: '冬枣', emoji: '🟤', months: [9, 10, 11] },
@@ -152,7 +159,6 @@ const fruits = ref([
   { id: 34, name: '柑橘', emoji: '🍊', months: [10, 11, 12, 1, 2] },
   { id: 35, name: '砂糖橘', emoji: '🍊', months: [12, 1, 2] },
   { id: 36, name: '金桔', emoji: '🟡', months: [11, 12, 1] },
-  { id: 37, name: '柚子', emoji: '🟡', months: [10, 11, 12, 1] },
   { id: 38, name: '释迦果', emoji: '🟢', months: [11, 12, 1, 2] },
   
   // 全年可得水果
@@ -167,6 +173,31 @@ const currentSeasonFruits = computed(() => {
   return fruits.value.filter(fruit => fruit.months.includes(currentMonth.value))
 })
 
+// 上个月和下个月
+const prevMonth = computed(() => ((currentMonth.value + 10) % 12) + 1) // -1 month
+const nextMonth = computed(() => (currentMonth.value % 12) + 1) // +1 month
+
+// 判断水果是否本月是首次出现（new）
+const isNewThisMonth = (fruit) => {
+  // 如果水果成熟月份包含本月，但不包含上个月，则视为本月新上市
+  return fruit.months.includes(currentMonth.value) && !fruit.months.includes(prevMonth.value)
+}
+
+// 判断水果是否将在下个月过季（即本月有，下个月没有）
+const willEndNextMonth = (fruit) => {
+  return fruit.months.includes(currentMonth.value) && !fruit.months.includes(nextMonth.value)
+}
+
+// Badge 提示文本
+const getBadgeTitle = (fruit) => {
+  if (isNewThisMonth(fruit) && willEndNextMonth(fruit)) {
+    return '本月新上市，并可能下月结束'
+  }
+  if (isNewThisMonth(fruit)) return '本月新上市'
+  if (willEndNextMonth(fruit)) return '下月将过季'
+  return ''
+}
+
 // 获取指定月份的水果
 const getFruitsInMonth = (month) => {
   return fruits.value.filter(fruit => fruit.months.includes(month))
@@ -174,22 +205,5 @@ const getFruitsInMonth = (month) => {
 </script>
 
 <style scoped>
-/* 自定义滚动条样式 */
-.overflow-x-auto::-webkit-scrollbar {
-  height: 8px;
-}
-
-.overflow-x-auto::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.overflow-x-auto::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.overflow-x-auto::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+/* 无需额外样式 */
 </style>
