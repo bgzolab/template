@@ -387,7 +387,8 @@ func main() {
 	}
 
 	//message := "Hello world from script!"
-	//fmt.Println(SocialMediaUtils.SendBlueSky(message))
-	//fmt.Println(SocialMediaUtils.SendMastodon(message))
+	//fmt.Println(SocialMediaUtils.SendBlueSky(globalConfig, message))
+	//fmt.Println(SocialMediaUtils.SendTwitter(globalConfig, message))
+	//fmt.Println(SocialMediaUtils.SendMastodon(globalConfig, message))
 
 }
