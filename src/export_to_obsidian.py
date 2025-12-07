@@ -8,6 +8,7 @@ from bangumi.collection import get_all_collections_by_pages
 from bangumi.enum import SubjectType, CollectionType
 from cnblog.blog_post import get_cnblog_post_body_by_url
 from cnblog.bookmark import get_bookmark_list
+from qireader.getext import get_html_text_from_url
 from utils.file_utils import output_content_to_file_path, get_clean_filename
 from utils.md_utils import html_to_markdown_with_html2text, html_to_markdown_with_bs
 from utils.template import WebPage
@@ -219,10 +220,7 @@ def bangumi(subject_type, collection_type, output, template, force):
 @click.option('--output', '-o', required=True, help='输出目录')
 def qireader(tag, output):
     from qireader.readlatter import get_list_from_read_latter
-
-    all_entries = []
     older_than = None
-    is_done = False
 
     while True:
         entries = get_list_from_read_latter(tag, older_than)
@@ -233,9 +231,8 @@ def qireader(tag, output):
             filename = get_clean_filename(entry.title)
             file_path = os.path.join(output, f"~{filename}.md")
             if os.path.exists(file_path):
-                print(f"已存在，跳过: {filename}.md")
-                is_done = True
-                break
+                print(f"已存在: {filename}.md，同步结束")
+                return
 
             timestamp_seconds = int(entry.timestamp) / 1_000_000_000
             md = dump_markdown_with_frontmatter(
@@ -245,8 +242,7 @@ def qireader(tag, output):
                     "created": datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
                     "type": "archive-web"
                 },
-                # TODO 获得全文
-                html_to_markdown_with_html2text(entry.summary)
+                html_to_markdown_with_html2text(get_html_text_from_url(entry.url))
             )
             output_content_to_file_path(
                 output,
@@ -256,8 +252,6 @@ def qireader(tag, output):
 
             print(f"Done: {entry.title}")
 
-        if is_done:
-            break
         older_than = str(entries[-1].timestamp)
 
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
