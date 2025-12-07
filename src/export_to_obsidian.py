@@ -214,6 +214,52 @@ def bangumi(subject_type, collection_type, output, template, force):
     else:
         sync_all_collection_under_subject_type(subject_type, output, template, force)
 
+@eto.command()
+@click.option('--tag', '-t', required=True, type=str, help='收藏夹ID')
+@click.option('--output', '-o', required=True, help='输出目录')
+def qireader(tag, output):
+    from qireader.readlatter import get_list_from_read_latter
+
+    all_entries = []
+    older_than = None
+    is_done = False
+
+    while True:
+        entries = get_list_from_read_latter(tag, older_than)
+        if not entries:
+            break
+
+        for entry in entries:
+            filename = get_clean_filename(entry.title)
+            file_path = os.path.join(output, f"~{filename}.md")
+            if os.path.exists(file_path):
+                print(f"已存在，跳过: {filename}.md")
+                is_done = True
+                break
+
+            timestamp_seconds = int(entry.timestamp) / 1_000_000_000
+            md = dump_markdown_with_frontmatter(
+                {
+                    "title": entry.title,
+                    "source": entry.url,
+                    "created": datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
+                    "type": "archive-web"
+                },
+                # TODO 获得全文
+                html_to_markdown_with_html2text(entry.summary)
+            )
+            output_content_to_file_path(
+                output,
+                filename,
+                md,
+                "md")
+
+            print(f"Done: {entry.title}")
+
+        if is_done:
+            break
+        older_than = str(entries[-1].timestamp)
+
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
     collection_type_list = CollectionType.all()
     for collection_type in collection_type_list:
@@ -228,17 +274,19 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
         print("处理完成: ", collection_type)
 
 if __name__ == '__main__':
-    # eto()
-    write_bangumi_data_from_id(
-        subject_id=334105,
-        collection_type=2,
-        output_dir="output/bangumi",
-        template_path="config/bangumi_template.md"
-    )
+    eto()
+
+    # write_bangumi_data_from_id(
+    #     subject_id=334105,
+    #     collection_type=2,
+    #     output_dir="output/bangumi",
+    #     template_path="config/bangumi_template.md"
+    # )
     # sync_all_collection_under_subject_type(
     #     subject_type=SubjectType.ANIME.value,
     #     output_dir="output/bangumi",
     #     template_path="config/bangumi_template.md"
     # )
+    # qireader('tag-xxx', "output/qireader")
 
 

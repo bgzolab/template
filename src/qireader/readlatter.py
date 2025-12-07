@@ -32,10 +32,23 @@ def get_list_from_read_latter(tag_id: str, oldThan: Optional[str]) -> List[Entry
     return []
 
 
+def get_all_list_from_read_latter_debug(tag_id: str) -> List[Entry]:
+    all_entries = []
+    older_than = None
+
+    while True:
+        entries = get_list_from_read_latter(tag_id, older_than)
+        if not entries:
+            break
+        all_entries.extend(entries)
+        older_than = str(entries[-1].timestamp)
+
+    return all_entries
+
 if __name__ == '__main__':
     try:
         bookmarks = get_list_from_read_latter("tag-xxx", None)
-        for bm in bookmarks:
-            print(bm)
+        # bookmarks = get_all_list_from_read_latter("tag-Jw3lnV59k7Vaky2g")
+        print(bookmarks)
     except Exception as e:
         print(f"An error occurred: {e}")

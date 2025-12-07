@@ -40,3 +40,5 @@ target-url: https://www.qireader.com/api/streams/{tagId}?articleOrder=0&count=25
   }
 }
 """
+
+FULL_TEXT = "https://nettools3.oxyry.com/text"
