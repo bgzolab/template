@@ -1,4 +1,6 @@
 ---
+comments: true
+draft: true
 aliases: {{aliases}}
 bangumi: https://bgm.tv/subject/{{bangumi}}
 bangumi-rating: {{rating}}

@@ -32,6 +32,8 @@ def cnblog_export(output_dir):
                 return  # 剪枝，提前退出
             if bm.FromCNBlogs:
                 webpage = WebPage(
+                    comments=True,
+                    draft=True,
                     title=bm.Title,
                     source=bm.LinkUrl,
                     created=bm.DateAdded,
@@ -221,6 +223,7 @@ def bangumi(subject_type, collection_type, output, template, force):
 def qireader(tag, output):
     from qireader.readlatter import get_list_from_read_latter
     older_than = None
+    result_index = "";
 
     while True:
         entries = get_list_from_read_latter(tag, older_than)
@@ -232,16 +235,21 @@ def qireader(tag, output):
             file_path = os.path.join(output, f"~{filename}.md")
             if os.path.exists(file_path):
                 print(f"已存在: {filename}.md，同步结束")
+                print("导出index\n", result_index)
                 return
 
             timestamp_seconds = int(entry.timestamp) / 1_000_000_000
+            webpage = WebPage(
+                comments=True,
+                draft=True,
+                title=entry.title,
+                source=entry.url,
+                created=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
+                modified=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
+                type="archive-web"
+            )
             md = dump_markdown_with_frontmatter(
-                {
-                    "title": entry.title,
-                    "source": entry.url,
-                    "created": datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
-                    "type": "archive-web"
-                },
+                webpage.__dict__,
                 html_to_markdown_with_html2text(get_html_text_from_url(entry.url))
             )
             output_content_to_file_path(
@@ -251,8 +259,10 @@ def qireader(tag, output):
                 "md")
 
             print(f"Done: {entry.title}")
-
+            result_index += f'\n- [[~{filename}|{entry.title}]]'
         older_than = str(entries[-1].timestamp)
+    # 容错处理
+    print("导出index\n", result_index)
 
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
     collection_type_list = CollectionType.all()

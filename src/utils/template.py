@@ -10,6 +10,8 @@ from dataclasses import dataclass
 # Webpage Meta Template
 @dataclass
 class WebPage:
+    comments:bool
+    draft:bool
     title: str
     source: str
     created: str
