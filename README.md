@@ -1,4 +1,7 @@
-# Export your data into Obsidian
+# Export all your data into Obsidian
+
+Your data is your asset, you should own it. This tool helps you export your data from various platforms into markdown files that can be easily imported and managed by Obsidian.
+
 
 ## Roadmap
 

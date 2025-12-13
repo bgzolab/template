@@ -312,7 +312,7 @@ def v2ex(output):
 
             print(f"Done: {topic.title}")
             result_index += f'\n- [[~{filename}|{topic.title}]]'
-
+    print("导出完成index\n", result_index)
 
 @eto.command()
 @click.option('--collection', '-c', required=True, help='收藏夹')
@@ -373,6 +373,8 @@ def zhihu(collection, output):
         if page.data is None or len(page.data) == 0:
             break
         offset += limit
+
+    print(f"输出index:\n{result_index}")
 
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
     collection_type_list = CollectionType.all()
