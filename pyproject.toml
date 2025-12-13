@@ -1,6 +1,6 @@
 [project]
 name = "export_to_obsidian"
-version = "0.3.13"
+version = "0.3.14"
 description = "A tool to export all you need to obsidian"
 authors = [
     {name = "hx",email = "im@bgzo.cc"}
