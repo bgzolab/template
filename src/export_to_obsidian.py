@@ -278,6 +278,7 @@ def v2ex(output):
         id_list = get_fav_list_topic_id_page(page)
         if not id_list or len(id_list) == 0:
             break
+        page = page + 1
         for id in id_list:
             result = get_v2ex_topic_info(id)
             if not result:
