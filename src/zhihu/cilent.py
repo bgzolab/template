@@ -16,7 +16,7 @@ class ZhihuClient:
         self.cookie = os.getenv("ZHIHU_COOKIE")
 
         if not self.cookie:
-            raise ValueError("DEMO_TOKEN environment variable is not set.")
+            raise ValueError("ZHIHU_COOKIE environment variable is not set.")
         self.session = requests.Session()
         self.session.headers.update({
             # "Authorization": f"Bearer {self.token}",

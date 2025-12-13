@@ -16,6 +16,9 @@ from utils.md_utils import dump_markdown_with_frontmatter
 from bangumi.subject import get_subject_info, get_subject_character
 from datetime import datetime
 
+from zhihu.collection import get_collection_page
+
+
 # CNBLOG 博客园
 def cnblog_export(output_dir):
     page_index = 1
@@ -264,6 +267,71 @@ def qireader(tag, output):
     # 容错处理
     print("导出index\n", result_index)
 
+@eto.command()
+@click.option('--output', '-o', required=True, help='输出目录')
+def v2ex(output):
+    pass
+
+@eto.command()
+@click.option('--collection', '-c', required=True, help='收藏夹')
+@click.option('--output', '-o', required=True, help='输出目录')
+def zhihu(collection, output):
+    result_index = "";
+    offset = 0
+    limit = 20
+
+    while True:
+        page = get_collection_page(collection, offset, limit)
+        # 处理当前页的数据
+        for c in page.data:
+            content = c.content
+            article = ''
+            title = ''
+            id = content.id
+            if isinstance(content.content, list):
+                # 想法
+                title = c.content.content[0]['title']
+                article = content.content[0]['content']
+            else:
+                title = content.title or content.question.title
+                article = content.content
+
+            filename = get_clean_filename( id + "-" + title)
+            file_path = os.path.join(output, f"~{filename}.md")
+            if os.path.exists(file_path):
+                print(f"已存在: {filename}.md，同步结束")
+                print("导出index\n", result_index)
+                return
+
+            created_time = datetime.fromtimestamp(content.created_time).strftime('%Y-%m-%dT%H:%M:%S%z')
+            modified_time = datetime.fromtimestamp(content.updated_time).strftime('%Y-%m-%dT%H:%M:%S%z')
+            webpage = WebPage(
+                comments=True,
+                draft=True,
+                title=title,
+                source=content.url,
+                created=created_time,
+                modified=modified_time,
+                type="archive-web"
+            )
+            md = dump_markdown_with_frontmatter(
+                webpage.__dict__,
+                html_to_markdown_with_html2text(article)
+            )
+            output_content_to_file_path(
+                output,
+                filename,
+                md,
+                "md")
+
+            print(f"Done: {title}")
+            result_index += f'\n- [[~{filename}|{title}]]'
+
+
+        if page.data is None or len(page.data) == 0:
+            break
+        offset += limit
+
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
     collection_type_list = CollectionType.all()
     for collection_type in collection_type_list:
@@ -280,6 +348,7 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
 if __name__ == '__main__':
     eto()
 
+    # zhihu(908297073, "output/zhihu")
     # write_bangumi_data_from_id(
     #     subject_id=334105,
     #     collection_type=2,
