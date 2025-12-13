@@ -16,6 +16,8 @@ from utils.md_utils import dump_markdown_with_frontmatter
 from bangumi.subject import get_subject_info, get_subject_character
 from datetime import datetime
 
+from v2ex.mytopic import get_fav_list_topic_id_page
+from v2ex.topic import get_v2ex_topic_info
 from zhihu.collection import get_collection_page
 
 
@@ -270,7 +272,47 @@ def qireader(tag, output):
 @eto.command()
 @click.option('--output', '-o', required=True, help='输出目录')
 def v2ex(output):
-    pass
+    result_index = "";
+    page = 1
+    while True:
+        id_list = get_fav_list_topic_id_page(page)
+        if not id_list or len(id_list) == 0:
+            break
+        for id in id_list:
+            result = get_v2ex_topic_info(id)
+            if not result:
+                continue
+            topic = result.result
+            filename = get_clean_filename(str(id) + '-' + topic.title)
+            file_path = os.path.join(output, f"~{filename}.md")
+            if os.path.exists(file_path):
+                print(f"已存在: {filename}.md，同步结束")
+                print("导出index\n", result_index)
+                return
+            created_time = datetime.fromtimestamp(topic.created).strftime('%Y-%m-%dT%H:%M:%S%z')
+            modified_time = datetime.fromtimestamp(topic.last_modified).strftime('%Y-%m-%dT%H:%M:%S%z')
+            webpage = WebPage(
+                comments=True,
+                draft=True,
+                title=topic.title,
+                source=topic.url,
+                created=created_time,
+                modified=modified_time,
+                type="archive-web"
+            )
+            md = dump_markdown_with_frontmatter(
+                webpage.__dict__,
+                topic.content
+            )
+            output_content_to_file_path(
+                output,
+                filename,
+                md,
+                "md")
+
+            print(f"Done: {topic.title}")
+            result_index += f'\n- [[~{filename}|{topic.title}]]'
+
 
 @eto.command()
 @click.option('--collection', '-c', required=True, help='收藏夹')
@@ -348,6 +390,7 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
 if __name__ == '__main__':
     eto()
 
+    # v2ex("output/v2ex")
     # zhihu(908297073, "output/zhihu")
     # write_bangumi_data_from_id(
     #     subject_id=334105,

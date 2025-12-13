@@ -11,7 +11,7 @@ from v2ex.cilent import V2exClient
 from v2ex.entity import TopicResponse
 
 
-def get_v2ex_topic_info(topic_id: str) -> Optional[TopicResponse]:
+def get_v2ex_topic_info(topic_id: int) -> Optional[TopicResponse]:
     client = V2exClient()
     response = client.session.get(V2EX_API_TOPICS.format(topic_id=topic_id))
     
