@@ -264,9 +264,16 @@ def qireader(tag, output):
                 modified=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
                 type="archive-web"
             )
+            # 尝试获取内容
+            content = ''
+            try:
+                content = html_to_markdown_with_html2text(get_html_text_from_url(entry.url))
+            except Exception as e:
+                print(f"处理{filename}的全文时候发生异常，源地址可以已经删除，直接跳过，请手动处理！")
+
             md = dump_markdown_with_frontmatter(
                 webpage.__dict__,
-                html_to_markdown_with_html2text(get_html_text_from_url(entry.url))
+                content,
             )
             output_content_to_file_path(
                 output,
