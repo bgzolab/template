@@ -25,6 +25,7 @@ from zhihu.collection import get_collection_page
 def cnblog_export(output_dir):
     page_index = 1
     page_size = 100
+    result_index = ""
     while True:
         bookmarks = get_bookmark_list(page_index, page_size)
         if not bookmarks:
@@ -34,6 +35,7 @@ def cnblog_export(output_dir):
             file_path = os.path.join(output_dir, f"~{filename}.md")
             if os.path.exists(file_path):
                 print(f"已存在，提前结束: {filename}.md")
+                print("输出index:\n", result_index)
                 return  # 剪枝，提前退出
             if bm.FromCNBlogs:
                 webpage = WebPage(
@@ -61,14 +63,16 @@ def cnblog_export(output_dir):
                 print(f"Done: {bm.Title}")
             else:
                 print(f"Skip: {bm.Title}")
+            result_index += f'\n- [[~{filename}|{bm.Title}]]'
         page_index += 1
+    print("输出index:\n", result_index)
 
 def bangumi_export(subject_type: int, collection_type: int, output_dir: str, template_path: str, force: bool = False):
-    # NOTE: 暂时就导出游戏
     client = BangumiClient()
     username = client.get_user()['username']
     limit = 30
     offset = 0
+    result_index = ""
 
     while True:
         results = get_all_collections_by_pages(
@@ -86,25 +90,31 @@ def bangumi_export(subject_type: int, collection_type: int, output_dir: str, tem
         for res in results:
             # print("get response=", res)
             try:
-                if not write_bangumi_data_from_id(
-                        subject_id=res.subject_id,
-                        collection_type=collection_type,
-                        output_dir=output_dir,
-                        template_path=template_path,
-                        force=force):
-                    if not force:
-                        return
+                result, filename, title = write_bangumi_data_from_id(
+                    subject_id=res.subject_id,
+                    collection_type=collection_type,
+                    output_dir=output_dir,
+                    template_path=template_path,
+                    force=force)
+                if result:
+                    result_index += f'\n- [[{filename}|{title}]]'
+                elif not force:
+                    print(f"写入失败: {filename}")
+                    print("输出index\n", result_index)
+                    return
             except Exception as e:
                 print(f"跳过:{res.subject.name}, subject_id={res.subject_id}, error={e}")
             print(f"处理完成={res.subject_id}")
+    print("输出index\n", result_index)
 
 
-def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir: str, template_path: str, force: bool = False) -> bool:
+def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir: str, template_path: str, force: bool = False) -> (bool, str, str):
     # 1. 获取条目详情
     subject = get_subject_info(subject_id)
     if not subject:
         print(f"未获取到条目详情: {subject_id}")
-        return True
+        # 当前条目可能有问题，不能影响后续的导出执行，需要跳过
+        return True, '', ''
 
     subject_type = subject.type_id
     subject_type_en = SubjectType.get_name_en(subject_type)
@@ -141,7 +151,7 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     output_path = os.path.join(output_dir, subject_type_en, filename)
     if os.path.exists(output_path) and not force:
         print(f"已存在，提前结束: {filename}")
-        return False
+        return False, '', ''
 
     # 2. 读取模板内容
     with open(template_path, 'r', encoding='utf-8') as f:
@@ -150,10 +160,11 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     # 3. 渲染模板（这里只做简单替换，可根据需要扩展）
     # 你可以根据模板变量名和 subject 字段进行映射
     content = template
+    title = subject.name_cn or subject.name or ""
     content = content.replace('{{tags}}', str(tags))
     content = content.replace('{{aliases}}', str(list(aliases_set)))
     content = content.replace('{{website}}', str(list(website_set)))
-    content = content.replace('{{title}}', subject.name_cn or subject.name or "")
+    content = content.replace('{{title}}', title)
     content = content.replace('{{bangumi}}', str(subject.id))
     content = content.replace('{{cover}}', subject.images.medium if subject.images else "")
     content = content.replace('{{created}}', created_date)
@@ -169,7 +180,7 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(content)
     print(f"写入完成: {output_path}")
-    return True
+    return True, filename, title
 
 
 def parse_infobox_value(item):
