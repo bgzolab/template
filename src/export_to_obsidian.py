@@ -18,6 +18,7 @@ from datetime import datetime
 
 from v2ex.mytopic import get_fav_list_topic_id_page
 from v2ex.topic import get_v2ex_topic_info
+from weibo.like import get_weibo_like_list
 from zhihu.collection import get_collection_page
 
 
@@ -395,6 +396,90 @@ def zhihu(collection, output):
 
     print(f"输出index:\n{result_index}")
 
+
+'''
+获取微博图片链接
+
+TODO 下载图片
+'''
+def handle_weibo_pic(item) -> str:
+    if item.pic_num is None or item.pic_num == 0 or item.pic_ids is None or len(item.pic_ids) == 0 :
+        return ""
+    result = ""
+    pic_infos = item.pic_infos
+    for pic_id in item.pic_ids:
+        pic_info = pic_infos[pic_id]
+        url = pic_info.largest['url']
+        result += f"![{pic_id}]({url})\n\n"
+    return result
+
+# @eto.command()
+# @click.option('--uid', '-u', required=True, help='用户ID')
+# @click.option('--output', '-o', required=True, help='输出目录')
+def weibo(uid: int, output: str):
+    result_index = "";
+    page_index = 1
+    while True:
+        page = get_weibo_like_list(uid, page_index)
+        if page is None:
+            print("获取微博喜欢列表失败，请检查接口")
+            break
+
+        if page.ok == 1:
+            list = page.data.list
+            if len(list) == 0:
+                break
+
+            for item in list:
+                post_id = item.mblogid
+                post_user = item.user.id
+                post_url = f"https://weibo.com/{post_user}/{post_id}"
+                filename = f"{post_user}-{post_id}"
+
+                auther_name = item.user.screen_name
+                context_digest = get_clean_filename(item.text_raw[:10])
+                title = auther_name + ":" + context_digest
+
+                created_at_str = item.created_at
+                article_html = item.text
+
+                # %a: 缩写星期 (Wed)
+                # %b: 缩写月份 (Dec)
+                # %d: 日期 (24)
+                # %H:%M:%S: 时间 (04:08:45)
+                # %z: 时区偏移 (+0800)
+                # %Y: 年份 (2025)
+                dt_obj = datetime.strptime(created_at_str, "%a %b %d %H:%M:%S %z %Y")
+                webpage = WebPage(
+                    comments=True,
+                    draft=True,
+                    title=title,
+                    source=post_url,
+                    created=dt_obj.strftime("%Y-%m-%dT%H:%M:%S"),
+                    modified=dt_obj.strftime("%Y-%m-%dT%H:%M:%S"),
+                    type="archive-web"
+                )
+                md = dump_markdown_with_frontmatter(
+                    webpage.__dict__,
+                    html_to_markdown_with_html2text(article_html) + handle_weibo_pic(item)
+                )
+                output_content_to_file_path(
+                    output,
+                    filename,
+                    md,
+                    "md")
+
+                print(f"Done: {title}")
+                result_index += f'\n- [[~{filename}|{title}]]'
+            page_index += 1
+
+        else:
+            print("获取微博喜欢列表失败，请检查接口")
+            break
+
+    print(f"输出index:\n{result_index}")
+
+
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
     collection_type_list = CollectionType.all()
     for collection_type in collection_type_list:
@@ -409,7 +494,7 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
         print("处理完成: ", collection_type)
 
 if __name__ == '__main__':
-    eto()
+    # eto()
 
     # v2ex("output/v2ex")
     # zhihu(908297073, "output/zhihu")
@@ -426,4 +511,4 @@ if __name__ == '__main__':
     # )
     # qireader('tag-xxx', "output/qireader")
 
-
+    weibo(8221250887, "output/weibo")

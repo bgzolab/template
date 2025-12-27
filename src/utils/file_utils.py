@@ -27,7 +27,7 @@ def ensure_output_directory_exists(output_dir: str):
 
 def get_clean_filename(filename: str) -> str:
     try:
-        filename = re.sub(r'[@…：.？，！\|｜【】\[\]:!“”《》_、「」#——<>:"/\\|\-。（）&•]', ' ', filename)
+        filename = re.sub(r'[@…：.？，！\|｜【】\[\]:!“”《》_、「」#——<>:"/\\|\-。（）&•​\n]', ' ', filename)
     except AttributeError:
         pass
 
