@@ -417,7 +417,8 @@ def handle_weibo_pic(item) -> str:
 @eto.command()
 @click.option('--uid', '-u', required=True, help='用户ID')
 @click.option('--output', '-o', required=True, help='输出目录')
-def weibo(uid: int, output: str):
+@click.option('--force', required=False, is_flag=True, help='是否强制覆盖')
+def weibo(uid: int, output: str, force: bool):
     result_index = "";
     page_index = 1
     while True:
@@ -432,58 +433,64 @@ def weibo(uid: int, output: str):
                 break
 
             for item in list:
-                post_id = item.mblogid
-                post_user = item.user.id
-                post_url = f"https://weibo.com/{post_user}/{post_id}"
-                filename = f"{post_user}-{post_id}"
+                try:
+                    post_id = item.mblogid
+                    post_user = item.user.id
+                    post_url = f"https://weibo.com/{post_user}/{post_id}"
+                    filename = f"{post_user}-{post_id}"
 
-                # 提前剪枝
-                file_path = os.path.join(output, f"~{filename}.md")
-                if os.path.exists(file_path):
-                    print(f"已存在: {filename}.md，同步结束")
-                    print("导出index\n", result_index)
-                    return
+                    # 提前剪枝
+                    if not force:
+                        file_path = os.path.join(output, f"~{filename}.md")
+                        if os.path.exists(file_path):
+                            print(f"已存在: {filename}.md，同步结束")
+                            print("导出index\n", result_index)
+                            return
 
-                auther_name = item.user.screen_name
-                context_digest = get_clean_filename(item.text_raw[:10])
-                title = auther_name + ":" + context_digest
+                    auther_name = item.user.screen_name
+                    context_digest = get_clean_filename(item.text_raw[:10])
+                    title = auther_name + ":" + context_digest
 
-                created_at_str = item.created_at
-                article = item.text_raw
-                # 如果是长文本
-                if item.isLongText:
-                    longtext = get_weibo_longtext_by_id(post_id)
-                    if longtext is not None:
-                        article = get_weibo_longtext_by_id(post_id)
+                    created_at_str = item.created_at
+                    article = item.text_raw
+                    # 如果是长文本
+                    if item.isLongText:
+                        longtext = get_weibo_longtext_by_id(post_id)
+                        if longtext is not None:
+                            article = get_weibo_longtext_by_id(post_id)
 
-                # %a: 缩写星期 (Wed)
-                # %b: 缩写月份 (Dec)
-                # %d: 日期 (24)
-                # %H:%M:%S: 时间 (04:08:45)
-                # %z: 时区偏移 (+0800)
-                # %Y: 年份 (2025)
-                dt_obj = datetime.strptime(created_at_str, "%a %b %d %H:%M:%S %z %Y")
-                webpage = WebPage(
-                    comments=True,
-                    draft=True,
-                    title=title,
-                    source=post_url,
-                    created=dt_obj.strftime("%Y-%m-%dT%H:%M:%S"),
-                    modified=dt_obj.strftime("%Y-%m-%dT%H:%M:%S"),
-                    type="archive-web"
-                )
-                md = dump_markdown_with_frontmatter(
-                    webpage.__dict__,
-                    article + '\n\n' + handle_weibo_pic(item)
-                )
-                output_content_to_file_path(
-                    output,
-                    filename,
-                    md,
-                    "md")
+                    # %a: 缩写星期 (Wed)
+                    # %b: 缩写月份 (Dec)
+                    # %d: 日期 (24)
+                    # %H:%M:%S: 时间 (04:08:45)
+                    # %z: 时区偏移 (+0800)
+                    # %Y: 年份 (2025)
+                    dt_obj = datetime.strptime(created_at_str, "%a %b %d %H:%M:%S %z %Y")
+                    webpage = WebPage(
+                        comments=True,
+                        draft=True,
+                        title=title,
+                        source=post_url,
+                        created=dt_obj.strftime("%Y-%m-%dT%H:%M:%S"),
+                        modified=dt_obj.strftime("%Y-%m-%dT%H:%M:%S"),
+                        type="archive-web"
+                    )
+                    md = dump_markdown_with_frontmatter(
+                        webpage.__dict__,
+                        article + '\n\n' + handle_weibo_pic(item)
+                    )
+                    output_content_to_file_path(
+                        output,
+                        filename,
+                        md,
+                        "md")
 
-                print(f"Done: {title}")
-                result_index += f'\n- [[~{filename}|{title}]]'
+                    print(f"Done: {title}")
+                    result_index += f'\n- [[~{filename}|{title}]]'
+
+                except Exception as e:
+                    print(f"处理报文发生错误: {e}，微博可能已经被删除，跳过处理")
+
             page_index += 1
 
         else:
