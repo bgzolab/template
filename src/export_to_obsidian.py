@@ -19,6 +19,7 @@ from datetime import datetime
 from v2ex.mytopic import get_fav_list_topic_id_page
 from v2ex.topic import get_v2ex_topic_info
 from weibo.like import get_weibo_like_list
+from weibo.post import get_weibo_longtext_by_id
 from zhihu.collection import get_collection_page
 
 
@@ -436,12 +437,24 @@ def weibo(uid: int, output: str):
                 post_url = f"https://weibo.com/{post_user}/{post_id}"
                 filename = f"{post_user}-{post_id}"
 
+                # 提前剪枝
+                file_path = os.path.join(output, f"~{filename}.md")
+                if os.path.exists(file_path):
+                    print(f"已存在: {filename}.md，同步结束")
+                    print("导出index\n", result_index)
+                    return
+
                 auther_name = item.user.screen_name
                 context_digest = get_clean_filename(item.text_raw[:10])
                 title = auther_name + ":" + context_digest
 
                 created_at_str = item.created_at
-                article_html = item.text
+                article = item.text_raw
+                # 如果是长文本
+                if item.isLongText:
+                    longtext = get_weibo_longtext_by_id(post_id)
+                    if longtext is not None:
+                        article = get_weibo_longtext_by_id(post_id)
 
                 # %a: 缩写星期 (Wed)
                 # %b: 缩写月份 (Dec)
@@ -461,7 +474,7 @@ def weibo(uid: int, output: str):
                 )
                 md = dump_markdown_with_frontmatter(
                     webpage.__dict__,
-                    html_to_markdown_with_html2text(article_html) + handle_weibo_pic(item)
+                    article + '\n\n' + handle_weibo_pic(item)
                 )
                 output_content_to_file_path(
                     output,
