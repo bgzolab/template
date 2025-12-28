@@ -413,9 +413,9 @@ def handle_weibo_pic(item) -> str:
         result += f"![{pic_id}]({url})\n\n"
     return result
 
-# @eto.command()
-# @click.option('--uid', '-u', required=True, help='用户ID')
-# @click.option('--output', '-o', required=True, help='输出目录')
+@eto.command()
+@click.option('--uid', '-u', required=True, help='用户ID')
+@click.option('--output', '-o', required=True, help='输出目录')
 def weibo(uid: int, output: str):
     result_index = "";
     page_index = 1
@@ -494,7 +494,7 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
         print("处理完成: ", collection_type)
 
 if __name__ == '__main__':
-    # eto()
+    eto()
 
     # v2ex("output/v2ex")
     # zhihu(908297073, "output/zhihu")
@@ -511,4 +511,4 @@ if __name__ == '__main__':
     # )
     # qireader('tag-xxx', "output/qireader")
 
-    weibo(8221250887, "output/weibo")
+    # weibo(8221250887, "output/weibo")
