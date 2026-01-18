@@ -249,29 +249,29 @@ def qireader(tag, output):
             break
 
         for entry in entries:
-            filename = get_clean_filename(entry.title)
-            file_path = os.path.join(output, f"~{filename}.md")
-            if os.path.exists(file_path):
-                print(f"已存在: {filename}.md，同步结束")
-                print("导出index\n", result_index)
-                return
-
-            timestamp_seconds = int(entry.timestamp) / 1_000_000_000
-            webpage = WebPage(
-                comments=True,
-                draft=True,
-                title=entry.title,
-                source=entry.url,
-                created=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
-                modified=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
-                type="archive-web"
-            )
-            # 尝试获取内容
-            content = ''
             try:
+                filename = get_clean_filename(entry.title)
+                file_path = os.path.join(output, f"~{filename}.md")
+                if os.path.exists(file_path):
+                    print(f"已存在: {filename}.md，同步结束")
+                    print("导出index\n", result_index)
+                    return
+
+                timestamp_seconds = int(entry.timestamp) / 1_000_000_000
+                webpage = WebPage(
+                    comments=True,
+                    draft=True,
+                    title=entry.title,
+                    source=entry.url,
+                    created=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
+                    modified=datetime.fromtimestamp(timestamp_seconds).strftime('%Y-%m-%dT%H:%M:%S%z'),
+                    type="archive-web"
+                )
+                # 尝试获取内容
+                content = ''
                 content = html_to_markdown_with_html2text(get_html_text_from_url(entry.url))
             except Exception as e:
-                print(f"处理{filename}的全文时候发生异常，源地址可以已经删除，直接跳过，请手动处理！")
+                print(f"处理{filename}时发生异常，源地址可以已经删除，直接跳过，请考虑手动处理！")
 
             md = dump_markdown_with_frontmatter(
                 webpage.__dict__,

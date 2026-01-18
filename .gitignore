@@ -79,3 +79,6 @@ Gopkg.lock
 
 # Sepcial
 /output
+
+# AI export folder
+ai_export/
