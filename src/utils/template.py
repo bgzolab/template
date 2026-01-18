@@ -31,6 +31,6 @@ class Video:
     published: str
     description: str
     source: str
-    tags: list
+    tags: list[str]
     type: str
 

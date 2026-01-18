@@ -538,7 +538,8 @@ def bilibili(fid: int, output: str, force: bool):
 
                 pubtime_date = datetime.fromtimestamp(item.pubtime).strftime('%Y-%m-%dT%H:%M:%S%z')
                 fav_date = datetime.fromtimestamp(item.fav_time).strftime('%Y-%m-%dT%H:%M:%S%z')
-                
+                intro = item.intro.replace('\n', ' ').replace('\r', ' ')
+
                 webpage = Video(
                     comments=True,
                     draft=True,
@@ -548,9 +549,9 @@ def bilibili(fid: int, output: str, force: bool):
                     created=fav_date,
                     modified=fav_date,
                     published=pubtime_date,
-                    description=item.intro,
+                    description=intro,
                     source=f"https://www.bilibili.com/video/{item.bvid}",
-                    tags=str(['video/bilibili']),
+                    tags=['video/bilibili'],
                     type="video"
                 )
                 
