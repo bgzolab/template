@@ -193,7 +193,7 @@ class BilibiliFavListData:
             return None
         return BilibiliFavListData(
             info=BilibiliFavInfo.from_dict(obj.get("info")),
-            medias=[BilibiliMedia.from_dict(m) for m in obj.get("medias", [])],
+            medias=[BilibiliMedia.from_dict(m) for m in (obj.get("medias") or [])],
             has_more=obj.get("has_more"),
             ttl=obj.get("ttl")
         )
