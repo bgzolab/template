@@ -17,3 +17,20 @@ class WebPage:
     created: str
     modified: str
     type: str
+
+# Video Meta Template
+@dataclass
+class Video:
+    comments:bool
+    draft:bool
+    title: str
+    cover: str
+    author: str
+    created: str
+    modified: str
+    published: str
+    description: str
+    source: str
+    tags: list
+    type: str
+

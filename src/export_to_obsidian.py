@@ -11,7 +11,7 @@ from cnblog.bookmark import get_bookmark_list
 from qireader.getext import get_html_text_from_url
 from utils.file_utils import output_content_to_file_path, get_clean_filename
 from utils.md_utils import html_to_markdown_with_html2text, html_to_markdown_with_bs
-from utils.template import WebPage
+from utils.template import Video, WebPage
 from utils.md_utils import dump_markdown_with_frontmatter
 from bangumi.subject import get_subject_info, get_subject_character
 from datetime import datetime
@@ -512,6 +512,80 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
             force=force
         )
         print("处理完成: ", collection_type)
+
+@eto.command()
+@click.option('--fid', '-f', required=True, help='收藏夹ID')
+@click.option('--output', '-o', required=True, help='输出目录')
+@click.option('--force', required=False, is_flag=True, help='是否强制覆盖')
+def bilibili(fid: int, output: str, force: bool):
+    from bilibili.favlist import get_bilibili_favlistd
+    page = 1
+    size = 20
+    result_index = ""
+    while True:
+        favlist_response = get_bilibili_favlistd(fid, page, size)
+        if not favlist_response or not favlist_response.data or len(favlist_response.data.medias) == 0:
+            break
+
+        for item in favlist_response.data.medias:
+            try:
+                filename = f"{item.bvid}-{get_clean_filename(item.title)}"
+                file_path = os.path.join(output, f"~{filename}.md")
+                if os.path.exists(file_path) and not force:
+                    print(f"已存在: {filename}.md，同步结束")
+                    print("导出index\n", result_index)
+                    return
+
+                pubtime_date = datetime.fromtimestamp(item.pubtime).strftime('%Y-%m-%dT%H:%M:%S%z')
+                fav_date = datetime.fromtimestamp(item.fav_time).strftime('%Y-%m-%dT%H:%M:%S%z')
+                
+                webpage = Video(
+                    comments=True,
+                    draft=True,
+                    title=item.title,
+                    cover=item.cover,
+                    author=item.upper.name,
+                    created=fav_date,
+                    modified=fav_date,
+                    published=pubtime_date,
+                    description=item.intro,
+                    source=f"https://www.bilibili.com/video/{item.bvid}",
+                    tags=str(['video/bilibili']),
+                    type="video"
+                )
+                
+                content = f'''
+# {item.title}
+
+## Source
+
+<iframe src='https://player.bilibili.com/player.html?isOutside=true&bvid={item.bvid}&p=1&autoplay=false' style='height:40vh;width:100%' class='iframe-radius' allow='fullscreen'></iframe>
+<center>via: <a href='https://www.bilibili.com/video/{item.bvid}' target='_blank' class='external-link'>https://www.bilibili.com/video/{item.bvid}</a></center>
+
+## Notes
+
+'''
+                if item.title == '已失效视频':
+                    content = f"\n\n> 监测到视频已失效，请尝试去 https://www.jijidown.com/video/{item.bvid}/ 或 https://www.biliplus.com/video/{item.bvid} 查看是否有缓存存在，如果没有请节哀.\n\n" + content
+
+                md = dump_markdown_with_frontmatter(
+                    webpage.__dict__,
+                    content
+                )
+                output_content_to_file_path(
+                    output,
+                    filename,
+                    md,
+                    "md")
+
+                print(f"Done: {item.title}")
+                result_index += f'\n- [[~{filename}|{item.title}]]'
+
+            except Exception as e:
+                print(f"处理报文发生错误: {e}，跳过处理")
+        page += 1
+
+    print(f"输出index:\n{result_index}")
 
 if __name__ == '__main__':
     eto()
