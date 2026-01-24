@@ -47,7 +47,8 @@ def get_fav_list_topic_id_page(page: int) -> list[int]:
                 topic_id_list.append(topic_id)
             except ValueError:
                 continue
-    return list(set(topic_id_list))
+    # 使用 dict.fromkeys 保留插入顺序去重 (Python 3.7+)
+    return list(dict.fromkeys(topic_id_list))
 
 
 if __name__ == '__main__':
