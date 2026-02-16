@@ -96,55 +96,92 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		responseTxt = fmt.Sprintf("%s\n消息已备案至: %s!", sourceLink, msg)
 	}
 
+	syncEnabled, syncReason := shouldSyncToSocial(sourceId)
+	if !syncEnabled {
+		LogUtils.GetLogger().Println(syncReason)
+	}
+
 	for _, chatId := range targetChatIdList {
 		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
 			ChatID: chatId,
 			Text:   responseTxt,
 		})
-		if sourceId == "imbGZo" {
-			/**
-			 * TODO 提取配置
-				1. 适配每个社交媒体的内容限制，
-				2. 转换成纯文本，不再支持 Markdown
-			*/
-			if SocialMediaUtils.SendBlueSky(globalConfig, msgText) == true {
-				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-					ChatID: chatId,
-					Text:   "消息已同步至 BlueSky!",
-				})
-			} else {
-				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-					ChatID: chatId,
-					Text:   "同步 BlueSky 失败",
-				})
-			}
 
-			if SocialMediaUtils.SendMastodon(globalConfig, msgText) == true {
-				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-					ChatID: chatId,
-					Text:   "消息已同步至 Mastodon!",
-				})
-			} else {
-				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-					ChatID: chatId,
-					Text:   "同步 Mastodon 失败",
-				})
-			}
+		if !syncEnabled {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   syncReason,
+			})
+			continue
+		}
 
-			if SocialMediaUtils.SendTwitter(globalConfig, msgText) == true {
-				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-					ChatID: chatId,
-					Text:   "消息已同步至 Twitter!",
-				})
-			} else {
-				_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-					ChatID: chatId,
-					Text:   "同步 Twitter 失败",
-				})
-			}
+		/**
+		 * TODO 提取配置
+			1. 适配每个社交媒体的内容限制，
+			2. 转换成纯文本，不再支持 Markdown
+		*/
+		if SocialMediaUtils.SendBlueSky(globalConfig, msgText) == true {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   "消息已同步至 BlueSky!",
+			})
+		} else {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   "同步 BlueSky 失败",
+			})
+		}
+
+		if SocialMediaUtils.SendMastodon(globalConfig, msgText) == true {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   "消息已同步至 Mastodon!",
+			})
+		} else {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   "同步 Mastodon 失败",
+			})
+		}
+
+		if SocialMediaUtils.SendTwitter(globalConfig, msgText) == true {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   "消息已同步至 Twitter!",
+			})
+		} else {
+			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
+				ChatID: chatId,
+				Text:   "同步 Twitter 失败",
+			})
 		}
 
 	}
+}
+
+func shouldSyncToSocial(sourceId string) (bool, string) {
+	if !globalConfig.SocialMediaSync.Enable {
+		return false, "社媒同步未启用"
+	}
+
+	if len(globalConfig.SocialMediaSync.TargetChannel) == 0 {
+		return false, "社媒同步目标频道为空，跳过同步"
+	}
+
+	if !containsExactChannel(globalConfig.SocialMediaSync.TargetChannel, sourceId) {
+		return false, fmt.Sprintf("未命中社媒同步规则，跳过同步: %s", sourceId)
+	}
+
+	return true, ""
+}
+
+func containsExactChannel(channels []string, sourceId string) bool {
+	for _, channel := range channels {
+		if channel == sourceId {
+			return true
+		}
+	}
+	return false
 }
 
 func formatDownloadedFiles(files []string) string {
@@ -193,7 +230,7 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 		messageId = origin.MessageID
 
 		if StrUtils.SearchInFile(filepath.Join(outputPath, fileName), sourceLink) {
-			return false, fmt.Sprint("消息已存在"), sourceLink, msgText, sourceId
+			return false, "消息已存在", sourceLink, msgText, sourceId
 		}
 
 		var files []string
@@ -264,7 +301,7 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 	if err != nil {
 		LogUtils.GetLogger().Println(err)
 	} else {
-		LogUtils.GetLogger().Println(fmt.Sprintf("Save successful with: %d", message))
+		LogUtils.GetLogger().Printf("Save successful with: %d\n", message)
 	}
 
 	return true, fileName, sourceLink, msgText, sourceId
@@ -297,7 +334,7 @@ func persistFile(ctx context.Context, b *bot.Bot, fileID string, dirname string,
 	params := bot.GetFileParams{FileID: fileID}
 	file, err := b.GetFile(ctx, &params)
 	if err != nil {
-		LogUtils.GetLogger().Println("获取文件信息失败: %v", err)
+		LogUtils.GetLogger().Printf("获取文件信息失败: %v\n", err)
 		return nil
 	}
 
@@ -313,7 +350,7 @@ func persistFile(ctx context.Context, b *bot.Bot, fileID string, dirname string,
 	// 下载文件
 	resp, err := http.Get(downloadURL)
 	if err != nil {
-		LogUtils.GetLogger().Println("下载文件失败: %v", err)
+		LogUtils.GetLogger().Printf("下载文件失败: %v\n", err)
 		return nil
 	}
 
