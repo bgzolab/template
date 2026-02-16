@@ -62,12 +62,6 @@ This is a telegram bot for archiving message from bot and sync to social media.
 
 Of course, you can use it as a simple telegram bot for syncing message from telegram.
 
-- Golang
-- Gorm
-- Sqlite
-- Telebot
-- Social media API
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Why
@@ -142,37 +136,6 @@ systenctl enable tg@bgzo
 ```
 
 _For more examples, please refer to the [Documentation](https://github.com/bGZo/playground)_
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Messages archive
-  - [x] Rich text from Telegram
-  - [x] Media download
-- [x] Notification
-- [x] Database supported(sqlite)
-- [ ] Sync social media (beta)
-  - [x] Twitter
-  - [x] Mastodon
-  - [x] BlueSky
-  - [ ] Instagram
-  - [ ] Facebook
-  - [ ] Thread
-  - [ ] Reddit
-  - [ ] Douban
-  - [ ] Okjike
-  - [ ] Weibo
-  - [ ] Douyin
-  - [ ] Bilibili
-  - [ ] Xiaohongshu
-  - [ ] Coolapk
-  - [ ] Zhihu
-  - [ ] V2Ex
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

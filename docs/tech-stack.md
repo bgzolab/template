@@ -7,3 +7,22 @@
 4. 写任何代码前必须完整阅读 docs/@design-document.md
 5. 每完成一个重大功能或里程碑后，必须更新 docs/@architecture.md
 -->
+
+# 技术栈选择与规范
+
+## 当前技术栈选择
+
+- Golang
+- Gorm
+- Sqlite
+- Telebot
+- CLI
+  - https://github.com/spf13/cobra
+- Social media API
+  - Twitter
+    - http://github.com/michimani/gotwi
+  - Mastodon
+    - http://github.com/mattn/go-mastodon
+  - BlueSky
+    - http://github.com/reiver/go-atproto
+
