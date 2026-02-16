@@ -6,7 +6,7 @@ tg
 dist/
 # References via: https://github.com/github/gitignore
 # Visual Studio Code
-.vscode/
+# .vscode/
 .history/
 
 
