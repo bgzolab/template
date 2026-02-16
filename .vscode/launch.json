@@ -3,13 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug your file",
-      "type": "debugpy",
+      "name": "Main.go",
+      "type": "go",
       "request": "launch",
-      "program": "${workspaceFolder}/src/{your-file}",
+      "program": "${workspaceFolder}/main.go",
       "envFile": "${workspaceFolder}/.env",
       "console": "integratedTerminal",
-      "args": "{your-args}"
+      "args": "sync -c /home/bgzo/workspaces/telegram-message-sync/config/config.yaml"
     }
   ]
 }
