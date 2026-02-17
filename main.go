@@ -7,10 +7,10 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
-	"telegram-message-sync-bot/internal/Database"
 	"telegram-message-sync-bot/internal/Entity"
 	"telegram-message-sync-bot/internal/Handler"
 	"telegram-message-sync-bot/internal/service/archiveservice"
+	"telegram-message-sync-bot/internal/service/bootstrapservice"
 	"telegram-message-sync-bot/internal/service/notifyservice"
 	"telegram-message-sync-bot/internal/service/syncservice"
 	"telegram-message-sync-bot/pkg/FileUtils"
@@ -20,23 +20,10 @@ import (
 	"github.com/go-telegram/bot"
 	"github.com/go-telegram/bot/models"
 	"github.com/spf13/cobra"
-	"gopkg.in/yaml.v3"
 )
 
 // 全局配置
 var globalConfig Entity.Config
-
-func initSetting(configFile string) {
-	data, err := os.ReadFile(configFile)
-	if err != nil {
-		fmt.Printf("读取配置文件失败: %v", err)
-	}
-	err = yaml.Unmarshal(data, &globalConfig)
-	if err != nil {
-		fmt.Printf("解析配置失败: %v", err)
-	}
-	fmt.Printf("解析配置成功: 配置内容: %+v\n", globalConfig)
-}
 
 // start 启动 Telegram Bot
 func start(botToken string) {
@@ -137,16 +124,22 @@ func main() {
 		Long:  `Sync the message from tg bot.`,
 		Args:  cobra.MinimumNArgs(0),
 		Run: func(cmd *cobra.Command, args []string) {
-			// 初始化配置
-			initSetting(configFile)
-			// 初始化日志
-			LogUtils.InitLogger(globalConfig.Log.Dir)
-			// 初始化数据目录
-			err := Database.InitORMDB(filepath.Join(globalConfig.Log.Dir))
+			loadedConfig, err := bootstrapservice.LoadConfig(configFile)
 			if err != nil {
-				LogUtils.GetLogger().Println(err)
+				fmt.Printf("加载配置失败: %v\n", err)
+				return
 			}
-			// 启动机器人
+
+			globalConfig = loadedConfig
+			fmt.Printf("解析配置成功: 配置内容: %+v\n", globalConfig)
+
+			err = bootstrapservice.InitRuntime(globalConfig)
+			if err != nil {
+				fmt.Printf("初始化运行时失败: %v\n", err)
+				LogUtils.GetLogger().Println(err)
+				return
+			}
+
 			start(globalConfig.Token)
 		},
 	}

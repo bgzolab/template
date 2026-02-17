@@ -110,6 +110,20 @@
 	- 变化：由 `notifyservice` 统一生成待发送消息，主流程只负责发送；
 	- 意义：主入口进一步收敛为编排层，为后续“启动装配模块化”做准备。
 
+## 本轮改造后的新增文件作用（阶段2-步骤4）
+
+1. `internal/service/bootstrapservice/service.go`
+	- 作用：承载启动装配逻辑（配置加载、日志初始化、数据库初始化）；
+	- 边界：不参与消息处理业务，仅负责运行时依赖准备。
+
+2. `internal/service/bootstrapservice/service_test.go`
+	- 作用：验证配置加载与运行时初始化逻辑可独立测试；
+	- 边界：使用临时目录，不依赖线上配置与固定环境。
+
+3. `main.go`（本轮边界变化）
+	- 变化：入口改为调用 `bootstrapservice.LoadConfig()` 与 `bootstrapservice.InitRuntime()`；
+	- 意义：main 更接近“装配 + 启动”，为后续 pipeline 化主流程做准备。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。

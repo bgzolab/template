@@ -38,7 +38,7 @@
 | `output.person_dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | 私聊消息 Markdown 存档目录 |
 | `output.channel_dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | 频道消息 Markdown 存档目录 |
 | `log.enable` | 未生效（预留） | 无直接消费 | 当前仅使用 `log.dir` 初始化日志 |
-| `log.dir` | 生效 | `main.go` -> `LogUtils.InitLogger(globalConfig.Log.Dir)` | 日志与 SQLite 路径基准目录 |
+| `log.dir` | 生效 | `internal/service/bootstrapservice/service.go` -> `InitRuntime()` | 日志与 SQLite 路径基准目录 |
 | `template.dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | Markdown 模板文件路径 |
 | `targetUserList` | 生效 | `internal/service/notifyservice/service.go` -> `ResolveTargetChatIDs()` | 通知目标用户列表，空时回退消息来源聊天 |
 | `socialMediaSync.enable` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` | 社媒同步总开关 |

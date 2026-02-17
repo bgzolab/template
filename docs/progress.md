@@ -137,6 +137,24 @@
 
 - [ ] 阶段2-步骤4：继续拆分启动装配（初始化配置/日志/数据库）到独立模块，并补充对应测试。
 
+## 2026-02-17（阶段2-步骤4）
+
+- [x] 完成“启动装配模块化”第四步改造：
+    - [x] 新增 `internal/service/bootstrapservice`，抽离配置加载与运行时初始化（日志/数据库）；
+    - [x] `main.go` 改为调用 `bootstrapservice.LoadConfig()` 与 `bootstrapservice.InitRuntime()`；
+    - [x] 保持当前串行执行模型，不引入异步改造。
+
+- [x] 独立模块测试通过：
+    - [x] `go test ./internal/service/bootstrapservice`
+    - [x] `go test ./internal/service/notifyservice`
+    - [x] `go test ./internal/service/archiveservice`
+    - [x] `go test ./internal/service/syncservice`
+    - [x] `go test ./internal/Database`
+
+### 下一步（待你验收后执行）
+
+- [ ] 阶段2-步骤5：引入 pipeline 编排骨架（仍保持串行），把主流程从 handler 进一步收敛为 stage 调度并补对应测试。
+
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。
