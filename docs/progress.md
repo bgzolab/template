@@ -81,6 +81,26 @@
 - [ ] 门禁-08：架构文档已补充重构期文件职责与边界；
 - [ ] 门禁-09：用户已明确批准进入阶段2。
 
+## 2026-02-16（阶段2-步骤1）
+
+- [x] 完成“社媒同步模块化”第一步改造：
+    - [x] 新增 `internal/service/syncservice`，抽离同步判定与分发逻辑；
+    - [x] `main.go` 改为调用 `syncservice.ShouldSync()` 与 `syncservice.Dispatch()`；
+    - [x] 保持现有通知语义（按平台返回成功/失败消息）。
+
+- [x] 落实“数据库唯一约束优先”第一步：
+    - [x] 为 `Entity.Message` 增加 `(MessageID, Username)` 复合唯一约束；
+    - [x] `Database` 新增重复错误识别函数 `IsDuplicateMessageError()`；
+    - [x] 持久化流程在入库重复时返回“消息已存在”。
+
+- [x] 独立模块测试通过：
+    - [x] `go test ./internal/service/syncservice`
+    - [x] `go test ./internal/Database`
+
+### 下一步（待你验收后执行）
+
+- [ ] 阶段2-步骤2：拆分归档流程（`persistMessage`）为独立服务模块，继续保持串行执行并补齐模块测试。
+
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。

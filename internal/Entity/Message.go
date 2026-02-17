@@ -18,8 +18,8 @@ type Message struct {
 
 	Content string // 消息内容
 
-	MessageID   int64        // 用于标识消息来源的唯一ID
-	Username    string       // 频道的USERNAME
+	MessageID   int64        `gorm:"not null;index:idx_message_source,unique"` // 用于标识消息来源的唯一ID
+	Username    string       `gorm:"not null;index:idx_message_source,unique"` // 频道的USERNAME
 	MessageUrl  string       // 消息的URL链接
 	MessageDate time.Time    // 消息的时间戳
 	Attachments []Attachment `gorm:"foreignKey:MessageID"` // 消息附件

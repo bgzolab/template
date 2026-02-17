@@ -14,9 +14,9 @@ import (
 	"telegram-message-sync-bot/internal/Database"
 	"telegram-message-sync-bot/internal/Entity"
 	"telegram-message-sync-bot/internal/Handler"
+	"telegram-message-sync-bot/internal/service/syncservice"
 	"telegram-message-sync-bot/pkg/FileUtils"
 	"telegram-message-sync-bot/pkg/LogUtils"
-	"telegram-message-sync-bot/pkg/SocialMediaUtils"
 	"telegram-message-sync-bot/pkg/StrUtils"
 	"telegram-message-sync-bot/pkg/TgUtils"
 	"time"
@@ -96,7 +96,7 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		responseTxt = fmt.Sprintf("%s\n消息已备案至: %s!", sourceLink, msg)
 	}
 
-	syncEnabled, syncReason := shouldSyncToSocial(sourceId)
+	syncEnabled, syncReason := syncservice.ShouldSync(globalConfig, sourceId)
 	if !syncEnabled {
 		LogUtils.GetLogger().Println(syncReason)
 	}
@@ -115,73 +115,20 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 			continue
 		}
 
-		/**
-		 * TODO 提取配置
-			1. 适配每个社交媒体的内容限制，
-			2. 转换成纯文本，不再支持 Markdown
-		*/
-		if SocialMediaUtils.SendBlueSky(globalConfig, msgText) == true {
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   "消息已同步至 BlueSky!",
-			})
-		} else {
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   "同步 BlueSky 失败",
-			})
-		}
+		results := syncservice.Dispatch(globalConfig, msgText, syncservice.DefaultSenders())
+		for _, result := range results {
+			notifyText := fmt.Sprintf("消息已同步至 %s!", result.Platform)
+			if !result.Success {
+				notifyText = fmt.Sprintf("同步 %s 失败", result.Platform)
+			}
 
-		if SocialMediaUtils.SendMastodon(globalConfig, msgText) == true {
 			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
 				ChatID: chatId,
-				Text:   "消息已同步至 Mastodon!",
-			})
-		} else {
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   "同步 Mastodon 失败",
-			})
-		}
-
-		if SocialMediaUtils.SendTwitter(globalConfig, msgText) == true {
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   "消息已同步至 Twitter!",
-			})
-		} else {
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   "同步 Twitter 失败",
+				Text:   notifyText,
 			})
 		}
 
 	}
-}
-
-func shouldSyncToSocial(sourceId string) (bool, string) {
-	if !globalConfig.SocialMediaSync.Enable {
-		return false, "社媒同步未启用"
-	}
-
-	if len(globalConfig.SocialMediaSync.TargetChannel) == 0 {
-		return false, "社媒同步目标频道为空，跳过同步"
-	}
-
-	if !containsExactChannel(globalConfig.SocialMediaSync.TargetChannel, sourceId) {
-		return false, fmt.Sprintf("未命中社媒同步规则，跳过同步: %s", sourceId)
-	}
-
-	return true, ""
-}
-
-func containsExactChannel(channels []string, sourceId string) bool {
-	for _, channel := range channels {
-		if channel == sourceId {
-			return true
-		}
-	}
-	return false
 }
 
 func formatDownloadedFiles(files []string) string {
@@ -299,7 +246,12 @@ func persistMessage(ctx context.Context, b *bot.Bot, update *models.Update) (boo
 	}
 	message, err := Database.SaveMessage(&savedMsg)
 	if err != nil {
+		if Database.IsDuplicateMessageError(err) {
+			return false, "消息已存在", sourceLink, msgText, sourceId
+		}
+
 		LogUtils.GetLogger().Println(err)
+		return false, fmt.Sprintf("消息入库失败: %v", err), sourceLink, msgText, sourceId
 	} else {
 		LogUtils.GetLogger().Printf("Save successful with: %d\n", message)
 	}

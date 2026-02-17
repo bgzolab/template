@@ -60,6 +60,28 @@
 - P1：保持串行执行，先完成“归档/同步/通知”职责拆分；
 - P2：在 P1 稳定后引入异步执行，保证行为一致与可回滚。
 
+## 本轮改造后的新增文件作用（阶段2-步骤1）
+
+1. `internal/service/syncservice/service.go`
+	- 作用：承载“是否同步”纯逻辑判定与统一分发编排；
+	- 边界：不直接依赖 Telegram I/O，不负责通知发送。
+
+2. `internal/service/syncservice/providers.go`
+	- 作用：将 BlueSky/Mastodon/Twitter 封装为可替换 Sender 适配器；
+	- 边界：只负责平台调用，不处理策略判定。
+
+3. `internal/service/syncservice/service_test.go`
+	- 作用：验证同步策略与分发顺序，确保模块可独立测试；
+	- 边界：使用假发送器，不触发真实外部网络调用。
+
+4. `internal/Database/messages_test.go`
+	- 作用：验证数据库唯一约束优先去重策略；
+	- 边界：使用内存 SQLite，不依赖线上数据库文件。
+
+5. `main.go`（本轮边界变化）
+	- 变化：移除本地同步判定函数，改为调用 `syncservice`；
+	- 意义：主流程开始从“平台细节耦合”向“服务编排”过渡。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。

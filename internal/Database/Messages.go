@@ -1,6 +1,7 @@
 package Database
 
 import (
+	"strings"
 	"telegram-message-sync-bot/internal/Entity"
 )
 
@@ -11,6 +12,15 @@ func SaveMessage(msg *Entity.Message) (int64, error) {
 		return 0, err
 	}
 	return msg.ID, nil
+}
+
+func IsDuplicateMessageError(err error) bool {
+	if err == nil {
+		return false
+	}
+
+	errMsg := err.Error()
+	return strings.Contains(errMsg, "UNIQUE constraint failed") || strings.Contains(errMsg, "duplicated key")
 }
 
 // 按ID查找消息（含附件）
