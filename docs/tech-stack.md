@@ -41,6 +41,7 @@
 | `log.dir` | 生效 | `internal/service/bootstrapservice/service.go` -> `InitRuntime()` | 日志与 SQLite 路径基准目录 |
 | `template.dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | Markdown 模板文件路径 |
 | `targetUserList` | 生效 | `internal/service/notifyservice/service.go` -> `ResolveTargetChatIDs()` | 通知目标用户列表，空时回退消息来源聊天 |
+| `pipeline.executionMode` | 生效（默认串行） | `internal/service/pipelineservice/service.go` -> `ResolveExecutionMode()` + `main.go` -> `SetExecutionMode()` | Pipeline 执行模式开关（`serial`/`async_experimental`） |
 | `socialMediaSync.enable` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` | 社媒同步总开关 |
 | `socialMediaSync.targetChannel` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` + `ContainsExactTarget()` | 频道精确匹配触发同步 |
 | `socialMediaSync.mastodon.*` | 生效 | `pkg/SocialMediaUtils/Mastodon.go` | Mastodon 同步配置 |

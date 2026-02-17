@@ -166,6 +166,20 @@
    - 变化：本轮无需改动，继续通过默认串行 pipeline 运行；
    - 意义：把执行策略演进限制在 pipeline 内部，降低入口层变更风险。
 
+## 本轮改造后的新增文件作用（阶段2-步骤8）
+
+1. `internal/Entity/Config.go`
+   - 变化：新增 `pipeline.executionMode` 配置字段；
+   - 意义：将 pipeline 执行策略切换从代码硬编码升级为配置驱动。
+
+2. `internal/service/pipelineservice/service.go`
+   - 变化：新增 `ResolveExecutionMode()` 统一解析模式并处理回退；
+   - 意义：确保未知配置不会破坏行为，默认回退串行模式。
+
+3. `main.go`（本轮边界变化）
+   - 变化：在创建 pipeline 后按配置设置执行模式；
+   - 意义：入口层仅负责读取配置并注入执行策略，保持语义稳定。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。

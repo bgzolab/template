@@ -23,6 +23,10 @@ type Config struct {
 
 	TargetUserList []int64 `yaml:"targetUserList"`
 
+	Pipeline struct {
+		ExecutionMode string `yaml:"executionMode"`
+	} `yaml:"pipeline"`
+
 	SocialMediaSync struct {
 		Enable        bool     `yaml:"enable"`
 		TargetChannel []string `yaml:"targetChannel"`

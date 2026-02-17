@@ -2,6 +2,7 @@ package pipelineservice
 
 import (
 	"context"
+	"strings"
 
 	"github.com/go-telegram/bot"
 	"github.com/go-telegram/bot/models"
@@ -92,6 +93,20 @@ func NewDefaultPipeline() Pipeline {
 // 这样做的原因是先提供切换骨架，在不改变现有语义前提下为后续异步化演进预留入口。
 func (p *Pipeline) SetExecutionMode(mode ExecutionMode) {
 	p.Mode = mode
+}
+
+// ResolveExecutionMode 从配置中解析 pipeline 执行模式。
+// 这样做的原因是把模式解析规则集中管理，避免入口层散落字符串判断；未知模式统一回退串行。
+func ResolveExecutionMode(config Entity.Config) ExecutionMode {
+	mode := strings.TrimSpace(strings.ToLower(config.Pipeline.ExecutionMode))
+	switch ExecutionMode(mode) {
+	case ExecutionModeAsyncExperimental:
+		return ExecutionModeAsyncExperimental
+	case ExecutionModeSerial:
+		fallthrough
+	default:
+		return ExecutionModeSerial
+	}
 }
 
 // ProcessUpdate 以固定顺序执行串行 stage，并返回统一处理结果。

@@ -64,6 +64,7 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	}
 
 	pipeline := pipelineservice.NewDefaultPipeline()
+	pipeline.SetExecutionMode(pipelineservice.ResolveExecutionMode(globalConfig))
 	result := pipeline.ProcessUpdate(ctx, b, update, globalConfig)
 
 	if !result.PersistResult.OK {

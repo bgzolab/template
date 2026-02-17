@@ -222,6 +222,30 @@
 
 - [ ] 阶段2-步骤8：引入配置驱动的 pipeline 执行模式（默认串行），并补充“开关开启但行为等价”验证与文档说明。
 
+## 2026-02-17（阶段2-步骤8）
+
+- [x] 完成“配置驱动 pipeline 模式”第八步改造：
+    - [x] 在 `internal/Entity/Config.go` 增加 `pipeline.executionMode` 配置字段；
+    - [x] 在 `pipelineservice` 增加 `ResolveExecutionMode()`，未知值回退串行；
+    - [x] `main.go` 改为按配置设置 pipeline 执行模式。
+
+- [x] 等价性与回退测试通过：
+    - [x] 验证配置模式解析（大小写兼容、未知值回退）；
+    - [x] 验证配置开启 `async_experimental` 时与串行结果等价；
+    - [x] 保持原有回归测试全部通过。
+
+- [x] 独立模块测试通过：
+    - [x] `go test ./internal/service/pipelineservice`
+    - [x] `go test ./internal/service/bootstrapservice`
+    - [x] `go test ./internal/service/notifyservice`
+    - [x] `go test ./internal/service/archiveservice`
+    - [x] `go test ./internal/service/syncservice`
+    - [x] `go test ./internal/Database`
+
+### 下一步（待你验收后执行）
+
+- [ ] 阶段2-步骤9：补充配置示例与运行说明（如何切换 pipeline 模式），并增加最小端到端回归测试清单。
+
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。

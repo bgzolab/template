@@ -175,3 +175,53 @@ func TestProcessUpdate_EmptyMode_FallbackToSerial(t *testing.T) {
 		t.Fatalf("expected serial fallback to execute archive stage")
 	}
 }
+
+func TestResolveExecutionMode_FromConfig(t *testing.T) {
+	config := Entity.Config{}
+	config.Pipeline.ExecutionMode = "async_experimental"
+	if ResolveExecutionMode(config) != ExecutionModeAsyncExperimental {
+		t.Fatalf("expected async_experimental mode")
+	}
+
+	config.Pipeline.ExecutionMode = "SERIAL"
+	if ResolveExecutionMode(config) != ExecutionModeSerial {
+		t.Fatalf("expected serial mode for case-insensitive input")
+	}
+
+	config.Pipeline.ExecutionMode = "unknown"
+	if ResolveExecutionMode(config) != ExecutionModeSerial {
+		t.Fatalf("expected serial fallback for unknown mode")
+	}
+}
+
+func TestProcessUpdate_ModeFromConfig_Equivalent(t *testing.T) {
+	update := &models.Update{Message: &models.Message{Chat: models.Chat{ID: 1}}}
+	config := Entity.Config{}
+	config.Pipeline.ExecutionMode = "async_experimental"
+
+	buildPipeline := func() Pipeline {
+		return Pipeline{
+			ArchiveStage: fakeArchiveStage{run: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
+				return archiveservice.PersistResult{OK: true, Message: "file.md", SourceLink: "link", MsgText: "content", SourceID: "imbGZo"}
+			}},
+			SyncStage: fakeSyncStage{run: func(_ Entity.Config, _ archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+				return true, "", []syncservice.DispatchResult{{Platform: "BlueSky", Success: true}}
+			}},
+			NotifyStage: fakeNotifyStage{run: func(_ Entity.Config, _ *models.Update, _ archiveservice.PersistResult, _ bool, _ string, _ []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+				return []notifyservice.OutboundMessage{{ChatID: 1, Text: "archive"}, {ChatID: 1, Text: "sync-ok"}}
+			}},
+			Mode: ExecutionModeSerial,
+		}
+	}
+
+	serialPipeline := buildPipeline()
+	serialResult := serialPipeline.ProcessUpdate(context.Background(), nil, update, config)
+
+	asyncPipeline := buildPipeline()
+	asyncPipeline.SetExecutionMode(ResolveExecutionMode(config))
+	asyncResult := asyncPipeline.ProcessUpdate(context.Background(), nil, update, config)
+
+	if !reflect.DeepEqual(serialResult, asyncResult) {
+		t.Fatalf("mode from config should keep equivalent result\nserial=%+v\nasync=%+v", serialResult, asyncResult)
+	}
+}
