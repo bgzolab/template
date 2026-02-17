@@ -1,5 +1,5 @@
 .idea/
-archives/
+/archives/
 
 config/config.yaml
 tg
@@ -84,3 +84,5 @@ Gopkg.lock
 *.rvmrc
 *.ruby-version
 *.ruby-gemset
+
+tg-backup-old-260217
