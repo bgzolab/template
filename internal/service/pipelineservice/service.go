@@ -37,10 +37,18 @@ type ProcessResult struct {
 	OutboundMessages []notifyservice.OutboundMessage
 }
 
+type ExecutionMode string
+
+const (
+	ExecutionModeSerial            ExecutionMode = "serial"
+	ExecutionModeAsyncExperimental ExecutionMode = "async_experimental"
+)
+
 type Pipeline struct {
 	ArchiveStage ArchiveStage
 	SyncStage    SyncStage
 	NotifyStage  NotifyStage
+	Mode         ExecutionMode
 }
 
 type defaultArchiveStage struct{}
@@ -76,7 +84,14 @@ func NewDefaultPipeline() Pipeline {
 		ArchiveStage: defaultArchiveStage{},
 		SyncStage:    defaultSyncStage{},
 		NotifyStage:  defaultNotifyStage{},
+		Mode:         ExecutionModeSerial,
 	}
+}
+
+// SetExecutionMode 设置 pipeline 执行模式（默认串行，可选异步实验模式）。
+// 这样做的原因是先提供切换骨架，在不改变现有语义前提下为后续异步化演进预留入口。
+func (p *Pipeline) SetExecutionMode(mode ExecutionMode) {
+	p.Mode = mode
 }
 
 // ProcessUpdate 以固定顺序执行串行 stage，并返回统一处理结果。
@@ -86,6 +101,18 @@ func (p Pipeline) ProcessUpdate(ctx context.Context, b *bot.Bot, update *models.
 		return ProcessResult{}
 	}
 
+	if p.Mode == "" {
+		p.Mode = ExecutionModeSerial
+	}
+
+	if p.Mode == ExecutionModeAsyncExperimental {
+		return p.processAsyncExperimental(ctx, b, update, config)
+	}
+
+	return p.processSerial(ctx, b, update, config)
+}
+
+func (p Pipeline) processSerial(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) ProcessResult {
 	persistResult := p.ArchiveStage.Run(ctx, b, update, config)
 	syncEnabled, syncReason, results := p.SyncStage.Run(config, persistResult)
 	outboundMessages := p.NotifyStage.Run(config, update, persistResult, syncEnabled, syncReason, results)
@@ -96,4 +123,23 @@ func (p Pipeline) ProcessUpdate(ctx context.Context, b *bot.Bot, update *models.
 		SyncReason:       syncReason,
 		OutboundMessages: outboundMessages,
 	}
+}
+
+func (p Pipeline) processAsyncExperimental(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) ProcessResult {
+	persistResult := p.ArchiveStage.Run(ctx, b, update, config)
+
+	resultCh := make(chan ProcessResult, 1)
+	go func() {
+		syncEnabled, syncReason, results := p.SyncStage.Run(config, persistResult)
+		outboundMessages := p.NotifyStage.Run(config, update, persistResult, syncEnabled, syncReason, results)
+
+		resultCh <- ProcessResult{
+			PersistResult:    persistResult,
+			SyncEnabled:      syncEnabled,
+			SyncReason:       syncReason,
+			OutboundMessages: outboundMessages,
+		}
+	}()
+
+	return <-resultCh
 }

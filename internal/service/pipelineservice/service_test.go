@@ -118,3 +118,60 @@ func TestProcessUpdate_NilUpdate_ReturnEmpty(t *testing.T) {
 		t.Fatalf("expected no outbound messages for nil update")
 	}
 }
+
+func TestProcessUpdate_AsyncExperimental_ConsistencyWithSerial(t *testing.T) {
+	update := &models.Update{Message: &models.Message{Chat: models.Chat{ID: 1}}}
+
+	buildPipeline := func() Pipeline {
+		return Pipeline{
+			ArchiveStage: fakeArchiveStage{run: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
+				return archiveservice.PersistResult{OK: true, Message: "file.md", SourceLink: "link", MsgText: "content", SourceID: "imbGZo"}
+			}},
+			SyncStage: fakeSyncStage{run: func(_ Entity.Config, _ archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+				return true, "", []syncservice.DispatchResult{{Platform: "BlueSky", Success: true}, {Platform: "Twitter", Success: false}}
+			}},
+			NotifyStage: fakeNotifyStage{run: func(_ Entity.Config, _ *models.Update, _ archiveservice.PersistResult, _ bool, _ string, results []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+				if len(results) != 2 {
+					t.Fatalf("unexpected dispatch result size: %d", len(results))
+				}
+				return []notifyservice.OutboundMessage{{ChatID: 1, Text: "archive"}, {ChatID: 1, Text: "sync-ok"}, {ChatID: 1, Text: "sync-fail"}}
+			}},
+			Mode: ExecutionModeSerial,
+		}
+	}
+
+	serialPipeline := buildPipeline()
+	serialResult := serialPipeline.ProcessUpdate(context.Background(), nil, update, Entity.Config{})
+
+	asyncPipeline := buildPipeline()
+	asyncPipeline.SetExecutionMode(ExecutionModeAsyncExperimental)
+	asyncResult := asyncPipeline.ProcessUpdate(context.Background(), nil, update, Entity.Config{})
+
+	if !reflect.DeepEqual(serialResult, asyncResult) {
+		t.Fatalf("async experimental result differs from serial\nserial=%+v\nasync=%+v", serialResult, asyncResult)
+	}
+}
+
+func TestProcessUpdate_EmptyMode_FallbackToSerial(t *testing.T) {
+	called := false
+	p := Pipeline{
+		ArchiveStage: fakeArchiveStage{run: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
+			called = true
+			return archiveservice.PersistResult{OK: true, Message: "file.md", SourceLink: "link", MsgText: "content", SourceID: "imbGZo"}
+		}},
+		SyncStage: fakeSyncStage{run: func(_ Entity.Config, _ archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+			return false, "skip", nil
+		}},
+		NotifyStage: fakeNotifyStage{run: func(_ Entity.Config, _ *models.Update, _ archiveservice.PersistResult, _ bool, _ string, _ []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+			return nil
+		}},
+		Mode: "",
+	}
+
+	update := &models.Update{Message: &models.Message{Chat: models.Chat{ID: 1}}}
+	_ = p.ProcessUpdate(context.Background(), nil, update, Entity.Config{})
+
+	if !called {
+		t.Fatalf("expected serial fallback to execute archive stage")
+	}
+}

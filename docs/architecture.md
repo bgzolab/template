@@ -152,6 +152,20 @@
    - 变化：仍只消费 `pipeline.ProcessUpdate()` 结果，无需感知 stage 细节；
    - 意义：入口层与执行策略进一步解耦，后续切换执行模型改动面更小。
 
+## 本轮改造后的新增文件作用（阶段2-步骤7）
+
+1. `internal/service/pipelineservice/service.go`
+   - 变化：新增执行模式开关（`serial` / `async_experimental`）与 `SetExecutionMode()` 切换入口；
+   - 意义：先提供异步化实验骨架，但默认串行，确保现有语义稳定。
+
+2. `internal/service/pipelineservice/service_test.go`
+   - 变化：新增“异步模式与串行模式结果一致”测试与“空模式回退串行”测试；
+   - 意义：确保开关存在但不会引入行为漂移，支持后续安全演进。
+
+3. `main.go`（本轮边界变化）
+   - 变化：本轮无需改动，继续通过默认串行 pipeline 运行；
+   - 意义：把执行策略演进限制在 pipeline 内部，降低入口层变更风险。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。

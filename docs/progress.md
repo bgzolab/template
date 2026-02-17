@@ -198,6 +198,30 @@
 
 - [ ] 阶段2-步骤7：在不改业务语义前提下，为 pipeline 增加异步执行实验开关（仅骨架），并补充顺序一致性与回退测试。
 
+## 2026-02-17（阶段2-步骤7）
+
+- [x] 完成“异步执行实验开关骨架”第七步改造：
+    - [x] 在 `pipelineservice` 新增执行模式 `serial` / `async_experimental`；
+    - [x] 新增 `SetExecutionMode()` 作为模式切换入口；
+    - [x] 默认仍为串行模式，保持现有业务语义不变。
+
+- [x] 一致性与回退测试通过：
+    - [x] 验证 `async_experimental` 与 `serial` 结果一致；
+    - [x] 验证执行模式为空时自动回退到串行模式；
+    - [x] 继续保持原有回归与失败场景测试通过。
+
+- [x] 独立模块测试通过：
+    - [x] `go test ./internal/service/pipelineservice`
+    - [x] `go test ./internal/service/bootstrapservice`
+    - [x] `go test ./internal/service/notifyservice`
+    - [x] `go test ./internal/service/archiveservice`
+    - [x] `go test ./internal/service/syncservice`
+    - [x] `go test ./internal/Database`
+
+### 下一步（待你验收后执行）
+
+- [ ] 阶段2-步骤8：引入配置驱动的 pipeline 执行模式（默认串行），并补充“开关开启但行为等价”验证与文档说明。
+
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。
