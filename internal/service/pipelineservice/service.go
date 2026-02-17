@@ -12,6 +12,24 @@ import (
 	"telegram-message-sync-bot/internal/service/syncservice"
 )
 
+// ArchiveStage 定义归档阶段可替换接口。
+// 这样做的原因是让归档实现可按需替换（例如异步任务、重试包装器），而不影响主流程编排。
+type ArchiveStage interface {
+	Run(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) archiveservice.PersistResult
+}
+
+// SyncStage 定义同步阶段可替换接口。
+// 这样做的原因是把同步策略判定与分发执行封装为独立阶段，后续可替换为异步实现。
+type SyncStage interface {
+	Run(config Entity.Config, persistResult archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult)
+}
+
+// NotifyStage 定义通知阶段可替换接口。
+// 这样做的原因是把消息展开与通知编排独立出来，便于切换发送策略（串行/异步队列）。
+type NotifyStage interface {
+	Run(config Entity.Config, update *models.Update, persistResult archiveservice.PersistResult, syncEnabled bool, syncReason string, dispatchResults []syncservice.DispatchResult) []notifyservice.OutboundMessage
+}
+
 type ProcessResult struct {
 	PersistResult    archiveservice.PersistResult
 	SyncEnabled      bool
@@ -20,28 +38,44 @@ type ProcessResult struct {
 }
 
 type Pipeline struct {
-	Archive                func(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) archiveservice.PersistResult
-	ResolveTargets         func(config Entity.Config, fallbackChatID int64) []int64
-	BuildArchiveResponse   func(ok bool, sourceLink, message string) string
-	ShouldSync             func(config Entity.Config, sourceID string) (bool, string)
-	Dispatch               func(config Entity.Config, message string, senders []syncservice.Sender) []syncservice.DispatchResult
-	BuildSyncNotifications func(syncEnabled bool, syncReason string, results []syncservice.DispatchResult) []string
-	BuildOutboundMessages  func(chatIDs []int64, archiveResponse string, syncNotifications []string) []notifyservice.OutboundMessage
-	DefaultSenders         func() []syncservice.Sender
+	ArchiveStage ArchiveStage
+	SyncStage    SyncStage
+	NotifyStage  NotifyStage
+}
+
+type defaultArchiveStage struct{}
+
+func (defaultArchiveStage) Run(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) archiveservice.PersistResult {
+	return archiveservice.PersistMessage(ctx, b, update, config)
+}
+
+type defaultSyncStage struct{}
+
+func (defaultSyncStage) Run(config Entity.Config, persistResult archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+	syncEnabled, syncReason := syncservice.ShouldSync(config, persistResult.SourceID)
+	results := make([]syncservice.DispatchResult, 0)
+	if syncEnabled {
+		results = syncservice.Dispatch(config, persistResult.MsgText, syncservice.DefaultSenders())
+	}
+	return syncEnabled, syncReason, results
+}
+
+type defaultNotifyStage struct{}
+
+func (defaultNotifyStage) Run(config Entity.Config, update *models.Update, persistResult archiveservice.PersistResult, syncEnabled bool, syncReason string, dispatchResults []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+	targetChatIDs := notifyservice.ResolveTargetChatIDs(config, update.Message.Chat.ID)
+	archiveResponse := notifyservice.BuildArchiveResponse(persistResult.OK, persistResult.SourceLink, persistResult.Message)
+	syncNotifications := notifyservice.BuildSyncNotifications(syncEnabled, syncReason, dispatchResults)
+	return notifyservice.BuildOutboundMessages(targetChatIDs, archiveResponse, syncNotifications)
 }
 
 // NewDefaultPipeline 构建默认串行 pipeline：archive -> sync -> notify。
 // 这样做的原因是把主流程编排集中到单点，main 只保留入口与发送动作。
 func NewDefaultPipeline() Pipeline {
 	return Pipeline{
-		Archive:                archiveservice.PersistMessage,
-		ResolveTargets:         notifyservice.ResolveTargetChatIDs,
-		BuildArchiveResponse:   notifyservice.BuildArchiveResponse,
-		ShouldSync:             syncservice.ShouldSync,
-		Dispatch:               syncservice.Dispatch,
-		BuildSyncNotifications: notifyservice.BuildSyncNotifications,
-		BuildOutboundMessages:  notifyservice.BuildOutboundMessages,
-		DefaultSenders:         syncservice.DefaultSenders,
+		ArchiveStage: defaultArchiveStage{},
+		SyncStage:    defaultSyncStage{},
+		NotifyStage:  defaultNotifyStage{},
 	}
 }
 
@@ -52,18 +86,9 @@ func (p Pipeline) ProcessUpdate(ctx context.Context, b *bot.Bot, update *models.
 		return ProcessResult{}
 	}
 
-	persistResult := p.Archive(ctx, b, update, config)
-	targetChatIDs := p.ResolveTargets(config, update.Message.Chat.ID)
-	archiveResponse := p.BuildArchiveResponse(persistResult.OK, persistResult.SourceLink, persistResult.Message)
-
-	syncEnabled, syncReason := p.ShouldSync(config, persistResult.SourceID)
-	results := make([]syncservice.DispatchResult, 0)
-	if syncEnabled {
-		results = p.Dispatch(config, persistResult.MsgText, p.DefaultSenders())
-	}
-
-	syncNotifications := p.BuildSyncNotifications(syncEnabled, syncReason, results)
-	outboundMessages := p.BuildOutboundMessages(targetChatIDs, archiveResponse, syncNotifications)
+	persistResult := p.ArchiveStage.Run(ctx, b, update, config)
+	syncEnabled, syncReason, results := p.SyncStage.Run(config, persistResult)
+	outboundMessages := p.NotifyStage.Run(config, update, persistResult, syncEnabled, syncReason, results)
 
 	return ProcessResult{
 		PersistResult:    persistResult,

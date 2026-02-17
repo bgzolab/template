@@ -138,6 +138,20 @@
    - 变化：默认处理器调用 `pipeline.ProcessUpdate()`，入口层只保留日志和消息发送；
    - 意义：主流程已从“手工串联服务”收敛为“可扩展编排骨架”。
 
+## 本轮改造后的新增文件作用（阶段2-步骤6）
+
+1. `internal/service/pipelineservice/service.go`
+   - 变化：在 pipeline 内抽离 `ArchiveStage` / `SyncStage` / `NotifyStage` 可替换接口；
+   - 意义：主流程从“函数注入编排”升级为“stage 接口编排”，为异步化与失败重试策略留出替换点。
+
+2. `internal/service/pipelineservice/service_test.go`
+   - 变化：增加回归与失败场景测试（顺序、同步关闭分支、nil update）；
+   - 意义：保证重构后行为稳定，并验证失败场景下流程边界可控。
+
+3. `main.go`（本轮边界变化）
+   - 变化：仍只消费 `pipeline.ProcessUpdate()` 结果，无需感知 stage 细节；
+   - 意义：入口层与执行策略进一步解耦，后续切换执行模型改动面更小。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。

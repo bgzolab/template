@@ -14,47 +14,52 @@ import (
 	"telegram-message-sync-bot/internal/service/syncservice"
 )
 
+type fakeArchiveStage struct {
+	run func(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) archiveservice.PersistResult
+}
+
+func (f fakeArchiveStage) Run(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) archiveservice.PersistResult {
+	return f.run(ctx, b, update, config)
+}
+
+type fakeSyncStage struct {
+	run func(config Entity.Config, persistResult archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult)
+}
+
+func (f fakeSyncStage) Run(config Entity.Config, persistResult archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+	return f.run(config, persistResult)
+}
+
+type fakeNotifyStage struct {
+	run func(config Entity.Config, update *models.Update, persistResult archiveservice.PersistResult, syncEnabled bool, syncReason string, dispatchResults []syncservice.DispatchResult) []notifyservice.OutboundMessage
+}
+
+func (f fakeNotifyStage) Run(config Entity.Config, update *models.Update, persistResult archiveservice.PersistResult, syncEnabled bool, syncReason string, dispatchResults []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+	return f.run(config, update, persistResult, syncEnabled, syncReason, dispatchResults)
+}
+
 func TestProcessUpdate_StageOrderAndOutput(t *testing.T) {
 	order := make([]string, 0)
 
 	p := Pipeline{
-		Archive: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
+		ArchiveStage: fakeArchiveStage{run: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
 			order = append(order, "archive")
 			return archiveservice.PersistResult{OK: true, Message: "file.md", SourceLink: "link", MsgText: "content", SourceID: "imbGZo"}
-		},
-		ResolveTargets: func(_ Entity.Config, _ int64) []int64 {
-			order = append(order, "resolve-targets")
-			return []int64{1}
-		},
-		BuildArchiveResponse: func(_ bool, _ string, _ string) string {
-			order = append(order, "archive-response")
-			return "archive"
-		},
-		ShouldSync: func(_ Entity.Config, _ string) (bool, string) {
-			order = append(order, "should-sync")
-			return true, ""
-		},
-		Dispatch: func(_ Entity.Config, _ string, _ []syncservice.Sender) []syncservice.DispatchResult {
-			order = append(order, "dispatch")
-			return []syncservice.DispatchResult{{Platform: "BlueSky", Success: true}}
-		},
-		BuildSyncNotifications: func(_ bool, _ string, _ []syncservice.DispatchResult) []string {
-			order = append(order, "sync-notify")
-			return []string{"sync-ok"}
-		},
-		BuildOutboundMessages: func(_ []int64, _ string, _ []string) []notifyservice.OutboundMessage {
-			order = append(order, "build-outbound")
+		}},
+		SyncStage: fakeSyncStage{run: func(_ Entity.Config, _ archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+			order = append(order, "sync")
+			return true, "", []syncservice.DispatchResult{{Platform: "BlueSky", Success: true}}
+		}},
+		NotifyStage: fakeNotifyStage{run: func(_ Entity.Config, _ *models.Update, _ archiveservice.PersistResult, _ bool, _ string, _ []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+			order = append(order, "notify")
 			return []notifyservice.OutboundMessage{{ChatID: 1, Text: "archive"}, {ChatID: 1, Text: "sync-ok"}}
-		},
-		DefaultSenders: func() []syncservice.Sender {
-			return nil
-		},
+		}},
 	}
 
 	update := &models.Update{Message: &models.Message{Chat: models.Chat{ID: 1}}}
 	result := p.ProcessUpdate(context.Background(), nil, update, Entity.Config{})
 
-	expectedOrder := []string{"archive", "resolve-targets", "archive-response", "should-sync", "dispatch", "sync-notify", "build-outbound"}
+	expectedOrder := []string{"archive", "sync", "notify"}
 	if !reflect.DeepEqual(order, expectedOrder) {
 		t.Fatalf("unexpected stage order: %+v", order)
 	}
@@ -67,50 +72,49 @@ func TestProcessUpdate_StageOrderAndOutput(t *testing.T) {
 	}
 }
 
-func TestProcessUpdate_WhenSyncDisabled_NoDispatch(t *testing.T) {
-	dispatchCalled := false
+func TestProcessUpdate_WhenSyncDisabled_StillNotify(t *testing.T) {
+	notifyCalled := false
 
 	p := Pipeline{
-		Archive: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
+		ArchiveStage: fakeArchiveStage{run: func(_ context.Context, _ *bot.Bot, _ *models.Update, _ Entity.Config) archiveservice.PersistResult {
 			return archiveservice.PersistResult{OK: true, Message: "file.md", SourceLink: "link", MsgText: "content", SourceID: "other"}
-		},
-		ResolveTargets: func(_ Entity.Config, _ int64) []int64 {
-			return []int64{1}
-		},
-		BuildArchiveResponse: func(_ bool, _ string, _ string) string {
-			return "archive"
-		},
-		ShouldSync: func(_ Entity.Config, _ string) (bool, string) {
-			return false, "skip"
-		},
-		Dispatch: func(_ Entity.Config, _ string, _ []syncservice.Sender) []syncservice.DispatchResult {
-			dispatchCalled = true
-			return nil
-		},
-		BuildSyncNotifications: func(syncEnabled bool, _ string, _ []syncservice.DispatchResult) []string {
+		}},
+		SyncStage: fakeSyncStage{run: func(_ Entity.Config, _ archiveservice.PersistResult) (bool, string, []syncservice.DispatchResult) {
+			return false, "skip", nil
+		}},
+		NotifyStage: fakeNotifyStage{run: func(_ Entity.Config, _ *models.Update, _ archiveservice.PersistResult, syncEnabled bool, syncReason string, _ []syncservice.DispatchResult) []notifyservice.OutboundMessage {
+			notifyCalled = true
 			if syncEnabled {
 				t.Fatalf("sync should be disabled")
 			}
-			return []string{"skip"}
-		},
-		BuildOutboundMessages: func(_ []int64, _ string, _ []string) []notifyservice.OutboundMessage {
+			if syncReason != "skip" {
+				t.Fatalf("unexpected sync reason: %s", syncReason)
+			}
 			return []notifyservice.OutboundMessage{{ChatID: 1, Text: "archive"}, {ChatID: 1, Text: "skip"}}
-		},
-		DefaultSenders: func() []syncservice.Sender {
-			return nil
-		},
+		}},
 	}
 
 	update := &models.Update{Message: &models.Message{Chat: models.Chat{ID: 1}}}
 	result := p.ProcessUpdate(context.Background(), nil, update, Entity.Config{})
 
-	if dispatchCalled {
-		t.Fatalf("dispatch should not be called when sync is disabled")
+	if !notifyCalled {
+		t.Fatalf("notify stage should be called when sync is disabled")
 	}
 	if result.SyncEnabled {
 		t.Fatalf("expected sync disabled")
 	}
 	if result.SyncReason != "skip" {
 		t.Fatalf("unexpected sync reason: %s", result.SyncReason)
+	}
+}
+
+func TestProcessUpdate_NilUpdate_ReturnEmpty(t *testing.T) {
+	p := NewDefaultPipeline()
+	result := p.ProcessUpdate(context.Background(), nil, nil, Entity.Config{})
+	if result.PersistResult.OK {
+		t.Fatalf("expected empty result when update is nil")
+	}
+	if len(result.OutboundMessages) != 0 {
+		t.Fatalf("expected no outbound messages for nil update")
 	}
 }

@@ -174,6 +174,30 @@
 
 - [ ] 阶段2-步骤6：基于 pipeline 抽离可替换 stage 接口（为异步化做准备），并补充回归测试与失败场景测试。
 
+## 2026-02-17（阶段2-步骤6）
+
+- [x] 完成“可替换 stage 接口”第六步改造：
+    - [x] 在 `internal/service/pipelineservice` 中抽离 `ArchiveStage` / `SyncStage` / `NotifyStage` 接口；
+    - [x] 增加默认 stage 实现并保持现有串行行为不变；
+    - [x] `Pipeline` 改为通过 stage 接口编排流程，为后续异步化替换预留扩展点。
+
+- [x] 回归与失败场景测试通过：
+    - [x] 验证 stage 执行顺序回归（archive -> sync -> notify）；
+    - [x] 验证同步关闭时仍执行通知阶段；
+    - [x] 验证 `nil update` 时安全返回空结果。
+
+- [x] 独立模块测试通过：
+    - [x] `go test ./internal/service/pipelineservice`
+    - [x] `go test ./internal/service/bootstrapservice`
+    - [x] `go test ./internal/service/notifyservice`
+    - [x] `go test ./internal/service/archiveservice`
+    - [x] `go test ./internal/service/syncservice`
+    - [x] `go test ./internal/Database`
+
+### 下一步（待你验收后执行）
+
+- [ ] 阶段2-步骤7：在不改业务语义前提下，为 pipeline 增加异步执行实验开关（仅骨架），并补充顺序一致性与回退测试。
+
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。
