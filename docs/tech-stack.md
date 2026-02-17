@@ -40,7 +40,7 @@
 | `log.enable` | 未生效（预留） | 无直接消费 | 当前仅使用 `log.dir` 初始化日志 |
 | `log.dir` | 生效 | `main.go` -> `LogUtils.InitLogger(globalConfig.Log.Dir)` | 日志与 SQLite 路径基准目录 |
 | `template.dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | Markdown 模板文件路径 |
-| `targetUserList` | 生效 | `main.go` -> `defalutHandler()` | 通知目标用户列表，空时回退消息来源聊天 |
+| `targetUserList` | 生效 | `internal/service/notifyservice/service.go` -> `ResolveTargetChatIDs()` | 通知目标用户列表，空时回退消息来源聊天 |
 | `socialMediaSync.enable` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` | 社媒同步总开关 |
 | `socialMediaSync.targetChannel` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` + `ContainsExactTarget()` | 频道精确匹配触发同步 |
 | `socialMediaSync.mastodon.*` | 生效 | `pkg/SocialMediaUtils/Mastodon.go` | Mastodon 同步配置 |
@@ -65,7 +65,8 @@
 6. 每个重构步骤必须绑定独立测试（执行方式 + 通过标准 + 失败处理）；
 7. 新增平台必须通过 Provider/适配层扩展，禁止修改核心 pipeline 主干；
 8. 单文件建议不超过 300 行，如无必要，超限必须拆分并记录拆分理由；
-9. 阶段2准入采用“9项清单全通过”门禁，未通过不得进入代码改造。
+9.  每个关键函数（主要指抽离出来的业务模块函数）必须添加函数注释，至少说明“做什么、为什么这么做”，优先使用中文；测试函数可不强制。
+10. 阶段2准入采用“10项清单全通过”门禁，未通过不得进入代码改造。
 
 ## 阶段门禁说明
 

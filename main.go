@@ -11,6 +11,7 @@ import (
 	"telegram-message-sync-bot/internal/Entity"
 	"telegram-message-sync-bot/internal/Handler"
 	"telegram-message-sync-bot/internal/service/archiveservice"
+	"telegram-message-sync-bot/internal/service/notifyservice"
 	"telegram-message-sync-bot/internal/service/syncservice"
 	"telegram-message-sync-bot/pkg/FileUtils"
 	"telegram-message-sync-bot/pkg/LogUtils"
@@ -78,56 +79,30 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	}
 
 	persistResult := archiveservice.PersistMessage(ctx, b, update, globalConfig)
-	ok := persistResult.OK
-	msg := persistResult.Message
-	sourceLink := persistResult.SourceLink
-	msgText := persistResult.MsgText
-	sourceId := persistResult.SourceID
-	targetChatIdList := []int64{update.Message.Chat.ID}
-	if len(globalConfig.TargetUserList) > 0 {
-		targetChatIdList = globalConfig.TargetUserList
+	targetChatIDs := notifyservice.ResolveTargetChatIDs(globalConfig, update.Message.Chat.ID)
+	archiveResponse := notifyservice.BuildArchiveResponse(persistResult.OK, persistResult.SourceLink, persistResult.Message)
+	if !persistResult.OK {
+		LogUtils.GetLogger().Println(persistResult.Message)
 	}
 
-	responseTxt := ""
-	if !ok {
-		LogUtils.GetLogger().Println(msg)
-		responseTxt = fmt.Sprintf("%s\n消息备份出现异常: %s!", sourceLink, msg)
-	} else {
-		responseTxt = fmt.Sprintf("%s\n消息已备案至: %s!", sourceLink, msg)
-	}
-
-	syncEnabled, syncReason := syncservice.ShouldSync(globalConfig, sourceId)
+	syncEnabled, syncReason := syncservice.ShouldSync(globalConfig, persistResult.SourceID)
 	if !syncEnabled {
 		LogUtils.GetLogger().Println(syncReason)
 	}
 
-	for _, chatId := range targetChatIdList {
+	results := make([]syncservice.DispatchResult, 0)
+	if syncEnabled {
+		results = syncservice.Dispatch(globalConfig, persistResult.MsgText, syncservice.DefaultSenders())
+	}
+
+	syncNotifications := notifyservice.BuildSyncNotifications(syncEnabled, syncReason, results)
+	outboundMessages := notifyservice.BuildOutboundMessages(targetChatIDs, archiveResponse, syncNotifications)
+
+	for _, outbound := range outboundMessages {
 		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-			ChatID: chatId,
-			Text:   responseTxt,
+			ChatID: outbound.ChatID,
+			Text:   outbound.Text,
 		})
-
-		if !syncEnabled {
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   syncReason,
-			})
-			continue
-		}
-
-		results := syncservice.Dispatch(globalConfig, msgText, syncservice.DefaultSenders())
-		for _, result := range results {
-			notifyText := fmt.Sprintf("消息已同步至 %s!", result.Platform)
-			if !result.Success {
-				notifyText = fmt.Sprintf("同步 %s 失败", result.Platform)
-			}
-
-			_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
-				ChatID: chatId,
-				Text:   notifyText,
-			})
-		}
-
 	}
 }
 

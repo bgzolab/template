@@ -96,6 +96,20 @@
 	- 变化：归档改为调用 `archiveservice.PersistMessage()`，入口继续向装配层收敛；
 	- 意义：归档与同步均已具备服务化入口，后续可继续拆分通知模块。
 
+## 本轮改造后的新增文件作用（阶段2-步骤3）
+
+1. `internal/service/notifyservice/service.go`
+	- 作用：承载通知编排逻辑（目标聊天解析、归档通知构建、同步通知构建、批量消息展开）；
+	- 边界：不直接执行 Telegram 发送，仅产出待发送消息列表。
+
+2. `internal/service/notifyservice/service_test.go`
+	- 作用：验证通知模块纯逻辑，确保通知策略可独立测试；
+	- 边界：不依赖 bot 实例与网络 I/O。
+
+3. `main.go`（本轮边界变化）
+	- 变化：由 `notifyservice` 统一生成待发送消息，主流程只负责发送；
+	- 意义：主入口进一步收敛为编排层，为后续“启动装配模块化”做准备。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。
