@@ -74,3 +74,40 @@
 - P0（文档落地）完成后，需验证：实施计划、技术规范、进度记录、架构洞察四份文档均已更新；
 - 仅在“9项清单全通过 + 用户批准”后，允许启动 P1（代码结构拆分）。
 
+## Pipeline 模式切换运行说明（2026-02）
+
+### 配置示例
+
+在 `config/config.yaml` 中设置：
+
+- `pipeline.executionMode: serial`（默认，稳定）
+- `pipeline.executionMode: async_experimental`（实验）
+
+### 启动方式
+
+沿用既有命令：
+
+- `./tg sync -c ./config/config.yaml`
+
+程序会在启动后按 `pipeline.executionMode` 解析执行模式；未知值会自动回退到 `serial`。
+
+## 最小端到端回归清单（Pipeline 模式）
+
+1. **配置解析回归**
+  - 将 `pipeline.executionMode` 设为 `serial`，确认可正常启动。
+2. **实验模式等价回归**
+  - 将 `pipeline.executionMode` 设为 `async_experimental`，确认同一输入消息下输出行为与 `serial` 等价（归档、同步通知数量、通知顺序一致）。
+3. **未知模式回退回归**
+  - 将 `pipeline.executionMode` 设为未知值（如 `foo`），确认自动回退串行且不报致命错误。
+4. **同步关闭分支回归**
+  - 配置 `socialMediaSync.enable: false`，确认仍产生归档通知且同步通知为“跳过原因”。
+5. **目标频道未命中回归**
+  - 保持 `socialMediaSync.enable: true`，发送非目标频道消息，确认不触发平台分发，仅输出跳过通知。
+6. **核心模块测试回归**
+  - 执行：`go test ./internal/service/pipelineservice ./internal/service/bootstrapservice ./internal/service/notifyservice ./internal/service/archiveservice ./internal/service/syncservice ./internal/Database`
+
+## 发布前检查模板
+
+- 可复用模板见 [docs/pre-release-regression-checklist.md](docs/pre-release-regression-checklist.md)
+- 每次准备发布前，建议复制一份模板并填写“基本信息 + 结果记录 + 审核与发布”。
+

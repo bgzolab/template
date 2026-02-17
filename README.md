@@ -92,6 +92,18 @@ chmod +x ./tg
 ./tg sync -c ./config/config.yaml
 ```
 
+### Pipeline execution mode (optional)
+
+Set in `config/config.yaml`:
+
+```yaml
+pipeline:
+  executionMode: serial # serial | async_experimental
+```
+
+- `serial`: default stable mode
+- `async_experimental`: experimental mode (should keep equivalent behavior currently)
+
 ### Optional: run in background using nohup
 
 ```shell
