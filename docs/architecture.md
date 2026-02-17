@@ -82,6 +82,20 @@
 	- 变化：移除本地同步判定函数，改为调用 `syncservice`；
 	- 意义：主流程开始从“平台细节耦合”向“服务编排”过渡。
 
+## 本轮改造后的新增文件作用（阶段2-步骤2）
+
+1. `internal/service/archiveservice/service.go`
+	- 作用：承载归档主流程编排（来源解析、文本选择、模板渲染、文件落盘、数据库写入）；
+	- 边界：对外提供 `PersistMessage()`，上层不再直接操作归档细节。
+
+2. `internal/service/archiveservice/service_test.go`
+	- 作用：验证归档模块纯逻辑（来源解析、文本选择、模板数据构建）；
+	- 边界：不依赖 Telegram 网络与真实文件系统。
+
+3. `main.go`（本轮边界变化）
+	- 变化：归档改为调用 `archiveservice.PersistMessage()`，入口继续向装配层收敛；
+	- 意义：归档与同步均已具备服务化入口，后续可继续拆分通知模块。
+
 ## 已知实现偏差（常驻）
 
 > 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。

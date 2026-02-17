@@ -35,14 +35,14 @@
 | `token` | 生效 | `main.go` -> `start(globalConfig.Token)` | Telegram Bot 启动凭据 |
 | `output.json` | 生效 | `main.go` -> `if globalConfig.Output.JSON { persistJSON(update) }` | 控制是否输出原始 JSON |
 | `output.json_dir` | 生效 | `main.go` -> `persistJSON()` | JSON 输出目录 |
-| `output.person_dir` | 生效 | `main.go` -> `persistMessage()` | 私聊消息 Markdown 存档目录 |
-| `output.channel_dir` | 生效 | `main.go` -> `persistMessage()` | 频道消息 Markdown 存档目录 |
+| `output.person_dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | 私聊消息 Markdown 存档目录 |
+| `output.channel_dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | 频道消息 Markdown 存档目录 |
 | `log.enable` | 未生效（预留） | 无直接消费 | 当前仅使用 `log.dir` 初始化日志 |
 | `log.dir` | 生效 | `main.go` -> `LogUtils.InitLogger(globalConfig.Log.Dir)` | 日志与 SQLite 路径基准目录 |
-| `template.dir` | 生效 | `main.go` -> `persistMessage()` | Markdown 模板文件路径 |
+| `template.dir` | 生效 | `internal/service/archiveservice/service.go` -> `PersistMessage()` | Markdown 模板文件路径 |
 | `targetUserList` | 生效 | `main.go` -> `defalutHandler()` | 通知目标用户列表，空时回退消息来源聊天 |
-| `socialMediaSync.enable` | 生效 | `main.go` -> `shouldSyncToSocial()` | 社媒同步总开关 |
-| `socialMediaSync.targetChannel` | 生效 | `main.go` -> `shouldSyncToSocial()` + `containsExactChannel()` | 频道精确匹配触发同步 |
+| `socialMediaSync.enable` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` | 社媒同步总开关 |
+| `socialMediaSync.targetChannel` | 生效 | `internal/service/syncservice/service.go` -> `ShouldSync()` + `ContainsExactTarget()` | 频道精确匹配触发同步 |
 | `socialMediaSync.mastodon.*` | 生效 | `pkg/SocialMediaUtils/Mastodon.go` | Mastodon 同步配置 |
 | `socialMediaSync.twitter.*` | 生效 | `pkg/SocialMediaUtils/Twitter.go` | Twitter 同步配置 |
 | `socialMediaSync.bluesky.*` | 生效 | `pkg/SocialMediaUtils/BlueSky.go` | BlueSky 同步配置 |

@@ -101,6 +101,22 @@
 
 - [ ] 阶段2-步骤2：拆分归档流程（`persistMessage`）为独立服务模块，继续保持串行执行并补齐模块测试。
 
+## 2026-02-17（阶段2-步骤2）
+
+- [x] 完成“归档流程模块化”第二步改造：
+    - [x] 新增 `internal/service/archiveservice`，抽离来源解析、文本选择、模板渲染、落盘与入库编排；
+    - [x] `main.go` 改为调用 `archiveservice.PersistMessage()`；
+    - [x] 保持当前串行执行模型，不引入异步改造。
+
+- [x] 独立模块测试通过：
+    - [x] `go test ./internal/service/archiveservice`
+    - [x] `go test ./internal/service/syncservice`
+    - [x] `go test ./internal/Database`
+
+### 下一步（待你验收后执行）
+
+- [ ] 阶段2-步骤3：继续缩减 `main.go`（入口装配化），并将通知编排提取为独立模块，补齐对应测试。
+
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。
