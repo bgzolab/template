@@ -9,10 +9,8 @@ import (
 	"path/filepath"
 	"telegram-message-sync-bot/internal/Entity"
 	"telegram-message-sync-bot/internal/Handler"
-	"telegram-message-sync-bot/internal/service/archiveservice"
 	"telegram-message-sync-bot/internal/service/bootstrapservice"
-	"telegram-message-sync-bot/internal/service/notifyservice"
-	"telegram-message-sync-bot/internal/service/syncservice"
+	"telegram-message-sync-bot/internal/service/pipelineservice"
 	"telegram-message-sync-bot/pkg/FileUtils"
 	"telegram-message-sync-bot/pkg/LogUtils"
 	"time"
@@ -65,27 +63,17 @@ func defalutHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		persistJSON(update)
 	}
 
-	persistResult := archiveservice.PersistMessage(ctx, b, update, globalConfig)
-	targetChatIDs := notifyservice.ResolveTargetChatIDs(globalConfig, update.Message.Chat.ID)
-	archiveResponse := notifyservice.BuildArchiveResponse(persistResult.OK, persistResult.SourceLink, persistResult.Message)
-	if !persistResult.OK {
-		LogUtils.GetLogger().Println(persistResult.Message)
+	pipeline := pipelineservice.NewDefaultPipeline()
+	result := pipeline.ProcessUpdate(ctx, b, update, globalConfig)
+
+	if !result.PersistResult.OK {
+		LogUtils.GetLogger().Println(result.PersistResult.Message)
+	}
+	if !result.SyncEnabled {
+		LogUtils.GetLogger().Println(result.SyncReason)
 	}
 
-	syncEnabled, syncReason := syncservice.ShouldSync(globalConfig, persistResult.SourceID)
-	if !syncEnabled {
-		LogUtils.GetLogger().Println(syncReason)
-	}
-
-	results := make([]syncservice.DispatchResult, 0)
-	if syncEnabled {
-		results = syncservice.Dispatch(globalConfig, persistResult.MsgText, syncservice.DefaultSenders())
-	}
-
-	syncNotifications := notifyservice.BuildSyncNotifications(syncEnabled, syncReason, results)
-	outboundMessages := notifyservice.BuildOutboundMessages(targetChatIDs, archiveResponse, syncNotifications)
-
-	for _, outbound := range outboundMessages {
+	for _, outbound := range result.OutboundMessages {
 		_, _ = b.SendMessage(ctx, &bot.SendMessageParams{
 			ChatID: outbound.ChatID,
 			Text:   outbound.Text,
