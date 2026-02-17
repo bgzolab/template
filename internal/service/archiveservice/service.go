@@ -38,6 +38,8 @@ type SourceMeta struct {
 	MessageID  int
 }
 
+// PersistMessage 负责执行“单条消息归档”完整编排：解析来源、渲染模板、落盘、入库。
+// 这样做的原因是把归档用例从入口层抽离，降低 main 复杂度，并让归档逻辑可独立测试与复用。
 func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, config Entity.Config) PersistResult {
 	if update.Message == nil {
 		return PersistResult{OK: false, Message: "接受消息为空"}
@@ -119,6 +121,8 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 	return PersistResult{OK: true, Message: meta.FileName, SourceLink: meta.SourceLink, MsgText: msgText, SourceID: meta.SourceID}
 }
 
+// ResolveSourceMeta 将 Telegram 原始消息转换为统一来源元信息（来源ID、文件名、落盘路径、消息链接等）。
+// 这样做的原因是统一“私聊消息/频道转发消息”的分支处理，避免上层重复判断来源类型。
 func ResolveSourceMeta(update *models.Update, config Entity.Config) SourceMeta {
 	meta := SourceMeta{
 		OutputPath: config.Output.PersonDir,
@@ -147,6 +151,8 @@ func ResolveSourceMeta(update *models.Update, config Entity.Config) SourceMeta {
 	return meta
 }
 
+// SelectMsgText 统一提取消息正文：优先 Text，回退 Caption，并处理标签转义和文本链接格式化。
+// 这样做的原因是把文本处理规则集中，保证归档内容在不同消息类型下行为一致。
 func SelectMsgText(update *models.Update) string {
 	msgText := update.Message.Text
 	msgEntities := update.Message.Entities
@@ -157,6 +163,8 @@ func SelectMsgText(update *models.Update) string {
 	return StrUtils.EscapeHashtags(TgUtils.HandleMsgLink(msgText, msgEntities))
 }
 
+// BuildTemplateData 生成模板渲染所需字段，统一时间格式和变量命名。
+// 这样做的原因是将模板数据构建从 I/O 逻辑中分离，方便测试与后续模板演进。
 func BuildTemplateData(sourceDate time.Time, photoLink, msgText, sourceLink string, now time.Time) map[string]interface{} {
 	timeFormat := "2006-01-02 15:04:05"
 	return map[string]interface{}{
@@ -169,6 +177,8 @@ func BuildTemplateData(sourceDate time.Time, photoLink, msgText, sourceLink stri
 	}
 }
 
+// formatDownloadedFiles 将下载后的媒体路径格式化为 Markdown 图片片段。
+// 这样做的原因是隔离展示格式拼接逻辑，避免散落在归档主流程中。
 func formatDownloadedFiles(files []string) string {
 	var builder strings.Builder
 	for _, file := range files {
@@ -179,6 +189,8 @@ func formatDownloadedFiles(files []string) string {
 	return builder.String()
 }
 
+// persistFile 下载并保存 Telegram 媒体文件，返回可入库的附件元数据。
+// 这样做的原因是把媒体 I/O 细节封装在单点，减少归档主流程的噪音与耦合。
 func persistFile(ctx context.Context, b *bot.Bot, fileID string, dirname string, outputPath string, messageType Entity.MessageType) *Entity.Attachment {
 	params := bot.GetFileParams{FileID: fileID}
 	file, err := b.GetFile(ctx, &params)
