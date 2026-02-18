@@ -21,25 +21,55 @@
 
 > 注释：如果你觉得术语重，可以直接用下面“简版模板（无术语）”。
 
-## 简版模板（无术语，推荐日常使用）
+## Prompt 模板
 
-请先读 `docs/memories/index.md`，只把 memories 当作规则来源。
-如果 memories 没写清楚，就直接告诉我“信息不足”，并向我询问信息，不要猜。
-这次只做我要求的范围，不额外扩展。
-输出请保持：先结论，再改动点。
+### 从 0 开始
 
-## LLM 交互 Prompt 示例（可直接复用）
+<!-- TODO -->
 
-请先读取 `docs/memories/index.md`，并仅将 memories 目录作为规范来源。归档规则只允许使用 `docs/memories/archive-markdown-schema-v1.md`。implementation-plans 仅用于执行顺序参考，不可用于定义行为。输出保持最简，并在开头给出：NormativeSource、Version、OutOfScope。若一次性切换门禁有任一缺失，直接给出 No-Go 与缺失项。
+### 补全文档
+
+<!-- TODO -->
+
+### 新 Feature
+
+#### 实施计划 
+
+阅读设计文档`design-document.md`与技术栈推荐`tech-stack.md`, 将本次的需求，生成一份详细的 实施计划（Markdown 格式），存储在 #file:260218-refactor-archive-multi-mds.md，要求有：
+
+1. 每一步要小而具体。
+2. 每一步都必须包含验证正确性的测试。
+3. 严禁包含代码——只写清晰、具体的指令。
+4. 先聚焦于基础功能，完整功能后面再加。
+
+如果 `memories/` 等上下文没写清楚，就直接告诉我“信息不足”，并向我询问信息，不要猜。只做我要求的范围，额外扩展需要额外尽量一次性提出。
+
+注意：这一步不需要写代码，先把文档规划好。
+
+#### 自我完善 Prompt
+
+按 `docs/memories/index.md` 里规定的顺序阅读`memories/` 里的文档，检查 #file:260218-refactor-archive-multi-mds.md 里是否完全清晰？你有哪些问题需要我澄清，让它对你来说 100% 明确？
+
+### 开始 Vibe coding
+
+按 `docs/memories/index.md` 里规定的顺序阅读`memories/` 里的文档，然后执行实施计划的第 1 步。并添加相关测试。
+
+在我验收通过前，不要开始第 2 步。验证通过后，打开 `progress.md` 记录你做了什么供后续开发者参考，再把新的架构洞察添加到 `architecture.md` 中解释每个文件的作用。
+
+
+ 
+
+
+
 
 ## 模板A：通用实现任务（推荐）
 
-- NormativeSource: `docs/memories/archive-markdown-schema-v1.md`
+- NormativeSource: `docs/memories/archive-markdown-schema.md`
 - Version: `md.v1`
 - OutOfScope: 未在 memories 中定义的行为推断
 
 请先读取 `docs/memories/index.md`，并只将 memories 目录视为规范来源。
-归档行为只允许依据 `docs/memories/archive-markdown-schema-v1.md`。
+归档行为只允许依据 `docs/memories/archive-markdown-schema.md`。
 `docs/implementation-plans/` 仅用于执行顺序，不可用于定义行为。
 输出保持最简：
 1) 先给结论；
@@ -48,11 +78,11 @@
 
 ## 模板B：一次性切换评审（Go/No-Go）
 
-- NormativeSource: `docs/memories/archive-markdown-schema-v1.md`
+- NormativeSource: `docs/memories/archive-markdown-schema.md`
 - Version: `md.v1`
 - OutOfScope: 灰度/双写过渡策略
 
-请先读取 `docs/memories/index.md` 与 `docs/memories/archive-markdown-schema-v1.md`。
+请先读取 `docs/memories/index.md` 与 `docs/memories/archive-markdown-schema.md`。
 仅按 schema v1 的一次性切换门禁判定：功能、数据、完整性、运维、审批。
 若任一门禁缺失或失败，结论必须为 `No-Go`，并列出缺失项/失败项。
 

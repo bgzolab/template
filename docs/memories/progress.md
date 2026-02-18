@@ -59,6 +59,19 @@
 
 ## 2026年进度
 
+- [x] 2026-02-18: 归档改造改为“文档先行，代码后置”。
+    - [x] 已先冻结归档规则：按消息存档 `source_id/message_id.md`；
+    - [x] 已明确切换期策略：写新路径，读新失败回退旧路径；
+    - [x] 已明确 `source_id` 规则：统一小写，最大长度 128，超限报错并传递到通知阶段；
+    - [x] 已明确迁移策略：以数据库为主一次性全量补齐，旧单文件删除前先打包 `archives/260218-old-markdown-archives.zip`；
+    - [x] 已明确核对口径：双向核对仅比较 `(chat_id, message_id)`；
+    - [x] 已明确迁移范围：仅 `archives` 下规范文件。
+
+### 下一步（待你确认后执行）
+
+- [ ] 代码阶段步骤1（小步）：仅实现“归档写入路径切换到 `source_id/message_id.md`”并补对应单元测试；
+- [ ] 暂不实现全量迁移命令与删旧逻辑，等步骤1验收通过后再进入步骤2。
+
 - [x] 2026-02-18: 新增 LLM Prompt 模板并接入 memories 唯一入口。
     - [x] 新增 `docs/prompt-template.md`（通用实现 / 切换评审 / 文档更新 三类模板）；
     - [x] 更新 `docs/memories/index.md` 读取顺序，纳入 Prompt 模板入口；
@@ -66,7 +79,7 @@
 
 - [x] 2026-02-18: LLM 文档治理最简方案落地（memories 唯一入口 + schema 唯一规范源）。
     - [x] 新增 `docs/memories/index.md` 作为唯一入口与冲突处理规则；
-    - [x] 新增 `docs/memories/archive-markdown-schema-v1.md` 并定义一次性切换阈值门禁；
+    - [x] 新增 `docs/memories/archive-markdown-schema.md` 并定义一次性切换阈值门禁；
     - [x] 新增 `docs/implementation-plans/implementation-plan-cutover-threshold.md`，包含强制字段 `NormativeSource/Version/OutOfScope`；
     - [x] 更新 `docs/memories/design-document.md` 与 `docs/memories/architecture.md` 仅做规范引用；
     - [x] 更新 `docs/pre-release-regression-checklist.md`，新增一次性切换结论记录项。

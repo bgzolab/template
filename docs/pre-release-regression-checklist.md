@@ -1,7 +1,7 @@
 # 发布前回归检查模板（可复用）
 
 > 用途：在发布前统一记录回归执行情况，减少“改动通过但未覆盖关键路径”的风险。
-> 规范来源：`docs/memories/archive-markdown-schema-v1.md`（本文件只做检查记录，不定义规则）。
+> 规范来源：`docs/memories/archive-markdown-schema.md`（本文件只做检查记录，不定义规则）。
 
 ## 基本信息
 

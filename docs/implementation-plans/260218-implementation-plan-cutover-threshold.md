@@ -9,7 +9,7 @@
 
 ## 计划头（强制字段）
 
-- NormativeSource: `docs/memories/archive-markdown-schema-v1.md`
+- NormativeSource: `docs/memories/archive-markdown-schema.md`
 - Version: `md.v1`
 - OutOfScope: 灰度发布、双写过渡、多版本并行写
 
