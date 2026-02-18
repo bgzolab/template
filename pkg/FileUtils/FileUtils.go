@@ -39,7 +39,7 @@ func OutputResponse(filePath string, fileName string, resp *http.Response) (bool
 	// 保存到本地
 	_, err := io.Copy(file, resp.Body)
 	if err != nil {
-		LogUtils.GetLogger().Println("保存文件失败: %v", err)
+		LogUtils.GetLogger().Printf("保存文件失败: %v\n", err)
 		return false, fmt.Sprintf("保存文件失败: %v", err)
 	}
 
