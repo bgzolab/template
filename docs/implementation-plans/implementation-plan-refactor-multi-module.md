@@ -75,19 +75,19 @@
 
 ### 步骤2：更新技术规范文档
 
-- 动作：在 `docs/tech-stack.md` 增加重构执行规范（Entity 统一、DB 唯一约束优先、串行到异步、测试纪律）；
+- 动作：在 `docs/memories/tech-stack.md` 增加重构执行规范（Entity 统一、DB 唯一约束优先、串行到异步、测试纪律）；
 - 测试：逐条检查规范是否可执行且与冻结决策一致；
 - 通过标准：至少 8 条规范，且不与现有配置生效矩阵冲突。
 
 ### 步骤3：记录阶段1进度
 
-- 动作：在 `docs/progress.md` 记录阶段1完成项、产出物与下一步门禁；
+- 动作：在 `docs/memories/progress.md` 记录阶段1完成项、产出物与下一步门禁；
 - 测试：进度条目包含日期、完成内容、下一步条件三部分；
 - 通过标准：条目可供后续开发者直接追踪。
 
 ### 步骤4：补充架构洞察
 
-- 动作：在 `docs/architecture.md` 增加重构期文件职责说明（入口/Pipeline/Service/Adapter/Entity）；
+- 动作：在 `docs/memories/architecture.md` 增加重构期文件职责说明（入口/Pipeline/Service/Adapter/Entity）；
 - 测试：每个文件/目录角色都有职责描述与边界；
 - 通过标准：后续开发者可据此判断改动落点。
 
@@ -95,15 +95,15 @@
 
 仅当以下 9 项全部通过，才允许开始阶段2（代码改造）：
 
-1. `docs/implementation-plan-refactor-multi-module.md` 章节完整且无占位缺失；
+1. `docs/implementation-plans/implementation-plan-refactor-multi-module.md` 章节完整且无占位缺失；
 2. 冻结决策 1~5 在实施计划中表述一致；
 3. 分阶段路线（P0/P1/P2）明确且无冲突；
 4. 每个阶段至少有 1 条可执行验证方法；
-5. `docs/tech-stack.md` 已新增重构执行规范并与冻结决策一致；
+5. `docs/memories/tech-stack.md` 已新增重构执行规范并与冻结决策一致；
 6. 技术规范明确“去重优先数据库唯一约束”；
 7. 技术规范明确“执行模型串行到异步分阶段”；
-8. `docs/progress.md` 已记录阶段1产出与下一步门禁；
-9. `docs/architecture.md` 已新增重构期文件职责洞察。
+8. `docs/memories/progress.md` 已记录阶段1产出与下一步门禁；
+9. `docs/memories/architecture.md` 已新增重构期文件职责洞察。
 
 > 门禁规则：9/9 全通过 + 用户明确批准，才进入阶段2。
 
@@ -120,10 +120,10 @@
 
 ## 9. 里程碑产出物
 
-- `docs/implementation-plan-refactor-multi-module.md`（本文件，阶段1定稿）；
-- `docs/tech-stack.md`（重构执行规范）；
-- `docs/progress.md`（阶段1记录与门禁状态）；
-- `docs/architecture.md`（重构期文件职责与边界）。
+- `docs/implementation-plans/implementation-plan-refactor-multi-module.md`（本文件，阶段1定稿）；
+- `docs/memories/tech-stack.md`（重构执行规范）；
+- `docs/memories/progress.md`（阶段1记录与门禁状态）；
+- `docs/memories/architecture.md`（重构期文件职责与边界）。
 
 ## 10. 阶段2启动条件
 
@@ -157,12 +157,12 @@
 - 使用 `docs/pre-release-regression-checklist.md` 复制出一份“样例执行记录”；
 - 至少完成以下字段：版本/分支、执行人、回归结论、失败项（若无写“无”）、处理建议；
 - 至少勾选并记录 1 轮模块测试执行结果；
-- 在 `docs/progress.md` 记录本次演练完成情况与遗留项；
-- 如演练导致流程调整，需同步更新 `docs/tech-stack.md` 的“发布前检查模板”说明。
+- 在 `docs/memories/progress.md` 记录本次演练完成情况与遗留项；
+- 如演练导致流程调整，需同步更新 `docs/memories/tech-stack.md` 的“发布前检查模板”说明。
 
 #### 步骤11验收标准
 
 1. 仓库中存在一份可追踪的样例检查记录；
 2. 样例记录包含“结论 + 风险/处理建议”；
-3. `docs/progress.md` 有对应里程碑记录；
+3. `docs/memories/progress.md` 有对应里程碑记录；
 4. 不引入业务代码语义变更（本步以文档与流程演练为主）。

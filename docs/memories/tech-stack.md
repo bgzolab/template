@@ -3,9 +3,9 @@
 
 1. 输出最简单但最健壮的技术栈；
 2. 注重模块化（多文件）和禁止单体巨文件（monolith）
-3. 写任何代码前必须完整阅读 docs/@architecture.md（包含完整数据库结构）
-4. 写任何代码前必须完整阅读 docs/@design-document.md
-5. 每完成一个重大功能或里程碑后，必须更新 docs/@architecture.md
+3. 写任何代码前必须完整阅读 docs/memories/architecture.md（包含完整数据库结构）
+4. 写任何代码前必须完整阅读 docs/memories/design-document.md
+5. 每完成一个重大功能或里程碑后，必须更新 docs/memories/architecture.md
 -->
 
 # 技术栈选择与规范
@@ -54,7 +54,7 @@
 1. 文档默认以 `config/config.yaml` 为唯一配置源；
 2. 新增配置项必须同步更新本矩阵，否则视为未完成；
 3. 废弃配置项必须在矩阵中标注“废弃”并给出迁移/删除状态；
-4. 每次里程碑发布后，需同步更新 `docs/architecture.md` 与 `docs/progress.md`。
+4. 每次里程碑发布后，需同步更新 `docs/memories/architecture.md` 与 `docs/memories/progress.md`。
 
 ## 重构执行规范（2026-02）
 

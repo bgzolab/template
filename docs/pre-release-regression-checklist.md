@@ -44,6 +44,6 @@
 
 ## 审核与发布
 
-- [ ] 已同步更新 `docs/progress.md`
-- [ ] 已同步更新 `docs/architecture.md`（如涉及边界变化）
+- [ ] 已同步更新 `docs/memories/progress.md`
+- [ ] 已同步更新 `docs/memories/architecture.md`（如涉及边界变化）
 - [ ] 已确认可发布

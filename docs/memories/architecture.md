@@ -54,13 +54,13 @@
    - 当前：文本处理与消息辅助逻辑；
    - 目标：保留为纯逻辑工具，避免混入 I/O 行为。
 
-6. `docs/implementation-plan-refactor-multi-module.md`
+6. `docs/implementation-plans/implementation-plan-refactor-multi-module.md`
    - 作用：重构主计划与阶段门禁来源（阶段推进唯一依据）。
 
-7. `docs/tech-stack.md`
+7. `docs/memories/tech-stack.md`
    - 作用：技术规范与配置生效矩阵，约束重构落地方式。
 
-8. `docs/progress.md`
+8. `docs/memories/progress.md`
    - 作用：阶段状态、门禁达成情况、已知偏差关闭记录。
 
 ### 分层演进方向
@@ -194,7 +194,7 @@
    - 变化：新增 `pipeline.executionMode` 示例配置；
    - 意义：执行模式切换从“代码控制”升级为“配置可见、可操作”。
 
-2. `docs/tech-stack.md`
+2. `docs/memories/tech-stack.md`
    - 变化：新增 Pipeline 模式切换运行说明与最小端到端回归清单；
    - 意义：把“如何切换”和“如何验证”标准化，降低后续维护成本。
 
@@ -208,13 +208,13 @@
    - 作用：提供发布前回归执行记录模板（配置检查、链路回归、测试回归、审核发布）；
    - 意义：把“回归清单”升级为“可追踪记录”，降低发布遗漏风险。
 
-2. `docs/tech-stack.md`
+2. `docs/memories/tech-stack.md`
    - 变化：新增模板入口与使用说明；
    - 意义：让发布前检查流程有统一入口，减少沟通成本。
 
 ## 已知实现偏差（常驻）
 
-> 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/progress.md` 标注关闭。
+> 本小节用于记录“架构目标与当前实现”的差异，修复后需在 `docs/memories/progress.md` 标注关闭。
 
 ### 偏差清单
 

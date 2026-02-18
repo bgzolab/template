@@ -68,13 +68,13 @@
 
 
 - [x] 2026-02-16: 文档对齐：在设计与架构文档中同步“已知实现偏差（常驻）”小节。
-    - [x] 已同步到 `docs/design-document.md`
-    - [x] 已同步到 `docs/architecture.md`
+    - [x] 已同步到 `docs/memories/design-document.md`
+    - [x] 已同步到 `docs/memories/architecture.md`
 
 - [x] 2026-02-16: 多模块重构 P0（文档先行）已落地。
-    - [x] 完成 `docs/implementation-plan-refactor-multi-module.md`（重构阶段、步骤、验证、回滚、门禁）；
-    - [x] 完成 `docs/tech-stack.md`（重构执行规范：Entity沿用、DB唯一约束优先、串行到异步分阶段）；
-    - [x] 完成 `docs/architecture.md`（重构期文件职责与边界说明）；
+    - [x] 完成 `docs/implementation-plans/implementation-plan-refactor-multi-module.md`（重构阶段、步骤、验证、回滚、门禁）；
+    - [x] 完成 `docs/memories/tech-stack.md`（重构执行规范：Entity沿用、DB唯一约束优先、串行到异步分阶段）；
+    - [x] 完成 `docs/memories/architecture.md`（重构期文件职责与边界说明）；
     - [x] 明确阶段2准入：9项清单全通过 + 用户明确批准。
 
 ### 重构阶段门禁（阶段2前）
@@ -259,10 +259,10 @@
 - [x] 完成“配置示例与运行说明”第九步改造：
     - [x] 在 `config/config.yaml` 增加 `pipeline.executionMode` 示例配置；
     - [x] 在 `README.md` 增加 Pipeline 模式切换说明；
-    - [x] 在 `docs/tech-stack.md` 增加模式切换运行说明。
+    - [x] 在 `docs/memories/tech-stack.md` 增加模式切换运行说明。
 
 - [x] 增加最小端到端回归清单：
-    - [x] 在 `docs/tech-stack.md` 增加 6 条最小回归清单（模式解析、等价性、回退、分支、测试命令）。
+    - [x] 在 `docs/memories/tech-stack.md` 增加 6 条最小回归清单（模式解析、等价性、回退、分支、测试命令）。
 
 ### 下一步（待你验收后执行）
 
@@ -272,7 +272,7 @@
 
 - [x] 完成“发布前检查项模板化”第十步落地：
     - [x] 新增 `docs/pre-release-regression-checklist.md`，沉淀可复用回归记录模板；
-    - [x] 在 `docs/tech-stack.md` 增加模板入口与使用说明；
+    - [x] 在 `docs/memories/tech-stack.md` 增加模板入口与使用说明；
     - [x] 将配置/链路/测试/发布审核整合为统一检查表。
 
 ### 下一步（待你验收后执行）
@@ -299,6 +299,6 @@
 ### 已知实现偏差跟踪（常驻）
 
 - [ ] 偏差-01：历史配置与运行实例中可能仍残留 `notification` 配置块，但当前代码未消费该配置。
-- [x] 偏差-02：缺少统一“配置生效矩阵”文档，配置字段与运行行为对齐成本较高。（已在 `docs/tech-stack.md` 落地）
+- [x] 偏差-02：缺少统一“配置生效矩阵”文档，配置字段与运行行为对齐成本较高。（已在 `docs/memories/tech-stack.md` 落地）
 - [ ] 偏差-03：社媒平台错误处理目前为粗粒度结果反馈（成功/失败），尚未形成统一分级与重试策略。
 
