@@ -28,6 +28,10 @@
 这次只做我要求的范围，不额外扩展。
 输出请保持：先结论，再改动点。
 
+## LLM 交互 Prompt 示例（可直接复用）
+
+请先读取 `docs/memories/index.md`，并仅将 memories 目录作为规范来源。归档规则只允许使用 `docs/memories/archive-markdown-schema-v1.md`。implementation-plans 仅用于执行顺序参考，不可用于定义行为。输出保持最简，并在开头给出：NormativeSource、Version、OutOfScope。若一次性切换门禁有任一缺失，直接给出 No-Go 与缺失项。
+
 ## 模板A：通用实现任务（推荐）
 
 - NormativeSource: `docs/memories/archive-markdown-schema-v1.md`
