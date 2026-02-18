@@ -59,6 +59,11 @@
 
 ## 2026年进度
 
+- [x] 2026-02-18: 新增 LLM Prompt 模板并接入 memories 唯一入口。
+    - [x] 新增 `docs/memories/prompt-template.md`（通用实现 / 切换评审 / 文档更新 三类模板）；
+    - [x] 更新 `docs/memories/index.md` 读取顺序，纳入 Prompt 模板入口；
+    - [x] 默认交互策略固定为“先读 memories，再执行任务”。
+
 - [x] 2026-02-18: LLM 文档治理最简方案落地（memories 唯一入口 + schema 唯一规范源）。
     - [x] 新增 `docs/memories/index.md` 作为唯一入口与冲突处理规则；
     - [x] 新增 `docs/memories/archive-markdown-schema-v1.md` 并定义一次性切换阈值门禁；

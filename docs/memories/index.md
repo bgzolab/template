@@ -7,6 +7,8 @@
 
 # Memories 文档入口（唯一入口）
 
+> 说明：本入口主要用于约束 LLM 读取顺序；人类阅读可按需要跳读。
+
 ## 读取顺序（最简）
 
 1. `docs/memories/index.md`（本文件）
@@ -14,7 +16,8 @@
 3. `docs/memories/design-document.md`（设计边界与冻结决策）
 4. `docs/memories/architecture.md`（模块职责与链路边界）
 5. `docs/memories/tech-stack.md`（技术与配置矩阵）
-6. `docs/memories/progress.md`（进度与状态）
+6. `docs/memories/prompt-template.md`（LLM 交互 Prompt 模板）
+7. `docs/memories/progress.md`（进度与状态）
 
 ## 权威顺序（冲突处理）
 
