@@ -6,6 +6,14 @@
 
 # 项目设计文档
 
+## 文档权威顺序（LLM 读取约束）
+
+1. 归档规范唯一源：`docs/memories/archive-markdown-schema-v1.md`；
+2. 其余 `docs/memories/*.md` 仅做边界与上下文补充；
+3. `docs/implementation-plans/*.md` 仅用于执行步骤，不作为行为规范来源。
+
+> 注释：当文档冲突时，以 schema v1 为准；若 memories 缺失规则，不允许自动推断。
+
 ## 项目简介
 
 本项目是一个 TG 机器人赋能功能，主要是在 TG 上进行一系列功能开发，比如：消息存档、消息转发、多媒体提取等等。
@@ -19,6 +27,8 @@
 3. 频道匹配规则为**精确匹配**（`sourceId == targetChannel[i]`）；
 4. 未命中同步规则时，行为为“日志 + 通知”；
 5. `notification` 视为历史遗留配置，后续将完全删除，不再作为设计目标。
+6. 归档结构采用“来源优先分桶”，并由 `archive-markdown-schema-v1.md` 唯一定义；
+7. 归档改造采用“一次性切换”，是否切换由 schema v1 中的门禁阈值判定。
 
 ## 功能设计：消息存档
 

@@ -59,6 +59,14 @@
 
 ## 2026年进度
 
+- [x] 2026-02-18: LLM 文档治理最简方案落地（memories 唯一入口 + schema 唯一规范源）。
+    - [x] 新增 `docs/memories/index.md` 作为唯一入口与冲突处理规则；
+    - [x] 新增 `docs/memories/archive-markdown-schema-v1.md` 并定义一次性切换阈值门禁；
+    - [x] 新增 `docs/implementation-plans/implementation-plan-cutover-threshold.md`，包含强制字段 `NormativeSource/Version/OutOfScope`；
+    - [x] 更新 `docs/memories/design-document.md` 与 `docs/memories/architecture.md` 仅做规范引用；
+    - [x] 更新 `docs/pre-release-regression-checklist.md`，新增一次性切换结论记录项。
+
+
 - [x] 2026-02-16: 文档对齐：在设计与架构文档中同步“已知实现偏差（常驻）”小节。
     - [x] 已同步到 `docs/design-document.md`
     - [x] 已同步到 `docs/architecture.md`

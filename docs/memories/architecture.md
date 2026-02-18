@@ -8,6 +8,14 @@
 - 作为实现与设计对齐的事实基线；
 - 记录“已知实现偏差”并持续追踪关闭状态。
 
+## 文档入口与规范来源（最简）
+
+1. 统一入口：`docs/memories/index.md`；
+2. 归档规范唯一源：`docs/memories/archive-markdown-schema-v1.md`；
+3. 执行计划目录 `docs/implementation-plans/` 仅用于落地步骤，不定义架构行为。
+
+> 注释：本文件不复写 schema 规则，只引用唯一规范源，避免多处漂移。
+
 ## 当前核心链路（简版）
 
 1. Telegram Bot 接收消息；
