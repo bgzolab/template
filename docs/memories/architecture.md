@@ -271,3 +271,18 @@
 2. `internal/service/archiveservice/service_test.go`
    - 变化：新增读兼容测试覆盖（新路径命中、旧路径回退命中、双路径未命中）；
    - 意义：将步骤2行为固定为可回归基线，为后续全量补齐与删旧动作提供安全前提。
+
+## 本轮新增架构洞察（2026-02-19：步骤3全量补齐与核对落地）
+
+1. `internal/service/archivemigrationservice/service.go`
+   - 变化：新增 `BackfillFromDatabase()`，以数据库为基线执行全量补齐（已存在跳过、缺失补齐）；
+   - 变化：补齐输出路径固定为 `source_id/message_id.md`，并复用归档 Front Matter 生成逻辑；
+   - 变化：补齐完成后执行键集合核对，发现缺失/孤儿立即返回错误。
+
+2. `internal/service/archivemigrationservice/service_test.go`
+   - 变化：新增迁移服务测试（补齐成功、已存在跳过、孤儿文件核对失败）；
+   - 意义：把步骤3行为收敛为可验证、可回归的独立服务，降低后续“备份+删旧”阶段风险。
+
+3. `internal/Database/Messages.go`
+   - 变化：新增 `ListMessages()` 查询入口（含附件预加载）；
+   - 意义：统一迁移读取来源，避免在迁移服务内直接拼接数据库查询细节。

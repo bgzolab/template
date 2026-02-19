@@ -23,6 +23,16 @@ func IsDuplicateMessageError(err error) bool {
 	return strings.Contains(errMsg, "UNIQUE constraint failed") || strings.Contains(errMsg, "duplicated key")
 }
 
+// ListMessages 返回全部消息（含附件），用于归档补齐与核对。
+func ListMessages() ([]Entity.Message, error) {
+	var msgs []Entity.Message
+	err := DB.Preload("Attachments").Order("id ASC").Find(&msgs).Error
+	if err != nil {
+		return nil, err
+	}
+	return msgs, nil
+}
+
 // 按ID查找消息（含附件）
 func GetMessageByID(id int64) (*Entity.Message, error) {
 	var msg Entity.Message

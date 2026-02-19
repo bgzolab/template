@@ -59,6 +59,17 @@
 
 ## 2026年进度
 
+- [x] 2026-02-19: 代码阶段步骤3完成（以 DB 为主全量补齐 + 迁移后核对）。
+    - [x] 新增 `archivemigrationservice.BackfillFromDatabase()`：按数据库消息全量补齐 `source_id/message_id.md`；
+    - [x] 已实现“已存在跳过、缺失补齐”行为；
+    - [x] 已实现迁移后键集合核对（当前实现键为 `(source_id, message_id)`）；
+    - [x] 新增迁移服务单元测试：补齐成功、已存在跳过、孤儿文件核对失败；
+    - [x] 验证通过：`go test ./internal/service/archivemigrationservice ./internal/service/archiveservice ./internal/service/pipelineservice`。
+
+### 下一步（待你确认后执行）
+
+- [ ] 代码阶段步骤4：实现旧单文件 zip 备份与删除流程（删除前强制备份）。
+
 - [x] 2026-02-19: 代码阶段步骤2完成（切换期读兼容：先新后旧）。
     - [x] `archiveservice` 去重读取链路已改为：先检查新路径 `source_id/message_id.md`；
     - [x] 新路径未命中时，已回退检查旧单文件 `source_id.md`；
