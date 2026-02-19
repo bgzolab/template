@@ -33,11 +33,17 @@
 1. 在 memories 中确认唯一规范文件与版本标识；
 2. 固化路径 `source_id/message_id.md` 与切换期读写策略；
 3. 固化 `source_id` 规则（小写、长度上限 128、超限报错）。
+4. 固化 Front Matter 强制模板字段：
+	- `title/aliases/created/modified/comments/draft/description/source/tags`；
+	- `created/modified` 固定格式 `YYYY-MM-DDTHH:mm:ss`，不保留时区后缀；
+	- `content.sub(0,50/100)` 先将 `\n` 全部替换为空格再截断，长度不足原样输出；
+	- `source` 无可用链接时允许空字符串。
 
 验证：
 
 - 规范引用链一致（index/design/architecture 均指向同一规范源）；
 - 无“v1 作为现行规范”表述残留。
+- Front Matter 模板字段与计算规则在 schema 中可逐项核对，无歧义。
 
 ### 步骤2：迁移门禁文档化（本轮执行）
 
@@ -59,6 +65,10 @@
 1. 将代码实施拆成小步（路径切换 -> 兼容读取 -> 全量补齐 -> 删除旧文件）；
 2. 每步绑定测试与验收条件；
 3. 增加回退条件与停止条件。
+4. 新增 Front Matter 验收测试项（后续代码阶段执行）：
+	- 时间字段格式固定（无时区后缀）；
+	- 文本截断前换行归一化（`\n` -> 空格）；
+	- `source` 在 person 场景可为空字符串。
 
 验证：
 

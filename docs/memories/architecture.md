@@ -243,3 +243,10 @@
 2. `internal/service/archiveservice/service_test.go`
    - 变化：补充路径断言，确保私聊与频道场景都落在 `source_id/message_id.md`；
    - 意义：先锁定步骤1行为，后续步骤在此基础上增量推进。
+
+## 本轮新增架构洞察（2026-02-19：Front Matter 约束冻结）
+
+1. 归档输出不再只要求“可写入”，还要求 Front Matter 模板字段完整输出；
+2. 时间字段格式冻结为 `YYYY-MM-DDTHH:mm:ss`（无时区后缀）；
+3. 标题/别名/描述的截断链路固定为：先 `\n` 归一化为空格，再做 `sub(0,50/100)`；
+4. `source` 在 person 场景允许空字符串，channel 场景优先构造可访问链接。

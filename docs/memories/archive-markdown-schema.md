@@ -28,6 +28,38 @@
 
 ## 3. Front Matter 必填字段（最小强一致）
 
+### 3.0 强制模板（必须完整输出）
+
+每个消息归档文件的 Front Matter 必须包含如下固定字段结构：
+
+```yaml
+---
+title: {message_id}-{content.sub(0,50)}
+aliases:
+- {message_id}-{content.sub(0,50)}
+created: {{created-date}}
+modified: {{archived-date}}
+comments: true
+draft: true
+description: {content.sub(0,100)}
+source: {source-url}
+tags: []
+---
+```
+
+### 3.1 模板字段计算规则
+
+1. `created` 与 `modified` 时间格式固定为：`YYYY-MM-DDTHH:mm:ss`（例如 `2025-01-18T16:58:21`），不保留时区后缀；
+2. `content.sub(0,50/100)` 截断前必须先将所有换行符 `\n` 替换为空格；
+3. 若原文长度不足 50/100，直接原样输出，不补齐；
+4. `source` 在无可用链接时允许空字符串（常见于 `person` 分桶）；
+5. `channel` 分桶下应优先使用可构造链接（频道名/消息id）；
+6. `tags` 必须存在，默认空数组 `[]`。
+
+### 3.2 业务模板字段 + 强一致字段
+
+除上述强制模板字段外，以下强一致字段也必须存在（用于归档校验与迁移门禁）：
+
 以下字段为必填，缺任一字段即视为无效归档记录：
 
 1. `schema_version`（固定值：`md`）
@@ -46,6 +78,7 @@
 2. 路径一致：文件所在 `source_bucket/source_id/message_id` 与 Front Matter 一致；
 3. 内容一致：`content_sha256` 必须匹配写入正文；
 4. 版本一致：`schema_version != md` 视为不合规。
+5. Front Matter 完整性：`title/aliases/created/modified/comments/draft/description/source/tags` 缺任一项视为不合规。
 
 ## 5. 一次性切换阈值（One-shot Cutover Threshold）
 
