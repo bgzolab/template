@@ -1,0 +1,9 @@
+
+## {{.title}}
+{{.photo}}
+
+{{.content}}
+
+{{.sourceTelegram}}
+
+Published on {{.date}}. Saved on {{.now}}

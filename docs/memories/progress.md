@@ -59,6 +59,17 @@
 
 ## 2026年进度
 
+- [x] 2026-02-19: 已补充 Front Matter 生成逻辑与测试（步骤2前置完成）。
+    - [x] 在 `archiveservice` 增加强制 Front Matter 生成逻辑（title/aliases/created/modified/comments/draft/description/source/tags）；
+    - [x] 时间格式已固定为 `YYYY-MM-DDTHH:mm:ss`（无时区后缀）；
+    - [x] 文本摘要规则已实现：先将 `\n` 替换为空格，再执行 50/100 截断，不足长度原样输出；
+    - [x] `source` 在无可用链接时已支持空字符串；
+    - [x] 新增并通过归档模块单元测试：`go test ./internal/service/archiveservice ./internal/service/pipelineservice`。
+
+### 下一步（待你确认后执行）
+
+- [ ] 开始代码阶段步骤2：实现切换期“先读新路径，读不到回退旧路径”并补测试。
+
 - [x] 2026-02-19: Front Matter 强制模板需求已同步到规范与实施计划。
     - [x] 已在 `archive-markdown-schema.md` 增加强制模板字段定义与计算规则；
     - [x] 已明确时间格式 `YYYY-MM-DDTHH:mm:ss`（无时区后缀）；

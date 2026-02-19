@@ -250,3 +250,14 @@
 2. 时间字段格式冻结为 `YYYY-MM-DDTHH:mm:ss`（无时区后缀）；
 3. 标题/别名/描述的截断链路固定为：先 `\n` 归一化为空格，再做 `sub(0,50/100)`；
 4. `source` 在 person 场景允许空字符串，channel 场景优先构造可访问链接。
+
+## 本轮新增架构洞察（2026-02-19：Front Matter 逻辑落地）
+
+1. `internal/service/archiveservice/service.go`
+   - 变化：归档落盘前统一生成强制 Front Matter，并与模板正文拼接输出；
+   - 变化：时间字段与持久化时间共享同一归档时间点，降低字段漂移风险；
+   - 变化：摘要生成链路固定为“换行归一化 -> 截断 -> 组装字段”。
+
+2. `internal/service/archiveservice/service_test.go`
+   - 变化：新增 Front Matter 规则测试（字段完整性、时间格式、换行处理、空 source）；
+   - 意义：为步骤2前提供稳定回归基线，避免后续兼容读取改造引入格式回退。

@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"telegram-message-sync-bot/internal/Database"
 	"telegram-message-sync-bot/internal/Entity"
@@ -76,7 +77,8 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 	)
 	LogUtils.GetLogger().Println(logCommandline)
 
-	data := BuildTemplateData(meta.SourceDate, photoLink, msgText, meta.SourceLink, time.Now())
+	archiveNow := time.Now()
+	data := BuildTemplateData(meta.SourceDate, photoLink, msgText, meta.SourceLink, archiveNow)
 
 	tmplData, err := os.ReadFile(config.Template.Dir)
 	if err != nil {
@@ -93,8 +95,10 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 	if err != nil {
 		return PersistResult{OK: false, Message: fmt.Sprintf("渲染模板失败, %v", err), SourceLink: meta.SourceLink, MsgText: msgText, SourceID: meta.SourceID}
 	}
+	frontMatter := BuildFrontMatter(meta, msgText, archiveNow)
+	contentWithFrontMatter := frontMatter + "\n" + strings.TrimLeft(buf.String(), "\n")
 
-	FileUtils.OutputString(meta.OutputPath, meta.FileName, buf.String())
+	FileUtils.OutputString(meta.OutputPath, meta.FileName, contentWithFrontMatter)
 
 	savedMsg := Entity.Message{
 		Content: msgText,
@@ -105,7 +109,7 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 		MessageDate: meta.SourceDate,
 		Attachments: assets,
 
-		CreatedTime: time.Now(),
+		CreatedTime: archiveNow,
 	}
 
 	messageID, err := Database.SaveMessage(&savedMsg)
@@ -120,6 +124,62 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 
 	LogUtils.GetLogger().Printf("Save successful with: %d\n", messageID)
 	return PersistResult{OK: true, Message: meta.FileName, SourceLink: meta.SourceLink, MsgText: msgText, SourceID: meta.SourceID}
+}
+
+// BuildFrontMatter 生成强制 Front Matter。
+// 规则：
+// 1) title/aliases/description 基于正文摘要；
+// 2) 摘要计算前先把所有 \n 替换为空格；
+// 3) 时间格式固定为 yyyy-MM-ddTHH:mm:ss（不带时区后缀）。
+func BuildFrontMatter(meta SourceMeta, content string, archivedAt time.Time) string {
+	normalized := normalizeFrontMatterContent(content)
+	titleSummary := truncateForFrontMatter(normalized, 50)
+	descSummary := truncateForFrontMatter(normalized, 100)
+
+	title := fmt.Sprintf("%d-%s", meta.MessageID, titleSummary)
+	source := meta.SourceLink
+	created := formatFrontMatterTime(meta.SourceDate)
+	modified := formatFrontMatterTime(archivedAt)
+
+	return strings.Join([]string{
+		"---",
+		fmt.Sprintf("title: %s", quoteYAMLString(title)),
+		"aliases:",
+		fmt.Sprintf("- %s", quoteYAMLString(title)),
+		fmt.Sprintf("created: %s", created),
+		fmt.Sprintf("modified: %s", modified),
+		"comments: true",
+		"draft: true",
+		fmt.Sprintf("description: %s", quoteYAMLString(descSummary)),
+		fmt.Sprintf("source: %s", quoteYAMLString(source)),
+		"tags: []",
+		"---",
+	}, "\n")
+}
+
+func normalizeFrontMatterContent(content string) string {
+	replaced := strings.ReplaceAll(content, "\r\n", "\n")
+	replaced = strings.ReplaceAll(replaced, "\r", "\n")
+	return strings.ReplaceAll(replaced, "\n", " ")
+}
+
+func truncateForFrontMatter(text string, maxRunes int) string {
+	if maxRunes <= 0 {
+		return ""
+	}
+	runes := []rune(text)
+	if len(runes) <= maxRunes {
+		return text
+	}
+	return string(runes[:maxRunes])
+}
+
+func formatFrontMatterTime(t time.Time) string {
+	return t.Format("2006-01-02T15:04:05")
+}
+
+func quoteYAMLString(s string) string {
+	return strconv.Quote(s)
 }
 
 // ResolveSourceMeta 将 Telegram 原始消息转换为统一来源元信息（来源ID、文件名、落盘路径、消息链接等）。

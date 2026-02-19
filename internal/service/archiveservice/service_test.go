@@ -1,6 +1,7 @@
 package archiveservice
 
 import (
+	"strings"
 	"testing"
 	"time"
 
@@ -108,5 +109,62 @@ func TestBuildTemplateData_ContainsExpectedKeys(t *testing.T) {
 	}
 	if data["title"] == "" || data["date"] == "" || data["now"] == "" {
 		t.Fatalf("expected non-empty formatted time fields")
+	}
+}
+
+func TestNormalizeFrontMatterContent_ReplacesAllNewlines(t *testing.T) {
+	input := "line1\nline2\r\nline3\rline4"
+	got := normalizeFrontMatterContent(input)
+	if got != "line1 line2 line3 line4" {
+		t.Fatalf("unexpected normalized content: %s", got)
+	}
+}
+
+func TestTruncateForFrontMatter(t *testing.T) {
+	if got := truncateForFrontMatter("abc", 10); got != "abc" {
+		t.Fatalf("expected original string when shorter, got: %s", got)
+	}
+	if got := truncateForFrontMatter("abcdef", 3); got != "abc" {
+		t.Fatalf("expected truncation to 3, got: %s", got)
+	}
+}
+
+func TestBuildFrontMatter_MandatoryFields(t *testing.T) {
+	meta := SourceMeta{
+		SourceLink: "https://t.me/channel/100",
+		SourceDate: time.Date(2025, 1, 18, 16, 58, 21, 0, time.UTC),
+		MessageID:  100,
+	}
+	archivedAt := time.Date(2025, 1, 19, 10, 20, 30, 0, time.UTC)
+	content := "第一行\n第二行"
+
+	fm := BuildFrontMatter(meta, content, archivedAt)
+
+	checks := []string{
+		"---",
+		"title: \"100-第一行 第二行\"",
+		"aliases:",
+		"- \"100-第一行 第二行\"",
+		"created: 2025-01-18T16:58:21",
+		"modified: 2025-01-19T10:20:30",
+		"comments: true",
+		"draft: true",
+		"description: \"第一行 第二行\"",
+		"source: \"https://t.me/channel/100\"",
+		"tags: []",
+	}
+
+	for _, check := range checks {
+		if !strings.Contains(fm, check) {
+			t.Fatalf("front matter missing expected snippet: %s\nactual:\n%s", check, fm)
+		}
+	}
+}
+
+func TestBuildFrontMatter_SourceCanBeEmpty(t *testing.T) {
+	meta := SourceMeta{SourceLink: "", SourceDate: time.Date(2025, 1, 18, 16, 58, 21, 0, time.UTC), MessageID: 1}
+	fm := BuildFrontMatter(meta, "hello", time.Date(2025, 1, 19, 10, 20, 30, 0, time.UTC))
+	if !strings.Contains(fm, "source: \"\"") {
+		t.Fatalf("expected empty source field, got:\n%s", fm)
 	}
 }
