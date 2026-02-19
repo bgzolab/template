@@ -30,12 +30,13 @@ type PersistResult struct {
 }
 
 type SourceMeta struct {
-	OutputPath string
-	SourceID   string
-	FileName   string
-	SourceLink string
-	SourceDate time.Time
-	MessageID  int
+	OutputPath  string
+	ArchiveRoot string
+	SourceID    string
+	FileName    string
+	SourceLink  string
+	SourceDate  time.Time
+	MessageID   int
 }
 
 // PersistMessage 负责执行“单条消息归档”完整编排：解析来源、渲染模板、落盘、入库。
@@ -59,7 +60,7 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 		photos := update.Message.Photo
 		if len(photos) > 0 {
 			highestResolutionPhoto := photos[len(photos)-1]
-			file := persistFile(ctx, b, highestResolutionPhoto.FileID, meta.SourceID, meta.OutputPath, Entity.ImageMessage)
+			file := persistFile(ctx, b, highestResolutionPhoto.FileID, meta.SourceID, meta.ArchiveRoot, Entity.ImageMessage)
 			if file != nil {
 				files = append(files, file.FilePath)
 				assets = append(assets, *file)
@@ -125,15 +126,14 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 // 这样做的原因是统一“私聊消息/频道转发消息”的分支处理，避免上层重复判断来源类型。
 func ResolveSourceMeta(update *models.Update, config Entity.Config) SourceMeta {
 	meta := SourceMeta{
-		OutputPath: config.Output.PersonDir,
-		SourceID:   fmt.Sprintf("%d", update.Message.Chat.ID),
-		SourceDate: time.Now(),
-		MessageID:  update.Message.ID,
+		ArchiveRoot: config.Output.PersonDir,
+		SourceID:    fmt.Sprintf("%d", update.Message.Chat.ID),
+		SourceDate:  time.Now(),
+		MessageID:   update.Message.ID,
 	}
-	meta.FileName = fmt.Sprintf("%s.md", meta.SourceID)
 
 	if update.Message.ForwardOrigin != nil && update.Message.ForwardOrigin.Type == "channel" {
-		meta.OutputPath = config.Output.ChannelDir
+		meta.ArchiveRoot = config.Output.ChannelDir
 		origin := update.Message.ForwardOrigin.MessageOriginChannel
 
 		if origin.Chat.Username != "" {
@@ -142,11 +142,14 @@ func ResolveSourceMeta(update *models.Update, config Entity.Config) SourceMeta {
 			meta.SourceID = fmt.Sprintf("%d", origin.Chat.ID)
 		}
 
-		meta.FileName = fmt.Sprintf("%s.md", meta.SourceID)
 		meta.SourceLink = fmt.Sprintf("https://t.me/%s/%d", meta.SourceID, origin.MessageID)
 		meta.SourceDate = time.Unix(int64(origin.Date), 0)
 		meta.MessageID = origin.MessageID
 	}
+
+	// 步骤1：仅切换归档写入路径到 source_id/message_id.md。
+	meta.OutputPath = filepath.Join(meta.ArchiveRoot, meta.SourceID)
+	meta.FileName = fmt.Sprintf("%d.md", meta.MessageID)
 
 	return meta
 }

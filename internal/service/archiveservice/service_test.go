@@ -22,14 +22,14 @@ func TestResolveSourceMeta_DefaultPrivateMessage(t *testing.T) {
 	config.Output.ChannelDir = "/channel"
 
 	meta := ResolveSourceMeta(update, config)
-	if meta.OutputPath != "/person" {
-		t.Fatalf("expected person output path, got: %s", meta.OutputPath)
+	if meta.OutputPath != "/person/12345" {
+		t.Fatalf("expected person output path /person/12345, got: %s", meta.OutputPath)
 	}
 	if meta.SourceID != "12345" {
 		t.Fatalf("expected sourceID=12345, got: %s", meta.SourceID)
 	}
-	if meta.FileName != "12345.md" {
-		t.Fatalf("expected fileName=12345.md, got: %s", meta.FileName)
+	if meta.FileName != "99.md" {
+		t.Fatalf("expected fileName=99.md, got: %s", meta.FileName)
 	}
 	if meta.SourceLink != "" {
 		t.Fatalf("expected empty source link for private message, got: %s", meta.SourceLink)
@@ -60,14 +60,14 @@ func TestResolveSourceMeta_ForwardedChannelWithUsername(t *testing.T) {
 	config.Output.ChannelDir = "/channel"
 
 	meta := ResolveSourceMeta(update, config)
-	if meta.OutputPath != "/channel" {
-		t.Fatalf("expected channel output path, got: %s", meta.OutputPath)
+	if meta.OutputPath != "/channel/imbGZo" {
+		t.Fatalf("expected channel output path /channel/imbGZo, got: %s", meta.OutputPath)
 	}
 	if meta.SourceID != "imbGZo" {
 		t.Fatalf("expected sourceID=imbGZo, got: %s", meta.SourceID)
 	}
-	if meta.FileName != "imbGZo.md" {
-		t.Fatalf("expected fileName=imbGZo.md, got: %s", meta.FileName)
+	if meta.FileName != "321.md" {
+		t.Fatalf("expected fileName=321.md, got: %s", meta.FileName)
 	}
 	if meta.SourceLink != "https://t.me/imbGZo/321" {
 		t.Fatalf("unexpected source link: %s", meta.SourceLink)

@@ -232,3 +232,14 @@
    - 删除：旧单文件必须在 zip 备份完成后再删除。
 3. 迁移期错误传播：`source_id` 约束失败等错误必须可被通知阶段消费并展示具体原因。
 4. 双向核对口径已冻结为 `(chat_id, message_id)`。
+
+## 本轮新增架构洞察（2026-02-18：代码阶段步骤1）
+
+1. `internal/service/archiveservice/service.go`
+   - 变化：仅切换归档写入路径到 `source_id/message_id.md`；
+   - 变化：`SourceMeta` 新增 `ArchiveRoot`，用于保持媒体资源仍写在来源分桶根路径；
+   - 边界：本轮未实现读兼容（先新后旧）与迁移逻辑。
+
+2. `internal/service/archiveservice/service_test.go`
+   - 变化：补充路径断言，确保私聊与频道场景都落在 `source_id/message_id.md`；
+   - 意义：先锁定步骤1行为，后续步骤在此基础上增量推进。

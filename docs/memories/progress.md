@@ -59,6 +59,16 @@
 
 ## 2026年进度
 
+- [x] 2026-02-18: 代码阶段步骤1完成（仅归档写路径切换）。
+    - [x] `archiveservice.ResolveSourceMeta()` 已将归档写路径切换为 `source_id/message_id.md`；
+    - [x] 保持步骤边界：本轮未实现“读新回退旧”、未实现全量迁移与删旧；
+    - [x] 已补充并更新归档相关单元测试（路径与文件名断言）；
+    - [x] 验证通过：`go test ./internal/service/archiveservice ./internal/service/pipelineservice`。
+
+### 下一步（待你验收后执行）
+
+- [ ] 代码阶段步骤2：实现切换期“先读新路径，读不到回退旧路径”并补测试。
+
 - [x] 2026-02-18: 归档改造改为“文档先行，代码后置”。
     - [x] 已先冻结归档规则：按消息存档 `source_id/message_id.md`；
     - [x] 已明确切换期策略：写新路径，读新失败回退旧路径；
