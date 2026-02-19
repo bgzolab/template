@@ -261,3 +261,13 @@
 2. `internal/service/archiveservice/service_test.go`
    - 变化：新增 Front Matter 规则测试（字段完整性、时间格式、换行处理、空 source）；
    - 意义：为步骤2前提供稳定回归基线，避免后续兼容读取改造引入格式回退。
+
+## 本轮新增架构洞察（2026-02-19：步骤2读兼容落地）
+
+1. `internal/service/archiveservice/service.go`
+   - 变化：归档去重读取已实现切换期兼容策略：先查新路径 `source_id/message_id.md`，未命中再回退旧路径 `source_id.md`；
+   - 意义：在不阻塞新路径写入的前提下，保证迁移窗口内旧数据仍可被识别，避免重复归档。
+
+2. `internal/service/archiveservice/service_test.go`
+   - 变化：新增读兼容测试覆盖（新路径命中、旧路径回退命中、双路径未命中）；
+   - 意义：将步骤2行为固定为可回归基线，为后续全量补齐与删旧动作提供安全前提。

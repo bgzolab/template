@@ -52,7 +52,7 @@ func PersistMessage(ctx context.Context, b *bot.Bot, update *models.Update, conf
 	photoLink := ""
 	assets := []Entity.Attachment{}
 
-	if meta.SourceLink != "" && StrUtils.SearchInFile(filepath.Join(meta.OutputPath, meta.FileName), meta.SourceLink) {
+	if meta.SourceLink != "" && isMessageArchived(meta) {
 		return PersistResult{OK: false, Message: "消息已存在", SourceLink: meta.SourceLink, MsgText: msgText, SourceID: meta.SourceID}
 	}
 
@@ -180,6 +180,17 @@ func formatFrontMatterTime(t time.Time) string {
 
 func quoteYAMLString(s string) string {
 	return strconv.Quote(s)
+}
+
+// isMessageArchived 切换期兼容读取：先查新路径，读不到再回退旧单文件路径。
+func isMessageArchived(meta SourceMeta) bool {
+	newArchivePath := filepath.Join(meta.OutputPath, meta.FileName)
+	if StrUtils.SearchInFile(newArchivePath, meta.SourceLink) {
+		return true
+	}
+
+	legacyArchivePath := filepath.Join(meta.ArchiveRoot, fmt.Sprintf("%s.md", meta.SourceID))
+	return StrUtils.SearchInFile(legacyArchivePath, meta.SourceLink)
 }
 
 // ResolveSourceMeta 将 Telegram 原始消息转换为统一来源元信息（来源ID、文件名、落盘路径、消息链接等）。

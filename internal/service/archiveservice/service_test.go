@@ -1,6 +1,8 @@
 package archiveservice
 
 import (
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 	"time"
@@ -166,5 +168,71 @@ func TestBuildFrontMatter_SourceCanBeEmpty(t *testing.T) {
 	fm := BuildFrontMatter(meta, "hello", time.Date(2025, 1, 19, 10, 20, 30, 0, time.UTC))
 	if !strings.Contains(fm, "source: \"\"") {
 		t.Fatalf("expected empty source field, got:\n%s", fm)
+	}
+}
+
+func TestIsMessageArchived_HitsNewPathFirst(t *testing.T) {
+	root := t.TempDir()
+	sourceID := "test_channel"
+	messageFile := "123.md"
+	sourceLink := "https://t.me/test_channel/123"
+
+	newDir := filepath.Join(root, sourceID)
+	if err := os.MkdirAll(newDir, 0o755); err != nil {
+		t.Fatalf("failed to create new dir: %v", err)
+	}
+	if err := os.WriteFile(filepath.Join(newDir, messageFile), []byte("hello\n"+sourceLink+"\n"), 0o644); err != nil {
+		t.Fatalf("failed to write new archive file: %v", err)
+	}
+
+	meta := SourceMeta{
+		ArchiveRoot: root,
+		OutputPath:  newDir,
+		FileName:    messageFile,
+		SourceID:    sourceID,
+		SourceLink:  sourceLink,
+	}
+
+	if !isMessageArchived(meta) {
+		t.Fatalf("expected archived message to be found in new path")
+	}
+}
+
+func TestIsMessageArchived_FallsBackToLegacyPath(t *testing.T) {
+	root := t.TempDir()
+	sourceID := "test_channel"
+	messageFile := "123.md"
+	sourceLink := "https://t.me/test_channel/123"
+
+	legacyPath := filepath.Join(root, sourceID+".md")
+	if err := os.WriteFile(legacyPath, []byte("legacy\n"+sourceLink+"\n"), 0o644); err != nil {
+		t.Fatalf("failed to write legacy archive file: %v", err)
+	}
+
+	meta := SourceMeta{
+		ArchiveRoot: root,
+		OutputPath:  filepath.Join(root, sourceID),
+		FileName:    messageFile,
+		SourceID:    sourceID,
+		SourceLink:  sourceLink,
+	}
+
+	if !isMessageArchived(meta) {
+		t.Fatalf("expected archived message to be found in legacy path fallback")
+	}
+}
+
+func TestIsMessageArchived_ReturnsFalseWhenNotFound(t *testing.T) {
+	root := t.TempDir()
+	meta := SourceMeta{
+		ArchiveRoot: root,
+		OutputPath:  filepath.Join(root, "missing_source"),
+		FileName:    "999.md",
+		SourceID:    "missing_source",
+		SourceLink:  "https://t.me/missing_source/999",
+	}
+
+	if isMessageArchived(meta) {
+		t.Fatalf("expected not archived when neither new nor legacy paths contain source link")
 	}
 }

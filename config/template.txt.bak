@@ -1,3 +1,4 @@
+<!-- TODO: 固化 Front Matter 不灵活，未来还是得做成模板 -->
 
 ## {{.title}}
 {{.photo}}

@@ -59,6 +59,16 @@
 
 ## 2026年进度
 
+- [x] 2026-02-19: 代码阶段步骤2完成（切换期读兼容：先新后旧）。
+    - [x] `archiveservice` 去重读取链路已改为：先检查新路径 `source_id/message_id.md`；
+    - [x] 新路径未命中时，已回退检查旧单文件 `source_id.md`；
+    - [x] 新增并通过兼容读取单测（新路径命中、旧路径回退命中、双路径未命中）；
+    - [x] 验证通过：`go test ./internal/service/archiveservice ./internal/service/pipelineservice`。
+
+### 下一步（待你确认后执行）
+
+- [ ] 代码阶段步骤3：实现全量补齐（以 DB 为主）与迁移后核对逻辑。
+
 - [x] 2026-02-19: 已补充 Front Matter 生成逻辑与测试（步骤2前置完成）。
     - [x] 在 `archiveservice` 增加强制 Front Matter 生成逻辑（title/aliases/created/modified/comments/draft/description/source/tags）；
     - [x] 时间格式已固定为 `YYYY-MM-DDTHH:mm:ss`（无时区后缀）；
