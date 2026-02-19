@@ -87,3 +87,7 @@ Gopkg.lock
 
 tg-backup-old-260217
 archive-260218.zip
+
+## Visual Studio Code debug
+__debug_bin*
+
