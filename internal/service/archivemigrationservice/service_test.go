@@ -1,6 +1,7 @@
 package archivemigrationservice
 
 import (
+	"archive/zip"
 	"os"
 	"path/filepath"
 	"strings"
@@ -168,4 +169,112 @@ func assertFileContains(t *testing.T, filePath string, expected string) {
 	if !strings.Contains(string(b), expected) {
 		t.Fatalf("file %s missing expected snippet: %s\ncontent:\n%s", filePath, expected, string(b))
 	}
+}
+
+func TestBackupAndDeleteLegacySingleFiles_Success(t *testing.T) {
+	tmp := t.TempDir()
+	archivesRoot := filepath.Join(tmp, "archives")
+	personDir := filepath.Join(archivesRoot, "person")
+	channelDir := filepath.Join(archivesRoot, "channel")
+
+	if err := os.MkdirAll(personDir, 0o755); err != nil {
+		t.Fatalf("failed to create person dir: %v", err)
+	}
+	if err := os.MkdirAll(channelDir, 0o755); err != nil {
+		t.Fatalf("failed to create channel dir: %v", err)
+	}
+
+	legacyPerson := filepath.Join(personDir, "alice.md")
+	legacyChannel := filepath.Join(channelDir, "news.md")
+	if err := os.WriteFile(legacyPerson, []byte("person legacy"), 0o644); err != nil {
+		t.Fatalf("failed to write person legacy file: %v", err)
+	}
+	if err := os.WriteFile(legacyChannel, []byte("channel legacy"), 0o644); err != nil {
+		t.Fatalf("failed to write channel legacy file: %v", err)
+	}
+
+	// 新结构文件不应被清理。
+	newFileDir := filepath.Join(personDir, "alice")
+	if err := os.MkdirAll(newFileDir, 0o755); err != nil {
+		t.Fatalf("failed to create new file dir: %v", err)
+	}
+	newFile := filepath.Join(newFileDir, "100.md")
+	if err := os.WriteFile(newFile, []byte("new format"), 0o644); err != nil {
+		t.Fatalf("failed to write new-format file: %v", err)
+	}
+
+	var cfg Entity.Config
+	cfg.Output.PersonDir = personDir
+	cfg.Output.ChannelDir = channelDir
+
+	stats, err := BackupAndDeleteLegacySingleFiles(cfg)
+	if err != nil {
+		t.Fatalf("cleanup failed: %v", err)
+	}
+
+	if stats.LegacyFiles != 2 || stats.BackedUpFiles != 2 || stats.DeletedFiles != 2 {
+		t.Fatalf("unexpected cleanup stats: %+v", stats)
+	}
+
+	if _, err := os.Stat(legacyPerson); !os.IsNotExist(err) {
+		t.Fatalf("expected person legacy file to be deleted, stat err: %v", err)
+	}
+	if _, err := os.Stat(legacyChannel); !os.IsNotExist(err) {
+		t.Fatalf("expected channel legacy file to be deleted, stat err: %v", err)
+	}
+	if _, err := os.Stat(newFile); err != nil {
+		t.Fatalf("expected new-format file to remain, stat err: %v", err)
+	}
+
+	zipEntries := readZipEntries(t, stats.BackupZipPath)
+	if _, ok := zipEntries["person/alice.md"]; !ok {
+		t.Fatalf("zip missing person/alice.md entry")
+	}
+	if _, ok := zipEntries["channel/news.md"]; !ok {
+		t.Fatalf("zip missing channel/news.md entry")
+	}
+}
+
+func TestBackupAndDeleteLegacySingleFiles_NoLegacyFiles(t *testing.T) {
+	tmp := t.TempDir()
+	archivesRoot := filepath.Join(tmp, "archives")
+	personDir := filepath.Join(archivesRoot, "person")
+	channelDir := filepath.Join(archivesRoot, "channel")
+
+	if err := os.MkdirAll(filepath.Join(personDir, "alice"), 0o755); err != nil {
+		t.Fatalf("failed to create person source dir: %v", err)
+	}
+	if err := os.MkdirAll(filepath.Join(channelDir, "news"), 0o755); err != nil {
+		t.Fatalf("failed to create channel source dir: %v", err)
+	}
+
+	var cfg Entity.Config
+	cfg.Output.PersonDir = personDir
+	cfg.Output.ChannelDir = channelDir
+
+	stats, err := BackupAndDeleteLegacySingleFiles(cfg)
+	if err != nil {
+		t.Fatalf("cleanup should not fail: %v", err)
+	}
+	if stats.LegacyFiles != 0 || stats.BackedUpFiles != 0 || stats.DeletedFiles != 0 {
+		t.Fatalf("expected zero cleanup stats, got: %+v", stats)
+	}
+	if _, err := os.Stat(stats.BackupZipPath); !os.IsNotExist(err) {
+		t.Fatalf("expected no backup zip when no legacy files, stat err: %v", err)
+	}
+}
+
+func readZipEntries(t *testing.T, zipPath string) map[string]struct{} {
+	t.Helper()
+	zr, err := zip.OpenReader(zipPath)
+	if err != nil {
+		t.Fatalf("failed to open zip %s: %v", zipPath, err)
+	}
+	defer zr.Close()
+
+	entries := map[string]struct{}{}
+	for _, f := range zr.File {
+		entries[f.Name] = struct{}{}
+	}
+	return entries
 }

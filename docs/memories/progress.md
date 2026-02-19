@@ -59,6 +59,17 @@
 
 ## 2026年进度
 
+- [x] 2026-02-19: 代码阶段步骤4完成（旧单文件备份与删除，先备份后删除）。
+    - [x] 新增 `BackupAndDeleteLegacySingleFiles()`：扫描 `person/channel` 根目录下旧单文件 `source_id.md`；
+    - [x] 删除前强制生成备份 `archives/260218-old-markdown-archives.zip`（含 `person/*.md`、`channel/*.md` 条目）；
+    - [x] 仅清理旧单文件，不影响新结构目录 `source_id/message_id.md`；
+    - [x] 新增单元测试：备份+删除成功、无旧文件时跳过；
+    - [x] 验证通过：`go test ./internal/service/archivemigrationservice ./internal/service/archiveservice ./internal/service/pipelineservice ./internal/Database`。
+
+### 下一步（待你确认后执行）
+
+- [ ] 执行端到端迁移演练：步骤2读兼容 + 步骤3补齐 + 步骤4备份删旧联调，并补充 Go/No-Go 记录。
+
 - [x] 2026-02-19: 代码阶段步骤3完成（以 DB 为主全量补齐 + 迁移后核对）。
     - [x] 新增 `archivemigrationservice.BackfillFromDatabase()`：按数据库消息全量补齐 `source_id/message_id.md`；
     - [x] 已实现“已存在跳过、缺失补齐”行为；

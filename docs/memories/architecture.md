@@ -286,3 +286,14 @@
 3. `internal/Database/Messages.go`
    - 变化：新增 `ListMessages()` 查询入口（含附件预加载）；
    - 意义：统一迁移读取来源，避免在迁移服务内直接拼接数据库查询细节。
+
+## 本轮新增架构洞察（2026-02-19：步骤4备份后删旧落地）
+
+1. `internal/service/archivemigrationservice/service.go`
+   - 变化：新增 `BackupAndDeleteLegacySingleFiles()`，清理前先生成 `260218-old-markdown-archives.zip`；
+   - 变化：清理范围限定为 `person/channel` 根目录下旧单文件 `source_id.md`，不触碰新结构目录；
+   - 意义：把“删旧前必须备份”从流程约定固化为代码约束，降低不可逆风险。
+
+2. `internal/service/archivemigrationservice/service_test.go`
+   - 变化：新增备份与删除测试（成功路径、无旧文件跳过路径）；
+   - 意义：确保步骤4行为可回归验证，避免误删新结构文件。
