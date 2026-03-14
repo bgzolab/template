@@ -9,8 +9,9 @@ created: {{created}}
 modified: {{modified}}
 tags: {{tags}}
 title: {{title}}
-type: {{type}}
 website: {{website}}
+cssclasses:
+  - table-wide
 ---
 
 # {{title}}
@@ -20,7 +21,3 @@ website: {{website}}
 ## Characters
 
 {{characters}}
-
-## Review
-
-## References
