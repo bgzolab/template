@@ -198,21 +198,34 @@ def parse_infobox_value(item):
         return []
 
 def get_output_character_string(subject_id: int) -> str:
-    result = ""
-    character_template = """### {}:{}
+    """按横向 Markdown 表格输出条目角色信息。"""
 
-![]({})"""
+    def _escape_cell(value: str) -> str:
+        """转义会破坏 Markdown 表格的字符。"""
+        return value.replace("|", "\\|").replace("\n", " ").strip()
+
     character_list = get_subject_character(subject_id)
-    for character in character_list:
-        if result != '':
-            result += '\n\n'
-        result += character_template.format(
-            character.name,
-            character.relation,
-            character.images.medium if character.images else ""
-        )
+    if not character_list:
+        return ""
 
-    return  result
+    relation_cells = []
+    name_cells = []
+    image_cells = []
+
+    for character in character_list:
+        relation_cells.append(_escape_cell(character.relation or ""))
+        name_cells.append(_escape_cell(character.name or ""))
+        image_url = character.images.medium if character.images else ""
+        image_cells.append(f"![]({image_url})" if image_url else "")
+
+    separator_row = [" --- " for _ in character_list]
+
+    return "\n".join([
+        "|" + "|".join(relation_cells) + "|",
+        "|" + "|".join(separator_row) + "|",
+        "|" + "|".join(name_cells) + "|",
+        "|" + "|".join(image_cells) + "|",
+    ])
 
 @click.group()
 def eto():
