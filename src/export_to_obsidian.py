@@ -149,7 +149,7 @@ def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir
                 parse_infobox_value(item) if item.get("key") == "别名" else []
             )
     created_date = (subject.date or datetime.now().strftime('%Y-%m-%d')) + datetime.now().strftime('T%H:%M:%S%z')
-    filename = str(subject_id) + "-" + get_clean_filename(subject.name_cn or subject.name or str(subject.id)) + '.md'
+    filename = "~" + str(subject_id) + "-" + get_clean_filename(subject.name_cn or subject.name or str(subject.id)) + '.md'
     output_path = os.path.join(output_dir, subject_type_en, filename)
     if os.path.exists(output_path) and not force:
         print(f"已存在，提前结束: {filename}")
