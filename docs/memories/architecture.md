@@ -11,25 +11,34 @@
 
 ```shell
 .
-├── .github
-│   ├── agents # 智能体，copilot 左下角可选择
-│   ├── copilot-instructions.md # 项目全局生效
-│   ├── instructions # 项目默认加载指令
-│   ├── ISSUE_TEMPLATE # 项目 issue 模板
-│   ├── prompts # 使用slash 调用的预制提示词
-│   └── workflows # GitHub CI/CD
-├── docs # 项目文档，包含项目的设计文档、架构文档、技术栈规范、实施计划等
-│   ├── implementation-plans # 项目的实施计划，每次修BUG、新增改能全部记录在这里，包含每个功能的分步指令和验证正确性的测试
-│   │   ├── feature-a.md # feature-a 的实施计划，包含分步指令和验证正确性的测试
-│   │   └── feature-a-progress.md # feature-a 的实施进度，包含每个步骤的完成情况和测试结果
-│   ├── memories # 项目的记忆库，包含项目的设计文档、架构文档、技术栈规范等，是 LLM 必须加载的上下文；
-│   │   ├── architecture.md # 项目架构设计文档，包含项目的整体架构设计、模块划分、数据库结构等；
-│   │   ├── design.md # 项目设计文档，包含项目的功能设计、接口设计、数据流设计等；
-│   │   └── tech-stack.md # 项目技术栈规范，包含项目的技术栈选择、编码规范、测试规范等；
-│   └── prompts # 项目的提示词库，包含项目的提示词设计、提示词优化、提示词测试等，LLM 不必理会
-│       ├── init-project.md # 初始化项目提示词
-│       └── new-feature.md # 新增功能提示词
-├── LICENCE # 项目许可证，包含项目的开源许可证信息
-└── README.md # 项目自述文件，包含项目的简介、安装使用说明、贡献指南等
+├── config # 配置文件夹，存放一些平台的模板文件等
+│   └── bangumi_template.md # 这个是bangumi平台的模板文件，用户可以根据自己的需求修改这个文件来改变导出的markdown文件的格式
+├── docs # 文档文件夹，存放一些项目相关的文档
+│   ├── implementation-plans # 实现计划，记录一些功能的实现思路和计划
+│   └── memories # 记忆文件夹，记录一些项目的设计思路、架构等
+├── export-env.sh # 导出环境变量的脚本，用户可以运行这个脚本来导出`.env`文件中的环境变量
+├── LICENCE 
+├── poetry.lock
+├── publish.sh # 发布脚本，用户可以运行这个脚本来发布这个项目到PyPI
+├── pyproject.toml # Poetry的配置文件，记录项目的依赖和一些项目信息
+├── README.md 
+├── requirements.txt
+├── src
+│   ├── bangumi # bangumi平台接口，获取相关分页数据；
+│   ├── bilibili # bilibili平台接口，获取相关分页数据；
+│   ├── cnblog # 博客园平台接口，获取相关分页数据；
+│   ├── demo # demo文件夹，存放一些demo代码，新增一个平台可以从这里复制开始；
+│   ├── entity # 实体类文件夹（待改造）
+│   ├── export_to_obsidian.py # 导出主程序，用户可以运行这个程序来导出数据到markdown文件
+│   ├── qireader # qireader平台接口，获取相关分页数据；
+│   ├── utils # 工具类文件夹，存放一些公共的工具函数
+│   ├── v2ex # v2ex平台接口，获取相关分页数据；
+│   ├── weibo # 微博平台接口，获取相关分页数据；
+│   └── zhihu # 知乎平台接口，获取相关分页数据；
+└── tests
+    ├── test_bangumi.py # bangumi平台的测试文件，测试bangumi平台接口的功能是否正常
+    ├── test_cnblog.py # 博客园平台的测试文件，测试博客园平台接口的功能是否正常
+    ├── test_qireader.py # qireader平台的测试文件，测试qireader平台接口的功能是否正常
+    └── test_utils.py # 工具类的测试文件，测试工具类函数的功能是否正常
 ```
 
