@@ -1,9 +1,15 @@
 # References via: https://github.com/github/gitignore
 # Visual Studio Code
-.vscode/
+# .vscode/
 .history/
+# debug
+__debug_bin*
 
 
+# OS generated files
+# Windows
+ehthumbs.db
+Desktop.ini
 # MacOS
 .DS_Store
 
@@ -44,6 +50,8 @@ venv/
 .env.development
 .env.test
 .env.production
+.pytest_cache/
+.ruff_cache/
 
 
 # Logs
@@ -77,5 +85,11 @@ Gopkg.lock
 *.ruby-version
 *.ruby-gemset
 
-
 /history
+
+
+# Copilot
+!.github/.bak/.keep
+!.github/.bak/instructions-lang-default-disable/*
+.github/.bak/*.md
+.github/.bak/deprecated
