@@ -117,8 +117,9 @@ def server():
 
 @cli.command()
 @click.argument('username', required=True)
-def timeline_delele(username: str):
-    timeline.timeline.delete_user_timeline(username)
+@click.argument('gh', required=True)
+def timeline_delele(username: str, gh: str):
+    timeline.timeline.delete_user_timeline(username, gh)
 
 
 if __name__ == '__main__':

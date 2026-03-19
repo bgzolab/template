@@ -10,7 +10,7 @@
       "program": "${workspaceFolder}/bangumi_recovery.py",
       "envFile": "${workspaceFolder}/.env",
       "console": "integratedTerminal",
-      "args": "timeline-delele bool"
+      "args": "timeline-delele bool 51f32c71"
     }
   ]
 }

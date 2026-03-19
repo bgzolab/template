@@ -27,4 +27,4 @@ def test_delete_timeline_item():
 
 def test_delete_user_timeline():
     from timeline.timeline import delete_user_timeline
-    delete_user_timeline("bool", max_page=100)
+    delete_user_timeline("bool", '', max_page=100)

@@ -24,14 +24,13 @@ def get_page_item_id_list(html_content: str) -> list[str]:
         return []
     return  [li.get('id')[4:] for li in timeline_html.findAll('li') if li.get('id')]
 
-def delete_timeline_item(item_id: str) -> bool:
+def delete_timeline_item(item_id: str, gh: str) -> bool:
     client = BangumiCookieClient()
     request_url = TIMELINE_DELETE % item_id
     response = client.session.get(request_url, params={
         "ajax": 1,
-        "gh": "eef61b71"
+        "gh": gh,
     })
-    print(response.text)
     try:
         if response.status_code == 200 and response.json().get('status') == 'ok':
             return True
@@ -42,7 +41,7 @@ def delete_timeline_item(item_id: str) -> bool:
         return False
 
 
-def delete_user_timeline(username: str, max_page: int = 100):
+def delete_user_timeline(username: str, gh: str,max_page: int = 100):
     for page in range(1, max_page + 1):
         html = get_timeline_page_html(page, username)
         id_list = get_page_item_id_list(html)
@@ -52,7 +51,7 @@ def delete_user_timeline(username: str, max_page: int = 100):
         print(f"Deleting items from page {page}, found {len(id_list)} items.")
         for item_id in id_list:
             try:
-                success = delete_timeline_item(item_id)
+                success = delete_timeline_item(item_id, gh)
                 if success:
                     print(f"Successfully deleted item with ID: {item_id}")
                 else:
