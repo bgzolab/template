@@ -3,13 +3,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug your file",
+      "name": "Debug delete timeline item",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/src/{your-file}",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "program": "${workspaceFolder}/bangumi_recovery.py",
       "envFile": "${workspaceFolder}/.env",
       "console": "integratedTerminal",
-      "args": "{your-args}"
+      "args": "timeline-delele bool"
     }
   ]
 }

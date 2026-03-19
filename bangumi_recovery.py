@@ -96,7 +96,12 @@ def clone_from_html_archives():
     mark_want_subjects_form_files()
     mark_done_subjects_form_files()
 
-@click.command()
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
 @click.argument('username')
 def clone_someone(username: str):
     clone_user_collection_with_subject_type(username, SubjectType.BOOK.value)
@@ -105,12 +110,17 @@ def clone_someone(username: str):
     clone_user_collection_with_subject_type(username, SubjectType.MUSIC.value)
     clone_user_collection_with_subject_type(username, SubjectType.REAL_LIFE.value)
 
-@click.command()
+@cli.command()
 def server():
     uvicorn.run(web.main_web.app, host="0.0.0.0", port=8000)
 
 
-@click.command()
+@cli.command()
 @click.argument('username', required=True)
 def timeline_delele(username: str):
     timeline.timeline.delete_user_timeline(username)
+
+
+if __name__ == '__main__':
+    cli()
+
