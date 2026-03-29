@@ -29,12 +29,15 @@ jobs:
           NODE_ENV: production
 
       - name: Deploy to bGZo/bgzo.github.io
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.REPO_BGZO_GITHUB_IO_TOKEN }}
-          external_repository: bGZo/bgzo.github.io
-          publish_branch: gh-pages
-          publish_dir: ./dist/client
-          force_orphan: false
-          commit_message: "chore: deploy from playground"
-          # commit_message: "chore: deploy from ${{ github.repository }}@${{ github.sha }}"
+        env:
+          DEPLOY_TOKEN: ${{ secrets.REPO_BGZO_GITHUB_IO_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          cd dist/client
+          git init
+          git add -A
+          git commit -m "chore: deploy from playground"
+          git push --force \
+            "https://x-access-token:${DEPLOY_TOKEN}@github.com/bGZo/bgzo.github.io.git" \
+            HEAD:gh-pages
