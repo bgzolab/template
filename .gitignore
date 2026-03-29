@@ -100,3 +100,5 @@ chat/
 
 # Copilot
 .github/.bak/**/*.md
+
+social-media-card/

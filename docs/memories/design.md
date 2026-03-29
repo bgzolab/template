@@ -51,6 +51,7 @@ tags:
 
 ## Tools（`/tools`）
 
+- **社交媒体卡片生成**：`SocialMediaCard.vue` — 自定义头像/背景/昵称/签名，LocalStorage 缓存，html2canvas 导出 PNG
 - **双拼音解码**：`DoublePinYinDecode.vue`
 - **应吃什么水果**：`FruitYouShouldEat.vue`
 - **字符串转义**：`StringEscape.vue`

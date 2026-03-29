@@ -1,0 +1,19 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Home from "../../layouts/Home.astro";
+import SocialCardTool from "../../components/tools/SocialMediaCard.vue";
+import Article from "../../components/Article.astro";
+
+export const title = "社交媒体卡片生成";
+export const description =
+  "自定义头像、背景、昵称和签名，导出 PNG 图片，设置缓存于本地";
+---
+
+<Home>
+  <Header />
+  <Article>
+    <SocialCardTool client:load />
+  </Article>
+  <Footer />
+</Home>
