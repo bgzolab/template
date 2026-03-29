@@ -1,0 +1,40 @@
+name: Deploy to bgzo.github.io
+
+on:
+  push:
+    branches:
+      - "2025/10/blog-astro"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build site
+        run: bun run build
+        env:
+          NODE_ENV: production
+
+      - name: Deploy to bGZo/bgzo.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.REPO_BGZO_GITHUB_IO_TOKEN }}
+          external_repository: bGZo/bgzo.github.io
+          publish_branch: main
+          publish_dir: ./dist/client
+          force_orphan: false
+          commit_message: "chore: deploy from ${{ github.repository }}"
+          # commit_message: "chore: deploy from ${{ github.repository }}@${{ github.sha }}"
