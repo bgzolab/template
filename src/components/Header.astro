@@ -1,15 +1,31 @@
 ---
-import { navLinks } from '../config/nav.ts';
+import { navLinks } from "../config/nav.ts";
 const currentPath = Astro.url.pathname;
-const { SITE_URL } = Astro.locals
-const SITE_URL_NO_SLASH = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
+const { SITE_URL } = Astro.locals;
+const SITE_URL_NO_SLASH = SITE_URL.endsWith("/")
+  ? SITE_URL.slice(0, -1)
+  : SITE_URL;
 ---
 
 <div class="flex justify-between px-4 py-4 mx-auto sm:px-8 max-w-2xl">
   <nav class="text-gray-700 space-x-4 left-1">
-    {navLinks.map(link => (
-      // 保持当前页面的链接加粗
-      <a href={SITE_URL_NO_SLASH + link.path} class={currentPath === link.path ? 'font-bold' : ''}>{link.name}</a>
-    ))}
+    {
+      navLinks.map((link) =>
+        link.external ? (
+          // 外部链接：直接使用完整 URL，在新标签页打开
+          <a href={link.path} target="_blank" rel="noopener noreferrer">
+            {link.name}
+          </a>
+        ) : (
+          // 内部链接：拼接 SITE_URL，当前页面加粗
+          <a
+            href={SITE_URL_NO_SLASH + link.path}
+            class={currentPath === link.path ? "font-bold" : ""}
+          >
+            {link.name}
+          </a>
+        ),
+      )
+    }
   </nav>
 </div>

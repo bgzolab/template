@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Home from "../layouts/Home.astro";
+import ChatPanel from "../components/ChatPanel.vue";
 import { profile } from "../config/profile.ts";
 import Location from "../components/profile/Location.vue";
 import Language from "../components/profile/Language.vue";
@@ -19,30 +20,47 @@ const title = "home";
 
 <Home title={title}>
   <Header />
+
+  <!-- Section 1: 个人主页（全屏） -->
   <div
+    id="hero"
     class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900"
   >
     <div class="text-center max-w-md mx-auto">
-      <img
-        src={profile.avatar}
-        alt="Avatar"
-        class="w-32 h-32 rounded-full mx-auto mb-4"
-      />
+      <!-- 头像 + 状态图标 -->
+      <div class="relative w-32 h-32 mx-auto mb-4">
+        <img src={profile.avatar} alt="Avatar" class="w-32 h-32 rounded-full" />
+        <!-- 状态图标：有话想说，点击平滑滚动到对话框 -->
+        <button
+          id="chat-trigger"
+          aria-label="有话想说"
+          class="absolute bottom-1 right-1 w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-lg border border-gray-100 hover:scale-110 transition-transform duration-200 focus:outline-none"
+        >
+          <!-- 脉冲光圈 -->
+          <span
+            class="absolute inset-0 rounded-full bg-green-400 opacity-30 animate-ping"
+          ></span>
+          💬
+        </button>
+      </div>
+
       <h1 class="text-3xl font-bold mb-2">{profile.name}</h1>
       <div
         class="flex justify-center items-center space-x-4 mb-4 text-gray-500"
       >
         <span class="text-lg flex items-center">
-          <span class="mr-1"><Location /></span>
+          <span class="mr-1"><Location client:load /></span>
           {profile.location}
         </span>
         <span class="text-lg">/</span>
         <span class="text-lg flex items-center">
-          <span class="mr-1"><Language /></span>
+          <span class="mr-1"><Language client:load /></span>
           {profile.languages.join(", ")}
         </span>
       </div>
       <p class="text-lg mb-4">{profile.aboutMe}</p>
+
+      <!-- 社交图标 -->
       <div class="flex justify-center space-x-4">
         {
           profile.socialMedia["GitHub"] &&
@@ -51,6 +69,7 @@ const title = "home";
                 href={`https://github.com/${profile.socialMedia["GitHub"]}`}
                 title="Github"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...github}
@@ -67,6 +86,7 @@ const title = "home";
                 href={`https://t.me/${profile.socialMedia["Telegram"]}`}
                 title="Telegram"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...telegram}
@@ -83,6 +103,7 @@ const title = "home";
                 href={profile.socialMedia["Mastodon"]}
                 title="Mastodon"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...mastodon}
@@ -99,6 +120,7 @@ const title = "home";
                 href={`https://bsky.app/profile/${profile.socialMedia["Bluesky"]}`}
                 title="Bluesky"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...bluesky}
@@ -115,6 +137,7 @@ const title = "home";
                 href={`https://twitter.com/${profile.socialMedia["Twitter"]}`}
                 title="Twitter"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...twitter}
@@ -131,6 +154,7 @@ const title = "home";
                 href={profile.socialMedia["Discord"]}
                 title="Discord"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...discord}
@@ -143,7 +167,12 @@ const title = "home";
         {
           profile.socialMedia["RSS"] &&
             profile.socialMedia["RSS"].length > 0 && (
-              <a href={profile.socialMedia["RSS"]} title="RSS" target="_blank">
+              <a
+                href={profile.socialMedia["RSS"]}
+                title="RSS"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   {...rss}
                   alt={profile.socialMedia["RSS"]}
@@ -159,6 +188,7 @@ const title = "home";
                 href={profile.socialMedia["Podcast"]}
                 title="Podcast"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   {...podcast}
@@ -169,7 +199,48 @@ const title = "home";
             )
         }
       </div>
+
+      <!-- 向下提示箭头 -->
+      <button
+        id="chat-trigger-arrow"
+        aria-label="滚动到对话框"
+        class="mt-10 mx-auto flex flex-col items-center text-gray-400 hover:text-gray-600 transition-colors duration-200 focus:outline-none"
+      >
+        <span class="text-xs mb-1">有话想说</span>
+        <svg
+          class="w-5 h-5 animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
     </div>
   </div>
+
+  <!-- Section 2: 对话框（全屏，平滑滚入） -->
+  <ChatPanel client:load avatar={profile.avatar} name={profile.name} />
+
   <Footer />
 </Home>
+
+<script>
+  // 点击状态图标或箭头，平滑滚动到对话框区域
+  function bindScrollTriggers() {
+    const chatSection = document.getElementById("chat-section");
+    if (!chatSection) return;
+    ["chat-trigger", "chat-trigger-arrow"].forEach((id) => {
+      document.getElementById(id)?.addEventListener("click", () => {
+        chatSection.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  }
+  // Astro 页面加载后执行
+  document.addEventListener("astro:page-load", bindScrollTriggers);
+  bindScrollTriggers();
+</script>
