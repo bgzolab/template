@@ -33,8 +33,8 @@ jobs:
         with:
           personal_token: ${{ secrets.REPO_BGZO_GITHUB_IO_TOKEN }}
           external_repository: bGZo/bgzo.github.io
-          publish_branch: main
+          publish_branch: gh-pages
           publish_dir: ./dist/client
           force_orphan: false
-          commit_message: "chore: deploy from ${{ github.repository }}"
+          commit_message: "chore: deploy from playground"
           # commit_message: "chore: deploy from ${{ github.repository }}@${{ github.sha }}"
