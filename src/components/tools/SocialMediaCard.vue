@@ -123,7 +123,7 @@ function clearStorage() {
       <!-- 卡片本体（html2canvas 截图目标） -->
       <div
         ref="cardRef"
-        class="bg-white rounded-xl shadow-lg relative w-full"
+        class="not-prose bg-white rounded-xl shadow-lg relative w-full"
         style="height: 380px"
       >
         <!-- 背景图区（上方 60%） -->
