@@ -11,6 +11,7 @@ from src.readme_updater import (
     load_recent_articles,
     format_articles_markdown,
     update_readme,
+    _clean_text,
 )
 
 FIXED_DATE = datetime(2026, 4, 4, tzinfo=timezone.utc)
@@ -84,6 +85,36 @@ class TestLoadRecentArticles:
         api_dir = make_api_dir(tmp_path, {"2026/04/04": recent})
         articles = load_recent_articles(days=7, api_dir=api_dir, reference_date=FIXED_DATE)
         assert len(articles) == 1
+
+
+class TestCleanText:
+    def test_strips_html_tags(self):
+        assert _clean_text("<p>Hello <b>world</b></p>") == "Hello world"
+
+    def test_decodes_html_entities(self):
+        # &amp; → &; &lt;test&gt; → <test> → stripped as tag
+        assert _clean_text("AT&amp;T &lt;test&gt;") == "AT&T"
+        assert _clean_text("&quot;hello&quot;") == '"hello"'
+
+    def test_removes_markdown_bold(self):
+        assert _clean_text("**bold** text") == "bold text"
+
+    def test_removes_markdown_italic(self):
+        assert _clean_text("*italic* and _also_") == "italic and also"
+
+    def test_collapses_newlines_and_whitespace(self):
+        result = _clean_text("line1\nline2\n\nline3\t  extra")
+        assert "\n" not in result
+        assert "  " not in result
+
+    def test_handles_empty_string(self):
+        assert _clean_text("") == ""
+
+    def test_combined_html_and_markdown(self):
+        result = _clean_text("<p>**Hello** &amp; <em>world</em></p>")
+        assert "<" not in result
+        assert "**" not in result
+        assert "&amp;" not in result
 
 
 class TestFormatArticlesMarkdown:

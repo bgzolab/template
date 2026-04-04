@@ -33,6 +33,10 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 - Aggregate all articles, sorted by date descending.
 - Output to `api/{YYYY}/{MM}/{DD}.json`.
 
+**JSON write rules:**
+- **Filter**: articles with a publish date older than **2 days** are discarded before writing.
+- **Idempotency**: if the target file already exists, its contents are merged with new data. Deduplication is by URL (new data takes priority); merged list is sorted by date descending. Repeated runs are safe and will not lose existing data.
+
 **JSON schema per file:**
 
 ```json
@@ -49,6 +53,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 ### Step 3: Update README (after each fetch)
 
 - Read last 7 days of `api/` JSON files, deduplicate by URL, sort by date descending (newest first).
+- Filter by article `date` field (not file date) to ensure only truly recent articles appear.
 - Write results into the `## Last Week Blog` section of `README.md` as a Markdown table.
 
 **Table format:**
@@ -56,6 +61,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | YYYY-MM-DD | [title](url) | description (max 150 chars) |
+
+**Summary cleaning:** HTML tags, Markdown bold/italic markers (`**`, `*`, `__`, `_`), and extra whitespace/newlines are stripped before rendering.
 
 ### Error handling
 
