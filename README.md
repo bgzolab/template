@@ -20,12 +20,40 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 
 | Date | Title | Summary |
 | --- | --- | --- |
+| 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-04 | [鸟窝](https://mobius.blog/2026/04/04/bird_nest/) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-04 | [Memos #2026-04-03](https://www.taober.blog/memos) | 23:40 对了，今天发了年终！！！ 年终下来是 B 的系数，小道消息说我的绩效是组内第一，不过已经离职了还能发我就已经很感激了！ 最近真的是大吃特吃，减肥又遥遥无期了… |
+| 2026-04-03 | [跟着AI学编译原理](https://xiaket.github.io/2026/writing-a-toy-compiler-in-go.html) | 有了AI之后, 学东西变得更容易了. 趁着复活节假期, 把之前接触过但是了解不深入的编译原理捡起来学习一下. |
+| 2026-04-03 | [我关注的项目这周更新了什么-20260403](https://www.bboy.app/2026/04/03/%E6%88%91%E5%85%B3%E6%B3%A8%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%99%E5%91%A8%E6%9B%B4%E6%96%B0%E4%BA%86%E4%BB%80%E4%B9%88-20260403/) | 简介 每周五更新，所有的更新也会发送到我的频道 https://t.me/bboyapp 规则 pre release的不记录 只记录重要的更新 上一版本版本的bugfix不记录，比如某一个项目最新版本是7.0.0 上一个版本6.0.0发布了一个bugfix 6.0.1 那么不会记录 比如lens发… |
+| 2026-04-03 | [学会做自己](https://blog.solazy.me/20260403/) | 今天在赶路的时候听了一期播客，索性聊聊听后感 |
+| 2026-04-03 | [20260403的胡言乱语](https://www.bboy.app/2026/04/03/20260403%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/) | 简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn |
+| 2026-04-03 | [MacCms增加批量设置视频更新时间功能](https://foglog.cn/p/maccms-vod-laydate) | 在后台视频数据管理页面增加一个更新时间按钮，可以批量设置视频的更新时间1、application/admin/controller/Vod.php查找 public function field... |
+| 2026-04-03 | [A funny story about AI implementation](https://victor42.eth.limo/post-en/the-great-ai-ification/) | The company churns out a ton of fixed-template images daily: course covers, promo banners, printed signs, desk nameplates, arm stickers, you name it.… |
+| 2026-04-03 | [AI落地趣事一则](https://victor42.eth.limo/post/the-great-ai-ification/) | 公司每天要产大量固定模板的图，课程封面、推广位、喷绘横幅、桌签、臂贴等。基本都是改改文字，并根据类型从一批固定的背景图中选一张用。 设计师手动改不现实，运营不会PS也不想学，外包出去要20块一张。 我主业是UI设计，但这活儿一直都是我在干。我有个个人项目，把Excel和Photoshop的能力结合起… |
+| 2026-04-03 | [Microsoft将在2026年至2029在日本投资100亿美元，用于人工智能基础设施和网络安全](https://blog.rustfisher.com/news/news-microsoft-plan-japan-20260403/) | 微软计划在未来四年内在日本投资100亿美元，与合作伙伴共同开发人工智能基础设施并加强网络安全举措 |
+| 2026-04-03 | [学习周刊-总第257期-2026年第14周](https://wiki.eryajf.net/pages/22ef3d/) | 如要阅读全文，点击标题跳转。 学习周刊-总第257期 &#124; lovcode &#124; zedis &#124; winshot &#124; StreamPanel &#124; WayLog &#124; agentsdk-go &#124; EnsoAI &#124; baserow &#124; SuperCmd &#124; LobsterAI &#124; Penio |
+| 2026-04-03 | [向外求索的情绪稳定：一场注定疲惫的追逐](https://www.evan.xin/4917/) | 如果一个人的所有情绪稳定的因素都向外求索，这个人一定会很累。 因为这意味着你把情绪的开关交给了别人。老板的一个 […] |
+| 2026-04-03 | [Anthropic 4亿美元收购 AI生物公司，隐形公司成就背后VC高达38513%回报](https://wenfeixiang.com/2026/04/anthropic-merge-coefficient-bio-and-the-dimension-story/) | 今天科技媒体圈被 OpenAI 收购科技播客 TBPN 的消息刷屏了，与这个消息形成鲜明对照的是 OpenAI […] |
+| 2026-04-03 | [ceph mon Operation not permitted 问题解决](https://frytea.com/archives/1652/) | 自己构建的 ceph 发现 mon 起不来，报错如下：Apr 03 11:14:30 debian systemd[1]: Started Ceph cluster monitor daemon... |
+| 2026-04-03 | [第一百六十万字](https://mobius.blog/2026/04/03/one-million-six-hundred-thousand-words/) | 好久没有写过这个题目，上一次还是在 2022 年记录到《第八十万字》的时候。后来因为博客被 DDoS，不得不迁 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-03 | [2026.4.2](https://www.justzht.com/2026-4-2/) | 这周干了两件蠢事。 一个是和之前的老板（现在的 skip）以及现在的老板都大张旗鼓说了我周二要请假去 DMV 更新 REALID， |
+| 2026-04-03 | [Snowboarding in Xinjiang - China Snow Trip &#124; 滑雪的尽头 竟然真的是骨科](https://cheng.st/2026/04/03/snowboarding-in-xinjiang-china-snow-trip-%E6%BB%91%E9%9B%AA%E7%9A%84%E5%B0%BD%E5%A4%B4-%E7%AB%9F%E7%84%B6%E7%9C%9F%E7%9A%84%E6%98%AF%E9%AA%A8%E7%A7%91/) | 书接 上回 。 当晚摇到本地领路人，一下子心情高涨，睡意全无，开始刷起了抖音小红书来抱佛脚——一晚上的学习让我大致领悟到了“排水渠”，“大小狼王”等“著名打卡点”。可惜只看视频既不过瘾，也一头雾水。明明昨天跟着地图指引该去的都去了，这些奇奇怪怪的名字到底是都在哪？好在入夜开始下雪，窗外的静谧慢慢透进… |
+| 2026-04-02 | [Google推出开放模型Gemma 4](https://blog.rustfisher.com/news/news-google-20260403/) | Google宣布推出Gemma 4。其专为高级推理和代理工作流打造，提供了前所未有的每参数智能化。 |
+| 2026-04-02 | [Apple 50 年，真正难的不是“不同”](https://www.linggandianbo.com/newsletter-117/) | 反叛很容易，难的是把不同想法做成别人离不开的系统｜灵感电波 #117 |
+| 2026-04-02 | [退休之后我可以做些什么](https://blog.solazy.me/20260402/) | 今天发散一下，聊聊我退休之后的几种可能性 |
+| 2026-04-02 | [读书小结十八](https://jubeny.com/2026/04/book-summaries-18/) | 即使以最微弱的光 女性作家小说里的主人公，几乎都是女性。在这本短篇集的七个故事中，毫无例外，主角也都是女性。 小说主题围绕家庭、朋友和职场关系，主角有很多共性，都是含着悲伤的女性，性格上更偏隐忍和讨好，但小说的走向是主角与自己的和解。每个故事里，女人多是受害者，而出现的父亲与丈夫都是残忍暴力的形象。 |
+| 2026-04-02 | [Quicker - 让效率起飞的 Windows “超级外挂” (快速启动 / 快捷指令 / 鼠标增强)](https://www.iplaysoft.com/quicker.html) | 在 Windows 上有很多效率神器，如 Fences 、 Listary 、 uTools 、 Groupy 、 Everything 等工具能让电脑用得更爽！而今天的 Quicker 国产桌面快捷启动器，同样是用过就再也回不去的一款。 我们平日 办公 、 学习 、上网，经常都要做很多重重复复的操… |
+| 2026-04-02 | [物权](https://blog.est.im/2026/stderr-13) | 前些年接触到 土地兼并与王朝灭亡周期律，觉得好有道理，但是后来又有人说其实这个学术上并不能实证。 今日手痒键政一下。其实土地兼并只是表面，东亚大国从古至今都没有物权，更何况人权。有人说地契就是私有制的，需要指出，地契的重点是「契」，「契」交易的不是所有权，而是赋税和徭役obligation。所以财政… |
+| 2026-04-02 | [小说创作 SKILLS 的设计](https://haoluobo.com/2026/04/novel-skills-design/) | 前情提要：《用AI写小说的尝试》 使用的 SKILLS 以及生成的小说：novel-skills 现阶段 AI […] |
+| 2026-04-02 | [最大的风险是死亡,所以人生没有风险](https://lililib.github.io/%E6%9C%80%E5%A4%A7%E7%9A%84%E9%A3%8E%E9%99%A9%E6%98%AF%E6%AD%BB%E4%BA%A1,%E6%89%80%E4%BB%A5%E4%BA%BA%E7%94%9F%E6%B2%A1%E6%9C%89%E9%A3%8E%E9%99%A9/) | 刷到一个不错的帖子，直触灵魂，令人颤栗。怕丢失了就摘抄过来。 |
+| 2026-04-02 | [美国顶级VC USV是如何用AI的？来认识他们几个Agent（干货满满）](https://wenfeixiang.com/2026/04/meet-the-usv-ai-agent-for-vc-job/) | AI Agent 越来越火热，最近我们也在和几家VC客户交流如何封装 MCP 和 SKill、接入到他们的 A […] |
+| 2026-04-02 | [获取微信公众号文章，我试了 6 种方案，最后发现最简单的那个最能打](https://www.wangwangit.com/%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%EF%BC%8C%E6%88%91%E8%AF%95%E4%BA%86%206%20%E7%A7%8D%E6%96%B9%E6%A1%88%EF%BC%8C%E6%9C%80%E5%90%8E%E5%8F%91%E7%8E%B0%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E9%82%A3%E4%B8%AA%E6%9C%80%E8%83%BD%E6%89%93/) | 测评了 6 种微信公众号文章抓取方案，从 Selenium 到代理 IP，最终发现 UA 伪装法一条 curl 就能搞定，零成本绕过滑块验证。 |
+| 2026-04-02 | [小龙虾突然"娇气"了？3.31 版本审批避坑指南](https://www.wangwangit.com/%E5%B0%8F%E9%BE%99%E8%99%BE%E7%AA%81%E7%84%B6%E5%A8%87%E6%B0%94%E4%BA%86-%E5%AE%A1%E6%89%B9%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/) | OpenClaw 3.31 版本更新后，exec 命令审批机制大改，配置完全失效。这篇文章把踩坑过程和解决方案说清楚。 |
+| 2026-04-02 | [FireRed-Image-Edit 一键衣物提取 懒人整合包](https://dsx2016.com/firered-image-edit-one-click-clothing-extraction/) | FireRed-Image-Edit github地址：https://github.com/FireRedT... FireRed-Image-Edit 一键衣物提取 懒人整合包 最先出现在 大师兄2016 。 |
+| 2026-04-02 | [博客重构：从Hexo到Astro](https://mocusez.site/zh-CN/posts/f652) | 是时候该重构博客了 |
+| 2026-04-02 | [微软宣布在2025至2029年在新加坡投资55亿美元](https://blog.rustfisher.com/news/news-microsoft-20260402/) | 微软承诺从2025年到2029年的五年内，在新加坡投入55亿美元。这笔资金将用于扩建云服务和人工智能（AI）基础设施，以及支持新加坡的日常运营。这是微软在新加坡迄今为止最大的一笔单项投资，旨在满足当地对 AI 应用日益增长的需求。 |
 | 2026-03-28 | [重构 Jekyll 博客](https://blog.bgzo.cc/20260328-refactor-jekyll-blog.html) | 因为种种原因，我需要统一： https//note.bgzo.cc https//blog.bgzo.cc https//bgzo.cc 这几个网站的定位，考虑到自己的 blog.bgzo.cc 已经存在很长一段时间了，并且已被 V2EX 收录，最终考虑依然将自己的大部分文章放在这里，note.bg… |
 
-
-
-
-<!--
 ## Vibe Coding
 
 ### GitHub copilot
