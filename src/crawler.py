@@ -6,8 +6,13 @@
 
 发现规则：
 - 若响应状态码为 404，跳过（该序号未被收录）。
-- 否则解析 HTML，提取 <link rel="alternate" type="application/..."> 标签。
+- 否则解析 HTML，提取表格中 "Feed 地址" 行的链接。
 - 失败时打印日志并跳过，不中断整体流程。
+
+增量爬取策略：
+- 首次运行（--start-index 1）：从序号 1 开始全量扫描。
+- 增量运行（GitHub Actions 默认）：从 OPML 中已记录的最大序号 +1 开始，
+  连续遇到 max_consecutive_404 个 404 后停止。
 """
 
 import logging
@@ -16,38 +21,37 @@ from pathlib import Path
 import httpx
 from lxml import html
 
-from src.opml import DEFAULT_OPML_PATH, add_feed, read_feeds
+from src.opml import DEFAULT_OPML_PATH, add_feed, get_max_xna_index
 
 logger = logging.getLogger(__name__)
 
 # v2ex xna 博客详情页 URL 模板
 XNA_BLOG_URL = "https://www.v2ex.com/xna/s/{index}"
 
-# 支持的 feed MIME 类型
-FEED_MIME_TYPES = {
-    "application/rss+xml",
-    "application/atom+xml",
-    "application/feed+json",
-}
-
 
 def extract_feed_url(page_html: str, base_url: str = "") -> str | None:
     """
-    从 HTML 页面中提取 RSS/Atom feed 地址。
+    从 v2ex/xna 博客详情页提取 RSS/Atom feed 地址。
+
+    v2ex 页面结构示例：
+        <td align="right">Feed 地址</td>
+        <td align="left"><a href="https://example.com/feed.xml">...</a></td>
 
     Args:
         page_html: HTML 字符串
-        base_url:  页面的原始 URL，用于处理相对路径（暂未使用，保留扩展）
+        base_url:  页面原始 URL（保留扩展，暂未使用）
 
     Returns:
         feed URL 字符串，未找到时返回 None
     """
     try:
         doc = html.fromstring(page_html)
-        for mime in FEED_MIME_TYPES:
-            links = doc.xpath(f'//link[@rel="alternate"][@type="{mime}"]/@href')
-            if links:
-                return links[0]
+        # 找到文本为 "Feed 地址" 的 <td>，取其后一个兄弟 <td> 中的 <a href>
+        feed_tds = doc.xpath('//td[normalize-space(text())="Feed 地址"]')
+        for td in feed_tds:
+            siblings = td.xpath('following-sibling::td[1]//a/@href')
+            if siblings:
+                return siblings[0]
     except Exception as exc:
         logger.warning("解析 HTML 提取 feed URL 失败: %s", exc)
     return None
@@ -70,34 +74,26 @@ def extract_blog_title(page_html: str) -> str:
     return ""
 
 
-def get_current_max_index(opml_path: Path = DEFAULT_OPML_PATH) -> int:
-    """
-    从现有 OPML 推断当前已知最大 XNA 索引。
-    由于 OPML 中只存储 feed URL 而非 XNA 索引，暂时返回固定起始值。
-
-    实际增量发现逻辑：每次从上次停止的索引继续，
-    连续遇到 MAX_CONSECUTIVE_404 个 404 后停止。
-
-    Returns:
-        起始爬取序号（从 1 开始，调用方自行管理）
-    """
-    _ = read_feeds(opml_path)  # 预留：未来可记录最大已知索引
-    return 1
-
-
 def crawl_new_blogs(
-    start_index: int,
+    start_index: int | None = None,
     max_consecutive_404: int = 5,
     opml_path: Path = DEFAULT_OPML_PATH,
     client: httpx.Client | None = None,
 ) -> list[str]:
     """
-    从 start_index 开始顺序爬取 v2ex/xna，发现新博客并写入 OPML。
+    顺序爬取 v2ex/xna，发现新博客并写入 OPML。
 
-    连续遇到 max_consecutive_404 个 404 后停止，避免无限扫描。
+    - start_index=None（默认）：自动从 OPML 最大已知序号 +1 开始（增量模式）。
+    - start_index=1：从头全量扫描（首次运行时使用）。
+    - 连续遇到 max_consecutive_404 个 404 后停止。
+
+    每条新增记录包含：
+      title   : "[#N] 博客标题"
+      htmlUrl : https://www.v2ex.com/xna/s/N（来源页面）
+      xmlUrl  : feed 地址
 
     Args:
-        start_index:           起始爬取序号
+        start_index:           起始爬取序号，None 表示自动检测
         max_consecutive_404:   连续 404 上限，超过即停止
         opml_path:             OPML 文件路径
         client:                可注入的 httpx.Client（用于测试 mock）
@@ -105,29 +101,34 @@ def crawl_new_blogs(
     Returns:
         本次新增的 feed URL 列表
     """
+    if start_index is None:
+        start_index = get_max_xna_index(opml_path) + 1
+        logger.info("增量模式：从序号 %d 开始爬取", start_index)
+    else:
+        logger.info("指定起始序号：从 %d 开始爬取", start_index)
+
     added: list[str] = []
     consecutive_404 = 0
     index = start_index
 
-    # 支持外部注入 client，方便测试；否则新建
     _owns_client = client is None
     if _owns_client:
         client = httpx.Client(timeout=15, follow_redirects=True)
 
     try:
         while consecutive_404 < max_consecutive_404:
-            url = XNA_BLOG_URL.format(index=index)
+            xna_url = XNA_BLOG_URL.format(index=index)
             try:
-                resp = client.get(url)
+                resp = client.get(xna_url)
             except Exception as exc:
-                logger.warning("请求 %s 失败，跳过: %s", url, exc)
+                logger.warning("请求 %s 失败，跳过: %s", xna_url, exc)
                 index += 1
                 consecutive_404 += 1
                 continue
 
             if resp.status_code == 404:
                 consecutive_404 += 1
-                logger.debug("404 跳过: %s (连续 %d)", url, consecutive_404)
+                logger.debug("404 跳过: %s (连续 %d)", xna_url, consecutive_404)
                 index += 1
                 continue
 
@@ -136,17 +137,20 @@ def crawl_new_blogs(
 
             feed_url = extract_feed_url(resp.text, base_url=str(resp.url))
             if not feed_url:
-                logger.info("未找到 feed 地址，跳过: %s", url)
+                logger.info("未找到 feed 地址，跳过: %s", xna_url)
                 index += 1
                 continue
 
             title = extract_blog_title(resp.text)
-            was_added = add_feed(feed_url, title, opml_path)
+            was_added = add_feed(
+                feed_url, title, opml_path,
+                xna_index=index, xna_url=xna_url,
+            )
             if was_added:
-                logger.info("新增博客 [%d] %s -> %s", index, title, feed_url)
+                logger.info("新增博客 [#%d] %s -> %s", index, title, feed_url)
                 added.append(feed_url)
             else:
-                logger.debug("已存在，跳过: %s", feed_url)
+                logger.debug("已存在（含元数据更新）: [#%d] %s", index, feed_url)
 
             index += 1
     finally:

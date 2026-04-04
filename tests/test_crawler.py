@@ -18,23 +18,36 @@ from src.crawler import (
 
 # ---- 测试用 HTML 片段 ----
 
+# 真实 v2ex/xna 博客详情页结构（Feed 地址在表格 td 中）
 HTML_WITH_RSS = """
 <html>
-<head>
-  <title>My Tech Blog</title>
-  <link rel="alternate" type="application/rss+xml" href="https://myblog.example.com/feed.xml" />
-</head>
-<body><p>hello</p></body>
+<head><title>My Tech Blog</title></head>
+<body>
+  <table>
+    <tr>
+      <td align="right">Feed 地址</td>
+      <td align="left"><a href="https://myblog.example.com/feed.xml" target="_blank">https://myblog.example.com/feed.xml</a></td>
+    </tr>
+    <tr>
+      <td align="right">网站地址</td>
+      <td align="left"><a href="https://myblog.example.com" target="_blank">https://myblog.example.com</a></td>
+    </tr>
+  </table>
+</body>
 </html>
 """
 
 HTML_WITH_ATOM = """
 <html>
-<head>
-  <title>Atom Blog</title>
-  <link rel="alternate" type="application/atom+xml" href="https://atom.example.com/feed" />
-</head>
-<body></body>
+<head><title>Atom Blog</title></head>
+<body>
+  <table>
+    <tr>
+      <td align="right">Feed 地址</td>
+      <td align="left"><a href="https://atom.example.com/feed" target="_blank">https://atom.example.com/feed</a></td>
+    </tr>
+  </table>
+</body>
 </html>
 """
 

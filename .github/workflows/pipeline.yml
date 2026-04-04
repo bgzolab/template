@@ -1,0 +1,35 @@
+name: VXNA Pipeline
+
+on:
+  schedule:
+    # 每 2 小时触发一次（UTC）
+    - cron: "0 */2 * * *"
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run full pipeline
+        run: uv run python -m src.main
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add config/rss.opml api/ README.md
+          # 若无变更则跳过提交
+          git diff --cached --quiet || git commit -m "chore: update feeds and articles [skip ci]"
+          git push
