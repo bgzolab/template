@@ -1,7 +1,6 @@
 ---
 title: 项目架构
-created: YYYY-MM-DDTHH:MM:SS
-modified: YYYY-MM-DDTHH:MM:SS
+created: 2026-04-04
 description: 架构需要对项目的整体结构进行说明，明确每个文件夹和文件的作用，以及它们之间的关系。需要列出每个文件的作用，以及它们之间的调用关系。如果有数据库，包含完整数据库结构。
 tags: 
   - ai-notes

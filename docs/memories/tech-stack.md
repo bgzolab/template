@@ -1,7 +1,6 @@
 ---
 title: 技术栈选择与规范
-created: YYYY-MM-DDTHH:MM:SS
-modified: YYYY-MM-DDTHH:MM:SS
+created: 2026-04-04
 description: 保证项目使用最简单、最健壮的技术栈，实施过程中可以依据实际情况引入更多元的技术栈，但必须保证最终文件落地到项目中，保证日后可追溯 (严格禁止在 /tmp 目录黑箱操作)。
 tags: 
   - ai-notes
@@ -13,4 +12,10 @@ tags:
 2. 注重模块化（多文件）和禁止单体巨文件（monolith），代码行数 > 1000；
 3. 任何代码必须包含单元测试，且测试覆盖率尽量达到 100%；
 4. 任何大段的代码必须包含文档注释，且注释内容须易于理解、准确，最好使用简体中文；
+
+
+## Language Perference
+
+1. Python first
+2. Shell
 
