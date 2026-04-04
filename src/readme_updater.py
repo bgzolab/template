@@ -10,12 +10,13 @@ README 更新模块
 - 文章按 date 降序排列，格式为 Markdown 无序列表。
 """
 
-import html as _html
 import json
 import logging
 import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+from src.text_utils import clean_description
 
 logger = logging.getLogger(__name__)
 
@@ -88,30 +89,16 @@ def load_recent_articles(
     return articles
 
 
-def _clean_text(text: str) -> str:
-    """
-    清理文本：去除 HTML 标签、Markdown 样式标记，并规范化空白。
-
-    处理顺序：
-    1. HTML 实体解码（&amp; → &）
-    2. 去除所有 HTML 标签（<br>、<p>、<strong> 等）
-    3. 去除 Markdown 加粗/斜体标记（**text**、*text*、__text__、_text_）
-    4. 规范化空白（换行、制表符、多余空格 → 单空格）
-    """
-    text = _html.unescape(text)
-    text = re.sub(r"<[^>]+>", " ", text)
-    text = re.sub(r"\*{1,3}(.*?)\*{1,3}", r"\1", text, flags=re.DOTALL)
-    text = re.sub(r"_{1,3}(.*?)_{1,3}", r"\1", text, flags=re.DOTALL)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
-
-
 def _truncate(text: str, max_len: int = 150) -> str:
     """截断文本到 max_len 字符，超出则加省略号。"""
     text = text.strip()
     if len(text) <= max_len:
         return text
     return text[:max_len].rstrip() + "…"
+
+
+# re-export for tests / backwards compat
+_clean_text = clean_description
 
 
 def format_articles_markdown(articles: list[dict]) -> str:

@@ -23,6 +23,7 @@ import feedparser
 import httpx
 
 from src.opml import DEFAULT_OPML_PATH, read_feeds
+from src.text_utils import clean_description
 
 logger = logging.getLogger(__name__)
 
@@ -54,14 +55,14 @@ def _entry_to_article(entry: feedparser.FeedParserDict) -> Article:
     url = entry.get("link", "").strip()
     date = _parse_date(entry).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # description 优先取 summary，其次取 content[0].value
-    description = ""
+    # description 优先取 summary，其次取 content[0].value；清理富文本
+    raw = ""
     if entry.get("summary"):
-        description = entry.summary.strip()
+        raw = entry.summary.strip()
     elif entry.get("content"):
-        description = entry.content[0].get("value", "").strip()
+        raw = entry.content[0].get("value", "").strip()
 
-    return {"title": title, "url": url, "date": date, "description": description}
+    return {"title": title, "url": url, "date": date, "description": clean_description(raw)}
 
 
 def fetch_feed(url: str, client: httpx.Client) -> list[Article]:
