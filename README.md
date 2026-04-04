@@ -5,39 +5,22 @@
 [![Licence](https://img.shields.io/github/license/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/blob/template/LICENCE)
 [![Telegram](https://img.shields.io/badge/-telegram-black.svg?style=for-the-badge&logo=telegram&colorB=555)](https://t.me/imbGZo)
 
-![Playground Name Screen Shot](https://raw.githubusercontent.com/bGZo/assets/dev/2025/202508021439235.JPG)
 
-# Playground
+# VXNA Alternatives
 
-Here is a template repository for my projects. It contains a basic structure and some common files that I use in all my projects. You can use this template to create your own projects by forking it or cloning it.
+This is a replacement for https://www.v2ex.com/xna, for the following reasons:
 
-## Getting Started
+1. No censor, or small censor;
+2. More open, more transparent;
 
-Before you start, make sure you have Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
+The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the public index (https://www.v2ex.com/xna) only shows `472` entries. The 71 missing blogs — removed for unknown reasons — are exactly why this project exists.
 
-Add the remote repository:
 
-```shell
-git remote add origin git@github.com:bGZo/playground.git
-```
+## Today Blog
 
-Fetch the `template` branch from the remote repository:
 
-```shell
-git fetch origin template
-```
 
-Merge the `template` branch into your local repository to get started:
 
-```shell
-git merge origin/template --allow-unrelated-histories
-```
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://github.com/bGZo/playground)_
 
 <!--
 ## Vibe Coding

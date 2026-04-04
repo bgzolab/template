@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>VXNA Subscriptions</title>
+    </head>
+    <body>
+        <outline title="VXNA" text="VXNA">
+            <outline title='bGZo' xmlUrl="https://blog.bgzo.cc/feed.xml"/>
+    </outline>
+    </body>
+</opml>
