@@ -34,7 +34,11 @@ def load_recent_articles(
     reference_date: datetime | None = None,
 ) -> list[dict]:
     """
-    读取最近 N 天的 JSON 文件，返回去重聚合后的文章列表（按 date 降序）。
+    读取最近 N 天的 JSON 文件，过滤出发布时间在最近 N 天内的文章，
+    去重后按 date 降序返回。
+
+    注意：过滤依据是文章自身的 `date` 字段，而非 JSON 文件的日期。
+    JSON 文件中可能包含博客的历史文章，需要剔除。
 
     Args:
         days:           往前追溯的天数，默认 7
@@ -46,6 +50,11 @@ def load_recent_articles(
     """
     if reference_date is None:
         reference_date = datetime.now(tz=timezone.utc)
+
+    # 计算时间窗口下界（N 天前的 00:00:00 UTC）
+    cutoff = (reference_date - timedelta(days=days)).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
 
     articles: list[dict] = []
     seen_urls: set[str] = set()
@@ -59,9 +68,18 @@ def load_recent_articles(
             data = json.loads(path.read_text(encoding="utf-8"))
             for item in data:
                 url = item.get("url", "")
-                if url and url not in seen_urls:
-                    articles.append(item)
-                    seen_urls.add(url)
+                if not url or url in seen_urls:
+                    continue
+                # 按文章自身发布时间过滤
+                date_str = item.get("date", "")
+                try:
+                    pub_date = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+                except (ValueError, AttributeError):
+                    continue
+                if pub_date < cutoff:
+                    continue
+                articles.append(item)
+                seen_urls.add(url)
         except Exception as exc:
             logger.warning("读取 %s 失败，跳过: %s", path, exc)
 
@@ -69,12 +87,19 @@ def load_recent_articles(
     return articles
 
 
+def _truncate(text: str, max_len: int = 150) -> str:
+    """截断文本到 max_len 字符，超出则加省略号。"""
+    text = text.strip()
+    if len(text) <= max_len:
+        return text
+    return text[:max_len].rstrip() + "…"
+
+
 def format_articles_markdown(articles: list[dict]) -> str:
     """
-    将文章列表格式化为 Markdown 无序列表。
+    将文章列表格式化为 Markdown 表格（按 date 降序）。
 
-    格式：
-        - [title](url) — YYYY-MM-DD
+    列：日期 | 标题 | 摘要（最多 150 字）
 
     Returns:
         Markdown 字符串（不含前后空行）
@@ -82,12 +107,19 @@ def format_articles_markdown(articles: list[dict]) -> str:
     if not articles:
         return "_No articles in the last 7 days._"
 
-    lines = []
+    lines = [
+        "| Date | Title | Summary |",
+        "| --- | --- | --- |",
+    ]
     for article in articles:
         title = article.get("title", "Untitled").strip()
         url = article.get("url", "").strip()
-        date_str = article.get("date", "")[:10]  # 取 YYYY-MM-DD 部分
-        lines.append(f"- [{title}]({url}) — {date_str}")
+        date_str = article.get("date", "")[:10]
+        summary = _truncate(article.get("description", ""), 150)
+        # 管道符在表格中需转义
+        title_cell = f"[{title.replace('|', '&#124;')}]({url})"
+        summary_cell = summary.replace("|", "&#124;").replace("\n", " ")
+        lines.append(f"| {date_str} | {title_cell} | {summary_cell} |")
 
     return "\n".join(lines)
 

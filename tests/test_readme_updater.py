@@ -72,18 +72,39 @@ class TestLoadRecentArticles:
         dates = [a["date"] for a in articles]
         assert dates == sorted(dates, reverse=True)
 
-    def test_returns_empty_when_no_files(self, tmp_path: Path):
-        api_dir = tmp_path / "api"
-        api_dir.mkdir()
+    def test_filters_articles_by_publication_date(self, tmp_path: Path):
+        # JSON 文件在窗口内，但文章发布日期超出 7 天
+        old_article = [{"title": "Old", "url": "https://old.example.com", "date": "2026-01-01T00:00:00Z", "description": ""}]
+        api_dir = make_api_dir(tmp_path, {"2026/04/04": old_article})
         articles = load_recent_articles(days=7, api_dir=api_dir, reference_date=FIXED_DATE)
         assert articles == []
 
+    def test_includes_articles_within_date_range(self, tmp_path: Path):
+        recent = [{"title": "Recent", "url": "https://recent.example.com", "date": "2026-04-02T00:00:00Z", "description": ""}]
+        api_dir = make_api_dir(tmp_path, {"2026/04/04": recent})
+        articles = load_recent_articles(days=7, api_dir=api_dir, reference_date=FIXED_DATE)
+        assert len(articles) == 1
+
 
 class TestFormatArticlesMarkdown:
-    def test_formats_articles_as_list(self):
-        articles = [{"title": "T", "url": "https://x.com", "date": "2026-04-04T10:00:00Z", "description": ""}]
+    def test_formats_articles_as_table(self):
+        articles = [{"title": "T", "url": "https://x.com", "date": "2026-04-04T10:00:00Z", "description": "A summary"}]
         result = format_articles_markdown(articles)
-        assert "- [T](https://x.com) — 2026-04-04" in result
+        assert "| Date | Title | Summary |" in result
+        assert "| 2026-04-04 | [T](https://x.com) | A summary |" in result
+
+    def test_truncates_description_to_150_chars(self):
+        long_desc = "x" * 200
+        articles = [{"title": "T", "url": "https://x.com", "date": "2026-04-04T00:00:00Z", "description": long_desc}]
+        result = format_articles_markdown(articles)
+        # 摘要列不超过 150 个字符（加省略号）
+        summary_cell = result.split("|")[3].strip()
+        assert len(summary_cell) <= 152  # 150 + "…"
+
+    def test_escapes_pipe_in_title(self):
+        articles = [{"title": "A|B", "url": "https://x.com", "date": "2026-04-04T00:00:00Z", "description": ""}]
+        result = format_articles_markdown(articles)
+        assert "&#124;" in result
 
     def test_returns_placeholder_when_empty(self):
         result = format_articles_markdown([])
@@ -98,10 +119,11 @@ class TestUpdateReadme:
 
     def test_replaces_section_content(self, tmp_path: Path):
         readme = self._make_readme(tmp_path, "# Title\n\n## Last Week Blog\n\nold content\n\n## Other\n\nstuff\n")
-        articles = [{"title": "New", "url": "https://new.example.com", "date": "2026-04-04T00:00:00Z", "description": ""}]
+        articles = [{"title": "New", "url": "https://new.example.com", "date": "2026-04-04T00:00:00Z", "description": "desc"}]
         update_readme(articles, readme_path=readme)
         content = readme.read_text()
-        assert "- [New](https://new.example.com) — 2026-04-04" in content
+        assert "[New](https://new.example.com)" in content
+        assert "2026-04-04" in content
         assert "old content" not in content
 
     def test_preserves_content_after_section(self, tmp_path: Path):

@@ -16,8 +16,11 @@ This is a replacement for https://www.v2ex.com/xna, for the following reasons:
 The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the public index (https://www.v2ex.com/xna) only shows `472` entries. The 71 missing blogs — removed for unknown reasons — are exactly why this project exists.
 
 
-## Today Blog
+## Last Week Blog
 
+| Date | Title | Summary |
+| --- | --- | --- |
+| 2026-03-28 | [重构 Jekyll 博客](https://blog.bgzo.cc/20260328-refactor-jekyll-blog.html) | 因为种种原因，我需要统一： https//note.bgzo.cc https//blog.bgzo.cc https//bgzo.cc 这几个网站的定位，考虑到自己的 blog.bgzo.cc 已经存在很长一段时间了，并且已被 V2EX 收录，最终考虑依然将自己的大部分文章放在这里，note.bg… |
 
 
 
