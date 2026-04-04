@@ -1,0 +1,16 @@
+[project]
+name = "vxna-opml"
+version = "0.1.0"
+description = "VXNA Alternatives - an open and uncensored mirror of v2ex.com/xna"
+requires-python = ">=3.14"
+dependencies = [
+    "feedparser>=6.0.12",
+    "httpx>=0.28.1",
+    "lxml>=6.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.1.0",
+]
