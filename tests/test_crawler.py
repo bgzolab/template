@@ -88,8 +88,17 @@ class TestExtractBlogTitle:
 
 # ---- mock transport helpers ----
 
-def _make_response(status_code: int, html: str = "") -> httpx.Response:
-    return httpx.Response(status_code, text=html)
+def _make_response(status_code: int, html: str = "", url: str = "") -> httpx.Response:
+    """构造 mock 响应，可指定最终 URL（模拟重定向后的落地页）"""
+    resp = httpx.Response(status_code, text=html)
+    if url:
+        # 覆盖 response 的 request，使 resp.url 返回指定 URL
+        resp = httpx.Response(
+            status_code,
+            text=html,
+            request=httpx.Request("GET", url),
+        )
+    return resp
 
 
 class _MockTransport(httpx.MockTransport if hasattr(httpx, "MockTransport") else object):
@@ -99,89 +108,77 @@ class _MockTransport(httpx.MockTransport if hasattr(httpx, "MockTransport") else
 
 def make_mock_client(responses: list[httpx.Response]) -> httpx.Client:
     """
-    构造一个按顺序返回预设响应的 httpx.Client。
-    responses 列表按请求顺序依次消耗。
+    构造一个按顺序返回预设响应的 httpx.Client（follow_redirects=False，与 crawler 一致）。
     """
     iter_resp = iter(responses)
 
     def handler(request: httpx.Request) -> httpx.Response:
         return next(iter_resp)
 
-    transport = httpx.MockTransport(handler)
-    return httpx.Client(transport=transport)
+    return httpx.Client(transport=httpx.MockTransport(handler), follow_redirects=False)
 
 
 class TestCrawlNewBlogs:
-    def test_adds_new_blog_when_found(self, tmp_path: Path):
+    def _make_opml(self, tmp_path, extra_feeds=""):
         opml = tmp_path / "rss.opml"
         opml.write_text(
             '<?xml version="1.0" encoding="UTF-8"?>'
             '<opml version="1.0"><head/><body>'
-            '<outline title="VXNA" text="VXNA"/>'
+            f'<outline title="VXNA" text="VXNA">{extra_feeds}</outline>'
             '</body></opml>',
             encoding="utf-8",
         )
+        return opml
+
+    def test_adds_new_blog_when_found(self, tmp_path):
+        opml = self._make_opml(tmp_path)
         responses = [
-            _make_response(200, HTML_WITH_RSS),  # index 1: 找到 feed
-            _make_response(404),                 # index 2: 404
-            _make_response(404),                 # index 3: 404
-            _make_response(404),                 # index 4: 404
-            _make_response(404),                 # index 5: 404
-            _make_response(404),                 # index 6: 404 -> stop
+            _make_response(200, HTML_WITH_RSS),
+            _make_response(302),
+            _make_response(302),
+            _make_response(302),
+            _make_response(302),
+            _make_response(302),
         ]
         client = make_mock_client(responses)
         added = crawl_new_blogs(start_index=1, max_consecutive_404=5, opml_path=opml, client=client)
         assert "https://myblog.example.com/feed.xml" in added
 
-    def test_stops_after_consecutive_404(self, tmp_path: Path):
-        opml = tmp_path / "rss.opml"
-        opml.write_text(
-            '<?xml version="1.0" encoding="UTF-8"?>'
-            '<opml version="1.0"><head/><body>'
-            '<outline title="VXNA" text="VXNA"/>'
-            '</body></opml>',
-            encoding="utf-8",
-        )
-        # 全部 404，应在 max_consecutive_404 后停止，不会无限循环
+    def test_stops_after_consecutive_redirects(self, tmp_path):
+        opml = self._make_opml(tmp_path)
+        responses = [_make_response(302)] * 3
+        client = make_mock_client(responses)
+        added = crawl_new_blogs(start_index=1, max_consecutive_404=3, opml_path=opml, client=client)
+        assert added == []
+
+    def test_stops_after_consecutive_404(self, tmp_path):
+        opml = self._make_opml(tmp_path)
         responses = [_make_response(404)] * 3
         client = make_mock_client(responses)
         added = crawl_new_blogs(start_index=1, max_consecutive_404=3, opml_path=opml, client=client)
         assert added == []
 
-    def test_skips_page_without_feed(self, tmp_path: Path):
-        opml = tmp_path / "rss.opml"
-        opml.write_text(
-            '<?xml version="1.0" encoding="UTF-8"?>'
-            '<opml version="1.0"><head/><body>'
-            '<outline title="VXNA" text="VXNA"/>'
-            '</body></opml>',
-            encoding="utf-8",
-        )
+    def test_skips_page_without_feed(self, tmp_path):
+        opml = self._make_opml(tmp_path)
         responses = [
-            _make_response(200, HTML_WITHOUT_FEED),  # 无 feed，跳过
-            _make_response(404),
-            _make_response(404),
+            _make_response(200, HTML_WITHOUT_FEED),
+            _make_response(302),
+            _make_response(302),
         ]
         client = make_mock_client(responses)
         added = crawl_new_blogs(start_index=1, max_consecutive_404=2, opml_path=opml, client=client)
         assert added == []
 
-    def test_skips_duplicate_feed(self, tmp_path: Path):
-        opml = tmp_path / "rss.opml"
-        opml.write_text(
-            '<?xml version="1.0" encoding="UTF-8"?>'
-            '<opml version="1.0"><head/><body>'
-            '<outline title="VXNA" text="VXNA">'
-            '<outline xmlUrl="https://myblog.example.com/feed.xml"/>'
-            '</outline></body></opml>',
-            encoding="utf-8",
+    def test_skips_duplicate_feed(self, tmp_path):
+        opml = self._make_opml(
+            tmp_path,
+            extra_feeds='<outline xmlUrl="https://myblog.example.com/feed.xml"/>',
         )
         responses = [
-            _make_response(200, HTML_WITH_RSS),  # feed 已存在
-            _make_response(404),
-            _make_response(404),
+            _make_response(200, HTML_WITH_RSS),
+            _make_response(302),
+            _make_response(302),
         ]
         client = make_mock_client(responses)
         added = crawl_new_blogs(start_index=1, max_consecutive_404=2, opml_path=opml, client=client)
-        # 不应重复添加
         assert added == []

@@ -113,7 +113,8 @@ def crawl_new_blogs(
 
     _owns_client = client is None
     if _owns_client:
-        client = httpx.Client(timeout=15, follow_redirects=True)
+        # follow_redirects=False：让我们自己检测 3xx（v2ex 对不存在序号返回 302→/xna）
+        client = httpx.Client(timeout=15, follow_redirects=False)
 
     try:
         while consecutive_404 < max_consecutive_404:
@@ -126,13 +127,14 @@ def crawl_new_blogs(
                 consecutive_404 += 1
                 continue
 
-            if resp.status_code == 404:
+            # 404 或 3xx 重定向（v2ex 对不存在的序号返回 302→/xna）均视为"不存在"
+            if resp.status_code == 404 or resp.is_redirect:
                 consecutive_404 += 1
-                logger.debug("404 跳过: %s (连续 %d)", xna_url, consecutive_404)
+                logger.debug("序号不存在 [%d] status=%d (连续 %d)", index, resp.status_code, consecutive_404)
                 index += 1
                 continue
 
-            # 重置连续 404 计数
+            # 重置连续不存在计数
             consecutive_404 = 0
 
             feed_url = extract_feed_url(resp.text, base_url=str(resp.url))
