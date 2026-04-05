@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-05 | [落红就是无情物](https://mobius.blog/2026/04/05/fallen-petals-beyond-emotion/) | 一个环卫工人正拿着长棍将树上的花都打了下来。有路人觉得可惜，便上前阻止环卫工人。 环卫工人嘟囔道：「不打不行， […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-05 | [45澳元的Costco会员，值不值？](https://www.ozexplorers.com/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/2026/04/05/is-costco-membership-worth-it.html) | 最近Costco在搞会员促销活动，4月2日之前，新办Gold Star会员（65刀/年）赠送20刀购物卡，升级Executive会员（135刀/年）则赠送40刀购物卡。 |
 | 2026-04-05 | [Memos #2026-04-04](https://www.taober.blog/memos) | 21:18 跟朋友们去吃了小龙虾，喝了啤酒，现在肚子胀胀的。 明天一定一定开始少吃！！！ |
 | 2026-04-04 | [鸟窝](https://mobius.blog/2026/04/04/bird_nest/) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
