@@ -21,8 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-05 | [45澳元的Costco会员，值不值？](https://www.ozexplorers.com/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/2026/04/05/is-costco-membership-worth-it.html) | 最近Costco在搞会员促销活动，4月2日之前，新办Gold Star会员（65刀/年）赠送20刀购物卡，升级Executive会员（135刀/年）则赠送40刀购物卡。 |
+| 2026-04-05 | [Memos #2026-04-04](https://www.taober.blog/memos) | 21:18 跟朋友们去吃了小龙虾，喝了啤酒，现在肚子胀胀的。 明天一定一定开始少吃！！！ |
 | 2026-04-04 | [鸟窝](https://mobius.blog/2026/04/04/bird_nest/) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-04 | [Memos #2026-04-03](https://www.taober.blog/memos) | 23:40 对了，今天发了年终！！！ 年终下来是 B 的系数，小道消息说我的绩效是组内第一，不过已经离职了还能发我就已经很感激了！ 最近真的是大吃特吃，减肥又遥遥无期了… |
 | 2026-04-03 | [跟着AI学编译原理](https://xiaket.github.io/2026/writing-a-toy-compiler-in-go.html) | 有了AI之后, 学东西变得更容易了. 趁着复活节假期, 把之前接触过但是了解不深入的编译原理捡起来学习一下. |
 | 2026-04-03 | [我关注的项目这周更新了什么-20260403](https://www.bboy.app/2026/04/03/%E6%88%91%E5%85%B3%E6%B3%A8%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%99%E5%91%A8%E6%9B%B4%E6%96%B0%E4%BA%86%E4%BB%80%E4%B9%88-20260403/) | 简介 每周五更新，所有的更新也会发送到我的频道 https://t.me/bboyapp 规则 pre release的不记录 只记录重要的更新 上一版本版本的bugfix不记录，比如某一个项目最新版本是7.0.0 上一个版本6.0.0发布了一个bugfix 6.0.1 那么不会记录 比如lens发… |
 | 2026-04-03 | [学会做自己](https://blog.solazy.me/20260403/) | 今天在赶路的时候听了一期播客，索性聊聊听后感 |
@@ -52,7 +53,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-02 | [FireRed-Image-Edit 一键衣物提取 懒人整合包](https://dsx2016.com/firered-image-edit-one-click-clothing-extraction/) | FireRed-Image-Edit github地址：https://github.com/FireRedT... FireRed-Image-Edit 一键衣物提取 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-02 | [博客重构：从Hexo到Astro](https://mocusez.site/zh-CN/posts/f652) | 是时候该重构博客了 |
 | 2026-04-02 | [微软宣布在2025至2029年在新加坡投资55亿美元](https://blog.rustfisher.com/news/news-microsoft-20260402/) | 微软承诺从2025年到2029年的五年内，在新加坡投入55亿美元。这笔资金将用于扩建云服务和人工智能（AI）基础设施，以及支持新加坡的日常运营。这是微软在新加坡迄今为止最大的一笔单项投资，旨在满足当地对 AI 应用日益增长的需求。 |
-| 2026-03-28 | [重构 Jekyll 博客](https://blog.bgzo.cc/20260328-refactor-jekyll-blog.html) | 因为种种原因，我需要统一： https//note.bgzo.cc https//blog.bgzo.cc https//bgzo.cc 这几个网站的定位，考虑到自己的 blog.bgzo.cc 已经存在很长一段时间了，并且已被 V2EX 收录，最终考虑依然将自己的大部分文章放在这里，note.bg… |
 
 ## Vibe Coding
 

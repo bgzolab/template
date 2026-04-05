@@ -1,0 +1,116 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "45澳元的Costco会员，值不值？",
+    "url": "https://www.ozexplorers.com/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/2026/04/05/is-costco-membership-worth-it.html",
+    "date": "2026-04-05T00:00:00Z",
+    "description": "最近Costco在搞会员促销活动，4月2日之前，新办Gold Star会员（65刀/年）赠送20刀购物卡，升级Executive会员（135刀/年）则赠送40刀购物卡。"
+  },
+  {
+    "title": "Memos #2026-04-04",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-04-05T00:00:00Z",
+    "description": "21:18 跟朋友们去吃了小龙虾，喝了啤酒，现在肚子胀胀的。 明天一定一定开始少吃！！！"
+  },
+  {
+    "title": "鸟窝",
+    "url": "https://mobius.blog/2026/04/04/bird_nest/",
+    "date": "2026-04-04T03:25:05Z",
+    "description": "开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "跟着AI学编译原理",
+    "url": "https://xiaket.github.io/2026/writing-a-toy-compiler-in-go.html",
+    "date": "2026-04-03T20:07:00Z",
+    "description": "有了AI之后, 学东西变得更容易了. 趁着复活节假期, 把之前接触过但是了解不深入的编译原理捡起来学习一下."
+  },
+  {
+    "title": "我关注的项目这周更新了什么-20260403",
+    "url": "https://www.bboy.app/2026/04/03/%E6%88%91%E5%85%B3%E6%B3%A8%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%99%E5%91%A8%E6%9B%B4%E6%96%B0%E4%BA%86%E4%BB%80%E4%B9%88-20260403/",
+    "date": "2026-04-03T15:24:00Z",
+    "description": "简介 每周五更新，所有的更新也会发送到我的频道 https://t.me/bboyapp 规则 pre release的不记录 只记录重要的更新 上一版本版本的bugfix不记录，比如某一个项目最新版本是7.0.0 上一个版本6.0.0发布了一个bugfix 6.0.1 那么不会记录 比如lens发布了一个新版本，那么openlens也会发布一个新版本，此时只会记录lens发布的信息，不会记录openlens发布的信息"
+  },
+  {
+    "title": "学会做自己",
+    "url": "https://blog.solazy.me/20260403/",
+    "date": "2026-04-03T15:00:00Z",
+    "description": "今天在赶路的时候听了一期播客，索性聊聊听后感"
+  },
+  {
+    "title": "20260403的胡言乱语",
+    "url": "https://www.bboy.app/2026/04/03/20260403%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/",
+    "date": "2026-04-03T13:37:00Z",
+    "description": "简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn"
+  },
+  {
+    "title": "MacCms增加设置视频更新时间功能",
+    "url": "https://foglog.cn/p/maccms-vod-laydate",
+    "date": "2026-04-03T13:00:00Z",
+    "description": "视频编辑页面增加自定义更新时间1、/application/admin/view_new/vod/info.html<div class=\"layui-input-inline ..."
+  },
+  {
+    "title": "A funny story about AI implementation",
+    "url": "https://victor42.eth.limo/post-en/the-great-ai-ification/",
+    "date": "2026-04-03T09:42:00Z",
+    "description": "The company churns out a ton of fixed-template images daily: course covers, promo banners, printed signs, desk nameplates, arm stickers, you name it. It mostly boils down to swapping out text and picking a background from a preset pool based on the category. Having designers do this manually is a pipe dream. The ops team doesn’t know Photoshop and refuses to learn. Outsourcing it costs 20 RMB a pop. My day job is UI design, but this chore somehow became my gig. I built a personal project that bridges Excel and Photoshop. Ops fills out a spreadsheet, designers maintain the PSD templates, and my script automatically maps the data into the templates, spitting out images in bulk. Over the past two years, it has generated roughly 150k RMB worth of design assets—enough to hire a few interns just to do the manual labor. https://github.com/greenzorro/excel-ps-batch-export This Python script isn’t tailor-made for the company; it’s highly versatile. Whatever PSD template you build, my script generates the matching Excel sheet. Ops fills it in, hands it back, and boom—instant image batch. Recently, the big boss started waving the AI flag, aggressively pushing AI adoption to “cut costs and boost efficiency.” He eyed my batch-export setup and decided to make it the flagship AI demo to set the standard for the whole company. In terms of cutting costs and boosting efficiency, my project is already doing exactly that. There’s nothing left to push. The catch? It’s not AI. It’s just a hardcoded script. That’s a dealbreaker. Without AI, it won’t pass the boss’s vibe check. Traditional code is seen as an outdated productive force. It needs that “AI flavor”—an overwhelming, undeniable AI aesthetic. On the flip side, since the script runs locally on my machine, the whole process bottlenecks at me. And honestly, what boss doesn’t dream of “distilling” their employees into modular digital skills? No problem. Distill away. Deploying it to the cloud solves that. Technically, they’re appropriating my personal IP for free, but since I don’t mind (and it’s open-source anyway), whatever. Deploying it on the company server and slapping a GUI on it would make it a complete product. Give the ops team a quick tutorial, and it’s undeniably a step up from running it locally. But alas, still no AI. Too primitive. Middle management vetoed it. If it’s not AI, we have to dress it up as AI. The final master plan? Spin up an AI bot on the server, give it a DingTalk account, and drop it into the ops group chat. Now, ops just @s the bot every day to generate images—exactly how they used to @ me. Perfect! Just like that, a piece of my soul has been digitized, permanently enshrined in the corporate mainframe. Honestly, if we swapped the bot’s name and avatar to mine, it would probably be even more intimidating to the boss. The only hiccup is that a zero-cost operation is now burning through LLM tokens daily. But on second thought, the boss probably sees this as a massive win. Finally, someone in the company is burning tokens and actually producing tangible results! The dawn of his grand AI empire is here. Sound the charge! Who cares about unit economics? In the name of AI, cost is but an illusion. My takeaway? AI isn’t a bubble. The doomers can rest easy. Setting aside how many real-world problems it actually solves, its mere existence is a spiritual balm, offering astronomical emotional value. It’s the new tech-bro Hermès. Between economic value and emotional value, it guarantees at least one. What a magical industry! So yeah, the corporate grind is actually pretty entertaining. If the ship is going crazy, you might as well grab an oar and enjoy the ride. At the end of the day, having fun is all that matters~"
+  },
+  {
+    "title": "AI落地趣事一则",
+    "url": "https://victor42.eth.limo/post/the-great-ai-ification/",
+    "date": "2026-04-03T09:42:00Z",
+    "description": "公司每天要产大量固定模板的图，课程封面、推广位、喷绘横幅、桌签、臂贴等。基本都是改改文字，并根据类型从一批固定的背景图中选一张用。 设计师手动改不现实，运营不会PS也不想学，外包出去要20块一张。 我主业是UI设计，但这活儿一直都是我在干。我有个个人项目，把Excel和Photoshop的能力结合起来。运营填表，设计师维护PSD模板，我程序一跑，就能把表里的数据填到模板里，一次出一大批图。过去两年已经产了价值近15万的图，足够雇几个设计实习生来手工干这事了。 https://github.com/greenzorro/excel-ps-batch-export 就这个Python项目，这不是专门为公司定制的，它通用性很强。你做什么样的PSD模板，我程序就可以给你产生对应的Excel表格，运营拿去填表，收回来就可以咔咔出图了。 最近公司老板大旗一挥，高歌猛进推AI落地，降本增效。看上了我这个批量出图的能力，想要作为AI示范项目，给大家打个样。 要说降本增效，我这项目已经做到了，不用再推进什么。但问题是，它并不是AI，只是一套死板的程序。 这不行，没有AI，老板那关过不去。程序是传统的，是落后的生产力。要有AI感，扑面而来的AI感，一眼看出用了AI。 另一方面，这程序在我电脑上跑，大家就得依赖我。试问哪个老板不想把员工“蒸馏”成Skills呢？ 没问题，让你蒸，部署到云端就好。其实这相当于无偿拿走了我的个人资产，但只要我不计较就没问题，反正也是开源项目。 部署到公司服务器上运行，如果给它配套做个操作界面，这产品就完整了。再给运营培训下，确实比我电脑本地跑更先进。 但这还是没有AI啊，太落后，被中层否了，不是AI我们也得包成AI。所以最终方案是在服务器上养只虾，给这虾配个钉钉账号，拉到运营的群里。运营每天@这个虾让它出图，就像以前在群里@我一样。 完美！这样一来，我的一部分就被数字化了，永远留在了公司里。如果把这虾的名字和头像换成我，在老板那应该更有震慑力。 唯一的问题是，本来可以0成本，但通过虾来运行，每天这token消耗蹭蹭往上窜。 转念一想，这搁老板那，哪是问题呀，高兴还来不及呢。第一次公司里有人把token花掉还能有巨大产出，他的AI大计有了曙光，该吹响冲锋号了。什么成不成本的，若为AI故，一切皆可抛。 我从中得到了什么信息？AI真不是泡沫，唱衰的可以洗洗睡了。解决多少问题先不说，它的存在本身就是一种精神慰藉，有极大的情绪价值。这是一种新的爱马仕。经济价值和情绪价值，它总能至少提供一个，这是什么神仙行业！ 所以说，上班也是挺好玩的。有人疯就要一起疯，你我沉浸喜悦中。做人呐最重要就是嗨森啦~"
+  },
+  {
+    "title": "Microsoft将在2026年至2029在日本投资100亿美元，用于人工智能基础设施和网络安全",
+    "url": "https://blog.rustfisher.com/news/news-microsoft-plan-japan-20260403/",
+    "date": "2026-04-03T08:39:59Z",
+    "description": "微软计划在未来四年内在日本投资100亿美元，与合作伙伴共同开发人工智能基础设施并加强网络安全举措"
+  },
+  {
+    "title": "学习周刊-总第257期-2026年第14周",
+    "url": "https://wiki.eryajf.net/pages/22ef3d/",
+    "date": "2026-04-03T08:32:49Z",
+    "description": "如要阅读全文，点击标题跳转。 学习周刊-总第257期 | lovcode | zedis | winshot | StreamPanel | WayLog | agentsdk-go | EnsoAI | baserow | SuperCmd | LobsterAI | Penio"
+  },
+  {
+    "title": "向外求索的情绪稳定：一场注定疲惫的追逐",
+    "url": "https://www.evan.xin/4917/",
+    "date": "2026-04-03T08:05:28Z",
+    "description": "如果一个人的所有情绪稳定的因素都向外求索，这个人一定会很累。 因为这意味着你把情绪的开关交给了别人。老板的一个 […]"
+  },
+  {
+    "title": "Anthropic 4亿美元收购 AI生物公司，隐形公司成就背后VC高达38513%回报",
+    "url": "https://wenfeixiang.com/2026/04/anthropic-merge-coefficient-bio-and-the-dimension-story/",
+    "date": "2026-04-03T06:45:18Z",
+    "description": "今天科技媒体圈被 OpenAI 收购科技播客 TBPN 的消息刷屏了，与这个消息形成鲜明对照的是 OpenAI […]"
+  },
+  {
+    "title": "ceph mon Operation not permitted 问题解决",
+    "url": "https://frytea.com/archives/1652/",
+    "date": "2026-04-03T03:25:31Z",
+    "description": "自己构建的 ceph 发现 mon 起不来，报错如下：Apr 03 11:14:30 debian systemd[1]: Started Ceph cluster monitor daemon..."
+  },
+  {
+    "title": "第一百六十万字",
+    "url": "https://mobius.blog/2026/04/03/one-million-six-hundred-thousand-words/",
+    "date": "2026-04-03T01:44:32Z",
+    "description": "好久没有写过这个题目，上一次还是在 2022 年记录到《第八十万字》的时候。后来因为博客被 DDoS，不得不迁 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "2026.4.2",
+    "url": "https://www.justzht.com/2026-4-2/",
+    "date": "2026-04-03T00:51:52Z",
+    "description": "这周干了两件蠢事。 一个是和之前的老板（现在的 skip）以及现在的老板都大张旗鼓说了我周二要请假去 DMV 更新 REALID，"
+  },
+  {
+    "title": "Snowboarding in Xinjiang - China Snow Trip | 滑雪的尽头 竟然真的是骨科",
+    "url": "https://cheng.st/2026/04/03/snowboarding-in-xinjiang-china-snow-trip-%E6%BB%91%E9%9B%AA%E7%9A%84%E5%B0%BD%E5%A4%B4-%E7%AB%9F%E7%84%B6%E7%9C%9F%E7%9A%84%E6%98%AF%E9%AA%A8%E7%A7%91/",
+    "date": "2026-04-03T00:00:00Z",
+    "description": "书接 上回 。 当晚摇到本地领路人，一下子心情高涨，睡意全无，开始刷起了抖音小红书来抱佛脚——一晚上的学习让我大致领悟到了“排水渠”，“大小狼王”等“著名打卡点”。可惜只看视频既不过瘾，也一头雾水。明明昨天跟着地图指引该去的都去了，这些奇奇怪怪的名字到底是都在哪？好在入夜开始下雪，窗外的静谧慢慢透进来，我满怀兴奋，沉沉睡去。 一觉醒来，精神抖擞。可可托海市内的雪虽然下的不够厚，但即使这薄薄如纱一层，也是山上好雪的好兆头。果然，坐上大巴以后便堵在上山路上，等铲雪车把路给清出来。到了雪场接上头搭上线，当地小哥就带我们钻入雪场灰色地带：滑向隔离网，身子向后一倒，把网给压平，再一翻身，就进入了“野雪天堂”。 我们先来了两趟排水渠——果然是一个一滑到底的“天然”U槽，瞬间让我回想起 stevens pass 的一条track和 whistler 的另外一条track。好雪第一趟，体验感拉满。接下来就是躲开patrol，duck the line的大小狼王。细看地图才发现两个狼王分别是两条延伸出去的山脊，漫山都可以随便滑。小狼王一冲到底直接回到可可托海缆车下半段，从莫名其妙的出口冲了出来；而大狼王更是野路子，一路上滑行的track竟然会直接横跨几条夏季的公路。限速标牌就在旁边——当然，我们可不管。 悲夫！板顶上一块石头，整个人飞起前空翻270度，背重重落在另外一块石头上。正如标题所示，GG。当然，此时的我还浑然不知，虽然一瞬痛感蔓延全身，但是肾上腺素直冲脑门，坐了一会儿喘两口粗气，马上就站起来继续向前冲。 大狼王最后一段果然不简单，想一路顺畅滑下来，也还需要点矫健的身手，借此躲避石头树根冰面泥地。不过大家都是北美高端玩家，又是野山精英运动员，这样的地形不说小菜一碟，也得说一句“见得多了”。爬个小坡，我们就“竟然”在出口处来到了一个“停车场”。这简直和 crystal 的employee housing这条雪道异曲同工。只是这里一大群小车子已经坐等于此，只待我们上钩。这些都是当地“小黑车”，50块钱一辆车，姜太公钓鱼，直接把你送上缆车脚下，虽然也就五分钟车程，但是没了这服务也还真是不行。 回去以后都快是下午四点，但是还是要把本地人的绝活都拿出来，带我们又去了几条没啥人碰的”雪场认证“的双黑道感受了一把。虽然雪场base还薄，但是多亏这场好雪，完全值回票价。 当晚大快朵颐一顿的我，隐隐有些会呼吸的痛。回酒店查看倒也不见什么外伤，想来第二天也是回阿勒泰的舟车劳顿，思索是不是值得去了大城市问个诊。入夜，侧卧，与GPT长谈。GPT自然是不躲不逃的稳稳接住我，在我一遍一遍的描述我的感受之后，它倒是觉得我”问题不大“，于是我便带着这样的心态跑去了阿勒泰人民医院。问诊拍片一条龙非常丝滑，价格童叟无欺。医院窗外便是将军山雪场的几条雪道在太阳照耀下闪闪发光。笑。 看到骨骼在电脑上出来的一瞬间，我整个人呆住了，确认好一会儿才开始缓过神消化这突如其来的信息冲击。之前GPT接我接得有多稳，此时的我跌的就有多狠。肋骨背部无比清晰明显的断裂，一条骨头断成两截，然后又以没有对齐的方式相互重新戳在了一起。就好像这条骨头是马克笔两笔画成的，两笔之间不仅顿了一顿，第二笔起笔位置还偏离了一点。 这是我第一次感受到身体的脆弱，之前滑雪多年，摔得重的不是没有，但总认定自己是金刚不坏之身，周围的人在医院间进进出出，我大抵都是陪在身旁的那位，今天看到“裂开”的自己不由得有些恍惚。当晚，首先我便是不得不对GPT表达了我的遗憾，紧接着便是向我的家庭圣手，还有周围朋友家的医生进行了一系列的线上咨询问诊。一大圈下来，才稍稍放下了一些心——本来阿勒泰的医生的意思是，你这断骨，可得考虑考虑要手术还是静养。单纯的我总以为手术才能让我恢复如初，正如“fix the root cause”一般把bug给修好，那不才能让血条回复满么。直到咨询学习问诊以后，我才知道肋骨，以及人体的伟大——我呆着就好。 当然，咨询的副产品是，被圣手诊断出腹中有面条！？还真是什么都瞒不了。出发前吃了一碗过油拌面，十分满足！ 当晚学会了压着胸口咳嗽，捂着肚子呼吸，第二天回将军山的最后一滑——考证之旅自然也只能下次一定了。"
+  }
+]
