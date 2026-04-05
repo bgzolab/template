@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "从头开始手写一个Qwen的Naive CUDA Kernel推理引擎(三)",
+    "url": "https://eduardoqian.com/archives/cong-tou-kai-shi-shou-xie-yi-ge-qwende-naive-cuda-kerneltui-li-yin-qing-san",
+    "date": "2026-04-05T20:30:00Z",
+    "description": "为了加快文档编写速度，我们加快描述。 首先是RMSNorm的实现。我们这里的实现是遍历Embeddingbatch中的每个Embedding的Token，对其做RMSNorm的操作： embeddingbatch RMSNorm(const embeddingbatch &tokenembe"
+  },
+  {
     "title": "稻草人周刊 Vol.75",
     "url": "https://www.geedea.pro/weekly/75/",
     "date": "2026-04-05T16:03:16Z",
