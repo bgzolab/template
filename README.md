@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-06 | [Memos #2026-04-05](https://www.taober.blog/memos) | 14:32 别了，窝趣。 |
 | 2026-04-05 | [从头开始手写一个Qwen的Naive CUDA Kernel推理引擎(三)](https://eduardoqian.com/archives/cong-tou-kai-shi-shou-xie-yi-ge-qwende-naive-cuda-kerneltui-li-yin-qing-san) | 为了加快文档编写速度，我们加快描述。 首先是RMSNorm的实现。我们这里的实现是遍历Embeddingbatch中的每个Embedding的Token，对其做RMSNorm的操作： embeddingbatch RMSNorm(const embeddingbatch &tokenembe |
 | 2026-04-05 | [稻草人周刊 Vol.75](https://www.geedea.pro/weekly/75/) | 众所周知，我时不时就会调整一下周刊的格式，所以…… Voilà，我把音乐推荐移动到了单独的栏目，现在周刊的开头都是我的碎碎念了。 止语 最近听了不少摇滚专辑，在考虑要不要像 Taxodium 那样开设一个专辑推荐系列，还能做一个专辑墙页面。不过总觉得周刊要是少了用音乐开场的传统，似乎就差点意思。 G… |
 | 2026-04-05 | [论日本政治问题的根源](https://pathos.page/blog/problem-of-japan/) | 在这篇文章中，我打算谈一些我对日本政治问题的根源的零散想法，不求全面，亦不求准确，但求洞见。我将论证，日本政治问题的根源，就是以天皇为纽带的神道政治，而使日本正常化、去军事化（去军国主义）的唯一途径，就是废除天皇制，摒弃神道政治。 |
@@ -34,7 +35,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-05 | [45澳元的Costco会员，值不值？](https://www.ozexplorers.com/%E7%BE%8A%E6%AF%9B%E6%94%BB%E7%95%A5/2026/04/05/is-costco-membership-worth-it.html) | 最近Costco在搞会员促销活动，4月2日之前，新办Gold Star会员（65刀/年）赠送20刀购物卡，升级Executive会员（135刀/年）则赠送40刀购物卡。 |
 | 2026-04-05 | [2026年第13、14周](https://blog.sakoamc.com/posts/261314/) | 题记：二零二六年的第十三、四周，清明时节雨纷纷。前阵子忙于备考，考完后趁机在苏州偷得浮生半日闲。 |
 | 2026-04-05 | [月刊（第34期）：创造的快乐](https://ursb.me/posts/weekly-34/) | 本篇是对二〇二六年三月的记录与思考。 十几年前刚接触编程的时候，我经常写到凌晨两三点忘记时间，看着指尖将脑海里的想法一点点具象化。在 《月刊（第24期）：十年编程之路》 中我写过：“那段时间的每个深夜里，满怀激动地开发着游戏，这种心情哪怕是现在回忆起来也仍未有任何衰减。现在想来，那恐怕就是最纯粹的热… |
-| 2026-04-05 | [Memos #2026-04-04](https://www.taober.blog/memos) | 21:18 跟朋友们去吃了小龙虾，喝了啤酒，现在肚子胀胀的。 明天一定一定开始少吃！！！ |
 | 2026-04-04 | [清明流水账  0404](https://blog.solazy.me/20260404/) | 衢州流水账 |
 | 2026-04-04 | [鸟窝](https://mobius.blog/21951.html) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-04 | [鸟窝](https://mobius.blog/2026/04/04/bird_nest/) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
