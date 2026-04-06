@@ -21,6 +21,10 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-06 | [R#096 躺](https://blog.sakanano.moe/journals/random_096) | 2026.3.31 ~ 2026.4.6 |
+| 2026-04-06 | [观后：《忘梦洞》](https://z.arlmy.me/posts/Review/Review_CaveOfForgottenDreams/) | 「the myth of time.」 |
+| 2026-04-06 | [最近惦念 20260322](https://z.arlmy.me/posts/TILs/thoughts/20260322_Recently/) | 「生命就是自然的语言呀。」 |
+| 2026-04-06 | [Toots 413 2026 Mar.29 - Apr.4](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260404/) | 「“碧梧桐映纱窗晚，花谢莺声懒。”」 |
 | 2026-04-06 | [WireGuard 隧道+ iptables转发](https://www.quji.org/archives/8749) | 最近墙又高了一些，对于在国内的转发机器，特别明显，基本上转发机场都死翘翘了，反正都逃不过长城的嗅探，我把我的搭 […] |
 | 2026-04-06 | [AI 还没重构组织，焦虑先重构了管理](https://www.edony.ink/ai-huan-mei-zhong-gou-zu-zhi-jiao-lu-xian-zhong-gou-liao-guan-li/) | 文章讨论了作者正在经历的AI热潮下‘焦虑型管理’的蔓延：组织因FOMO陷入隧道视觉，用高频同步、压缩周期等动作填补判断缺失，忽视问题定义、边界划定与风险管控。真正的提速应聚焦问题收敛能力，而非伪执行密度。 |
 | 2026-04-06 | [爱没有标准，但是不爱有](https://mobius.blog/22377.html) | 本着越是文艺的标题，聊的越是不文艺的主题。先提前公示一下，今天的内容可能会伤害到恋爱脑，或抱团生存的人，或只要 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
