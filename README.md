@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-06 | [爱没有标准，但是不爱有](https://mobius.blog/22377.html) | 本着越是文艺的标题，聊的越是不文艺的主题。先提前公示一下，今天的内容可能会伤害到恋爱脑，或抱团生存的人，或只要 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-06 | [Memos #2026-04-05](https://www.taober.blog/memos) | 14:32 别了，窝趣。 |
 | 2026-04-05 | [从头开始手写一个Qwen的Naive CUDA Kernel推理引擎(三)](https://eduardoqian.com/archives/cong-tou-kai-shi-shou-xie-yi-ge-qwende-naive-cuda-kerneltui-li-yin-qing-san) | 为了加快文档编写速度，我们加快描述。 首先是RMSNorm的实现。我们这里的实现是遍历Embeddingbatch中的每个Embedding的Token，对其做RMSNorm的操作： embeddingbatch RMSNorm(const embeddingbatch &tokenembe |
 | 2026-04-05 | [稻草人周刊 Vol.75](https://www.geedea.pro/weekly/75/) | 众所周知，我时不时就会调整一下周刊的格式，所以…… Voilà，我把音乐推荐移动到了单独的栏目，现在周刊的开头都是我的碎碎念了。 止语 最近听了不少摇滚专辑，在考虑要不要像 Taxodium 那样开设一个专辑推荐系列，还能做一个专辑墙页面。不过总觉得周刊要是少了用音乐开场的传统，似乎就差点意思。 G… |
