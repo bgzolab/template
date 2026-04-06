@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-07 | [简评《哀鸿：城破十日记》](https://mok.moe/p/9g66) | 通关了，冷静了半个小时回了回味儿，少见地决定写个评测说说自己的感想： ✅ 剧情两条线穿插、时长差不多是《饿殍》两倍，CG 也很多，量大管饱。角色配音水平不错（有一人除外） ❌ 虽然量大，但有充数的嫌疑。其中两个普通结局完全是复制粘贴；CG 虽多，但相比《饿殍》却缺少了一些令人印象深刻的名场景，几年过… |
+| 2026-04-06 | [谷歌翻译「同声传译」功能上线，任意耳机都能用！秒翻 70 种语言](https://www.iplaysoft.com/p/google-live-translate) | 心底里一直害怕出国旅游语言不通，点个餐全靠手指乱指、跨国开会听不懂只能傻坐着点头、和说外语的亲戚聚餐只能尬笑；说真的，这种语言不通的窘迫感，很多人都有着这样的无奈。 而且以前各种翻译 App，大部分还是要你低头打字、举着手机屏幕给别人看，又慢又蠢……说实话真的不好用。但最…… 「 前往查看原文...… |
+| 2026-04-06 | [26清明 星子摩旅 300KM](https://yovey.me/26xingzi-touring/) | 愚人节那天刷下天气，清明假期竟然是晴天欸。 发信息问小伙伴们去不去之前说的靖安民宿，响应不太积极，于是转头自己 … Continue reading "26清明 星子摩旅 300KM" |
 | 2026-04-06 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.3 of the project |
 | 2026-04-06 | [AI Hasn’t Rebuilt the Organization Yet. Anxiety Rebuilt Management First](https://www.edony.ink/en/ai-hasnt-rebuilt-the-organization-yet-anxiety-rebuilt-management-first/) | AI may not have rebuilt organizations yet, but it has already amplified their instincts. In many teams, what speeds up first is not judgment, but the… |
 | 2026-04-06 | [R#096 躺](https://blog.sakanano.moe/journals/random_096) | 2026.3.31 ~ 2026.4.6 |
