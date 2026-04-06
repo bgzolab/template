@@ -21,11 +21,13 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-06 | [WireGuard 隧道+ iptables转发](https://www.quji.org/archives/8749) | 最近墙又高了一些，对于在国内的转发机器，特别明显，基本上转发机场都死翘翘了，反正都逃不过长城的嗅探，我把我的搭 […] |
 | 2026-04-06 | [AI 还没重构组织，焦虑先重构了管理](https://www.edony.ink/ai-huan-mei-zhong-gou-zu-zhi-jiao-lu-xian-zhong-gou-liao-guan-li/) | 文章讨论了作者正在经历的AI热潮下‘焦虑型管理’的蔓延：组织因FOMO陷入隧道视觉，用高频同步、压缩周期等动作填补判断缺失，忽视问题定义、边界划定与风险管控。真正的提速应聚焦问题收敛能力，而非伪执行密度。 |
 | 2026-04-06 | [爱没有标准，但是不爱有](https://mobius.blog/22377.html) | 本着越是文艺的标题，聊的越是不文艺的主题。先提前公示一下，今天的内容可能会伤害到恋爱脑，或抱团生存的人，或只要 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-06 | [Memos #2026-04-05](https://www.taober.blog/memos) | 14:32 别了，窝趣。 |
 | 2026-04-05 | [从头开始手写一个Qwen的Naive CUDA Kernel推理引擎(三)](https://eduardoqian.com/archives/cong-tou-kai-shi-shou-xie-yi-ge-qwende-naive-cuda-kerneltui-li-yin-qing-san) | 为了加快文档编写速度，我们加快描述。 首先是RMSNorm的实现。我们这里的实现是遍历Embeddingbatch中的每个Embedding的Token，对其做RMSNorm的操作： embeddingbatch RMSNorm(const embeddingbatch &tokenembe |
 | 2026-04-05 | [稻草人周刊 Vol.75](https://www.geedea.pro/weekly/75/) | 众所周知，我时不时就会调整一下周刊的格式，所以…… Voilà，我把音乐推荐移动到了单独的栏目，现在周刊的开头都是我的碎碎念了。 止语 最近听了不少摇滚专辑，在考虑要不要像 Taxodium 那样开设一个专辑推荐系列，还能做一个专辑墙页面。不过总觉得周刊要是少了用音乐开场的传统，似乎就差点意思。 G… |
+| 2026-04-05 | [旅行日记·青岛](https://moreality.net/posts/59568/) | 再一次来到北方的海滨城市 |
 | 2026-04-05 | [论日本政治问题的根源](https://pathos.page/blog/problem-of-japan/) | 在这篇文章中，我打算谈一些我对日本政治问题的根源的零散想法，不求全面，亦不求准确，但求洞见。我将论证，日本政治问题的根源，就是以天皇为纽带的神道政治，而使日本正常化、去军事化（去军国主义）的唯一途径，就是废除天皇制，摒弃神道政治。 |
 | 2026-04-05 | [清明流水账 0405](https://blog.solazy.me/20260405/) | 清明假期第二天 |
 | 2026-04-05 | [垃圾](https://www.geedea.pro/fiction/garbage/) | 今天早上在餐桌边喝水时，门被敲响了。我总是避免和陌生人打交道，所以外卖和快递都会等赶时间的送货员匆匆放在门口，来电告知送达之后，才打开门拿取。当然，电话我也不接，大部分时候都没有什么问题。 可今天的门响个不停，而且敲门的声音非常粗暴，像是要把门撞开一样。 桌上的水杯也开始摇晃，看来这次社交是躲不掉了… |
