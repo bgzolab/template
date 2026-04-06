@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-06 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.3 of the project |
 | 2026-04-06 | [AI Hasn’t Rebuilt the Organization Yet. Anxiety Rebuilt Management First](https://www.edony.ink/en/ai-hasnt-rebuilt-the-organization-yet-anxiety-rebuilt-management-first/) | AI may not have rebuilt organizations yet, but it has already amplified their instincts. In many teams, what speeds up first is not judgment, but the… |
 | 2026-04-06 | [R#096 躺](https://blog.sakanano.moe/journals/random_096) | 2026.3.31 ~ 2026.4.6 |
 | 2026-04-06 | [观后：《忘梦洞》](https://z.arlmy.me/posts/Review/Review_CaveOfForgottenDreams/) | 「the myth of time.」 |
