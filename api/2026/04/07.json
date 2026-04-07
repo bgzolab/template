@@ -36,6 +36,12 @@
     "description": "过去几年中我一直使用 miniflux 配合一些第三方 web ui 和 RSS 阅读工具作为自己的 RSS 订阅方案，现在我切换到了 tinyfeed。 最近在浏览 Reddit selfhost 频道时，看到有人推荐 tinyfeed - 一个非常简单的将 feeds 内容聚合到一起并生成单个 HTML 文件的工具。 之前使用 miniflux 的时候我就在想，我其实只需要它的 feed 聚合能力。 搜索？我从来没有在我的 feed 流中搜索过内容。 收藏？我会用网页收藏工具（linkding）来收藏我觉得有价值的网页。 通知？对于我真的非常希望收到高优先级通知的 feed，我会把它加入 n8n 的 feed 工作流，不仅可以得到最及时的通知，还能享受完整的自动化能力。 我也没有需要处理 feed 内容的需求，我更喜欢查看原始的网页内容。 那么基于以上背景，tinyfeed 的功能就非常契合我的需求：将我的 feeds 订阅聚合到一起，按照更新时间排序，展示最新的那些内容，通过链接快速打开原始网页来阅读。 tinyfeed 的使用很简单，给他提供一个包含 feeds 列表的 txt 文件，指定输出目标，然后它就会生成一个 HTML 文件，你可以按照自己喜欢的方式托管。 tinyfeed - -input feeds.txt - -output index.html tinyfeed 目前还不支持使用 opml 作为数据来源，但是将 opml 转换成单纯的列表文本文件也很简单。 切换到这种简单的聚合入口模式之后，第三方 web ui 和 RSS 阅读工具也不再有意义，毕竟对于一个 HTML 文件，浏览器就是最好的访问工具，点击链接直接访问原始网页来阅读。 我订阅的绝大多数 feed 都提供了很好的网页阅读体验，远胜于 RSS 工具自带的阅读界面。毕竟他们都针对自己的内容做了针对性设计、优化。 你可以在我的 网络订阅 页面体验一下，到目前为止，我很享受这种简单的内容聚合模式。 预览"
   },
   {
+    "title": "记时过夏末2026巡演成都站",
+    "url": "https://z.arlmy.me/posts/Review/Review_SummerFadesAway_2026/",
+    "date": "2026-04-07T01:22:14Z",
+    "description": "「幽与痴。」"
+  },
+  {
     "title": "Rembg 图片去背景工具 懒人整合包 优化可视化界面和添加模型 cpu可用 gpu可用",
     "url": "https://dsx2016.com/rembg-image-background-removal-tool/",
     "date": "2026-04-06T21:57:09Z",
