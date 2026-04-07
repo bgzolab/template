@@ -1,0 +1,90 @@
+# References via: https://github.com/github/gitignore
+# Visual Studio Code
+# .vscode/
+.history/
+# debug
+__debug_bin*
+
+
+# OS generated files
+# Windows
+ehthumbs.db
+Desktop.ini
+# MacOS
+.DS_Store
+
+
+# Jetbrains IDEs
+.idea/
+**/*.iml
+
+
+# Node.js
+node_modules/
+# Build output
+dist/
+build/
+
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.whl
+.Python
+# Virtual environments
+venv/
+.venv/
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.pytest_cache/
+.ruff_cache/
+
+
+# Logs
+*.log
+logs/
+
+
+# C++
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+
+# Rust
+target/
+Cargo.lock
+
+
+# Go
+vendor/
+Gopkg.lock
+
+
+# Ruby
+*.gem
+*.rbc
+*.rvmrc
+*.ruby-version
+*.ruby-gemset
+
+
+# Copilot
+.github/.bak/**/*.md
