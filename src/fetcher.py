@@ -55,14 +55,14 @@ def _entry_to_article(entry: feedparser.FeedParserDict) -> Article:
     url = entry.get("link", "").strip()
     date = _parse_date(entry).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # description 优先取 summary，其次取 content[0].value；清理富文本
+    # description 优先取 summary，其次取 content[0].value；清理富文本，限制 500 字符
     raw = ""
     if entry.get("summary"):
         raw = entry.summary.strip()
     elif entry.get("content"):
         raw = entry.content[0].get("value", "").strip()
 
-    return {"title": title, "url": url, "date": date, "description": clean_description(raw)}
+    return {"title": title, "url": url, "date": date, "description": clean_description(raw)[:500]}
 
 
 def fetch_feed(url: str, client: httpx.Client) -> list[Article]:
@@ -91,7 +91,7 @@ def fetch_feed(url: str, client: httpx.Client) -> list[Article]:
         return []
 
     if parsed.bozo and not parsed.entries:
-        logger.warning("feed 解析异常（bozo），跳过 %s", url)
+        logger.warning("feed 解析异常，跳过 %s", url)
         return []
 
     return [_entry_to_article(e) for e in parsed.entries]
