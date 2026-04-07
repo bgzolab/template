@@ -26,6 +26,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-07 | [当“谁弱谁有理”遭遇“程序正义”](https://mobius.blog/22414.html) | 聊一些身处“坏世界”的游戏规则。所谓的程序正义，用人话解释的话，我能找到最贴切的词就是“轴”。我就是一个很强调 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-07 | [千八踏春](https://lililib.github.io/%E5%8D%83%E5%85%AB%E8%B8%8F%E6%98%A5/) | 清明三天，千八常规路线。龙泉出发，经仁坑、凤阳山、黄茅尖，翻越大小天堂、烧香岩，最后下撤百山祖景区。一路春花烂漫。 |
 | 2026-04-07 | [使用 tinyfeed 来做 RSS 内容聚合](https://guchengf.me/blog/use-tinyfeed-to-aggregate-my-feeds/) | 过去几年中我一直使用 miniflux 配合一些第三方 web ui 和 RSS 阅读工具作为自己的 RSS 订阅方案，现在我切换到了 tinyfeed。 最近在浏览 Reddit selfhost 频道时，看到有人推荐 tinyfeed - 一个非常简单的将 feeds 内容聚合到一起并生成单个… |
+| 2026-04-07 | [记时过夏末2026巡演成都站](https://z.arlmy.me/posts/Review/Review_SummerFadesAway_2026/) | 「幽与痴。」 |
 | 2026-04-06 | [Rembg 图片去背景工具 懒人整合包 优化可视化界面和添加模型 cpu可用 gpu可用](https://dsx2016.com/rembg-image-background-removal-tool/) | 前言 这个Rembg去除背景懒人包是我自己制作的第一个懒人包 当时为了制作youtube带有真人头像的封面，需... Rembg 图片去背景工具 懒人整合包 优化可视化界面和添加模型 cpu可用 gpu可用 最先出现在 大师兄2016 。 |
 | 2026-04-06 | [谷歌翻译「同声传译」功能上线，任意耳机都能用！秒翻 70 种语言](https://www.iplaysoft.com/p/google-live-translate) | 心底里一直害怕出国旅游语言不通，点个餐全靠手指乱指、跨国开会听不懂只能傻坐着点头、和说外语的亲戚聚餐只能尬笑；说真的，这种语言不通的窘迫感，很多人都有着这样的无奈。 而且以前各种翻译 App，大部分还是要你低头打字、举着手机屏幕给别人看，又慢又蠢……说实话真的不好用。但最…… 「 前往查看原文...… |
 | 2026-04-06 | [清明流水账 0406](https://blog.solazy.me/20260406/) | 清明假期最后一天！ |
