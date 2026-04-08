@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-08 | [Warzone 2100 updated](https://macsourceports.com/game/warzone2100) | The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project |
+| 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
 | 2026-04-08 | [Memos #2026-04-07](https://www.taober.blog/memos) | 18:19 新公司头像 & 一点湘菜 |
 | 2026-04-07 | [paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整](https://dsx2016.com/paddleocr-pp-structurev3-pdf%e8%bd%acmd/) | 前言 本文依旧是懒人包的优化更新 之前最大的问题就是使用fastapi这种偏向编程交互的操作方式 适合api调... paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整 最先出现在 大师兄2016 。 |
 | 2026-04-07 | [我的2025年](https://liudon.com/posts/review-2025/) | 2025年，会是我人生的一个重要节点。 工作 这一年，处于一种持续性、高强度的加班状态，晚上9点算是早下班了。 24年底，接手了一个历史模块，对于一直在做运营开发的我来说，算是一个不小的挑战。 |
