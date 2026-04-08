@@ -21,7 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
-| 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-08 | [Warzone 2100 updated](https://macsourceports.com/game/warzone2100) | The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project |
 | 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
 | 2026-04-08 | [Memos #2026-04-07](https://www.taober.blog/memos) | 18:19 新公司头像 & 一点湘菜 |
@@ -29,7 +29,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-07 | [我的2025年](https://liudon.com/posts/review-2025/) | 2025年，会是我人生的一个重要节点。 工作 这一年，处于一种持续性、高强度的加班状态，晚上9点算是早下班了。 24年底，接手了一个历史模块，对于一直在做运营开发的我来说，算是一个不小的挑战。 |
 | 2026-04-07 | [简评《哀鸿：城破十日记》](https://mok.moe/p/9g66) | 通关了，冷静了半个小时回了回味儿，少见地决定写个评测说说自己的感想： ✅ 剧情两条线穿插、时长差不多是《饿殍》两倍，CG 也很多，量大管饱。角色配音水平不错（有一人除外） ❌ 虽然量大，但有充数的嫌疑。其中两个普通结局完全是复制粘贴；CG 虽多，但相比《饿殍》却缺少了一些令人印象深刻的名场景，几年过… |
 | 2026-04-07 | [血压忽高事件](https://1900.live/xie-ya-hu-gao-shi-jian/) | Photo by Online Marketing / Unsplash 前些日子出去办了个事，凑巧量了一下血压。 不量不要紧，一量才发现自己高压158,低压98，我说那天怎么脑袋涨涨的，回公司后不放心，又用公司的电子血压计重新量了一下，特么还是这个数值，想着是不是当天状态不好，就想着休息一晚上第二… |
-| 2026-04-07 | [当“谁弱谁有理”遭遇“程序正义”](https://mobius.blog/22414.html) | 聊一些身处“坏世界”的游戏规则。所谓的程序正义，用人话解释的话，我能找到最贴切的词就是“轴”。我就是一个很强调 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-07 | [当“谁弱谁有理”遭遇“程序正义”](https://mobius.blog/22414.html) | 聊一些身处“坏世界”的游戏规则。所谓的程序正义，用人话解释的话，我能找到最贴切的词就是“轴”。我就是一个很强调 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-07 | [千八踏春](https://lililib.github.io/%E5%8D%83%E5%85%AB%E8%B8%8F%E6%98%A5/) | 清明三天，千八常规路线。龙泉出发，经仁坑、凤阳山、黄茅尖，翻越大小天堂、烧香岩，最后下撤百山祖景区。一路春花烂漫。 |
 | 2026-04-07 | [使用 tinyfeed 来做 RSS 内容聚合](https://guchengf.me/blog/use-tinyfeed-to-aggregate-my-feeds/) | 过去几年中我一直使用 miniflux 配合一些第三方 web ui 和 RSS 阅读工具作为自己的 RSS 订阅方案，现在我切换到了 tinyfeed。 最近在浏览 Reddit selfhost 频道时，看到有人推荐 tinyfeed - 一个非常简单的将 feeds 内容聚合到一起并生成单个… |
 | 2026-04-07 | [记时过夏末2026巡演成都站](https://z.arlmy.me/posts/Review/Review_SummerFadesAway_2026/) | 「幽与痴。」 |
@@ -45,7 +45,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-06 | [Toots 413 2026 Mar.29 - Apr.4](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260404/) | 「“碧梧桐映纱窗晚，花谢莺声懒。”」 |
 | 2026-04-06 | [WireGuard 隧道+ Realm 动态转发+WSTunnel伪装](https://www.quji.org/archives/8749) | 最近墙又高了一些，对于在国内的转发机器，特别明显，基本上转发机场都死翘翘了，反正都逃不过长城的嗅探，我把我的搭 […] |
 | 2026-04-06 | [AI 还没重构组织，焦虑先重构了管理](https://www.edony.ink/ai-huan-mei-zhong-gou-zu-zhi-jiao-lu-xian-zhong-gou-liao-guan-li/) | 文章讨论了作者正在经历的AI热潮下‘焦虑型管理’的蔓延：组织因FOMO陷入隧道视觉，用高频同步、压缩周期等动作填补判断缺失，忽视问题定义、边界划定与风险管控。真正的提速应聚焦问题收敛能力，而非伪执行密度。 |
-| 2026-04-06 | [爱没有标准，但是不爱有](https://mobius.blog/22377.html) | 本着越是文艺的标题，聊的越是不文艺的主题。先提前公示一下，今天的内容可能会伤害到恋爱脑，或抱团生存的人，或只要 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-06 | [爱没有标准，但是不爱有](https://mobius.blog/22377.html) | 本着越是文艺的标题，聊的越是不文艺的主题。先提前公示一下，今天的内容可能会伤害到恋爱脑，或抱团生存的人，或只要 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-06 | [春风解客愁](https://jiaoyuan.org/posts/2026-04-06-monthly-202604/) | 本篇是对 2026 年 3 月至 4 月的记录与思考。 撑着油纸伞，独自 彷徨在悠长、悠长 又寂寥的雨巷， 我希望飘过， 一个丁香一样的， 结着愁怨的姑娘。 彭州站的夜晚，周围一片漆黑，只有温室里的暖光灯，在给杨树补充光照的同时也给暗夜里的精灵带来一丝明亮。最近总是在出野外，去彭州、去峨眉山，虽然路… |
 | 2026-04-05 | [从头开始手写一个Qwen的Naive CUDA Kernel推理引擎(三)](https://eduardoqian.com/archives/cong-tou-kai-shi-shou-xie-yi-ge-qwende-naive-cuda-kerneltui-li-yin-qing-san) | 为了加快文档编写速度，我们加快描述。 首先是RMSNorm的实现。我们这里的实现是遍历Embeddingbatch中的每个Embedding的Token，对其做RMSNorm的操作： embeddingbatch RMSNorm(const embeddingbatch &tokenembe |
 | 2026-04-05 | [稻草人周刊 Vol.75](https://www.geedea.pro/weekly/75/) | 众所周知，我时不时就会调整一下周刊的格式，所以…… Voilà，我把音乐推荐移动到了单独的栏目，现在周刊的开头都是我的碎碎念了。 止语 最近听了不少摇滚专辑，在考虑要不要像 Taxodium 那样开设一个专辑推荐系列，还能做一个专辑墙页面。不过总觉得周刊要是少了用音乐开场的传统，似乎就差点意思。 G… |
