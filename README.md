@@ -26,6 +26,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
 | 2026-04-08 | [Memos #2026-04-07](https://www.taober.blog/memos) | 18:19 新公司头像 & 一点湘菜 |
 | 2026-04-07 | [paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整](https://dsx2016.com/paddleocr-pp-structurev3-pdf%e8%bd%acmd/) | 前言 本文依旧是懒人包的优化更新 之前最大的问题就是使用fastapi这种偏向编程交互的操作方式 适合api调... paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整 最先出现在 大师兄2016 。 |
+| 2026-04-07 | [两万分之一的坚定](https://blog.solazy.me/20260407/) | 今天聊一个非常有趣的话题 |
 | 2026-04-07 | [我的2025年](https://liudon.com/posts/review-2025/) | 2025年，会是我人生的一个重要节点。 工作 这一年，处于一种持续性、高强度的加班状态，晚上9点算是早下班了。 24年底，接手了一个历史模块，对于一直在做运营开发的我来说，算是一个不小的挑战。 |
 | 2026-04-07 | [简评《哀鸿：城破十日记》](https://mok.moe/p/9g66) | 通关了，冷静了半个小时回了回味儿，少见地决定写个评测说说自己的感想： ✅ 剧情两条线穿插、时长差不多是《饿殍》两倍，CG 也很多，量大管饱。角色配音水平不错（有一人除外） ❌ 虽然量大，但有充数的嫌疑。其中两个普通结局完全是复制粘贴；CG 虽多，但相比《饿殍》却缺少了一些令人印象深刻的名场景，几年过… |
 | 2026-04-07 | [血压忽高事件](https://1900.live/xie-ya-hu-gao-shi-jian/) | Photo by Online Marketing / Unsplash 前些日子出去办了个事，凑巧量了一下血压。 不量不要紧，一量才发现自己高压158,低压98，我说那天怎么脑袋涨涨的，回公司后不放心，又用公司的电子血压计重新量了一下，特么还是这个数值，想着是不是当天状态不好，就想着休息一晚上第二… |
