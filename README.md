@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-08 | [春假游洛阳](https://krya.com/archives/1337.html) | 小孩放6天春假，但我没有抢到动车票，于是自驾前往，周五从学校门口接到小孩一路向北。我们经过了汉中、西安、洛阳；之后想既然河南都来了，何不顺便许昌看看胖东来；从许昌回成都又经过襄阳、安康；全程大约2500km. 自驾游只比动车旅游多一点好处，就是自由，任何地... |
+| 2026-04-08 | [CC Live - 围观别人用 Claude Code 写代码，实时直播 AI 编程过程](https://gptkit.eth.limo/65C7EE12-8E4B-412A-AE2C-1D6EDF066FBB/) | 想看别人是怎么用 Claude Code 写代码的？或者想开一个 AI 编程直播教学？ CC Live 就是干这个的。 它是什么 一个单文件 Node.js 服务器，零依赖。启动后把你正在运行的 Claude Code 会话实时推送到浏览器，别人打开链接就能围观你写代码的全过程。 核心功能 实时围观… |
 | 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-08 | [Warzone 2100 updated](https://macsourceports.com/game/warzone2100) | The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project |
 | 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
