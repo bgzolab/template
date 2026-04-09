@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |
+| 2026-04-09 | [Quake updated](https://macsourceports.com/game/quake) | The build of vkQuake for Quake has been updated to version 1.34.1 of the project |
+| 2026-04-09 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.20 of the project |
 | 2026-04-09 | [Docker版CLIProxyAPI部署](https://blog.196000.xyz/2026/2026-04-09-develop-cliproxyapi.html) | Docker 版配置文件 |
 | 2026-04-09 | [paddleocr PP-StructureV3 pdf转md 懒人整合包 gpu可用](https://dsx2016.com/paddleocr-pp-structurev3-pdf-to-markdown-conversion-gpu-supported/) | 前言 上一期内容记录了paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 ... paddleocr PP-StructureV3 pdf转md 懒人整合包 gpu可用 最先出现在 大师兄2016 。 |
 | 2026-04-09 | [CSS Naked Day 2026](https://taxodium.ink/css-naked-day-2026.html) | CSS Naked Day 2026 4 月 9 日是 CSS Naked Day ，庆祝这一天，可以将网站的 CSS 全部移除，「赤裸」地展示网站的内容。 CSS 赤裸日背后的理念是推广 Web 标准。简单明了。这包括正确使用 HTML、语义化标记、良好的层级结构，当然，还有那个经典的文字游戏。用… |

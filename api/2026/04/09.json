@@ -6,6 +6,24 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "学习周刊-总第258期-2026年第15周",
+    "url": "https://wiki.eryajf.net/pages/323cfa/",
+    "date": "2026-04-09T21:50:19Z",
+    "description": "如要阅读全文，点击标题跳转。 学习周刊-总第258期 | action-tmate | unihub | happy | hapi | LiteMonitor | EasyAccounts | nginxpulse | zjump | harlequin | AgentVerse | mail-studio | radar | DocFlow | screenize"
+  },
+  {
+    "title": "Quake updated",
+    "url": "https://macsourceports.com/game/quake",
+    "date": "2026-04-09T13:31:39Z",
+    "description": "The build of vkQuake for Quake has been updated to version 1.34.1 of the project"
+  },
+  {
+    "title": "Plants vs. Zombies updated",
+    "url": "https://macsourceports.com/game/pvz",
+    "date": "2026-04-09T13:28:49Z",
+    "description": "The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.20 of the project"
+  },
+  {
     "title": "Docker版CLIProxyAPI部署",
     "url": "https://blog.196000.xyz/2026/2026-04-09-develop-cliproxyapi.html",
     "date": "2026-04-09T13:00:00Z",
@@ -21,7 +39,7 @@
     "title": "CSS Naked Day 2026",
     "url": "https://taxodium.ink/css-naked-day-2026.html",
     "date": "2026-04-09T10:07:00Z",
-    "description": "CSS Naked Day 2026 4 月 9 日是 CSS Naked Day ，庆祝这一天，可以将网站的 CSS 全部移除，「赤裸」地展示网站的内容。 CSS 赤裸日背后的理念是推广 Web 标准。简单明了。这包括正确使用 HTML、语义化标记、良好的层级结构，当然，还有那个经典的文字游戏。用 2006 年的话来说，是时候展示你 的真面目了。 (it’s time to show off your for what it really is.) Source 为了覆盖全球 4 月 9 日这一天， CSS Naked Day 从 10:00, April 8 UTC+00:00 开始，到 12:00, April 10 UTC+00:00 结束，换算到北京时间（UTC+08:00）是 18:00, April 8 UTC+00:00 到 20:00, April 10 UTC+00:00 。 我的博客会在这段时间内剥离大部分的 CSS，不过有的样式是內联的，有的页面是独立的（例如搜索页面、订阅流的 XML 页面），我懒得一点点移除了，所以虽然是「赤裸」的，但也不是「全裸」。一些 J"
+    "description": "CSS Naked Day 2026 4 月 9 日是 CSS Naked Day ，庆祝这一天，可以将网站的 CSS 全部移除，「赤裸」地展示网站的内容。 CSS 赤裸日背后的理念是推广 Web 标准。简单明了。这包括正确使用 HTML、语义化标记、良好的层级结构，当然，还有那个经典的文字游戏。用 2006 年的话来说，是时候展示你 的真面目了。 (it’s time to show off your for what it really is.) Source 为了覆盖全球 4 月 9 日这一天， CSS Naked Day 从 10:00, April 8 UTC+00:00 开始，到 12:00, April 10 UTC+00:00 结束，换算到北京时间是 18:00, April 8 UTC+08:00 到 20:00, April 10 UTC+08:00 。 我的博客会在这段时间内剥离大部分的 CSS，不过有的样式是內联的，有的页面是独立的（例如搜索页面、订阅流的 XML 页面），我懒得一点点移除了，所以虽然是「赤裸」的，但也不是「全裸」。一些 JS 增强也依赖 CSS"
   },
   {
     "title": "emacs-配置windows下的sis",
