@@ -22,6 +22,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |
+| 2026-04-09 | [6 Days and 5 Nights of Spring Leisure in Jinghong Xishuangbanna](https://victor42.eth.limo/post-en/trip-to-xishuangbanna/) | Visiting Xishuangbanna in late March was a brilliant decision; our family of three returned completely fulfilled. You might not believe it, but I actu… |
+| 2026-04-09 | [西双版纳景洪春季休闲6天5夜](https://victor42.eth.limo/post/trip-to-xishuangbanna/) | 3月底去西双版纳是非常正确的选择，一家三口尽兴而归。 说出来你可能不信，我甚至专门统计分析过杭州到西双版纳的历史机票价格数据。没什么新结论，一年当中有4个价格高峰：春节、泼水节、暑假、国庆，在春节到泼水节之间是一个明显的低谷，甚至可能是全年最低的。这时候请假去玩，非常划算。 我一直觉得云南省的地图像… |
+| 2026-04-09 | [FlowMouse 心流鼠标手势 - 比 CrxMouse 更流畅好用的开源浏览器插件 (超级拖拽)](https://www.iplaysoft.com/flowmouse.html) | 如果你习惯使用「 鼠标手势 」功能，估计是这辈子也很难戒掉了。因为只需 右键 随手一划，就能迅速流畅执行各种操作，如浏览器的后退、刷新、关闭标签页，全都单手搞定，超省心。 尤其对长期和电脑 办公 的人来说，日积月累下来能节省大量精力消耗。而最近 Chrome 上老牌的鼠标手势插件 CrxMouse… |
 | 2026-04-09 | [Quake updated](https://macsourceports.com/game/quake) | The build of vkQuake for Quake has been updated to version 1.34.1 of the project |
 | 2026-04-09 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.20 of the project |
 | 2026-04-09 | [Docker版CLIProxyAPI部署](https://blog.196000.xyz/2026/2026-04-09-develop-cliproxyapi.html) | Docker 版配置文件 |
