@@ -21,6 +21,11 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-09 | [emacs-配置windows下的sis](https://blog.prayhand13013.top/20260409T140325--emacs-配置windows下的sis__blog.html) |  |
+| 2026-04-09 | [Star Wars Jedi Knight: Jedi Academy updated](https://macsourceports.com/game/swjkja) | The build of OpenJK (Multiplayer) for Star Wars Jedi Knight: Jedi Academy has been updated to the latest code of the project |
+| 2026-04-09 | [Star Wars Jedi Knight II: Jedi Outcast updated](https://macsourceports.com/game/swjk2) | The build of OpenJO (OpenJK Project, Single Player) for Star Wars Jedi Knight II: Jedi Outcast has been updated to the latest code of the project |
+| 2026-04-09 | [Jazz Jackrabbit updated](https://macsourceports.com/game/jazzjackrabbit) | The build of OpenJazz for Jazz Jackrabbit has been updated to version 20260301 of the project |
+| 2026-04-09 | [Chris Sawyer's Locomotion updated](https://macsourceports.com/game/locomotion) | The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.03.1 of the project |
 | 2026-04-09 | [介绍一下我自己做的图床 ImgAnt](https://blog.forecho.com/introducing-imgant-image-hosting.html) | 引言 先上地址： 网站： imgant.com Mac 客户端下载： imgant.com/download ImgAnt 是我自己做的一个图床，已经断断续续折腾了一段时间，现在已经可以正常给我自己写博客和做笔记用了，顺便也开放给其他人用。这篇文章就把我做这个项目的初衷、目前支持的功能、以及一些我自… |
 | 2026-04-08 | [Pix主题16：修复消息盒子默认显示“未读消息”](https://www.evan.xin/4928/) | 如上图：默认情况下总显示有未读消息（我是6条，还有别的数字） 现象 正常访问首页时，右上角消息角标默认显示 6 […] |
 | 2026-04-08 | [吃「新荣记」有感](https://blog.solazy.me/20260408/) | 吃个新荣记，发现草台班子真的是无处不在呢 |
