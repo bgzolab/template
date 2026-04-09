@@ -1,0 +1,110 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "Pix主题16：修复消息盒子默认显示“未读消息”",
+    "url": "https://www.evan.xin/4928/",
+    "date": "2026-04-08T18:02:08Z",
+    "description": "如上图：默认情况下总显示有未读消息（我是6条，还有别的数字） 现象 正常访问首页时，右上角消息角标默认显示 6 […]"
+  },
+  {
+    "title": "吃「新荣记」有感",
+    "url": "https://blog.solazy.me/20260408/",
+    "date": "2026-04-08T15:00:00Z",
+    "description": "吃个新荣记，发现草台班子真的是无处不在呢"
+  },
+  {
+    "title": "春假游洛阳",
+    "url": "https://krya.com/archives/1337.html",
+    "date": "2026-04-08T09:12:00Z",
+    "description": "小孩放6天春假，但我没有抢到动车票，于是自驾前往，周五从学校门口接到小孩一路向北。我们经过了汉中、西安、洛阳；之后想既然河南都来了，何不顺便许昌看看胖东来；从许昌回成都又经过襄阳、安康；全程大约2500km. 自驾游只比动车旅游多一点好处，就是自由，任何地..."
+  },
+  {
+    "title": "CC Live - 围观别人用 Claude Code 写代码，实时直播 AI 编程过程",
+    "url": "https://gptkit.eth.limo/65C7EE12-8E4B-412A-AE2C-1D6EDF066FBB/",
+    "date": "2026-04-08T08:47:16Z",
+    "description": "想看别人是怎么用 Claude Code 写代码的？或者想开一个 AI 编程直播教学？ CC Live 就是干这个的。 它是什么 一个单文件 Node.js 服务器，零依赖。启动后把你正在运行的 Claude Code 会话实时推送到浏览器，别人打开链接就能围观你写代码的全过程。 核心功能 实时围观 — 基于 SSE 流式推送，消息、思考过程、工具调用实时可见，跟现场看一样的体验 自动发现项目 — 从 ~/.claude/projects/ 读取所有 Claude Code 项目，侧边栏一目了然 一键分享 — 通过 ngrok / Cloudflare Tunnel 生成带 token 的分享链接，发给任何人围观，随时可撤回 敏感数据脱敏 — 内置 API Key、Token、密码等自动过滤，放心分享 暗色主题 — 适合长时间观看，移动端也能用 快速开始 node server.js open http://localhost:3456/ 然后点分享按钮，把链接发出去就行了。 适用场景 编程直播教学 — 老师用 Claude Code 写代码，学生实时围观思考链路和工具调用过程 团队围"
+  },
+  {
+    "title": "西西弗斯会想操他推的巨石吗？",
+    "url": "https://mobius.blog/22502.html",
+    "date": "2026-04-08T03:48:49Z",
+    "description": "今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "Warzone 2100 updated",
+    "url": "https://macsourceports.com/game/warzone2100",
+    "date": "2026-04-08T02:29:13Z",
+    "description": "The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project"
+  },
+  {
+    "title": "Transport Tycoon Deluxe updated",
+    "url": "https://macsourceports.com/game/ttd",
+    "date": "2026-04-08T02:27:30Z",
+    "description": "The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project"
+  },
+  {
+    "title": "Memos #2026-04-07",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-04-08T00:00:00Z",
+    "description": "18:19 新公司头像 & 一点湘菜"
+  },
+  {
+    "title": "paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整",
+    "url": "https://dsx2016.com/paddleocr-pp-structurev3-pdf%e8%bd%acmd/",
+    "date": "2026-04-07T15:30:36Z",
+    "description": "前言 本文依旧是懒人包的优化更新 之前最大的问题就是使用fastapi这种偏向编程交互的操作方式 适合api调... paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整 最先出现在 大师兄2016 。"
+  },
+  {
+    "title": "两万分之一的坚定",
+    "url": "https://blog.solazy.me/20260407/",
+    "date": "2026-04-07T15:00:00Z",
+    "description": "今天聊一个非常有趣的话题"
+  },
+  {
+    "title": "我的2025年",
+    "url": "https://liudon.com/posts/review-2025/",
+    "date": "2026-04-07T13:22:38Z",
+    "description": "2025年，会是我人生的一个重要节点。 工作 这一年，处于一种持续性、高强度的加班状态，晚上9点算是早下班了。 24年底，接手了一个历史模块，对于一直在做运营开发的我来说，算是一个不小的挑战。"
+  },
+  {
+    "title": "简评《哀鸿：城破十日记》",
+    "url": "https://mok.moe/p/9g66",
+    "date": "2026-04-07T06:17:26Z",
+    "description": "通关了，冷静了半个小时回了回味儿，少见地决定写个评测说说自己的感想： ✅ 剧情两条线穿插、时长差不多是《饿殍》两倍，CG 也很多，量大管饱。角色配音水平不错（有一人除外） ❌ 虽然量大，但有充数的嫌疑。其中两个普通结局完全是复制粘贴；CG 虽多，但相比《饿殍》却缺少了一些令人印象深刻的名场景，几年过去了画师似乎没多少进步，前作中容易画崩的细节在本作中依然画崩。甚至有些角色画风跟其他角色有着明显的差别 ✅ 剧情跌宕起伏、勾人心弦、让人一玩就停不下来 ❌ 缺少令人印象深刻的名场面，CG 拉了是主要原因。一些重"
+  },
+  {
+    "title": "血压忽高事件",
+    "url": "https://1900.live/xie-ya-hu-gao-shi-jian/",
+    "date": "2026-04-07T03:36:24Z",
+    "description": "Photo by Online Marketing / Unsplash 前些日子出去办了个事，凑巧量了一下血压。 不量不要紧，一量才发现自己高压158,低压98，我说那天怎么脑袋涨涨的，回公司后不放心，又用公司的电子血压计重新量了一下，特么还是这个数值，想着是不是当天状态不好，就想着休息一晚上第二天早上再量一次。 期间发了个朋友圈，博客群的群友王君尧老师给我发来问候（感谢关心），问了我尿液正常不，说肾病可能会引起高血压，所以晚上上厕所观察了一下发现泡沫是挺密的，还不好消散，心理有点不放心了。 第二天到单位怀着忐忑的心情又量了一次。 得，还是140多的90多。 转身就开车往医院去，我才36啊，年纪轻轻的哪能得这病啊。 直接去了泌尿科找老师开了个检查，告知了医生大体情况，医生起身到我背后敲了敲我的腰部，问我疼不疼，答不疼。估计是检查是不是肾的问题。 随后查了个血和尿，血压让我自己在外面的机器量一下。 因为去的比较晚，检查结果得11点多才能出来，所以抽完血、收集完尿液样本后便坐在走廊的椅子上休息了半小时，重新用走廊的血压仪器检查了，这次高压120多，低压50多，算是恢复正常范围了。 尿液、"
+  },
+  {
+    "title": "当“谁弱谁有理”遭遇“程序正义”",
+    "url": "https://mobius.blog/22414.html",
+    "date": "2026-04-07T03:29:25Z",
+    "description": "聊一些身处“坏世界”的游戏规则。所谓的程序正义，用人话解释的话，我能找到最贴切的词就是“轴”。我就是一个很强调 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "千八踏春",
+    "url": "https://lililib.github.io/%E5%8D%83%E5%85%AB%E8%B8%8F%E6%98%A5/",
+    "date": "2026-04-07T03:23:08Z",
+    "description": "清明三天，千八常规路线。龙泉出发，经仁坑、凤阳山、黄茅尖，翻越大小天堂、烧香岩，最后下撤百山祖景区。一路春花烂漫。"
+  },
+  {
+    "title": "使用 tinyfeed 来做 RSS 内容聚合",
+    "url": "https://guchengf.me/blog/use-tinyfeed-to-aggregate-my-feeds/",
+    "date": "2026-04-07T03:19:03Z",
+    "description": "过去几年中我一直使用 miniflux 配合一些第三方 web ui 和 RSS 阅读工具作为自己的 RSS 订阅方案，现在我切换到了 tinyfeed。 最近在浏览 Reddit selfhost 频道时，看到有人推荐 tinyfeed - 一个非常简单的将 feeds 内容聚合到一起并生成单个 HTML 文件的工具。 之前使用 miniflux 的时候我就在想，我其实只需要它的 feed 聚合能力。 搜索？我从来没有在我的 feed 流中搜索过内容。 收藏？我会用网页收藏工具（linkding）来收藏我觉得有价值的网页。 通知？对于我真的非常希望收到高优先级通知的 feed，我会把它加入 n8n 的 feed 工作流，不仅可以得到最及时的通知，还能享受完整的自动化能力。 我也没有需要处理 feed 内容的需求，我更喜欢查看原始的网页内容。 那么基于以上背景，tinyfeed 的功能就非常契合我的需求：将我的 feeds 订阅聚合到一起，按照更新时间排序，展示最新的那些内容，通过链接快速打开原始网页来阅读。 tinyfeed 的使用很简单，给他提供一个包含 feeds 列表的 txt"
+  },
+  {
+    "title": "记时过夏末2026巡演成都站",
+    "url": "https://z.arlmy.me/posts/Review/Review_SummerFadesAway_2026/",
+    "date": "2026-04-07T01:22:14Z",
+    "description": "「幽与痴。」"
+  }
+]
