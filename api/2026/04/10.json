@@ -6,6 +6,24 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "Tauri 应用苹果签名踩坑实录",
+    "url": "https://ssshooter.com/tauri-mac-sign-and-build/",
+    "date": "2026-04-10T08:19:37Z",
+    "description": "深度解析 Tauri macOS 应用签名与打包流程，涵盖 CSR/CER/P12 证书详解、Notarization 公证及 App Store 上架实战，助你快速解决权限配置、证书错误等构建难题。"
+  },
+  {
+    "title": "2026.4.10",
+    "url": "https://www.justzht.com/2026-4-10/",
+    "date": "2026-04-10T07:39:32Z",
+    "description": "Cayman 可能是之前修车厂拆装保险杠时的手艺问题，驻车距离传感器过了几周突然坏了，又扔回 Porsche Fremont 修；然后最近没什"
+  },
+  {
+    "title": "ZooKeeper 高可用集群部署",
+    "url": "https://199604.com/3563",
+    "date": "2026-04-10T07:33:32Z",
+    "description": "ZooKeeper 高可用集群部署 配置说明 副本数: 3（生产环境高可用） 持久化: 数据目录 10Gi + […]"
+  },
+  {
     "title": "会讲故事的VC：好莱坞传奇人物+硅谷高管，如何悄然打造出业绩强劲的低调风投WndrCo？",
     "url": "https://wenfeixiang.com/2026/04/the-storytellers-vc-wndrco/",
     "date": "2026-04-10T05:56:22Z",

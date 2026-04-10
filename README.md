@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-10 | [Tauri 应用苹果签名踩坑实录](https://ssshooter.com/tauri-mac-sign-and-build/) | 深度解析 Tauri macOS 应用签名与打包流程，涵盖 CSR/CER/P12 证书详解、Notarization 公证及 App Store 上架实战，助你快速解决权限配置、证书错误等构建难题。 |
+| 2026-04-10 | [2026.4.10](https://www.justzht.com/2026-4-10/) | Cayman 可能是之前修车厂拆装保险杠时的手艺问题，驻车距离传感器过了几周突然坏了，又扔回 Porsche Fremont 修；然后最近没什 |
+| 2026-04-10 | [ZooKeeper 高可用集群部署](https://199604.com/3563) | ZooKeeper 高可用集群部署 配置说明 副本数: 3（生产环境高可用） 持久化: 数据目录 10Gi + […] |
 | 2026-04-10 | [会讲故事的VC：好莱坞传奇人物+硅谷高管，如何悄然打造出业绩强劲的低调风投WndrCo？](https://wenfeixiang.com/2026/04/the-storytellers-vc-wndrco/) | 叙事，对于创业者和投资人一直都很重要，尤其是在早期投资阶段。在硅谷就有这么一家非常低调的VC、主打叙事逻辑，1 […] |
 | 2026-04-10 | [什么毁了 JavaScript？](https://www.geedea.pro/article/js-problem/) | JavaScript 虽然不是我的启蒙语言，但绝对是对我影响最大的编程语言之一。半年以前，我的首选语言就是它。如今如果要做正经的前端开发工作，就不可能离得开 JS 或 TS。在 TIOBE 排行榜，JS 稳居第六，只落后于人尽皆知的 Python 和 C 系语言， 还有万恶的 Java 。由于太过流… |
 | 2026-04-10 | [为什么跟巨婴讲道理一定会“输”？](https://mobius.blog/22544.html) | 闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
