@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-10 | [为什么跟巨婴讲道理一定会“输”？](https://mobius.blog/22544.html) | 闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-10 | [OpenAI推出100美元每月的Codex Pro套餐](https://blog.rustfisher.com/news/news-openai-20260410-codex-price/) | OpenAI推出了全新的每月100美元的专业版套餐。该套餐提供的Codex使用量是Plus套餐的5倍，最适合长时间、高强度的Codex使用。 |
 | 2026-04-10 | [Memos #2026-04-09](https://www.taober.blog/memos) | 09:25 现在正坐在长沙到深圳的高铁上，上一次同样的情景还是毕业那一年应届生入职，还记得很清楚那时只买到了站票，我害怕跟不上公司的技术栈，坐在车厢隔间的地上看 Redux Saga 的教程贴。 恍如隔世又近在眼前。 23:58 到深圳先是去酒店放了下行李，去吃了个豪华双份牛肉加蛋肠粉，就跟着之前联… |
 | 2026-04-09 | [注意力不是问题，逃避表达才是](https://www.linggandianbo.com/newsletter-118/) | 关于输入、语言和判断的一次重新理解｜灵感电波 #118 |
 | 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |
