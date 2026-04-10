@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-10 | [PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调](https://dsx2016.com/paddleocr-vl-1-5-pdf-to-md-conversion-ui-refinements/) | 前言 本期依旧是把fastapi的界面改为gradio界面 原来的fastapi适合api调用，现在的grad... PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调 最先出现在 大师兄2016 。 |
+| 2026-04-10 | [关于偶遇的巧合 IV](https://blog.solazy.me/20260410/) | 今天又有偶遇！ |
 | 2026-04-10 | [[壹手观点]品牌设计的“表达危机”](https://www.iyeslogo.com/the-expression-crisis-in-brand-design/) | 设计应超越直接表达，通过留白、节奏控制和具体语言重新建立与用户的情感连接 |
 | 2026-04-10 | [Tauri 应用苹果签名踩坑实录](https://ssshooter.com/tauri-mac-sign-and-build/) | 深度解析 Tauri macOS 应用签名与打包流程，涵盖 CSR/CER/P12 证书详解、Notarization 公证及 App Store 上架实战，助你快速解决权限配置、证书错误等构建难题。 |
 | 2026-04-10 | [2026.4.10](https://www.justzht.com/2026-4-10/) | Cayman 可能是之前修车厂拆装保险杠时的手艺问题，驻车距离传感器过了几周突然坏了，又扔回 Porsche Fremont 修；然后最近没什 |
