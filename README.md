@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-10 | [Memos #2026-04-09](https://www.taober.blog/memos) | 09:25 现在正坐在长沙到深圳的高铁上，上一次同样的情景还是毕业那一年应届生入职，还记得很清楚那时只买到了站票，我害怕跟不上公司的技术栈，坐在车厢隔间的地上看 Redux Saga 的教程贴。 恍如隔世又近在眼前。 23:58 到深圳先是去酒店放了下行李，去吃了个豪华双份牛肉加蛋肠粉，就跟着之前联… |
+| 2026-04-09 | [注意力不是问题，逃避表达才是](https://www.linggandianbo.com/newsletter-118/) | 关于输入、语言和判断的一次重新理解｜灵感电波 #118 |
 | 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |
 | 2026-04-09 | [6 Days and 5 Nights of Spring Leisure in Jinghong Xishuangbanna](https://victor42.eth.limo/post-en/trip-to-xishuangbanna/) | Visiting Xishuangbanna in late March was a brilliant decision; our family of three returned completely fulfilled. You might not believe it, but I actu… |
 | 2026-04-09 | [西双版纳景洪春季休闲6天5夜](https://victor42.eth.limo/post/trip-to-xishuangbanna/) | 3月底去西双版纳是非常正确的选择，一家三口尽兴而归。 说出来你可能不信，我甚至专门统计分析过杭州到西双版纳的历史机票价格数据。没什么新结论，一年当中有4个价格高峰：春节、泼水节、暑假、国庆，在春节到泼水节之间是一个明显的低谷，甚至可能是全年最低的。这时候请假去玩，非常划算。 我一直觉得云南省的地图像… |
@@ -44,7 +46,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-08 | [Warzone 2100 updated](https://macsourceports.com/game/warzone2100) | The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project |
 | 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
-| 2026-04-08 | [Memos #2026-04-07](https://www.taober.blog/memos) | 18:19 新公司头像 & 一点湘菜 |
 | 2026-04-07 | [paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整](https://dsx2016.com/paddleocr-pp-structurev3-pdf%e8%bd%acmd/) | 前言 本文依旧是懒人包的优化更新 之前最大的问题就是使用fastapi这种偏向编程交互的操作方式 适合api调... paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整 最先出现在 大师兄2016 。 |
 | 2026-04-07 | [两万分之一的坚定](https://blog.solazy.me/20260407/) | 今天聊一个非常有趣的话题 |
 | 2026-04-07 | [我的2025年](https://liudon.com/posts/review-2025/) | 2025年，会是我人生的一个重要节点。 工作 这一年，处于一种持续性、高强度的加班状态，晚上9点算是早下班了。 24年底，接手了一个历史模块，对于一直在做运营开发的我来说，算是一个不小的挑战。 |
@@ -102,20 +103,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-03 | [第一百六十万字](https://mobius.blog/2026/04/03/one-million-six-hundred-thousand-words/) | 好久没有写过这个题目，上一次还是在 2022 年记录到《第八十万字》的时候。后来因为博客被 DDoS，不得不迁 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-03 | [2026.4.2](https://www.justzht.com/2026-4-2/) | 这周干了两件蠢事。 一个是和之前的老板（现在的 skip）以及现在的老板都大张旗鼓说了我周二要请假去 DMV 更新 REALID， |
 | 2026-04-03 | [Snowboarding in Xinjiang - China Snow Trip &#124; 滑雪的尽头 竟然真的是骨科](https://cheng.st/2026/04/03/snowboarding-in-xinjiang-china-snow-trip-%E6%BB%91%E9%9B%AA%E7%9A%84%E5%B0%BD%E5%A4%B4-%E7%AB%9F%E7%84%B6%E7%9C%9F%E7%9A%84%E6%98%AF%E9%AA%A8%E7%A7%91/) | 书接 上回 。 当晚摇到本地领路人，一下子心情高涨，睡意全无，开始刷起了抖音小红书来抱佛脚——一晚上的学习让我大致领悟到了“排水渠”，“大小狼王”等“著名打卡点”。可惜只看视频既不过瘾，也一头雾水。明明昨天跟着地图指引该去的都去了，这些奇奇怪怪的名字到底是都在哪？好在入夜开始下雪，窗外的静谧慢慢透进… |
-| 2026-04-02 | [Google推出开放模型Gemma 4](https://blog.rustfisher.com/news/news-google-20260403/) | Google宣布推出Gemma 4。其专为高级推理和代理工作流打造，提供了前所未有的每参数智能化。 |
-| 2026-04-02 | [Apple 50 年，真正难的不是“不同”](https://www.linggandianbo.com/newsletter-117/) | 反叛很容易，难的是把不同想法做成别人离不开的系统｜灵感电波 #117 |
-| 2026-04-02 | [退休之后我可以做些什么](https://blog.solazy.me/20260402/) | 今天发散一下，聊聊我退休之后的几种可能性 |
-| 2026-04-02 | [读书小结十八](https://jubeny.com/2026/04/book-summaries-18/) | 即使以最微弱的光 女性作家小说里的主人公，几乎都是女性。在这本短篇集的七个故事中，毫无例外，主角也都是女性。 小说主题围绕家庭、朋友和职场关系，主角有很多共性，都是含着悲伤的女性，性格上更偏隐忍和讨好，但小说的走向是主角与自己的和解。每个故事里，女人多是受害者，而出现的父亲与丈夫都是残忍暴力的形象。 |
-| 2026-04-02 | [Quicker - 让效率起飞的 Windows “超级外挂” (快速启动 / 快捷指令 / 鼠标增强)](https://www.iplaysoft.com/quicker.html) | 在 Windows 上有很多效率神器，如 Fences 、 Listary 、 uTools 、 Groupy 、 Everything 等工具能让电脑用得更爽！而今天的 Quicker 国产桌面快捷启动器，同样是用过就再也回不去的一款。 我们平日 办公 、 学习 、上网，经常都要做很多重重复复的操… |
-| 2026-04-02 | [物权](https://blog.est.im/2026/stderr-13) | 前些年接触到 土地兼并与王朝灭亡周期律，觉得好有道理，但是后来又有人说其实这个学术上并不能实证。 今日手痒键政一下。其实土地兼并只是表面，东亚大国从古至今都没有物权，更何况人权。有人说地契就是私有制的，需要指出，地契的重点是「契」，「契」交易的不是所有权，而是赋税和徭役obligation。所以财政… |
-| 2026-04-02 | [小说创作 SKILLS 的设计](https://haoluobo.com/2026/04/novel-skills-design/) | 前情提要：《用AI写小说的尝试》 使用的 SKILLS 以及生成的小说：novel-skills 现阶段 AI […] |
-| 2026-04-02 | [最大的风险是死亡,所以人生没有风险](https://lililib.github.io/%E6%9C%80%E5%A4%A7%E7%9A%84%E9%A3%8E%E9%99%A9%E6%98%AF%E6%AD%BB%E4%BA%A1,%E6%89%80%E4%BB%A5%E4%BA%BA%E7%94%9F%E6%B2%A1%E6%9C%89%E9%A3%8E%E9%99%A9/) | 刷到一个不错的帖子，直触灵魂，令人颤栗。怕丢失了就摘抄过来。 |
-| 2026-04-02 | [美国顶级VC USV是如何用AI的？来认识他们几个Agent（干货满满）](https://wenfeixiang.com/2026/04/meet-the-usv-ai-agent-for-vc-job/) | AI Agent 越来越火热，最近我们也在和几家VC客户交流如何封装 MCP 和 SKill、接入到他们的 A […] |
-| 2026-04-02 | [获取微信公众号文章，我试了 6 种方案，最后发现最简单的那个最能打](https://www.wangwangit.com/%E8%8E%B7%E5%8F%96%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%EF%BC%8C%E6%88%91%E8%AF%95%E4%BA%86%206%20%E7%A7%8D%E6%96%B9%E6%A1%88%EF%BC%8C%E6%9C%80%E5%90%8E%E5%8F%91%E7%8E%B0%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E9%82%A3%E4%B8%AA%E6%9C%80%E8%83%BD%E6%89%93/) | 测评了 6 种微信公众号文章抓取方案，从 Selenium 到代理 IP，最终发现 UA 伪装法一条 curl 就能搞定，零成本绕过滑块验证。 |
-| 2026-04-02 | [小龙虾突然"娇气"了？3.31 版本审批避坑指南](https://www.wangwangit.com/%E5%B0%8F%E9%BE%99%E8%99%BE%E7%AA%81%E7%84%B6%E5%A8%87%E6%B0%94%E4%BA%86-%E5%AE%A1%E6%89%B9%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/) | OpenClaw 3.31 版本更新后，exec 命令审批机制大改，配置完全失效。这篇文章把踩坑过程和解决方案说清楚。 |
-| 2026-04-02 | [FireRed-Image-Edit 一键衣物提取 懒人整合包](https://dsx2016.com/firered-image-edit-one-click-clothing-extraction/) | FireRed-Image-Edit github地址：https://github.com/FireRedT... FireRed-Image-Edit 一键衣物提取 懒人整合包 最先出现在 大师兄2016 。 |
-| 2026-04-02 | [博客重构：从Hexo到Astro](https://mocusez.site/zh-CN/posts/f652) | 是时候该重构博客了 |
-| 2026-04-02 | [微软宣布在2025至2029年在新加坡投资55亿美元](https://blog.rustfisher.com/news/news-microsoft-20260402/) | 微软承诺从2025年到2029年的五年内，在新加坡投入55亿美元。这笔资金将用于扩建云服务和人工智能（AI）基础设施，以及支持新加坡的日常运营。这是微软在新加坡迄今为止最大的一笔单项投资，旨在满足当地对 AI 应用日益增长的需求。 |
 
 ## Vibe Coding
 
