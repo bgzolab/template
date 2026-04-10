@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-10 | [[壹手观点]品牌设计的“表达危机”](https://www.iyeslogo.com/the-expression-crisis-in-brand-design/) | 设计应超越直接表达，通过留白、节奏控制和具体语言重新建立与用户的情感连接 |
 | 2026-04-10 | [Tauri 应用苹果签名踩坑实录](https://ssshooter.com/tauri-mac-sign-and-build/) | 深度解析 Tauri macOS 应用签名与打包流程，涵盖 CSR/CER/P12 证书详解、Notarization 公证及 App Store 上架实战，助你快速解决权限配置、证书错误等构建难题。 |
 | 2026-04-10 | [2026.4.10](https://www.justzht.com/2026-4-10/) | Cayman 可能是之前修车厂拆装保险杠时的手艺问题，驻车距离传感器过了几周突然坏了，又扔回 Porsche Fremont 修；然后最近没什 |
 | 2026-04-10 | [ZooKeeper 高可用集群部署](https://199604.com/3563) | ZooKeeper 高可用集群部署 配置说明 副本数: 3（生产环境高可用） 持久化: 数据目录 10Gi + […] |
