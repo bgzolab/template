@@ -5,7 +5,7 @@
 [![Licence](https://img.shields.io/github/license/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/blob/template/LICENCE)
 [![Telegram](https://img.shields.io/badge/-telegram-black.svg?style=for-the-badge&logo=telegram&colorB=555)](https://t.me/imbGZo)
 
-![Playground Name Screen Shot](https://raw.githubusercontent.com/bGZo/assets/dev/2025/202508021439235.JPG)
+![Playground Name Screen Shot](https://img.bgzo.cc/2025/202508021439235.JPG)
 
 # Playground
 
