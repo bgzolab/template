@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-11 | [噪点](https://mobius.blog/22549.html) | 此时此刻我正在咖啡厅码字，在左眼的余光之中，能看到一个正在跟别人视频通话的女人，以及一条正在翘着二郎腿摇晃的腿 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-11 | [Memos #2026-04-10](https://www.taober.blog/memos) | 18:22 总算是续签上了，给深圳政府点个赞👍。 |
 | 2026-04-10 | [PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调](https://dsx2016.com/paddleocr-vl-1-5-pdf-to-md-conversion-ui-refinements/) | 前言 本期依旧是把fastapi的界面改为gradio界面 原来的fastapi适合api调用，现在的grad... PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调 最先出现在 大师兄2016 。 |
 | 2026-04-10 | [关于偶遇的巧合 IV](https://blog.solazy.me/20260410/) | 今天又有偶遇！ |
