@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-11 | [Memos #2026-04-10](https://www.taober.blog/memos) | 18:22 总算是续签上了，给深圳政府点个赞👍。 |
 | 2026-04-10 | [PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调](https://dsx2016.com/paddleocr-vl-1-5-pdf-to-md-conversion-ui-refinements/) | 前言 本期依旧是把fastapi的界面改为gradio界面 原来的fastapi适合api调用，现在的grad... PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调 最先出现在 大师兄2016 。 |
 | 2026-04-10 | [关于偶遇的巧合 IV](https://blog.solazy.me/20260410/) | 今天又有偶遇！ |
 | 2026-04-10 | [[壹手观点]品牌设计的“表达危机”](https://www.iyeslogo.com/the-expression-crisis-in-brand-design/) | 设计应超越直接表达，通过留白、节奏控制和具体语言重新建立与用户的情感连接 |
@@ -31,7 +32,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-10 | [什么毁了 JavaScript？](https://www.geedea.pro/article/js-problem/) | JavaScript 虽然不是我的启蒙语言，但绝对是对我影响最大的编程语言之一。半年以前，我的首选语言就是它。如今如果要做正经的前端开发工作，就不可能离得开 JS 或 TS。在 TIOBE 排行榜，JS 稳居第六，只落后于人尽皆知的 Python 和 C 系语言， 还有万恶的 Java 。由于太过流… |
 | 2026-04-10 | [为什么跟巨婴讲道理一定会“输”？](https://mobius.blog/22544.html) | 闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-10 | [OpenAI推出100美元每月的Codex Pro套餐](https://blog.rustfisher.com/news/news-openai-20260410-codex-price/) | OpenAI推出了全新的每月100美元的专业版套餐。该套餐提供的Codex使用量是Plus套餐的5倍，最适合长时间、高强度的Codex使用。 |
-| 2026-04-10 | [Memos #2026-04-09](https://www.taober.blog/memos) | 09:25 现在正坐在长沙到深圳的高铁上，上一次同样的情景还是毕业那一年应届生入职，还记得很清楚那时只买到了站票，我害怕跟不上公司的技术栈，坐在车厢隔间的地上看 Redux Saga 的教程贴。 恍如隔世又近在眼前。 23:58 到深圳先是去酒店放了下行李，去吃了个豪华双份牛肉加蛋肠粉，就跟着之前联… |
 | 2026-04-09 | [注意力不是问题，逃避表达才是](https://www.linggandianbo.com/newsletter-118/) | 关于输入、语言和判断的一次重新理解｜灵感电波 #118 |
 | 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |
 | 2026-04-09 | [6 Days and 5 Nights of Spring Leisure in Jinghong Xishuangbanna](https://victor42.eth.limo/post-en/trip-to-xishuangbanna/) | Visiting Xishuangbanna in late March was a brilliant decision; our family of three returned completely fulfilled. You might not believe it, but I actu… |
@@ -98,22 +98,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-04 | [清明流水账  0404](https://blog.solazy.me/20260404/) | 衢州流水账 |
 | 2026-04-04 | [鸟窝](https://mobius.blog/21951.html) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-04 | [鸟窝](https://mobius.blog/2026/04/04/bird_nest/) | 开春后，一群白颊椋鸟又回到我家厕所窗户外的排风口抢筑鸟窝。在筑巢之前依旧是互相争夺打架的剧情，他们已经在窗外叽 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-03 | [跟着AI学编译原理](https://xiaket.github.io/2026/writing-a-toy-compiler-in-go.html) | 有了AI之后, 学东西变得更容易了. 趁着复活节假期, 把之前接触过但是了解不深入的编译原理捡起来学习一下. |
-| 2026-04-03 | [我关注的项目这周更新了什么-20260403](https://www.bboy.app/2026/04/03/%E6%88%91%E5%85%B3%E6%B3%A8%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%99%E5%91%A8%E6%9B%B4%E6%96%B0%E4%BA%86%E4%BB%80%E4%B9%88-20260403/) | 简介 每周五更新，所有的更新也会发送到我的频道 https://t.me/bboyapp 规则 pre release的不记录 只记录重要的更新 上一版本版本的bugfix不记录，比如某一个项目最新版本是7.0.0 上一个版本6.0.0发布了一个bugfix 6.0.1 那么不会记录 比如lens发… |
-| 2026-04-03 | [学会做自己](https://blog.solazy.me/20260403/) | 今天在赶路的时候听了一期播客，索性聊聊听后感 |
-| 2026-04-03 | [20260403的胡言乱语](https://www.bboy.app/2026/04/03/20260403%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/) | 简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn |
-| 2026-04-03 | [MacCms增加设置视频更新时间功能](https://foglog.cn/p/maccms-vod-laydate) | 视频编辑页面增加自定义更新时间1、/application/admin/view_new/vod/info.html<div class="layui-input-inline ... |
-| 2026-04-03 | [A funny story about AI implementation](https://victor42.eth.limo/post-en/the-great-ai-ification/) | The company churns out a ton of fixed-template images daily: course covers, promo banners, printed signs, desk nameplates, arm stickers, you name it.… |
-| 2026-04-03 | [AI落地趣事一则](https://victor42.eth.limo/post/the-great-ai-ification/) | 公司每天要产大量固定模板的图，课程封面、推广位、喷绘横幅、桌签、臂贴等。基本都是改改文字，并根据类型从一批固定的背景图中选一张用。 设计师手动改不现实，运营不会PS也不想学，外包出去要20块一张。 我主业是UI设计，但这活儿一直都是我在干。我有个个人项目，把Excel和Photoshop的能力结合起… |
-| 2026-04-03 | [Microsoft将在2026年至2029在日本投资100亿美元，用于人工智能基础设施和网络安全](https://blog.rustfisher.com/news/news-microsoft-plan-japan-20260403/) | 微软计划在未来四年内在日本投资100亿美元，与合作伙伴共同开发人工智能基础设施并加强网络安全举措 |
-| 2026-04-03 | [学习周刊-总第257期-2026年第14周](https://wiki.eryajf.net/pages/22ef3d/) | 如要阅读全文，点击标题跳转。 学习周刊-总第257期 &#124; lovcode &#124; zedis &#124; winshot &#124; StreamPanel &#124; WayLog &#124; agentsdk-go &#124; EnsoAI &#124; baserow &#124; SuperCmd &#124; LobsterAI &#124; Penio |
-| 2026-04-03 | [向外求索的情绪稳定：一场注定疲惫的追逐](https://www.evan.xin/4917/) | 如果一个人的所有情绪稳定的因素都向外求索，这个人一定会很累。 因为这意味着你把情绪的开关交给了别人。老板的一个 […] |
-| 2026-04-03 | [Anthropic 4亿美元收购 AI生物公司，隐形公司成就背后VC高达38513%回报](https://wenfeixiang.com/2026/04/anthropic-merge-coefficient-bio-and-the-dimension-story/) | 今天科技媒体圈被 OpenAI 收购科技播客 TBPN 的消息刷屏了，与这个消息形成鲜明对照的是 OpenAI […] |
-| 2026-04-03 | [ceph mon Operation not permitted 问题解决](https://frytea.com/archives/1652/) | 自己构建的 ceph 发现 mon 起不来，报错如下：Apr 03 11:14:30 debian systemd[1]: Started Ceph cluster monitor daemon... |
-| 2026-04-03 | [第一百六十万字](https://mobius.blog/21835.html) | 好久没有写过这个题目，上一次还是在 2022 年记录到《第八十万字》的时候。后来因为博客被 DDoS，不得不迁 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-03 | [第一百六十万字](https://mobius.blog/2026/04/03/one-million-six-hundred-thousand-words/) | 好久没有写过这个题目，上一次还是在 2022 年记录到《第八十万字》的时候。后来因为博客被 DDoS，不得不迁 […] —— 如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-03 | [2026.4.2](https://www.justzht.com/2026-4-2/) | 这周干了两件蠢事。 一个是和之前的老板（现在的 skip）以及现在的老板都大张旗鼓说了我周二要请假去 DMV 更新 REALID， |
-| 2026-04-03 | [Snowboarding in Xinjiang - China Snow Trip &#124; 滑雪的尽头 竟然真的是骨科](https://cheng.st/2026/04/03/snowboarding-in-xinjiang-china-snow-trip-%E6%BB%91%E9%9B%AA%E7%9A%84%E5%B0%BD%E5%A4%B4-%E7%AB%9F%E7%84%B6%E7%9C%9F%E7%9A%84%E6%98%AF%E9%AA%A8%E7%A7%91/) | 书接 上回 。 当晚摇到本地领路人，一下子心情高涨，睡意全无，开始刷起了抖音小红书来抱佛脚——一晚上的学习让我大致领悟到了“排水渠”，“大小狼王”等“著名打卡点”。可惜只看视频既不过瘾，也一头雾水。明明昨天跟着地图指引该去的都去了，这些奇奇怪怪的名字到底是都在哪？好在入夜开始下雪，窗外的静谧慢慢透进… |
 
 ## Vibe Coding
 
