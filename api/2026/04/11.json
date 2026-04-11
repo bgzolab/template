@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "基于 Hermes Agent 的企业网站开发实践",
+    "url": "https://krya.com/archives/hermes-enterprise-website.html",
+    "date": "2026-04-11T04:07:00Z",
+    "description": "## 前言 因为没有Cursor和Claude，最近使用 Hermes Agent 完成了一个企业网站的开发项目，从需求分析到代码部署，全程由 AI 助手协助完成。这篇文章总结一下开发过程中的技术要点和实践经验。 项目需求 为一个企业开发官方网站，需要以..."
+  },
+  {
     "title": "噪点",
     "url": "https://mobius.blog/22549.html",
     "date": "2026-04-11T03:00:00Z",
