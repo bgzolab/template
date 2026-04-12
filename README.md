@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-12 | [稻草人周刊 Vol.76](https://www.geedea.pro/weekly/76/) | 什么？已经是周日了吗？我想可能是因为我出于焦虑一直在逃避投简历找实习这件事情，一边逼自己做令人压力山大的事情，一边又想要逃走，总感觉不是很健康的心理状态呢。不过也不算坏事，毕竟还憋出来一篇 小说 （ 这就是痛苦驱动型作者啊 ）。这周要好一些了，因为开始通过玩《饥荒》、听 Paramore、读加缪和睡… |
 | 2026-04-12 | [邮件人周报 Vol.52](https://www.mailer.su/article/weekly-vol-52/) | 网易邮箱无法通过 IMAP 查看验证码邮件; Proton Mail 发布商业套件订阅; 美国区域 Gmail 用户获得修改用户名权限; 去中心化电子邮件 Dmail Network 宣布停止服务; NASA 宇航员在太空中也要解决 Outlook 故障; Google 强调 Gmail 中的 Ge… |
 | 2026-04-12 | [同班同学的名字（令和8年）](https://springwood.me/%e5%90%8c%e7%8f%ad%e5%90%8c%e5%ad%a6%e7%9a%84%e5%90%8d%e5%ad%97%ef%bc%88%e4%bb%a4%e5%92%8c8%e5%b9%b4%ef%bc%89/) | 令和时代出生的孩子，名字越来越多样化。 |
 | 2026-04-12 | [周末流水账 0412](https://blog.solazy.me/20260412/) | 周日快乐！ |
@@ -28,12 +29,14 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-12 | [复活节徒步小游——Styrsö岛](https://eduardoqian.com/archives/fu-huo-jie-xiao-you----solvikdao) | 从4月2日到4月10日是复活节假期，不巧的是在复活节前期，从海边来了不小的狂风大雨。于是在狂风结束的第二天，我就启程前往了位于城市西边的群岛上进行游览。 我一开始打算徒步的更南侧的Vrångö岛，但是不巧的是到码头的时候，前往Vrångö岛的轮渡还要等将近40分钟，于是临时调转方向前往了最大的岛St |
 | 2026-04-12 | [2026.4.12](https://www.justzht.com/2026-4-12/) | 周五的晚上，跑去和 HuaXia 继续喝酒，仍然是 Santana Row 的那家酒吧，原因无他 - 四月份了，AMEX 的 resy 季度额度又重置了，因此 |
 | 2026-04-12 | [AI 打破了原本公平的蠢](https://mobius.blog/22744.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-12 | [Vol.98 AI领域精选话题解析：从技术发展到应用实践全面解读](https://liduos.com/weekly/the-weekly-gradient-98) | 本期内容深入探讨AI领域多个关键主题，涵盖技术发展、应用实践和未来趋势，为您提供全面的行业洞察和实用指南。 |
 | 2026-04-12 | [摘：《花间集》](https://z.arlmy.me/posts/Note/Note_ZhaoChongzuo_HuaJianJi/) | 「前蜀后蜀。」 |
 | 2026-04-12 | [Toots 414 2026 Apr.5 - Apr.11](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260411/) | 「春菜。」 |
 | 2026-04-12 | [那个集记账、基金、股票于一体的APP，又往前迈了一大步](https://blog.ops-coffee.com/fire/expense-funds-stock-integrated-finance-app.html) | 这款集记账、基金、股票于一体的财务管家APP近期更新，新增债务管理、私募基金支持、美股港股市场接入，并优化底层体验。 |
 | 2026-04-12 | [摘：《白》](https://z.arlmy.me/posts/Note/Note_GongShu_Bai/) | 「交易吧，以生的现金。」 |
 | 2026-04-12 | [Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装](https://dsx2016.com/qwen3-asr-all-in-one-package/) | 前言 从之前的fastapi转gradio界面，已经重新打包了3个左右的懒人包 核心是为了把编程api转为可视... Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装 最先出现在 大师兄2016 。 |
 | 2026-04-12 | [Stop Making Your Microservices Aggregate Each Other's Data](/posts/backend_composition_layer/) | How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session… |
+| 2026-04-12 | [图床迁移 Cloudflare R2](https://blog.bgzo.cc/20260412-migrate-img-host-to-cloudflare-r2.html) | 不得不说 CF 是互联网界的活菩萨，免费提供的对象存储量大管饱，对我这种没人看的小透明足够了： 存储：10GB/月免费，每增加 1GB/月收取 0.015 美元 A 类操作：100 万次操作/月免费，每增加 100 万次操作收取 4.50 美元 B 类操作：1000 万次操作/月免费，每增加 100… |
 | 2026-04-12 | [2026年第15周](https://blog.sakoamc.com/posts/2615/) | 题记：二零二六年的第十五周，人间四月，万物复苏。 |
 | 2026-04-12 | [Memos #2026-04-11](https://www.taober.blog/memos) | 22:14 汕头第一天，猛猛吃！ |
 | 2026-04-11 | [标毅毕业--上山用力，下山随势](https://wiki.eryajf.net/pages/60cc18/) | 如要阅读全文，点击标题跳转。标毅，全称是 杭州西湖群山标准毅行线，是一条串联起西湖周边二十多座山峰的经典徒步路线，全长约 25 公里，累计爬升在 1200 米到 1500 米左右。它在户外圈名气极大，被公认为杭州户外徒步的 毕业考 和 朝圣级 路线。除了杭州本地之外，还有很多江浙沪的户外爱好者来走这… |

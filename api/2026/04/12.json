@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "稻草人周刊 Vol.76",
+    "url": "https://www.geedea.pro/weekly/76/",
+    "date": "2026-04-12T16:29:54Z",
+    "description": "什么？已经是周日了吗？我想可能是因为我出于焦虑一直在逃避投简历找实习这件事情，一边逼自己做令人压力山大的事情，一边又想要逃走，总感觉不是很健康的心理状态呢。不过也不算坏事，毕竟还憋出来一篇 小说 （ 这就是痛苦驱动型作者啊 ）。这周要好一些了，因为开始通过玩《饥荒》、听 Paramore、读加缪和睡觉来逃避现实，很厉害了！ 本期周刊的标题全是宝可梦的招式名称，没有特别的原因，仅仅是因为我喜欢。 终焉之歌 “倾听歌声的宝可梦经过３回合陷入昏厥。替换后效果消失。” All We Know Is Falling All We Know Is Falling 专辑 Paramore Apple Music Spotify 网易云音乐 TIDAL 🌕🌕🌕🌕🌗：“头皮发麻灵魂升天的感觉” 曲目列表 No. Title Length 1. “All We Know” 3:14 2. “Pressure” 3:06 3. “Emergency” 4:00 4. “Brighter” 3:43 5. “Here We Go Again” 3:46 6. “Never Let This Go” 3:40 "
+  },
+  {
     "title": "邮件人周报 Vol.52",
     "url": "https://www.mailer.su/article/weekly-vol-52/",
     "date": "2026-04-12T13:25:34Z",
@@ -48,6 +54,12 @@
     "description": "Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
   },
   {
+    "title": "Vol.98 AI领域精选话题解析：从技术发展到应用实践全面解读",
+    "url": "https://liduos.com/weekly/the-weekly-gradient-98",
+    "date": "2026-04-12T08:00:00Z",
+    "description": "本期内容深入探讨AI领域多个关键主题，涵盖技术发展、应用实践和未来趋势，为您提供全面的行业洞察和实用指南。"
+  },
+  {
     "title": "摘：《花间集》",
     "url": "https://z.arlmy.me/posts/Note/Note_ZhaoChongzuo_HuaJianJi/",
     "date": "2026-04-12T07:04:46Z",
@@ -82,6 +94,12 @@
     "url": "/posts/backend_composition_layer/",
     "date": "2026-04-12T02:36:01Z",
     "description": "How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session and identity. Something looked off. This service, whose job was to manage authentication, was making outbound calls to four downstream domain services: user profiles, billing, messaging, and a core platform API. An auth service calling a billing service? That’s not authentication. That’s aggregation. I pulled the thread."
+  },
+  {
+    "title": "图床迁移 Cloudflare R2",
+    "url": "https://blog.bgzo.cc/20260412-migrate-img-host-to-cloudflare-r2.html",
+    "date": "2026-04-12T00:55:38Z",
+    "description": "不得不说 CF 是互联网界的活菩萨，免费提供的对象存储量大管饱，对我这种没人看的小透明足够了： 存储：10GB/月免费，每增加 1GB/月收取 0.015 美元 A 类操作：100 万次操作/月免费，每增加 100 万次操作收取 4.50 美元 B 类操作：1000 万次操作/月免费，每增加 100 万次操作收取 0.36 美元 出口流量费全免 [!TIP] 什么意思呢？只有访问次数计入账单（A ..."
   },
   {
     "title": "2026年第15周",
