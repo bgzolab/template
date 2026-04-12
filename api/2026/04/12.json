@@ -6,6 +6,30 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "邮件人周报 Vol.52",
+    "url": "https://www.mailer.su/article/weekly-vol-52/",
+    "date": "2026-04-12T13:25:34Z",
+    "description": "网易邮箱无法通过 IMAP 查看验证码邮件; Proton Mail 发布商业套件订阅; 美国区域 Gmail 用户获得修改用户名权限; 去中心化电子邮件 Dmail Network 宣布停止服务; NASA 宇航员在太空中也要解决 Outlook 故障; Google 强调 Gmail 中的 Gemini 数据安全; Cloudflare 电子邮件发送功能即将公测; Amazon Workmail 将停止服务; MXroute 退出 LowEndTalk; Outlook Lite 即将停止支持."
+  },
+  {
+    "title": "同班同学的名字（令和8年）",
+    "url": "https://springwood.me/%e5%90%8c%e7%8f%ad%e5%90%8c%e5%ad%a6%e7%9a%84%e5%90%8d%e5%ad%97%ef%bc%88%e4%bb%a4%e5%92%8c8%e5%b9%b4%ef%bc%89/",
+    "date": "2026-04-12T13:22:31Z",
+    "description": "令和时代出生的孩子，名字越来越多样化。"
+  },
+  {
+    "title": "周末流水账 0412",
+    "url": "https://blog.solazy.me/20260412/",
+    "date": "2026-04-12T13:00:00Z",
+    "description": "周日快乐！"
+  },
+  {
+    "title": "FE Bits Vol.31 | axios 供应链攻击、JetStream 3.0 发布与视图过渡工具包",
+    "url": "https://ysx.cosine.ren/weekly-31/",
+    "date": "2026-04-12T10:40:31Z",
+    "description": "关于本周刊 本期网址 https://blog.cosine.ren/post/weekly-31 本周刊更新时间期望是在每周天。 推荐订阅本周刊的 RSS 。 公众号 前端周周谈 FE Bits，点击阅读原文链接可查看原文。 QQ 讨论小群 598022684 / Discord 群 本周刊文章内容同时也开源在 fe-bits-weekly ，欢迎关注。 今天是 2026 年 4 月 12 日，星期日。 这期是带着清明放假的内容的双周刊。 # 个人动态 # 游戏 写点游戏杂谈。电子 ed 有一阵子了，但是清明放假连着两天 12 个小时，推完了哀鸿全结局，当作视觉小说读完了一个故事的感觉。 是玩过前作来继续玩的，我的评价挺好的说实话。林翩翩的塑造给我感觉确实比苏怜烟惊艳，让人印象深刻。 让我评价的话，这个作品是历史向大众向的 AVG 而不是 galgame，也确实不是冲着 gal 去宣传的，所以对我来说没啥雷点，前作的各种糖也是吃饱了。 先说一些实际游玩下来的优点： 音乐无可挑剔，画面 CG 量还挺大的，画风我比较喜欢。 历史观上真得很棒，尽可能客观的体现了扬州十日事件里面各方的行为，"
+  },
+  {
     "title": "复活节徒步小游——Styrsö岛",
     "url": "https://eduardoqian.com/archives/fu-huo-jie-xiao-you----solvikdao",
     "date": "2026-04-12T08:43:00Z",
@@ -58,6 +82,12 @@
     "url": "/posts/backend_composition_layer/",
     "date": "2026-04-12T02:36:01Z",
     "description": "How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session and identity. Something looked off. This service, whose job was to manage authentication, was making outbound calls to four downstream domain services: user profiles, billing, messaging, and a core platform API. An auth service calling a billing service? That’s not authentication. That’s aggregation. I pulled the thread."
+  },
+  {
+    "title": "2026年第15周",
+    "url": "https://blog.sakoamc.com/posts/2615/",
+    "date": "2026-04-12T00:00:00Z",
+    "description": "题记：二零二六年的第十五周，人间四月，万物复苏。"
   },
   {
     "title": "Memos #2026-04-11",
