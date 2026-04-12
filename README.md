@@ -41,6 +41,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-10 | [会讲故事的VC：好莱坞传奇人物+硅谷高管，如何悄然打造出业绩强劲的低调风投WndrCo？](https://wenfeixiang.com/2026/04/the-storytellers-vc-wndrco/) | 叙事，对于创业者和投资人一直都很重要，尤其是在早期投资阶段。在硅谷就有这么一家非常低调的VC、主打叙事逻辑，1 […] |
 | 2026-04-10 | [什么毁了 JavaScript？](https://www.geedea.pro/article/js-problem/) | JavaScript 虽然不是我的启蒙语言，但绝对是对我影响最大的编程语言之一。半年以前，我的首选语言就是它。如今如果要做正经的前端开发工作，就不可能离得开 JS 或 TS。在 TIOBE 排行榜，JS 稳居第六，只落后于人尽皆知的 Python 和 C 系语言， 还有万恶的 Java 。由于太过流… |
 | 2026-04-10 | [为什么跟巨婴讲道理一定会“输”？](https://mobius.blog/22544.html) | 闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-10 | [KMP 字符串匹配可视化](https://gallery.selfboot.cn/zh/algorithms/kmp) | 通过交互式可视化学习 KMP 字符串匹配算法，同时理解 LPS 前缀表构建过程，以及失配时如何利用前缀信息完成快速跳转。 |
 | 2026-04-10 | [OpenAI推出100美元每月的Codex Pro套餐](https://blog.rustfisher.com/news/news-openai-20260410-codex-price/) | OpenAI推出了全新的每月100美元的专业版套餐。该套餐提供的Codex使用量是Plus套餐的5倍，最适合长时间、高强度的Codex使用。 |
 | 2026-04-09 | [注意力不是问题，逃避表达才是](https://www.linggandianbo.com/newsletter-118/) | 关于输入、语言和判断的一次重新理解｜灵感电波 #118 |
 | 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |

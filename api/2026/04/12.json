@@ -126,6 +126,12 @@
     "description": "闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
   },
   {
+    "title": "KMP 字符串匹配可视化",
+    "url": "https://gallery.selfboot.cn/zh/algorithms/kmp",
+    "date": "2026-04-10T02:00:00Z",
+    "description": "通过交互式可视化学习 KMP 字符串匹配算法，同时理解 LPS 前缀表构建过程，以及失配时如何利用前缀信息完成快速跳转。"
+  },
+  {
     "title": "OpenAI推出100美元每月的Codex Pro套餐",
     "url": "https://blog.rustfisher.com/news/news-openai-20260410-codex-price/",
     "date": "2026-04-10T01:17:22Z",
