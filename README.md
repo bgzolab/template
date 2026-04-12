@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-12 | [Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装](https://dsx2016.com/qwen3-asr-all-in-one-package/) | 前言 从之前的fastapi转gradio界面，已经重新打包了3个左右的懒人包 核心是为了把编程api转为可视... Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装 最先出现在 大师兄2016 。 |
 | 2026-04-12 | [Stop Making Your Microservices Aggregate Each Other's Data](/posts/backend_composition_layer/) | How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session… |
 | 2026-04-12 | [Memos #2026-04-11](https://www.taober.blog/memos) | 22:14 汕头第一天，猛猛吃！ |
 | 2026-04-11 | [标毅毕业--上山用力，下山随势](https://wiki.eryajf.net/pages/60cc18/) | 如要阅读全文，点击标题跳转。标毅，全称是 杭州西湖群山标准毅行线，是一条串联起西湖周边二十多座山峰的经典徒步路线，全长约 25 公里，累计爬升在 1200 米到 1500 米左右。它在户外圈名气极大，被公认为杭州户外徒步的 毕业考 和 朝圣级 路线。除了杭州本地之外，还有很多江浙沪的户外爱好者来走这… |

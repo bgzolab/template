@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装",
+    "url": "https://dsx2016.com/qwen3-asr-all-in-one-package/",
+    "date": "2026-04-12T04:12:34Z",
+    "description": "前言 从之前的fastapi转gradio界面，已经重新打包了3个左右的懒人包 核心是为了把编程api转为可视... Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装 最先出现在 大师兄2016 。"
+  },
+  {
     "title": "Stop Making Your Microservices Aggregate Each Other's Data",
     "url": "/posts/backend_composition_layer/",
     "date": "2026-04-12T02:36:01Z",
