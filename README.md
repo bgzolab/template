@@ -21,6 +21,12 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-12 | [2026.4.12](https://www.justzht.com/2026-4-12/) | 周五的晚上，跑去和 HuaXia 继续喝酒，仍然是 Santana Row 的那家酒吧，原因无他 - 四月份了，AMEX 的 resy 季度额度又重置了，因此 |
+| 2026-04-12 | [AI 打破了原本公平的蠢](https://mobius.blog/22744.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-12 | [摘：《花间集》](https://z.arlmy.me/posts/Note/Note_ZhaoChongzuo_HuaJianJi/) | 「前蜀后蜀。」 |
+| 2026-04-12 | [Toots 414 2026 Apr.5 - Apr.11](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260411/) | 「春菜。」 |
+| 2026-04-12 | [那个集记账、基金、股票于一体的APP，又往前迈了一大步](https://blog.ops-coffee.com/fire/expense-funds-stock-integrated-finance-app.html) | 这款集记账、基金、股票于一体的财务管家APP近期更新，新增债务管理、私募基金支持、美股港股市场接入，并优化底层体验。 |
+| 2026-04-12 | [摘：《白》](https://z.arlmy.me/posts/Note/Note_GongShu_Bai/) | 「交易吧，以生的现金。」 |
 | 2026-04-12 | [Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装](https://dsx2016.com/qwen3-asr-all-in-one-package/) | 前言 从之前的fastapi转gradio界面，已经重新打包了3个左右的懒人包 核心是为了把编程api转为可视... Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装 最先出现在 大师兄2016 。 |
 | 2026-04-12 | [Stop Making Your Microservices Aggregate Each Other's Data](/posts/backend_composition_layer/) | How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session… |
 | 2026-04-12 | [Memos #2026-04-11](https://www.taober.blog/memos) | 22:14 汕头第一天，猛猛吃！ |
