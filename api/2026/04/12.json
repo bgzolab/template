@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "Stop Making Your Microservices Aggregate Each Other's Data",
+    "url": "/posts/backend_composition_layer/",
+    "date": "2026-04-12T02:36:01Z",
+    "description": "How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session and identity. Something looked off. This service, whose job was to manage authentication, was making outbound calls to four downstream domain services: user profiles, billing, messaging, and a core platform API. An auth service calling a billing service? That’s not authentication. That’s aggregation. I pulled the thread."
+  },
+  {
     "title": "Memos #2026-04-11",
     "url": "https://www.taober.blog/memos",
     "date": "2026-04-12T00:00:00Z",
@@ -94,6 +100,12 @@
     "url": "https://199604.com/3563",
     "date": "2026-04-10T07:33:32Z",
     "description": "ZooKeeper 高可用集群部署 配置说明 副本数: 3（生产环境高可用） 持久化: 数据目录 10Gi + […]"
+  },
+  {
+    "title": "会讲故事的VC：好莱坞传奇人物+硅谷高管，如何悄然打造出业绩强劲的低调风投WndrCo？",
+    "url": "https://wenfeixiang.com/2026/04/the-storytellers-vc-wndrco/",
+    "date": "2026-04-10T05:56:22Z",
+    "description": "叙事，对于创业者和投资人一直都很重要，尤其是在早期投资阶段。在硅谷就有这么一家非常低调的VC、主打叙事逻辑，1 […]"
   },
   {
     "title": "什么毁了 JavaScript？",
