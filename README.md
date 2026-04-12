@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-12 | [复活节徒步小游——Styrsö岛](https://eduardoqian.com/archives/fu-huo-jie-xiao-you----solvikdao) | 从4月2日到4月10日是复活节假期，不巧的是在复活节前期，从海边来了不小的狂风大雨。于是在狂风结束的第二天，我就启程前往了位于城市西边的群岛上进行游览。 我一开始打算徒步的更南侧的Vrångö岛，但是不巧的是到码头的时候，前往Vrångö岛的轮渡还要等将近40分钟，于是临时调转方向前往了最大的岛St |
 | 2026-04-12 | [2026.4.12](https://www.justzht.com/2026-4-12/) | 周五的晚上，跑去和 HuaXia 继续喝酒，仍然是 Santana Row 的那家酒吧，原因无他 - 四月份了，AMEX 的 resy 季度额度又重置了，因此 |
 | 2026-04-12 | [AI 打破了原本公平的蠢](https://mobius.blog/22744.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-12 | [摘：《花间集》](https://z.arlmy.me/posts/Note/Note_ZhaoChongzuo_HuaJianJi/) | 「前蜀后蜀。」 |
