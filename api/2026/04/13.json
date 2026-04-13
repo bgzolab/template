@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "openFuyao InferNex AI推理集成部署 310P(300I Pro) 环境问题记录及解决",
+    "url": "https://frytea.com/archives/1653/",
+    "date": "2026-04-13T08:53:36Z",
+    "description": "AI推理集成部署（InferNex）是一个专为云原生环境下AI推理服务优化所设计的端到端集成部署方案。该方案基于Kubernetes Gateway API Inference Extensio..."
+  },
+  {
     "title": "Memos: MacOS 下编译安装 Aseprite 脚本",
     "url": "https://blog.yasking.org/a/1776044367.html",
     "date": "2026-04-13T05:00:00Z",

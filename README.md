@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-13 | [openFuyao InferNex AI推理集成部署 310P(300I Pro) 环境问题记录及解决](https://frytea.com/archives/1653/) | AI推理集成部署（InferNex）是一个专为云原生环境下AI推理服务优化所设计的端到端集成部署方案。该方案基于Kubernetes Gateway API Inference Extensio... |
 | 2026-04-13 | [Memos: MacOS 下编译安装 Aseprite 脚本](https://blog.yasking.org/a/1776044367.html) | Aseprite 是一款像素动画制作软件，免费试用版本不能保存，购买价格 $19.99 USD 这个软件是开源的，即自己编译使用不需要花钱。 在 … |
 | 2026-04-13 | [读《玉米》](https://www.feidaoboke.com/post/read-yu-mi.html) | 毕飞宇是我的苏北老乡（虽然现在很多泰州地区的人不认为泰州是苏北，称苏中，但是在毕飞宇的很多个人讲述和作品中，一直说自己是苏北人），看他的作品里面经常看到小时候熟悉的方言表达，有着很熟悉很亲切的感觉。 小说的名字叫《玉米》，实际上这本书写了王家庄的前支书王连方家里玉米、玉秀和玉秧三个女孩的故事。 在读… |
 | 2026-04-13 | [AI泡沫破灭倒计时](https://blog.oospace.com/posts/2026-04-13/) | 历史回顾 |
