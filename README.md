@@ -22,6 +22,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-13 | [【转载】谈谈不受欢迎的博客技术特征](https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html) | 从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。 |
+| 2026-04-13 | [大事件](https://www.jackpu.com/da-shi-jian/) | 对于这样的事情，大家似乎经历了一周多，才坦然接受。 对于在现场的我而言，确实从一开始不以为意，到突然的寂静，寂静的有一丝恐惧和茫然，留下了特别深的印象。 对于这样的事情，大家有所耳闻，但是没有发生在身边的时候，还是多少不会太忧虑。 很多年前，在双减发生的时候，我和小伙伴还没有那么明显的感触。而这次，… |
+| 2026-04-13 | [Xinjiang Travel Guide Exploring Nature and Ethnic Cultures](https://victor42.eth.limo/post-en/things-to-know-before-visiting-xinjiang/) | Fresh off a trip to Xishuangbanna, I couldn’t wait to plan my next adventure. The destination—Xinjiang. The furthest west I’d ever been was Dunhuang.… |
+| 2026-04-13 | [新疆自然风光与民族文化旅行指南](https://victor42.eth.limo/post/things-to-know-before-visiting-xinjiang/) | 刚从西双版纳回来 ，就迫不及待开始研究下一场旅行了，目标新疆。 以前最远 只去过敦煌 ，对新疆旅游完全没有概念，就只知道天山是南疆北疆分界。具体各个地方有什么，去了能体验到什么，只有很模糊的认识。 新疆非常大，为了筛选目的地，我花2个晚上和AI反复收集、梳理、讨论、验证，得出了这份旅行认知指南。从自… |
 | 2026-04-13 | [Hermes Agent 代表的是“模型无关”的趋势](https://luweiqing.com/gossip/Hermes-Agent-represents-the-trend-of-model-agnostic-approaches.html) | Hermes Agent 和 Openclaw 代表的是一类长任务，模型无关的用法，可以屏蔽用户对基座模型的感受一、供给侧不再是单一基座能力，而是三层叠加层级内容特征模型层基座模型能力标准化、可... |
 | 2026-04-13 | [善良与边界感](https://blog.solazy.me/20260413/) | 今天突发了件小事儿，让我又有内容可以写了 |
 | 2026-04-13 | [openFuyao NPU-Operator故障排查](https://frytea.com/archives/1655/) | 故障 pod describe[root@master1 ~]# kubectl -n kube-system describe pod ascend-device-plugin-ll46f N... |
