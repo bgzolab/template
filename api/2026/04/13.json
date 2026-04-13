@@ -6,6 +6,36 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "【转载】谈谈不受欢迎的博客技术特征",
+    "url": "https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html",
+    "date": "2026-04-13T17:13:49Z",
+    "description": "从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。"
+  },
+  {
+    "title": "Hermes Agent 代表的是“模型无关”的趋势",
+    "url": "https://luweiqing.com/gossip/Hermes-Agent-represents-the-trend-of-model-agnostic-approaches.html",
+    "date": "2026-04-13T10:30:00Z",
+    "description": "Hermes Agent 和 Openclaw 代表的是一类长任务，模型无关的用法，可以屏蔽用户对基座模型的感受一、供给侧不再是单一基座能力，而是三层叠加层级内容特征模型层基座模型能力标准化、可..."
+  },
+  {
+    "title": "善良与边界感",
+    "url": "https://blog.solazy.me/20260413/",
+    "date": "2026-04-13T09:30:00Z",
+    "description": "今天突发了件小事儿，让我又有内容可以写了"
+  },
+  {
+    "title": "openFuyao NPU-Operator故障排查",
+    "url": "https://frytea.com/archives/1655/",
+    "date": "2026-04-13T09:01:49Z",
+    "description": "故障 pod describe[root@master1 ~]# kubectl -n kube-system describe pod ascend-device-plugin-ll46f N..."
+  },
+  {
+    "title": "openFuyao 2603 共测测试报告",
+    "url": "https://frytea.com/archives/1654/",
+    "date": "2026-04-13T09:01:27Z",
+    "description": "相关链接特性清单: https://gitcode.com/openFuyao/release-management/blob/main/openFuyao-26.03/release-plan..."
+  },
+  {
     "title": "openFuyao InferNex AI推理集成部署 310P(300I Pro) 环境问题记录及解决",
     "url": "https://frytea.com/archives/1653/",
     "date": "2026-04-13T08:53:36Z",
