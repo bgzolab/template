@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流",
+    "url": "https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt",
+    "date": "2026-04-13T17:30:00Z",
+    "description": "很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方案去解决代码问题， OXFmt 倒是可以完美代替 Prettier 原生规则，只是部分插件仍然需要取舍，例如 Markdown 的盘古之白格式化，我只能暂时舍弃。 由于需要两套 Lint 同时工作，所以这个配置包还没有正式定名为 oxc-config ，暂时只称之为 Integration ，一个集成方案或者说是一套工作流。 这是我在 GitHub 上发布的一个开源项目。如果它对你有帮助，欢迎前往 bassist 点一个 Star。 @bassist/oxc-integration 是一个 Oxc 优先的工作流包，适合希望现在就用上带类型提示的 oxlint.config.ts 与 oxfmt.config.ts ，同时在 Oxc 能力尚未完全覆盖时保留 ESLint 兜底能力的项目。 使用"
+  },
+  {
     "title": "【转载】谈谈不受欢迎的博客技术特征",
     "url": "https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html",
     "date": "2026-04-13T17:13:49Z",

@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-13 | [适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流](https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt) | 很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方… |
 | 2026-04-13 | [【转载】谈谈不受欢迎的博客技术特征](https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html) | 从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。 |
 | 2026-04-13 | [SAM3 提示词 图片分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-image-segmentation/) | SAM3 github地址：https://github.com/facebookresearch/sam3 ... SAM3 提示词 图片分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-13 | [最近惦念 20260403](https://z.arlmy.me/posts/TILs/thoughts/20260403_Recently/) | 「我去做另一个人了哈。」 |
