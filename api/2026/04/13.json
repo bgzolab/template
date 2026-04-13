@@ -6,6 +6,18 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "满血复活！Motrix Next 免费开源下载工具 - 更小更快的跨平台 Aria2 客户端",
+    "url": "https://www.iplaysoft.com/motrix-next.html",
+    "date": "2026-04-13T21:22:43Z",
+    "description": "说到好用的 下载 工具，大家都会想到优秀的 IDM ，以及口碑俱佳的开源免费跨平台的 Motrix ！后者内置强大的 Aria2 引擎、清爽无广告，简直是对那些流氓下载器的降维打击。 但从 2023 年开始， Motrix 基本就停更了。使用 Electron 架构使得其体积臃肿，不好维护，新功能也迟不见踪影。就在大家以为这款基于 aria2 的“下载 神器 ”要凉凉时，一个好消息来了：有技术大佬继承了它的优点，并完全“推翻重做”，带来全新的 Motrix Next 满血复活归来…… 「 前往查看原文.... 」 异次元还有这些值得一看： “狗屁下载器”？Gopeed - 开源全平台下载器 (免费轻量 / 比 Aria2 好用 / 远程下载) Motrix - 清爽开源免费的全能下载工具 (跨平台 Aria2 客户端 / 支持 BT / 磁力链 / 百度网盘) Photon - 开箱即用的免配置 Aria2 免费开源下载软件利器 (替代迅雷) 替代迅雷！小白都会用的免配置 Aria2 图形界面版免费开源下载软件 PDM 异次元首页 | 微信公众号 | 关注微博 | 软件精选 | 软件激"
+  },
+  {
+    "title": "解决 macOS 无法打开 App 应用，提示“移到废纸篓”错误的简单方法",
+    "url": "https://www.iplaysoft.com/p/fix-mac-app",
+    "date": "2026-04-13T21:19:14Z",
+    "description": "我们常常在网上下载了一款 macOS 应用程序之后，打开它会出现「未打开“XXX”」的错误提示，无法正常启动。很多 Mac 新手遇到这种情况就比较懵逼了…… 但其实这个错误很是常见，经常下载 APP 的同学都会遇到过。而修复方法也很简单，下面就教大家解决下载的 Mac 应用软件无法启动的问题吧。 Mac …… 「 前往查看原文.... 」 异次元首页 | 微信公众号 | 关注微博 | 软件精选 | 软件激活码折扣"
+  },
+  {
     "title": "适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流",
     "url": "https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt",
     "date": "2026-04-13T17:30:00Z",
@@ -51,7 +63,7 @@
     "title": "Xinjiang Travel Guide Exploring Nature and Ethnic Cultures",
     "url": "https://victor42.eth.limo/post-en/things-to-know-before-visiting-xinjiang/",
     "date": "2026-04-13T11:03:00Z",
-    "description": "Fresh off a trip to Xishuangbanna, I couldn’t wait to plan my next adventure. The destination—Xinjiang. The furthest west I’d ever been was Dunhuang. I was completely clueless about traveling in Xinjiang, knowing only that the Tianshan Mountains split it into North and South. I had a very fuzzy idea of what each region offered or what to expect. Xinjiang is massive. To narrow down my options, I spent two nights heavily researching, organizing, and verifying info with AI to build this conceptual "
+    "description": "Fresh off a trip to Xishuangbanna , I couldn’t wait to plan my next adventure. The destination—Xinjiang. The furthest west I’d ever been was Dunhuang . I was completely clueless about traveling in Xinjiang, knowing only that the Tianshan Mountains split it into North and South. I had a very fuzzy idea of what each region offered or what to expect. Xinjiang is massive. To narrow down my options, I spent two nights heavily researching, organizing, and verifying info with AI to build this conceptua"
   },
   {
     "title": "新疆自然风光与民族文化旅行指南",
