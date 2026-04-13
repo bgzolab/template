@@ -22,6 +22,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-13 | [【转载】谈谈不受欢迎的博客技术特征](https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html) | 从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。 |
+| 2026-04-13 | [SAM3 提示词 图片分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-image-segmentation/) | SAM3 github地址：https://github.com/facebookresearch/sam3 ... SAM3 提示词 图片分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
+| 2026-04-13 | [最近惦念 20260403](https://z.arlmy.me/posts/TILs/thoughts/20260403_Recently/) | 「我去做另一个人了哈。」 |
+| 2026-04-13 | [问Gemini的问题备份](https://z.arlmy.me/posts/ZArlmyMe/QuestionsWithGemini_20260413/) | 「时间戳。」 |
 | 2026-04-13 | [R#097 练习](https://blog.sakanano.moe/journals/random_097) | 2026.4.7 ~ 2026.4.13 |
 | 2026-04-13 | [大事件](https://www.jackpu.com/da-shi-jian/) | 对于这样的事情，大家似乎经历了一周多，才坦然接受。 对于在现场的我而言，确实从一开始不以为意，到突然的寂静，寂静的有一丝恐惧和茫然，留下了特别深的印象。 对于这样的事情，大家有所耳闻，但是没有发生在身边的时候，还是多少不会太忧虑。 很多年前，在双减发生的时候，我和小伙伴还没有那么明显的感触。而这次，… |
 | 2026-04-13 | [Xinjiang Travel Guide Exploring Nature and Ethnic Cultures](https://victor42.eth.limo/post-en/things-to-know-before-visiting-xinjiang/) | Fresh off a trip to Xishuangbanna, I couldn’t wait to plan my next adventure. The destination—Xinjiang. The furthest west I’d ever been was Dunhuang.… |
