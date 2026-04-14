@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-14 | [Memos #2026-04-13](https://www.taober.blog/memos) | 18:23 明天又要上班了，有点小紧张还。 20:50 四月未尝败绩😎 |
 | 2026-04-13 | [满血复活！Motrix Next 免费开源下载工具 - 更小更快的跨平台 Aria2 客户端](https://www.iplaysoft.com/motrix-next.html) | 说到好用的 下载 工具，大家都会想到优秀的 IDM ，以及口碑俱佳的开源免费跨平台的 Motrix ！后者内置强大的 Aria2 引擎、清爽无广告，简直是对那些流氓下载器的降维打击。 但从 2023 年开始， Motrix 基本就停更了。使用 Electron 架构使得其体积臃肿，不好维护，新功能也… |
 | 2026-04-13 | [解决 macOS 无法打开 App 应用，提示“移到废纸篓”错误的简单方法](https://www.iplaysoft.com/p/fix-mac-app) | 我们常常在网上下载了一款 macOS 应用程序之后，打开它会出现「未打开“XXX”」的错误提示，无法正常启动。很多 Mac 新手遇到这种情况就比较懵逼了…… 但其实这个错误很是常见，经常下载 APP 的同学都会遇到过。而修复方法也很简单，下面就教大家解决下载的 Mac 应用软件无法启动的问题吧。 M… |
 | 2026-04-13 | [适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流](https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt) | 很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方… |
@@ -61,7 +62,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-12 | [Stop Making Your Microservices Aggregate Each Other's Data](/posts/backend_composition_layer/) | How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session… |
 | 2026-04-12 | [图床迁移 Cloudflare R2](https://blog.bgzo.cc/20260412-migrate-img-host-to-cloudflare-r2.html) | 不得不说 CF 是互联网界的活菩萨，免费提供的对象存储量大管饱，对我这种没人看的小透明足够了： 存储：10GB/月免费，每增加 1GB/月收取 0.015 美元 A 类操作：100 万次操作/月免费，每增加 100 万次操作收取 4.50 美元 B 类操作：1000 万次操作/月免费，每增加 100… |
 | 2026-04-12 | [2026年第15周](https://blog.sakoamc.com/posts/2615/) | 题记：二零二六年的第十五周，人间四月，万物复苏。 |
-| 2026-04-12 | [Memos #2026-04-11](https://www.taober.blog/memos) | 22:14 汕头第一天，猛猛吃！ |
 | 2026-04-11 | [标毅毕业--上山用力，下山随势](https://wiki.eryajf.net/pages/60cc18/) | 如要阅读全文，点击标题跳转。标毅，全称是 杭州西湖群山标准毅行线，是一条串联起西湖周边二十多座山峰的经典徒步路线，全长约 25 公里，累计爬升在 1200 米到 1500 米左右。它在户外圈名气极大，被公认为杭州户外徒步的 毕业考 和 朝圣级 路线。除了杭州本地之外，还有很多江浙沪的户外爱好者来走这… |
 | 2026-04-11 | [雨衣下的世界](https://yinji.org/the-world-under-the-raincoat.html) | 南昌哪儿都好，就是天气不太友好。清明前后，接连下了一个多礼拜的雨，衣服要晒上好几天才干，出门也变得格外麻烦。 我住的地方离公司有一段距离，平时上下班都是骑电动车。天晴的时候很舒服，迎面有风，头顶有阳光；可一到下雨天，就让人不免皱起眉头。要把雨衣翻出来穿上——且不说挡雨效果如何，光是套在身上就已经让人… |
 | 2026-04-11 | [周末流水账 0411](https://blog.solazy.me/20260411/) | 周六来了，今天的主题是观影 |
@@ -115,20 +115,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-07 | [千八踏春](https://lililib.github.io/%E5%8D%83%E5%85%AB%E8%B8%8F%E6%98%A5/) | 清明三天，千八常规路线。龙泉出发，经仁坑、凤阳山、黄茅尖，翻越大小天堂、烧香岩，最后下撤百山祖景区。一路春花烂漫。 |
 | 2026-04-07 | [使用 tinyfeed 来做 RSS 内容聚合](https://guchengf.me/blog/use-tinyfeed-to-aggregate-my-feeds/) | 过去几年中我一直使用 miniflux 配合一些第三方 web ui 和 RSS 阅读工具作为自己的 RSS 订阅方案，现在我切换到了 tinyfeed。 最近在浏览 Reddit selfhost 频道时，看到有人推荐 tinyfeed - 一个非常简单的将 feeds 内容聚合到一起并生成单个… |
 | 2026-04-07 | [记时过夏末2026巡演成都站](https://z.arlmy.me/posts/Review/Review_SummerFadesAway_2026/) | 「幽与痴。」 |
-| 2026-04-06 | [Rembg 图片去背景工具 懒人整合包 优化可视化界面和添加模型 cpu可用 gpu可用](https://dsx2016.com/rembg-image-background-removal-tool/) | 前言 这个Rembg去除背景懒人包是我自己制作的第一个懒人包 当时为了制作youtube带有真人头像的封面，需... Rembg 图片去背景工具 懒人整合包 优化可视化界面和添加模型 cpu可用 gpu可用 最先出现在 大师兄2016 。 |
-| 2026-04-06 | [谷歌翻译「同声传译」功能上线，任意耳机都能用！秒翻 70 种语言](https://www.iplaysoft.com/p/google-live-translate) | 心底里一直害怕出国旅游语言不通，点个餐全靠手指乱指、跨国开会听不懂只能傻坐着点头、和说外语的亲戚聚餐只能尬笑；说真的，这种语言不通的窘迫感，很多人都有着这样的无奈。 而且以前各种翻译 App，大部分还是要你低头打字、举着手机屏幕给别人看，又慢又蠢……说实话真的不好用。但最…… 「 前往查看原文...… |
-| 2026-04-06 | [清明流水账 0406](https://blog.solazy.me/20260406/) | 清明假期最后一天！ |
-| 2026-04-06 | [26清明 星子摩旅 300KM](https://yovey.me/26xingzi-touring/) | 愚人节那天刷下天气，清明假期竟然是晴天欸。 发信息问小伙伴们去不去之前说的靖安民宿，响应不太积极，于是转头自己 … Continue reading "26清明 星子摩旅 300KM" |
-| 2026-04-06 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.3 of the project |
-| 2026-04-06 | [AI Hasn’t Rebuilt the Organization Yet. Anxiety Rebuilt Management First](https://www.edony.ink/en/ai-hasnt-rebuilt-the-organization-yet-anxiety-rebuilt-management-first/) | AI may not have rebuilt organizations yet, but it has already amplified their instincts. In many teams, what speeds up first is not judgment, but the… |
-| 2026-04-06 | [R#096 躺](https://blog.sakanano.moe/journals/random_096) | 2026.3.31 ~ 2026.4.6 |
-| 2026-04-06 | [观后：《忘梦洞》](https://z.arlmy.me/posts/Review/Review_CaveOfForgottenDreams/) | 「the myth of time.」 |
-| 2026-04-06 | [最近惦念 20260322](https://z.arlmy.me/posts/TILs/thoughts/20260322_Recently/) | 「生命就是自然的语言呀。」 |
-| 2026-04-06 | [Toots 413 2026 Mar.29 - Apr.4](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260404/) | 「“碧梧桐映纱窗晚，花谢莺声懒。”」 |
-| 2026-04-06 | [WireGuard 隧道+ Realm 动态转发+WSTunnel伪装](https://www.quji.org/archives/8749) | 最近墙又高了一些，对于在国内的转发机器，特别明显，基本上转发机场都死翘翘了，反正都逃不过长城的嗅探，我把我的搭 […] |
-| 2026-04-06 | [AI 还没重构组织，焦虑先重构了管理](https://www.edony.ink/ai-huan-mei-zhong-gou-zu-zhi-jiao-lu-xian-zhong-gou-liao-guan-li/) | 文章讨论了作者正在经历的AI热潮下‘焦虑型管理’的蔓延：组织因FOMO陷入隧道视觉，用高频同步、压缩周期等动作填补判断缺失，忽视问题定义、边界划定与风险管控。真正的提速应聚焦问题收敛能力，而非伪执行密度。 |
-| 2026-04-06 | [爱没有标准，但是不爱有](https://mobius.blog/22377.html) | 本着越是文艺的标题，聊的越是不文艺的主题。先提前公示一下，今天的内容可能会伤害到恋爱脑，或抱团生存的人，或只要 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-06 | [春风解客愁](https://jiaoyuan.org/posts/2026-04-06-monthly-202604/) | 本篇是对 2026 年 3 月至 4 月的记录与思考。 撑着油纸伞，独自 彷徨在悠长、悠长 又寂寥的雨巷， 我希望飘过， 一个丁香一样的， 结着愁怨的姑娘。 彭州站的夜晚，周围一片漆黑，只有温室里的暖光灯，在给杨树补充光照的同时也给暗夜里的精灵带来一丝明亮。最近总是在出野外，去彭州、去峨眉山，虽然路… |
 
 ## Vibe Coding
 
