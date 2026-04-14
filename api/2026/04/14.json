@@ -18,6 +18,18 @@
     "description": "《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平"
   },
   {
+    "title": "sam3 提示词 图片分割和视频分割 docker 懒人整合包",
+    "url": "https://dsx2016.com/sam3-prompts-image-and-video-segmentation/",
+    "date": "2026-04-14T14:35:39Z",
+    "description": "前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。"
+  },
+  {
+    "title": "《白》成都方所分享会笔记",
+    "url": "https://z.arlmy.me/posts/Note/Note_GongShu_Bai_FangSuo/",
+    "date": "2026-04-14T13:37:46Z",
+    "description": "「扫灰。」"
+  },
+  {
     "title": "Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型",
     "url": "https://liduos.com/weekly/the-weekly-gradient-98",
     "date": "2026-04-14T08:00:00Z",
@@ -64,6 +76,12 @@
     "url": "https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html",
     "date": "2026-04-13T17:13:49Z",
     "description": "从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。"
+  },
+  {
+    "title": "第一次车上露营",
+    "url": "http://www.uncoverman.com/first-time-car-camping.html",
+    "date": "2026-04-13T16:00:00Z",
+    "description": "2025 年下半年换了一辆新能源车，一直想着出去在车上露营一次。这个春天的周末，天气晴好，带娃去宁波奉化太妃湖，看到了蓝色的宁波湾海水，体验了车上露营，总结一下： 1、铺床模式 我采用一、二排成床模式，即把第一排放倒，和第二排连起来铺床，这种方案的好处是前备箱和后备箱还可以放行李，不用把东西挪来挪去。 充气床垫 是淘宝上买的，铺好、充起气大概 8 分钟左右。 露营前自己试铺过一次 ，验证了味道，铺设方式和软硬度，都可以接受，到了真正开始露营时也就得心应手，不至于手忙脚乱。 <a href=\"#2、遮光方式\" class=\"he"
   },
   {
     "title": "SAM3 提示词 图片分割 ComfyUI 懒人整合包",

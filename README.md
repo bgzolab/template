@@ -23,6 +23,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
 | 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
+| 2026-04-14 | [sam3 提示词 图片分割和视频分割 docker 懒人整合包](https://dsx2016.com/sam3-prompts-image-and-video-segmentation/) | 前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。 |
+| 2026-04-14 | [《白》成都方所分享会笔记](https://z.arlmy.me/posts/Note/Note_GongShu_Bai_FangSuo/) | 「扫灰。」 |
 | 2026-04-14 | [Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型](https://liduos.com/weekly/the-weekly-gradient-98) | 本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。 |
 | 2026-04-14 | [SAM3 提示词 视频分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-video-segmentation/) | 前言 上期记录了SAM3 提示词 图片分割 本文更新SAM3 提示词 视频分割 但是在视频分割遇到一些兼容性问... SAM3 提示词 视频分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-14 | [比塔罗牌更准的，是塔罗牌的商业逻辑](https://mobius.blog/22728.html) | 前几天在咖啡厅码字，看到了一对小姑娘在用塔罗牌算命。 很多年前，我跟老婆还在打理一个占星公众号时，也需要在常去 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
@@ -31,6 +33,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-13 | [解决 macOS 无法打开 App 应用，提示“移到废纸篓”错误的简单方法](https://www.iplaysoft.com/p/fix-mac-app) | 我们常常在网上下载了一款 macOS 应用程序之后，打开它会出现「未打开“XXX”」的错误提示，无法正常启动。很多 Mac 新手遇到这种情况就比较懵逼了…… 但其实这个错误很是常见，经常下载 APP 的同学都会遇到过。而修复方法也很简单，下面就教大家解决下载的 Mac 应用软件无法启动的问题吧。 M… |
 | 2026-04-13 | [适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流](https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt) | 很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方… |
 | 2026-04-13 | [【转载】谈谈不受欢迎的博客技术特征](https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html) | 从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。 |
+| 2026-04-13 | [第一次车上露营](http://www.uncoverman.com/first-time-car-camping.html) | 2025 年下半年换了一辆新能源车，一直想着出去在车上露营一次。这个春天的周末，天气晴好，带娃去宁波奉化太妃湖，看到了蓝色的宁波湾海水，体验了车上露营，总结一下： 1、铺床模式 我采用一、二排成床模式，即把第一排放倒，和第二排连起来铺床，这种方案的好处是前备箱和后备箱还可以放行李，不用把东西挪来挪去… |
 | 2026-04-13 | [SAM3 提示词 图片分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-image-segmentation/) | SAM3 github地址：https://github.com/facebookresearch/sam3 ... SAM3 提示词 图片分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-13 | [最近惦念 20260403](https://z.arlmy.me/posts/TILs/thoughts/20260403_Recently/) | 「我去做另一个人了哈。」 |
 | 2026-04-13 | [问Gemini的问题备份](https://z.arlmy.me/posts/ZArlmyMe/QuestionsWithGemini_20260413/) | 「时间戳。」 |
