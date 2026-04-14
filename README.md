@@ -24,6 +24,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
 | 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
 | 2026-04-14 | [sam3 提示词 图片分割和视频分割 docker 懒人整合包](https://dsx2016.com/sam3-prompts-image-and-video-segmentation/) | 前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。 |
+| 2026-04-14 | [AI Agent折腾记（OpenClaw / Hermes Agent）](https://liudon.com/posts/deploy-ai-agent/) | AI 智能体（AI Agent）是一种能够感知环境、进行推理并自主行动以实现特定目标的智能系统。 OpenClaw和Hermes Agent属于目前开源社区最受关注的两个项目。 |
 | 2026-04-14 | [《白》成都方所分享会笔记](https://z.arlmy.me/posts/Note/Note_GongShu_Bai_FangSuo/) | 「扫灰。」 |
 | 2026-04-14 | [Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型](https://liduos.com/weekly/the-weekly-gradient-98) | 本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。 |
 | 2026-04-14 | [SAM3 提示词 视频分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-video-segmentation/) | 前言 上期记录了SAM3 提示词 图片分割 本文更新SAM3 提示词 视频分割 但是在视频分割遇到一些兼容性问... SAM3 提示词 视频分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
