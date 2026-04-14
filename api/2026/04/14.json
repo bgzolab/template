@@ -18,6 +18,12 @@
     "description": "《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平"
   },
   {
+    "title": "Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型",
+    "url": "https://liduos.com/weekly/the-weekly-gradient-98",
+    "date": "2026-04-14T08:00:00Z",
+    "description": "本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。"
+  },
+  {
     "title": "SAM3 提示词 视频分割 ComfyUI 懒人整合包",
     "url": "https://dsx2016.com/sam3-prompt-video-segmentation/",
     "date": "2026-04-14T06:34:22Z",
@@ -220,12 +226,6 @@
     "url": "https://mobius.blog/22744.html",
     "date": "2026-04-12T08:09:05Z",
     "description": "Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
-  },
-  {
-    "title": "Vol.98 AI领域精选话题解析：从技术发展到应用实践全面解读",
-    "url": "https://liduos.com/weekly/the-weekly-gradient-98",
-    "date": "2026-04-12T08:00:00Z",
-    "description": "本期内容深入探讨AI领域多个关键主题，涵盖技术发展、应用实践和未来趋势，为您提供全面的行业洞察和实用指南。"
   },
   {
     "title": "摘：《花间集》",
