@@ -22,12 +22,15 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
+| 2026-04-15 | [奇怪的社会偏离感](https://zhangke.space/%e5%a5%87%e6%80%aa%e7%9a%84%e7%a4%be%e4%bc%9a%e5%81%8f%e7%a6%bb%e6%84%9f/?utm_source=rss&utm_medium=rss&utm_campaign=%25e5%25a5%2587%25e6%2580%25aa%25e7%259a%2584%25e7%25a4%25be%25e4%25bc%259a%25e5%2581%258f%25e7%25a6%25bb%25e6%2584%259f) | 这几年我逐渐发现自己有个比较奇怪的心理活动，而且最近我发现这种心理在很多人身上都会出现。 一个典型的表现是，当 […] The post 奇怪的社会偏离感 first appeared on 张可的博客 . |
+| 2026-04-15 | [文章选题汇总](https://www.xiaozonglin.cn/article-potential-topics/) | 我是一个喜欢立 Flag，但是有时没什么动力来推进选题和项目。写个置顶文章，就当是我写过了。 ICanMana […] 文章选题汇总 最先出现在 林林杂语 。 |
 | 2026-04-15 | [AI Infra：2026 Token 经济生态分析（一）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-One.html) | 一、Token 的三种“商品形态”类型产生位置谁付钱价值体现raw token模型推理层平台 / 开发者成本中心（GPU 时间）structured token（带上下文）RAG / Agent... |
 | 2026-04-15 | [我为什么关闭“友情链接”？](https://mobius.blog/22841.html) | 您猜怎么着～这个系列居然还在继续。 需要特别强调一下，更早接触莫比乌斯的朋友应该很清楚：我并没有公开过所谓的“ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-15 | [emacs-合并dired中pdf文件](https://blog.prayhand13013.top/20260415T113509--emacs-合并dired中pdf文件__blog.html) |  |
 | 2026-04-15 | [Qwen3 ASR 流式转写 Docker 懒人整合包](https://dsx2016.com/qwen3-asr-streaming-transcription/) | 前言 本文是第二个docker懒人包，依旧是win兼容问题，不得不用docker 这个懒人包有40GB左右，在... Qwen3 ASR 流式转写 Docker 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-15 | [积极心态是一种选择，而不是行动的结果](https://blog.rustfisher.com/reading/promotion/fake-being-happy-and-look-for-the-positive-in-each-situation/) | “假装快乐直到真正快乐”这句话真的管用。只要假装快乐，并在每件事中寻找积极的一面，你的视角就会改变。 |
 | 2026-04-15 | [美国缅因州议员通过禁令，禁止大型数据中心至2027年底](https://blog.rustfisher.com/news/news-us-maine-bill-20260415/) | 该法案将禁止在2027年底之前建设耗电量超过20兆瓦的发电中心，目前已提交给州长。 |
+| 2026-04-15 | [独立游戏简评 Vol.4](https://bluepika.life/blog/indie-game-notes-4) | 继续写写一些之前玩过的独立游戏，部分内容含有剧透，特别是以下提到的解谜游戏。 |
 | 2026-04-15 | [Memos #2026-04-14](https://www.taober.blog/memos) | 21:54 上班第一天，开了三个会，一切良好，有些激动甚至，想大干一场！ 今天基金依旧小涨！ |
 | 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
 | 2026-04-14 | [小猫咪也有自己的规划](https://blog.solazy.me/20260414/) | 今天分享一下我对我家猫新的了解 |
