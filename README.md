@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
+| 2026-04-15 | [AI Infra：2026 Token 经济生态分析（一）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-One.html) | 一、Token 的三种“商品形态”类型产生位置谁付钱价值体现raw token模型推理层平台 / 开发者成本中心（GPU 时间）structured token（带上下文）RAG / Agent... |
 | 2026-04-15 | [我为什么关闭“友情链接”？](https://mobius.blog/22841.html) | 您猜怎么着～这个系列居然还在继续。 需要特别强调一下，更早接触莫比乌斯的朋友应该很清楚：我并没有公开过所谓的“ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-15 | [emacs-合并dired中pdf文件](https://blog.prayhand13013.top/20260415T113509--emacs-合并dired中pdf文件__blog.html) |  |
 | 2026-04-15 | [Qwen3 ASR 流式转写 Docker 懒人整合包](https://dsx2016.com/qwen3-asr-streaming-transcription/) | 前言 本文是第二个docker懒人包，依旧是win兼容问题，不得不用docker 这个懒人包有40GB左右，在... Qwen3 ASR 流式转写 Docker 懒人整合包 最先出现在 大师兄2016 。 |
