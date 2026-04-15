@@ -22,6 +22,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
+| 2026-04-15 | [Qwen3 ASR 流式转写 Docker 懒人整合包](https://dsx2016.com/qwen3-asr-streaming-transcription/) | 前言 本文是第二个docker懒人包，依旧是win兼容问题，不得不用docker 这个懒人包有40GB左右，在... Qwen3 ASR 流式转写 Docker 懒人整合包 最先出现在 大师兄2016 。 |
+| 2026-04-15 | [积极心态是一种选择，而不是行动的结果](https://blog.rustfisher.com/reading/promotion/fake-being-happy-and-look-for-the-positive-in-each-situation/) | “假装快乐直到真正快乐”这句话真的管用。只要假装快乐，并在每件事中寻找积极的一面，你的视角就会改变。 |
+| 2026-04-15 | [美国缅因州议员通过禁令，禁止大型数据中心至2027年底](https://blog.rustfisher.com/news/news-us-maine-bill-20260415/) | 该法案将禁止在2027年底之前建设耗电量超过20兆瓦的发电中心，目前已提交给州长。 |
 | 2026-04-15 | [Memos #2026-04-14](https://www.taober.blog/memos) | 21:54 上班第一天，开了三个会，一切良好，有些激动甚至，想大干一场！ 今天基金依旧小涨！ |
 | 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
 | 2026-04-14 | [sam3 提示词 图片分割和视频分割 docker 懒人整合包](https://dsx2016.com/sam3-prompts-image-and-video-segmentation/) | 前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。 |
