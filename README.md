@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
+| 2026-04-15 | [Memos #2026-04-14](https://www.taober.blog/memos) | 21:54 上班第一天，开了三个会，一切良好，有些激动甚至，想大干一场！ 今天基金依旧小涨！ |
 | 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
 | 2026-04-14 | [sam3 提示词 图片分割和视频分割 docker 懒人整合包](https://dsx2016.com/sam3-prompts-image-and-video-segmentation/) | 前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-14 | [AI Agent折腾记（OpenClaw / Hermes Agent）](https://liudon.com/posts/deploy-ai-agent/) | AI 智能体（AI Agent）是一种能够感知环境、进行推理并自主行动以实现特定目标的智能系统。 OpenClaw和Hermes Agent属于目前开源社区最受关注的两个项目。 |
@@ -29,7 +30,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-14 | [Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型](https://liduos.com/weekly/the-weekly-gradient-98) | 本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。 |
 | 2026-04-14 | [SAM3 提示词 视频分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-video-segmentation/) | 前言 上期记录了SAM3 提示词 图片分割 本文更新SAM3 提示词 视频分割 但是在视频分割遇到一些兼容性问... SAM3 提示词 视频分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-14 | [比塔罗牌更准的，是塔罗牌的商业逻辑](https://mobius.blog/22728.html) | 前几天在咖啡厅码字，看到了一对小姑娘在用塔罗牌算命。 很多年前，我跟老婆还在打理一个占星公众号时，也需要在常去 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-14 | [Memos #2026-04-13](https://www.taober.blog/memos) | 18:23 明天又要上班了，有点小紧张还。 20:50 四月未尝败绩😎 |
 | 2026-04-13 | [满血复活！Motrix Next 免费开源下载工具 - 更小更快的跨平台 Aria2 客户端](https://www.iplaysoft.com/motrix-next.html) | 说到好用的 下载 工具，大家都会想到优秀的 IDM ，以及口碑俱佳的开源免费跨平台的 Motrix ！后者内置强大的 Aria2 引擎、清爽无广告，简直是对那些流氓下载器的降维打击。 但从 2023 年开始， Motrix 基本就停更了。使用 Electron 架构使得其体积臃肿，不好维护，新功能也… |
 | 2026-04-13 | [解决 macOS 无法打开 App 应用，提示“移到废纸篓”错误的简单方法](https://www.iplaysoft.com/p/fix-mac-app) | 我们常常在网上下载了一款 macOS 应用程序之后，打开它会出现「未打开“XXX”」的错误提示，无法正常启动。很多 Mac 新手遇到这种情况就比较懵逼了…… 但其实这个错误很是常见，经常下载 APP 的同学都会遇到过。而修复方法也很简单，下面就教大家解决下载的 Mac 应用软件无法启动的问题吧。 M… |
 | 2026-04-13 | [适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流](https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt) | 很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方… |
@@ -114,15 +114,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-08 | [Warzone 2100 updated](https://macsourceports.com/game/warzone2100) | The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project |
 | 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
-| 2026-04-07 | [paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整](https://dsx2016.com/paddleocr-pp-structurev3-pdf%e8%bd%acmd/) | 前言 本文依旧是懒人包的优化更新 之前最大的问题就是使用fastapi这种偏向编程交互的操作方式 适合api调... paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 交互界面调整 最先出现在 大师兄2016 。 |
-| 2026-04-07 | [两万分之一的坚定](https://blog.solazy.me/20260407/) | 今天聊一个非常有趣的话题 |
-| 2026-04-07 | [我的2025年](https://liudon.com/posts/review-2025/) | 2025年，会是我人生的一个重要节点。 工作 这一年，处于一种持续性、高强度的加班状态，晚上9点算是早下班了。 24年底，接手了一个历史模块，对于一直在做运营开发的我来说，算是一个不小的挑战。 |
-| 2026-04-07 | [简评《哀鸿：城破十日记》](https://mok.moe/p/9g66) | 通关了，冷静了半个小时回了回味儿，少见地决定写个评测说说自己的感想： ✅ 剧情两条线穿插、时长差不多是《饿殍》两倍，CG 也很多，量大管饱。角色配音水平不错（有一人除外） ❌ 虽然量大，但有充数的嫌疑。其中两个普通结局完全是复制粘贴；CG 虽多，但相比《饿殍》却缺少了一些令人印象深刻的名场景，几年过… |
-| 2026-04-07 | [血压忽高事件](https://1900.live/xie-ya-hu-gao-shi-jian/) | Photo by Online Marketing / Unsplash 前些日子出去办了个事，凑巧量了一下血压。 不量不要紧，一量才发现自己高压158,低压98，我说那天怎么脑袋涨涨的，回公司后不放心，又用公司的电子血压计重新量了一下，特么还是这个数值，想着是不是当天状态不好，就想着休息一晚上第二… |
-| 2026-04-07 | [当“谁弱谁有理”遭遇“程序正义”](https://mobius.blog/22414.html) | 聊一些身处“坏世界”的游戏规则。所谓的程序正义，用人话解释的话，我能找到最贴切的词就是“轴”。我就是一个很强调 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-07 | [千八踏春](https://lililib.github.io/%E5%8D%83%E5%85%AB%E8%B8%8F%E6%98%A5/) | 清明三天，千八常规路线。龙泉出发，经仁坑、凤阳山、黄茅尖，翻越大小天堂、烧香岩，最后下撤百山祖景区。一路春花烂漫。 |
-| 2026-04-07 | [使用 tinyfeed 来做 RSS 内容聚合](https://guchengf.me/blog/use-tinyfeed-to-aggregate-my-feeds/) | 过去几年中我一直使用 miniflux 配合一些第三方 web ui 和 RSS 阅读工具作为自己的 RSS 订阅方案，现在我切换到了 tinyfeed。 最近在浏览 Reddit selfhost 频道时，看到有人推荐 tinyfeed - 一个非常简单的将 feeds 内容聚合到一起并生成单个… |
-| 2026-04-07 | [记时过夏末2026巡演成都站](https://z.arlmy.me/posts/Review/Review_SummerFadesAway_2026/) | 「幽与痴。」 |
 
 ## Vibe Coding
 

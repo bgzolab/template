@@ -1,0 +1,194 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告",
+    "url": "https://blog.rustfisher.com/news/news-stanford-ai-report-202604/",
+    "date": "2026-04-16T05:44:59Z",
+    "description": "在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。"
+  },
+  {
+    "title": "Memos #2026-04-14",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-04-15T00:00:00Z",
+    "description": "21:54 上班第一天，开了三个会，一切良好，有些激动甚至，想大干一场！ 今天基金依旧小涨！"
+  },
+  {
+    "title": "哀鸿这游戏好啊",
+    "url": "https://mok.moe/p/zb3w",
+    "date": "2026-04-14T15:13:23Z",
+    "description": "《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平"
+  },
+  {
+    "title": "sam3 提示词 图片分割和视频分割 docker 懒人整合包",
+    "url": "https://dsx2016.com/sam3-prompts-image-and-video-segmentation/",
+    "date": "2026-04-14T14:35:39Z",
+    "description": "前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。"
+  },
+  {
+    "title": "AI Agent折腾记（OpenClaw / Hermes Agent）",
+    "url": "https://liudon.com/posts/deploy-ai-agent/",
+    "date": "2026-04-14T14:12:17Z",
+    "description": "AI 智能体（AI Agent）是一种能够感知环境、进行推理并自主行动以实现特定目标的智能系统。 OpenClaw和Hermes Agent属于目前开源社区最受关注的两个项目。"
+  },
+  {
+    "title": "《白》成都方所分享会笔记",
+    "url": "https://z.arlmy.me/posts/Note/Note_GongShu_Bai_FangSuo/",
+    "date": "2026-04-14T13:37:46Z",
+    "description": "「扫灰。」"
+  },
+  {
+    "title": "Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型",
+    "url": "https://liduos.com/weekly/the-weekly-gradient-98",
+    "date": "2026-04-14T08:00:00Z",
+    "description": "本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。"
+  },
+  {
+    "title": "SAM3 提示词 视频分割 ComfyUI 懒人整合包",
+    "url": "https://dsx2016.com/sam3-prompt-video-segmentation/",
+    "date": "2026-04-14T06:34:22Z",
+    "description": "前言 上期记录了SAM3 提示词 图片分割 本文更新SAM3 提示词 视频分割 但是在视频分割遇到一些兼容性问... SAM3 提示词 视频分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。"
+  },
+  {
+    "title": "比塔罗牌更准的，是塔罗牌的商业逻辑",
+    "url": "https://mobius.blog/22728.html",
+    "date": "2026-04-14T03:00:00Z",
+    "description": "前几天在咖啡厅码字，看到了一对小姑娘在用塔罗牌算命。 很多年前，我跟老婆还在打理一个占星公众号时，也需要在常去 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "满血复活！Motrix Next 免费开源下载工具 - 更小更快的跨平台 Aria2 客户端",
+    "url": "https://www.iplaysoft.com/motrix-next.html",
+    "date": "2026-04-13T21:22:43Z",
+    "description": "说到好用的 下载 工具，大家都会想到优秀的 IDM ，以及口碑俱佳的开源免费跨平台的 Motrix ！后者内置强大的 Aria2 引擎、清爽无广告，简直是对那些流氓下载器的降维打击。 但从 2023 年开始， Motrix 基本就停更了。使用 Electron 架构使得其体积臃肿，不好维护，新功能也迟不见踪影。就在大家以为这款基于 aria2 的“下载 神器 ”要凉凉时，一个好消息来了：有技术大佬继承了它的优点，并完全“推翻重做”，带来全新的 Motrix Next 满血复活归来…… 「 前往查看原文.... 」 异次元还有这些值得一看： “狗屁下载器”？Gopeed - 开源全平台下载器 (免费轻量 / 比 Aria2 好用 / 远程下载) Motrix - 清爽开源免费的全能下载工具 (跨平台 Aria2 客户端 / 支持 BT / 磁力链 / 百度网盘) Photon - 开箱即用的免配置 Aria2 免费开源下载软件利器 (替代迅雷) 替代迅雷！小白都会用的免配置 Aria2 图形界面版免费开源下载软件 PDM 异次元首页 | 微信公众号 | 关注微博 | 软件精选 | 软件激"
+  },
+  {
+    "title": "解决 macOS 无法打开 App 应用，提示“移到废纸篓”错误的简单方法",
+    "url": "https://www.iplaysoft.com/p/fix-mac-app",
+    "date": "2026-04-13T21:19:14Z",
+    "description": "我们常常在网上下载了一款 macOS 应用程序之后，打开它会出现「未打开“XXX”」的错误提示，无法正常启动。很多 Mac 新手遇到这种情况就比较懵逼了…… 但其实这个错误很是常见，经常下载 APP 的同学都会遇到过。而修复方法也很简单，下面就教大家解决下载的 Mac 应用软件无法启动的问题吧。 Mac …… 「 前往查看原文.... 」 异次元首页 | 微信公众号 | 关注微博 | 软件精选 | 软件激活码折扣"
+  },
+  {
+    "title": "适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流",
+    "url": "https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt",
+    "date": "2026-04-13T17:30:00Z",
+    "description": "很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方案去解决代码问题， OXFmt 倒是可以完美代替 Prettier 原生规则，只是部分插件仍然需要取舍，例如 Markdown 的盘古之白格式化，我只能暂时舍弃。 由于需要两套 Lint 同时工作，所以这个配置包还没有正式定名为 oxc-config ，暂时只称之为 Integration ，一个集成方案或者说是一套工作流。 这是我在 GitHub 上发布的一个开源项目。如果它对你有帮助，欢迎前往 bassist 点一个 Star。 @bassist/oxc-integration 是一个 Oxc 优先的工作流包，适合希望现在就用上带类型提示的 oxlint.config.ts 与 oxfmt.config.ts ，同时在 Oxc 能力尚未完全覆盖时保留 ESLint 兜底能力的项目。 使用"
+  },
+  {
+    "title": "【转载】谈谈不受欢迎的博客技术特征",
+    "url": "https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html",
+    "date": "2026-04-13T17:13:49Z",
+    "description": "从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。"
+  },
+  {
+    "title": "第一次车上露营",
+    "url": "http://www.uncoverman.com/first-time-car-camping.html",
+    "date": "2026-04-13T16:00:00Z",
+    "description": "2025 年下半年换了一辆新能源车，一直想着出去在车上露营一次。这个春天的周末，天气晴好，带娃去宁波奉化太妃湖，看到了蓝色的宁波湾海水，体验了车上露营，总结一下： 1、铺床模式 我采用一、二排成床模式，即把第一排放倒，和第二排连起来铺床，这种方案的好处是前备箱和后备箱还可以放行李，不用把东西挪来挪去。 充气床垫 是淘宝上买的，铺好、充起气大概 8 分钟左右。 露营前自己试铺过一次 ，验证了味道，铺设方式和软硬度，都可以接受，到了真正开始露营时也就得心应手，不至于手忙脚乱。 <a href=\"#2、遮光方式\" class=\"he"
+  },
+  {
+    "title": "SAM3 提示词 图片分割 ComfyUI 懒人整合包",
+    "url": "https://dsx2016.com/sam3-prompt-image-segmentation/",
+    "date": "2026-04-13T15:29:21Z",
+    "description": "SAM3 github地址：https://github.com/facebookresearch/sam3 ... SAM3 提示词 图片分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。"
+  },
+  {
+    "title": "最近惦念 20260403",
+    "url": "https://z.arlmy.me/posts/TILs/thoughts/20260403_Recently/",
+    "date": "2026-04-13T15:20:27Z",
+    "description": "「我去做另一个人了哈。」"
+  },
+  {
+    "title": "问Gemini的问题备份",
+    "url": "https://z.arlmy.me/posts/ZArlmyMe/QuestionsWithGemini_20260413/",
+    "date": "2026-04-13T15:06:46Z",
+    "description": "「时间戳。」"
+  },
+  {
+    "title": "R#097 练习",
+    "url": "https://blog.sakanano.moe/journals/random_097",
+    "date": "2026-04-13T14:30:00Z",
+    "description": "2026.4.7 ~ 2026.4.13"
+  },
+  {
+    "title": "大事件",
+    "url": "https://www.jackpu.com/da-shi-jian/",
+    "date": "2026-04-13T12:14:43Z",
+    "description": "对于这样的事情，大家似乎经历了一周多，才坦然接受。 对于在现场的我而言，确实从一开始不以为意，到突然的寂静，寂静的有一丝恐惧和茫然，留下了特别深的印象。 对于这样的事情，大家有所耳闻，但是没有发生在身边的时候，还是多少不会太忧虑。 很多年前，在双减发生的时候，我和小伙伴还没有那么明显的感触。而这次，这种所有铺垫，到官宣的一刻，还是会带来一定的冲击。 由于目前不具备任何官方的消息，这里也不能说发生了什么。暂且就叫大事件吧。 AI 焦虑 从去年大家密集接触 AI 工具，从数据分析，文档撰写，代码编写等等。无一例外感受到好处，好景不长。大家在今年开始听到了很多大的互联网公司因为 AI 的人才优化，AI 进步的太快了，以致于很多人都还沉浸 AI 提升的喜悦之中，而忽略了可替代的一项。 似乎我们处在变革的年代，能做的除了接受，也做不了什么了。个人相比时代，真的太渺小。多少年前的疫情，给大家都上了一课。乐观看待身边所发生的事情，淡然接受比什么都好。"
+  },
+  {
+    "title": "Xinjiang Travel Guide Exploring Nature and Ethnic Cultures",
+    "url": "https://victor42.eth.limo/post-en/things-to-know-before-visiting-xinjiang/",
+    "date": "2026-04-13T11:03:00Z",
+    "description": "Fresh off a trip to Xishuangbanna , I couldn’t wait to plan my next adventure. The destination—Xinjiang. The furthest west I’d ever been was Dunhuang . I was completely clueless about traveling in Xinjiang, knowing only that the Tianshan Mountains split it into North and South. I had a very fuzzy idea of what each region offered or what to expect. Xinjiang is massive. To narrow down my options, I spent two nights heavily researching, organizing, and verifying info with AI to build this conceptua"
+  },
+  {
+    "title": "新疆自然风光与民族文化旅行指南",
+    "url": "https://victor42.eth.limo/post/things-to-know-before-visiting-xinjiang/",
+    "date": "2026-04-13T11:03:00Z",
+    "description": "刚从西双版纳回来 ，就迫不及待开始研究下一场旅行了，目标新疆。 以前最远 只去过敦煌 ，对新疆旅游完全没有概念，就只知道天山是南疆北疆分界。具体各个地方有什么，去了能体验到什么，只有很模糊的认识。 新疆非常大，为了筛选目的地，我花2个晚上和AI反复收集、梳理、讨论、验证，得出了这份旅行认知指南。从自然风光和民族文化两个角度，审视新疆各个地级行政单位的旅行体验。结合反复观察新疆行政区图和地形图，帮我建立了新疆旅游的初步概念，帮助非常大。 当然，这仅仅是个起点。这份指南的认知一定是片面的，颗粒度也很粗，可能也有些未发现的错误，细节就要靠自己的眼睛和双脚去补充和修正了。 第一部分：自然风光 按14个地级行政区划分，梳理各区域的代表性自然景观 总览：新疆自然风光的底层逻辑 新疆的景观可以用一句话概括： 三山夹两盆 。 阿尔泰山 — 北疆草原·森林·湖泊 准噶尔盆地 — 北疆戈壁·荒漠·绿洲 天山 — 草原·雪峰·峡谷（南北疆分界线） 塔里木盆地 — 沙漠·戈壁·绿洲·胡杨 昆仑山 + 帕米尔高原 — 极高山·冰川·高原湖 北疆 的景观关键词：草原、湖泊、森林、雪山——湿润、丰沛、秀美 南疆 的"
+  },
+  {
+    "title": "Hermes Agent 代表的是“模型无关”的趋势",
+    "url": "https://luweiqing.com/gossip/Hermes-Agent-represents-the-trend-of-model-agnostic-approaches.html",
+    "date": "2026-04-13T10:30:00Z",
+    "description": "Hermes Agent 和 Openclaw 代表的是一类长任务，模型无关的用法，可以屏蔽用户对基座模型的感受一、供给侧不再是单一基座能力，而是三层叠加层级内容特征模型层基座模型能力标准化、可..."
+  },
+  {
+    "title": "善良与边界感",
+    "url": "https://blog.solazy.me/20260413/",
+    "date": "2026-04-13T09:30:00Z",
+    "description": "今天突发了件小事儿，让我又有内容可以写了"
+  },
+  {
+    "title": "openFuyao NPU-Operator故障排查",
+    "url": "https://frytea.com/archives/1655/",
+    "date": "2026-04-13T09:01:49Z",
+    "description": "故障 pod describe[root@master1 ~]# kubectl -n kube-system describe pod ascend-device-plugin-ll46f N..."
+  },
+  {
+    "title": "openFuyao 2603 共测测试报告",
+    "url": "https://frytea.com/archives/1654/",
+    "date": "2026-04-13T09:01:27Z",
+    "description": "相关链接特性清单: https://gitcode.com/openFuyao/release-management/blob/main/openFuyao-26.03/release-plan..."
+  },
+  {
+    "title": "openFuyao InferNex AI推理集成部署 310P(300I Pro) 环境问题记录及解决",
+    "url": "https://frytea.com/archives/1653/",
+    "date": "2026-04-13T08:53:36Z",
+    "description": "AI推理集成部署（InferNex）是一个专为云原生环境下AI推理服务优化所设计的端到端集成部署方案。该方案基于Kubernetes Gateway API Inference Extensio..."
+  },
+  {
+    "title": "Memos: MacOS 下编译安装 Aseprite 脚本",
+    "url": "https://blog.yasking.org/a/1776044367.html",
+    "date": "2026-04-13T05:00:00Z",
+    "description": "Aseprite 是一款像素动画制作软件，免费试用版本不能保存，购买价格 $19.99 USD 这个软件是开源的，即自己编译使用不需要花钱。 在 …"
+  },
+  {
+    "title": "读《玉米》",
+    "url": "https://www.feidaoboke.com/post/read-yu-mi.html",
+    "date": "2026-04-13T03:27:18Z",
+    "description": "毕飞宇是我的苏北老乡（虽然现在很多泰州地区的人不认为泰州是苏北，称苏中，但是在毕飞宇的很多个人讲述和作品中，一直说自己是苏北人），看他的作品里面经常看到小时候熟悉的方言表达，有着很熟悉很亲切的感觉。 小说的名字叫《玉米》，实际上这本书写了王家庄的前支书王连方家里玉米、玉秀和玉秧三个女孩的故事。 在读这本书的时候，才知道我们江苏省长江以北的有些地方也是水乡，而不是苏南苏州一带独有。 比如作者的老家泰州兴化，看书中描述那边农村早年的主要交通工具一度是小船，小说中玉米出嫁的时候的“婚车”就是各种喜船。 我特地到地图上看了一下，作者写中堡镇果然是水网密布。兴化市近些年出圈的网红油菜花景区也确实是在水中的田上，他们叫垛田，观赏还需乘船。 第一部 玉米，坚韧 玉米是时任村支书王连方的第一个女儿，她作为家里的老大，很早就有了撑起家门的想法。 玉米在她的父亲村支书王连方因为“满村播种”的问题被拿下之后，加上又被飞行员相亲对象抛弃，她马上选择和公社上的干部结婚，她的诉求就是对方得有点权，哪怕是给人家做填房。 嫁给公社干部后，玉米到了镇上生活，但是她作为家里老大，心底是一直想要把王家的人都拉起来的。 关于"
+  },
+  {
+    "title": "AI泡沫破灭倒计时",
+    "url": "https://blog.oospace.com/posts/2026-04-13/",
+    "date": "2026-04-13T03:00:00Z",
+    "description": "历史回顾"
+  },
+  {
+    "title": "写到哪儿算哪儿——动物直觉",
+    "url": "https://mobius.blog/22553.html",
+    "date": "2026-04-13T02:19:52Z",
+    "description": "文章还没有写标题，写到哪儿算哪儿。 此时此刻，我在咖啡厅的座位对面，有两个中年男人正在聊天。因为没有开通透模式 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "爷爷",
+    "url": "https://1900.live/ye-ye/",
+    "date": "2026-04-13T02:16:06Z",
+    "description": "Photo by moke yong hui / Unsplash 清明我妈回老家祭祖了，他回来的这段时间就由我来照顾爷爷了。 爷爷前几年临近过年时意外中风，好在发现送医及时，影响不大，出院后行动、说话什么都没问题，基本上可以自理。 但是记忆力远不如从前了，刚出院的那会经常会记忆错乱，有时候明明在老家会以为自己还在四川，有时候会在厕所门口站着，以为是在等电梯，有时候明明才吃过午饭，走几圈后会突然问怎么还没吃午饭。 因为我妈回去了，都是我每天给他做三餐，提醒吃药，有几次明明让他不要煮饭，但是总是会在中午的时候把去把饭煮了，因为记忆力不行，每次都是煮成了黑炭，米也煮的超级多，回来问他是不是不记得了，他每次都是看着我笑着不说话。 这几天和他相处，发现老人家其实挺孤单的，他不打牌、不喝酒也不是个多话的人。在四川语言不通，也不太爱和别人交流，也提出过教他玩手机，他说学不会，也不想学。在这边唯一的消磨时间的方式就是抽烟和看电视了，但是后时候看他看电视聚精会神，会问他能看懂吗？他经常答到「看不懂」。 这段时间每天早上起来的第一件事就是让我给他买张火车票，想回去老家。 我想对他来说这个人生地不熟的地方"
+  }
+]
