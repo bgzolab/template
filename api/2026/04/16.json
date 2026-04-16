@@ -72,6 +72,12 @@
     "description": "您猜怎么着～这个系列居然还在继续。 需要特别强调一下，更早接触莫比乌斯的朋友应该很清楚：我并没有公开过所谓的“ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
   },
   {
+    "title": "Claude Code使用后的感受：独立编程、日常助手与深度定制",
+    "url": "https://11010.net/p/claude-code-used-feel/",
+    "date": "2026-04-15T06:19:00Z",
+    "description": "用了一个多月 Claude Code 后，记录一下哪些认知变了。 为什么写这篇后续 这几个月持续在用 Claude Code ，确实有一些新的感受。如果用一句话来总结：“强烈推荐体验”。 最近经常看到关于前同事被蒸馏成 token 、 xxx.skill ，本来想用下面这张图片做博客首图的，想了想这样非常不尊重事实，一味地追求哗众取众，早晚都会遍体鳞伤。 Claude 的能力确实非常强大，但不要为此而焦虑，学会利用好这个工具，让工具来武装自己才是硬道理。个人非常认同李想这句话：“ 前提是顶级专家要全面拥抱Agent，指望AI和Agent抹平专业价值差距的观点，纯属做梦。普通水平和顶级专家在非AI时代的差距是100倍，AI时代会扩大到10000倍 ”。 下面 GitHub 项目有很多有意思的 skills https://github.com/tmstack/awesome-persona-skills?tab=readme-ov-file 先回应关于封号 上篇博客评论区最多的问题不是技术相关的，而是——“会不会封号”。毕竟订阅不便宜，被封一次挺肉疼的，而且戒掉 Claude 的瘾也很痛"
+  },
+  {
     "title": "emacs-合并dired中pdf文件",
     "url": "https://blog.prayhand13013.top/20260415T113509--emacs-合并dired中pdf文件__blog.html",
     "date": "2026-04-15T03:35:00Z",
