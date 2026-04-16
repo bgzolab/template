@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-16 | [自卑的人在恐惧什么？](https://mobius.blog/22784.html) | 今天的文章标题，可不是什么“心灵鸡汤”式的标题，就是纯粹地（对部分人来说更显冒犯地）在聊“自卑”这件事。 聊起 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-16 | [Google宣布Gemini API预付费结算功能逐步启用](https://blog.rustfisher.com/news/google-prepay-for-the-gemini-api-20260416/) | 预付费账单 Google AI Studio 对 Gemini API 的付费方式进行了重大更新 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
 | 2026-04-15 | [奇怪的社会偏离感](https://zhangke.space/%e5%a5%87%e6%80%aa%e7%9a%84%e7%a4%be%e4%bc%9a%e5%81%8f%e7%a6%bb%e6%84%9f/?utm_source=rss&utm_medium=rss&utm_campaign=%25e5%25a5%2587%25e6%2580%25aa%25e7%259a%2584%25e7%25a4%25be%25e4%25bc%259a%25e5%2581%258f%25e7%25a6%25bb%25e6%2584%259f) | 这几年我逐渐发现自己有个比较奇怪的心理活动，而且最近我发现这种心理在很多人身上都会出现。 一个典型的表现是，当 […] The post 奇怪的社会偏离感 first appeared on 张可的博客 . |
 | 2026-04-15 | [文章选题汇总](https://www.xiaozonglin.cn/article-potential-topics/) | 我是一个喜欢立 Flag，但是有时没什么动力来推进选题和项目。写个置顶文章，就当是我写过了。 ICanMana […] 文章选题汇总 最先出现在 林林杂语 。 |
