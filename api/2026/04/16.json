@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "记录自己做的第一个 iOS App 的喜悦",
+    "url": "https://lomus.cc/archives/749",
+    "date": "2026-04-16T09:51:03Z",
+    "description": "AI coding 火了很久了，我也经常用 AI 来做一些工作上用的小工具，但这些工具基本都是部署在服务器上的 […] 记录自己做的第一个 iOS App 的喜悦 最先出现在 Lumos's Blog 。"
+  },
+  {
     "title": "2026 听音",
     "url": "https://z.arlmy.me/posts/YearlyAlbums/YearlyAlbums_2026/",
     "date": "2026-04-16T03:54:55Z",
@@ -75,7 +81,7 @@
     "title": "Claude Code使用后的感受：独立编程、日常助手与深度定制",
     "url": "https://11010.net/p/claude-code-used-feel/",
     "date": "2026-04-15T06:19:00Z",
-    "description": "用了一个多月 Claude Code 后，记录一下哪些认知变了。 为什么写这篇后续 这几个月持续在用 Claude Code ，确实有一些新的感受。如果用一句话来总结：“强烈推荐体验”。 最近经常看到关于前同事被蒸馏成 token 、 xxx.skill ，本来想用下面这张图片做博客首图的，想了想这样非常不尊重事实，一味地追求哗众取众，早晚都会遍体鳞伤。 Claude 的能力确实非常强大，但不要为此而焦虑，学会利用好这个工具，让工具来武装自己才是硬道理。个人非常认同李想这句话：“ 前提是顶级专家要全面拥抱Agent，指望AI和Agent抹平专业价值差距的观点，纯属做梦。普通水平和顶级专家在非AI时代的差距是100倍，AI时代会扩大到10000倍 ”。 下面 GitHub 项目有很多有意思的 skills https://github.com/tmstack/awesome-persona-skills?tab=readme-ov-file 先回应关于封号 上篇博客评论区最多的问题不是技术相关的，而是——“会不会封号”。毕竟订阅不便宜，被封一次挺肉疼的，而且戒掉 Claude 的瘾也很痛"
+    "description": "用了一个多月 Claude Code 后，记录一下哪些认知变了。 为什么写这篇后续 最近深度使用 Claude Code ，确实有一些新的感受。如果用一句话来总结：“强烈推荐体验”。 最近经常看到关于前同事被蒸馏成 token 、 xxx.skill ，本来想用下面这张图片做博客首图的，想了想这样非常不尊重事实，一味地追求哗众取众，早晚都会遍体鳞伤。 Claude 的能力确实非常强大，但不要为此而焦虑，学会利用好这个工具，让工具来武装自己才是硬道理。个人非常认同李想这句话：“ 前提是顶级专家要全面拥抱Agent，指望AI和Agent抹平专业价值差距的观点，纯属做梦。普通水平和顶级专家在非AI时代的差距是100倍，AI时代会扩大到10000倍 ”。 下面 GitHub 项目有很多有意思的 skills https://github.com/tmstack/awesome-persona-skills?tab=readme-ov-file 先回应关于封号 上篇博客评论区最多的问题不是技术相关的，而是——“会不会封号”。毕竟订阅不便宜，被封一次挺肉疼的，而且戒掉 Claude 的瘾也很痛苦。"
   },
   {
     "title": "emacs-合并dired中pdf文件",

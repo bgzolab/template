@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-16 | [记录自己做的第一个 iOS App 的喜悦](https://lomus.cc/archives/749) | AI coding 火了很久了，我也经常用 AI 来做一些工作上用的小工具，但这些工具基本都是部署在服务器上的 […] 记录自己做的第一个 iOS App 的喜悦 最先出现在 Lumos's Blog 。 |
 | 2026-04-16 | [2026 听音](https://z.arlmy.me/posts/YearlyAlbums/YearlyAlbums_2026/) | 「2026 年阅读短评备份。」 |
 | 2026-04-16 | [自卑的人在恐惧什么？](https://mobius.blog/22784.html) | 今天的文章标题，可不是什么“心灵鸡汤”式的标题，就是纯粹地（对部分人来说更显冒犯地）在聊“自卑”这件事。 聊起 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-16 | [2026 观影](https://z.arlmy.me/posts/YearlyMovies/YearlyMovies_2026/) | 「2026 观影短评备份。」 |
@@ -32,7 +33,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-15 | [文章选题汇总](https://www.xiaozonglin.cn/article-potential-topics/) | 我是一个喜欢立 Flag，但是有时没什么动力来推进选题和项目。写个置顶文章，就当是我写过了。 ICanMana […] 文章选题汇总 最先出现在 林林杂语 。 |
 | 2026-04-15 | [AI Infra：2026 Token 经济生态分析（一）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-One.html) | 一、Token 的三种“商品形态”类型产生位置谁付钱价值体现raw token模型推理层平台 / 开发者成本中心（GPU 时间）structured token（带上下文）RAG / Agent... |
 | 2026-04-15 | [我为什么关闭“友情链接”？](https://mobius.blog/22841.html) | 您猜怎么着～这个系列居然还在继续。 需要特别强调一下，更早接触莫比乌斯的朋友应该很清楚：我并没有公开过所谓的“ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-15 | [Claude Code使用后的感受：独立编程、日常助手与深度定制](https://11010.net/p/claude-code-used-feel/) | 用了一个多月 Claude Code 后，记录一下哪些认知变了。 为什么写这篇后续 这几个月持续在用 Claude Code ，确实有一些新的感受。如果用一句话来总结：“强烈推荐体验”。 最近经常看到关于前同事被蒸馏成 token 、 xxx.skill ，本来想用下面这张图片做博客首图的，想了想这… |
+| 2026-04-15 | [Claude Code使用后的感受：独立编程、日常助手与深度定制](https://11010.net/p/claude-code-used-feel/) | 用了一个多月 Claude Code 后，记录一下哪些认知变了。 为什么写这篇后续 最近深度使用 Claude Code ，确实有一些新的感受。如果用一句话来总结：“强烈推荐体验”。 最近经常看到关于前同事被蒸馏成 token 、 xxx.skill ，本来想用下面这张图片做博客首图的，想了想这样非… |
 | 2026-04-15 | [emacs-合并dired中pdf文件](https://blog.prayhand13013.top/20260415T113509--emacs-合并dired中pdf文件__blog.html) |  |
 | 2026-04-15 | [Qwen3 ASR 流式转写 Docker 懒人整合包](https://dsx2016.com/qwen3-asr-streaming-transcription/) | 前言 本文是第二个docker懒人包，依旧是win兼容问题，不得不用docker 这个懒人包有40GB左右，在... Qwen3 ASR 流式转写 Docker 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-15 | [积极心态是一种选择，而不是行动的结果](https://blog.rustfisher.com/reading/promotion/fake-being-happy-and-look-for-the-positive-in-each-situation/) | “假装快乐直到真正快乐”这句话真的管用。只要假装快乐，并在每件事中寻找积极的一面，你的视角就会改变。 |
