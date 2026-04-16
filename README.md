@@ -24,6 +24,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-16 | [你得先学会生活 Chat with PY](https://z.arlmy.me/posts/Chat/Chat_SandPY_20260407/) | 「一次闲聊。」 |
 | 2026-04-16 | [Album#34 - THIS MUSIC MAY CONTAIN HOPE.](https://taxodium.ink/album-34.html) | Album#34 THIS MUSIC MAY CONTAIN HOPE. 图1 《THIS MUSIC MAY CONTAIN HOPE.》专辑封面 专辑信息 专辑名称： THIS MUSIC MAY CONTAIN HOPE. 歌手： RAYE 年份： 2026-03-27 风格： Jazz,… |
 | 2026-04-16 | [记录自己做的第一个 iOS App 的喜悦](https://lomus.cc/archives/749) | AI coding 火了很久了，我也经常用 AI 来做一些工作上用的小工具，但这些工具基本都是部署在服务器上的 […] 记录自己做的第一个 iOS App 的喜悦 最先出现在 Lumos's Blog 。 |
+| 2026-04-16 | [emacs-自动识别org-heading里的中文时间戳](https://blog.prayhand13013.top/20260416T165615--emacs-自动识别org-heading里的中文时间戳__blog.html) |  |
 | 2026-04-16 | [2026 听音](https://z.arlmy.me/posts/YearlyAlbums/YearlyAlbums_2026/) | 「2026 年听音短评备份。」 |
 | 2026-04-16 | [自卑的人在恐惧什么？](https://mobius.blog/22784.html) | 今天的文章标题，可不是什么“心灵鸡汤”式的标题，就是纯粹地（对部分人来说更显冒犯地）在聊“自卑”这件事。 聊起 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-16 | [2026 观影](https://z.arlmy.me/posts/YearlyMovies/YearlyMovies_2026/) | 「2026 观影短评备份。」 |
