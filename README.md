@@ -117,13 +117,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-09 | [Jazz Jackrabbit updated](https://macsourceports.com/game/jazzjackrabbit) | The build of OpenJazz for Jazz Jackrabbit has been updated to version 20260301 of the project |
 | 2026-04-09 | [Chris Sawyer's Locomotion updated](https://macsourceports.com/game/locomotion) | The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.03.1 of the project |
 | 2026-04-09 | [介绍一下我自己做的图床 ImgAnt](https://blog.forecho.com/introducing-imgant-image-hosting.html) | 引言 先上地址： 网站： imgant.com Mac 客户端下载： imgant.com/download ImgAnt 是我自己做的一个图床，已经断断续续折腾了一段时间，现在已经可以正常给我自己写博客和做笔记用了，顺便也开放给其他人用。这篇文章就把我做这个项目的初衷、目前支持的功能、以及一些我自… |
-| 2026-04-08 | [Pix主题16：修复消息盒子默认显示“未读消息”](https://www.evan.xin/4928/) | 如上图：默认情况下总显示有未读消息（我是6条，还有别的数字） 现象 正常访问首页时，右上角消息角标默认显示 6 […] |
-| 2026-04-08 | [吃「新荣记」有感](https://blog.solazy.me/20260408/) | 吃个新荣记，发现草台班子真的是无处不在呢 |
-| 2026-04-08 | [春假游洛阳](https://krya.com/archives/1337.html) | 小孩放6天春假，但我没有抢到动车票，于是自驾前往，周五从学校门口接到小孩一路向北。我们经过了汉中、西安、洛阳；之后想既然河南都来了，何不顺便许昌看看胖东来；从许昌回成都又经过襄阳、安康；全程大约2500km. 自驾游只比动车旅游多一点好处，就是自由，任何地... |
-| 2026-04-08 | [CC Live - 围观别人用 Claude Code 写代码，实时直播 AI 编程过程](https://gptkit.eth.limo/65C7EE12-8E4B-412A-AE2C-1D6EDF066FBB/) | 想看别人是怎么用 Claude Code 写代码的？或者想开一个 AI 编程直播教学？ CC Live 就是干这个的。 它是什么 一个单文件 Node.js 服务器，零依赖。启动后把你正在运行的 Claude Code 会话实时推送到浏览器，别人打开链接就能围观你写代码的全过程。 核心功能 实时围观… |
-| 2026-04-08 | [西西弗斯会想操他推的巨石吗？](https://mobius.blog/22502.html) | 今天的话题有关性、性癖、性欲和一些可能引起世界观不适的内容，请酌情阅读。 好久没有写过这种不正经的标题了……但 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-08 | [Warzone 2100 updated](https://macsourceports.com/game/warzone2100) | The build of Warzone 2100 Project for Warzone 2100 has been updated to version 4.7.0 of the project |
-| 2026-04-08 | [Transport Tycoon Deluxe updated](https://macsourceports.com/game/ttd) | The build of OpenTTD for Transport Tycoon Deluxe has been updated to version 15.3 of the project |
 
 ## Vibe Coding
 
