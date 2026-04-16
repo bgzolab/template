@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-16 | [学习周刊-总第259期-2026年第16周](https://wiki.eryajf.net/pages/868c31/) | 如要阅读全文，点击标题跳转。 学习周刊-总第259期 &#124; gomi &#124; Claude-Cowork &#124; alaye-app &#124; Wegent &#124; DockAnchor &#124; mango-desk &#124; typora-theme-phycat &#124; office-website |
 | 2026-04-16 | [你得先学会生活 Chat with PY](https://z.arlmy.me/posts/Chat/Chat_SandPY_20260407/) | 「一次闲聊。」 |
 | 2026-04-16 | [Album#34 - THIS MUSIC MAY CONTAIN HOPE.](https://taxodium.ink/album-34.html) | Album#34 THIS MUSIC MAY CONTAIN HOPE. 图1 《THIS MUSIC MAY CONTAIN HOPE.》专辑封面 专辑信息 专辑名称： THIS MUSIC MAY CONTAIN HOPE. 歌手： RAYE 年份： 2026-03-27 风格： Jazz,… |
 | 2026-04-16 | [记录自己做的第一个 iOS App 的喜悦](https://lomus.cc/archives/749) | AI coding 火了很久了，我也经常用 AI 来做一些工作上用的小工具，但这些工具基本都是部署在服务器上的 […] 记录自己做的第一个 iOS App 的喜悦 最先出现在 Lumos's Blog 。 |
