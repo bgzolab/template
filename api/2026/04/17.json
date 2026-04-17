@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "真的会有人希望自己的父母早点死吗？",
+    "url": "https://mobius.blog/22788.html",
+    "date": "2026-04-17T02:16:06Z",
+    "description": "这可不是标题党。但当我在咖啡厅用 Notion 写下这个标题的时候，还是会觉得背后毛毛的，毕竟这是在公开场合。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
     "title": "一切都很流畅",
     "url": "https://www.linggandianbo.com/newsletter-119/",
     "date": "2026-04-16T23:30:00Z",
@@ -34,6 +40,12 @@
     "url": "https://lomus.cc/archives/749",
     "date": "2026-04-16T09:51:03Z",
     "description": "AI coding 火了很久了，我也经常用 AI 来做一些工作上用的小工具，但这些工具基本都是部署在服务器上的 […] 记录自己做的第一个 iOS App 的喜悦 最先出现在 Lumos's Blog 。"
+  },
+  {
+    "title": "emacs-智能识别org-heading里的中文时间戳",
+    "url": "https://blog.prayhand13013.top/20260416T165615--emacs-智能识别org-heading里的中文时间戳__blog.html",
+    "date": "2026-04-16T08:56:00Z",
+    "description": ""
   },
   {
     "title": "emacs-自动识别org-heading里的中文时间戳",
