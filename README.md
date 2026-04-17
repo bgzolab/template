@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-16 | [一切都很流畅](https://www.linggandianbo.com/newsletter-119/) | 流畅到我们开始在 AI 的怀里出溜｜灵感电波 #119 |
 | 2026-04-16 | [学习周刊-总第259期-2026年第16周](https://wiki.eryajf.net/pages/868c31/) | 如要阅读全文，点击标题跳转。 学习周刊-总第259期 &#124; gomi &#124; Claude-Cowork &#124; alaye-app &#124; Wegent &#124; DockAnchor &#124; mango-desk &#124; typora-theme-phycat &#124; office-website |
 | 2026-04-16 | [你得先学会生活 Chat with PY](https://z.arlmy.me/posts/Chat/Chat_SandPY_20260407/) | 「一次闲聊。」 |
 | 2026-04-16 | [Album#34 - THIS MUSIC MAY CONTAIN HOPE.](https://taxodium.ink/album-34.html) | Album#34 THIS MUSIC MAY CONTAIN HOPE. 图1 《THIS MUSIC MAY CONTAIN HOPE.》专辑封面 专辑信息 专辑名称： THIS MUSIC MAY CONTAIN HOPE. 歌手： RAYE 年份： 2026-03-27 风格： Jazz,… |
@@ -32,6 +33,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-16 | [2026 阅读](https://z.arlmy.me/posts/YearlyBooks/YearlyBooks_2026/) | 「2026 年阅读短评备份。」 |
 | 2026-04-16 | [Google宣布Gemini API预付费结算功能逐步启用](https://blog.rustfisher.com/news/google-prepay-for-the-gemini-api-20260416/) | 预付费账单 Google AI Studio 对 Gemini API 的付费方式进行了重大更新 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
+| 2026-04-16 | [AI 编程产品开始长成“工作台”，但离替代开发环境还早](https://www.imhaoliu.com/blog/202604/ai-coding-workbench-agent-management-cloud-execution) | Windsurf、Claude Code 和 Codex 这些产品最近共同指向一件事：AI 编程工具正在长成任务分发、云端执行和人工接管并存的工作台。真正的变化发生在默认入口、agent 管理和组织采用层面。 |
 | 2026-04-15 | [奇怪的社会偏离感](https://zhangke.space/%e5%a5%87%e6%80%aa%e7%9a%84%e7%a4%be%e4%bc%9a%e5%81%8f%e7%a6%bb%e6%84%9f/?utm_source=rss&utm_medium=rss&utm_campaign=%25e5%25a5%2587%25e6%2580%25aa%25e7%259a%2584%25e7%25a4%25be%25e4%25bc%259a%25e5%2581%258f%25e7%25a6%25bb%25e6%2584%259f) | 这几年我逐渐发现自己有个比较奇怪的心理活动，而且最近我发现这种心理在很多人身上都会出现。 一个典型的表现是，当 […] The post 奇怪的社会偏离感 first appeared on 张可的博客 . |
 | 2026-04-15 | [情绪上的事儿，不要急着下结论](https://blog.solazy.me/20260415/) | 又要聊情绪管理的话题了 |
 | 2026-04-15 | [文章选题汇总](https://www.xiaozonglin.cn/article-potential-topics/) | 我是一个喜欢立 Flag，但是有时没什么动力来推进选题和项目。写个置顶文章，就当是我写过了。 ICanMana […] 文章选题汇总 最先出现在 林林杂语 。 |
@@ -111,24 +113,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-10 | [为什么跟巨婴讲道理一定会“输”？](https://mobius.blog/22544.html) | 闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-10 | [KMP 字符串匹配可视化](https://gallery.selfboot.cn/zh/algorithms/kmp) | 通过交互式可视化学习 KMP 字符串匹配算法，同时理解 LPS 前缀表构建过程，以及失配时如何利用前缀信息完成快速跳转。 |
 | 2026-04-10 | [OpenAI推出100美元每月的Codex Pro套餐](https://blog.rustfisher.com/news/news-openai-20260410-codex-price/) | OpenAI推出了全新的每月100美元的专业版套餐。该套餐提供的Codex使用量是Plus套餐的5倍，最适合长时间、高强度的Codex使用。 |
-| 2026-04-09 | [注意力不是问题，逃避表达才是](https://www.linggandianbo.com/newsletter-118/) | 关于输入、语言和判断的一次重新理解｜灵感电波 #118 |
-| 2026-04-09 | [学习周刊-总第258期-2026年第15周](https://wiki.eryajf.net/pages/323cfa/) | 如要阅读全文，点击标题跳转。 学习周刊-总第258期 &#124; action-tmate &#124; unihub &#124; happy &#124; hapi &#124; LiteMonitor &#124; EasyAccounts &#124; nginxpulse &#124; zjump &#124; harlequin &#124; AgentVerse &#124; mail-st… |
-| 2026-04-09 | [6 Days and 5 Nights of Spring Leisure in Jinghong Xishuangbanna](https://victor42.eth.limo/post-en/trip-to-xishuangbanna/) | Visiting Xishuangbanna in late March was a brilliant decision; our family of three returned completely fulfilled. You might not believe it, but I actu… |
-| 2026-04-09 | [西双版纳景洪春季休闲6天5夜](https://victor42.eth.limo/post/trip-to-xishuangbanna/) | 3月底去西双版纳是非常正确的选择，一家三口尽兴而归。 说出来你可能不信，我甚至专门统计分析过杭州到西双版纳的历史机票价格数据。没什么新结论，一年当中有4个价格高峰：春节、泼水节、暑假、国庆，在春节到泼水节之间是一个明显的低谷，甚至可能是全年最低的。这时候请假去玩，非常划算。 我一直觉得云南省的地图像… |
-| 2026-04-09 | [FlowMouse 心流鼠标手势 - 比 CrxMouse 更流畅好用的开源浏览器插件 (超级拖拽)](https://www.iplaysoft.com/flowmouse.html) | 如果你习惯使用「 鼠标手势 」功能，估计是这辈子也很难戒掉了。因为只需 右键 随手一划，就能迅速流畅执行各种操作，如浏览器的后退、刷新、关闭标签页，全都单手搞定，超省心。 尤其对长期和电脑 办公 的人来说，日积月累下来能节省大量精力消耗。而最近 Chrome 上老牌的鼠标手势插件 CrxMouse… |
-| 2026-04-09 | [吃灰两年的小床，终于被宠幸了](https://blog.solazy.me/20260409/) | 说个猫奴才会懂的事儿 |
-| 2026-04-09 | [Quake updated](https://macsourceports.com/game/quake) | The build of vkQuake for Quake has been updated to version 1.34.1 of the project |
-| 2026-04-09 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.20 of the project |
-| 2026-04-09 | [Docker版CLIProxyAPI部署](https://blog.196000.xyz/2026/2026-04-09-develop-cliproxyapi.html) | Docker 版配置文件 |
-| 2026-04-09 | [paddleocr PP-StructureV3 pdf转md 懒人整合包 gpu可用](https://dsx2016.com/paddleocr-pp-structurev3-pdf-to-markdown-conversion-gpu-supported/) | 前言 上一期内容记录了paddleocr PP-StructureV3 pdf转md 懒人整合包 cpu可用 ... paddleocr PP-StructureV3 pdf转md 懒人整合包 gpu可用 最先出现在 大师兄2016 。 |
-| 2026-04-09 | [CSS Naked Day 2026](https://taxodium.ink/css-naked-day-2026.html) | CSS Naked Day 2026 4 月 9 日是 CSS Naked Day ，庆祝这一天，可以将网站的 CSS 全部移除，「赤裸」地展示网站的内容。 CSS 赤裸日背后的理念是推广 Web 标准。简单明了。这包括正确使用 HTML、语义化标记、良好的层级结构，当然，还有那个经典的文字游戏。用… |
-| 2026-04-09 | [emacs-配置windows下的sis](https://blog.prayhand13013.top/20260409T140325--emacs-配置windows下的sis__blog.html) |  |
-| 2026-04-09 | [美国Apple官网购买礼品卡订阅 ChatGPT Plus](https://blog.yasking.org/a/apple-gift-card-chat-gpt.html) | 使用美国苹果官方售卖的礼品卡订阅 ChatGPT 是很稳妥、安全的方案（适用于没有海外手机号、有美区 Apple 账户且想要付费使用的 … |
-| 2026-04-09 | [Star Wars Jedi Knight: Jedi Academy updated](https://macsourceports.com/game/swjkja) | The build of OpenJK (Multiplayer) for Star Wars Jedi Knight: Jedi Academy has been updated to the latest code of the project |
-| 2026-04-09 | [Star Wars Jedi Knight II: Jedi Outcast updated](https://macsourceports.com/game/swjk2) | The build of OpenJO (OpenJK Project, Single Player) for Star Wars Jedi Knight II: Jedi Outcast has been updated to the latest code of the project |
-| 2026-04-09 | [Jazz Jackrabbit updated](https://macsourceports.com/game/jazzjackrabbit) | The build of OpenJazz for Jazz Jackrabbit has been updated to version 20260301 of the project |
-| 2026-04-09 | [Chris Sawyer's Locomotion updated](https://macsourceports.com/game/locomotion) | The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.03.1 of the project |
-| 2026-04-09 | [介绍一下我自己做的图床 ImgAnt](https://blog.forecho.com/introducing-imgant-image-hosting.html) | 引言 先上地址： 网站： imgant.com Mac 客户端下载： imgant.com/download ImgAnt 是我自己做的一个图床，已经断断续续折腾了一段时间，现在已经可以正常给我自己写博客和做笔记用了，顺便也开放给其他人用。这篇文章就把我做这个项目的初衷、目前支持的功能、以及一些我自… |
 
 ## Vibe Coding
 
