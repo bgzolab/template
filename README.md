@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-17 | [Album#35 - The Gift](https://taxodium.ink/album-35.html) | Album#35 The Gift 图1 《The Gift (Day Version)》专辑封面 专辑信息 专辑名称： The Gift (Day Version) 歌手： Joyce Cheung 年份： 2026-04-06 风格： 钢琴曲、纯音乐 时长： 约 45 分钟 Joyce Cheu… |
 | 2026-04-17 | [真的会有人希望自己的父母早点死吗？](https://mobius.blog/22788.html) | 这可不是标题党。但当我在咖啡厅用 Notion 写下这个标题的时候，还是会觉得背后毛毛的，毕竟这是在公开场合。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-16 | [一切都很流畅](https://www.linggandianbo.com/newsletter-119/) | 流畅到我们开始在 AI 的怀里出溜｜灵感电波 #119 |
 | 2026-04-16 | [学习周刊-总第259期-2026年第16周](https://wiki.eryajf.net/pages/868c31/) | 如要阅读全文，点击标题跳转。 学习周刊-总第259期 &#124; gomi &#124; Claude-Cowork &#124; alaye-app &#124; Wegent &#124; DockAnchor &#124; mango-desk &#124; typora-theme-phycat &#124; office-website |
