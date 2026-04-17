@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-17 | [Gaming to Stay Sane](https://www.geedea.pro/en/article/gaming-for-sanity/) | I’ve been playing a lot of DST lately, pushing towards 1000 hours of total play time. It’s odd that I actually stopped playing video games for months… |
 | 2026-04-17 | [Cloud gaming: Shadow vs GeForce Now](https://anotherdayu.com/shadow-vs-geforcenow/) | Cloud gaming is changing so quickly that even Reddit discussions from just seven months ago already feel outdated. |
 | 2026-04-17 | [日本关西系列｜Day 3 天授庵、禅林寺与排水渠](https://blog.yasking.org/a/series-kansai-travel-day3.html) | 早上起来，又来到了这家名为 Fresco 的超市 吸烟有害健康，买了两条 Seven Stars 给老父亲们，他家不支持支付宝和微信，我用的现金。 在 … |
 | 2026-04-17 | [快乐的死](https://www.geedea.pro/library/2026/la-mort-heureuse/) | 一本没有太多情节，以主人公的自我意识为主导的哲学或心理小说，主题显而易见，关于快乐、生命和死亡，当然还有活着的意义。《快乐的死》是加缪 24 岁写下的小说，也是他的处女作。尽管我对我最喜欢的作家多少有些滤镜（这话不是说说的，我现在坐的地方的左右两边都贴着加缪的海报），但这部小说的确不算出彩。给三分太… |
