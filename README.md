@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-18 | [Memos #2026-04-17](https://www.taober.blog/memos) | 23:26 吃饭喝酒聊天真是太快乐了！ |
 | 2026-04-17 | [Gaming to Stay Sane](https://www.geedea.pro/en/article/gaming-for-sanity/) | I’ve been playing a lot of DST lately, pushing towards 1000 hours of total play time. It’s odd that I actually stopped playing video games for months… |
 | 2026-04-17 | [Cloud gaming: Shadow vs GeForce Now](https://anotherdayu.com/shadow-vs-geforcenow/) | Cloud gaming is changing so quickly that even Reddit discussions from just seven months ago already feel outdated. |
 | 2026-04-17 | [日本关西系列｜Day 3 天授庵、禅林寺与排水渠](https://blog.yasking.org/a/series-kansai-travel-day3.html) | 早上起来，又来到了这家名为 Fresco 的超市 吸烟有害健康，买了两条 Seven Stars 给老父亲们，他家不支持支付宝和微信，我用的现金。 在 … |
@@ -53,7 +54,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-15 | [积极心态是一种选择，而不是行动的结果](https://blog.rustfisher.com/reading/promotion/fake-being-happy-and-look-for-the-positive-in-each-situation/) | “假装快乐直到真正快乐”这句话真的管用。只要假装快乐，并在每件事中寻找积极的一面，你的视角就会改变。 |
 | 2026-04-15 | [美国缅因州议员通过禁令，禁止大型数据中心至2027年底](https://blog.rustfisher.com/news/news-us-maine-bill-20260415/) | 该法案将禁止在2027年底之前建设耗电量超过20兆瓦的发电中心，目前已提交给州长。 |
 | 2026-04-15 | [独立游戏简评 Vol.4](https://bluepika.life/blog/indie-game-notes-4) | 继续写写一些之前玩过的独立游戏，部分内容含有剧透，特别是以下提到的解谜游戏。 |
-| 2026-04-15 | [Memos #2026-04-14](https://www.taober.blog/memos) | 21:54 上班第一天，开了三个会，一切良好，有些激动甚至，想大干一场！ 今天基金依旧小涨！ |
 | 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
 | 2026-04-14 | [小猫咪也有自己的规划](https://blog.solazy.me/20260414/) | 今天分享一下我对我家猫新的了解 |
 | 2026-04-14 | [sam3 提示词 图片分割和视频分割 docker 懒人整合包](https://dsx2016.com/sam3-prompts-image-and-video-segmentation/) | 前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。 |
@@ -110,17 +110,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-11 | [有毒](https://www.geedea.pro/library/2026/venomous/) | 读起来很畅快的科普书籍，有不少关于毒素和毒物的知识和观点都相当有趣，比如人类之所以进化出了强大的大脑可能是为了躲避毒蛇而进化出了超强的视力，而视力对大脑的要求很高。总之是很有意思的一本书，很好地喂养了我的好奇心。 一般来说，读到科普书籍，我关注的第一件事就是作者有没有罗列参考文献，其次是作者自己原本… |
 | 2026-04-11 | [基于 Hermes Agent 的企业网站开发实践](https://krya.com/archives/hermes-enterprise-website.html) | ## 前言 因为没有Cursor和Claude，最近使用 Hermes Agent 完成了一个企业网站的开发项目，从需求分析到代码部署，全程由 AI 助手协助完成。这篇文章总结一下开发过程中的技术要点和实践经验。 项目需求 为一个企业开发官方网站，需要以... |
 | 2026-04-11 | [噪点](https://mobius.blog/22549.html) | 此时此刻我正在咖啡厅码字，在左眼的余光之中，能看到一个正在跟别人视频通话的女人，以及一条正在翘着二郎腿摇晃的腿 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-10 | [PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调](https://dsx2016.com/paddleocr-vl-1-5-pdf-to-md-conversion-ui-refinements/) | 前言 本期依旧是把fastapi的界面改为gradio界面 原来的fastapi适合api调用，现在的grad... PaddleOCR-VL-1.5 PDF转MD 懒人整合包 界面微调 最先出现在 大师兄2016 。 |
-| 2026-04-10 | [关于偶遇的巧合 IV](https://blog.solazy.me/20260410/) | 今天又有偶遇！ |
-| 2026-04-10 | [[壹手观点]品牌设计的“表达危机”](https://www.iyeslogo.com/the-expression-crisis-in-brand-design/) | 设计应超越直接表达，通过留白、节奏控制和具体语言重新建立与用户的情感连接 |
-| 2026-04-10 | [Tauri 应用苹果签名踩坑实录](https://ssshooter.com/tauri-mac-sign-and-build/) | 深度解析 Tauri macOS 应用签名与打包流程，涵盖 CSR/CER/P12 证书详解、Notarization 公证及 App Store 上架实战，助你快速解决权限配置、证书错误等构建难题。 |
-| 2026-04-10 | [2026.4.10](https://www.justzht.com/2026-4-10/) | Cayman 可能是之前修车厂拆装保险杠时的手艺问题，驻车距离传感器过了几周突然坏了，又扔回 Porsche Fremont 修；然后最近没什 |
-| 2026-04-10 | [ZooKeeper 高可用集群部署](https://199604.com/3563) | ZooKeeper 高可用集群部署 配置说明 副本数: 3（生产环境高可用） 持久化: 数据目录 10Gi + […] |
-| 2026-04-10 | [会讲故事的VC：好莱坞传奇人物+硅谷高管，如何悄然打造出业绩强劲的低调风投WndrCo？](https://wenfeixiang.com/2026/04/the-storytellers-vc-wndrco/) | 叙事，对于创业者和投资人一直都很重要，尤其是在早期投资阶段。在硅谷就有这么一家非常低调的VC、主打叙事逻辑，1 […] |
-| 2026-04-10 | [什么毁了 JavaScript？](https://www.geedea.pro/article/js-problem/) | JavaScript 虽然不是我的启蒙语言，但绝对是对我影响最大的编程语言之一。半年以前，我的首选语言就是它。如今如果要做正经的前端开发工作，就不可能离得开 JS 或 TS。在 TIOBE 排行榜，JS 稳居第六，只落后于人尽皆知的 Python 和 C 系语言， 还有万恶的 Java 。由于太过流… |
-| 2026-04-10 | [为什么跟巨婴讲道理一定会“输”？](https://mobius.blog/22544.html) | 闲鱼的事儿还没完。前情提要一下，有人因为没看清楚产品信息，在买了一台国行版的 Switch 之后，在承认自己没 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-10 | [KMP 字符串匹配可视化](https://gallery.selfboot.cn/zh/algorithms/kmp) | 通过交互式可视化学习 KMP 字符串匹配算法，同时理解 LPS 前缀表构建过程，以及失配时如何利用前缀信息完成快速跳转。 |
-| 2026-04-10 | [OpenAI推出100美元每月的Codex Pro套餐](https://blog.rustfisher.com/news/news-openai-20260410-codex-price/) | OpenAI推出了全新的每月100美元的专业版套餐。该套餐提供的Codex使用量是Plus套餐的5倍，最适合长时间、高强度的Codex使用。 |
 
 ## Vibe Coding
 
