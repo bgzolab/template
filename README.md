@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-18 | [旧事重提：大学生“AI+信息素养”大赛参赛微记](https://www.xiaozonglin.cn/a-micro-journal-of-my-participation-in-the-university-student-ai-information-literacy-competition/) | 记录一下去年参加“AI+信息素养”大赛的过程，权当是水一篇文章。 旧事重提：大学生“AI+信息素养”大赛参赛微记 最先出现在 林林杂语 。 |
+| 2026-04-18 | [如何跟孩子讲学习的意义](https://blog.est.im/2026/stderr-14) | 缘起 本来在tg里刷到个 博主syhily 讲语言和文字，感觉这老哥知识好渊博。于是慕名点开他的𝕏，好家伙直接丢了个暴论，大概意思说 孩子问他为啥要学习，他想了半天发现不好解释，就说反正父母养育你，孩子能报答的就是努力学习。 我本来想翻一下原文的，发现 syhily 都销号跑路了。syhily自己也… |
 | 2026-04-18 | [Memos #2026-04-17](https://www.taober.blog/memos) | 23:26 吃饭喝酒聊天真是太快乐了！ |
 | 2026-04-17 | [Gaming to Stay Sane](https://www.geedea.pro/en/article/gaming-for-sanity/) | I’ve been playing a lot of DST lately, pushing towards 1000 hours of total play time. It’s odd that I actually stopped playing video games for months… |
 | 2026-04-17 | [Cloud gaming: Shadow vs GeForce Now](https://anotherdayu.com/shadow-vs-geforcenow/) | Cloud gaming is changing so quickly that even Reddit discussions from just seven months ago already feel outdated. |
