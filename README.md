@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-18 | [开源了一个 Hugo 主题，专门用来展示 AI Skill](https://blog.debuginn.com/p/hugo-theme-skills/) | 大家好呀，我是 Meng小羽。 最近一直在折腾 AI 工作流，用 Hermes 这类 AI 助手越用越深，手里的 skill 攒了一大堆——说白了就是一堆"遇到这类问题该怎么做"的操作手册。写着写着就发现一个问题：这些 skill 全躺在本地吃灰，想找个地方展示出来，搜了一圈也没找到合适的现成方案。… |
+| 2026-04-18 | [1Password涨价后，别急着退订1Password，这个操作能帮你省25%](https://blog.renfei.net/posts/1626402130325676138) | 1Password涨价33%后，我差点转向Bitwarden，但一个关键问题让我最终选择继续续费。本文详细对比主流密码管理器，分析Passkey绑定风险，并分享如何用YubiKey提升安全性以及成功获取25%续费折扣的经验。 |
 | 2026-04-18 | [Album#36 - Quicksand](https://taxodium.ink/album-36.html) | Album#36 Quicksand 图1 《Quicksand》专辑封面 专辑信息 专辑名称： Quicksand 歌手： Bialystocks 年份： 2022-11-30 风格： 摇滚、日语流行 时长： 约 38 分钟 最近在看一部动画 違国日記 ，是一部治愈系的动画，主角「朝」父母因意外去… |
 | 2026-04-18 | [北京・莽山国家森林公园（2026）](https://blog.yasking.org/a/photos-beijing-mangshan.html) | 好久没爬山，我又觉着我行了 北京莽山国家森林公园之前一直是未开放的状态，周五一搜索，竟然开放了，下午没事儿拎着 … |
 | 2026-04-18 | [旧事重提：大学生“AI+信息素养”大赛参赛微记](https://www.xiaozonglin.cn/a-micro-journal-of-my-participation-in-the-university-student-ai-information-literacy-competition/) | 记录一下去年参加“AI+信息素养”大赛的过程，权当是水一篇文章。 旧事重提：大学生“AI+信息素养”大赛参赛微记 最先出现在 林林杂语 。 |
