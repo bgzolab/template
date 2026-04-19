@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-19 | [日常#13 - I Am Here 深圳 Live](https://taxodium.ink/nichijou-13.html) | 日常#13 I Am Here 深圳 Live 图1 陶玙和她的乐队成员。 萨克斯：陶玙、钢琴：Simon Groppe、低音提琴：Jim Monneau、打击乐：Diogo Alexandre。 陶玙身材修长，穿着一身黑衣，给我的感觉就像是《指环王》里的甘道夫，像是一个巫师。 看 是他拿下了华语年… |
 | 2026-04-19 | [Claude Code 使用](https://blog.196000.xyz/2026/2026-04-19-develop-claude-code.html) | C:\Users\xxx\.claude\settings.json |
 | 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
 | 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
