@@ -22,6 +22,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
+| 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-19 | [Memos #2026-04-18](https://www.taober.blog/memos) | 02:22 上秤称了一下，70.00kg，看来这几天在公司吃团餐还是有效果的。 尽管连着两天晚上都吃吃喝喝，还是比来深圳之前轻了三四斤☺️ 破案了，第一次上称不准，还是 71.5kg 左右🥲 21:06 补一下新桌面。 |
 | 2026-04-18 | [最近惦念 20260410](https://z.arlmy.me/posts/TILs/thoughts/20260410_Recently/) | 「人可以是很多人。」 |
 | 2026-04-18 | [Toots 415 2026 Apr.12 - Apr.18](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260418/) | 「悟空感应。」 |
 | 2026-04-18 | [开源了一个 Hugo 主题，专门用来展示 AI Skill](https://blog.debuginn.com/p/hugo-theme-skills/) | 大家好呀，我是 Meng小羽。 最近一直在折腾 AI 工作流，用 Hermes 这类 AI 助手越用越深，手里的 skill 攒了一大堆——说白了就是一堆"遇到这类问题该怎么做"的操作手册。写着写着就发现一个问题：这些 skill 全躺在本地吃灰，想找个地方展示出来，搜了一圈也没找到合适的现成方案。… |
@@ -30,7 +32,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-18 | [北京・莽山国家森林公园（2026）](https://blog.yasking.org/a/photos-beijing-mangshan.html) | 好久没爬山，我又觉着我行了 北京莽山国家森林公园之前一直是未开放的状态，周五一搜索，竟然开放了，下午没事儿拎着 … |
 | 2026-04-18 | [旧事重提：大学生“AI+信息素养”大赛参赛微记](https://www.xiaozonglin.cn/a-micro-journal-of-my-participation-in-the-university-student-ai-information-literacy-competition/) | 记录一下去年参加“AI+信息素养”大赛的过程，权当是水一篇文章。 旧事重提：大学生“AI+信息素养”大赛参赛微记 最先出现在 林林杂语 。 |
 | 2026-04-18 | [如何跟孩子讲学习的意义](https://blog.est.im/2026/stderr-14) | 缘起 本来在tg里刷到个 博主syhily 讲语言和文字，感觉这老哥知识好渊博。于是慕名点开他的𝕏，好家伙直接丢了个暴论，大概意思说 孩子问他为啥要学习，他想了半天发现不好解释，就说反正父母养育你，孩子能报答的就是努力学习。 我本来想翻一下原文的，发现 syhily 都销号跑路了。syhily自己也… |
-| 2026-04-18 | [Memos #2026-04-17](https://www.taober.blog/memos) | 23:26 吃饭喝酒聊天真是太快乐了！ |
 | 2026-04-17 | [Gaming to Stay Sane](https://www.geedea.pro/en/article/gaming-for-sanity/) | I’ve been playing a lot of DST lately, pushing towards 1000 hours of total play time. It’s odd that I actually stopped playing video games for months… |
 | 2026-04-17 | [Cloud gaming: Shadow vs GeForce Now](https://anotherdayu.com/shadow-vs-geforcenow/) | Cloud gaming is changing so quickly that even Reddit discussions from just seven months ago already feel outdated. |
 | 2026-04-17 | [日本关西系列｜Day 3 天授庵、禅林寺与排水渠](https://blog.yasking.org/a/series-kansai-travel-day3.html) | 早上起来，又来到了这家名为 Fresco 的超市 吸烟有害健康，买了两条 Seven Stars 给老父亲们，他家不支持支付宝和微信，我用的现金。 在 … |
@@ -111,14 +112,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-12 | [Stop Making Your Microservices Aggregate Each Other's Data](/posts/backend_composition_layer/) | How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session… |
 | 2026-04-12 | [图床迁移 Cloudflare R2](https://blog.bgzo.cc/20260412-migrate-img-host-to-cloudflare-r2.html) | 不得不说 CF 是互联网界的活菩萨，免费提供的对象存储量大管饱，对我这种没人看的小透明足够了： 存储：10GB/月免费，每增加 1GB/月收取 0.015 美元 A 类操作：100 万次操作/月免费，每增加 100 万次操作收取 4.50 美元 B 类操作：1000 万次操作/月免费，每增加 100… |
 | 2026-04-12 | [2026年第15周](https://blog.sakoamc.com/posts/2615/) | 题记：二零二六年的第十五周，人间四月，万物复苏。 |
-| 2026-04-11 | [标毅毕业--上山用力，下山随势](https://wiki.eryajf.net/pages/60cc18/) | 如要阅读全文，点击标题跳转。标毅，全称是 杭州西湖群山标准毅行线，是一条串联起西湖周边二十多座山峰的经典徒步路线，全长约 25 公里，累计爬升在 1200 米到 1500 米左右。它在户外圈名气极大，被公认为杭州户外徒步的 毕业考 和 朝圣级 路线。除了杭州本地之外，还有很多江浙沪的户外爱好者来走这… |
-| 2026-04-11 | [雨衣下的世界](https://yinji.org/the-world-under-the-raincoat.html) | 南昌哪儿都好，就是天气不太友好。清明前后，接连下了一个多礼拜的雨，衣服要晒上好几天才干，出门也变得格外麻烦。 我住的地方离公司有一段距离，平时上下班都是骑电动车。天晴的时候很舒服，迎面有风，头顶有阳光；可一到下雨天，就让人不免皱起眉头。要把雨衣翻出来穿上——且不说挡雨效果如何，光是套在身上就已经让人… |
-| 2026-04-11 | [周末流水账 0411](https://blog.solazy.me/20260411/) | 周六来了，今天的主题是观影 |
-| 2026-04-11 | [日本关西系列｜Day 2 京都的半日闲逛](https://blog.yasking.org/a/series-kansai-travel-day2.html) | 昨天走了能有两万步，早上不出意外的没起来。 快到中午买了一份咖喱猪排饭吃，下午计划着去京都溜达，在大阪市区有西 … |
-| 2026-04-11 | [当那级台阶消失时](https://www.evan.xin/4933/) | 权力是引导或影响他人行为或事件进程的能力。 我们大多数人谈论权力时，其实都在谈论职位。总监、组长、家长、前辈— […] |
-| 2026-04-11 | [有毒](https://www.geedea.pro/library/2026/venomous/) | 读起来很畅快的科普书籍，有不少关于毒素和毒物的知识和观点都相当有趣，比如人类之所以进化出了强大的大脑可能是为了躲避毒蛇而进化出了超强的视力，而视力对大脑的要求很高。总之是很有意思的一本书，很好地喂养了我的好奇心。 一般来说，读到科普书籍，我关注的第一件事就是作者有没有罗列参考文献，其次是作者自己原本… |
-| 2026-04-11 | [基于 Hermes Agent 的企业网站开发实践](https://krya.com/archives/hermes-enterprise-website.html) | ## 前言 因为没有Cursor和Claude，最近使用 Hermes Agent 完成了一个企业网站的开发项目，从需求分析到代码部署，全程由 AI 助手协助完成。这篇文章总结一下开发过程中的技术要点和实践经验。 项目需求 为一个企业开发官方网站，需要以... |
-| 2026-04-11 | [噪点](https://mobius.blog/22549.html) | 此时此刻我正在咖啡厅码字，在左眼的余光之中，能看到一个正在跟别人视频通话的女人，以及一条正在翘着二郎腿摇晃的腿 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
