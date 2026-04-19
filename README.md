@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-19 | [告别 kubectl 黑框，开源一个基于 Wails 打造 K8S 多集群管理工具](https://wiki.eryajf.net/pages/f91541/) | 如要阅读全文，点击标题跳转。做运维久了，你一定懂那种感觉：管理多个K8S集群时，经常需要使用kubectl xxx来进行管理，我想，你一定和我一样，深受其苦。此前我还在群里问过有没有优秀的多集群桌面端管理工具。当时还有群友打趣说让我自己开发一个。虽然我当时也是打趣回应了一下，但实际在我的内心，一直有… |
+| 2026-04-19 | [永久 1TB 空间！Koofr - 支持 WebDAV 的终身免费 10G 网盘 (Rclone / 挂载 OneDrive)](https://www.iplaysoft.com/p/koofr) | 最近一直在为几台 VPS 服务器数据备份在烦恼，还有考虑到 NAS、电脑文件的异地备份，想找一台大硬盘的 VPS 或用 S3 云存储，但找了一圈，大空间的 VPS 年费实在都太贵了。 最近挖到了一款“冷门”的宝藏云网盘 Koofr，它不仅有永久免费不限速 10G 空间，最关键是完美支持 WebDAV… |
 | 2026-04-19 | [我才四十岁，世界这么美好，我还想多看看呀。](https://cufezhusy.github.io/issue-20/) | 新工作慢慢开始进入正轨了。瑞典的老钱公司，规矩感觉偏保守。交易的风险不敢开得太大，基本每笔都是前司百分之二十的量。不过倒也好，这样不论仓位开得多大我都没有睡眠问题。新组的人应该很震惊我能把这么复杂的头寸的每天损益解释得这么清楚得，这完全要感谢前公司老板的严格要求和年复一年的问题：下个月把过去一年的损… |
 | 2026-04-19 | [周报 #107 - 基于 Multica 与 Impeccable 的开发/设计工作流](https://www.pseudoyu.com/posts/weekly_review_107) | 前言 本篇是对 2026-03-30 到 2026-04-19 这三周生活的记录与思考。 清明假期没出门，在家窝着写代码，清掉了很多 TODO，久违地感受到 Vibe Coding 带来的快乐；用 Impeccable 把 Web3Insight 还有一些网站重新设计了一下，效果出乎意料地好；也开始… |
 | 2026-04-19 | [旅行日记·大同](https://moreality.net/posts/31742/) | 石窟、煤炭、醋、刀削面、汾酒 |
@@ -28,6 +30,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-19 | [周末流水账 0419](https://blog.solazy.me/20260419/) | 今天是阳光非常明媚的一个周日！ |
 | 2026-04-19 | [关于「林卷」页面的详细说明](https://www.geedea.pro/article/on-linkroll/) | 本来不想淌浑水，像以往一样保持沉默是最好的，但我发现还是有不少人误解 林卷 页面存在的意义，以至于对页面内容的微小变动都产生了不必要的关注和猜想。所以，解释是必要的，尽管我有预感写完这篇文章之后我被误解的概率会只增不减，但至少我把话说明了。 极客死亡计划没有友情链接 本网站没有「友情链接」这个东西。… |
 | 2026-04-19 | [那个集记账、基金、股票于一体的APP，IOS测试上线](https://blog.ops-coffee.com/fire/financial-manager-app-update-and-ios-test-progress.html) | 财务管家APP本周更新了分红管理和存钱计划功能，iOS测试对VIP用户开放。安卓用户可直接下载安装，会员享受云同步等所有功能。 |
+| 2026-04-19 | [Vol.99 AI智能体基础设施全面升级与模型能力边界扩张的行业新动态](https://liduos.com/weekly/the-weekly-gradient-99) | 本期内容聚焦AI智能体从演示走向生产系统所需的基础设施建设，包括Cloudflare补齐计算、存储、编排、路由全栈能力，模型公司向操作系统演进，执行层工具解放至全设备，记忆系统从存储转向持续再解释，以及视觉Agent、AI社交等新范式的出现。 |
 | 2026-04-19 | [认识身边的植物](https://jubeny.com/2026/04/exploring-local-plants/) | 日常所见的花花草草，如果没有贴铭牌，几乎不认识。今天才想起或者说有兴致拍张照问问AI。拍下的第一张照片便是楼下的杜鹃花。 在河边的树下挖土时，再次有了探索的欲望，于是又拍下一些遇见的花草。 |
 | 2026-04-19 | [日常#13 - I Am Here 深圳 Live](https://taxodium.ink/nichijou-13.html) | 日常#13 I Am Here 深圳 Live 图1 陶玙和她的乐队成员。 萨克斯：陶玙、钢琴：Simon Groppe、低音提琴：Jim Monneau、打击乐：Diogo Alexandre。 陶玙身材修长，穿着一身黑衣，给我的感觉就像是《指环王》里的甘道夫，像是一个巫师。 看 是他拿下了华语年… |
 | 2026-04-19 | [Claude Code 使用](https://blog.196000.xyz/2026/2026-04-19-develop-claude-code.html) | C:\Users\xxx\.claude\settings.json |
