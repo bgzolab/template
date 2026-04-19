@@ -21,13 +21,18 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-19 | [关于「林卷」页面的详细说明](https://www.geedea.pro/article/on-linkroll/) | 本来不想淌浑水，像以往一样保持沉默是最好的，但我发现还是有不少人误解 林卷 页面存在的意义，以至于对页面内容的微小变动都产生了不必要的关注和猜想。所以，解释是必要的，尽管我有预感写完这篇文章之后我被误解的概率会只增不减，但至少我把话说明了。 极客死亡计划没有友情链接 本网站没有「友情链接」这个东西。… |
+| 2026-04-19 | [那个集记账、基金、股票于一体的APP，IOS测试上线](https://blog.ops-coffee.com/fire/financial-manager-app-update-and-ios-test-progress.html) | 财务管家APP本周更新了分红管理和存钱计划功能，iOS测试对VIP用户开放。安卓用户可直接下载安装，会员享受云同步等所有功能。 |
+| 2026-04-19 | [认识身边的植物](https://jubeny.com/2026/04/exploring-local-plants/) | 日常所见的花花草草，如果没有贴铭牌，几乎不认识。今天才想起或者说有兴致拍张照问问AI。拍下的第一张照片便是楼下的杜鹃花。 在河边的树下挖土时，再次有了探索的欲望，于是又拍下一些遇见的花草。 |
 | 2026-04-19 | [日常#13 - I Am Here 深圳 Live](https://taxodium.ink/nichijou-13.html) | 日常#13 I Am Here 深圳 Live 图1 陶玙和她的乐队成员。 萨克斯：陶玙、钢琴：Simon Groppe、低音提琴：Jim Monneau、打击乐：Diogo Alexandre。 陶玙身材修长，穿着一身黑衣，给我的感觉就像是《指环王》里的甘道夫，像是一个巫师。 看 是他拿下了华语年… |
 | 2026-04-19 | [Claude Code 使用](https://blog.196000.xyz/2026/2026-04-19-develop-claude-code.html) | C:\Users\xxx\.claude\settings.json |
 | 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
 | 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-19 | [2026年第16周：碎碎念、春、活生生的人](https://blog.sakoamc.com/posts/2616/) | 题记：重新审视生活，逃离无止境的攀登。 |
 | 2026-04-19 | [Memos #2026-04-18](https://www.taober.blog/memos) | 02:22 上秤称了一下，70.00kg，看来这几天在公司吃团餐还是有效果的。 尽管连着两天晚上都吃吃喝喝，还是比来深圳之前轻了三四斤☺️ 破案了，第一次上称不准，还是 71.5kg 左右🥲 21:06 补一下新桌面。 |
 | 2026-04-18 | [最近惦念 20260410](https://z.arlmy.me/posts/TILs/thoughts/20260410_Recently/) | 「人可以是很多人。」 |
 | 2026-04-18 | [Toots 415 2026 Apr.12 - Apr.18](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260418/) | 「悟空感应。」 |
+| 2026-04-18 | [Why Siloed Work Feels Suffocating in the Age of AI](https://predicate.pro/posts/siloed-work-ai/) | Forced cognitive downgrading hurts at any time. In 2026, it's also just bad strategy. |
 | 2026-04-18 | [周末流水账 0418](https://blog.solazy.me/20260418/) | 周六又来了！ |
 | 2026-04-18 | [开源了一个 Hugo 主题，专门用来展示 AI Skill](https://blog.debuginn.com/p/hugo-theme-skills/) | 大家好呀，我是 Meng小羽。 最近一直在折腾 AI 工作流，用 Hermes 这类 AI 助手越用越深，手里的 skill 攒了一大堆——说白了就是一堆"遇到这类问题该怎么做"的操作手册。写着写着就发现一个问题：这些 skill 全躺在本地吃灰，想找个地方展示出来，搜了一圈也没找到合适的现成方案。… |
 | 2026-04-18 | [1Password涨价后，别急着退订1Password，这个操作能帮你省25%](https://blog.renfei.net/posts/1626402130325676138) | 1Password涨价33%后，我差点转向Bitwarden，但一个关键问题让我最终选择继续续费。本文详细对比主流密码管理器，分析Passkey绑定风险，并分享如何用YubiKey提升安全性以及成功获取25%续费折扣的经验。 |

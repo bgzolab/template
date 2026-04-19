@@ -6,6 +6,24 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "关于「林卷」页面的详细说明",
+    "url": "https://www.geedea.pro/article/on-linkroll/",
+    "date": "2026-04-19T09:11:06Z",
+    "description": "本来不想淌浑水，像以往一样保持沉默是最好的，但我发现还是有不少人误解 林卷 页面存在的意义，以至于对页面内容的微小变动都产生了不必要的关注和猜想。所以，解释是必要的，尽管我有预感写完这篇文章之后我被误解的概率会只增不减，但至少我把话说明了。 极客死亡计划没有友情链接 本网站没有「友情链接」这个东西。我 不是 在重新定义友情链接，也不想要改变任何人，我只是没有友情链接这个东西。我不知道这样说够不够清楚了：极客死亡计划 没有 友情链接。 林卷页面里列出的博客链接，请读者看清楚了，我从来没有说过它是友情链接，我写的是「我常看的博客」。不要因为不少博客喜欢用「左邻右舍」这样的词代替「友情链接」四个字，就以为我说的也是一个意思。请读者再看得仔细一些，我是这样说明「我常看的博客」这一栏内容的： 以下内容直接从我的 RSS 阅读器导出的 OPML 文件生成，是我订阅的所有 RSS 源，包含我常读的博客和关注的媒体。每次构建时乱序输出。 所以，如果发现我添加了谁或者删除了谁，这不是因为我和对方达成了某种契约，友好地进行了交换，也不代表有任何矛盾和冲突发生。这是个相当中性且相当主观的过程：我发现了我觉得"
+  },
+  {
+    "title": "那个集记账、基金、股票于一体的APP，IOS测试上线",
+    "url": "https://blog.ops-coffee.com/fire/financial-manager-app-update-and-ios-test-progress.html",
+    "date": "2026-04-19T08:46:22Z",
+    "description": "财务管家APP本周更新了分红管理和存钱计划功能，iOS测试对VIP用户开放。安卓用户可直接下载安装，会员享受云同步等所有功能。"
+  },
+  {
+    "title": "认识身边的植物",
+    "url": "https://jubeny.com/2026/04/exploring-local-plants/",
+    "date": "2026-04-19T07:36:08Z",
+    "description": "日常所见的花花草草，如果没有贴铭牌，几乎不认识。今天才想起或者说有兴致拍张照问问AI。拍下的第一张照片便是楼下的杜鹃花。 在河边的树下挖土时，再次有了探索的欲望，于是又拍下一些遇见的花草。"
+  },
+  {
     "title": "日常#13 - I Am Here 深圳 Live",
     "url": "https://taxodium.ink/nichijou-13.html",
     "date": "2026-04-19T07:20:00Z",
@@ -30,6 +48,12 @@
     "description": "Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
   },
   {
+    "title": "2026年第16周：碎碎念、春、活生生的人",
+    "url": "https://blog.sakoamc.com/posts/2616/",
+    "date": "2026-04-19T00:00:00Z",
+    "description": "题记：重新审视生活，逃离无止境的攀登。"
+  },
+  {
     "title": "Memos #2026-04-18",
     "url": "https://www.taober.blog/memos",
     "date": "2026-04-19T00:00:00Z",
@@ -46,6 +70,12 @@
     "url": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260418/",
     "date": "2026-04-18T16:19:27Z",
     "description": "「悟空感应。」"
+  },
+  {
+    "title": "Why Siloed Work Feels Suffocating in the Age of AI",
+    "url": "https://predicate.pro/posts/siloed-work-ai/",
+    "date": "2026-04-18T16:00:00Z",
+    "description": "Forced cognitive downgrading hurts at any time. In 2026, it's also just bad strategy."
   },
   {
     "title": "周末流水账 0418",
