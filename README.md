@@ -21,11 +21,13 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-19 | [Claude Code 使用](https://blog.196000.xyz/2026/2026-04-19-develop-claude-code.html) | C:\Users\xxx\.claude\settings.json |
 | 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
 | 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-19 | [Memos #2026-04-18](https://www.taober.blog/memos) | 02:22 上秤称了一下，70.00kg，看来这几天在公司吃团餐还是有效果的。 尽管连着两天晚上都吃吃喝喝，还是比来深圳之前轻了三四斤☺️ 破案了，第一次上称不准，还是 71.5kg 左右🥲 21:06 补一下新桌面。 |
 | 2026-04-18 | [最近惦念 20260410](https://z.arlmy.me/posts/TILs/thoughts/20260410_Recently/) | 「人可以是很多人。」 |
 | 2026-04-18 | [Toots 415 2026 Apr.12 - Apr.18](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260418/) | 「悟空感应。」 |
+| 2026-04-18 | [周末流水账 0418](https://blog.solazy.me/20260418/) | 周六又来了！ |
 | 2026-04-18 | [开源了一个 Hugo 主题，专门用来展示 AI Skill](https://blog.debuginn.com/p/hugo-theme-skills/) | 大家好呀，我是 Meng小羽。 最近一直在折腾 AI 工作流，用 Hermes 这类 AI 助手越用越深，手里的 skill 攒了一大堆——说白了就是一堆"遇到这类问题该怎么做"的操作手册。写着写着就发现一个问题：这些 skill 全躺在本地吃灰，想找个地方展示出来，搜了一圈也没找到合适的现成方案。… |
 | 2026-04-18 | [1Password涨价后，别急着退订1Password，这个操作能帮你省25%](https://blog.renfei.net/posts/1626402130325676138) | 1Password涨价33%后，我差点转向Bitwarden，但一个关键问题让我最终选择继续续费。本文详细对比主流密码管理器，分析Passkey绑定风险，并分享如何用YubiKey提升安全性以及成功获取25%续费折扣的经验。 |
 | 2026-04-18 | [Album#36 - Quicksand](https://taxodium.ink/album-36.html) | Album#36 Quicksand 图1 《Quicksand》专辑封面 专辑信息 专辑名称： Quicksand 歌手： Bialystocks 年份： 2022-11-30 风格： 摇滚、日语流行 时长： 约 38 分钟 最近在看一部动画 違国日記 ，是一部治愈系的动画，主角「朝」父母因意外去… |
@@ -34,6 +36,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-18 | [如何跟孩子讲学习的意义](https://blog.est.im/2026/stderr-14) | 缘起 本来在tg里刷到个 博主syhily 讲语言和文字，感觉这老哥知识好渊博。于是慕名点开他的𝕏，好家伙直接丢了个暴论，大概意思说 孩子问他为啥要学习，他想了半天发现不好解释，就说反正父母养育你，孩子能报答的就是努力学习。 我本来想翻一下原文的，发现 syhily 都销号跑路了。syhily自己也… |
 | 2026-04-17 | [Gaming to Stay Sane](https://www.geedea.pro/en/article/gaming-for-sanity/) | I’ve been playing a lot of DST lately, pushing towards 1000 hours of total play time. It’s odd that I actually stopped playing video games for months… |
 | 2026-04-17 | [Cloud gaming: Shadow vs GeForce Now](https://anotherdayu.com/shadow-vs-geforcenow/) | Cloud gaming is changing so quickly that even Reddit discussions from just seven months ago already feel outdated. |
+| 2026-04-17 | [四月，院线电影看起来](https://blog.solazy.me/20260417/) | 想想下周又有我期待的电影登陆院线就开心！ |
 | 2026-04-17 | [日本关西系列｜Day 3 天授庵、禅林寺与排水渠](https://blog.yasking.org/a/series-kansai-travel-day3.html) | 早上起来，又来到了这家名为 Fresco 的超市 吸烟有害健康，买了两条 Seven Stars 给老父亲们，他家不支持支付宝和微信，我用的现金。 在 … |
 | 2026-04-17 | [快乐的死](https://www.geedea.pro/library/2026/la-mort-heureuse/) | 一本没有太多情节，以主人公的自我意识为主导的哲学或心理小说，主题显而易见，关于快乐、生命和死亡，当然还有活着的意义。《快乐的死》是加缪 24 岁写下的小说，也是他的处女作。尽管我对我最喜欢的作家多少有些滤镜（这话不是说说的，我现在坐的地方的左右两边都贴着加缪的海报），但这部小说的确不算出彩。给三分太… |
 | 2026-04-17 | [Album#35 - The Gift](https://taxodium.ink/album-35.html) | Album#35 The Gift 图1 《The Gift (Day Version)》专辑封面 专辑信息 专辑名称： The Gift (Day Version) 歌手： Joyce Cheung 年份： 2026-04-06 风格： 钢琴曲、纯音乐 时长： 约 45 分钟 Joyce Cheu… |
