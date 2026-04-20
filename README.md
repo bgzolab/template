@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-20 | [不做扫兴的“妈妈”](https://mobius.blog/22854.html) | 儿童教育里，有一句浓缩为经典的话：不做扫兴的父母。其基本原则就是把“否定性评价”转变为“支持性共情”。比如孩子 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-20 | [Memos #2026-04-19](https://www.taober.blog/memos) | 11:45 哈哈 |
 | 2026-04-19 | [告别 kubectl 黑框，开源一个基于 Wails 打造 K8S 多集群管理工具](https://wiki.eryajf.net/pages/f91541/) | 如要阅读全文，点击标题跳转。做运维久了，你一定懂那种感觉：管理多个K8S集群时，经常需要使用kubectl xxx来进行管理，我想，你一定和我一样，深受其苦。此前我还在群里问过有没有优秀的多集群桌面端管理工具。当时还有群友打趣说让我自己开发一个。虽然我当时也是打趣回应了一下，但实际在我的内心，一直有… |
 | 2026-04-19 | [永久 1TB 空间！Koofr - 支持 WebDAV 的终身免费 10G 网盘 (Rclone / 挂载 OneDrive)](https://www.iplaysoft.com/p/koofr) | 最近一直在为几台 VPS 服务器数据备份在烦恼，还有考虑到 NAS、电脑文件的异地备份，想找一台大硬盘的 VPS 或用 S3 云存储，但找了一圈，大空间的 VPS 年费实在都太贵了。 最近挖到了一款“冷门”的宝藏云网盘 Koofr，它不仅有永久免费不限速 10G 空间，最关键是完美支持 WebDAV… |
 | 2026-04-19 | [我才四十岁，世界这么美好，我还想多看看呀。](https://cufezhusy.github.io/issue-20/) | 新工作慢慢开始进入正轨了。瑞典的老钱公司，规矩感觉偏保守。交易的风险不敢开得太大，基本每笔都是前司百分之二十的量。不过倒也好，这样不论仓位开得多大我都没有睡眠问题。新组的人应该很震惊我能把这么复杂的头寸的每天损益解释得这么清楚得，这完全要感谢前公司老板的严格要求和年复一年的问题：下个月把过去一年的损… |
@@ -37,7 +39,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
 | 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-19 | [2026年第16周：碎碎念、春、活生生的人](https://blog.sakoamc.com/posts/2616/) | 题记：重新审视生活，逃离无止境的攀登。 |
-| 2026-04-19 | [Memos #2026-04-18](https://www.taober.blog/memos) | 02:22 上秤称了一下，70.00kg，看来这几天在公司吃团餐还是有效果的。 尽管连着两天晚上都吃吃喝喝，还是比来深圳之前轻了三四斤☺️ 破案了，第一次上称不准，还是 71.5kg 左右🥲 21:06 补一下新桌面。 |
 | 2026-04-18 | [最近惦念 20260410](https://z.arlmy.me/posts/TILs/thoughts/20260410_Recently/) | 「人可以是很多人。」 |
 | 2026-04-18 | [Toots 415 2026 Apr.12 - Apr.18](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260418/) | 「悟空感应。」 |
 | 2026-04-18 | [Why Siloed Work Feels Suffocating in the Age of AI](https://predicate.pro/posts/siloed-work-ai/) | Forced cognitive downgrading hurts at any time. In 2026, it's also just bad strategy. |
@@ -111,24 +112,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-13 | [AI泡沫破灭倒计时](https://blog.oospace.com/posts/2026-04-13/) | 历史回顾 |
 | 2026-04-13 | [写到哪儿算哪儿——动物直觉](https://mobius.blog/22553.html) | 文章还没有写标题，写到哪儿算哪儿。 此时此刻，我在咖啡厅的座位对面，有两个中年男人正在聊天。因为没有开通透模式 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-13 | [爷爷](https://1900.live/ye-ye/) | Photo by moke yong hui / Unsplash 清明我妈回老家祭祖了，他回来的这段时间就由我来照顾爷爷了。 爷爷前几年临近过年时意外中风，好在发现送医及时，影响不大，出院后行动、说话什么都没问题，基本上可以自理。 但是记忆力远不如从前了，刚出院的那会经常会记忆错乱，有时候明明在老… |
-| 2026-04-12 | [自由职业三个月“体验报告”](https://lomus.cc/archives/740) | 不知不觉，开启自由职业已经三个多月了，今天就来写写这三个多月的感受和进展。 但在写这个话题之前，我的拧巴人设又 […] 自由职业三个月“体验报告” 最先出现在 Lumos's Blog 。 |
-| 2026-04-12 | [360度带你看《超时空辉夜姬》联动KTV联动房间](https://www.wikimoe.com/post/tddw81oy) | 2026年4月26日，天气晴，今天去町田唱超时空辉夜姬联动KTV。 本来想发推文的，但是又觉得图片数量发推文又不大合适，那么就发一篇简短的博文吧！ 联动房间门口 光是门口的装饰就很让人激动呀！ 联动房间 首先是360°的全景。 细节照片。 大灯泡顶着两位角色，调整曝光费有些令人头疼。 联动菜单 只能… |
-| 2026-04-12 | [稻草人周刊 Vol.76](https://www.geedea.pro/weekly/76/) | 什么？已经是周日了吗？我想可能是因为我出于焦虑一直在逃避投简历找实习这件事情，一边逼自己做令人压力山大的事情，一边又想要逃走，总感觉不是很健康的心理状态呢。不过也不算坏事，毕竟还憋出来一篇 小说 （ 这就是痛苦驱动型作者啊 ）。这周要好一些了，因为开始通过玩《饥荒》、听 Paramore、读加缪和睡… |
-| 2026-04-12 | [邮件人周报 Vol.52](https://www.mailer.su/article/weekly-vol-52/) | 网易邮箱无法通过 IMAP 查看验证码邮件; Proton Mail 发布商业套件订阅; 美国区域 Gmail 用户获得修改用户名权限; 去中心化电子邮件 Dmail Network 宣布停止服务; NASA 宇航员在太空中也要解决 Outlook 故障; Google 强调 Gmail 中的 Ge… |
-| 2026-04-12 | [同班同学的名字（令和8年）](https://springwood.me/%e5%90%8c%e7%8f%ad%e5%90%8c%e5%ad%a6%e7%9a%84%e5%90%8d%e5%ad%97%ef%bc%88%e4%bb%a4%e5%92%8c8%e5%b9%b4%ef%bc%89/) | 令和时代出生的孩子，名字越来越多样化。 |
-| 2026-04-12 | [周末流水账 0412](https://blog.solazy.me/20260412/) | 周日快乐！ |
-| 2026-04-12 | [FE Bits Vol.31 &#124; axios 供应链攻击、JetStream 3.0 发布与视图过渡工具包](https://ysx.cosine.ren/weekly-31/) | 关于本周刊 本期网址 https://blog.cosine.ren/post/weekly-31 本周刊更新时间期望是在每周天。 推荐订阅本周刊的 RSS 。 公众号 前端周周谈 FE Bits，点击阅读原文链接可查看原文。 QQ 讨论小群 598022684 / Discord 群 本周刊文章内… |
-| 2026-04-12 | [复活节徒步小游——Styrsö岛](https://eduardoqian.com/archives/fu-huo-jie-xiao-you----solvikdao) | 从4月2日到4月10日是复活节假期，不巧的是在复活节前期，从海边来了不小的狂风大雨。于是在狂风结束的第二天，我就启程前往了位于城市西边的群岛上进行游览。 我一开始打算徒步的更南侧的Vrångö岛，但是不巧的是到码头的时候，前往Vrångö岛的轮渡还要等将近40分钟，于是临时调转方向前往了最大的岛St |
-| 2026-04-12 | [2026.4.12](https://www.justzht.com/2026-4-12/) | 周五的晚上，跑去和 HuaXia 继续喝酒，仍然是 Santana Row 的那家酒吧，原因无他 - 四月份了，AMEX 的 resy 季度额度又重置了，因此 |
-| 2026-04-12 | [AI 打破了原本公平的蠢](https://mobius.blog/22744.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-12 | [摘：《花间集》](https://z.arlmy.me/posts/Note/Note_ZhaoChongzuo_HuaJianJi/) | 「前蜀后蜀。」 |
-| 2026-04-12 | [Toots 414 2026 Apr.5 - Apr.11](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260411/) | 「春菜。」 |
-| 2026-04-12 | [那个集记账、基金、股票于一体的APP，又往前迈了一大步](https://blog.ops-coffee.com/fire/expense-funds-stock-integrated-finance-app.html) | 这款集记账、基金、股票于一体的财务管家APP近期更新，新增债务管理、私募基金支持、美股港股市场接入，并优化底层体验。 |
-| 2026-04-12 | [摘：《白》](https://z.arlmy.me/posts/Note/Note_GongShu_Bai/) | 「交易吧，以生的现金。」 |
-| 2026-04-12 | [Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装](https://dsx2016.com/qwen3-asr-all-in-one-package/) | 前言 从之前的fastapi转gradio界面，已经重新打包了3个左右的懒人包 核心是为了把编程api转为可视... Qwen3-ASR 多语言语音音乐歌曲识别 懒人整合包 重新安装 最先出现在 大师兄2016 。 |
-| 2026-04-12 | [Stop Making Your Microservices Aggregate Each Other's Data](/posts/backend_composition_layer/) | How It Started A few months ago, I was reviewing the dependency graph of one of our infrastructure services — an Auth service responsible for session… |
-| 2026-04-12 | [图床迁移 Cloudflare R2](https://blog.bgzo.cc/20260412-migrate-img-host-to-cloudflare-r2.html) | 不得不说 CF 是互联网界的活菩萨，免费提供的对象存储量大管饱，对我这种没人看的小透明足够了： 存储：10GB/月免费，每增加 1GB/月收取 0.015 美元 A 类操作：100 万次操作/月免费，每增加 100 万次操作收取 4.50 美元 B 类操作：1000 万次操作/月免费，每增加 100… |
-| 2026-04-12 | [2026年第15周](https://blog.sakoamc.com/posts/2615/) | 题记：二零二六年的第十五周，人间四月，万物复苏。 |
 
 ## Vibe Coding
 
