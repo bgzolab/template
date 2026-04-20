@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |
 | 2026-04-20 | [R#098 期待](https://blog.sakanano.moe/journals/random_098) | 2026.4.14 ~ 2026.4.20 |
 | 2026-04-20 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
 | 2026-04-20 | [甄仁岛还是荒掉了](https://kaix.in/2026/0420/) | 一直倒也没闲着，断断续续地给这个叫做 甄仁岛 的文字类游戏增补删改。不过最终还是要说放弃了，得承认，我的想象力还不足以支撑起一个有趣的游戏。 一开始 是想走叙事+解密的路线的，我给这个岛上的 29 位岛民都配备了独立的记忆系统，有各自的性格和背景故事，玩家通过与岛民的对话，了解他们，可以解开岛上隐藏… |
