@@ -6,6 +6,12 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "Open Agent SDK (Swift)：用原生 Swift 并发构建 AI Agent 应用",
+    "url": "https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/",
+    "date": "2026-04-20T02:08:18Z",
+    "description": "如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。 它是什么？ Open Agent SDK 用 Swift 6.1 编写，要求 macOS 13+。它在进程内跑完整个 Agent Loop：发送提示、解析响应、执行工具调用、把结果喂回 LLM，循环往复直到拿到最终答案。全程用原生 Swift 并发（async/await、AsyncStream）驱动。 项目灵感来自 open-agent-sdk-typescript ，把同样的 Agent 架构搬到了 Swift 生态。同系列还有 Go 版本。 快速上手 安装只需在 Package.swift 中添加依赖： dependencies: [ .package(url: \"https://github.com/terryso/open-agent-sdk-swift.git\", from: \""
+  },
+  {
     "title": "稻草人周刊 Vol.77",
     "url": "https://www.geedea.pro/weekly/77/",
     "date": "2026-04-20T01:58:46Z",
@@ -22,6 +28,12 @@
     "url": "https://www.taober.blog/memos",
     "date": "2026-04-20T00:00:00Z",
     "description": "11:45 哈哈"
+  },
+  {
+    "title": "已将博客从Typecho迁移到Astro",
+    "url": "https://krya.com/post/astro-sintu-theme/",
+    "date": "2026-04-20T00:00:00Z",
+    "description": "![astro](https://images.190808.xyz/as/post01/as-3.jpg) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最终选择了Astro. 静态博客的优势 1. 免费托管 - 除了域名，大厂给个人开发者提供了免费的托管服务。 2. 零维护 - 文章都是放到自己电脑，只要托管平台不倒闭，博客可以永久运行。 3. 预渲染 - 静态博客在部署前就已经生成了纯 HTML/CSS/JS 文件，也无后台。 4. 适配CDN - 由于全是静态文件，分发到全球边缘节点之后，用户访问毫秒级加载。 为什么选择 Astro 1. 静态优先 - 生成纯 HTML 文件，无需数据库，无需服务器。 2. 性能优异 - 默认零 JavaScript，加载速度极快。 3. 灵活性强 - 支持 Markdown、MDX、多种框架混用。 4. 生态活跃 - 社区活跃，文档完善，插件丰富。 适配Astro的Sintu单栏主题 这个Astro单栏模板主题由我自己设计并制作，现在"
   },
   {
     "title": "告别 kubectl 黑框，开源一个基于 Wails 打造 K8S 多集群管理工具",
