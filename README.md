@@ -31,6 +31,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-21 | [丑人为什么多作怪？](https://mobius.blog/22914.html) | 这并不是一个具有普遍性规律的“结论”，但有时候它会非常深刻地影响大家对于某一类型人的判断。既然人很难做到客观地 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-21 | [2026.4.20](https://www.justzht.com/2026-4-20/) | 又是一个周一，原本今天早上想要请假的，后来想说还是去好了。到公司之后熟悉了一会自己上周写的东西，然后 |
 | 2026-04-21 | [Amazon 与 Anthropico 达成50亿美元投资和计算协议，进一步加强合作](https://blog.rustfisher.com/news/amazon-will-invest-in-anthropic-20260421/) | 亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。 |
+| 2026-04-21 | [Complete Guide to Deploying FastGPT on Kubernetes](https://jaegerw2016.github.io//posts/2026/04/21/%E5%9C%A8Kubernetes%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2FastGPT%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html) | 背景FastGPT是一个基于LLM（大语言模型）的知识库问答系统，提供了开箱即用的知识库、多模态文件解析、工作流编排等功能。它支持多种大模型接入，可以快速构建企业级的AI知识库应用。在Kubernetes环境中部署FastGPT可以充... |
 | 2026-04-20 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.21 of the project |
 | 2026-04-20 | [Heroes of Might and Magic II updated](https://macsourceports.com/game/homm2) | The build of fheroes2 for Heroes of Might and Magic II has been updated to version 1.1.15 of the project |
 | 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |

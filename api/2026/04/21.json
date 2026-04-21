@@ -66,6 +66,12 @@
     "description": "亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。"
   },
   {
+    "title": "Complete Guide to Deploying FastGPT on Kubernetes",
+    "url": "https://jaegerw2016.github.io//posts/2026/04/21/%E5%9C%A8Kubernetes%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2FastGPT%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html",
+    "date": "2026-04-21T00:00:00Z",
+    "description": "背景FastGPT是一个基于LLM（大语言模型）的知识库问答系统，提供了开箱即用的知识库、多模态文件解析、工作流编排等功能。它支持多种大模型接入，可以快速构建企业级的AI知识库应用。在Kubernetes环境中部署FastGPT可以充..."
+  },
+  {
     "title": "Plants vs. Zombies updated",
     "url": "https://macsourceports.com/game/pvz",
     "date": "2026-04-20T22:25:16Z",
