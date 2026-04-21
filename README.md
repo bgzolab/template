@@ -21,11 +21,17 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-21 | [Agents 当道，我们都可以被蒸馏成 Skills](https://huhuhang.com/post/thinking/20260421) | 本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。 |
+| 2026-04-21 | [Tinkering with Home Network: N100 + PVE + iKuai + sing-box](https://missuo.me/posts/home-network-n100-sing-box/) | 最近搬了新家，顺手开了一条 2000M 的宽带，家里的网络设备也正好趁这个机会重新折腾一遍。这篇就当是一次记录，也顺便给以后留个备忘。 为什么没用 BE7200 当主路由 一开始为了省事，我先买了一台 TP-LINK 的 Wi-Fi 7 路由器 BE7200，四个 2.5G 口加四个 1G 口。单看… |
+| 2026-04-21 | [整洁架构之道](https://www.geedea.pro/library/2026/clean-architecture/) | 由于很不喜欢软件架构课老师的授课风格，所以决定完全自学。选这本书当教材可能不太合适，但的确收获颇多。眼看 Coding Agents 的趋势只增不减，就算在个人项目和自由软件项目中拒绝使用，工作时也无处可躲，我想每个程序员都需要做架构师了。如果缺乏整洁清晰的架构设计，那 Coding Agents… |
+| 2026-04-21 | [丑人为什么多作怪？](https://mobius.blog/22914.html) | 这并不是一个具有普遍性规律的“结论”，但有时候它会非常深刻地影响大家对于某一类型人的判断。既然人很难做到客观地 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-21 | [2026.4.20](https://www.justzht.com/2026-4-20/) | 又是一个周一，原本今天早上想要请假的，后来想说还是去好了。到公司之后熟悉了一会自己上周写的东西，然后 |
 | 2026-04-21 | [Amazon 与 Anthropico 达成50亿美元投资和计算协议，进一步加强合作](https://blog.rustfisher.com/news/amazon-will-invest-in-anthropic-20260421/) | 亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。 |
 | 2026-04-20 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.21 of the project |
 | 2026-04-20 | [Heroes of Might and Magic II updated](https://macsourceports.com/game/homm2) | The build of fheroes2 for Heroes of Might and Magic II has been updated to version 1.1.15 of the project |
 | 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |
 | 2026-04-20 | [R#098 期待](https://blog.sakanano.moe/journals/random_098) | 2026.4.14 ~ 2026.4.20 |
+| 2026-04-20 | [那个拄着拐报到的新同事](https://blog.solazy.me/20260420/) | 今天分享一个职场团队里的小插曲 |
 | 2026-04-20 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
 | 2026-04-20 | [甄仁岛还是荒掉了](https://kaix.in/2026/0420/) | 一直倒也没闲着，断断续续地给这个叫做 甄仁岛 的文字类游戏增补删改。不过最终还是要说放弃了，得承认，我的想象力还不足以支撑起一个有趣的游戏。 一开始 是想走叙事+解密的路线的，我给这个岛上的 29 位岛民都配备了独立的记忆系统，有各自的性格和背景故事，玩家通过与岛民的对话，了解他们，可以解开岛上隐藏… |
 | 2026-04-20 | [不会用AI的设计师，已经开始被淘汰](https://www.iyeslogo.com/ai-kill-designers/) | AI正在重塑设计行业，不是替代设计师，而是淘汰不会使用AI的设计师 |
