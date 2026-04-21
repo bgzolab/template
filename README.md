@@ -22,6 +22,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-21 | [Agents 当道，我们都可以被蒸馏成 Skills](https://huhuhang.com/post/thinking/20260421) | 本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。 |
+| 2026-04-21 | [雨季又来](https://www.kawabangga.com/posts/7243) | 「未来两周受季风交替影响，本地多数日子的下午，预计会出现短暂雷阵雨，有几天的最高气温可能达到35摄氏度。未来两 […] Continue reading... |
+| 2026-04-21 | [FC 游戏：洛克人六代（Rockman 6）](https://springwood.me/fc-rockman-6/) | 小霸王时代遗憾无缘的经典系列之一。 |
 | 2026-04-21 | [Tinkering with Home Network: N100 + PVE + iKuai + sing-box](https://missuo.me/posts/home-network-n100-sing-box/) | 最近搬了新家，顺手开了一条 2000M 的宽带，家里的网络设备也正好趁这个机会重新折腾一遍。这篇就当是一次记录，也顺便给以后留个备忘。 为什么没用 BE7200 当主路由 一开始为了省事，我先买了一台 TP-LINK 的 Wi-Fi 7 路由器 BE7200，四个 2.5G 口加四个 1G 口。单看… |
 | 2026-04-21 | [整洁架构之道](https://www.geedea.pro/library/2026/clean-architecture/) | 由于很不喜欢软件架构课老师的授课风格，所以决定完全自学。选这本书当教材可能不太合适，但的确收获颇多。眼看 Coding Agents 的趋势只增不减，就算在个人项目和自由软件项目中拒绝使用，工作时也无处可躲，我想每个程序员都需要做架构师了。如果缺乏整洁清晰的架构设计，那 Coding Agents… |
 | 2026-04-21 | [丑人为什么多作怪？](https://mobius.blog/22914.html) | 这并不是一个具有普遍性规律的“结论”，但有时候它会非常深刻地影响大家对于某一类型人的判断。既然人很难做到客观地 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
