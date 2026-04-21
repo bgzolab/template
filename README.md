@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-21 | [Amazon 与 Anthropico 达成50亿美元投资和计算协议，进一步加强合作](https://blog.rustfisher.com/news/amazon-will-invest-in-anthropic-20260421/) | 亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。 |
+| 2026-04-20 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.21 of the project |
+| 2026-04-20 | [Heroes of Might and Magic II updated](https://macsourceports.com/game/homm2) | The build of fheroes2 for Heroes of Might and Magic II has been updated to version 1.1.15 of the project |
 | 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |
 | 2026-04-20 | [R#098 期待](https://blog.sakanano.moe/journals/random_098) | 2026.4.14 ~ 2026.4.20 |
 | 2026-04-20 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
@@ -100,28 +103,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-14 | [Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型](https://liduos.com/weekly/the-weekly-gradient-98) | 本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。 |
 | 2026-04-14 | [SAM3 提示词 视频分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-video-segmentation/) | 前言 上期记录了SAM3 提示词 图片分割 本文更新SAM3 提示词 视频分割 但是在视频分割遇到一些兼容性问... SAM3 提示词 视频分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
 | 2026-04-14 | [比塔罗牌更准的，是塔罗牌的商业逻辑](https://mobius.blog/22728.html) | 前几天在咖啡厅码字，看到了一对小姑娘在用塔罗牌算命。 很多年前，我跟老婆还在打理一个占星公众号时，也需要在常去 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-13 | [满血复活！Motrix Next 免费开源下载工具 - 更小更快的跨平台 Aria2 客户端](https://www.iplaysoft.com/motrix-next.html) | 说到好用的 下载 工具，大家都会想到优秀的 IDM ，以及口碑俱佳的开源免费跨平台的 Motrix ！后者内置强大的 Aria2 引擎、清爽无广告，简直是对那些流氓下载器的降维打击。 但从 2023 年开始， Motrix 基本就停更了。使用 Electron 架构使得其体积臃肿，不好维护，新功能也… |
-| 2026-04-13 | [解决 macOS 无法打开 App 应用，提示“移到废纸篓”错误的简单方法](https://www.iplaysoft.com/p/fix-mac-app) | 我们常常在网上下载了一款 macOS 应用程序之后，打开它会出现「未打开“XXX”」的错误提示，无法正常启动。很多 Mac 新手遇到这种情况就比较懵逼了…… 但其实这个错误很是常见，经常下载 APP 的同学都会遇到过。而修复方法也很简单，下面就教大家解决下载的 Mac 应用软件无法启动的问题吧。 M… |
-| 2026-04-13 | [适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流](https://chengpeiquan.com/article/an-oxc-first-workflow-package-for-oxlint-and-oxfmt) | 很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。 不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，但是两者可以完美结合，对项目来说，仍然可以以一套 Lint 方… |
-| 2026-04-13 | [【转载】谈谈不受欢迎的博客技术特征](https://blog.keepchen.com/a/Talk-about-the-technical-features-of-unpopular-blogs.html) | 从弹窗干扰到服务滥用，文章剖析博客网站「自以为在优化，实则在添堵」的负面技术特征。 |
-| 2026-04-13 | [第一次车上露营](http://www.uncoverman.com/first-time-car-camping.html) | 2025 年下半年换了一辆新能源车，一直想着出去在车上露营一次。这个春天的周末，天气晴好，带娃去宁波奉化太妃湖，看到了蓝色的宁波湾海水，体验了车上露营，总结一下： 1、铺床模式 我采用一、二排成床模式，即把第一排放倒，和第二排连起来铺床，这种方案的好处是前备箱和后备箱还可以放行李，不用把东西挪来挪去… |
-| 2026-04-13 | [SAM3 提示词 图片分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-image-segmentation/) | SAM3 github地址：https://github.com/facebookresearch/sam3 ... SAM3 提示词 图片分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
-| 2026-04-13 | [最近惦念 20260403](https://z.arlmy.me/posts/TILs/thoughts/20260403_Recently/) | 「我去做另一个人了哈。」 |
-| 2026-04-13 | [问Gemini的问题备份](https://z.arlmy.me/posts/ZArlmyMe/QuestionsWithGemini_20260413/) | 「时间戳。」 |
-| 2026-04-13 | [R#097 练习](https://blog.sakanano.moe/journals/random_097) | 2026.4.7 ~ 2026.4.13 |
-| 2026-04-13 | [大事件](https://www.jackpu.com/da-shi-jian/) | 对于这样的事情，大家似乎经历了一周多，才坦然接受。 对于在现场的我而言，确实从一开始不以为意，到突然的寂静，寂静的有一丝恐惧和茫然，留下了特别深的印象。 对于这样的事情，大家有所耳闻，但是没有发生在身边的时候，还是多少不会太忧虑。 很多年前，在双减发生的时候，我和小伙伴还没有那么明显的感触。而这次，… |
-| 2026-04-13 | [Xinjiang Travel Guide Exploring Nature and Ethnic Cultures](https://victor42.eth.limo/post-en/things-to-know-before-visiting-xinjiang/) | Fresh off a trip to Xishuangbanna , I couldn’t wait to plan my next adventure. The destination—Xinjiang. The furthest west I’d ever been was Dunhuang… |
-| 2026-04-13 | [新疆自然风光与民族文化旅行指南](https://victor42.eth.limo/post/things-to-know-before-visiting-xinjiang/) | 刚从西双版纳回来 ，就迫不及待开始研究下一场旅行了，目标新疆。 以前最远 只去过敦煌 ，对新疆旅游完全没有概念，就只知道天山是南疆北疆分界。具体各个地方有什么，去了能体验到什么，只有很模糊的认识。 新疆非常大，为了筛选目的地，我花2个晚上和AI反复收集、梳理、讨论、验证，得出了这份旅行认知指南。从自… |
-| 2026-04-13 | [Hermes Agent 代表的是“模型无关”的趋势](https://luweiqing.com/gossip/Hermes-Agent-represents-the-trend-of-model-agnostic-approaches.html) | Hermes Agent 和 Openclaw 代表的是一类长任务，模型无关的用法，可以屏蔽用户对基座模型的感受一、供给侧不再是单一基座能力，而是三层叠加层级内容特征模型层基座模型能力标准化、可... |
-| 2026-04-13 | [善良与边界感](https://blog.solazy.me/20260413/) | 今天突发了件小事儿，让我又有内容可以写了 |
-| 2026-04-13 | [openFuyao NPU-Operator故障排查](https://frytea.com/archives/1655/) | 故障 pod describe[root@master1 ~]# kubectl -n kube-system describe pod ascend-device-plugin-ll46f N... |
-| 2026-04-13 | [openFuyao 2603 共测测试报告](https://frytea.com/archives/1654/) | 相关链接特性清单: https://gitcode.com/openFuyao/release-management/blob/main/openFuyao-26.03/release-plan... |
-| 2026-04-13 | [openFuyao InferNex AI推理集成部署 310P(300I Pro) 环境问题记录及解决](https://frytea.com/archives/1653/) | AI推理集成部署（InferNex）是一个专为云原生环境下AI推理服务优化所设计的端到端集成部署方案。该方案基于Kubernetes Gateway API Inference Extensio... |
-| 2026-04-13 | [Memos: MacOS 下编译安装 Aseprite 脚本](https://blog.yasking.org/a/1776044367.html) | Aseprite 是一款像素动画制作软件，免费试用版本不能保存，购买价格 $19.99 USD 这个软件是开源的，即自己编译使用不需要花钱。 在 … |
-| 2026-04-13 | [读《玉米》](https://www.feidaoboke.com/post/read-yu-mi.html) | 毕飞宇是我的苏北老乡（虽然现在很多泰州地区的人不认为泰州是苏北，称苏中，但是在毕飞宇的很多个人讲述和作品中，一直说自己是苏北人），看他的作品里面经常看到小时候熟悉的方言表达，有着很熟悉很亲切的感觉。 小说的名字叫《玉米》，实际上这本书写了王家庄的前支书王连方家里玉米、玉秀和玉秧三个女孩的故事。 在读… |
-| 2026-04-13 | [AI泡沫破灭倒计时](https://blog.oospace.com/posts/2026-04-13/) | 历史回顾 |
-| 2026-04-13 | [写到哪儿算哪儿——动物直觉](https://mobius.blog/22553.html) | 文章还没有写标题，写到哪儿算哪儿。 此时此刻，我在咖啡厅的座位对面，有两个中年男人正在聊天。因为没有开通透模式 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-13 | [爷爷](https://1900.live/ye-ye/) | Photo by moke yong hui / Unsplash 清明我妈回老家祭祖了，他回来的这段时间就由我来照顾爷爷了。 爷爷前几年临近过年时意外中风，好在发现送医及时，影响不大，出院后行动、说话什么都没问题，基本上可以自理。 但是记忆力远不如从前了，刚出院的那会经常会记忆错乱，有时候明明在老… |
 
 ## Vibe Coding
 
