@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-21 | [有栈协程切换原理](https://www.kirito.info/%E6%9C%89%E6%A0%88%E5%8D%8F%E7%A8%8B%E5%88%87%E6%8D%A2%E5%8E%9F%E7%90%86/) | 这篇应该是21年写的，当时在公司做分享的ppt，整理笔记翻到了，发出来当博客吧~ 有栈协程介绍 有栈协程就是实现了一个用户态的线程，用户可以在堆上模拟出协程的栈空间，当需要进行上下文切换的时候，主线程只需要交换栈空间和恢复一些相关的寄存器的状态就可以实现一个用户态的线程上下文切换，没有了从用户态转换… |
 | 2026-04-21 | [Agents 当道，我们都可以被蒸馏成 Skills](https://huhuhang.com/post/thinking/20260421) | 本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。 |
 | 2026-04-21 | [自尊与创作的负担](https://blog.solazy.me/20260421/) | 今天聊个关于创作和自尊心的随感 |
 | 2026-04-21 | [Indent Is All You Need](https://blog.est.im/2026/stdin-11) | There's an interesting debate around whether "Bash is all you need" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may use Bash for any… |
