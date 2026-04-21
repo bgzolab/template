@@ -12,6 +12,18 @@
     "description": "本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。"
   },
   {
+    "title": "自尊与创作的负担",
+    "url": "https://blog.solazy.me/20260421/",
+    "date": "2026-04-21T06:00:00Z",
+    "description": "今天聊个关于创作和自尊心的随感"
+  },
+  {
+    "title": "Indent Is All You Need",
+    "url": "https://blog.est.im/2026/stdin-11",
+    "date": "2026-04-21T05:09:00Z",
+    "description": "There's an interesting debate around whether \"Bash is all you need\" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may never be particularly good at Bash. The reasoning is both practical and theoretical: complex Bash commands often break on nested quotes, parentheses, and escapes. Even GPT-5.4 struggles with deeply nested inline Bash calls, and some engineers have resorted to wrapping binaries into microcommands so the model only outputs the inner command, achieving near-perfect r"
+  },
+  {
     "title": "雨季又来",
     "url": "https://www.kawabangga.com/posts/7243",
     "date": "2026-04-21T04:14:17Z",
