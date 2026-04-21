@@ -21,7 +21,7 @@
     "title": "Indent Is All You Need",
     "url": "https://blog.est.im/2026/stdin-11",
     "date": "2026-04-21T05:09:00Z",
-    "description": "There's an interesting debate around whether \"Bash is all you need\" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may never be particularly good at Bash. The reasoning is both practical and theoretical: complex Bash commands often break on nested quotes, parentheses, and escapes. Even GPT-5.4 struggles with deeply nested inline Bash calls, and some engineers have resorted to wrapping binaries into microcommands so the model only outputs the inner command, achieving near-perfect r"
+    "description": "There's an interesting debate around whether \"Bash is all you need\" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may use Bash for anything But is that the case? complex LLM generated bash may break on nested quotes, parentheses, and escapes. Even GPT-5.4 struggles with deeply nested inline Bash calls, and some engineers have resorted to wrapping binaries into microcommands, Gated Delta Net, so the model only outputs the inner command, achieving near-perfect reliability. The theo"
   },
   {
     "title": "雨季又来",
