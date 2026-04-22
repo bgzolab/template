@@ -6,6 +6,18 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进",
+    "url": "https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/",
+    "date": "2026-04-22T16:10:00Z",
+    "description": "<script src=\"/assets/js/APlayer.min.js\" cla"
+  },
+  {
+    "title": "Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue",
+    "url": "https://blog.renfei.net/posts/1626402130325676139",
+    "date": "2026-04-22T07:41:39Z",
+    "description": "使用 LM Studio + LM Link + Continue 插件，在 IntelliJ IDEA 中接入本地大模型，实现无需 API Key 的 AI 编程环境。基于 RTX 2080 Ti 和 CUDA 推理，运行 Qwen3.5-27B 模型，打造属于自己的本地 AI 助手，实现真正的 Token 自由。"
+  },
+  {
     "title": "狐蒂云如何？",
     "url": "https://www.evan.xin/4938/",
     "date": "2026-04-22T03:23:34Z",
