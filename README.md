@@ -21,7 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-22 | [猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat](https://7gugu.com/index.php/2026/04/23/%e7%8c%ab%e5%91%98%e5%a4%96-%e4%bd%b3%e4%b8%96%e6%b6%9b-%e6%b0%ae%e6%b0%94%e9%bb%91%e5%95%a4/) | 外观：深黑色 不透光 闻香：饼干 坚果 巧克力 口感：弱沙口感 味道：特种麦芽带来的黑巧克力的味道 总结：卖点 … 继续阅读 “猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat” |
 | 2026-04-22 | [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/) | <script src="/assets/js/APlayer.min.js" cla |
+| 2026-04-22 | [PeekDesktop - 微软副总开源工具，居然将 Mac “最小化桌面”功能抄进 Windows！](https://www.iplaysoft.com/peekdesktop.html) | 如果你用过苹果的 macOS 系统，那么很可能会被它一些独有的小功能“种草”。比如按 空格键 快速预览文件的 QuickLook 功能非常好用，于是就有了「 Seer 」将此移植到 Windows。 而还有个特性，在 Mac 桌面 壁纸 空白处点击鼠标左键，所有窗口嗖一下全收起来 (最小化)，再点一… |
 | 2026-04-22 | [emacs-用elfeed查看miniflux内容](https://blog.prayhand13013.top/20260422T203959--emacs-用elfeed查看miniflux内容__blog.html) |  |
 | 2026-04-22 | [Polkadot 的 Existential Deposit 机制错在哪里](https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/) | Polkadot 有一个叫 <a |
 | 2026-04-22 | [Win11暂停系统更新](https://blog.wo0ow.com/60525.html) | 记录下暂停Win11的系统更新的方法。 |

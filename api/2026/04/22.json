@@ -6,10 +6,22 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat",
+    "url": "https://7gugu.com/index.php/2026/04/23/%e7%8c%ab%e5%91%98%e5%a4%96-%e4%bd%b3%e4%b8%96%e6%b6%9b-%e6%b0%ae%e6%b0%94%e9%bb%91%e5%95%a4/",
+    "date": "2026-04-22T16:10:14Z",
+    "description": "外观：深黑色 不透光 闻香：饼干 坚果 巧克力 口感：弱沙口感 味道：特种麦芽带来的黑巧克力的味道 总结：卖点 … 继续阅读 “猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat”"
+  },
+  {
     "title": "Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进",
     "url": "https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/",
     "date": "2026-04-22T16:10:00Z",
     "description": "<script src=\"/assets/js/APlayer.min.js\" cla"
+  },
+  {
+    "title": "PeekDesktop - 微软副总开源工具，居然将 Mac “最小化桌面”功能抄进 Windows！",
+    "url": "https://www.iplaysoft.com/peekdesktop.html",
+    "date": "2026-04-22T14:50:08Z",
+    "description": "如果你用过苹果的 macOS 系统，那么很可能会被它一些独有的小功能“种草”。比如按 空格键 快速预览文件的 QuickLook 功能非常好用，于是就有了「 Seer 」将此移植到 Windows。 而还有个特性，在 Mac 桌面 壁纸 空白处点击鼠标左键，所有窗口嗖一下全收起来 (最小化)，再点一下就恢复，能非常方便查看/使用 桌面 上的文件。这操作相当自然流畅，以至于换回 Windows 常常会下意识地去点，然后，啥都没发生~ 而现在， PeekDesktop 终于将这缺口补上了…… 「 前往查看原文.... 」 异次元还有这些值得一看： 微软 PowerToys 小工具合集 - 免费给 Win11/10 加装各种增强功能“外挂”的效率利器 WinXcorners - 免费 Win10 仿 Mac 屏幕触发角功能 (鼠标移到桌面四角执行快捷操作) Multrin - 将不同应用程序拖放合并起来，组成多标签页窗口的开源工具 Quicker - 让效率起飞的 Windows “超级外挂” (快速启动 / 快捷指令 / 鼠标手势) 异次元首页 | 微信公众号 | 关注微博 | 软件精选 "
   },
   {
     "title": "emacs-用elfeed查看miniflux内容",
