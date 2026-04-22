@@ -24,6 +24,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-22 | [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/) | <script src="/assets/js/APlayer.min.js" cla |
 | 2026-04-22 | [Polkadot 的 Existential Deposit 机制错在哪里](https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/) | Polkadot 有一个叫 <a |
 | 2026-04-22 | [Win11暂停系统更新](https://blog.wo0ow.com/60525.html) | 记录下暂停Win11的系统更新的方法。 |
+| 2026-04-22 | [Ventoy 多合一启动盘制作工具神器 - 将多个系统 Win/PE/Linux 镜像装在1个U盘里](https://www.iplaysoft.com/ventoy.html) | 最近很多操作系统都纷纷发布了新版本，比如 Windows 11 、 Ubuntu 、 Debian 、 Deepin 、 优麒麟 、 CentOS 、 Fedora 、 PVE 、 WinPE 等等，对喜欢玩系统的人来说绝对是盛宴。 不过一般用 Rufus 等工具，一个 U 盘 往往只能制作成一个系… |
 | 2026-04-22 | [Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue](https://blog.renfei.net/posts/1626402130325676139) | 使用 LM Studio + LM Link + Continue 插件，在 IntelliJ IDEA 中接入本地大模型，实现无需 API Key 的 AI 编程环境。基于 RTX 2080 Ti 和 CUDA 推理，运行 Qwen3.5-27B 模型，打造属于自己的本地 AI 助手，实现真正的… |
 | 2026-04-22 | [狐蒂云如何？](https://www.evan.xin/4938/) | 这是4月10日给狐蒂云负责人提的一个需求，当时只是随口一说。因为我发现狐蒂云发布的通知基本都是按主机区来发的， […] |
 | 2026-04-22 | [善意是最昂贵的人性皮试](https://mobius.blog/22922.html) | 最近看到一个新闻： 一个高三的女学生，找学校门口的麻辣烫阿姨借手机，说自己要进行网上考试。这个阿姨本身就是做学 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
@@ -54,7 +55,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-20 | [稻草人周刊 Vol.77](https://www.geedea.pro/weekly/77/) | 这周三得知周四周五有校运会，停课两天，加上周末，我突然拥有了四天的假期，于是溜出去看了《挽救计划》，逛了美术馆，还和朋友租了 Minecraft 服务器玩。精神状态似乎好了不少，接下来的一周要重振旗鼓啊。 这周听了不少新音乐，但阅读的时间倒是变少了。效率最高的时候永远是摸鱼的时候，这周有一半的时间都… |
 | 2026-04-20 | [不做扫兴的“妈妈”](https://mobius.blog/22854.html) | 儿童教育里，有一句浓缩为经典的话：不做扫兴的父母。其基本原则就是把“否定性评价”转变为“支持性共情”。比如孩子 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-20 | [Memos #2026-04-19](https://www.taober.blog/memos) | 11:45 哈哈 |
-| 2026-04-20 | [已将博客从Typecho迁移到Astro](https://krya.com/post/astro-sintu-theme/) | ![astro](https://i.190808.xyz/as/post01/as-3.jpg) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最终选择了Astro. 静态博客的优势 1.… |
+| 2026-04-20 | [已将博客从Typecho迁移到Astro](https://krya.com/post/astro-sintu-theme/) | ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最… |
 | 2026-04-19 | [告别 kubectl 黑框，开源一个基于 Wails 打造 K8S 多集群管理工具](https://wiki.eryajf.net/pages/f91541/) | 如要阅读全文，点击标题跳转。做运维久了，你一定懂那种感觉：管理多个K8S集群时，经常需要使用kubectl xxx来进行管理，我想，你一定和我一样，深受其苦。此前我还在群里问过有没有优秀的多集群桌面端管理工具。当时还有群友打趣说让我自己开发一个。虽然我当时也是打趣回应了一下，但实际在我的内心，一直有… |
 | 2026-04-19 | [永久 1TB 空间！Koofr - 支持 WebDAV 的终身免费 10G 网盘 (Rclone / 挂载 OneDrive)](https://www.iplaysoft.com/p/koofr) | 最近一直在为几台 VPS 服务器数据备份在烦恼，还有考虑到 NAS、电脑文件的异地备份，想找一台大硬盘的 VPS 或用 S3 云存储，但找了一圈，大空间的 VPS 年费实在都太贵了。 最近挖到了一款“冷门”的宝藏云网盘 Koofr，它不仅有永久免费不限速 10G 空间，最关键是完美支持 WebDAV… |
 | 2026-04-19 | [我才四十岁，世界这么美好，我还想多看看呀。](https://cufezhusy.github.io/issue-20/) | 新工作慢慢开始进入正轨了。瑞典的老钱公司，规矩感觉偏保守。交易的风险不敢开得太大，基本每笔都是前司百分之二十的量。不过倒也好，这样不论仓位开得多大我都没有睡眠问题。新组的人应该很震惊我能把这么复杂的头寸的每天损益解释得这么清楚得，这完全要感谢前公司老板的严格要求和年复一年的问题：下个月把过去一年的损… |

@@ -24,6 +24,12 @@
     "description": "记录下暂停Win11的系统更新的方法。"
   },
   {
+    "title": "Ventoy 多合一启动盘制作工具神器 - 将多个系统 Win/PE/Linux 镜像装在1个U盘里",
+    "url": "https://www.iplaysoft.com/ventoy.html",
+    "date": "2026-04-22T08:14:41Z",
+    "description": "最近很多操作系统都纷纷发布了新版本，比如 Windows 11 、 Ubuntu 、 Debian 、 Deepin 、 优麒麟 、 CentOS 、 Fedora 、 PVE 、 WinPE 等等，对喜欢玩系统的人来说绝对是盛宴。 不过一般用 Rufus 等工具，一个 U 盘 往往只能制作成一个系统的启动盘/安装盘，想要增加另一款系统，只能得重新刻录一遍，每次都要格式化超花时间。而最近发现了一款“ 多合一启动盘 ”的制作工具 Ventoy ，简单到拷贝个 ISO 文件进去就能用，堪称新一代的 装机 必备 神器 …… 「 前往查看原文.... 」 异次元还有这些值得一看： 优启通 EasyU - 好用无广告纯净版 WinPE 系统启动盘 / U盘重装系统工具 微PE工具箱 (WePE) v2.3 - 大家都说好用的纯净 WinPE 启动盘/ U盘重装系统工具 CowPE - 基于 Win11 纯净好用无捆绑的 PE 系统 (U盘启动盘 / 装机必备) Rufus 中文绿色版 - 简单快速 ISO 制作 USB 启动盘软件 (U盘安装 Windows / Linux 系统) 异次元首页 "
+  },
+  {
     "title": "Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue",
     "url": "https://blog.renfei.net/posts/1626402130325676139",
     "date": "2026-04-22T07:41:39Z",
@@ -207,6 +213,6 @@
     "title": "已将博客从Typecho迁移到Astro",
     "url": "https://krya.com/post/astro-sintu-theme/",
     "date": "2026-04-20T00:00:00Z",
-    "description": "![astro](https://i.190808.xyz/as/post01/as-3.jpg) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最终选择了Astro. 静态博客的优势 1. 免费托管 - 除了域名，大厂给个人开发者提供了免费的托管服务。 2. 零维护 - 文章都是放到自己电脑，只要托管平台不倒闭，博客可以永久运行。 3. 预渲染 - 静态博客在部署前就已经生成了纯 HTML/CSS/JS 文件，也无后台。 4. 适配CDN - 由于全是静态文件，分发到全球边缘节点之后，用户访问毫秒级加载。 为什么选择 Astro 1. 静态优先 - 生成纯 HTML 文件，无需数据库，无需服务器。 2. 性能优异 - 默认零 JavaScript，加载速度极快。 3. 灵活性强 - 支持 Markdown、MDX、多种框架混用。 4. 生态活跃 - 社区活跃，文档完善，插件丰富。 适配Astro的Sintu单栏主题 这个Astro单栏模板主题由我自己设计并制作，现在让Herm"
+    "description": "![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最终选择了Astro. 静态博客的优势 1. 免费托管 - 除了域名，大厂给个人开发者提供了免费的托管服务。 2. 零维护 - 文章都是放到自己电脑，只要托管平台不倒闭，博客可以永久运行。 3. 预渲染 - 静态博客在部署前就已经生成了纯 HTML/CSS/JS 文件，也无后台。 4. 适配CDN - 由于全是静态文件，分发到全球边缘节点之后，用户访问毫秒级加载。 为什么选择 Astro 1. 静态优先 - 生成纯 HTML 文件，无需数据库，无需服务器。 2. 性能优异 - 默认零 JavaScript，加载速度极快。 3. 灵活性强 - 支持 Markdown、MDX、多种框架混用。 4. 生态活跃 - 社区活跃，文档完善，插件丰富。 适配Astro的Sintu单栏主题 这个Astro单栏"
   }
 ]
