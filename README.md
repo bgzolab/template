@@ -108,14 +108,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-15 | [积极心态是一种选择，而不是行动的结果](https://blog.rustfisher.com/reading/promotion/fake-being-happy-and-look-for-the-positive-in-each-situation/) | “假装快乐直到真正快乐”这句话真的管用。只要假装快乐，并在每件事中寻找积极的一面，你的视角就会改变。 |
 | 2026-04-15 | [美国缅因州议员通过禁令，禁止大型数据中心至2027年底](https://blog.rustfisher.com/news/news-us-maine-bill-20260415/) | 该法案将禁止在2027年底之前建设耗电量超过20兆瓦的发电中心，目前已提交给州长。 |
 | 2026-04-15 | [独立游戏简评 Vol.4](https://bluepika.life/blog/indie-game-notes-4) | 继续写写一些之前玩过的独立游戏，部分内容含有剧透，特别是以下提到的解谜游戏。 |
-| 2026-04-14 | [哀鸿这游戏好啊](https://mok.moe/p/zb3w) | 《哀鸿》这游戏好啊，好就好在让我真正意识到自己还不够冷静、还是头一热就要开动的本质。还是要多提升自己的知识水平 |
-| 2026-04-14 | [小猫咪也有自己的规划](https://blog.solazy.me/20260414/) | 今天分享一下我对我家猫新的了解 |
-| 2026-04-14 | [sam3 提示词 图片分割和视频分割 docker 懒人整合包](https://dsx2016.com/sam3-prompts-image-and-video-segmentation/) | 前言 因为win兼容性问题，改为docker懒人包 第一次把镜像打包了，一些第三方依赖不在，依旧报错 第二次才... sam3 提示词 图片分割和视频分割 docker 懒人整合包 最先出现在 大师兄2016 。 |
-| 2026-04-14 | [AI Agent折腾记（OpenClaw / Hermes Agent）](https://liudon.com/posts/deploy-ai-agent/) | AI 智能体（AI Agent）是一种能够感知环境、进行推理并自主行动以实现特定目标的智能系统。 OpenClaw和Hermes Agent属于目前开源社区最受关注的两个项目。 |
-| 2026-04-14 | [《白》成都方所分享会笔记](https://z.arlmy.me/posts/Note/Note_GongShu_Bai_FangSuo/) | 「扫灰。」 |
-| 2026-04-14 | [Vol.98 智能体架构演进：大脑与双手解耦下的AI工程实践与角色转型](https://liduos.com/weekly/the-weekly-gradient-98) | 本期内容聚焦智能体架构的演进，探讨大脑（LLM+编排）与双手（沙箱+工具）解耦的设计理念。涵盖Anthropic的顾问策略、GLM-5.1的8小时自主工作、Harness Engineering的可靠性实践，以及工程师从编码者向智能体管理者的角色转变，同时涉及AI安全审计和持续学习等前沿议题。 |
-| 2026-04-14 | [SAM3 提示词 视频分割 ComfyUI 懒人整合包](https://dsx2016.com/sam3-prompt-video-segmentation/) | 前言 上期记录了SAM3 提示词 图片分割 本文更新SAM3 提示词 视频分割 但是在视频分割遇到一些兼容性问... SAM3 提示词 视频分割 ComfyUI 懒人整合包 最先出现在 大师兄2016 。 |
-| 2026-04-14 | [比塔罗牌更准的，是塔罗牌的商业逻辑](https://mobius.blog/22728.html) | 前几天在咖啡厅码字，看到了一对小姑娘在用塔罗牌算命。 很多年前，我跟老婆还在打理一个占星公众号时，也需要在常去 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
