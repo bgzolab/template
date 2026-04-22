@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-22 | [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/) | <script src="/assets/js/APlayer.min.js" cla |
+| 2026-04-22 | [emacs-用elfeed查看miniflux内容](https://blog.prayhand13013.top/20260422T203959--emacs-用elfeed查看miniflux内容__blog.html) |  |
 | 2026-04-22 | [Polkadot 的 Existential Deposit 机制错在哪里](https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/) | Polkadot 有一个叫 <a |
 | 2026-04-22 | [Win11暂停系统更新](https://blog.wo0ow.com/60525.html) | 记录下暂停Win11的系统更新的方法。 |
 | 2026-04-22 | [Ventoy 多合一启动盘制作工具神器 - 将多个系统 Win/PE/Linux 镜像装在1个U盘里](https://www.iplaysoft.com/ventoy.html) | 最近很多操作系统都纷纷发布了新版本，比如 Windows 11 、 Ubuntu 、 Debian 、 Deepin 、 优麒麟 、 CentOS 、 Fedora 、 PVE 、 WinPE 等等，对喜欢玩系统的人来说绝对是盛宴。 不过一般用 Rufus 等工具，一个 U 盘 往往只能制作成一个系… |
@@ -43,6 +44,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-21 | [Complete Guide to Deploying FastGPT on Kubernetes](https://jaegerw2016.github.io//posts/2026/04/21/%E5%9C%A8Kubernetes%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2FastGPT%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html) | 背景FastGPT是一个基于LLM（大语言模型）的知识库问答系统，提供了开箱即用的知识库、多模态文件解析、工作流编排等功能。它支持多种大模型接入，可以快速构建企业级的AI知识库应用。在Kubernetes环境中部署FastGPT可以充... |
 | 2026-04-20 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.21 of the project |
 | 2026-04-20 | [Heroes of Might and Magic II updated](https://macsourceports.com/game/homm2) | The build of fheroes2 for Heroes of Might and Magic II has been updated to version 1.1.15 of the project |
+| 2026-04-20 | [狸狮村：可能这里就是小龙女的古墓派](https://macin.org/2026/04/20/li-shi-cun/) | 出发时的雀跃还挂在眉梢，身子却突然闹起了小脾气，那种提不起劲的疲惫，从心底慢慢蔓延到四肢百骸，连窗外的风都变得没了滋味。驱车三个小时，从宽阔的高速，拐进蜿蜒的县道，再到颠簸的乡道，最后驶上窄窄的机耕道，一路深入云贵高原北沿与四川盆地盆周的交汇处，终于抵达了藏在深山里的狸狮坝 |
 | 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |
 | 2026-04-20 | [R#098 期待](https://blog.sakanano.moe/journals/random_098) | 2026.4.14 ~ 2026.4.20 |
 | 2026-04-20 | [那个拄着拐报到的新同事](https://blog.solazy.me/20260420/) | 今天分享一个职场团队里的小插曲 |
