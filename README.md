@@ -22,11 +22,14 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-22 | [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/) | <script src="/assets/js/APlayer.min.js" cla |
+| 2026-04-22 | [Polkadot 的 Existential Deposit 机制错在哪里](https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/) | Polkadot 有一个叫 <a |
+| 2026-04-22 | [Win11暂停系统更新](https://blog.wo0ow.com/60525.html) | 记录下暂停Win11的系统更新的方法。 |
 | 2026-04-22 | [Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue](https://blog.renfei.net/posts/1626402130325676139) | 使用 LM Studio + LM Link + Continue 插件，在 IntelliJ IDEA 中接入本地大模型，实现无需 API Key 的 AI 编程环境。基于 RTX 2080 Ti 和 CUDA 推理，运行 Qwen3.5-27B 模型，打造属于自己的本地 AI 助手，实现真正的… |
 | 2026-04-22 | [狐蒂云如何？](https://www.evan.xin/4938/) | 这是4月10日给狐蒂云负责人提的一个需求，当时只是随口一说。因为我发现狐蒂云发布的通知基本都是按主机区来发的， […] |
 | 2026-04-22 | [善意是最昂贵的人性皮试](https://mobius.blog/22922.html) | 最近看到一个新闻： 一个高三的女学生，找学校门口的麻辣烫阿姨借手机，说自己要进行网上考试。这个阿姨本身就是做学 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-21 | [有栈协程切换原理](https://www.kirito.info/%E6%9C%89%E6%A0%88%E5%8D%8F%E7%A8%8B%E5%88%87%E6%8D%A2%E5%8E%9F%E7%90%86/) | 这篇应该是21年写的，当时在公司做分享的ppt，整理笔记翻到了，发出来当博客吧~ 有栈协程介绍 有栈协程就是实现了一个用户态的线程，用户可以在堆上模拟出协程的栈空间，当需要进行上下文切换的时候，主线程只需要交换栈空间和恢复一些相关的寄存器的状态就可以实现一个用户态的线程上下文切换，没有了从用户态转换… |
 | 2026-04-21 | [Agents 当道，我们都可以被蒸馏成 Skills](https://huhuhang.com/post/thinking/20260421) | 本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。 |
+| 2026-04-21 | [快手 AI IDE CodeFlicker 深度体验](https://www.wangwangit.com/%E5%BF%AB%E6%89%8B%20AI%20IDE%20CodeFlicker%20%E6%B7%B1%E5%BA%A6%E4%BD%93%E9%AA%8C/) | 在当前 AI IDE 赛道神仙打架、Cursor 珠玉在前的背景下，我一开始对新工具是持保留态度的。说实话,更多的是因为CodeFlicker这里提供免费套餐,所以我也愿意来尝试一下。随着天使用户体验周期的推进，我决定将这段时间在我的 Windows 电脑上重度使用的真实感受，进行一次全面的复盘。 |
 | 2026-04-21 | [自尊与创作的负担](https://blog.solazy.me/20260421/) | 今天聊个关于创作和自尊心的随感 |
 | 2026-04-21 | [Indent Is All You Need](https://blog.est.im/2026/stdin-11) | There's an interesting debate around whether "Bash is all you need" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may use Bash for any… |
 | 2026-04-21 | [雨季又来](https://www.kawabangga.com/posts/7243) | 「未来两周受季风交替影响，本地多数日子的下午，预计会出现短暂雷阵雨，有几天的最高气温可能达到35摄氏度。未来两 […] Continue reading... |

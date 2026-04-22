@@ -12,6 +12,18 @@
     "description": "<script src=\"/assets/js/APlayer.min.js\" cla"
   },
   {
+    "title": "Polkadot 的 Existential Deposit 机制错在哪里",
+    "url": "https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/",
+    "date": "2026-04-22T09:50:48Z",
+    "description": "Polkadot 有一个叫 <a"
+  },
+  {
+    "title": "Win11暂停系统更新",
+    "url": "https://blog.wo0ow.com/60525.html",
+    "date": "2026-04-22T08:40:24Z",
+    "description": "记录下暂停Win11的系统更新的方法。"
+  },
+  {
     "title": "Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue",
     "url": "https://blog.renfei.net/posts/1626402130325676139",
     "date": "2026-04-22T07:41:39Z",
@@ -40,6 +52,12 @@
     "url": "https://huhuhang.com/post/thinking/20260421",
     "date": "2026-04-21T08:00:00Z",
     "description": "本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。"
+  },
+  {
+    "title": "快手 AI IDE CodeFlicker 深度体验",
+    "url": "https://www.wangwangit.com/%E5%BF%AB%E6%89%8B%20AI%20IDE%20CodeFlicker%20%E6%B7%B1%E5%BA%A6%E4%BD%93%E9%AA%8C/",
+    "date": "2026-04-21T06:51:00Z",
+    "description": "在当前 AI IDE 赛道神仙打架、Cursor 珠玉在前的背景下，我一开始对新工具是持保留态度的。说实话,更多的是因为CodeFlicker这里提供免费套餐,所以我也愿意来尝试一下。随着天使用户体验周期的推进，我决定将这段时间在我的 Windows 电脑上重度使用的真实感受，进行一次全面的复盘。"
   },
   {
     "title": "自尊与创作的负担",
