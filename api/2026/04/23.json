@@ -6,6 +6,24 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "Codex高效Coding配置优化指南",
+    "url": "https://jetyu.me/post/codex-config-guide.html",
+    "date": "2026-04-23T10:00:00Z",
+    "description": "通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。"
+  },
+  {
+    "title": "终结竞争：从护城河到商业终局的实战指南",
+    "url": "https://www.meettea.com/business-moat-endgame.html",
+    "date": "2026-04-23T08:05:59Z",
+    "description": "从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构"
+  },
+  {
+    "title": "为什么现在年代剧里的招牌，像是刚挂上去的？",
+    "url": "https://www.iyeslogo.com/design-in-years-television/",
+    "date": "2026-04-23T07:57:04Z",
+    "description": "年代剧招牌穿帮现象背后反映了影视创作中的多重问题"
+  },
+  {
     "title": "灵魂的重逢：在湖光山色中，遇见怡然自得的自己",
     "url": "https://blog.hoopan.net/832.html",
     "date": "2026-04-23T06:38:23Z",
@@ -58,6 +76,12 @@
     "url": "https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/",
     "date": "2026-04-22T16:10:00Z",
     "description": "<script src=\"/assets/js/APlayer.min.js\" cla"
+  },
+  {
+    "title": "「离开的理由」 vs 「留下的意义」",
+    "url": "https://blog.solazy.me/20260422/",
+    "date": "2026-04-22T15:00:00Z",
+    "description": "今天又来了一个很有趣的职场话题"
   },
   {
     "title": "PeekDesktop - 微软副总开源工具，居然将 Mac “最小化桌面”功能抄进 Windows！",

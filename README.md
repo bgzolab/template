@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-23 | [Codex高效Coding配置优化指南](https://jetyu.me/post/codex-config-guide.html) | 通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。 |
+| 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
+| 2026-04-23 | [为什么现在年代剧里的招牌，像是刚挂上去的？](https://www.iyeslogo.com/design-in-years-television/) | 年代剧招牌穿帮现象背后反映了影视创作中的多重问题 |
 | 2026-04-23 | [灵魂的重逢：在湖光山色中，遇见怡然自得的自己](https://blog.hoopan.net/832.html) | 在湖畔露营的湖光山色中，内心那个冷眼旁观的"觉察者"终于与现实中的我融为一体。回望这段心路历程，从情绪的内耗到课题分离，从向外索求到向内专注，我终于学会了安然存在，怡然自得。 |
 | 2026-04-23 | [吃细糠](https://kaix.in/2026/0423/) | 之前提到过店里空间布局的问题导致我最近经常吃外卖。虽然 不想给差评 ，但是不得不说，实在不好吃。昨天点了小鸡炖蘑菇、锅包肉、回锅肉、干煸花菜。严格点评价就全都不合格。蘑菇炖鸡竟然没有鲜味这最奇怪，好在可以自我安慰说至少没加「科技」。锅包肉，哎呀，不禁回想起二十年多前刚工作，下了班和太太一起下馆子的时… |
 | 2026-04-23 | [核心训练和腹肌训练是一个东西吗？](https://www.geedea.pro/article/abs-vs-core/) | 读者们好，今天是世界读书日，所以我打算来讨论如何锻炼身体。 是的，我就喜欢做不合时宜的事情 。本来想说在世界体育运动日谈读书，但发现这个节日在四月六日，已经错过了，那就留到明年再说吧。 不久前我还会和同室讨论健身话题（后来发现我们两个的观点差异巨大，而对方在某种程度上根本无法双向交流），有一次他问我… |
@@ -30,6 +33,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-22 | [工程师如何把多个 Coding Agent 真正带起来：一套比“开更多聊天窗口”更像工程流程的方法](https://www.ixiqin.com/2026/04/23/how-engineers-can-truly-bring-together-multiple-coding/) | 随着 Agent 的时代的到来和 AI Coding 工具的兴起，被 AI 冲击的最狠的软件工程领域也迎来一轮 […] |
 | 2026-04-22 | [猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat](https://7gugu.com/index.php/2026/04/23/%e7%8c%ab%e5%91%98%e5%a4%96-%e4%bd%b3%e4%b8%96%e6%b6%9b-%e6%b0%ae%e6%b0%94%e9%bb%91%e5%95%a4/) | 外观：深黑色 不透光 闻香：饼干 坚果 巧克力 口感：弱沙口感 味道：特种麦芽带来的黑巧克力的味道 总结：卖点 … 继续阅读 “猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat” |
 | 2026-04-22 | [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/) | <script src="/assets/js/APlayer.min.js" cla |
+| 2026-04-22 | [「离开的理由」 vs 「留下的意义」](https://blog.solazy.me/20260422/) | 今天又来了一个很有趣的职场话题 |
 | 2026-04-22 | [PeekDesktop - 微软副总开源工具，居然将 Mac “最小化桌面”功能抄进 Windows！](https://www.iplaysoft.com/peekdesktop.html) | 如果你用过苹果的 macOS 系统，那么很可能会被它一些独有的小功能“种草”。比如按 空格键 快速预览文件的 QuickLook 功能非常好用，于是就有了「 Seer 」将此移植到 Windows。 而还有个特性，在 Mac 桌面 壁纸 空白处点击鼠标左键，所有窗口嗖一下全收起来 (最小化)，再点一… |
 | 2026-04-22 | [emacs-用elfeed查看miniflux内容](https://blog.prayhand13013.top/20260422T203959--emacs-用elfeed查看miniflux内容__blog.html) |  |
 | 2026-04-22 | [Polkadot 的 Existential Deposit 机制错在哪里](https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/) | Polkadot 有一个叫 <a |
@@ -57,7 +61,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |
 | 2026-04-20 | [R#098 期待](https://blog.sakanano.moe/journals/random_098) | 2026.4.14 ~ 2026.4.20 |
 | 2026-04-20 | [那个拄着拐报到的新同事](https://blog.solazy.me/20260420/) | 今天分享一个职场团队里的小插曲 |
-| 2026-04-20 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
 | 2026-04-20 | [甄仁岛还是荒掉了](https://kaix.in/2026/0420/) | 一直倒也没闲着，断断续续地给这个叫做 甄仁岛 的文字类游戏增补删改。不过最终还是要说放弃了，得承认，我的想象力还不足以支撑起一个有趣的游戏。 一开始 是想走叙事+解密的路线的，我给这个岛上的 29 位岛民都配备了独立的记忆系统，有各自的性格和背景故事，玩家通过与岛民的对话，了解他们，可以解开岛上隐藏… |
 | 2026-04-20 | [不会用AI的设计师，已经开始被淘汰](https://www.iyeslogo.com/ai-kill-designers/) | AI正在重塑设计行业，不是替代设计师，而是淘汰不会使用AI的设计师 |
 | 2026-04-20 | [语文学习和考试](https://blog.est.im/2026/stdin-10) | 前面抖了两篇 如何跟孩子讲学习的意义 失落的学习兴趣 今天就抬一个具体论据。 来自zhihu ： Q: 如果文言文退出中国教育体系，你是支持还是反对？为什么? A: 文言文真退了，可能就真的不知道以后高中语文课上来是干什么的了。 但是作者不允许转载。我只能先归档 https://archive.md… |
