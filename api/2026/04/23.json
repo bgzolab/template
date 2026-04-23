@@ -1,0 +1,152 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "工程师如何把多个 Coding Agent 真正带起来：一套比“开更多聊天窗口”更像工程流程的方法",
+    "url": "https://www.ixiqin.com/2026/04/23/how-engineers-can-truly-bring-together-multiple-coding/",
+    "date": "2026-04-22T16:56:52Z",
+    "description": "随着 Agent 的时代的到来和 AI Coding 工具的兴起，被 AI 冲击的最狠的软件工程领域也迎来一轮 […]"
+  },
+  {
+    "title": "猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat",
+    "url": "https://7gugu.com/index.php/2026/04/23/%e7%8c%ab%e5%91%98%e5%a4%96-%e4%bd%b3%e4%b8%96%e6%b6%9b-%e6%b0%ae%e6%b0%94%e9%bb%91%e5%95%a4/",
+    "date": "2026-04-22T16:10:14Z",
+    "description": "外观：深黑色 不透光 闻香：饼干 坚果 巧克力 口感：弱沙口感 味道：特种麦芽带来的黑巧克力的味道 总结：卖点 … 继续阅读 “猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat”"
+  },
+  {
+    "title": "Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进",
+    "url": "https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/",
+    "date": "2026-04-22T16:10:00Z",
+    "description": "<script src=\"/assets/js/APlayer.min.js\" cla"
+  },
+  {
+    "title": "PeekDesktop - 微软副总开源工具，居然将 Mac “最小化桌面”功能抄进 Windows！",
+    "url": "https://www.iplaysoft.com/peekdesktop.html",
+    "date": "2026-04-22T14:50:08Z",
+    "description": "如果你用过苹果的 macOS 系统，那么很可能会被它一些独有的小功能“种草”。比如按 空格键 快速预览文件的 QuickLook 功能非常好用，于是就有了「 Seer 」将此移植到 Windows。 而还有个特性，在 Mac 桌面 壁纸 空白处点击鼠标左键，所有窗口嗖一下全收起来 (最小化)，再点一下就恢复，能非常方便查看/使用 桌面 上的文件。这操作相当自然流畅，以至于换回 Windows 常常会下意识地去点，然后，啥都没发生~ 而现在， PeekDesktop 终于将这缺口补上了…… 「 前往查看原文.... 」 异次元还有这些值得一看： 微软 PowerToys 小工具合集 - 免费给 Win11/10 加装各种增强功能“外挂”的效率利器 WinXcorners - 免费 Win10 仿 Mac 屏幕触发角功能 (鼠标移到桌面四角执行快捷操作) Multrin - 将不同应用程序拖放合并起来，组成多标签页窗口的开源工具 Quicker - 让效率起飞的 Windows “超级外挂” (快速启动 / 快捷指令 / 鼠标手势) 异次元首页 | 微信公众号 | 关注微博 | 软件精选 "
+  },
+  {
+    "title": "emacs-用elfeed查看miniflux内容",
+    "url": "https://blog.prayhand13013.top/20260422T203959--emacs-用elfeed查看miniflux内容__blog.html",
+    "date": "2026-04-22T12:39:00Z",
+    "description": ""
+  },
+  {
+    "title": "Polkadot 的 Existential Deposit 机制错在哪里",
+    "url": "https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/",
+    "date": "2026-04-22T09:50:48Z",
+    "description": "Polkadot 有一个叫 <a"
+  },
+  {
+    "title": "Win11暂停系统更新",
+    "url": "https://blog.wo0ow.com/60525.html",
+    "date": "2026-04-22T08:40:24Z",
+    "description": "记录下暂停Win11的系统更新的方法。"
+  },
+  {
+    "title": "Ventoy 多合一启动盘制作工具神器 - 将多个系统 Win/PE/Linux 镜像装在1个U盘里",
+    "url": "https://www.iplaysoft.com/ventoy.html",
+    "date": "2026-04-22T08:14:41Z",
+    "description": "最近很多操作系统都纷纷发布了新版本，比如 Windows 11 、 Ubuntu 、 Debian 、 Deepin 、 优麒麟 、 CentOS 、 Fedora 、 PVE 、 WinPE 等等，对喜欢玩系统的人来说绝对是盛宴。 不过一般用 Rufus 等工具，一个 U 盘 往往只能制作成一个系统的启动盘/安装盘，想要增加另一款系统，只能得重新刻录一遍，每次都要格式化超花时间。而最近发现了一款“ 多合一启动盘 ”的制作工具 Ventoy ，简单到拷贝个 ISO 文件进去就能用，堪称新一代的 装机 必备 神器 …… 「 前往查看原文.... 」 异次元还有这些值得一看： 优启通 EasyU - 好用无广告纯净版 WinPE 系统启动盘 / U盘重装系统工具 微PE工具箱 (WePE) v2.3 - 大家都说好用的纯净 WinPE 启动盘/ U盘重装系统工具 CowPE - 基于 Win11 纯净好用无捆绑的 PE 系统 (U盘启动盘 / 装机必备) Rufus 中文绿色版 - 简单快速 ISO 制作 USB 启动盘软件 (U盘安装 Windows / Linux 系统) 异次元首页 "
+  },
+  {
+    "title": "Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue",
+    "url": "https://blog.renfei.net/posts/1626402130325676139",
+    "date": "2026-04-22T07:41:39Z",
+    "description": "使用 LM Studio + LM Link + Continue 插件，在 IntelliJ IDEA 中接入本地大模型，实现无需 API Key 的 AI 编程环境。基于 RTX 2080 Ti 和 CUDA 推理，运行 Qwen3.5-27B 模型，打造属于自己的本地 AI 助手，实现真正的 Token 自由。"
+  },
+  {
+    "title": "狐蒂云如何？",
+    "url": "https://www.evan.xin/4938/",
+    "date": "2026-04-22T03:23:34Z",
+    "description": "这是4月10日给狐蒂云负责人提的一个需求，当时只是随口一说。因为我发现狐蒂云发布的通知基本都是按主机区来发的， […]"
+  },
+  {
+    "title": "善意是最昂贵的人性皮试",
+    "url": "https://mobius.blog/22922.html",
+    "date": "2026-04-22T01:00:00Z",
+    "description": "最近看到一个新闻： 一个高三的女学生，找学校门口的麻辣烫阿姨借手机，说自己要进行网上考试。这个阿姨本身就是做学 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "有栈协程切换原理",
+    "url": "https://www.kirito.info/%E6%9C%89%E6%A0%88%E5%8D%8F%E7%A8%8B%E5%88%87%E6%8D%A2%E5%8E%9F%E7%90%86/",
+    "date": "2026-04-21T13:35:46Z",
+    "description": "这篇应该是21年写的，当时在公司做分享的ppt，整理笔记翻到了，发出来当博客吧~ 有栈协程介绍 有栈协程就是实现了一个用户态的线程，用户可以在堆上模拟出协程的栈空间，当需要进行上下文切换的时候，主线程只需要交换栈空间和恢复一些相关的寄存器的状态就可以实现一个用户态的线程上下文切换，没有了从用户态转换到内核态的切换成本，的执行也就更加高效 —- 知乎 有栈协程的好处 就后端开发来讲，有栈协程并没有提高程序的运行速度。 one event-loop per thread (IO multiplex) 比 one connection per coroutine 快得多，因为协程上下文切换反而增加了开销 但是使用协程，能帮助RD更容易的写出非阻塞的代码，对于多变的业务，再合适不过： 降低并发成本(直接把协程当作低成本的线程) 不用打散业务逻辑 心智负担低 几种后端模式对比 server任务(并发): text 监听等待tcp长链接 -> client 上传文件 -> 从conn fd 不断读数据流 -> 保存到本地 -> 写一条数据库 协程实现（go语言为例）：直接一个连接一个协程，按“阻塞"
+  },
+  {
+    "title": "Agents 当道，我们都可以被蒸馏成 Skills",
+    "url": "https://huhuhang.com/post/thinking/20260421",
+    "date": "2026-04-21T08:00:00Z",
+    "description": "本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。"
+  },
+  {
+    "title": "快手 AI IDE CodeFlicker 深度体验",
+    "url": "https://www.wangwangit.com/%E5%BF%AB%E6%89%8B%20AI%20IDE%20CodeFlicker%20%E6%B7%B1%E5%BA%A6%E4%BD%93%E9%AA%8C/",
+    "date": "2026-04-21T06:51:00Z",
+    "description": "在当前 AI IDE 赛道神仙打架、Cursor 珠玉在前的背景下，我一开始对新工具是持保留态度的。说实话,更多的是因为CodeFlicker这里提供免费套餐,所以我也愿意来尝试一下。随着天使用户体验周期的推进，我决定将这段时间在我的 Windows 电脑上重度使用的真实感受，进行一次全面的复盘。"
+  },
+  {
+    "title": "自尊与创作的负担",
+    "url": "https://blog.solazy.me/20260421/",
+    "date": "2026-04-21T06:00:00Z",
+    "description": "今天聊个关于创作和自尊心的随感"
+  },
+  {
+    "title": "Indent Is All You Need",
+    "url": "https://blog.est.im/2026/stdin-11",
+    "date": "2026-04-21T05:09:00Z",
+    "description": "There's an interesting debate around whether \"Bash is all you need\" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may use Bash for anything But is that the case? complex LLM generated bash may break on nested quotes, parentheses, and escapes. Even GPT-5.4 struggles with deeply nested inline Bash calls, and some engineers have resorted to wrapping binaries into microcommands, Gated Delta Net, so the model only outputs the inner command, achieving near-perfect reliability. The theo"
+  },
+  {
+    "title": "雨季又来",
+    "url": "https://www.kawabangga.com/posts/7243",
+    "date": "2026-04-21T04:14:17Z",
+    "description": "「未来两周受季风交替影响，本地多数日子的下午，预计会出现短暂雷阵雨，有几天的最高气温可能达到35摄氏度。未来两 […] Continue reading..."
+  },
+  {
+    "title": "FC 游戏：洛克人六代（Rockman 6）",
+    "url": "https://springwood.me/fc-rockman-6/",
+    "date": "2026-04-21T03:17:38Z",
+    "description": "小霸王时代遗憾无缘的经典系列之一。"
+  },
+  {
+    "title": "Tinkering with Home Network: N100 + PVE + iKuai + sing-box",
+    "url": "https://missuo.me/posts/home-network-n100-sing-box/",
+    "date": "2026-04-21T03:00:19Z",
+    "description": "最近搬了新家，顺手开了一条 2000M 的宽带，家里的网络设备也正好趁这个机会重新折腾一遍。这篇就当是一次记录，也顺便给以后留个备忘。 为什么没用 BE7200 当主路由 一开始为了省事，我先买了一台 TP-LINK 的 Wi-Fi 7 路由器 BE7200，四个 2.5G 口加四个 1G 口。单看硬件规格其实挺能打，拨号、测速都没什么问题，2000M 的带宽基本也能跑满。 但系统功能就不太够了。我想要的是一个「能自己折腾」的主路由：能自动分流，能屏蔽一些广告和追踪域名，最好还能把代理直接放到网关上，LAN 里的设备不用单独配置就能自动分流。TP-LINK 的固件明显还是面向普通用户的，这些需求基本没法满足。 架构：N100 + PVE + iKuai + Debian 正好手头还有一台几年前买的 N100 小主机，四口 2.5G，拿来跑软路由绰绰有余。最后定下来的架构是这样： 底层装 PVE 9.0 作为虚拟化平台； 虚拟机 1： iKuai ，负责 PPPoE 拨号、DHCP Server、NAT； 虚拟机 2： Debian 13 ，跑 sing-box 作为旁路由网关，负责透明"
+  },
+  {
+    "title": "整洁架构之道",
+    "url": "https://www.geedea.pro/library/2026/clean-architecture/",
+    "date": "2026-04-21T02:43:27Z",
+    "description": "由于很不喜欢软件架构课老师的授课风格，所以决定完全自学。选这本书当教材可能不太合适，但的确收获颇多。眼看 Coding Agents 的趋势只增不减，就算在个人项目和自由软件项目中拒绝使用，工作时也无处可躲，我想每个程序员都需要做架构师了。如果缺乏整洁清晰的架构设计，那 Coding Agents 就只是在高速产出屎山代码而已，后续的维护只会是一场接一场燃烧 Token（或者说燃烧美元）的灾难。总之有必要关注架构问题。 对翻译的批评 丑话先说在前头。书很好，但翻译是真的烂，只给这本书三分也完全是因为翻译问题。尽管我理解翻译技术类书籍的人都是从业者而非专业译者，对翻译质量有一定容忍度，但本书的四位译者实在是缺乏最基本的素养和 素质 ，我读着非常恼火。 在第 27 章《服务：宏观与微观》中，图 27.1 的文字标注全是英文，比如 Taxi Selector，这没问题，因为编写程序时就会用这些单词命名。有问题的是，在几个段落过后的图 27.2 中，只有 Taxi UI 是英文，其他的全都变成了「出租车匹配」之类的词。就算抛开出现在同一章节的两张图前后不一致不谈，同一张图里也是中英文混杂，明明"
+  },
+  {
+    "title": "丑人为什么多作怪？",
+    "url": "https://mobius.blog/22914.html",
+    "date": "2026-04-21T01:00:00Z",
+    "description": "这并不是一个具有普遍性规律的“结论”，但有时候它会非常深刻地影响大家对于某一类型人的判断。既然人很难做到客观地 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "2026.4.20",
+    "url": "https://www.justzht.com/2026-4-20/",
+    "date": "2026-04-21T00:55:41Z",
+    "description": "又是一个周一，原本今天早上想要请假的，后来想说还是去好了。到公司之后熟悉了一会自己上周写的东西，然后"
+  },
+  {
+    "title": "Amazon 与 Anthropico 达成50亿美元投资和计算协议，进一步加强合作",
+    "url": "https://blog.rustfisher.com/news/amazon-will-invest-in-anthropic-20260421/",
+    "date": "2026-04-21T00:32:59Z",
+    "description": "亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。"
+  },
+  {
+    "title": "Complete Guide to Deploying FastGPT on Kubernetes",
+    "url": "https://jaegerw2016.github.io//posts/2026/04/21/%E5%9C%A8Kubernetes%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2FastGPT%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html",
+    "date": "2026-04-21T00:00:00Z",
+    "description": "背景FastGPT是一个基于LLM（大语言模型）的知识库问答系统，提供了开箱即用的知识库、多模态文件解析、工作流编排等功能。它支持多种大模型接入，可以快速构建企业级的AI知识库应用。在Kubernetes环境中部署FastGPT可以充..."
+  }
+]

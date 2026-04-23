@@ -110,17 +110,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-16 | [Google宣布Gemini API预付费结算功能逐步启用](https://blog.rustfisher.com/news/google-prepay-for-the-gemini-api-20260416/) | 预付费账单 Google AI Studio 对 Gemini API 的付费方式进行了重大更新 |
 | 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
 | 2026-04-16 | [AI 编程产品开始长成“工作台”，但离替代开发环境还早](https://www.imhaoliu.com/blog/202604/ai-coding-workbench-agent-management-cloud-execution) | Windsurf、Claude Code 和 Codex 这些产品最近共同指向一件事：AI 编程工具正在长成任务分发、云端执行和人工接管并存的工作台。真正的变化发生在默认入口、agent 管理和组织采用层面。 |
-| 2026-04-15 | [奇怪的社会偏离感](https://zhangke.space/%e5%a5%87%e6%80%aa%e7%9a%84%e7%a4%be%e4%bc%9a%e5%81%8f%e7%a6%bb%e6%84%9f/?utm_source=rss&utm_medium=rss&utm_campaign=%25e5%25a5%2587%25e6%2580%25aa%25e7%259a%2584%25e7%25a4%25be%25e4%25bc%259a%25e5%2581%258f%25e7%25a6%25bb%25e6%2584%259f) | 这几年我逐渐发现自己有个比较奇怪的心理活动，而且最近我发现这种心理在很多人身上都会出现。 一个典型的表现是，当 […] The post 奇怪的社会偏离感 first appeared on 张可的博客 . |
-| 2026-04-15 | [情绪上的事儿，不要急着下结论](https://blog.solazy.me/20260415/) | 又要聊情绪管理的话题了 |
-| 2026-04-15 | [文章选题汇总](https://www.xiaozonglin.cn/article-potential-topics/) | 我是一个喜欢立 Flag，但是有时没什么动力来推进选题和项目。写个置顶文章，就当是我写过了。 ICanMana […] 文章选题汇总 最先出现在 林林杂语 。 |
-| 2026-04-15 | [AI Infra：2026 Token 经济生态分析（一）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-One.html) | 一、Token 的三种“商品形态”类型产生位置谁付钱价值体现raw token模型推理层平台 / 开发者成本中心（GPU 时间）structured token（带上下文）RAG / Agent... |
-| 2026-04-15 | [我为什么关闭“友情链接”？](https://mobius.blog/22841.html) | 您猜怎么着～这个系列居然还在继续。 需要特别强调一下，更早接触莫比乌斯的朋友应该很清楚：我并没有公开过所谓的“ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-15 | [Claude Code使用后的感受：独立编程、日常助手与深度定制](https://11010.net/p/claude-code-used-feel/) | 用了一个多月 Claude Code 后，记录一下哪些认知变了。 为什么写这篇后续 最近深度使用 Claude Code ，确实有一些新的感受。如果用一句话来总结：“强烈推荐体验”。 最近经常看到关于前同事被蒸馏成 token 、 xxx.skill ，本来想用下面这张图片做博客首图的，想了想这样非… |
-| 2026-04-15 | [emacs-合并dired中pdf文件](https://blog.prayhand13013.top/20260415T113509--emacs-合并dired中pdf文件__blog.html) |  |
-| 2026-04-15 | [Qwen3 ASR 流式转写 Docker 懒人整合包](https://dsx2016.com/qwen3-asr-streaming-transcription/) | 前言 本文是第二个docker懒人包，依旧是win兼容问题，不得不用docker 这个懒人包有40GB左右，在... Qwen3 ASR 流式转写 Docker 懒人整合包 最先出现在 大师兄2016 。 |
-| 2026-04-15 | [积极心态是一种选择，而不是行动的结果](https://blog.rustfisher.com/reading/promotion/fake-being-happy-and-look-for-the-positive-in-each-situation/) | “假装快乐直到真正快乐”这句话真的管用。只要假装快乐，并在每件事中寻找积极的一面，你的视角就会改变。 |
-| 2026-04-15 | [美国缅因州议员通过禁令，禁止大型数据中心至2027年底](https://blog.rustfisher.com/news/news-us-maine-bill-20260415/) | 该法案将禁止在2027年底之前建设耗电量超过20兆瓦的发电中心，目前已提交给州长。 |
-| 2026-04-15 | [独立游戏简评 Vol.4](https://bluepika.life/blog/indie-game-notes-4) | 继续写写一些之前玩过的独立游戏，部分内容含有剧透，特别是以下提到的解谜游戏。 |
 
 ## Vibe Coding
 
