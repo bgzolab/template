@@ -6,16 +6,22 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
-    "title": "Codex高效Coding配置优化指南",
-    "url": "https://jetyu.me/post/codex-config-guide.html",
-    "date": "2026-04-23T10:00:00Z",
-    "description": "通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。"
+    "title": "独立开发者的英国公司报税（2026）",
+    "url": "https://www.meettea.com/uk-company-tax-2026.html",
+    "date": "2026-04-23T11:41:22Z",
+    "description": "给独立开发者与小微企业的英国公司报税实战指南：CT600、年度账目、Dormant 零申报，从流水归类到提交全流程。"
   },
   {
     "title": "终结竞争：从护城河到商业终局的实战指南",
     "url": "https://www.meettea.com/business-moat-endgame.html",
-    "date": "2026-04-23T08:05:59Z",
+    "date": "2026-04-23T11:41:21Z",
     "description": "从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构"
+  },
+  {
+    "title": "Codex高效Coding配置优化指南",
+    "url": "https://jetyu.me/post/codex-config-guide.html",
+    "date": "2026-04-23T10:00:00Z",
+    "description": "通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。"
   },
   {
     "title": "为什么现在年代剧里的招牌，像是刚挂上去的？",

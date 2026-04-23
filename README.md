@@ -21,8 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
-| 2026-04-23 | [Codex高效Coding配置优化指南](https://jetyu.me/post/codex-config-guide.html) | 通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。 |
+| 2026-04-23 | [独立开发者的英国公司报税（2026）](https://www.meettea.com/uk-company-tax-2026.html) | 给独立开发者与小微企业的英国公司报税实战指南：CT600、年度账目、Dormant 零申报，从流水归类到提交全流程。 |
 | 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
+| 2026-04-23 | [Codex高效Coding配置优化指南](https://jetyu.me/post/codex-config-guide.html) | 通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。 |
 | 2026-04-23 | [为什么现在年代剧里的招牌，像是刚挂上去的？](https://www.iyeslogo.com/design-in-years-television/) | 年代剧招牌穿帮现象背后反映了影视创作中的多重问题 |
 | 2026-04-23 | [灵魂的重逢：在湖光山色中，遇见怡然自得的自己](https://blog.hoopan.net/832.html) | 在湖畔露营的湖光山色中，内心那个冷眼旁观的"觉察者"终于与现实中的我融为一体。回望这段心路历程，从情绪的内耗到课题分离，从向外索求到向内专注，我终于学会了安然存在，怡然自得。 |
 | 2026-04-23 | [吃细糠](https://kaix.in/2026/0423/) | 之前提到过店里空间布局的问题导致我最近经常吃外卖。虽然 不想给差评 ，但是不得不说，实在不好吃。昨天点了小鸡炖蘑菇、锅包肉、回锅肉、干煸花菜。严格点评价就全都不合格。蘑菇炖鸡竟然没有鲜味这最奇怪，好在可以自我安慰说至少没加「科技」。锅包肉，哎呀，不禁回想起二十年多前刚工作，下了班和太太一起下馆子的时… |
