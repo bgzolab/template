@@ -6,6 +6,24 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "学习周刊-总第260期-2026年第17周",
+    "url": "https://wiki.eryajf.net/pages/907f99/",
+    "date": "2026-04-24T15:52:12Z",
+    "description": "如要阅读全文，点击标题跳转。 学习周刊-总第260期 | kite-desktop | zerobrew | dnet | voicekey | pdfcraft | explain-error-plugin | ezbookkeeping | server-survival | Droppy | ThinkFlowAI | FlashSpace | Orbit | pigsty | pvesphere | talkcody"
+  },
+  {
+    "title": "Living Clojure",
+    "url": "https://www.geedea.pro/library/2026/living-clojure/",
+    "date": "2026-04-24T08:37:14Z",
+    "description": "还不错的 Clojure 入门书籍，适合有较强编程基础（我认为至少要熟悉一两门编程语言，有实际开发经验）的人用来快速了解 Clojure 各方面的特性和编程模式。作者用《爱丽丝梦游仙境》的例子串起了 Clojure 的许多知识，通俗但对不了解这个故事的读者可能有些摸不着头脑，而且大部分例子都不是实际项目里会用到的做法，只能用来理解语法和函数的作用。 整体而言，可以把这本书当作不全面的对 Clojure 的快速浏览。由于我一边读一边写了个 Clojure 项目 ，读到某些章节时我发现我已经熟悉作者要讲的东西了。所以…… 不读书学 Clojure 也完全可行甚至更快？不过读一读有经验的 Clojure 程序员的文字总归是有些帮助的。 对翻译和编辑的…… 吐槽 我觉得我写技术书籍的第一节都会是翻译相关的内容了…… 之前读的《 整洁架构之道 》译得很糟糕，这本其实还能忍受。尽管语句不自然，但至少没有低素质的译者搞事，还是很尊重原作者的。只是有一些句子读起来确实很不自然，完全保留了英文逻辑，比如： “如果我们有一个需要做一系列转变的 Java 对象，这是很有用的。” 虽有读起来磕磕绊绊，但习惯了"
+  },
+  {
+    "title": "Anthropic 关于近期 Claude Code 质量报告的最新进展",
+    "url": "https://blog.rustfisher.com/news/anthropic-claude-code-quality-reports-20260424/",
+    "date": "2026-04-24T06:32:59Z",
+    "description": "追踪了近期有关 Claude Code 质量问题的报告，发现这些问题源于三项不同的变更。以下是变更详情以及我们正在进行的更改。"
+  },
+  {
     "title": "工具人",
     "url": "https://mobius.blog/23255.html",
     "date": "2026-04-24T06:00:00Z",

@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-24 | [学习周刊-总第260期-2026年第17周](https://wiki.eryajf.net/pages/907f99/) | 如要阅读全文，点击标题跳转。 学习周刊-总第260期 &#124; kite-desktop &#124; zerobrew &#124; dnet &#124; voicekey &#124; pdfcraft &#124; explain-error-plugin &#124; ezbookkeeping &#124; server-survival &#124; Droppy &#124;… |
+| 2026-04-24 | [Living Clojure](https://www.geedea.pro/library/2026/living-clojure/) | 还不错的 Clojure 入门书籍，适合有较强编程基础（我认为至少要熟悉一两门编程语言，有实际开发经验）的人用来快速了解 Clojure 各方面的特性和编程模式。作者用《爱丽丝梦游仙境》的例子串起了 Clojure 的许多知识，通俗但对不了解这个故事的读者可能有些摸不着头脑，而且大部分例子都不是实际… |
+| 2026-04-24 | [Anthropic 关于近期 Claude Code 质量报告的最新进展](https://blog.rustfisher.com/news/anthropic-claude-code-quality-reports-20260424/) | 追踪了近期有关 Claude Code 质量问题的报告，发现这些问题源于三项不同的变更。以下是变更详情以及我们正在进行的更改。 |
 | 2026-04-24 | [工具人](https://mobius.blog/23255.html) | 网友：特地将孙女放坐在玄关，等待父母到访。开门见到孙女的瞬间，外婆开心地手舞足蹈不知所措，她身后的外公激动地挤 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-24 | [深入 Open Agent SDK（一）：Agent Loop 内核——从 prompt 到多轮对话的完整运转机制](https://gptkit.eth.limo/366BF72F-76A4-4E5B-9D4D-867637D4DDBE/) | 本文是「深入 Open Agent SDK (Swift)」系列第一篇。 系列目录见这里 。 大多数 LLM 封装库做的事情是：发请求、拿响应、结束。但一个真正的 Agent 不止于此——它要能自己判断需不需要调工具、执行完工具后把结果喂回 LLM、循环往复直到拿到最终答案。这个循环就是 Agent… |
 | 2026-04-24 | [深入 Open Agent SDK（六）：多 LLM 提供商与运行时控制](https://gptkit.eth.limo/E12E5AFD-4893-44A9-9EA6-0226B0BE2AF7/) | 本文是「深入 Open Agent SDK (Swift)」系列第六篇（完结篇）。 系列目录见这里 。 一个 Agent 不应该绑定单一 LLM 提供商。不同任务适合不同模型——简单问题用便宜模型，复杂推理用贵模型，有些场景甚至需要本地模型。而且运行时的需求也在变化：用户可能中途要求更深度的思考，可… |
