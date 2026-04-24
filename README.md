@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-24 | [工具人](https://mobius.blog/23255.html) | 网友：特地将孙女放坐在玄关，等待父母到访。开门见到孙女的瞬间，外婆开心地手舞足蹈不知所措，她身后的外公激动地挤 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-24 | [深入 Open Agent SDK（一）：Agent Loop 内核——从 prompt 到多轮对话的完整运转机制](https://gptkit.eth.limo/366BF72F-76A4-4E5B-9D4D-867637D4DDBE/) | 本文是「深入 Open Agent SDK (Swift)」系列第一篇。 系列目录见这里 。 大多数 LLM 封装库做的事情是：发请求、拿响应、结束。但一个真正的 Agent 不止于此——它要能自己判断需不需要调工具、执行完工具后把结果喂回 LLM、循环往复直到拿到最终答案。这个循环就是 Agent… |
 | 2026-04-24 | [深入 Open Agent SDK（六）：多 LLM 提供商与运行时控制](https://gptkit.eth.limo/E12E5AFD-4893-44A9-9EA6-0226B0BE2AF7/) | 本文是「深入 Open Agent SDK (Swift)」系列第六篇（完结篇）。 系列目录见这里 。 一个 Agent 不应该绑定单一 LLM 提供商。不同任务适合不同模型——简单问题用便宜模型，复杂推理用贵模型，有些场景甚至需要本地模型。而且运行时的需求也在变化：用户可能中途要求更深度的思考，可… |
 | 2026-04-24 | [深入 Open Agent SDK（五）：会话持久化与安全防线](https://gptkit.eth.limo/74B0725C-34AE-492C-94BA-AE47C9CE7BD1/) | 本文是「深入 Open Agent SDK (Swift)」系列第五篇。 系列目录见这里 。 Agent 不只是一次性问答工具。真正有用的 Agent 要做到三件事：记住上下文（上次聊到哪了）、控制权限（哪些操作能做）、审计行为（谁在什么时候干了什么）。Open Agent SDK 用四个子系统来覆… |
