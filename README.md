@@ -39,6 +39,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-23 | [看不见的底层机制](https://www.linggandianbo.com/newsletter-120/) | 从 Price’s Law、大脑能量和拖延心理，到 GPS 与 AI 文件系统，理解那些悄悄决定结果的系统｜灵感电波 #120 |
 | 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
 | 2026-04-23 | [独立开发者的英国公司报税（2026）](https://www.meettea.com/uk-company-tax-2026.html) | 给独立开发者与小微企业的英国公司报税实战指南：CT600、年度账目、Dormant 零申报，从流水归类到提交全流程。 |
+| 2026-04-23 | [从不怀念少年时](https://blog.solazy.me/20260423/) | 今天晚上和一个朋友聊天，突然聊起这个话题 |
 | 2026-04-23 | [一些科幻故事的灵感碎片](https://haoluobo.com/2026/04/%e4%b8%80%e4%ba%9b%e7%a7%91%e5%b9%bb%e6%95%85%e4%ba%8b%e7%9a%84%e7%81%b5%e6%84%9f%e7%a2%8e%e7%89%87/) | Claude 号称出了个危险的大模型，这个模型甚至学会了“欺骗”。虽感觉营销多过实际，不过近年来大模型确实进展 […] |
 | 2026-04-23 | [RackNerd 性价比 VPS 服务器特价促销中！终身续费同价！](https://www.iplaysoft.com/p/racknerd) | 很多人都需要用到「国外的 VPS 主机」，省钱省事，用来学习 Linux、编程开发、跑外贸网站、博客，或者用 Docker 自建网盘或各种各样的私有网络服务都非常实用。 最近除推荐的 DMIT、板佤工高端 CN2 GIA 线路、HostDare、VirMarch 等 VPS 服务器主机补货之外，不断… |
 | 2026-04-23 | [Codex高效Coding配置优化指南](https://jetyu.me/post/codex-config-guide.html) | 通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。 |
