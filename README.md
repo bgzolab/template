@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-24 | [Memos #2026-04-23](https://www.taober.blog/memos) | 08:39 事没做完就有些焦虑，但事总是做不完，哎。 21:53 今天总算是把堵住的两个工作上的事解决了，真舒畅啊！ 工作中只要目标明确，还是得主动 push 才行。 后面还有更多的挑战。 |
+| 2026-04-23 | [看不见的底层机制](https://www.linggandianbo.com/newsletter-120/) | 从 Price’s Law、大脑能量和拖延心理，到 GPS 与 AI 文件系统，理解那些悄悄决定结果的系统｜灵感电波 #120 |
 | 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
 | 2026-04-23 | [独立开发者的英国公司报税（2026）](https://www.meettea.com/uk-company-tax-2026.html) | 给独立开发者与小微企业的英国公司报税实战指南：CT600、年度账目、Dormant 零申报，从流水归类到提交全流程。 |
 | 2026-04-23 | [一些科幻故事的灵感碎片](https://haoluobo.com/2026/04/%e4%b8%80%e4%ba%9b%e7%a7%91%e5%b9%bb%e6%95%85%e4%ba%8b%e7%9a%84%e7%81%b5%e6%84%9f%e7%a2%8e%e7%89%87/) | Claude 号称出了个危险的大模型，这个模型甚至学会了“欺骗”。虽感觉营销多过实际，不过近年来大模型确实进展 […] |
@@ -72,7 +74,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-20 | [Open Agent SDK (Swift)：用原生 Swift 并发构建 AI Agent 应用](https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/) | 如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。… |
 | 2026-04-20 | [稻草人周刊 Vol.77](https://www.geedea.pro/weekly/77/) | 这周三得知周四周五有校运会，停课两天，加上周末，我突然拥有了四天的假期，于是溜出去看了《挽救计划》，逛了美术馆，还和朋友租了 Minecraft 服务器玩。精神状态似乎好了不少，接下来的一周要重振旗鼓啊。 这周听了不少新音乐，但阅读的时间倒是变少了。效率最高的时候永远是摸鱼的时候，这周有一半的时间都… |
 | 2026-04-20 | [不做扫兴的“妈妈”](https://mobius.blog/22854.html) | 儿童教育里，有一句浓缩为经典的话：不做扫兴的父母。其基本原则就是把“否定性评价”转变为“支持性共情”。比如孩子 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-20 | [Memos #2026-04-19](https://www.taober.blog/memos) | 11:45 哈哈 |
 | 2026-04-20 | [已将博客从Typecho迁移到Astro](https://krya.com/post/astro-sintu-theme/) | ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最… |
 | 2026-04-19 | [告别 kubectl 黑框，开源一个基于 Wails 打造 K8S 多集群管理工具](https://wiki.eryajf.net/pages/f91541/) | 如要阅读全文，点击标题跳转。做运维久了，你一定懂那种感觉：管理多个K8S集群时，经常需要使用kubectl xxx来进行管理，我想，你一定和我一样，深受其苦。此前我还在群里问过有没有优秀的多集群桌面端管理工具。当时还有群友打趣说让我自己开发一个。虽然我当时也是打趣回应了一下，但实际在我的内心，一直有… |
 | 2026-04-19 | [永久 1TB 空间！Koofr - 支持 WebDAV 的终身免费 10G 网盘 (Rclone / 挂载 OneDrive)](https://www.iplaysoft.com/p/koofr) | 最近一直在为几台 VPS 服务器数据备份在烦恼，还有考虑到 NAS、电脑文件的异地备份，想找一台大硬盘的 VPS 或用 S3 云存储，但找了一圈，大空间的 VPS 年费实在都太贵了。 最近挖到了一款“冷门”的宝藏云网盘 Koofr，它不仅有永久免费不限速 10G 空间，最关键是完美支持 WebDAV… |
@@ -109,20 +110,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-17 | [Album#35 - The Gift](https://taxodium.ink/album-35.html) | Album#35 The Gift 图1 《The Gift (Day Version)》专辑封面 专辑信息 专辑名称： The Gift (Day Version) 歌手： Joyce Cheung 年份： 2026-04-06 风格： 钢琴曲、纯音乐 时长： 约 45 分钟 Joyce Cheu… |
 | 2026-04-17 | [真的会有人希望自己的父母早点死吗？](https://mobius.blog/22788.html) | 这可不是标题党。但当我在咖啡厅用 Notion 写下这个标题的时候，还是会觉得背后毛毛的，毕竟这是在公开场合。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-17 | [ClaudeCode源码设计思想](https://www.jtxyh.com/25048/) | ClaudeCode源码分析 |
-| 2026-04-16 | [一切都很流畅](https://www.linggandianbo.com/newsletter-119/) | 流畅到我们开始在 AI 的怀里出溜｜灵感电波 #119 |
-| 2026-04-16 | [学习周刊-总第259期-2026年第16周](https://wiki.eryajf.net/pages/868c31/) | 如要阅读全文，点击标题跳转。 学习周刊-总第259期 &#124; gomi &#124; Claude-Cowork &#124; alaye-app &#124; Wegent &#124; DockAnchor &#124; mango-desk &#124; typora-theme-phycat &#124; office-website |
-| 2026-04-16 | [你得先学会生活 Chat with PY](https://z.arlmy.me/posts/Chat/Chat_SandPY_20260407/) | 「一次闲聊。」 |
-| 2026-04-16 | [Album#34 - THIS MUSIC MAY CONTAIN HOPE.](https://taxodium.ink/album-34.html) | Album#34 THIS MUSIC MAY CONTAIN HOPE. 图1 《THIS MUSIC MAY CONTAIN HOPE.》专辑封面 专辑信息 专辑名称： THIS MUSIC MAY CONTAIN HOPE. 歌手： RAYE 年份： 2026-03-27 风格： Jazz,… |
-| 2026-04-16 | [记录自己做的第一个 iOS App 的喜悦](https://lomus.cc/archives/749) | AI coding 火了很久了，我也经常用 AI 来做一些工作上用的小工具，但这些工具基本都是部署在服务器上的 […] 记录自己做的第一个 iOS App 的喜悦 最先出现在 Lumos's Blog 。 |
-| 2026-04-16 | [emacs-智能识别org-heading里的中文时间戳](https://blog.prayhand13013.top/20260416T165615--emacs-智能识别org-heading里的中文时间戳__blog.html) |  |
-| 2026-04-16 | [emacs-自动识别org-heading里的中文时间戳](https://blog.prayhand13013.top/20260416T165615--emacs-自动识别org-heading里的中文时间戳__blog.html) |  |
-| 2026-04-16 | [2026 听音](https://z.arlmy.me/posts/YearlyAlbums/YearlyAlbums_2026/) | 「2026 年听音短评备份。」 |
-| 2026-04-16 | [自卑的人在恐惧什么？](https://mobius.blog/22784.html) | 今天的文章标题，可不是什么“心灵鸡汤”式的标题，就是纯粹地（对部分人来说更显冒犯地）在聊“自卑”这件事。 聊起 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-16 | [2026 观影](https://z.arlmy.me/posts/YearlyMovies/YearlyMovies_2026/) | 「2026 观影短评备份。」 |
-| 2026-04-16 | [2026 阅读](https://z.arlmy.me/posts/YearlyBooks/YearlyBooks_2026/) | 「2026 年阅读短评备份。」 |
-| 2026-04-16 | [Google宣布Gemini API预付费结算功能逐步启用](https://blog.rustfisher.com/news/google-prepay-for-the-gemini-api-20260416/) | 预付费账单 Google AI Studio 对 Gemini API 的付费方式进行了重大更新 |
-| 2026-04-16 | [斯坦福大学人类中心人工智能研究所（Stanford HAI）发布2026年人工智能指数报告](https://blog.rustfisher.com/news/news-stanford-ai-report-202604/) | 在斯坦福大学人类中心人工智能研究所（Stanford HAI），我们相信人工智能注定将成为 21 世纪最具变革性的技术。然而，除非我们深思熟虑地引导其发展，否则它的红利将无法得到公平分配。 |
-| 2026-04-16 | [AI 编程产品开始长成“工作台”，但离替代开发环境还早](https://www.imhaoliu.com/blog/202604/ai-coding-workbench-agent-management-cloud-execution) | Windsurf、Claude Code 和 Codex 这些产品最近共同指向一件事：AI 编程工具正在长成任务分发、云端执行和人工接管并存的工作台。真正的变化发生在默认入口、agent 管理和组织采用层面。 |
 
 ## Vibe Coding
 
