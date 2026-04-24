@@ -21,6 +21,14 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-24 | [深入 Open Agent SDK（一）：Agent Loop 内核——从 prompt 到多轮对话的完整运转机制](https://gptkit.eth.limo/366BF72F-76A4-4E5B-9D4D-867637D4DDBE/) | 本文是「深入 Open Agent SDK (Swift)」系列第一篇。 系列目录见这里 。 大多数 LLM 封装库做的事情是：发请求、拿响应、结束。但一个真正的 Agent 不止于此——它要能自己判断需不需要调工具、执行完工具后把结果喂回 LLM、循环往复直到拿到最终答案。这个循环就是 Agent… |
+| 2026-04-24 | [深入 Open Agent SDK（六）：多 LLM 提供商与运行时控制](https://gptkit.eth.limo/E12E5AFD-4893-44A9-9EA6-0226B0BE2AF7/) | 本文是「深入 Open Agent SDK (Swift)」系列第六篇（完结篇）。 系列目录见这里 。 一个 Agent 不应该绑定单一 LLM 提供商。不同任务适合不同模型——简单问题用便宜模型，复杂推理用贵模型，有些场景甚至需要本地模型。而且运行时的需求也在变化：用户可能中途要求更深度的思考，可… |
+| 2026-04-24 | [深入 Open Agent SDK（五）：会话持久化与安全防线](https://gptkit.eth.limo/74B0725C-34AE-492C-94BA-AE47C9CE7BD1/) | 本文是「深入 Open Agent SDK (Swift)」系列第五篇。 系列目录见这里 。 Agent 不只是一次性问答工具。真正有用的 Agent 要做到三件事：记住上下文（上次聊到哪了）、控制权限（哪些操作能做）、审计行为（谁在什么时候干了什么）。Open Agent SDK 用四个子系统来覆… |
+| 2026-04-24 | [深入 Open Agent SDK（四）：多 Agent 协作——子代理、团队与任务编排](https://gptkit.eth.limo/C155E8B0-998A-4A06-8938-4216A0CAC2DC/) | 本文是「深入 Open Agent SDK (Swift)」系列第四篇。 系列目录见这里 。 单个 Agent 再强，也只是一个执行者。真实的开发任务往往是多步骤、多角色的：先有人探索代码库，有人设计方案，再有人写代码、跑测试。一个 Agent 单干，上下文容易膨胀，效率也上不去。 Open Age… |
+| 2026-04-24 | [深入 Open Agent SDK（三）：MCP 集成实战——让 Agent 连接万物](https://gptkit.eth.limo/D9AE0B75-28C0-4202-83DF-7401673EAC73/) | 本文是「深入 Open Agent SDK (Swift)」系列第三篇。 系列目录见这里 。 上一篇看了 SDK 内置的 34 个工具——文件读写、Bash 执行、代码搜索，覆盖了常见的开发场景。但 Agent 的能力不可能只靠内置工具撑满。你需要连接数据库、调用企业 API、操作内部系统——这些事… |
+| 2026-04-24 | [深入 Open Agent SDK（二）：34 个工具的背后——工具协议、三层架构与自定义扩展](https://gptkit.eth.limo/6B7CBA30-B740-4FC7-A5D8-2A89AA4D7D36/) | 本文是「深入 Open Agent SDK (Swift)」系列第二篇。 系列目录见这里 。 上一篇分析了 Agent Loop 的运转机制，其中有一个环节是"执行工具"——LLM 说"我要调 Bash"，SDK 就真的起一个进程跑命令。但这背后的工具系统远不止"调个函数"那么简单。34 个内置工具… |
+| 2026-04-24 | [Open Agent SDK (Swift)：用原生 Swift 构建 AI Agent 应用](https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/) | 如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。… |
+| 2026-04-24 | [因为恐惧被关系伤害，所以选择独自面对](https://mobius.blog/23145.html) | 前段时间，因为有朋友在《自卑的人在恐惧什么？》下评论道：因为恐惧被关系伤害，所以选择独自面对。我觉得这开启了一 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-24 | [Memos #2026-04-23](https://www.taober.blog/memos) | 08:39 事没做完就有些焦虑，但事总是做不完，哎。 21:53 今天总算是把堵住的两个工作上的事解决了，真舒畅啊！ 工作中只要目标明确，还是得主动 push 才行。 后面还有更多的挑战。 |
 | 2026-04-23 | [看不见的底层机制](https://www.linggandianbo.com/newsletter-120/) | 从 Price’s Law、大脑能量和拖延心理，到 GPS 与 AI 文件系统，理解那些悄悄决定结果的系统｜灵感电波 #120 |
 | 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
@@ -71,7 +79,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-20 | [不会用AI的设计师，已经开始被淘汰](https://www.iyeslogo.com/ai-kill-designers/) | AI正在重塑设计行业，不是替代设计师，而是淘汰不会使用AI的设计师 |
 | 2026-04-20 | [语文学习和考试](https://blog.est.im/2026/stdin-10) | 前面抖了两篇 如何跟孩子讲学习的意义 失落的学习兴趣 今天就抬一个具体论据。 来自zhihu ： Q: 如果文言文退出中国教育体系，你是支持还是反对？为什么? A: 文言文真退了，可能就真的不知道以后高中语文课上来是干什么的了。 但是作者不允许转载。我只能先归档 https://archive.md… |
 | 2026-04-20 | [失落的学习兴趣](https://blog.est.im/2026/stderr-15) | 上一篇 如何跟孩子讲学习的意义 ，最大的批评是，与其给孩子讲利弊，不如培养兴趣。 唉。说来惭愧，这的确是我不好意思谈及，也没能做好的一个点。只能说，优秀的孩子都对学习有兴趣，不幸的孩子各有各的苦衷。 孩子不爱学习，是对学习失去兴趣之后的结果，而不是因为欠缺了兴趣而学习待提高的。 孩子问“为什么要学习… |
-| 2026-04-20 | [Open Agent SDK (Swift)：用原生 Swift 并发构建 AI Agent 应用](https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/) | 如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。… |
 | 2026-04-20 | [稻草人周刊 Vol.77](https://www.geedea.pro/weekly/77/) | 这周三得知周四周五有校运会，停课两天，加上周末，我突然拥有了四天的假期，于是溜出去看了《挽救计划》，逛了美术馆，还和朋友租了 Minecraft 服务器玩。精神状态似乎好了不少，接下来的一周要重振旗鼓啊。 这周听了不少新音乐，但阅读的时间倒是变少了。效率最高的时候永远是摸鱼的时候，这周有一半的时间都… |
 | 2026-04-20 | [不做扫兴的“妈妈”](https://mobius.blog/22854.html) | 儿童教育里，有一句浓缩为经典的话：不做扫兴的父母。其基本原则就是把“否定性评价”转变为“支持性共情”。比如孩子 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-20 | [已将博客从Typecho迁移到Astro](https://krya.com/post/astro-sintu-theme/) | ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最… |
