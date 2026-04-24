@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-24 | [学习周刊-总第260期-2026年第17周](https://wiki.eryajf.net/pages/907f99/) | 如要阅读全文，点击标题跳转。 学习周刊-总第260期 &#124; kite-desktop &#124; zerobrew &#124; dnet &#124; voicekey &#124; pdfcraft &#124; explain-error-plugin &#124; ezbookkeeping &#124; server-survival &#124; Droppy &#124;… |
+| 2026-04-24 | [RISC-V 虚拟机无法代替 EVM 虚拟机](https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/) | RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V |
 | 2026-04-24 | [DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？](https://www.iplaysoft.com/deepseek-v4.html) | 今天一大消息就是 开源 AI 大模型圈的“卷王” DeepSeek ，憋了 15 个月后，终于把全新系列模型 DeepSeek-V4 正式公布出来了，而且照惯例，同步开源！ 一时间朋友圈、技术群各种消息满天飞。现在 DeepSeek 官网 和 API 都直接能用 v4 了！包括 众多第三方算力平台… |
 | 2026-04-24 | [Living Clojure](https://www.geedea.pro/library/2026/living-clojure/) | 还不错的 Clojure 入门书籍，适合有较强编程基础（我认为至少要熟悉一两门编程语言，有实际开发经验）的人用来快速了解 Clojure 各方面的特性和编程模式。作者用《爱丽丝梦游仙境》的例子串起了 Clojure 的许多知识，通俗但对不了解这个故事的读者可能有些摸不着头脑，而且大部分例子都不是实际… |
 | 2026-04-24 | [Anthropic 关于近期 Claude Code 质量报告的最新进展](https://blog.rustfisher.com/news/anthropic-claude-code-quality-reports-20260424/) | 追踪了近期有关 Claude Code 质量问题的报告，发现这些问题源于三项不同的变更。以下是变更详情以及我们正在进行的更改。 |

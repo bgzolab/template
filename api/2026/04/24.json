@@ -12,6 +12,12 @@
     "description": "如要阅读全文，点击标题跳转。 学习周刊-总第260期 | kite-desktop | zerobrew | dnet | voicekey | pdfcraft | explain-error-plugin | ezbookkeeping | server-survival | Droppy | ThinkFlowAI | FlashSpace | Orbit | pigsty | pvesphere | talkcody"
   },
   {
+    "title": "RISC-V 虚拟机无法代替 EVM 虚拟机",
+    "url": "https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/",
+    "date": "2026-04-24T12:34:05Z",
+    "description": "RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V"
+  },
+  {
     "title": "DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？",
     "url": "https://www.iplaysoft.com/deepseek-v4.html",
     "date": "2026-04-24T11:39:41Z",
