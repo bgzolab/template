@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-25 | [微软计划首次对美国员工进行自愿买断，涉及至多7%的员工](https://blog.rustfisher.com/news/microsoft-retire-plan-20260425/) | 据一位知情人士透露，约有7%的美国员工符合资格。由于具体数字尚未公开，该人士要求匿名。这项一次性退休计划于周四在一份备忘录中宣布，将面向美国高级总监及以下级别的员工，前提是他们的工龄和年龄总和达到或超过70年。 |
 | 2026-04-25 | [记录 typecho 1.2.0 升级到 1.3.0 过程](https://hellodk.cn/post/1213) | 主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty... |
 | 2026-04-25 | [第一千篇](https://mobius.blog/23260.html) | 如果这篇文章能发表出来，那就意味着这个博客发布了第一千篇文章。现在是2021年的12月26日，发表完《写在20 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-25 | [Memos #2026-04-24](https://www.taober.blog/memos) | 00:24 深夜真是充满了感性与干劲，一觉起来就会全部消散。 |
