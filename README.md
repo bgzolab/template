@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-25 | [Memos #2026-04-24](https://www.taober.blog/memos) | 00:24 深夜真是充满了感性与干劲，一觉起来就会全部消散。 |
 | 2026-04-24 | [学习周刊-总第260期-2026年第17周](https://wiki.eryajf.net/pages/907f99/) | 如要阅读全文，点击标题跳转。 学习周刊-总第260期 &#124; kite-desktop &#124; zerobrew &#124; dnet &#124; voicekey &#124; pdfcraft &#124; explain-error-plugin &#124; ezbookkeeping &#124; server-survival &#124; Droppy &#124;… |
 | 2026-04-24 | [RISC-V 虚拟机无法代替 EVM 虚拟机](https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/) | RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V |
 | 2026-04-24 | [DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？](https://www.iplaysoft.com/deepseek-v4.html) | 今天一大消息就是 开源 AI 大模型圈的“卷王” DeepSeek ，憋了 15 个月后，终于把全新系列模型 DeepSeek-V4 正式公布出来了，而且照惯例，同步开源！ 一时间朋友圈、技术群各种消息满天飞。现在 DeepSeek 官网 和 API 都直接能用 v4 了！包括 众多第三方算力平台… |
@@ -35,7 +36,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-24 | [深入 Open Agent SDK（二）：34 个工具的背后——工具协议、三层架构与自定义扩展](https://gptkit.eth.limo/6B7CBA30-B740-4FC7-A5D8-2A89AA4D7D36/) | 本文是「深入 Open Agent SDK (Swift)」系列第二篇。 系列目录见这里 。 上一篇分析了 Agent Loop 的运转机制，其中有一个环节是"执行工具"——LLM 说"我要调 Bash"，SDK 就真的起一个进程跑命令。但这背后的工具系统远不止"调个函数"那么简单。34 个内置工具… |
 | 2026-04-24 | [Open Agent SDK (Swift)：用原生 Swift 构建 AI Agent 应用](https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/) | 如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。… |
 | 2026-04-24 | [因为恐惧被关系伤害，所以选择独自面对](https://mobius.blog/23145.html) | 前段时间，因为有朋友在《自卑的人在恐惧什么？》下评论道：因为恐惧被关系伤害，所以选择独自面对。我觉得这开启了一 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-24 | [Memos #2026-04-23](https://www.taober.blog/memos) | 08:39 事没做完就有些焦虑，但事总是做不完，哎。 21:53 今天总算是把堵住的两个工作上的事解决了，真舒畅啊！ 工作中只要目标明确，还是得主动 push 才行。 后面还有更多的挑战。 |
 | 2026-04-23 | [看不见的底层机制](https://www.linggandianbo.com/newsletter-120/) | 从 Price’s Law、大脑能量和拖延心理，到 GPS 与 AI 文件系统，理解那些悄悄决定结果的系统｜灵感电波 #120 |
 | 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
 | 2026-04-23 | [独立开发者的英国公司报税（2026）](https://www.meettea.com/uk-company-tax-2026.html) | 给独立开发者与小微企业的英国公司报税实战指南：CT600、年度账目、Dormant 零申报，从流水归类到提交全流程。 |
@@ -116,14 +116,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-18 | [北京・莽山国家森林公园（2026）](https://blog.yasking.org/a/photos-beijing-mangshan.html) | 好久没爬山，我又觉着我行了 北京莽山国家森林公园之前一直是未开放的状态，周五一搜索，竟然开放了，下午没事儿拎着 … |
 | 2026-04-18 | [旧事重提：大学生“AI+信息素养”大赛参赛微记](https://www.xiaozonglin.cn/a-micro-journal-of-my-participation-in-the-university-student-ai-information-literacy-competition/) | 记录一下去年参加“AI+信息素养”大赛的过程，权当是水一篇文章。 旧事重提：大学生“AI+信息素养”大赛参赛微记 最先出现在 林林杂语 。 |
 | 2026-04-18 | [如何跟孩子讲学习的意义](https://blog.est.im/2026/stderr-14) | 缘起 本来在tg里刷到个 博主syhily 讲语言和文字，感觉这老哥知识好渊博。于是慕名点开他的𝕏，好家伙直接丢了个暴论，大概意思说 孩子问他为啥要学习，他想了半天发现不好解释，就说反正父母养育你，孩子能报答的就是努力学习。 我本来想翻一下原文的，发现 syhily 都销号跑路了。syhily自己也… |
-| 2026-04-17 | [Gaming to Stay Sane](https://www.geedea.pro/en/article/gaming-for-sanity/) | I’ve been playing a lot of DST lately, pushing towards 1000 hours of total play time. It’s odd that I actually stopped playing video games for months… |
-| 2026-04-17 | [Cloud gaming: Shadow vs GeForce Now](https://anotherdayu.com/shadow-vs-geforcenow/) | Cloud gaming is changing so quickly that even Reddit discussions from just seven months ago already feel outdated. |
-| 2026-04-17 | [四月，院线电影看起来](https://blog.solazy.me/20260417/) | 想想下周又有我期待的电影登陆院线就开心！ |
-| 2026-04-17 | [日本关西系列｜Day 3 天授庵、禅林寺与排水渠](https://blog.yasking.org/a/series-kansai-travel-day3.html) | 早上起来，又来到了这家名为 Fresco 的超市 吸烟有害健康，买了两条 Seven Stars 给老父亲们，他家不支持支付宝和微信，我用的现金。 在 … |
-| 2026-04-17 | [快乐的死](https://www.geedea.pro/library/2026/la-mort-heureuse/) | 一本没有太多情节，以主人公的自我意识为主导的哲学或心理小说，主题显而易见，关于快乐、生命和死亡，当然还有活着的意义。《快乐的死》是加缪 24 岁写下的小说，也是他的处女作。尽管我对我最喜欢的作家多少有些滤镜（这话不是说说的，我现在坐的地方的左右两边都贴着加缪的海报），但这部小说的确不算出彩。给三分太… |
-| 2026-04-17 | [Album#35 - The Gift](https://taxodium.ink/album-35.html) | Album#35 The Gift 图1 《The Gift (Day Version)》专辑封面 专辑信息 专辑名称： The Gift (Day Version) 歌手： Joyce Cheung 年份： 2026-04-06 风格： 钢琴曲、纯音乐 时长： 约 45 分钟 Joyce Cheu… |
-| 2026-04-17 | [真的会有人希望自己的父母早点死吗？](https://mobius.blog/22788.html) | 这可不是标题党。但当我在咖啡厅用 Notion 写下这个标题的时候，还是会觉得背后毛毛的，毕竟这是在公开场合。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-17 | [ClaudeCode源码设计思想](https://www.jtxyh.com/25048/) | ClaudeCode源码分析 |
 
 ## Vibe Coding
 
