@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
 | 2026-04-25 | [日本关西系列｜Day 4 奈良的小鹿乖乖](https://blog.yasking.org/a/series-kansai-travel-day4.html) | 中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 … |
 | 2026-04-25 | [设计素材周刊【#009期】](https://www.iyeslogo.com/dtw-009/) | 「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你 |
 | 2026-04-25 | [Zine#48](https://taxodium.ink/48.html) | Zine#48 🎵 Sometimes It Snows in April - Prince News &#124; Article 目录 The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett Wr… |
