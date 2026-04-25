@@ -21,7 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
-| 2026-04-25 | [Zine#48](https://taxodium.ink/48.html) | Zine#48 🎵 Sometimes It Snows in April - Prince News &#124; Article The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett 作者是位盲… |
+| 2026-04-25 | [日本关西系列｜Day 4 奈良的小鹿乖乖](https://blog.yasking.org/a/series-kansai-travel-day4.html) | 中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 … |
+| 2026-04-25 | [设计素材周刊【#009期】](https://www.iyeslogo.com/dtw-009/) | 「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你 |
+| 2026-04-25 | [Zine#48](https://taxodium.ink/48.html) | Zine#48 🎵 Sometimes It Snows in April - Prince News &#124; Article 目录 The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett Wr… |
 | 2026-04-25 | [浏览器通过WebGPU上做AI推理](https://blog.est.im/2026/stdout-14) | 先说结论，在2026Q2这个时间点，通过浏览器webgpu 做 AI 不值得。 本来看 官方demo 跑得好好的，自己搓下来也觉得没啥，就一个小问题，fp32的模型有点大，最好换 q8 的。 q8的不能在 webgpu上跑，wasm也凑合用。原因是缺少一些矩阵乘法算子。开源库嘛，也理解。只是速度就慢… |
 | 2026-04-25 | [微软计划首次对美国员工进行自愿买断，涉及至多7%的员工](https://blog.rustfisher.com/news/microsoft-retire-plan-20260425/) | 据一位知情人士透露，约有7%的美国员工符合资格。由于具体数字尚未公开，该人士要求匿名。这项一次性退休计划于周四在一份备忘录中宣布，将面向美国高级总监及以下级别的员工，前提是他们的工龄和年龄总和达到或超过70年。 |
 | 2026-04-25 | [记录 typecho 1.2.0 升级到 1.3.0 过程](https://hellodk.cn/post/1213) | 主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty... |

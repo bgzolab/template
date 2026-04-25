@@ -6,10 +6,22 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "日本关西系列｜Day 4 奈良的小鹿乖乖",
+    "url": "https://blog.yasking.org/a/series-kansai-travel-day4.html",
+    "date": "2026-04-25T12:58:44Z",
+    "description": "中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 …"
+  },
+  {
+    "title": "设计素材周刊【#009期】",
+    "url": "https://www.iyeslogo.com/dtw-009/",
+    "date": "2026-04-25T12:34:09Z",
+    "description": "「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你"
+  },
+  {
     "title": "Zine#48",
     "url": "https://taxodium.ink/48.html",
     "date": "2026-04-25T10:00:00Z",
-    "description": "Zine#48 🎵 Sometimes It Snows in April - Prince News | Article The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett 作者是位盲人作家，政府每年都要问他一次「你还残疾吗？」(真让人讨厌啊) 从而决定是否继续给他发放福利金。 他需要给相关部门寄送证明资料，证明自己依然失明，他打电话找到了工作人员，提议通过电子邮件将相关证明发送给他，完成验证。但工作人员明知他是个盲人，却还是要刁难他，要他通过信件寄送，或者发传真。于是他整理了 520 多页的文档通过传真发送过去，让对方传真机罢工了，大快人心。 如果我是那个工作人员，我能否做到变通，而不是死守规则呢？ Writing First, Tooling Second by Susam Pal 渴望建立个人网站的作者们总是长久地纠结于该使用哪种博客引擎、选择哪种静态网站生成器、挑选哪种模板语言等等。 我认为，在你的网站上发表至少五篇文章之前，这些都不重要。 先写纯 HTML，以后"
+    "description": "Zine#48 🎵 Sometimes It Snows in April - Prince News | Article 目录 The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett Writing First, Tooling Second by Susam Pal You should probably tell your audience what your blog posts are about as early as possible by Viktor Use plain text email Thank you for reading by Ginoz It would be nice to know If you’re changing your domain (Sam, are you there?) by Ginoz Interviews with the Computer Underground - Episode I: Santiago Roland"
   },
   {
     "title": "浏览器通过WebGPU上做AI推理",
