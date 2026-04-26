@@ -24,6 +24,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-26 | [Memos #2026-04-25](https://www.taober.blog/memos) | 11:38 来东海皇宫吃早茶。 肠粉和蛋挞好吃，另外两个般般子，价格不贵，整体体验不错。 要晕碳了。 12:47 Work and play. |
 | 2026-04-25 | [2026.4.25](https://www.justzht.com/2026-4-25/) | Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡 |
 | 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
+| 2026-04-25 | [周末流水账 0425](https://blog.solazy.me/20260425/) | 周六了！ |
 | 2026-04-25 | [日本关西系列｜Day 4 奈良的小鹿乖乖](https://blog.yasking.org/a/series-kansai-travel-day4.html) | 中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 … |
 | 2026-04-25 | [设计素材周刊【#009期】](https://www.iyeslogo.com/dtw-009/) | 「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你 |
 | 2026-04-25 | [Zine#48](https://taxodium.ink/48.html) | Zine#48 🎵 Sometimes It Snows in April - Prince News &#124; Article 目录 The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett Wr… |
@@ -32,6 +33,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-25 | [记录 typecho 1.2.0 升级到 1.3.0 过程](https://hellodk.cn/post/1213) | 主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty... |
 | 2026-04-25 | [第一千篇](https://mobius.blog/23260.html) | 如果这篇文章能发表出来，那就意味着这个博客发布了第一千篇文章。现在是2021年的12月26日，发表完《写在20 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-24 | [学习周刊-总第260期-2026年第17周](https://wiki.eryajf.net/pages/907f99/) | 如要阅读全文，点击标题跳转。 学习周刊-总第260期 &#124; kite-desktop &#124; zerobrew &#124; dnet &#124; voicekey &#124; pdfcraft &#124; explain-error-plugin &#124; ezbookkeeping &#124; server-survival &#124; Droppy &#124;… |
+| 2026-04-24 | [关于第三辆车的想象](https://blog.solazy.me/20260424/) | 今天聊聊我的两台车，和可能短期内不太会有的第三台车 |
 | 2026-04-24 | [RISC-V 虚拟机无法代替 EVM 虚拟机](https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/) | RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V |
 | 2026-04-24 | [DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？](https://www.iplaysoft.com/deepseek-v4.html) | 今天一大消息就是 开源 AI 大模型圈的“卷王” DeepSeek ，憋了 15 个月后，终于把全新系列模型 DeepSeek-V4 正式公布出来了，而且照惯例，同步开源！ 一时间朋友圈、技术群各种消息满天飞。现在 DeepSeek 官网 和 API 都直接能用 v4 了！包括 众多第三方算力平台… |
 | 2026-04-24 | [Living Clojure](https://www.geedea.pro/library/2026/living-clojure/) | 还不错的 Clojure 入门书籍，适合有较强编程基础（我认为至少要熟悉一两门编程语言，有实际开发经验）的人用来快速了解 Clojure 各方面的特性和编程模式。作者用《爱丽丝梦游仙境》的例子串起了 Clojure 的许多知识，通俗但对不了解这个故事的读者可能有些摸不着头脑，而且大部分例子都不是实际… |
