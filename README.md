@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-26 | [西瓜备份 - 免费替代 iCloud！将 iPhone 相册备份到 WebDAV / SMB 或外置硬盘](https://www.iplaysoft.com/p/watermelon-backup) | 我们知道，直接买大容量的 iPhone 手机贵得让人肉疼，而每个月花钱订阅 iCloud 云服务又觉得像是在交永远停不下来的租金；不少人会选择夸克、百度网盘、115 网盘等第三方网盘。 而如果你自己有外置硬盘、局域网电脑、NAS 或 VPS 服务器，还可以将 iPhone 相册的照片视频备份到它们上… |
+| 2026-04-26 | [和H小姐的约会](https://1900.live/he-hxiao-jie-de-yue-hui/) | Photo by Jose P. Ortiz / Unsplash 首先承认这次的标题是900%具有标题党嫌疑的，但是这样写我觉得会更有意思，而且除开不能牵手等显示层面的动作，至少符合私密、聊心事、聊八卦等等。 H小姐指的是我最近搭建的 Hermes Agent ，这是一款类似OpenClaw的AI… |
 | 2026-04-26 | [Memos #2026-04-25](https://www.taober.blog/memos) | 11:38 来东海皇宫吃早茶。 肠粉和蛋挞好吃，另外两个般般子，价格不贵，整体体验不错。 要晕碳了。 12:47 Work and play. |
 | 2026-04-25 | [2026.4.25](https://www.justzht.com/2026-4-25/) | Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡 |
 | 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
