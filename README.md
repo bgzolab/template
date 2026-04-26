@@ -21,6 +21,10 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-26 | [哥本哈根的朝九晚五美的不像话](https://cufezhusy.github.io/issue-21/) | 最近这两天哥本哈根感觉春天来了，起码出去的时候可以穿一件外套就不觉得冷了。 这周三的时候去了原单位开一个会，待了十年的单位，还是认识好多人，好多人都以为我回原单位上班了，其实没有这回事，就是去开个会，蹭点吃的喝的，跟原来的老同事catch up一下。 都说金融圈里人脉很重要，认识人还是挺重要的。有的… |
+| 2026-04-26 | [机械革命无界14Pro笔记本debian forky成功驱动内置扬声器和麦克风](https://hellodk.cn/post/1214) | 我的机械革命无界14Pro笔记本安装了debian forky（当下的 debian testing 系统，也是未来的 debian 14代号），今天终于成功驱动了扬声器和麦克风。先贴出 fas... |
+| 2026-04-26 | [猫鱼周刊 vol. 096 AI 无法取代胶片](https://ameow.xyz/archives/weekly-096) | 关于本刊 这是猫鱼周刊的第 97 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 博客： 阿猫的博客-猫鱼周刊 RSS： 猫鱼周刊 邮件订阅： 猫鱼周刊 微信公众号： 猫兄的和谐号列车 私信： leslieleung@proton.me INIT 好久不见。 这张图摄于香港赤柱浅水湾… |
+| 2026-04-26 | [FE Bits Vol.33 &#124; Vercel 四月安全事件、sizes auto 终结响应式图片之痛](https://ysx.cosine.ren/weekly-33/) | 关于本周刊 本期网址 https://blog.cosine.ren/post/weekly-33 本周刊更新时间期望是在每周天。 推荐订阅本周刊的 RSS 。 公众号 前端周周谈 FE Bits，点击阅读原文链接可查看原文。 QQ 讨论小群 598022684 / Discord 群 本周刊文章内… |
 | 2026-04-26 | [Pensieve: 2604](https://xiaket.github.io/2026/pensieve-2604.html) | 所读所观所玩 |
 | 2026-04-26 | [我们摆出不被理解的面孔自得其乐](https://www.geedea.pro/article/gallery-trip/) | 上周末出门遛弯，去了趟美术馆。尽管有些路程，但我预约看展的次数还不少，这类活动既满足了出门摸草的需求，也不需要和人打交道，即便是出在公共空间，也是在和自己的思绪和感受独处，总之是很高质量的体验。 我去的时候，美术馆一共有三场展览，第一场是长期的美术馆的馆藏展示，第二场是某个品牌赞助的雕塑展，第三场是… |
 | 2026-04-26 | [Freqtrade 出入场信号颜色说明](https://lililib.github.io/Freqtrade%E5%87%BA%E5%85%A5%E5%9C%BA%E4%BF%A1%E5%8F%B7%E9%A2%9C%E8%89%B2%E8%AF%B4%E6%98%8E/) | 记录 FreqUI 图表上各种箭头、矩形、形状、颜色的含义。FreqUI 在同一张 K 线图上叠加了多组图层。 |
