@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-26 | [Memos #2026-04-25](https://www.taober.blog/memos) | 11:38 来东海皇宫吃早茶。 肠粉和蛋挞好吃，另外两个般般子，价格不贵，整体体验不错。 要晕碳了。 12:47 Work and play. |
+| 2026-04-25 | [2026.4.25](https://www.justzht.com/2026-4-25/) | Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡 |
 | 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
 | 2026-04-25 | [日本关西系列｜Day 4 奈良的小鹿乖乖](https://blog.yasking.org/a/series-kansai-travel-day4.html) | 中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 … |
 | 2026-04-25 | [设计素材周刊【#009期】](https://www.iyeslogo.com/dtw-009/) | 「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你 |
@@ -29,7 +31,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-25 | [微软计划首次对美国员工进行自愿买断，涉及至多7%的员工](https://blog.rustfisher.com/news/microsoft-retire-plan-20260425/) | 据一位知情人士透露，约有7%的美国员工符合资格。由于具体数字尚未公开，该人士要求匿名。这项一次性退休计划于周四在一份备忘录中宣布，将面向美国高级总监及以下级别的员工，前提是他们的工龄和年龄总和达到或超过70年。 |
 | 2026-04-25 | [记录 typecho 1.2.0 升级到 1.3.0 过程](https://hellodk.cn/post/1213) | 主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty... |
 | 2026-04-25 | [第一千篇](https://mobius.blog/23260.html) | 如果这篇文章能发表出来，那就意味着这个博客发布了第一千篇文章。现在是2021年的12月26日，发表完《写在20 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-25 | [Memos #2026-04-24](https://www.taober.blog/memos) | 00:24 深夜真是充满了感性与干劲，一觉起来就会全部消散。 |
 | 2026-04-24 | [学习周刊-总第260期-2026年第17周](https://wiki.eryajf.net/pages/907f99/) | 如要阅读全文，点击标题跳转。 学习周刊-总第260期 &#124; kite-desktop &#124; zerobrew &#124; dnet &#124; voicekey &#124; pdfcraft &#124; explain-error-plugin &#124; ezbookkeeping &#124; server-survival &#124; Droppy &#124;… |
 | 2026-04-24 | [RISC-V 虚拟机无法代替 EVM 虚拟机](https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/) | RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V |
 | 2026-04-24 | [DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？](https://www.iplaysoft.com/deepseek-v4.html) | 今天一大消息就是 开源 AI 大模型圈的“卷王” DeepSeek ，憋了 15 个月后，终于把全新系列模型 DeepSeek-V4 正式公布出来了，而且照惯例，同步开源！ 一时间朋友圈、技术群各种消息满天飞。现在 DeepSeek 官网 和 API 都直接能用 v4 了！包括 众多第三方算力平台… |
@@ -115,16 +116,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
 | 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-19 | [2026年第16周：碎碎念、春、活生生的人](https://blog.sakoamc.com/posts/2616/) | 题记：重新审视生活，逃离无止境的攀登。 |
-| 2026-04-18 | [最近惦念 20260410](https://z.arlmy.me/posts/TILs/thoughts/20260410_Recently/) | 「人可以是很多人。」 |
-| 2026-04-18 | [Toots 415 2026 Apr.12 - Apr.18](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260418/) | 「悟空感应。」 |
-| 2026-04-18 | [Why Siloed Work Feels Suffocating in the Age of AI](https://predicate.pro/posts/siloed-work-ai/) | Forced cognitive downgrading hurts at any time. In 2026, it's also just bad strategy. |
-| 2026-04-18 | [周末流水账 0418](https://blog.solazy.me/20260418/) | 周六又来了！ |
-| 2026-04-18 | [开源了一个 Hugo 主题，专门用来展示 AI Skill](https://blog.debuginn.com/p/hugo-theme-skills/) | 大家好呀，我是 Meng小羽。 最近一直在折腾 AI 工作流，用 Hermes 这类 AI 助手越用越深，手里的 skill 攒了一大堆——说白了就是一堆"遇到这类问题该怎么做"的操作手册。写着写着就发现一个问题：这些 skill 全躺在本地吃灰，想找个地方展示出来，搜了一圈也没找到合适的现成方案。… |
-| 2026-04-18 | [1Password涨价后，别急着退订1Password，这个操作能帮你省25%](https://blog.renfei.net/posts/1626402130325676138) | 1Password涨价33%后，我差点转向Bitwarden，但一个关键问题让我最终选择继续续费。本文详细对比主流密码管理器，分析Passkey绑定风险，并分享如何用YubiKey提升安全性以及成功获取25%续费折扣的经验。 |
-| 2026-04-18 | [Album#36 - Quicksand](https://taxodium.ink/album-36.html) | Album#36 Quicksand 图1 《Quicksand》专辑封面 专辑信息 专辑名称： Quicksand 歌手： Bialystocks 年份： 2022-11-30 风格： 摇滚、日语流行 时长： 约 38 分钟 最近在看一部动画 違国日記 ，是一部治愈系的动画，主角「朝」父母因意外去… |
-| 2026-04-18 | [北京・莽山国家森林公园（2026）](https://blog.yasking.org/a/photos-beijing-mangshan.html) | 好久没爬山，我又觉着我行了 北京莽山国家森林公园之前一直是未开放的状态，周五一搜索，竟然开放了，下午没事儿拎着 … |
-| 2026-04-18 | [旧事重提：大学生“AI+信息素养”大赛参赛微记](https://www.xiaozonglin.cn/a-micro-journal-of-my-participation-in-the-university-student-ai-information-literacy-competition/) | 记录一下去年参加“AI+信息素养”大赛的过程，权当是水一篇文章。 旧事重提：大学生“AI+信息素养”大赛参赛微记 最先出现在 林林杂语 。 |
-| 2026-04-18 | [如何跟孩子讲学习的意义](https://blog.est.im/2026/stderr-14) | 缘起 本来在tg里刷到个 博主syhily 讲语言和文字，感觉这老哥知识好渊博。于是慕名点开他的𝕏，好家伙直接丢了个暴论，大概意思说 孩子问他为啥要学习，他想了半天发现不好解释，就说反正父母养育你，孩子能报答的就是努力学习。 我本来想翻一下原文的，发现 syhily 都销号跑路了。syhily自己也… |
 
 ## Vibe Coding
 

@@ -1,0 +1,158 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "Memos #2026-04-25",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-04-26T00:00:00Z",
+    "description": "11:38 来东海皇宫吃早茶。 肠粉和蛋挞好吃，另外两个般般子，价格不贵，整体体验不错。 要晕碳了。 12:47 Work and play."
+  },
+  {
+    "title": "2026.4.25",
+    "url": "https://www.justzht.com/2026-4-25/",
+    "date": "2026-04-25T23:41:08Z",
+    "description": "Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡"
+  },
+  {
+    "title": "下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战",
+    "url": "https://pathos.page/blog/ai-education-humanity/",
+    "date": "2026-04-25T20:25:00Z",
+    "description": "AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。"
+  },
+  {
+    "title": "日本关西系列｜Day 4 奈良的小鹿乖乖",
+    "url": "https://blog.yasking.org/a/series-kansai-travel-day4.html",
+    "date": "2026-04-25T12:58:44Z",
+    "description": "中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 …"
+  },
+  {
+    "title": "设计素材周刊【#009期】",
+    "url": "https://www.iyeslogo.com/dtw-009/",
+    "date": "2026-04-25T12:34:09Z",
+    "description": "「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你"
+  },
+  {
+    "title": "Zine#48",
+    "url": "https://taxodium.ink/48.html",
+    "date": "2026-04-25T10:00:00Z",
+    "description": "Zine#48 🎵 Sometimes It Snows in April - Prince News | Article 目录 The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett Writing First, Tooling Second by Susam Pal You should probably tell your audience what your blog posts are about as early as possible by Viktor Use plain text email Thank you for reading by Ginoz It would be nice to know If you’re changing your domain (Sam, are you there?) by Ginoz Interviews with the Computer Underground - Episode I: Santiago Roland"
+  },
+  {
+    "title": "浏览器通过WebGPU上做AI推理",
+    "url": "https://blog.est.im/2026/stdout-14",
+    "date": "2026-04-25T08:53:00Z",
+    "description": "先说结论，在2026Q2这个时间点，通过浏览器webgpu 做 AI 不值得。 本来看 官方demo 跑得好好的，自己搓下来也觉得没啥，就一个小问题，fp32的模型有点大，最好换 q8 的。 q8的不能在 webgpu上跑，wasm也凑合用。原因是缺少一些矩阵乘法算子。开源库嘛，也理解。只是速度就慢了一点。 本来前几个月就这样平安无事，结果 transformers.js 升级到 v4，支持 q8 跑webgpu了，甚至 q4 q2 bitnet 这种高级货都支持了。满心欢喜的切过去，结果 webgpu 跟 wasm 一样慢？ 于是就不甘心了。一路折腾，发现这个不仅跟算子有关，还跟硬件有关。甚至老掉牙的硬件不支持 shader-f16 。简单的说其实 GPU 原生支持最好的就 IEEE 754 fp32，f16 i8 这种属于要么新一点的硬件才支持，要么就是靠各种算子在软件层奇技淫巧去模拟。 我甚至脑洞大开让AI去搓一个 q8 dequant 到 fp32 ，发现模型也是不好惹的，太多坑了。HF官方甚至也自己搞了一套 q8f16 q4f16，然而 HF 自己的 transformers"
+  },
+  {
+    "title": "微软计划首次对美国员工进行自愿买断，涉及至多7%的员工",
+    "url": "https://blog.rustfisher.com/news/microsoft-retire-plan-20260425/",
+    "date": "2026-04-25T07:00:59Z",
+    "description": "据一位知情人士透露，约有7%的美国员工符合资格。由于具体数字尚未公开，该人士要求匿名。这项一次性退休计划于周四在一份备忘录中宣布，将面向美国高级总监及以下级别的员工，前提是他们的工龄和年龄总和达到或超过70年。"
+  },
+  {
+    "title": "记录 typecho 1.2.0 升级到 1.3.0 过程",
+    "url": "https://hellodk.cn/post/1213",
+    "date": "2026-04-25T03:02:00Z",
+    "description": "主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty..."
+  },
+  {
+    "title": "第一千篇",
+    "url": "https://mobius.blog/23260.html",
+    "date": "2026-04-25T01:00:00Z",
+    "description": "如果这篇文章能发表出来，那就意味着这个博客发布了第一千篇文章。现在是2021年的12月26日，发表完《写在20 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "学习周刊-总第260期-2026年第17周",
+    "url": "https://wiki.eryajf.net/pages/907f99/",
+    "date": "2026-04-24T15:52:12Z",
+    "description": "如要阅读全文，点击标题跳转。 学习周刊-总第260期 | kite-desktop | zerobrew | dnet | voicekey | pdfcraft | explain-error-plugin | ezbookkeeping | server-survival | Droppy | ThinkFlowAI | FlashSpace | Orbit | pigsty | pvesphere | talkcody"
+  },
+  {
+    "title": "RISC-V 虚拟机无法代替 EVM 虚拟机",
+    "url": "https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/",
+    "date": "2026-04-24T12:34:05Z",
+    "description": "RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V"
+  },
+  {
+    "title": "DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？",
+    "url": "https://www.iplaysoft.com/deepseek-v4.html",
+    "date": "2026-04-24T11:39:41Z",
+    "description": "今天一大消息就是 开源 AI 大模型圈的“卷王” DeepSeek ，憋了 15 个月后，终于把全新系列模型 DeepSeek-V4 正式公布出来了，而且照惯例，同步开源！ 一时间朋友圈、技术群各种消息满天飞。现在 DeepSeek 官网 和 API 都直接能用 v4 了！包括 众多第三方算力平台 也陆续上线。之前 Claude 、 Gemini 、 ChatGPT 、 Qwen 等行业里各家一直在疯狂迭代。终于，终于轮到有着“国产 Ai 图腾”、价格屠夫之称的 DeepSeek 来炸一回场了…… 「 前往查看原文.... 」 异次元还有这些值得一看： 被吹爆的 DeepSeek！拥有“东方神秘力量”强大推理能力的 ChatGPT 国产替代品 疯狂万亿参数！阿里 Qwen3-Max 顶尖模型发布 - 强到撼动 GPT5 / Claude 4 地位 ChatWise - 小巧速度快！全功能 AI 助手客户端 (支持 DeepSeek / OpenAI 等模型 API) Cherry Studio - 好用开源全能 AI 模型客户端！整合 DeepSeek / GPT 成桌面版 APP 异"
+  },
+  {
+    "title": "Living Clojure",
+    "url": "https://www.geedea.pro/library/2026/living-clojure/",
+    "date": "2026-04-24T08:37:14Z",
+    "description": "还不错的 Clojure 入门书籍，适合有较强编程基础（我认为至少要熟悉一两门编程语言，有实际开发经验）的人用来快速了解 Clojure 各方面的特性和编程模式。作者用《爱丽丝梦游仙境》的例子串起了 Clojure 的许多知识，通俗但对不了解这个故事的读者可能有些摸不着头脑，而且大部分例子都不是实际项目里会用到的做法，只能用来理解语法和函数的作用。 整体而言，可以把这本书当作不全面的对 Clojure 的快速浏览。由于我一边读一边写了个 Clojure 项目 ，读到某些章节时我发现我已经熟悉作者要讲的东西了。所以…… 不读书学 Clojure 也完全可行甚至更快？不过读一读有经验的 Clojure 程序员的文字总归是有些帮助的。 对翻译和编辑的…… 吐槽 我觉得我写技术书籍的第一节都会是翻译相关的内容了…… 之前读的《 整洁架构之道 》译得很糟糕，这本其实还能忍受。尽管语句不自然，但至少没有低素质的译者搞事，还是很尊重原作者的。只是有一些句子读起来确实很不自然，完全保留了英文逻辑，比如： “如果我们有一个需要做一系列转变的 Java 对象，这是很有用的。” 虽有读起来磕磕绊绊，但习惯了"
+  },
+  {
+    "title": "Anthropic 关于近期 Claude Code 质量报告的最新进展",
+    "url": "https://blog.rustfisher.com/news/anthropic-claude-code-quality-reports-20260424/",
+    "date": "2026-04-24T06:32:59Z",
+    "description": "追踪了近期有关 Claude Code 质量问题的报告，发现这些问题源于三项不同的变更。以下是变更详情以及我们正在进行的更改。"
+  },
+  {
+    "title": "工具人",
+    "url": "https://mobius.blog/23255.html",
+    "date": "2026-04-24T06:00:00Z",
+    "description": "网友：特地将孙女放坐在玄关，等待父母到访。开门见到孙女的瞬间，外婆开心地手舞足蹈不知所措，她身后的外公激动地挤 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "飞塔分流配置实战",
+    "url": "https://lxnchan.cn/fortigate-oversea.html",
+    "date": "2026-04-24T04:23:33Z",
+    "description": "需求描述：出口为运营商的ONT，下面是Fortigate做多合一网关，在下面有一台Linux服务器，运行PVE，虚拟机内连接另一城市的外部网络，同时在Fortigate上做分流，使得同局域网下其他设备能够访问外部网络。"
+  },
+  {
+    "title": "深入 Open Agent SDK（一）：Agent Loop 内核——从 prompt 到多轮对话的完整运转机制",
+    "url": "https://gptkit.eth.limo/366BF72F-76A4-4E5B-9D4D-867637D4DDBE/",
+    "date": "2026-04-24T02:16:41Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列第一篇。 系列目录见这里 。 大多数 LLM 封装库做的事情是：发请求、拿响应、结束。但一个真正的 Agent 不止于此——它要能自己判断需不需要调工具、执行完工具后把结果喂回 LLM、循环往复直到拿到最终答案。这个循环就是 Agent Loop 。 这篇文章分析 Open Agent SDK (Swift) 的 Agent Loop 实现，看它怎样用原生 Swift 并发在进程内跑完一整套循环。 Agent Loop 是什么？ 用一句话概括： 用户发 prompt → LLM 返回响应 → 如果 LLM 要求调工具就执行 → 把工具结果喂回 LLM → 重复，直到 LLM 说\"我说完了\" 。 画成流程图： flowchart TD A[\"用户 prompt\"] --> B[\"构建 messages + tools\"] B --> C[\"调用 LLM API\"] C -->|endturn / stopsequence| D[\"返回结果\"] C -->|maxtokens| C2[\"追加'请继续'\"] C2 --> C C"
+  },
+  {
+    "title": "深入 Open Agent SDK（六）：多 LLM 提供商与运行时控制",
+    "url": "https://gptkit.eth.limo/E12E5AFD-4893-44A9-9EA6-0226B0BE2AF7/",
+    "date": "2026-04-24T02:06:28Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列第六篇（完结篇）。 系列目录见这里 。 一个 Agent 不应该绑定单一 LLM 提供商。不同任务适合不同模型——简单问题用便宜模型，复杂推理用贵模型，有些场景甚至需要本地模型。而且运行时的需求也在变化：用户可能中途要求更深度的思考，可能发现预算快用完了需要降级，可能想切换到本地模型省点钱。 Open Agent SDK 的做法是：定义一个统一的 LLMClient 协议，Anthropic 和 OpenAI 兼容提供商各有一个实现，Agent 内部全部用 Anthropic 格式处理。切换提供商只需要改一个配置参数，运行时还能动态切模型、调思考深度、控预算。 这篇文章分析 SDK 的多提供商适配机制和运行时控制能力。 一、LLMClient 协议——统一接口 先看协议定义： public protocol LLMClient: Sendable { nonisolated func sendMessage( model: String, messages: [[String: Any]], maxTokens: Int,"
+  },
+  {
+    "title": "深入 Open Agent SDK（五）：会话持久化与安全防线",
+    "url": "https://gptkit.eth.limo/74B0725C-34AE-492C-94BA-AE47C9CE7BD1/",
+    "date": "2026-04-24T02:06:27Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列第五篇。 系列目录见这里 。 Agent 不只是一次性问答工具。真正有用的 Agent 要做到三件事：记住上下文（上次聊到哪了）、控制权限（哪些操作能做）、审计行为（谁在什么时候干了什么）。Open Agent SDK 用四个子系统来覆盖这些需求——SessionStore、PermissionPolicy、SandboxSettings、HookRegistry。 这篇文章分析这四个子系统的实现细节，看它们各自怎么工作，以及怎么组合起来构建一个安全的 Agent。 一、会话持久化：SessionStore Agent Loop 每次运行会产生一组 messages 数组。如果不保存，进程退出就没了。SessionStore 负责把这些对话历史持久化到磁盘，下次启动时恢复。 SessionStore 是什么 SessionStore 是一个 actor ，所有方法都需要 await 调用。默认把会话存在 ~/.open-agent-sdk/sessions/ 目录下，每个 session 一个子目录，里面放一个 trans"
+  },
+  {
+    "title": "深入 Open Agent SDK（四）：多 Agent 协作——子代理、团队与任务编排",
+    "url": "https://gptkit.eth.limo/C155E8B0-998A-4A06-8938-4216A0CAC2DC/",
+    "date": "2026-04-24T02:06:27Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列第四篇。 系列目录见这里 。 单个 Agent 再强，也只是一个执行者。真实的开发任务往往是多步骤、多角色的：先有人探索代码库，有人设计方案，再有人写代码、跑测试。一个 Agent 单干，上下文容易膨胀，效率也上不去。 Open Agent SDK 从三个层面解决这个问题： 子 Agent -- 主 Agent 在运行过程中动态生成子 Agent，把专门的任务委派出去 Task 系统 -- 用任务追踪多步骤工作的进度和结果 Team + 消息传递 -- 多个 Agent 组成团队，通过邮箱系统互相通信 这篇文章逐一分析这三个层面的实现，最后看它们怎么组合起来做任务编排。 一、子 Agent：SubAgentSpawner 协议与 AgentTool SubAgentSpawner 协议 子 Agent 的生成不是 AgentTool 直接 new 一个 Agent 出来——中间隔了一层协议。 SubAgentSpawner 定义在 Types/AgentTypes.swift 里： public protocol SubA"
+  },
+  {
+    "title": "深入 Open Agent SDK（三）：MCP 集成实战——让 Agent 连接万物",
+    "url": "https://gptkit.eth.limo/D9AE0B75-28C0-4202-83DF-7401673EAC73/",
+    "date": "2026-04-24T02:06:27Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列第三篇。 系列目录见这里 。 上一篇看了 SDK 内置的 34 个工具——文件读写、Bash 执行、代码搜索，覆盖了常见的开发场景。但 Agent 的能力不可能只靠内置工具撑满。你需要连接数据库、调用企业 API、操作内部系统——这些事情需要一个标准化的接入方式。 MCP（Model Context Protocol）就是干这个的。这篇文章看 Open Agent SDK 怎么通过 MCP 协议把外部工具接到 Agent Loop 里。 MCP 协议是什么 MCP 是 Anthropic 提出的一个开放协议，定义了 LLM 应用和外部工具/数据源之间的通信标准。思路是： 工具端 （MCP Server）暴露一组工具，每个工具有名字、描述、输入 schema 调用端 （MCP Client）通过标准协议发现工具、调用工具、拿到结果 通信基于 JSON-RPC，传输层可以换 为什么 Agent 需要它？因为不可能把所有工具都写进 SDK。有了 MCP，任何人都可以写一个 MCP Server（比如 @modelcontextp"
+  },
+  {
+    "title": "深入 Open Agent SDK（二）：34 个工具的背后——工具协议、三层架构与自定义扩展",
+    "url": "https://gptkit.eth.limo/6B7CBA30-B740-4FC7-A5D8-2A89AA4D7D36/",
+    "date": "2026-04-24T02:06:26Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列第二篇。 系列目录见这里 。 上一篇分析了 Agent Loop 的运转机制，其中有一个环节是\"执行工具\"——LLM 说\"我要调 Bash\"，SDK 就真的起一个进程跑命令。但这背后的工具系统远不止\"调个函数\"那么简单。34 个内置工具怎么组织？怎么从 LLM 的 JSON 输入安全地转成 Swift 类型？怎么控制哪些工具能用？ 这篇文章从协议定义开始，一层一层看 Open Agent SDK 的工具系统。 ToolProtocol：一个工具长什么样 SDK 里每个工具都遵循 ToolProtocol 协议： public protocol ToolProtocol: Sendable { var name: String { get } var description: String { get } var inputSchema: ToolInputSchema { get } var isReadOnly: Bool { get } var annotations: ToolAnnotations? { get }"
+  },
+  {
+    "title": "Open Agent SDK (Swift)：用原生 Swift 构建 AI Agent 应用",
+    "url": "https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/",
+    "date": "2026-04-24T02:06:26Z",
+    "description": "如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。 它是什么？ Open Agent SDK 用 Swift 6.1 编写，要求 macOS 13+。它在进程内跑完整个 Agent Loop：发送提示、解析响应、执行工具调用、把结果喂回 LLM，循环往复直到拿到最终答案。全程用原生 Swift 并发（async/await、AsyncStream）驱动。 项目灵感来自 open-agent-sdk-typescript ，把同样的 Agent 架构搬到了 Swift 生态。同系列还有 Go 版本。 快速上手 安装只需在 Package.swift 中添加依赖： dependencies: [ .package(url: \"https://github.com/terryso/open-agent-sdk-swift.git\", from: \""
+  },
+  {
+    "title": "因为恐惧被关系伤害，所以选择独自面对",
+    "url": "https://mobius.blog/23145.html",
+    "date": "2026-04-24T01:00:00Z",
+    "description": "前段时间，因为有朋友在《自卑的人在恐惧什么？》下评论道：因为恐惧被关系伤害，所以选择独自面对。我觉得这开启了一 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  }
+]
