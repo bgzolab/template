@@ -60,6 +60,12 @@
     "description": ""
   },
   {
+    "title": "Vol.100 Agent走向生产：GPT-5.5、DeepSeek V4、Kimi K2.6与智能体基础设施爆发",
+    "url": "https://liduos.com/weekly/the-weekly-gradient-100",
+    "date": "2026-04-26T08:00:00Z",
+    "description": "本期内容聚焦AI模型与Agent基础设施的集中爆发，涵盖OpenAI GPT-5.5、DeepSeek V4的1M上下文、Kimi K2.6长程编码与Agent集群，以及智能体云、Harness Engineering、Token Maxing等前沿议题。"
+  },
+  {
     "title": "自深深处",
     "url": "https://kaix.in/2026/0426/",
     "date": "2026-04-26T05:45:15Z",
@@ -90,7 +96,7 @@
     "description": "Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡"
   },
   {
-    "title": "下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战",
+    "title": "下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的威胁",
     "url": "https://pathos.page/blog/ai-education-humanity/",
     "date": "2026-04-25T20:25:00Z",
     "description": "AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。"

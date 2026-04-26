@@ -30,12 +30,13 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-26 | [Freqtrade 出入场信号颜色说明](https://lililib.github.io/Freqtrade%E5%87%BA%E5%85%A5%E5%9C%BA%E4%BF%A1%E5%8F%B7%E9%A2%9C%E8%89%B2%E8%AF%B4%E6%98%8E/) | 记录 FreqUI 图表上各种箭头、矩形、形状、颜色的含义。FreqUI 在同一张 K 线图上叠加了多组图层。 |
 | 2026-04-26 | [周末流水账 0426](https://blog.solazy.me/20260426/) | 周日了！ |
 | 2026-04-26 | [游记｜在宜兴度过一个平淡的假期](https://blog.ops-coffee.com/r/city-china-jiangsu-wuxi-yixing-tuanjiu.html) |  |
+| 2026-04-26 | [Vol.100 Agent走向生产：GPT-5.5、DeepSeek V4、Kimi K2.6与智能体基础设施爆发](https://liduos.com/weekly/the-weekly-gradient-100) | 本期内容聚焦AI模型与Agent基础设施的集中爆发，涵盖OpenAI GPT-5.5、DeepSeek V4的1M上下文、Kimi K2.6长程编码与Agent集群，以及智能体云、Harness Engineering、Token Maxing等前沿议题。 |
 | 2026-04-26 | [自深深处](https://kaix.in/2026/0426/) | 奥斯卡·王尔德大名鼎鼎，但这《自深深处》是我读完过他的第一本作品。才华、学识，轮不到我去评价，但是人在情感上的脆弱和必然遭遇的悲剧，啊，我（作为一个社交场所的经营者）见的或许比王尔德还要多一些。所以大概读到五分之一，我已经知道他之后还会和波西纠缠不清——读完本书去查资料，果然得到证实： 妳辜负了我；… |
 | 2026-04-26 | [西瓜备份 - 免费替代 iCloud！将 iPhone 相册备份到 WebDAV / SMB 或外置硬盘](https://www.iplaysoft.com/p/watermelon-backup) | 我们知道，直接买大容量的 iPhone 手机贵得让人肉疼，而每个月花钱订阅 iCloud 云服务又觉得像是在交永远停不下来的租金；不少人会选择夸克、百度网盘、115 网盘等第三方网盘。 而如果你自己有外置硬盘、局域网电脑、NAS 或 VPS 服务器，还可以将 iPhone 相册的照片视频备份到它们上… |
 | 2026-04-26 | [和H小姐的约会](https://1900.live/he-hxiao-jie-de-yue-hui/) | Photo by Jose P. Ortiz / Unsplash 首先承认这次的标题是900%具有标题党嫌疑的，但是这样写我觉得会更有意思，而且除开不能牵手等显示层面的动作，至少符合私密、聊心事、聊八卦等等。 H小姐指的是我最近搭建的 Hermes Agent ，这是一款类似OpenClaw的AI… |
 | 2026-04-26 | [Memos #2026-04-25](https://www.taober.blog/memos) | 11:38 来东海皇宫吃早茶。 肠粉和蛋挞好吃，另外两个般般子，价格不贵，整体体验不错。 要晕碳了。 12:47 Work and play. |
 | 2026-04-25 | [2026.4.25](https://www.justzht.com/2026-4-25/) | Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡 |
-| 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的挑战](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
+| 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的威胁](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
 | 2026-04-25 | [周末流水账 0425](https://blog.solazy.me/20260425/) | 周六了！ |
 | 2026-04-25 | [日本关西系列｜Day 4 奈良的小鹿乖乖](https://blog.yasking.org/a/series-kansai-travel-day4.html) | 中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 … |
 | 2026-04-25 | [设计素材周刊【#009期】](https://www.iyeslogo.com/dtw-009/) | 「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你 |
