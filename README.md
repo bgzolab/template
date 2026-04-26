@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-26 | [游记｜在宜兴度过一个平淡的假期](https://blog.ops-coffee.com/r/city-china-jiangsu-wuxi-yixing-tuanjiu.html) |  |
 | 2026-04-26 | [自深深处](https://kaix.in/2026/0426/) | 奥斯卡·王尔德大名鼎鼎，但这《自深深处》是我读完过他的第一本作品。才华、学识，轮不到我去评价，但是人在情感上的脆弱和必然遭遇的悲剧，啊，我（作为一个社交场所的经营者）见的或许比王尔德还要多一些。所以大概读到五分之一，我已经知道他之后还会和波西纠缠不清——读完本书去查资料，果然得到证实： 妳辜负了我；… |
 | 2026-04-26 | [西瓜备份 - 免费替代 iCloud！将 iPhone 相册备份到 WebDAV / SMB 或外置硬盘](https://www.iplaysoft.com/p/watermelon-backup) | 我们知道，直接买大容量的 iPhone 手机贵得让人肉疼，而每个月花钱订阅 iCloud 云服务又觉得像是在交永远停不下来的租金；不少人会选择夸克、百度网盘、115 网盘等第三方网盘。 而如果你自己有外置硬盘、局域网电脑、NAS 或 VPS 服务器，还可以将 iPhone 相册的照片视频备份到它们上… |
 | 2026-04-26 | [和H小姐的约会](https://1900.live/he-hxiao-jie-de-yue-hui/) | Photo by Jose P. Ortiz / Unsplash 首先承认这次的标题是900%具有标题党嫌疑的，但是这样写我觉得会更有意思，而且除开不能牵手等显示层面的动作，至少符合私密、聊心事、聊八卦等等。 H小姐指的是我最近搭建的 Hermes Agent ，这是一款类似OpenClaw的AI… |
