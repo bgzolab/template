@@ -22,6 +22,10 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
+| 2026-04-27 | [韩国爆火的SetLog：为何没有新的社交巨头](https://mazzzystar.com/2026/04/27/setlog/) | 这个时代不会再产生新的社交巨头了吗 ？ <h2 |
+| 2026-04-27 | [Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)](https://www.iplaysoft.com/p/ubuntu-2604-lts-updates) | 说起 Linux 桌面系统，就一定绕不开 Ubuntu。这次发布 26.04 LTS（代号 Resolute Raccoon，坚毅浣熊）不是那种小打小闹的增量更新，而是从内核到桌面、从安全到 AI 的全维度大洗牌。 Ubuntu 26.04 LTS (长期维护版) 把桌面体验、底层内核、开发与 AI… |
+| 2026-04-27 | [给灵感找个落脚点](https://blog.solazy.me/20260427/) | 今天想检讨一下自己 |
+| 2026-04-27 | [Ubuntu 26.04 LTS 中文桌面版/服务器正式版ISO镜像下载 - 流行易入门的 Linux 系统](https://www.iplaysoft.com/ubuntu.html) | 说到最红火的 Linux 发行版当属 Ubuntu 了！它拥有漂亮的 UI 界面，跟 macOS 风格相比也有过之而无不及，而当你试过这款 操作系统 后，可能会对 Linux 刻板枯燥的印象产生巨大的改变。 在 Ubuntu 的世界里，已经不再只是简陋的界面+命令行，而是一款时尚易用同时又足够实用的… |
 | 2026-04-27 | [AI Infra：2026 Token 经济生态分析（二）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-Two.html) | 2026年核心变化已经很明显：重心从 训练 → 推理 → Agent 工作流 迁移“系统能力”开始替代“模型能力”成为核心变量一、关键结构变化是从推理层迁移到应用开发层价值核心从 “token ... |
 | 2026-04-27 | [R#099 合理休假](https://blog.sakanano.moe/journals/random_099) | 2026.4.21 ~ 2026.4.27 |
 | 2026-04-27 | [AI 也该有护照了](https://1q43.blog/post/12323/) | 权利从登记表开始。 |
