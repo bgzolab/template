@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-26 | [踏入迷途橘 《Summer Pockets》 圣地巡礼之国营常陆海滨公园](https://www.wikimoe.com/post/b-te1ibpro) | 2026年4月19日，天气晴，今天去位于茨城县常陆那珂市的国营常陆海滨公园看花，同时这里也是游戏《Summer Pockets》的迷途橘的取景地。 如何前往国营常陆海滨公园 从东京出发大致有2套方案。 方案一 从东京前往国营常陆海滨公园，可从东京站或上野站搭乘JR常磐线特急「ひたち号」或「ときわ号」… |
 | 2026-04-26 | [哥本哈根的朝九晚五美的不像话](https://cufezhusy.github.io/issue-21/) | 最近这两天哥本哈根感觉春天来了，起码出去的时候可以穿一件外套就不觉得冷了。 这周三的时候去了原单位开一个会，待了十年的单位，还是认识好多人，好多人都以为我回原单位上班了，其实没有这回事，就是去开个会，蹭点吃的喝的，跟原来的老同事catch up一下。 都说金融圈里人脉很重要，认识人还是挺重要的。有的… |
 | 2026-04-26 | [机械革命无界14Pro笔记本debian forky成功驱动内置扬声器和麦克风](https://hellodk.cn/post/1214) | 我的机械革命无界14Pro笔记本安装了debian forky（当下的 debian testing 系统，也是未来的 debian 14代号），今天终于成功驱动了扬声器和麦克风。先贴出 fas... |
 | 2026-04-26 | [猫鱼周刊 vol. 096 AI 无法取代胶片](https://ameow.xyz/archives/weekly-096) | 关于本刊 这是猫鱼周刊的第 97 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 博客： 阿猫的博客-猫鱼周刊 RSS： 猫鱼周刊 邮件订阅： 猫鱼周刊 微信公众号： 猫兄的和谐号列车 私信： leslieleung@proton.me INIT 好久不见。 这张图摄于香港赤柱浅水湾… |
@@ -114,23 +115,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-20 | [稻草人周刊 Vol.77](https://www.geedea.pro/weekly/77/) | 这周三得知周四周五有校运会，停课两天，加上周末，我突然拥有了四天的假期，于是溜出去看了《挽救计划》，逛了美术馆，还和朋友租了 Minecraft 服务器玩。精神状态似乎好了不少，接下来的一周要重振旗鼓啊。 这周听了不少新音乐，但阅读的时间倒是变少了。效率最高的时候永远是摸鱼的时候，这周有一半的时间都… |
 | 2026-04-20 | [不做扫兴的“妈妈”](https://mobius.blog/22854.html) | 儿童教育里，有一句浓缩为经典的话：不做扫兴的父母。其基本原则就是把“否定性评价”转变为“支持性共情”。比如孩子 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-20 | [已将博客从Typecho迁移到Astro](https://krya.com/post/astro-sintu-theme/) | ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最… |
-| 2026-04-19 | [告别 kubectl 黑框，开源一个基于 Wails 打造 K8S 多集群管理工具](https://wiki.eryajf.net/pages/f91541/) | 如要阅读全文，点击标题跳转。做运维久了，你一定懂那种感觉：管理多个K8S集群时，经常需要使用kubectl xxx来进行管理，我想，你一定和我一样，深受其苦。此前我还在群里问过有没有优秀的多集群桌面端管理工具。当时还有群友打趣说让我自己开发一个。虽然我当时也是打趣回应了一下，但实际在我的内心，一直有… |
-| 2026-04-19 | [永久 1TB 空间！Koofr - 支持 WebDAV 的终身免费 10G 网盘 (Rclone / 挂载 OneDrive)](https://www.iplaysoft.com/p/koofr) | 最近一直在为几台 VPS 服务器数据备份在烦恼，还有考虑到 NAS、电脑文件的异地备份，想找一台大硬盘的 VPS 或用 S3 云存储，但找了一圈，大空间的 VPS 年费实在都太贵了。 最近挖到了一款“冷门”的宝藏云网盘 Koofr，它不仅有永久免费不限速 10G 空间，最关键是完美支持 WebDAV… |
-| 2026-04-19 | [我才四十岁，世界这么美好，我还想多看看呀。](https://cufezhusy.github.io/issue-20/) | 新工作慢慢开始进入正轨了。瑞典的老钱公司，规矩感觉偏保守。交易的风险不敢开得太大，基本每笔都是前司百分之二十的量。不过倒也好，这样不论仓位开得多大我都没有睡眠问题。新组的人应该很震惊我能把这么复杂的头寸的每天损益解释得这么清楚得，这完全要感谢前公司老板的严格要求和年复一年的问题：下个月把过去一年的损… |
-| 2026-04-19 | [周报 #107 - 基于 Multica 与 Impeccable 的开发/设计工作流](https://www.pseudoyu.com/posts/weekly_review_107) | 前言 本篇是对 2026-03-30 到 2026-04-19 这三周生活的记录与思考。 清明假期没出门，在家窝着写代码，清掉了很多 TODO，久违地感受到 Vibe Coding 带来的快乐；用 Impeccable 把 Web3Insight 还有一些网站重新设计了一下，效果出乎意料地好；也开始… |
-| 2026-04-19 | [全局配置中的autoMemoryReclaim参数影响（WSL系列1）](https://blog.cubestone.wang/2026/04/19/wsl-one/) | 起因 笔者近期在配置WSL中的开发测试环境。配置完成后查看监控图表时发现硬盘读操作的指标不太正常，统计显示每小时写不到200MiB的数据，但是读有近9GiB的数据，从次数看，写操作万次左右但是读操作却有三十万次上下。在和家中NAS上的统计数据比较后确认读操作数据确实不正常，且核实了配置的WSL中并没… |
-| 2026-04-19 | [旅行日记·大同](https://moreality.net/posts/31742/) | 石窟、煤炭、醋、刀削面、汾酒 |
-| 2026-04-19 | [如何进行站点网络优化](https://www.nosuchfield.com/2026/04/19/How-to-Optimize-Site-Network-Performance/) | 站点的网络访问速度受到用户所在地区、网络运营商等多种因素的影响。针对这些差异，我们可以通过选择合适的 CDN 和机房来有针对性地优化特定地区、特定运营商下的访问速度。与此同时，客户端可以对不同域名进行测速，根据测速结果动态选择延迟最低的线路。 网络优化大体上可 |
-| 2026-04-19 | [周末流水账 0419](https://blog.solazy.me/20260419/) | 今天是阳光非常明媚的一个周日！ |
-| 2026-04-19 | [关于「林卷」页面的详细说明](https://www.geedea.pro/article/on-linkroll/) | 本来不想淌浑水，像以往一样保持沉默是最好的，但我发现还是有不少人误解 林卷 页面存在的意义，以至于对页面内容的微小变动都产生了不必要的关注和猜想。所以，解释是必要的，尽管我有预感写完这篇文章之后我被误解的概率会只增不减，但至少我把话说明了。 极客死亡计划没有友情链接 本网站没有「友情链接」这个东西。… |
-| 2026-04-19 | [那个集记账、基金、股票于一体的APP，IOS测试上线](https://blog.ops-coffee.com/fire/financial-manager-app-update-and-ios-test-progress.html) | 财务管家APP本周更新了分红管理和存钱计划功能，iOS测试对VIP用户开放。安卓用户可直接下载安装，会员享受云同步等所有功能。 |
-| 2026-04-19 | [Vol.99 AI智能体基础设施全面升级与模型能力边界扩张的行业新动态](https://liduos.com/weekly/the-weekly-gradient-99) | 本期内容聚焦AI智能体从演示走向生产系统所需的基础设施建设，包括Cloudflare补齐计算、存储、编排、路由全栈能力，模型公司向操作系统演进，执行层工具解放至全设备，记忆系统从存储转向持续再解释，以及视觉Agent、AI社交等新范式的出现。 |
-| 2026-04-19 | [认识身边的植物](https://jubeny.com/2026/04/exploring-local-plants/) | 日常所见的花花草草，如果没有贴铭牌，几乎不认识。今天才想起或者说有兴致拍张照问问AI。拍下的第一张照片便是楼下的杜鹃花。 在河边的树下挖土时，再次有了探索的欲望，于是又拍下一些遇见的花草。 |
-| 2026-04-19 | [日常#13 - I Am Here 深圳 Live](https://taxodium.ink/nichijou-13.html) | 日常#13 I Am Here 深圳 Live 图1 陶玙和她的乐队成员。 萨克斯：陶玙、钢琴：Simon Groppe、低音提琴：Jim Monneau、打击乐：Diogo Alexandre。 陶玙身材修长，穿着一身黑衣，给我的感觉就像是《指环王》里的甘道夫，像是一个巫师。 看 是他拿下了华语年… |
-| 2026-04-19 | [Claude Code 使用](https://blog.196000.xyz/2026/2026-04-19-develop-claude-code.html) | C:\Users\xxx\.claude\settings.json |
-| 2026-04-19 | [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/) | 【连载】Software Testing Weekly 图文解读 with VLM |
-| 2026-04-19 | [没苦硬吃大概是中国人骨子里的主旋律](https://mobius.blog/22903.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-19 | [2026年第16周：碎碎念、春、活生生的人](https://blog.sakoamc.com/posts/2616/) | 题记：重新审视生活，逃离无止境的攀登。 |
 
 ## Vibe Coding
 
