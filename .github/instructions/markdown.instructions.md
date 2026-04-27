@@ -15,13 +15,10 @@ applyTo: "**/*.md"
 - **Whitespace**: Blank lines between sections, no excessive.
 
 ## Front Matter Requirements (YAML at top)
-- `ai`: true/false
 - `title`: required
-- `aliases`
 - `created`: YYYY-MM-DDTHH:MM:SS
 - `modified`: YYYY-MM-DDTHH:MM:SS
-- `author`
-- `description`
-- `tags`
+- `description`: brief summary of content, or purpose of the document
+- `tags`: ai-notes, etc.
 
 All Markdown files must pass these rules and front-matter validation.

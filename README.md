@@ -5,11 +5,15 @@
 [![Licence](https://img.shields.io/github/license/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/blob/template/LICENCE)
 [![Telegram](https://img.shields.io/badge/-telegram-black.svg?style=for-the-badge&logo=telegram&colorB=555)](https://t.me/imbGZo)
 
+![Playground Name Screen Shot](https://img.bgzo.cc/2025/202508021439235.JPG)
+
 # Playground
 
-![Playground Name Screen Shot](https://raw.githubusercontent.com/bGZo/assets/dev/2025/202508021439235.JPG)
-
 Here is a template repository for my projects. It contains a basic structure and some common files that I use in all my projects. You can use this template to create your own projects by forking it or cloning it.
+
+## Getting Started
+
+Before you start, make sure you have Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
 
 ## Getting Started
 
@@ -31,15 +35,6 @@ Merge the `template` branch into your local repository to get started:
 git merge origin/template --allow-unrelated-histories
 ```
 
-> [!NOTE]
-> If you'll use GitHub copilot, make sure to keep `.github/instructions` folder clean and simplest, or it may make context understanding and code generation worse, such as:
->
-> `agent`, `instructions` and `prompts` should not conflict each other.
->
-> The **priority** of them is:
->
-> Personal Instructions > Repository Instructions > Agent > Prompts > Your messages.
-
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -47,9 +42,34 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://github.com/bGZo/playground)_
 
 <!--
-I use obdisian to manage roadmap of this project, and I will update it here when I have a clear plan for the next steps.
+## Vibe Coding
+
+### GitHub copilot
+
+Make sure to keep `.github/instructions` folder clean and simplest, or it may make context understanding and code generation worse, such as, `agent`, `instructions` and `prompts` should not conflict each other.
+
+The **priority** of them should be like this:
+
+Personal Instructions > Repository Instructions > Agent > Prompts > Your messages.
+
+And get the template for GitHub Copilot from https://github.com/doggy8088/github-copilot-configs/tree/main/.github
+
+
+## Common Steps:
+
+- Read the documentation in `docs/memories` to understand the project structure, design and tech stack.
+- Check the features in `docs/implementation-plans` to see if there are any questions or clarifications needed.
+- Plan the simplest implementation steps in `docs/implementation-plans`, then list it append to the existing plans, and make every step clear enough for anyone to pick up and execute, and also make sure to include the verification steps for each implementation step.
+- Then start implementation based on the plan step by step, and you should make sure keep these things:
+  - Only when the verification steps are passed, you can move on to the next step, otherwise you should fix the problems until the verification steps are passed.
+  - Link the related files, functions, or types in the codebase as much as possible, and also link the related plans if there are any. 
+  - Make sure to record progress and what you have done in every step in the plan and things in other files.
+  - Update the documents in `docs/memories` if there are any design changes or tech stack changes during the implementation.
+
 
 ## Roadmap
+
+I use obdisian to manage roadmap of this project, and I will update it here when I have a clear plan for the next steps.
 
 - [x] Add basic structure and files[^template-inspired].
 - [x] Add Vibe coding support [^vibe-coding-inspired].

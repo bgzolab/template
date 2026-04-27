@@ -96,3 +96,6 @@ ai_export/
 !.github/.bak/instructions-lang-default-disable/*
 .github/.bak/*.md
 .github/.bak/deprecated
+
+# Copilot
+.github/.bak/**/*.md
