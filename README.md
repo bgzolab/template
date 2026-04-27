@@ -22,6 +22,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
+| 2026-04-27 | [AI Infra：2026 Token 经济生态分析（二）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-Two.html) | 2026年核心变化已经很明显：重心从 训练 → 推理 → Agent 工作流 迁移“系统能力”开始替代“模型能力”成为核心变量一、关键结构变化是从推理层迁移到应用开发层价值核心从 “token ... |
+| 2026-04-27 | [R#099 合理休假](https://blog.sakanano.moe/journals/random_099) | 2026.4.21 ~ 2026.4.27 |
 | 2026-04-27 | [AI 也该有护照了](https://1q43.blog/post/12323/) | 权利从登记表开始。 |
 | 2026-04-27 | [DeepSeek近期对API服务进行了大幅降价](https://blog.rustfisher.com/news/deepseek-price-20260427/) | 全系列模型，输入缓存命中的价格已降至首发价格的 1/10 |
 | 2026-04-27 | [我的母亲](https://predicate.pro/posts/my-mother/) |  |
