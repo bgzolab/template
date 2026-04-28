@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
+| 2026-04-28 | [Memos #2026-04-27](https://www.taober.blog/memos) | 00:31 看完了《一一》，有两个感受： 故事进入下一个篇章往往都是不经意间，往往还没有准备好； 遗憾是贯穿始终的，再来一遍也难有什么不同。 /btw 我的右耳机没声音了，不知道是坏了还是只是充电处接触不良，不过也是时候换一个了。 |
 | 2026-04-27 | [韩国爆火的SetLog：为何没有新的社交巨头](https://mazzzystar.com/2026/04/27/setlog/) | 这个时代不会再产生新的社交巨头了吗 ？ <h2 |
 | 2026-04-27 | [Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)](https://www.iplaysoft.com/p/ubuntu-2604-lts-updates) | 说起 Linux 桌面系统，就一定绕不开 Ubuntu。这次发布 26.04 LTS（代号 Resolute Raccoon，坚毅浣熊）不是那种小打小闹的增量更新，而是从内核到桌面、从安全到 AI 的全维度大洗牌。 Ubuntu 26.04 LTS (长期维护版) 把桌面体验、底层内核、开发与 AI… |
 | 2026-04-27 | [给灵感找个落脚点](https://blog.solazy.me/20260427/) | 今天想检讨一下自己 |
@@ -49,7 +50,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-26 | [自深深处](https://kaix.in/2026/0426/) | 奥斯卡·王尔德大名鼎鼎，但这《自深深处》是我读完过他的第一本作品。才华、学识，轮不到我去评价，但是人在情感上的脆弱和必然遭遇的悲剧，啊，我（作为一个社交场所的经营者）见的或许比王尔德还要多一些。所以大概读到五分之一，我已经知道他之后还会和波西纠缠不清——读完本书去查资料，果然得到证实： 妳辜负了我；… |
 | 2026-04-26 | [西瓜备份 - 免费替代 iCloud！将 iPhone 相册备份到 WebDAV / SMB 或外置硬盘](https://www.iplaysoft.com/p/watermelon-backup) | 我们知道，直接买大容量的 iPhone 手机贵得让人肉疼，而每个月花钱订阅 iCloud 云服务又觉得像是在交永远停不下来的租金；不少人会选择夸克、百度网盘、115 网盘等第三方网盘。 而如果你自己有外置硬盘、局域网电脑、NAS 或 VPS 服务器，还可以将 iPhone 相册的照片视频备份到它们上… |
 | 2026-04-26 | [和H小姐的约会](https://1900.live/he-hxiao-jie-de-yue-hui/) | Photo by Jose P. Ortiz / Unsplash 首先承认这次的标题是900%具有标题党嫌疑的，但是这样写我觉得会更有意思，而且除开不能牵手等显示层面的动作，至少符合私密、聊心事、聊八卦等等。 H小姐指的是我最近搭建的 Hermes Agent ，这是一款类似OpenClaw的AI… |
-| 2026-04-26 | [Memos #2026-04-25](https://www.taober.blog/memos) | 11:38 来东海皇宫吃早茶。 肠粉和蛋挞好吃，另外两个般般子，价格不贵，整体体验不错。 要晕碳了。 12:47 Work and play. |
 | 2026-04-25 | [2026.4.25](https://www.justzht.com/2026-4-25/) | Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡 |
 | 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的威胁](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
 | 2026-04-25 | [周末流水账 0425](https://blog.solazy.me/20260425/) | 周六了！ |
@@ -116,19 +116,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-21 | [2026.4.20](https://www.justzht.com/2026-4-20/) | 又是一个周一，原本今天早上想要请假的，后来想说还是去好了。到公司之后熟悉了一会自己上周写的东西，然后 |
 | 2026-04-21 | [Amazon 与 Anthropico 达成50亿美元投资和计算协议，进一步加强合作](https://blog.rustfisher.com/news/amazon-will-invest-in-anthropic-20260421/) | 亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。 |
 | 2026-04-21 | [Complete Guide to Deploying FastGPT on Kubernetes](https://jaegerw2016.github.io//posts/2026/04/21/%E5%9C%A8Kubernetes%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2FastGPT%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html) | 背景FastGPT是一个基于LLM（大语言模型）的知识库问答系统，提供了开箱即用的知识库、多模态文件解析、工作流编排等功能。它支持多种大模型接入，可以快速构建企业级的AI知识库应用。在Kubernetes环境中部署FastGPT可以充... |
-| 2026-04-20 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.21 of the project |
-| 2026-04-20 | [Heroes of Might and Magic II updated](https://macsourceports.com/game/homm2) | The build of fheroes2 for Heroes of Might and Magic II has been updated to version 1.1.15 of the project |
-| 2026-04-20 | [狸狮村：可能这里就是小龙女的古墓派](https://macin.org/2026/04/20/li-shi-cun/) | 出发时的雀跃还挂在眉梢，身子却突然闹起了小脾气，那种提不起劲的疲惫，从心底慢慢蔓延到四肢百骸，连窗外的风都变得没了滋味。驱车三个小时，从宽阔的高速，拐进蜿蜒的县道，再到颠簸的乡道，最后驶上窄窄的机耕道，一路深入云贵高原北沿与四川盆地盆周的交汇处，终于抵达了藏在深山里的狸狮坝 |
-| 2026-04-20 | [RollerCoaster Tycoon 2 updated](https://macsourceports.com/game/rct2) | The build of OpenRCT2 for RollerCoaster Tycoon 2 has been updated to version v0.5.0 of the project |
-| 2026-04-20 | [R#098 期待](https://blog.sakanano.moe/journals/random_098) | 2026.4.14 ~ 2026.4.20 |
-| 2026-04-20 | [那个拄着拐报到的新同事](https://blog.solazy.me/20260420/) | 今天分享一个职场团队里的小插曲 |
-| 2026-04-20 | [甄仁岛还是荒掉了](https://kaix.in/2026/0420/) | 一直倒也没闲着，断断续续地给这个叫做 甄仁岛 的文字类游戏增补删改。不过最终还是要说放弃了，得承认，我的想象力还不足以支撑起一个有趣的游戏。 一开始 是想走叙事+解密的路线的，我给这个岛上的 29 位岛民都配备了独立的记忆系统，有各自的性格和背景故事，玩家通过与岛民的对话，了解他们，可以解开岛上隐藏… |
-| 2026-04-20 | [不会用AI的设计师，已经开始被淘汰](https://www.iyeslogo.com/ai-kill-designers/) | AI正在重塑设计行业，不是替代设计师，而是淘汰不会使用AI的设计师 |
-| 2026-04-20 | [语文学习和考试](https://blog.est.im/2026/stdin-10) | 前面抖了两篇 如何跟孩子讲学习的意义 失落的学习兴趣 今天就抬一个具体论据。 来自zhihu ： Q: 如果文言文退出中国教育体系，你是支持还是反对？为什么? A: 文言文真退了，可能就真的不知道以后高中语文课上来是干什么的了。 但是作者不允许转载。我只能先归档 https://archive.md… |
-| 2026-04-20 | [失落的学习兴趣](https://blog.est.im/2026/stderr-15) | 上一篇 如何跟孩子讲学习的意义 ，最大的批评是，与其给孩子讲利弊，不如培养兴趣。 唉。说来惭愧，这的确是我不好意思谈及，也没能做好的一个点。只能说，优秀的孩子都对学习有兴趣，不幸的孩子各有各的苦衷。 孩子不爱学习，是对学习失去兴趣之后的结果，而不是因为欠缺了兴趣而学习待提高的。 孩子问“为什么要学习… |
-| 2026-04-20 | [稻草人周刊 Vol.77](https://www.geedea.pro/weekly/77/) | 这周三得知周四周五有校运会，停课两天，加上周末，我突然拥有了四天的假期，于是溜出去看了《挽救计划》，逛了美术馆，还和朋友租了 Minecraft 服务器玩。精神状态似乎好了不少，接下来的一周要重振旗鼓啊。 这周听了不少新音乐，但阅读的时间倒是变少了。效率最高的时候永远是摸鱼的时候，这周有一半的时间都… |
-| 2026-04-20 | [不做扫兴的“妈妈”](https://mobius.blog/22854.html) | 儿童教育里，有一句浓缩为经典的话：不做扫兴的父母。其基本原则就是把“否定性评价”转变为“支持性共情”。比如孩子 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-20 | [已将博客从Typecho迁移到Astro](https://krya.com/post/astro-sintu-theme/) | ![as-3.avif](https://user0102.cn.imgto.link/public/20260422/as-3.avif) 之前用动态博客总是担心服务器忘了续费，或者程序升级出问题；接触了静态博客之后，认为这是非常理想的解决方式，在Hugo、Hexo和Astro几个方案比较之后，最… |
 
 ## Vibe Coding
 
