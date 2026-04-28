@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-28 | [失去的20年](https://blog.thetbw.xyz/archives/the-lost-20-years) | 今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房… |
 | 2026-04-28 | [Browser’s Bookmark Manager Is Actually Good](https://www.geedea.pro/en/article/browser-bookmarks/) | I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes… |
 | 2026-04-28 | [闷声发大财](https://blog.solazy.me/20260428/) | 今天聊聊闷声发大财 |
 | 2026-04-28 | [最近惦念 20260418](https://z.arlmy.me/posts/TILs/thoughts/20260418_Recently/) | 「万事需释。」 |
