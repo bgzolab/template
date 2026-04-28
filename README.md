@@ -21,7 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-28 | [半学期记：春日校园](https://www.xiaozonglin.cn/photos-of-campus-2026-spring/) | 分享自己半个学期以来拍的照片。 半学期记：春日校园 最先出现在 林林杂语 。 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
+| 2026-04-28 | [知识，也是有幻觉率](https://mobius.blog/23315.html) | 我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-28 | [Memos #2026-04-27](https://www.taober.blog/memos) | 00:31 看完了《一一》，有两个感受： 故事进入下一个篇章往往都是不经意间，往往还没有准备好； 遗憾是贯穿始终的，再来一遍也难有什么不同。 /btw 我的右耳机没声音了，不知道是坏了还是只是充电处接触不良，不过也是时候换一个了。 |
 | 2026-04-27 | [韩国爆火的SetLog：为何没有新的社交巨头](https://mazzzystar.com/2026/04/27/setlog/) | 这个时代不会再产生新的社交巨头了吗 ？ <h2 |
 | 2026-04-27 | [Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)](https://www.iplaysoft.com/p/ubuntu-2604-lts-updates) | 说起 Linux 桌面系统，就一定绕不开 Ubuntu。这次发布 26.04 LTS（代号 Resolute Raccoon，坚毅浣熊）不是那种小打小闹的增量更新，而是从内核到桌面、从安全到 AI 的全维度大洗牌。 Ubuntu 26.04 LTS (长期维护版) 把桌面体验、底层内核、开发与 AI… |
