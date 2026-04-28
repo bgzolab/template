@@ -32,11 +32,13 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-28 | [知识，也是有幻觉率](https://mobius.blog/23315.html) | 我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-28 | [Memos #2026-04-27](https://www.taober.blog/memos) | 00:31 看完了《一一》，有两个感受： 故事进入下一个篇章往往都是不经意间，往往还没有准备好； 遗憾是贯穿始终的，再来一遍也难有什么不同。 /btw 我的右耳机没声音了，不知道是坏了还是只是充电处接触不良，不过也是时候换一个了。 |
 | 2026-04-27 | [韩国爆火的SetLog：为何没有新的社交巨头](https://mazzzystar.com/2026/04/27/setlog/) | 这个时代不会再产生新的社交巨头了吗 ？ <h2 |
+| 2026-04-27 | [H3C TC2101调整分区（OpenIPC系列二）](https://blog.cubestone.wang/2026/04/28/openipc-two/) | 前言 前文已经完成了设备的第一次刷机，但是除有线网络外，其它的外设均不能用，需要参考已有的SSC337版本进行适配或者手动测试找出对应引脚。因为之后涉及到自定义固件的编译，故需要先对设备的分区配置进行了解，以便之后的操作。 |
 | 2026-04-27 | [Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)](https://www.iplaysoft.com/p/ubuntu-2604-lts-updates) | 说起 Linux 桌面系统，就一定绕不开 Ubuntu。这次发布 26.04 LTS（代号 Resolute Raccoon，坚毅浣熊）不是那种小打小闹的增量更新，而是从内核到桌面、从安全到 AI 的全维度大洗牌。 Ubuntu 26.04 LTS (长期维护版) 把桌面体验、底层内核、开发与 AI… |
 | 2026-04-27 | [给灵感找个落脚点](https://blog.solazy.me/20260427/) | 今天想检讨一下自己 |
 | 2026-04-27 | [Ubuntu 26.04 LTS 中文桌面版/服务器正式版ISO镜像下载 - 流行易入门的 Linux 系统](https://www.iplaysoft.com/ubuntu.html) | 说到最红火的 Linux 发行版当属 Ubuntu 了！它拥有漂亮的 UI 界面，跟 macOS 风格相比也有过之而无不及，而当你试过这款 操作系统 后，可能会对 Linux 刻板枯燥的印象产生巨大的改变。 在 Ubuntu 的世界里，已经不再只是简陋的界面+命令行，而是一款时尚易用同时又足够实用的… |
 | 2026-04-27 | [AI Infra：2026 Token 经济生态分析（二）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-Two.html) | 2026年核心变化已经很明显：重心从 训练 → 推理 → Agent 工作流 迁移“系统能力”开始替代“模型能力”成为核心变量一、关键结构变化是从推理层迁移到应用开发层价值核心从 “token ... |
 | 2026-04-27 | [R#099 合理休假](https://blog.sakanano.moe/journals/random_099) | 2026.4.21 ~ 2026.4.27 |
+| 2026-04-27 | [H3C TC2101刷机（OpenIPC系列一）](https://blog.cubestone.wang/2026/04/27/openipc-one/) | 起因 最近在 什么值得买 上刷到了一篇运营商的家用摄像头的文章，二手价格便宜还提到了能刷机。顺着文章的内容去看了看对应的开源项目 OpenIPC ，觉得正好符合很久前自己想完全掌控摄像头的想法，而且该项目内容比较完善，刷机配置难度应该不大。故在 咸鱼 上花了30大洋买了台二手的 H3C TC2101… |
 | 2026-04-27 | [AI 也该有护照了](https://1q43.blog/post/12323/) | 权利从登记表开始。 |
 | 2026-04-27 | [DeepSeek近期对API服务进行了大幅降价](https://blog.rustfisher.com/news/deepseek-price-20260427/) | 全系列模型，输入缓存命中的价格已降至首发价格的 1/10 |
 | 2026-04-27 | [我的母亲](https://predicate.pro/posts/my-mother/) |  |

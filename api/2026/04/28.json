@@ -72,6 +72,12 @@
     "description": "这个时代不会再产生新的社交巨头了吗 ？ <h2"
   },
   {
+    "title": "H3C TC2101调整分区（OpenIPC系列二）",
+    "url": "https://blog.cubestone.wang/2026/04/28/openipc-two/",
+    "date": "2026-04-27T16:44:00Z",
+    "description": "前言 前文已经完成了设备的第一次刷机，但是除有线网络外，其它的外设均不能用，需要参考已有的SSC337版本进行适配或者手动测试找出对应引脚。因为之后涉及到自定义固件的编译，故需要先对设备的分区配置进行了解，以便之后的操作。"
+  },
+  {
     "title": "Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)",
     "url": "https://www.iplaysoft.com/p/ubuntu-2604-lts-updates",
     "date": "2026-04-27T15:15:45Z",
@@ -100,6 +106,12 @@
     "url": "https://blog.sakanano.moe/journals/random_099",
     "date": "2026-04-27T13:00:00Z",
     "description": "2026.4.21 ~ 2026.4.27"
+  },
+  {
+    "title": "H3C TC2101刷机（OpenIPC系列一）",
+    "url": "https://blog.cubestone.wang/2026/04/27/openipc-one/",
+    "date": "2026-04-27T12:56:14Z",
+    "description": "起因 最近在 什么值得买 上刷到了一篇运营商的家用摄像头的文章，二手价格便宜还提到了能刷机。顺着文章的内容去看了看对应的开源项目 OpenIPC ，觉得正好符合很久前自己想完全掌控摄像头的想法，而且该项目内容比较完善，刷机配置难度应该不大。故在 咸鱼 上花了30大洋买了台二手的 H3C TC2101 准备一试。"
   },
   {
     "title": "AI 也该有护照了",
