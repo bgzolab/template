@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-28 | [最近惦念 20260418](https://z.arlmy.me/posts/TILs/thoughts/20260418_Recently/) | 「万事需释。」 |
+| 2026-04-28 | [Toots 416 2026 Apr.19 - Apr.25](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260425/) | 「懂得做人的人可以成为人。」 |
+| 2026-04-28 | [OpenAI 在冲击 IPO 的关键冲刺中未能达成关键营收和用户目标](https://blog.rustfisher.com/news/openai-20260428/) | 面对增长放缓，公司首席财务官和董事会对大规模数据中心支出的合理性提出了质疑 |
 | 2026-04-28 | [半学期记：春日校园](https://www.xiaozonglin.cn/photos-of-campus-2026-spring/) | 分享自己半个学期以来拍的照片。 半学期记：春日校园 最先出现在 林林杂语 。 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
 | 2026-04-28 | [知识，也是有幻觉率](https://mobius.blog/23315.html) | 我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
