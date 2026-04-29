@@ -30,10 +30,22 @@
     "description": "今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房子来和之前的对比的话，房价纵然是跌了，但是肯定没有跌那么狠，但是对于一些n线城市来说，也的确是有价无市了。 最重要的一点是，数据是怎么算出来的，就像国家统计局一样，无论世界变的怎么样，他们总能给你算出一副欣欣向荣的数据，境外组织也是毅然，想法设法的抹黑中国也可以说的过去。(此处不知道应不因该加上doge 这并不是我主要想讨论的话题，房价怎么样跟我也没什么关系，我最近几年也没买房的打算，租房的价格其实并不会因为房价而有什么大的变动，毕竟这是实实在在的需求市场。 不过最近不知道是我的信息茧房还是真的就是这样，其实大家真的就都挺难的，办公室类的的工作面临着各种裁员，就连铁人三件套也是越来越卷，包括像是出租车司机和家政保洁之类，单子也是在变少，因为我身边的确是有人干这个，所以也能实实在在感受到。 失"
   },
   {
+    "title": "emacs-动态设置org-agenda-files",
+    "url": "https://blog.prayhand13013.top/20260428T211543--emacs-动态设置org-agenda-files__blog.html",
+    "date": "2026-04-28T13:15:00Z",
+    "description": ""
+  },
+  {
     "title": "Browser’s Bookmark Manager Is Actually Good",
     "url": "https://www.geedea.pro/en/article/browser-bookmarks/",
     "date": "2026-04-28T10:00:10Z",
     "description": "I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes with a powerful ecosystem. There are a lot of client apps and people even make Apple shortcuts for it. The omg.lol community started to host one recently and it seems genuinely cool. So, why do I abandon such lovely FOSS software? Well, I don’t really need a service that keeps running 24 hours. It’s just a bunch of links. It’s handy to share bookma"
+  },
+  {
+    "title": "emacs-在org文件中利用ob-gptel保存调用LLM聊天对话（deepseek为例）",
+    "url": "https://blog.prayhand13013.top/20260428T171017--emacs-在org文件中利用ob-gptel保存调用llm聊天对话（deepseek为例）__blog.html",
+    "date": "2026-04-28T09:10:00Z",
+    "description": ""
   },
   {
     "title": "闷声发大财",

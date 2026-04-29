@@ -25,7 +25,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
 | 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
 | 2026-04-28 | [失去的20年](https://blog.thetbw.xyz/archives/the-lost-20-years) | 今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房… |
+| 2026-04-28 | [emacs-动态设置org-agenda-files](https://blog.prayhand13013.top/20260428T211543--emacs-动态设置org-agenda-files__blog.html) |  |
 | 2026-04-28 | [Browser’s Bookmark Manager Is Actually Good](https://www.geedea.pro/en/article/browser-bookmarks/) | I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes… |
+| 2026-04-28 | [emacs-在org文件中利用ob-gptel保存调用LLM聊天对话（deepseek为例）](https://blog.prayhand13013.top/20260428T171017--emacs-在org文件中利用ob-gptel保存调用llm聊天对话（deepseek为例）__blog.html) |  |
 | 2026-04-28 | [闷声发大财](https://blog.solazy.me/20260428/) | 今天聊聊闷声发大财 |
 | 2026-04-28 | [最近惦念 20260418](https://z.arlmy.me/posts/TILs/thoughts/20260418_Recently/) | 「万事需释。」 |
 | 2026-04-28 | [Toots 416 2026 Apr.19 - Apr.25](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260425/) | 「懂得做人的人可以成为人。」 |
