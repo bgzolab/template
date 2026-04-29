@@ -3,13 +3,229 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug your file",
+      "name": "Python: 当前文件",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/src/{your-file}",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
       "envFile": "${workspaceFolder}/.env",
       "console": "integratedTerminal",
-      "args": "{your-args}"
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: 帮助信息",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["--help"],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: cnblog 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["cnblog", "--output", "output/cnblog"],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: bangumi 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "bangumi",
+        "--template",
+        "config/bangumi_template.md",
+        "--subject_type",
+        "1",
+        "--output",
+        "output/bangumi"
+      ],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: qireader 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["qireader", "--tag", "tag-xxx", "--output", "output/qireader"],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: v2ex 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["v2ex", "--output", "output/v2ex"],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: zhihu 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "--index-file",
+        "output/index.md",
+        "zhihu",
+        "--collection",
+        "908297073",
+        "--output",
+        "output/zhihu"
+      ],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: weibo 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["weibo", "--uid", "8221250887", "--output", "output/weibo"],
+      "justMyCode": false
+    },
+    {
+      "name": "CLI: bilibili 导出",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/export_to_obsidian.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["bilibili", "--fid", "xxx", "--output", "output/bilibili"],
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: 当前测试文件",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["${file}", "-q"],
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: 全部测试",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["tests", "-q"],
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: test_bangumi.py",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["tests/test_bangumi.py", "-q"],
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: test_cnblog.py",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["tests/test_cnblog.py", "-q"],
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: test_qireader.py",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["tests/test_qireader.py", "-q"],
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: test_utils.py",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["tests/test_utils.py", "-q"],
+      "justMyCode": false
     }
   ]
 }

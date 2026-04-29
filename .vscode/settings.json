@@ -136,5 +136,9 @@
 
   // Live Preview
   "livePreview.autoRefreshPreview": "On Changes to Saved Files",
-  "chat.mcp.access": "all"
+  "chat.mcp.access": "all",
+  "python.terminal.useEnvFile": true,
+  "python.envFile": "${workspaceFolder}/.env",
+  "python-envs.defaultEnvManager": "ms-python.python:poetry",
+  "python-envs.defaultPackageManager": "ms-python.python:poetry"
 }
