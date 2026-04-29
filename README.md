@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
+| 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
 | 2026-04-28 | [失去的20年](https://blog.thetbw.xyz/archives/the-lost-20-years) | 今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房… |
 | 2026-04-28 | [Browser’s Bookmark Manager Is Actually Good](https://www.geedea.pro/en/article/browser-bookmarks/) | I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes… |
 | 2026-04-28 | [闷声发大财](https://blog.solazy.me/20260428/) | 今天聊聊闷声发大财 |
@@ -113,19 +115,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-22 | [Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue](https://blog.renfei.net/posts/1626402130325676139) | 使用 LM Studio + LM Link + Continue 插件，在 IntelliJ IDEA 中接入本地大模型，实现无需 API Key 的 AI 编程环境。基于 RTX 2080 Ti 和 CUDA 推理，运行 Qwen3.5-27B 模型，打造属于自己的本地 AI 助手，实现真正的… |
 | 2026-04-22 | [狐蒂云如何？](https://www.evan.xin/4938/) | 这是4月10日给狐蒂云负责人提的一个需求，当时只是随口一说。因为我发现狐蒂云发布的通知基本都是按主机区来发的， […] |
 | 2026-04-22 | [善意是最昂贵的人性皮试](https://mobius.blog/22922.html) | 最近看到一个新闻： 一个高三的女学生，找学校门口的麻辣烫阿姨借手机，说自己要进行网上考试。这个阿姨本身就是做学 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-21 | [有栈协程切换原理](https://www.kirito.info/%E6%9C%89%E6%A0%88%E5%8D%8F%E7%A8%8B%E5%88%87%E6%8D%A2%E5%8E%9F%E7%90%86/) | 这篇应该是21年写的，当时在公司做分享的ppt，整理笔记翻到了，发出来当博客吧~ 有栈协程介绍 有栈协程就是实现了一个用户态的线程，用户可以在堆上模拟出协程的栈空间，当需要进行上下文切换的时候，主线程只需要交换栈空间和恢复一些相关的寄存器的状态就可以实现一个用户态的线程上下文切换，没有了从用户态转换… |
-| 2026-04-21 | [Agents 当道，我们都可以被蒸馏成 Skills](https://huhuhang.com/post/thinking/20260421) | 本文记录了截止 2026 年 4 月，我个人对 AI 的看法和思考。 |
-| 2026-04-21 | [快手 AI IDE CodeFlicker 深度体验](https://www.wangwangit.com/%E5%BF%AB%E6%89%8B%20AI%20IDE%20CodeFlicker%20%E6%B7%B1%E5%BA%A6%E4%BD%93%E9%AA%8C/) | 在当前 AI IDE 赛道神仙打架、Cursor 珠玉在前的背景下，我一开始对新工具是持保留态度的。说实话,更多的是因为CodeFlicker这里提供免费套餐,所以我也愿意来尝试一下。随着天使用户体验周期的推进，我决定将这段时间在我的 Windows 电脑上重度使用的真实感受，进行一次全面的复盘。 |
-| 2026-04-21 | [自尊与创作的负担](https://blog.solazy.me/20260421/) | 今天聊个关于创作和自尊心的随感 |
-| 2026-04-21 | [Indent Is All You Need](https://blog.est.im/2026/stdin-11) | There's an interesting debate around whether "Bash is all you need" for AI agents. Claude Code's Thariq Shihipar argues that LLMs may use Bash for any… |
-| 2026-04-21 | [雨季又来](https://www.kawabangga.com/posts/7243) | 「未来两周受季风交替影响，本地多数日子的下午，预计会出现短暂雷阵雨，有几天的最高气温可能达到35摄氏度。未来两 […] Continue reading... |
-| 2026-04-21 | [FC 游戏：洛克人六代（Rockman 6）](https://springwood.me/fc-rockman-6/) | 小霸王时代遗憾无缘的经典系列之一。 |
-| 2026-04-21 | [Tinkering with Home Network: N100 + PVE + iKuai + sing-box](https://missuo.me/posts/home-network-n100-sing-box/) | 最近搬了新家，顺手开了一条 2000M 的宽带，家里的网络设备也正好趁这个机会重新折腾一遍。这篇就当是一次记录，也顺便给以后留个备忘。 为什么没用 BE7200 当主路由 一开始为了省事，我先买了一台 TP-LINK 的 Wi-Fi 7 路由器 BE7200，四个 2.5G 口加四个 1G 口。单看… |
-| 2026-04-21 | [整洁架构之道](https://www.geedea.pro/library/2026/clean-architecture/) | 由于很不喜欢软件架构课老师的授课风格，所以决定完全自学。选这本书当教材可能不太合适，但的确收获颇多。眼看 Coding Agents 的趋势只增不减，就算在个人项目和自由软件项目中拒绝使用，工作时也无处可躲，我想每个程序员都需要做架构师了。如果缺乏整洁清晰的架构设计，那 Coding Agents… |
-| 2026-04-21 | [丑人为什么多作怪？](https://mobius.blog/22914.html) | 这并不是一个具有普遍性规律的“结论”，但有时候它会非常深刻地影响大家对于某一类型人的判断。既然人很难做到客观地 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-21 | [2026.4.20](https://www.justzht.com/2026-4-20/) | 又是一个周一，原本今天早上想要请假的，后来想说还是去好了。到公司之后熟悉了一会自己上周写的东西，然后 |
-| 2026-04-21 | [Amazon 与 Anthropico 达成50亿美元投资和计算协议，进一步加强合作](https://blog.rustfisher.com/news/amazon-will-invest-in-anthropic-20260421/) | 亚马逊周一表示，将向 Anthropic 追加投资 50 亿美元，这是双方扩大合作关系的一部分，这将使两家科技公司更紧密地合作。 |
-| 2026-04-21 | [Complete Guide to Deploying FastGPT on Kubernetes](https://jaegerw2016.github.io//posts/2026/04/21/%E5%9C%A8Kubernetes%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2FastGPT%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html) | 背景FastGPT是一个基于LLM（大语言模型）的知识库问答系统，提供了开箱即用的知识库、多模态文件解析、工作流编排等功能。它支持多种大模型接入，可以快速构建企业级的AI知识库应用。在Kubernetes环境中部署FastGPT可以充... |
 
 ## Vibe Coding
 
