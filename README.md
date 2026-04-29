@@ -28,6 +28,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-29 | [世界是一个巨大的 Yes/No](https://mobius.blog/23324.html) | 小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
 | 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
+| 2026-04-29 | [有了Ai，出门都不用担心忘了关门](https://krya.com/post/tools/) | 出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个"百宝工具箱"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床… |
 | 2026-04-28 | [失去的20年](https://blog.thetbw.xyz/archives/the-lost-20-years) | 今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房… |
 | 2026-04-28 | [emacs-动态设置org-agenda-files](https://blog.prayhand13013.top/20260428T211543--emacs-动态设置org-agenda-files__blog.html) |  |
 | 2026-04-28 | [Browser’s Bookmark Manager Is Actually Good](https://www.geedea.pro/en/article/browser-bookmarks/) | I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes… |
