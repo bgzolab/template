@@ -1,7 +1,7 @@
-from pickle import FALSE
-
 import click
 import os
+from dataclasses import dataclass
+from typing import Optional
 
 from bangumi.client import BangumiClient
 from bangumi.collection import get_all_collections_by_pages
@@ -23,11 +23,127 @@ from weibo.post import get_weibo_longtext_by_id
 from zhihu.collection import get_collection_page
 
 
+@dataclass
+class IndexWriter:
+    """管理导出索引的累计与输出位置。"""
+
+    file_path: Optional[str] = None
+    title: str = "输出index"
+    _entries: list[str] = None
+
+    def __post_init__(self) -> None:
+        """初始化索引条目列表。"""
+        if self._entries is None:
+            self._entries = []
+
+    def add(self, entry: str) -> None:
+        """追加一条索引内容。"""
+        if entry:
+            self._entries.append(entry)
+
+    def render(self) -> str:
+        """渲染最终索引文本。"""
+        return "\n".join(self._entries)
+
+    def flush(self, section_name: str, title: Optional[str] = None) -> None:
+        """将索引输出到控制台或指定 Markdown 文件。"""
+        output_title = title or self.title
+        content = self.render()
+        if self.file_path:
+            directory = os.path.dirname(self.file_path)
+            if directory:
+                os.makedirs(directory, exist_ok=True)
+            self._write_markdown_index(section_name, output_title, content)
+        else:
+            print(f"{output_title}:\n{content}")
+
+        self._entries.clear()
+
+    def _write_markdown_index(
+        self,
+        section_name: str,
+        output_title: str,
+        content: str,
+    ) -> None:
+        """将一次导出结果写入对应模块的 Markdown 分节。"""
+        heading = self._format_section_heading(section_name)
+        run_block = self._format_run_block(output_title, content)
+        existing_content = ""
+
+        if os.path.exists(self.file_path):
+            with open(self.file_path, "r", encoding="utf-8") as file:
+                existing_content = file.read().strip()
+
+        updated_content = self._merge_section(existing_content, heading, run_block)
+
+        with open(self.file_path, "w", encoding="utf-8") as file:
+            file.write(updated_content)
+            if updated_content:
+                file.write("\n")
+
+        print(f"{output_title}已写入: {self.file_path}")
+
+    @staticmethod
+    def _format_section_heading(section_name: str) -> str:
+        """格式化模块级二级标题。"""
+        return f"## {section_name}"
+
+    @staticmethod
+    def _format_run_block(output_title: str, content: str) -> str:
+        """格式化单次导出块。"""
+        normalized_content = content.strip()
+        if normalized_content:
+            return f"### {output_title}\n\n{normalized_content}"
+        return f"### {output_title}\n"
+
+    @classmethod
+    def _merge_section(
+        cls,
+        existing_content: str,
+        heading: str,
+        run_block: str,
+    ) -> str:
+        """将本次导出块并入目标模块分节，保留已有顺序。"""
+        if not existing_content:
+            return f"{heading}\n\n{run_block}"
+
+        sections = existing_content.split("\n## ")
+        normalized_sections = []
+        for index, section in enumerate(sections):
+            if index == 0:
+                normalized_sections.append(section)
+            else:
+                normalized_sections.append(f"## {section}")
+
+        merged_sections = []
+        found = False
+        for section in normalized_sections:
+            if section.startswith(f"{heading}\n") or section == heading:
+                found = True
+                merged_sections.append(f"{section.rstrip()}\n\n{run_block}")
+            else:
+                merged_sections.append(section.rstrip())
+
+        if not found:
+            merged_sections.append(f"{heading}\n\n{run_block}")
+
+        return "\n\n".join(part for part in merged_sections if part).strip()
+
+
+def get_index_writer() -> IndexWriter:
+    """从 click 上下文中获取全局索引输出器。"""
+    context = click.get_current_context()
+    writer = context.find_root().obj.get("index_writer")
+    if writer is None:
+        raise click.ClickException("索引输出器未初始化")
+    return writer
+
+
 # CNBLOG 博客园
 def cnblog_export(output_dir):
+    index_writer = get_index_writer()
     page_index = 1
     page_size = 100
-    result_index = ""
     while True:
         bookmarks = get_bookmark_list(page_index, page_size)
         if not bookmarks:
@@ -37,7 +153,7 @@ def cnblog_export(output_dir):
             file_path = os.path.join(output_dir, f"~{filename}.md")
             if os.path.exists(file_path):
                 print(f"已存在，提前结束: {filename}.md")
-                print("输出index:\n", result_index)
+                index_writer.flush("cnblog")
                 return  # 剪枝，提前退出
             if bm.FromCNBlogs:
                 webpage = WebPage(
@@ -65,16 +181,16 @@ def cnblog_export(output_dir):
                 print(f"Done: {bm.Title}")
             else:
                 print(f"Skip: {bm.Title}")
-            result_index += f'\n- [[~{filename}|{bm.Title}]]'
+            index_writer.add(f"- [[~{filename}|{bm.Title}]]")
         page_index += 1
-    print("输出index:\n", result_index)
+    index_writer.flush("cnblog")
 
 def bangumi_export(subject_type: int, collection_type: int, output_dir: str, template_path: str, force: bool = False):
+    index_writer = get_index_writer()
     client = BangumiClient()
     username = client.get_user()['username']
     limit = 30
     offset = 0
-    result_index = ""
 
     while True:
         results = get_all_collections_by_pages(
@@ -99,15 +215,15 @@ def bangumi_export(subject_type: int, collection_type: int, output_dir: str, tem
                     template_path=template_path,
                     force=force)
                 if result:
-                    result_index += f'\n- [[{filename}|{title}]]'
+                    index_writer.add(f"- [[{filename}|{title}]]")
                 elif not force:
                     print(f"写入失败: {filename}")
-                    print("输出index\n", result_index)
+                    index_writer.flush("bangumi")
                     return
             except Exception as e:
                 print(f"跳过:{res.subject.name}, subject_id={res.subject_id}, error={e}")
             print(f"处理完成={res.subject_id}")
-    print("输出index\n", result_index)
+    index_writer.flush("bangumi")
 
 
 def write_bangumi_data_from_id(subject_id: int, collection_type: int, output_dir: str, template_path: str, force: bool = False) -> (bool, str, str):
@@ -228,8 +344,15 @@ def get_output_character_string(subject_id: int) -> str:
     ])
 
 @click.group()
-def eto():
-    pass
+@click.option(
+    '--index-file',
+    type=click.Path(dir_okay=False, path_type=str),
+    help='索引输出文件路径；未指定时直接打印到控制台',
+)
+@click.pass_context
+def eto(ctx: click.Context, index_file: Optional[str]):
+    ctx.ensure_object(dict)
+    ctx.obj['index_writer'] = IndexWriter(file_path=index_file)
 
 @eto.command()
 @click.option('--output', '-o', required=True, help='输出目录')
@@ -253,8 +376,8 @@ def bangumi(subject_type, collection_type, output, template, force):
 @click.option('--output', '-o', required=True, help='输出目录')
 def qireader(tag, output):
     from qireader.readlatter import get_list_from_read_latter
+    index_writer = get_index_writer()
     older_than = None
-    result_index = "";
 
     while True:
         entries = get_list_from_read_latter(tag, older_than)
@@ -267,7 +390,7 @@ def qireader(tag, output):
                 file_path = os.path.join(output, f"~{filename}.md")
                 if os.path.exists(file_path):
                     print(f"已存在: {filename}.md，同步结束")
-                    print("导出index\n", result_index)
+                    index_writer.flush("qireader", "导出index")
                     return
 
                 timestamp_seconds = int(entry.timestamp) / 1_000_000_000
@@ -297,15 +420,15 @@ def qireader(tag, output):
                 "md")
 
             print(f"Done: {entry.title}")
-            result_index += f'\n- [[~{filename}|{entry.title}]]'
+            index_writer.add(f"- [[~{filename}|{entry.title}]]")
         older_than = str(entries[-1].timestamp)
     # 容错处理
-    print("导出index\n", result_index)
+    index_writer.flush("qireader", "导出index")
 
 @eto.command()
 @click.option('--output', '-o', required=True, help='输出目录')
 def v2ex(output):
-    result_index = "";
+    index_writer = get_index_writer()
     page = 1
     while True:
         id_list = get_fav_list_topic_id_page(page)
@@ -321,7 +444,7 @@ def v2ex(output):
             file_path = os.path.join(output, f"~{filename}.md")
             if os.path.exists(file_path):
                 print(f"已存在: {filename}.md，同步结束")
-                print("导出index\n", result_index)
+                index_writer.flush("v2ex", "导出index")
                 return
             created_time = datetime.fromtimestamp(topic.created).strftime('%Y-%m-%dT%H:%M:%S%z')
             modified_time = datetime.fromtimestamp(topic.last_modified).strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -345,14 +468,14 @@ def v2ex(output):
                 "md")
 
             print(f"Done: {topic.title}")
-            result_index += f'\n- [[~{filename}|{topic.title}]]'
-    print("导出完成index\n", result_index)
+            index_writer.add(f"- [[~{filename}|{topic.title}]]")
+    index_writer.flush("v2ex", "导出完成index")
 
 @eto.command()
 @click.option('--collection', '-c', required=True, help='收藏夹')
 @click.option('--output', '-o', required=True, help='输出目录')
 def zhihu(collection, output):
-    result_index = "";
+    index_writer = get_index_writer()
     offset = 0
     limit = 20
 
@@ -376,7 +499,7 @@ def zhihu(collection, output):
             file_path = os.path.join(output, f"~{filename}.md")
             if os.path.exists(file_path):
                 print(f"已存在: {filename}.md，同步结束")
-                print("导出index\n", result_index)
+                index_writer.flush("zhihu", "导出index")
                 return
 
             created_time = datetime.fromtimestamp(content.created_time).strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -401,14 +524,14 @@ def zhihu(collection, output):
                 "md")
 
             print(f"Done: {title}")
-            result_index += f'\n- [[~{filename}|{title}]]'
+            index_writer.add(f"- [[~{filename}|{title}]]")
 
 
         if page.data is None or len(page.data) == 0:
             break
         offset += limit
 
-    print(f"输出index:\n{result_index}")
+    index_writer.flush("zhihu")
 
 
 '''
@@ -432,7 +555,7 @@ def handle_weibo_pic(item) -> str:
 @click.option('--output', '-o', required=True, help='输出目录')
 @click.option('--force', required=False, is_flag=True, help='是否强制覆盖')
 def weibo(uid: int, output: str, force: bool):
-    result_index = "";
+    index_writer = get_index_writer()
     page_index = 1
     while True:
         page = get_weibo_like_list(uid, page_index)
@@ -457,7 +580,7 @@ def weibo(uid: int, output: str, force: bool):
                         file_path = os.path.join(output, f"~{filename}.md")
                         if os.path.exists(file_path):
                             print(f"已存在: {filename}.md，同步结束")
-                            print("导出index\n", result_index)
+                            index_writer.flush("weibo", "导出index")
                             return
 
                     auther_name = item.user.screen_name
@@ -499,7 +622,7 @@ def weibo(uid: int, output: str, force: bool):
                         "md")
 
                     print(f"Done: {title}")
-                    result_index += f'\n- [[~{filename}|{title}]]'
+                    index_writer.add(f"- [[~{filename}|{title}]]")
 
                 except Exception as e:
                     print(f"处理报文发生错误: {e}，微博可能已经被删除，跳过处理")
@@ -510,7 +633,7 @@ def weibo(uid: int, output: str, force: bool):
             print("获取微博喜欢列表失败，请检查接口")
             break
 
-    print(f"输出index:\n{result_index}")
+    index_writer.flush("weibo")
 
 
 def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, template_path: str, force: bool = False):
@@ -532,9 +655,9 @@ def sync_all_collection_under_subject_type(subject_type: int, output_dir: str, t
 @click.option('--force', required=False, is_flag=True, help='是否强制覆盖')
 def bilibili(fid: int, output: str, force: bool):
     from bilibili.favlist import get_bilibili_favlistd
+    index_writer = get_index_writer()
     page = 1
     size = 20
-    result_index = ""
     while True:
         favlist_response = get_bilibili_favlistd(fid, page, size)
         if not favlist_response or not favlist_response.data or len(favlist_response.data.medias) == 0:
@@ -546,7 +669,7 @@ def bilibili(fid: int, output: str, force: bool):
                 file_path = os.path.join(output, f"~{filename}.md")
                 if os.path.exists(file_path) and not force:
                     print(f"已存在: {filename}.md，同步结束")
-                    print("导出index\n", result_index)
+                    index_writer.flush("bilibili", "导出index")
                     return
 
                 pubtime_date = datetime.fromtimestamp(item.pubtime).strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -593,13 +716,13 @@ def bilibili(fid: int, output: str, force: bool):
                     "md")
 
                 print(f"Done: {item.title}")
-                result_index += f'\n- [[~{filename}|{item.title}]]'
+                index_writer.add(f"- [[~{filename}|{item.title}]]")
 
             except Exception as e:
                 print(f"处理报文发生错误: {e}，跳过处理")
         page += 1
 
-    print(f"输出index:\n{result_index}")
+    index_writer.flush("bilibili")
 
 if __name__ == '__main__':
     eto()
