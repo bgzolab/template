@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-29 | [PVE 9.1 LXC 显卡共享: 部署Steam Headless](https://brain-zhang.github.io/blog/2026/04/29/pve-9-dot-1-lxc-xian-qia-gong-xiang-bu-shu-steam-headless/) | 这是一种非常折腾的做法，目前来看这么折腾的人真不多; 最终实现的效果就是在PVE环境中，用数个LXC容器将一张消费级GPU (我是一张RTX 3060 12GB) 切分到不同的Linux系统实例中，同时这些实例还能共享显卡的算力和显存；同时，最妙的 —- 这张显卡的算力和显存是动态分配的； 这比显卡… |
 | 2026-04-29 | [逆向京麦客户端提取京东聊天表情映射表](https://lililib.github.io/%E9%80%86%E5%90%91%E4%BA%AC%E9%BA%A6%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%90%E5%8F%96%E4%BA%AC%E4%B8%9C%E8%81%8A%E5%A4%A9%E8%A1%A8%E6%83%85%E6%98%A0%E5%B0%84%E8%A1%A8/) | 本文全部内容由Opus 4.7 技术总结生成 最近在做电商客服质检的项目,对接京东平台拉取客服和顾客的聊天记录,准备喂给 LLM 分析意图、打标签。跑起来看样本数据,发现消息文本里经常混着 #E-s38 、 #E-b07 、 #E-a10 这种奇怪的字符串。 一开始以为是乱码或者没处理干净的转义,仔… |
 | 2026-04-29 | [独立博客，难在不够独立](https://blog.solazy.me/20260429/) | 前两天看到一个说独立博客难的话题，今天展开来说说我的想法 |
 | 2026-04-29 | [Ronan Space Systems 当远古岩画，重写太空美学](https://www.iyeslogo.com/ronan-space-systems/) | 模糊、流动的视觉系统不仅承载品牌野心，更挑战航天领域固有审美范式，证明未来探索可从古老文明汲取力量。 |
