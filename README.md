@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-29 | [Ronan Space Systems 当远古岩画，重写太空美学](https://www.iyeslogo.com/ronan-space-systems/) | 模糊、流动的视觉系统不仅承载品牌野心，更挑战航天领域固有审美范式，证明未来探索可从古老文明汲取力量。 |
 | 2026-04-29 | [世界是一个巨大的 Yes/No](https://mobius.blog/23324.html) | 小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
 | 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
