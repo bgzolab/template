@@ -5,94 +5,154 @@
 [![Licence](https://img.shields.io/github/license/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/blob/template/LICENCE)
 [![Telegram](https://img.shields.io/badge/-telegram-black.svg?style=for-the-badge&logo=telegram&colorB=555)](https://t.me/imbGZo)
 
-![Playground Name Screen Shot](https://img.bgzo.cc/2025/202508021439235.JPG)
+# Export all your data into Obsidian
 
-# Playground
+> Your data is your asset, you should own it. 
 
-Here is a template repository for my projects. It contains a basic structure and some common files that I use in all my projects. You can use this template to create your own projects by forking it or cloning it.
+This tool exports your saved data to Markdown files for Obsidian.
 
-## Getting Started
+- Export data from many sites into local Markdown files.
+- Keep one simple CLI for all modules.
+- Write an optional index file in Markdown.
 
-Before you start, make sure you have Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
+Now this tool had supported following modules:
 
-## Getting Started
+1. bangumi
+2. bilibili
+3. cnblog
+4. qireader
+5. v2ex
+6. weibo
+7. zhihu
 
-Before you start, make sure you have Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
+## Quick start
 
-```python
+You can install from PyPI:
+
+```shell
 pipx install export_to_obsidian
 ```
 
-Fetch the `template` branch from the remote repository:
+Or install from this repo:
 
 ```shell
-git fetch origin template
+pip install -e .
 ```
 
-Merge the `template` branch into your local repository to get started:
+Put your token or cookie values in .env, then load them:
 
 ```shell
-git merge origin/template --allow-unrelated-histories
+chmod +x ./export-env.sh
+source ./export-env.sh
 ```
 
-## Usage
+Main env vars used by the current modules:
 
-### 索引输出控制
+- CNBLOG_ACCESS_TOKEN
+- BGM_ACCESS_TOKEN
+- QIREADER_COOKIE
+- V2EX_ACCESS_TOKEN
+- V2EX_COOKIE
+- WEIBO_COOKIE
+- ZHIHU_COOKIE
+- BILIBILI_COOKIE
 
-所有导出子命令现在都支持统一的索引输出文件参数。
-
-通用格式：
+## Basic usage
 
 ```shell
-eto <subcommand> [subcommand options]
-eto --index-file <index-file-path> <subcommand> [subcommand options]
+eto <command> [options]
+eto --index-file <path> <command> [options]
 ```
 
-必要说明：
+`--index-file` is a top-level option. Put it before the subcommand.
 
-- `--index-file` 是顶层参数，必须写在子命令前。
-- 未指定 `--index-file` 时，索引会继续直接打印到控制台。
-- 指定 `--index-file` 时，索引会输出为一个 Markdown 文件。
-- 索引文件按模块分组，每个模块只有一个二级标题，例如 `## zhihu`、`## bilibili`。
-- 同一个模块多次执行时，不会重复创建二级标题；新一轮导出内容会按执行顺序追加到该模块已有内容后面。
-- 如果执行顺序是 `zhihu -> bilibili -> zhihu`，最终文档中会保留两个二级标题，且第二次 `zhihu` 的内容会追加到第一个 `## zhihu` 分节的末尾。
-- 每次导出会在所属模块下生成一个三级标题块，默认标题为 `### 输出index`、`### 导出index` 或 `### 导出完成index`，下面紧跟本次导出的条目列表。
-- 当前支持这些子命令：`cnblog`、`bangumi`、`qireader`、`v2ex`、`zhihu`、`weibo`、`bilibili`。
+If you do not use `--index-file`, the index is printed to the terminal.
+If you use `--index-file`, the index is written to one Markdown file.
 
-示例：
+## Command examples
+
+### cnblog
 
 ```shell
-eto cnblog --output output/cnblog
-eto --index-file output/index/cnblog-index.md cnblog --output output/cnblog
-eto --index-file output/index/export-index.md zhihu -c xxx -o ./zhihu/
-eto --index-file output/index/export-index.md bilibili -f xxx -o ./bilibili/
-eto --index-file output/index/export-index.md zhihu -c xxx -o ./zhihu/
+eto cnblog -o output/cnblog
 ```
 
-索引文件示例：
+### bangumi
+
+Use `config/bangumi_template.md` as the template file.
+
+```shell
+eto bangumi -t config/bangumi_template.md -s 1 -o output/bangumi
+eto bangumi -t config/bangumi_template.md -s 2 -o output/bangumi
+eto bangumi -t config/bangumi_template.md -s 3 -o output/bangumi
+eto bangumi -t config/bangumi_template.md -s 4 -o output/bangumi
+```
+
+You can also set one collection type:
+
+```shell
+eto bangumi -t config/bangumi_template.md -s 2 -c 3 -o output/bangumi
+```
+
+### qireader
+
+```shell
+eto qireader -t your-tag -o output/qireader
+```
+
+### v2ex
+
+```shell
+eto v2ex -o output/v2ex
+```
+
+### zhihu
+
+```shell
+eto zhihu -c your-collection-id -o output/zhihu
+```
+
+### weibo
+
+```shell
+eto weibo -u your-user-id -o output/weibo
+```
+
+### bilibili
+
+```shell
+eto bilibili -f your-fav-id -o output/bilibili
+```
+
+## Index file
+
+Example:
+
+```shell
+eto --index-file output/index/export-index.md zhihu -c your-collection-id -o output/zhihu
+eto --index-file output/index/export-index.md bilibili -f your-fav-id -o output/bilibili
+```
+
+The file is grouped by module name.
+One module keeps one `##` section.
+Each export run adds one `###` block under that module.
+
+Example output:
 
 ```markdown
 ## zhihu
 
-### 输出index
+### export index
 
-- [[~zhihu-entry-1|第一篇知乎收藏]]
-- [[~zhihu-entry-2|第二篇知乎收藏]]
-
-### 输出index
-
-- [[~zhihu-entry-3|第三篇知乎收藏]]
+- [[~zhihu-entry-1|First saved item]]
+- [[~zhihu-entry-2|Second saved item]]
 
 ## bilibili
 
-### 输出index
+### export index
 
-- [[~BV1xxxxxx|某个收藏视频]]
+- [[~BV1xxxxxx|One saved video]]
 ```
-
-### 博客园
-
-_For more examples, please refer to the [Documentation](https://github.com/bGZo/playground)_
 
 <!--
 ## Vibe Coding
@@ -134,26 +194,30 @@ I use obdisian to manage roadmap of this project, and I will update it here when
 See the [open issues](https://github.com/bGZo/playground/issues) for a full list of proposed features (and known issues).
 -->
 
-## Testing In VS Code
+## Output
 
-项目已经提供可直接使用的 VS Code 调试配置，位置在 .vscode/launch.json。
+Files are written as Markdown files in your output folder.
+The project also writes front matter, so the files work well in Obsidian.
 
-使用方式：
 
-- 在 VS Code 中先选择项目的 Python 解释器，建议使用 Poetry 环境。
-- 如果需要平台凭证，先按前文说明准备 .env，并确保调试配置能读到它。
-- 打开 Run and Debug 面板后，可直接选择各个 CLI 配置，例如 `CLI: cnblog 导出`、`CLI: zhihu 导出`、`CLI: bilibili 导出`。
-- 其中 `qireader`、`bilibili` 等配置里的示例参数需要按你的实际 tag、fid 或 collection 值修改后再运行。
-- 测试调试可直接选择 `Pytest: 当前测试文件`，或者运行指定测试文件与 `Pytest: 全部测试`。
+## Testing
 
-命令行测试范例：
+Run all tests:
 
 ```shell
 PYTHONPATH=src pytest tests -q
+```
+
+Run one test file:
+
+```shell
 PYTHONPATH=src pytest tests/test_utils.py -q
 ```
 
+In VS Code, you can also use the debug and test settings in .vscode/launch.json.
+
 ## Contributing
+
 
 Any contributions made are **greatly appreciated**.
 
