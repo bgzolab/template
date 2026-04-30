@@ -21,7 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
-| 2026-04-30 | [看了 QoderWake 的设计，我觉得它摸到了 AI 员工的门槛](https://www.evan.xin/4948/) | 说实话，我对"AI 员工"这个词已经有点免疫了。之前看过太多产品，要么是高级一点的自动补全，要么是得你一步一步 […] |
+| 2026-04-30 | [深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用](https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/) | 本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Mot… |
+| 2026-04-30 | [QoderWake：把 Agent 做成“同事”的那条路](https://www.evan.xin/4948/) | 我最近看 QoderWake 的介绍时，一个感觉很强：它不是在卖“更聪明的模型”，而是在把 AI 放进组织里最 […] |
 | 2026-04-30 | [再见面板：Debian构建WordPress](https://www.xiaozonglin.cn/build-wordpress-with-pure-commandline/) | 任务要求：使用Debian纯命令行构建自己的WordPress网站，并通过一些方法支持http://linli […] 再见面板：Debian构建WordPress 最先出现在 林林杂语 。 |
 | 2026-04-30 | [Album#37 - Scenery(シーナリィ)](https://taxodium.ink/album-37.html) | Album#37 Scenery(シーナリィ) 图1 《Scenery(シーナリィ)》専輯封面 专辑信息 专辑名称： Scenery (シーナリィ) 歌手： 福居良 (Ryo Fukui) 年份： 1967-01-01 风格： 爵士 (Jazz)、鋼琴 时长： 41:20 福居(ふくい)良(りょう)… |
 | 2026-04-30 | [我（不）想让 AI 帮我做](https://www.geedea.pro/article/no-ai-for-my-joy/) | 标题之所以没有使用 LLM 这个在如今大多数情况下更准确的词，是因为我想讨论更宽泛的技术。帮人做事的不只是大语言模型，对于个别人来说，还有可能是文生图模型、图像视觉模型等等。所以我使用了 AI 这个词。 如果你读过本博客其他有关 AI 的文章，你会发现我大部分时候都没什么好话说。我为什么不喜欢这门… |

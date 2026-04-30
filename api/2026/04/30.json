@@ -6,10 +6,16 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
-    "title": "看了 QoderWake 的设计，我觉得它摸到了 AI 员工的门槛",
+    "title": "深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用",
+    "url": "https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/",
+    "date": "2026-04-30T18:22:07Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Motive ——的完整过程：从理解原有架构到实现替换，以及一路上踩过的坑。 Motive 是什么 Motive 是一个 macOS 原生的 AI Agent 桌面应用，用 SwiftUI 写的。它的核心交互是：用户输入 prompt → Agent 在后台跑 Agent Loop（调工具、读文件、执行命令）→ 流式输出结果到 UI。 在集成 SDK 之前，Motive 的 Agent 后端长这样： Motive App (SwiftUI) └── OpenCodeBridge (actor) ├── OpenCodeServer — 启动外部 opencode 二进制进程 (opencode serve) ├── SSEClient — 通过 Server-Sent Events 接收流式事件 "
+  },
+  {
+    "title": "QoderWake：把 Agent 做成“同事”的那条路",
     "url": "https://www.evan.xin/4948/",
     "date": "2026-04-30T15:58:33Z",
-    "description": "说实话，我对\"AI 员工\"这个词已经有点免疫了。之前看过太多产品，要么是高级一点的自动补全，要么是得你一步一步 […]"
+    "description": "我最近看 QoderWake 的介绍时，一个感觉很强：它不是在卖“更聪明的模型”，而是在把 AI 放进组织里最 […]"
   },
   {
     "title": "再见面板：Debian构建WordPress",
