@@ -1,0 +1,146 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "人工智能支出创下纪录，且看不到尽头 - nytimes",
+    "url": "https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/",
+    "date": "2026-04-30T00:44:59Z",
+    "description": "谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出"
+  },
+  {
+    "title": "我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起",
+    "url": "https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/",
+    "date": "2026-04-30T00:25:11Z",
+    "description": "这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社区、让个人得到成长。"
+  },
+  {
+    "title": "Memos #2026-04-29",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-04-30T00:00:00Z",
+    "description": "00:41 我的人生总是阶段性的，期待着一个又一个节点的到来，而做不到享受当下。"
+  },
+  {
+    "title": "Warp 开源了！高性能现代化设计的跨平台 AI 终端工具 (视频使用教程)",
+    "url": "https://www.iplaysoft.com/warp.html",
+    "date": "2026-04-29T20:58:20Z",
+    "description": "你上一次认真把玩 命令行终端 软件是什么时候？估计大部分人的答案都是：不折腾，能用就行。毕竟终端这玩意儿，从 70 年代到现在，核心交互就没变过：一个黑框框，敲命令，看输出。 而最近一款 Rust 开发的高性能、 原生 AI 驱动的现代化 SSH 终端软件 Warp ，突然宣布 开源 ！GitHub 星标一夜冲到 3 万+，评论区一片欢腾！Warp 到底做了什么，能让一帮程序员如此激动？简单说，它不仅把终端从能用变成“好看+好用”，甚至让人遐想到未来的终端长什么样…… 「 前往查看原文.... 」 异次元还有这些值得一看： 还用 XShell？这款跨平台原生 SSH 终端工具 iShellPro 更好用！支持 SFTP 集成 AI Xterminal - 集成 AI 免费跨平台 SSH 终端工具 (服务器文件管理 / 状态监控 / AI 命令解释补全) LNMP 一键安装包 - 简单快速 Linux 服务器建站 / 安装配置 Nginx PHP MySQL 脚本 PuTTY - Windows 下超经典知名的免费 SSH 客户端工具软件 异次元首页 | 微信公众号 | 关注微博 | 软"
+  },
+  {
+    "title": "PVE 9.1 LXC 显卡共享: 部署Steam Headless",
+    "url": "https://brain-zhang.github.io/blog/2026/04/29/pve-9-dot-1-lxc-xian-qia-gong-xiang-bu-shu-steam-headless/",
+    "date": "2026-04-29T08:48:46Z",
+    "description": "这是一种非常折腾的做法，目前来看这么折腾的人真不多; 最终实现的效果就是在PVE环境中，用数个LXC容器将一张消费级GPU (我是一张RTX 3060 12GB) 切分到不同的Linux系统实例中，同时这些实例还能共享显卡的算力和显存；同时，最妙的 —- 这张显卡的算力和显存是动态分配的； 这比显卡直通，比老黄专业卡的虚拟化还爽； 具体配置请参考前一篇文章；这种方法肯定是老黄不愿意看到的，但是折腾人士乐此不疲； 目前我的一张3060 12GB上面运行了六台LXC容器共享，里面的服务有: Ollama运行了一干小尺寸模型进行测试，例如gemma 4 e4b; 有数个FFmpeg流媒体压制 有数个CUDA实现的加密算法测试 当然，还有今天我们想做的，跑一个Linux Steam 串流服务器；这种做法的原理是：PVE宿主机 –(挂载.so文件和/dev设备)–> LXC容器 –(Docker device mapping)–> Docker容器。 具体搭建步骤参考了这篇文章 https://zheteng.pages.dev/posts/2024/headless-steam-in-lxc-"
+  },
+  {
+    "title": "逆向京麦客户端提取京东聊天表情映射表",
+    "url": "https://lililib.github.io/%E9%80%86%E5%90%91%E4%BA%AC%E9%BA%A6%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%90%E5%8F%96%E4%BA%AC%E4%B8%9C%E8%81%8A%E5%A4%A9%E8%A1%A8%E6%83%85%E6%98%A0%E5%B0%84%E8%A1%A8/",
+    "date": "2026-04-29T07:30:00Z",
+    "description": "本文全部内容由Opus 4.7 技术总结生成 最近在做电商客服质检的项目,对接京东平台拉取客服和顾客的聊天记录,准备喂给 LLM 分析意图、打标签。跑起来看样本数据,发现消息文本里经常混着 #E-s38 、 #E-b07 、 #E-a10 这种奇怪的字符串。 一开始以为是乱码或者没处理干净的转义,仔细看才意识到这是京东自有的表情符号占位。最头疼的是,翻遍京东开放平台文档,压根没给映射表。"
+  },
+  {
+    "title": "独立博客，难在不够独立",
+    "url": "https://blog.solazy.me/20260429/",
+    "date": "2026-04-29T07:00:00Z",
+    "description": "前两天看到一个说独立博客难的话题，今天展开来说说我的想法"
+  },
+  {
+    "title": "有了Ai，出门都不用担心忘了关门",
+    "url": "https://krya.com/post/tools/",
+    "date": "2026-04-29T04:00:00Z",
+    "description": "出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个\"百宝工具箱\"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床开始 我自己写博客，有时候会用到 Markdown 去插入图片。每次用别人的图床，担忧很多；用自己的阿里云OSS 客户端，又觉得上传方式太过繁琐；始终没有Web方案信手拈来的爽快。 现在有 Hermes Agent，我想物尽其用，让它帮我做了一个图床，让我在手机上也能上传图片。 实现的方式很简单： 第一步，提出我的需求：利用阿里云 OSS做一个私有图床，带密码验证，防止滥用。AI 给我推荐用阿里云函数作为后端方案，前端随便放在哪里都行。 我只给它做了一件事情：提供阿里云OSS 的 API. 剩下的工作就是让 AI 自己完成的。 刚好小米面向开发者发放的百亿Token，我领到了一点；顺便验证Mimo-v2.5-pro大模型的成色。指令发出后几分钟的时间内，它就给我做好了前后端的代码，并让我把后"
+  },
+  {
+    "title": "Ronan Space Systems 当远古岩画，重写太空美学",
+    "url": "https://www.iyeslogo.com/ronan-space-systems/",
+    "date": "2026-04-29T02:09:15Z",
+    "description": "模糊、流动的视觉系统不仅承载品牌野心，更挑战航天领域固有审美范式，证明未来探索可从古老文明汲取力量。"
+  },
+  {
+    "title": "世界是一个巨大的 Yes/No",
+    "url": "https://mobius.blog/23324.html",
+    "date": "2026-04-29T01:00:00Z",
+    "description": "小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "DeepSeek优惠期延长至北京时间 2026/05/31 23:59",
+    "url": "https://blog.rustfisher.com/news/deepseek-price-date-20260429/",
+    "date": "2026-04-29T00:44:59Z",
+    "description": "当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59"
+  },
+  {
+    "title": "NVIDIA 推出 Nemotron 3 Nano Omni 模型",
+    "url": "https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/",
+    "date": "2026-04-29T00:00:59Z",
+    "description": "开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程"
+  },
+  {
+    "title": "失去的20年",
+    "url": "https://blog.thetbw.xyz/archives/the-lost-20-years",
+    "date": "2026-04-28T17:27:10Z",
+    "description": "今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房子来和之前的对比的话，房价纵然是跌了，但是肯定没有跌那么狠，但是对于一些n线城市来说，也的确是有价无市了。 最重要的一点是，数据是怎么算出来的，就像国家统计局一样，无论世界变的怎么样，他们总能给你算出一副欣欣向荣的数据，境外组织也是毅然，想法设法的抹黑中国也可以说的过去。(此处不知道应不因该加上doge 这并不是我主要想讨论的话题，房价怎么样跟我也没什么关系，我最近几年也没买房的打算，租房的价格其实并不会因为房价而有什么大的变动，毕竟这是实实在在的需求市场。 不过最近不知道是我的信息茧房还是真的就是这样，其实大家真的就都挺难的，办公室类的的工作面临着各种裁员，就连铁人三件套也是越来越卷，包括像是出租车司机和家政保洁之类，单子也是在变少，因为我身边的确是有人干这个，所以也能实实在在感受到。 失"
+  },
+  {
+    "title": "emacs-动态设置org-agenda-files",
+    "url": "https://blog.prayhand13013.top/20260428T211543--emacs-动态设置org-agenda-files__blog.html",
+    "date": "2026-04-28T13:15:00Z",
+    "description": ""
+  },
+  {
+    "title": "Browser’s Bookmark Manager Is Actually Good",
+    "url": "https://www.geedea.pro/en/article/browser-bookmarks/",
+    "date": "2026-04-28T10:00:10Z",
+    "description": "I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes with a powerful ecosystem. There are a lot of client apps and people even make Apple shortcuts for it. The omg.lol community started to host one recently and it seems genuinely cool. So, why do I abandon such lovely FOSS software? Well, I don’t really need a service that keeps running 24 hours. It’s just a bunch of links. It’s handy to share bookma"
+  },
+  {
+    "title": "emacs-在org文件中利用ob-gptel保存调用LLM聊天对话（deepseek为例）",
+    "url": "https://blog.prayhand13013.top/20260428T171017--emacs-在org文件中利用ob-gptel保存调用llm聊天对话（deepseek为例）__blog.html",
+    "date": "2026-04-28T09:10:00Z",
+    "description": ""
+  },
+  {
+    "title": "闷声发大财",
+    "url": "https://blog.solazy.me/20260428/",
+    "date": "2026-04-28T09:00:00Z",
+    "description": "今天聊聊闷声发大财"
+  },
+  {
+    "title": "最近惦念 20260418",
+    "url": "https://z.arlmy.me/posts/TILs/thoughts/20260418_Recently/",
+    "date": "2026-04-28T04:17:27Z",
+    "description": "「万事需释。」"
+  },
+  {
+    "title": "Toots 416 2026 Apr.19 - Apr.25",
+    "url": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260425/",
+    "date": "2026-04-28T04:14:27Z",
+    "description": "「懂得做人的人可以成为人。」"
+  },
+  {
+    "title": "OpenAI 在冲击 IPO 的关键冲刺中未能达成关键营收和用户目标",
+    "url": "https://blog.rustfisher.com/news/openai-20260428/",
+    "date": "2026-04-28T03:44:59Z",
+    "description": "面对增长放缓，公司首席财务官和董事会对大规模数据中心支出的合理性提出了质疑"
+  },
+  {
+    "title": "半学期记：春日校园",
+    "url": "https://www.xiaozonglin.cn/photos-of-campus-2026-spring/",
+    "date": "2026-04-28T01:40:46Z",
+    "description": "分享自己半个学期以来拍的照片。 半学期记：春日校园 最先出现在 林林杂语 。"
+  },
+  {
+    "title": "一句顶一万句",
+    "url": "https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/",
+    "date": "2026-04-28T01:07:59Z",
+    "description": "<p class=\"book-no"
+  },
+  {
+    "title": "知识，也是有幻觉率",
+    "url": "https://mobius.blog/23315.html",
+    "date": "2026-04-28T01:00:00Z",
+    "description": "我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  }
+]

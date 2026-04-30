@@ -21,15 +21,18 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-30 | [人工智能支出创下纪录，且看不到尽头 - nytimes](https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/) | 谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出 |
+| 2026-04-30 | [我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起](https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/) | 这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社… |
+| 2026-04-30 | [Memos #2026-04-29](https://www.taober.blog/memos) | 00:41 我的人生总是阶段性的，期待着一个又一个节点的到来，而做不到享受当下。 |
 | 2026-04-29 | [Warp 开源了！高性能现代化设计的跨平台 AI 终端工具 (视频使用教程)](https://www.iplaysoft.com/warp.html) | 你上一次认真把玩 命令行终端 软件是什么时候？估计大部分人的答案都是：不折腾，能用就行。毕竟终端这玩意儿，从 70 年代到现在，核心交互就没变过：一个黑框框，敲命令，看输出。 而最近一款 Rust 开发的高性能、 原生 AI 驱动的现代化 SSH 终端软件 Warp ，突然宣布 开源 ！GitHub… |
 | 2026-04-29 | [PVE 9.1 LXC 显卡共享: 部署Steam Headless](https://brain-zhang.github.io/blog/2026/04/29/pve-9-dot-1-lxc-xian-qia-gong-xiang-bu-shu-steam-headless/) | 这是一种非常折腾的做法，目前来看这么折腾的人真不多; 最终实现的效果就是在PVE环境中，用数个LXC容器将一张消费级GPU (我是一张RTX 3060 12GB) 切分到不同的Linux系统实例中，同时这些实例还能共享显卡的算力和显存；同时，最妙的 —- 这张显卡的算力和显存是动态分配的； 这比显卡… |
 | 2026-04-29 | [逆向京麦客户端提取京东聊天表情映射表](https://lililib.github.io/%E9%80%86%E5%90%91%E4%BA%AC%E9%BA%A6%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%90%E5%8F%96%E4%BA%AC%E4%B8%9C%E8%81%8A%E5%A4%A9%E8%A1%A8%E6%83%85%E6%98%A0%E5%B0%84%E8%A1%A8/) | 本文全部内容由Opus 4.7 技术总结生成 最近在做电商客服质检的项目,对接京东平台拉取客服和顾客的聊天记录,准备喂给 LLM 分析意图、打标签。跑起来看样本数据,发现消息文本里经常混着 #E-s38 、 #E-b07 、 #E-a10 这种奇怪的字符串。 一开始以为是乱码或者没处理干净的转义,仔… |
 | 2026-04-29 | [独立博客，难在不够独立](https://blog.solazy.me/20260429/) | 前两天看到一个说独立博客难的话题，今天展开来说说我的想法 |
+| 2026-04-29 | [有了Ai，出门都不用担心忘了关门](https://krya.com/post/tools/) | 出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个"百宝工具箱"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床… |
 | 2026-04-29 | [Ronan Space Systems 当远古岩画，重写太空美学](https://www.iyeslogo.com/ronan-space-systems/) | 模糊、流动的视觉系统不仅承载品牌野心，更挑战航天领域固有审美范式，证明未来探索可从古老文明汲取力量。 |
 | 2026-04-29 | [世界是一个巨大的 Yes/No](https://mobius.blog/23324.html) | 小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
 | 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
-| 2026-04-29 | [有了Ai，出门都不用担心忘了关门](https://krya.com/post/tools/) | 出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个"百宝工具箱"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床… |
 | 2026-04-28 | [失去的20年](https://blog.thetbw.xyz/archives/the-lost-20-years) | 今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房… |
 | 2026-04-28 | [emacs-动态设置org-agenda-files](https://blog.prayhand13013.top/20260428T211543--emacs-动态设置org-agenda-files__blog.html) |  |
 | 2026-04-28 | [Browser’s Bookmark Manager Is Actually Good](https://www.geedea.pro/en/article/browser-bookmarks/) | I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes… |
@@ -41,7 +44,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-28 | [半学期记：春日校园](https://www.xiaozonglin.cn/photos-of-campus-2026-spring/) | 分享自己半个学期以来拍的照片。 半学期记：春日校园 最先出现在 林林杂语 。 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
 | 2026-04-28 | [知识，也是有幻觉率](https://mobius.blog/23315.html) | 我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-28 | [Memos #2026-04-27](https://www.taober.blog/memos) | 00:31 看完了《一一》，有两个感受： 故事进入下一个篇章往往都是不经意间，往往还没有准备好； 遗憾是贯穿始终的，再来一遍也难有什么不同。 /btw 我的右耳机没声音了，不知道是坏了还是只是充电处接触不良，不过也是时候换一个了。 |
 | 2026-04-27 | [韩国爆火的SetLog：为何没有新的社交巨头](https://mazzzystar.com/2026/04/27/setlog/) | 这个时代不会再产生新的社交巨头了吗 ？ <h2 |
 | 2026-04-27 | [H3C TC2101调整分区（OpenIPC系列二）](https://blog.cubestone.wang/2026/04/28/openipc-two/) | 前言 前文已经完成了设备的第一次刷机，但是除有线网络外，其它的外设均不能用，需要参考已有的SSC337版本进行适配或者手动测试找出对应引脚。因为之后涉及到自定义固件的编译，故需要先对设备的分区配置进行了解，以便之后的操作。 |
 | 2026-04-27 | [Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)](https://www.iplaysoft.com/p/ubuntu-2604-lts-updates) | 说起 Linux 桌面系统，就一定绕不开 Ubuntu。这次发布 26.04 LTS（代号 Resolute Raccoon，坚毅浣熊）不是那种小打小闹的增量更新，而是从内核到桌面、从安全到 AI 的全维度大洗牌。 Ubuntu 26.04 LTS (长期维护版) 把桌面体验、底层内核、开发与 AI… |
@@ -105,25 +107,12 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-23 | [RackNerd 性价比 VPS 服务器特价促销中！终身续费同价！](https://www.iplaysoft.com/p/racknerd) | 很多人都需要用到「国外的 VPS 主机」，省钱省事，用来学习 Linux、编程开发、跑外贸网站、博客，或者用 Docker 自建网盘或各种各样的私有网络服务都非常实用。 最近除推荐的 DMIT、板佤工高端 CN2 GIA 线路、HostDare、VirMarch 等 VPS 服务器主机补货之外，不断… |
 | 2026-04-23 | [Codex高效Coding配置优化指南](https://jetyu.me/post/codex-config-guide.html) | 通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。 |
 | 2026-04-23 | [为什么现在年代剧里的招牌，像是刚挂上去的？](https://www.iyeslogo.com/design-in-years-television/) | 年代剧招牌穿帮现象背后反映了影视创作中的多重问题 |
-| 2026-04-23 | [灵魂的重逢：在湖光山色中，遇见怡然自得的自己](https://blog.hoopan.net/832.html) | 在湖畔露营的湖光山色中，内心那个冷眼旁观的"觉察者"终于与现实中的我融为一体。回望这段心路历程，从情绪的内耗到课题分离，从向外索求到向内专注，我终于学会了安然存在，怡然自得。 |
 | 2026-04-23 | [吃细糠](https://kaix.in/2026/0423/) | 之前提到过店里空间布局的问题导致我最近经常吃外卖。虽然 不想给差评 ，但是不得不说，实在不好吃。昨天点了小鸡炖蘑菇、锅包肉、回锅肉、干煸花菜。严格点评价就全都不合格。蘑菇炖鸡竟然没有鲜味这最奇怪，好在可以自我安慰说至少没加「科技」。锅包肉，哎呀，不禁回想起二十年多前刚工作，下了班和太太一起下馆子的时… |
 | 2026-04-23 | [Memos: 一晃 001](https://blog.yasking.org/a/1776934616.html) | （一）Voyager 1 NASA 在 2026 年 4 月 17 日 关闭了 Voyager 1 的一个仪器（LECP），官方说这样能再争取“大约一年的缓冲”。 浪漫时刻：当时 Voyager 1 已经完成 … |
 | 2026-04-23 | [核心训练和腹肌训练是一个东西吗？](https://www.geedea.pro/article/abs-vs-core/) | 读者们好，今天是世界读书日，所以我打算来讨论如何锻炼身体。 是的，我就喜欢做不合时宜的事情 。本来想说在世界体育运动日谈读书，但发现这个节日在四月六日，已经错过了，那就留到明年再说吧。 不久前我还会和同室讨论健身话题（后来发现我们两个的观点差异巨大，而对方在某种程度上根本无法双向交流），有一次他问我… |
 | 2026-04-23 | [emacs-用tramp-rpc加速tramp](https://blog.prayhand13013.top/20260423T105201--emacs-用tramp-rpc加速tramp__blog.html) |  |
 | 2026-04-23 | [博客需要追求变现吗？](https://mobius.blog/22956.html) | 前几天，一个朋友问我的博客是否加入了广告联盟，我表示“我不太想搞这些”，于是他问了我一个问题： 那怎么变现？ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-23 | [HK01专访 &#124; Apple Swift Student Challenge 2026](https://efan404.com/talks/hk01-wwdc-winner/) | 这次 HK01 专访围绕 Apple Swift Student Challenge 2026 与 SilverGuard 展开，分享了我从项目构思、功能取舍到产品表达的过程，也记录了我如何把技术实践延伸到对 AI 诈骗、用户体验与真实问题的持续思考。 |
-| 2026-04-22 | [工程师如何把多个 Coding Agent 真正带起来：一套比“开更多聊天窗口”更像工程流程的方法](https://www.ixiqin.com/2026/04/23/how-engineers-can-truly-bring-together-multiple-coding/) | 随着 Agent 的时代的到来和 AI Coding 工具的兴起，被 AI 冲击的最狠的软件工程领域也迎来一轮 […] |
-| 2026-04-22 | [猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat](https://7gugu.com/index.php/2026/04/23/%e7%8c%ab%e5%91%98%e5%a4%96-%e4%bd%b3%e4%b8%96%e6%b6%9b-%e6%b0%ae%e6%b0%94%e9%bb%91%e5%95%a4/) | 外观：深黑色 不透光 闻香：饼干 坚果 巧克力 口感：弱沙口感 味道：特种麦芽带来的黑巧克力的味道 总结：卖点 … 继续阅读 “猫员外 佳世涛 氮气黑啤 – Justout Nitro Stout Richkat” |
-| 2026-04-22 | [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/) | <script src="/assets/js/APlayer.min.js" cla |
-| 2026-04-22 | [「离开的理由」 vs 「留下的意义」](https://blog.solazy.me/20260422/) | 今天又来了一个很有趣的职场话题 |
-| 2026-04-22 | [PeekDesktop - 微软副总开源工具，居然将 Mac “最小化桌面”功能抄进 Windows！](https://www.iplaysoft.com/peekdesktop.html) | 如果你用过苹果的 macOS 系统，那么很可能会被它一些独有的小功能“种草”。比如按 空格键 快速预览文件的 QuickLook 功能非常好用，于是就有了「 Seer 」将此移植到 Windows。 而还有个特性，在 Mac 桌面 壁纸 空白处点击鼠标左键，所有窗口嗖一下全收起来 (最小化)，再点一… |
-| 2026-04-22 | [emacs-用elfeed查看miniflux内容](https://blog.prayhand13013.top/20260422T203959--emacs-用elfeed查看miniflux内容__blog.html) |  |
-| 2026-04-22 | [Polkadot 的 Existential Deposit 机制错在哪里](https://smallyu.net/2026/04/22/Polkdot%E7%9A%84Existential-Deposit%E6%9C%BA%E5%88%B6%E9%94%99%E5%9C%A8%E5%93%AA%E9%87%8C/) | Polkadot 有一个叫 <a |
-| 2026-04-22 | [Win11暂停系统更新](https://blog.wo0ow.com/60525.html) | 记录下暂停Win11的系统更新的方法。 |
-| 2026-04-22 | [Ventoy 多合一启动盘制作工具神器 - 将多个系统 Win/PE/Linux 镜像装在1个U盘里](https://www.iplaysoft.com/ventoy.html) | 最近很多操作系统都纷纷发布了新版本，比如 Windows 11 、 Ubuntu 、 Debian 、 Deepin 、 优麒麟 、 CentOS 、 Fedora 、 PVE 、 WinPE 等等，对喜欢玩系统的人来说绝对是盛宴。 不过一般用 Rufus 等工具，一个 U 盘 往往只能制作成一个系… |
-| 2026-04-22 | [Vibe Coding 实现本地模型 Token 自由 IntelliJ IDEA + LM Studio + LM Link + Continue](https://blog.renfei.net/posts/1626402130325676139) | 使用 LM Studio + LM Link + Continue 插件，在 IntelliJ IDEA 中接入本地大模型，实现无需 API Key 的 AI 编程环境。基于 RTX 2080 Ti 和 CUDA 推理，运行 Qwen3.5-27B 模型，打造属于自己的本地 AI 助手，实现真正的… |
-| 2026-04-22 | [狐蒂云如何？](https://www.evan.xin/4938/) | 这是4月10日给狐蒂云负责人提的一个需求，当时只是随口一说。因为我发现狐蒂云发布的通知基本都是按主机区来发的， […] |
-| 2026-04-22 | [善意是最昂贵的人性皮试](https://mobius.blog/22922.html) | 最近看到一个新闻： 一个高三的女学生，找学校门口的麻辣烫阿姨借手机，说自己要进行网上考试。这个阿姨本身就是做学 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
