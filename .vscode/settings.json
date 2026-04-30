@@ -134,6 +134,9 @@
   "accessibility.voice.speechTimeout": 10000,
   "accessibility.voice.ignoreCodeBlocks": true,
 
+  // copilot-chat 相关的 Accessibility 设定
+  "git.addAICoAuthor": "off",
+
   // Live Preview
   "livePreview.autoRefreshPreview": "On Changes to Saved Files",
   "chat.mcp.access": "all",
