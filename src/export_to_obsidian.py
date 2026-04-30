@@ -92,9 +92,7 @@ class IndexWriter:
     def _format_run_block(output_title: str, content: str) -> str:
         """格式化单次导出块。"""
         normalized_content = content.strip()
-        if normalized_content:
-            return f"### {output_title}\n\n{normalized_content}"
-        return f"### {output_title}\n"
+        return normalized_content
 
     @classmethod
     def _merge_section(
@@ -120,11 +118,14 @@ class IndexWriter:
         for section in normalized_sections:
             if section.startswith(f"{heading}\n") or section == heading:
                 found = True
-                merged_sections.append(f"{section.rstrip()}\n\n{run_block}")
+                if run_block:
+                    merged_sections.append(f"{section.rstrip()}\n\n{run_block}")
+                else:
+                    merged_sections.append(section.rstrip())
             else:
                 merged_sections.append(section.rstrip())
 
-        if not found:
+        if not found and run_block:
             merged_sections.append(f"{heading}\n\n{run_block}")
 
         return "\n\n".join(part for part in merged_sections if part).strip()

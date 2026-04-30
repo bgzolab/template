@@ -67,7 +67,10 @@ eto --index-file <path> <command> [options]
 `--index-file` is a top-level option. Put it before the subcommand.
 
 If you do not use `--index-file`, the index is printed to the terminal.
+
 If you use `--index-file`, the index is written to one Markdown file.
+
+Each module is stored under one second-level heading, and repeated exports for the same module are appended in order under that same heading.
 
 ## Command examples
 
@@ -142,14 +145,10 @@ Example output:
 ```markdown
 ## zhihu
 
-### export index
-
 - [[~zhihu-entry-1|First saved item]]
 - [[~zhihu-entry-2|Second saved item]]
 
 ## bilibili
-
-### export index
 
 - [[~BV1xxxxxx|One saved video]]
 ```

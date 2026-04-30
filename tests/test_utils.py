@@ -69,12 +69,9 @@ def test_index_writer_flush_file(tmp_path):
 
     assert target.read_text(encoding="utf-8") == (
         "## zhihu\n\n"
-        "### 导出index\n\n"
         "- [[zhihu-1|标题1]]\n\n"
-        "### 导出index\n\n"
         "- [[zhihu-2|标题3]]\n\n"
         "## bilibili\n\n"
-        "### 导出index\n\n"
         "- [[bilibili-1|标题2]]\n"
     )
 
