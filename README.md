@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-04-30 | [我（不）想让 AI 帮我做](https://www.geedea.pro/article/no-ai-for-my-joy/) | 标题之所以没有使用 LLM 这个在如今大多数情况下更准确的词，是因为我想讨论更宽泛的技术。帮人做事的不只是大语言模型，对于个别人来说，还有可能是文生图模型、图像视觉模型等等。所以我使用了 AI 这个词。 如果你读过本博客其他有关 AI 的文章，你会发现我大部分时候都没什么好话说。我为什么不喜欢这门… |
 | 2026-04-30 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.22 of the project |
 | 2026-04-30 | [Chris Sawyer's Locomotion updated](https://macsourceports.com/game/locomotion) | The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.04 of the project |
 | 2026-04-30 | [怎样才算是不惮以最坏的恶意来推测中国人？](https://mobius.blog/23338.html) | 这两天在网上看到见趣事，但说起来又挺可悲。 大致是一个学生在学校没有拿到当天的作业试卷，在回家的路上，他想让自 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
