@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-02 | [【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/) | 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。 |
 | 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
 | 2026-05-01 | [五一流水账 0501](https://blog.solazy.me/20260501/) | 难得的小长假！ |
 | 2026-05-01 | [报道称，马克·扎克伯格表示，人工智能成本是导致公司裁员8000人的原因之一](https://blog.rustfisher.com/news/meta-mark-zuckerberg-says-ai-costs-contributed-to-layoffs-of-8000-staffers-report-says-20260501/) | 据 《华尔街日报》 报道，Meta 首席执行官马克·扎克伯格在周四的一次内部会议录音中承认，该公司在人工智能方面的支出导致了 Meta 的裁员。该录音详细介绍了该公司的资本支出和人工智能投资情况 |
