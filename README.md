@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-01 | [无法消失的现代人](https://mobius.blog/23376.html) | 现代人不是无法消失，或许是从未真正出现过。 此时此刻，我又是在咖啡厅码字，大概是节假日前的最后一天。咖啡厅明显 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-04-30 | [当 AI 什么都能做，人还剩下什么？](https://www.linggandianbo.com/newsletter-121/) | 从关系经济、社会智能、AGI 时间线到文学与制度防守，理解机器越强之后，人为什么反而不能缺席｜灵感电波 #121 |
 | 2026-04-30 | [深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用](https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/) | 本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Mot… |
 | 2026-04-30 | [QoderWake：把 Agent 做成“同事”的那条路](https://www.evan.xin/4948/) | 我最近看 QoderWake 的介绍时，一个感觉很强：它不是在卖“更聪明的模型”，而是在把 AI 放进组织里最 […] |
 | 2026-04-30 | [再见面板：Debian构建WordPress](https://www.xiaozonglin.cn/build-wordpress-with-pure-commandline/) | 任务要求：使用Debian纯命令行构建自己的WordPress网站，并通过一些方法支持http://linli […] 再见面板：Debian构建WordPress 最先出现在 林林杂语 。 |
@@ -107,20 +109,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-24 | [深入 Open Agent SDK（二）：34 个工具的背后——工具协议、三层架构与自定义扩展](https://gptkit.eth.limo/6B7CBA30-B740-4FC7-A5D8-2A89AA4D7D36/) | 本文是「深入 Open Agent SDK (Swift)」系列第二篇。 系列目录见这里 。 上一篇分析了 Agent Loop 的运转机制，其中有一个环节是"执行工具"——LLM 说"我要调 Bash"，SDK 就真的起一个进程跑命令。但这背后的工具系统远不止"调个函数"那么简单。34 个内置工具… |
 | 2026-04-24 | [Open Agent SDK (Swift)：用原生 Swift 构建 AI Agent 应用](https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/) | 如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。… |
 | 2026-04-24 | [因为恐惧被关系伤害，所以选择独自面对](https://mobius.blog/23145.html) | 前段时间，因为有朋友在《自卑的人在恐惧什么？》下评论道：因为恐惧被关系伤害，所以选择独自面对。我觉得这开启了一 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-23 | [看不见的底层机制](https://www.linggandianbo.com/newsletter-120/) | 从 Price’s Law、大脑能量和拖延心理，到 GPS 与 AI 文件系统，理解那些悄悄决定结果的系统｜灵感电波 #120 |
-| 2026-04-23 | [终结竞争：从护城河到商业终局的实战指南](https://www.meettea.com/business-moat-endgame.html) | 从护城河到商业终局的实战指南：彼得·蒂尔框架 + AI 时代的商业重构 |
-| 2026-04-23 | [独立开发者的英国公司报税（2026）](https://www.meettea.com/uk-company-tax-2026.html) | 给独立开发者与小微企业的英国公司报税实战指南：CT600、年度账目、Dormant 零申报，从流水归类到提交全流程。 |
-| 2026-04-23 | [从不怀念少年时](https://blog.solazy.me/20260423/) | 今天晚上和一个朋友聊天，突然聊起这个话题 |
-| 2026-04-23 | [一些科幻故事的灵感碎片](https://haoluobo.com/2026/04/%e4%b8%80%e4%ba%9b%e7%a7%91%e5%b9%bb%e6%95%85%e4%ba%8b%e7%9a%84%e7%81%b5%e6%84%9f%e7%a2%8e%e7%89%87/) | Claude 号称出了个危险的大模型，这个模型甚至学会了“欺骗”。虽感觉营销多过实际，不过近年来大模型确实进展 […] |
-| 2026-04-23 | [RackNerd 性价比 VPS 服务器特价促销中！终身续费同价！](https://www.iplaysoft.com/p/racknerd) | 很多人都需要用到「国外的 VPS 主机」，省钱省事，用来学习 Linux、编程开发、跑外贸网站、博客，或者用 Docker 自建网盘或各种各样的私有网络服务都非常实用。 最近除推荐的 DMIT、板佤工高端 CN2 GIA 线路、HostDare、VirMarch 等 VPS 服务器主机补货之外，不断… |
-| 2026-04-23 | [Codex高效Coding配置优化指南](https://jetyu.me/post/codex-config-guide.html) | 通过合理配置 Codex 的 model、上下文窗口与记忆能力，提升 Coding 效率。 |
-| 2026-04-23 | [为什么现在年代剧里的招牌，像是刚挂上去的？](https://www.iyeslogo.com/design-in-years-television/) | 年代剧招牌穿帮现象背后反映了影视创作中的多重问题 |
-| 2026-04-23 | [吃细糠](https://kaix.in/2026/0423/) | 之前提到过店里空间布局的问题导致我最近经常吃外卖。虽然 不想给差评 ，但是不得不说，实在不好吃。昨天点了小鸡炖蘑菇、锅包肉、回锅肉、干煸花菜。严格点评价就全都不合格。蘑菇炖鸡竟然没有鲜味这最奇怪，好在可以自我安慰说至少没加「科技」。锅包肉，哎呀，不禁回想起二十年多前刚工作，下了班和太太一起下馆子的时… |
-| 2026-04-23 | [Memos: 一晃 001](https://blog.yasking.org/a/1776934616.html) | （一）Voyager 1 NASA 在 2026 年 4 月 17 日 关闭了 Voyager 1 的一个仪器（LECP），官方说这样能再争取“大约一年的缓冲”。 浪漫时刻：当时 Voyager 1 已经完成 … |
-| 2026-04-23 | [核心训练和腹肌训练是一个东西吗？](https://www.geedea.pro/article/abs-vs-core/) | 读者们好，今天是世界读书日，所以我打算来讨论如何锻炼身体。 是的，我就喜欢做不合时宜的事情 。本来想说在世界体育运动日谈读书，但发现这个节日在四月六日，已经错过了，那就留到明年再说吧。 不久前我还会和同室讨论健身话题（后来发现我们两个的观点差异巨大，而对方在某种程度上根本无法双向交流），有一次他问我… |
-| 2026-04-23 | [emacs-用tramp-rpc加速tramp](https://blog.prayhand13013.top/20260423T105201--emacs-用tramp-rpc加速tramp__blog.html) |  |
-| 2026-04-23 | [博客需要追求变现吗？](https://mobius.blog/22956.html) | 前几天，一个朋友问我的博客是否加入了广告联盟，我表示“我不太想搞这些”，于是他问了我一个问题： 那怎么变现？ […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-23 | [HK01专访 &#124; Apple Swift Student Challenge 2026](https://efan404.com/talks/hk01-wwdc-winner/) | 这次 HK01 专访围绕 Apple Swift Student Challenge 2026 与 SilverGuard 展开，分享了我从项目构思、功能取舍到产品表达的过程，也记录了我如何把技术实践延伸到对 AI 诈骗、用户体验与真实问题的持续思考。 |
 
 ## Vibe Coding
 

@@ -1,0 +1,140 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "无法消失的现代人",
+    "url": "https://mobius.blog/23376.html",
+    "date": "2026-05-01T01:00:00Z",
+    "description": "现代人不是无法消失，或许是从未真正出现过。 此时此刻，我又是在咖啡厅码字，大概是节假日前的最后一天。咖啡厅明显 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "当 AI 什么都能做，人还剩下什么？",
+    "url": "https://www.linggandianbo.com/newsletter-121/",
+    "date": "2026-04-30T23:30:04Z",
+    "description": "从关系经济、社会智能、AGI 时间线到文学与制度防守，理解机器越强之后，人为什么反而不能缺席｜灵感电波 #121"
+  },
+  {
+    "title": "深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用",
+    "url": "https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/",
+    "date": "2026-04-30T18:22:07Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Motive ——的完整过程：从理解原有架构到实现替换，以及一路上踩过的坑。 Motive 是什么 Motive 是一个 macOS 原生的 AI Agent 桌面应用，用 SwiftUI 写的。它的核心交互是：用户输入 prompt → Agent 在后台跑 Agent Loop（调工具、读文件、执行命令）→ 流式输出结果到 UI。 在集成 SDK 之前，Motive 的 Agent 后端长这样： Motive App (SwiftUI) └── OpenCodeBridge (actor) ├── OpenCodeServer — 启动外部 opencode 二进制进程 (opencode serve) ├── SSEClient — 通过 Server-Sent Events 接收流式事件 "
+  },
+  {
+    "title": "QoderWake：把 Agent 做成“同事”的那条路",
+    "url": "https://www.evan.xin/4948/",
+    "date": "2026-04-30T15:58:33Z",
+    "description": "我最近看 QoderWake 的介绍时，一个感觉很强：它不是在卖“更聪明的模型”，而是在把 AI 放进组织里最 […]"
+  },
+  {
+    "title": "再见面板：Debian构建WordPress",
+    "url": "https://www.xiaozonglin.cn/build-wordpress-with-pure-commandline/",
+    "date": "2026-04-30T15:42:30Z",
+    "description": "任务要求：使用Debian纯命令行构建自己的WordPress网站，并通过一些方法支持http://linli […] 再见面板：Debian构建WordPress 最先出现在 林林杂语 。"
+  },
+  {
+    "title": "Album#37 - Scenery(シーナリィ)",
+    "url": "https://taxodium.ink/album-37.html",
+    "date": "2026-04-30T14:00:00Z",
+    "description": "Album#37 Scenery(シーナリィ) 图1 《Scenery(シーナリィ)》専輯封面 专辑信息 专辑名称： Scenery (シーナリィ) 歌手： 福居良 (Ryo Fukui) 年份： 1967-01-01 风格： 爵士 (Jazz)、鋼琴 时长： 41:20 福居(ふくい)良(りょう) (Ryo Fukui) 是我很喜欢的一个日本爵士乐鋼琴演奏家，最开始知道他是隨机聴到了他的 My Back Pages (Live) (出自専輯 Live at Nika )，這首曲子長達 18:23，一开始是低音提琴的獨奏，聲音低沉，聴不出什麽旋律，快 7:30 的時候出現掌聲和琴聲，大概是福居良上場了，接著架子鼓也就位，开始了精彩的即興，气氛一下子就明亮了起來，我也就此愛上了這首曲子，知道了福居良。 My Back Pages 本身是 Bob Dylan 的一首歌，副歌歌詞是 \"Ah, but I was so much older then, I'm younger than that now.\"，福居良也很好把歌詞的含義演绎了出來，副歌的旋律在曲子裡反覆地出現，也是我很喜歡的一段旋"
+  },
+  {
+    "title": "我（不）想让 AI 帮我做",
+    "url": "https://www.geedea.pro/article/no-ai-for-my-joy/",
+    "date": "2026-04-30T09:07:12Z",
+    "description": "标题之所以没有使用 LLM 这个在如今大多数情况下更准确的词，是因为我想讨论更宽泛的技术。帮人做事的不只是大语言模型，对于个别人来说，还有可能是文生图模型、图像视觉模型等等。所以我使用了 AI 这个词。 如果你读过本博客其他有关 AI 的文章，你会发现我大部分时候都没什么好话说。我为什么不喜欢这门 不少人都相信即将翻天覆地地改变世界 的技术呢？我就从我最熟悉的领域说起吧。编程，也正是如今受 LLM 影响最大的技能之一，是我从小学五年级就开始做的事情。我喜欢编程，一开始是因为我喜欢创造的感觉，我还记得我写第一个易语言程序的时候（很不幸，这的确是我的启蒙编程语言），我把 UI 拼成自己喜欢的样子时有多高兴。后来，我意识到自己代码能力太弱，那时的我连分支和循环结构都不知道是什么。 我仍然喜欢创造，但我很快迷上了另一项可以称作是智识锻炼的活动——写代码本身。我喜欢用代码让机器做我想让它做的事，我喜欢思考编程语言和自然语言的关系，我总是在思考什么样的代码是好的代码。可如今，当我放下 Bob 大叔写的《代码整洁之道》时，我叹息。函数体里的代码应该位于同一抽象层上，函数应该简短，一个文件的长度不应该"
+  },
+  {
+    "title": "Plants vs. Zombies updated",
+    "url": "https://macsourceports.com/game/pvz",
+    "date": "2026-04-30T04:49:46Z",
+    "description": "The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.22 of the project"
+  },
+  {
+    "title": "Chris Sawyer's Locomotion updated",
+    "url": "https://macsourceports.com/game/locomotion",
+    "date": "2026-04-30T03:05:06Z",
+    "description": "The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.04 of the project"
+  },
+  {
+    "title": "怎样才算是不惮以最坏的恶意来推测中国人？",
+    "url": "https://mobius.blog/23338.html",
+    "date": "2026-04-30T01:00:00Z",
+    "description": "这两天在网上看到见趣事，但说起来又挺可悲。 大致是一个学生在学校没有拿到当天的作业试卷，在回家的路上，他想让自 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "人工智能支出创下纪录，且看不到尽头 - nytimes",
+    "url": "https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/",
+    "date": "2026-04-30T00:44:59Z",
+    "description": "谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出"
+  },
+  {
+    "title": "我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起",
+    "url": "https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/",
+    "date": "2026-04-30T00:25:11Z",
+    "description": "这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社区、让个人得到成长。"
+  },
+  {
+    "title": "Memos #2026-04-29",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-04-30T00:00:00Z",
+    "description": "00:41 我的人生总是阶段性的，期待着一个又一个节点的到来，而做不到享受当下。"
+  },
+  {
+    "title": "Warp 开源了！高性能现代化设计的跨平台 AI 终端工具 (视频使用教程)",
+    "url": "https://www.iplaysoft.com/warp.html",
+    "date": "2026-04-29T20:58:20Z",
+    "description": "你上一次认真把玩 命令行终端 软件是什么时候？估计大部分人的答案都是：不折腾，能用就行。毕竟终端这玩意儿，从 70 年代到现在，核心交互就没变过：一个黑框框，敲命令，看输出。 而最近一款 Rust 开发的高性能、 原生 AI 驱动的现代化 SSH 终端软件 Warp ，突然宣布 开源 ！GitHub 星标一夜冲到 3 万+，评论区一片欢腾！Warp 到底做了什么，能让一帮程序员如此激动？简单说，它不仅把终端从能用变成“好看+好用”，甚至让人遐想到未来的终端长什么样…… 「 前往查看原文.... 」 异次元还有这些值得一看： 还用 XShell？这款跨平台 SSH 终端工具 iShell Pro 更好用！支持 SFTP 集成 AI Xterminal - 集成 AI 免费跨平台 SSH 终端工具 (服务器文件管理 / 状态监控 / AI 命令解释补全) LNMP 一键安装包 - 简单快速 Linux 服务器建站 / 安装配置 Nginx PHP MySQL 脚本 PuTTY - Windows 下超经典知名的免费 SSH 客户端工具软件 异次元首页 | 微信公众号 | 关注微博 | 软件"
+  },
+  {
+    "title": "PVE 9.1 LXC 显卡共享: 部署Steam Headless",
+    "url": "https://brain-zhang.github.io/blog/2026/04/29/pve-9-dot-1-lxc-xian-qia-gong-xiang-bu-shu-steam-headless/",
+    "date": "2026-04-29T08:48:46Z",
+    "description": "这是一种非常折腾的做法，目前来看这么折腾的人真不多; 最终实现的效果就是在PVE环境中，用数个LXC容器将一张消费级GPU (我是一张RTX 3060 12GB) 切分到不同的Linux系统实例中，同时这些实例还能共享显卡的算力和显存；同时，最妙的 —- 这张显卡的算力和显存是动态分配的； 这比显卡直通，比老黄专业卡的虚拟化还爽； 具体配置请参考前一篇文章；这种方法肯定是老黄不愿意看到的，但是折腾人士乐此不疲； 目前我的一张3060 12GB上面运行了六台LXC容器共享，里面的服务有: Ollama运行了一干小尺寸模型进行测试，例如gemma 4 e4b; 有数个FFmpeg流媒体压制 有数个CUDA实现的加密算法测试 当然，还有今天我们想做的，跑一个Linux Steam 串流服务器；这种做法的原理是：PVE宿主机 –(挂载.so文件和/dev设备)–> LXC容器 –(Docker device mapping)–> Docker容器。 具体搭建步骤参考了这篇文章 https://zheteng.pages.dev/posts/2024/headless-steam-in-lxc-"
+  },
+  {
+    "title": "有了Ai，出门都不用担心忘了关门",
+    "url": "https://krya.com/post/tools/",
+    "date": "2026-04-29T08:00:00Z",
+    "description": "出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个\"百宝工具箱\"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床开始 我自己写博客，有时候会用到 Markdown 去插入图片。每次用别人的图床，担忧很多；用自己的阿里云OSS 客户端，又觉得上传方式太过繁琐；始终没有Web方案信手拈来的爽快。 现在有 Hermes Agent，我想物尽其用，让它帮我做了一个图床，让我在手机上也能上传图片。 实现的方式很简单： 第一步，提出我的需求：利用阿里云 OSS做一个私有图床，带密码验证，防止滥用。AI 给我推荐用阿里云函数作为后端方案，前端随便放在哪里都行。 我只给它做了一件事情：提供阿里云OSS 的 API. 剩下的工作就是让 AI 自己完成的。 刚好小米面向开发者发放的百亿Token，我领到了一点；顺便验证Mimo-v2.5-pro大模型的成色。指令发出后几分钟的时间内，它就给我做好了前后端的代码，并让我把后"
+  },
+  {
+    "title": "逆向京麦客户端提取京东聊天表情映射表",
+    "url": "https://lililib.github.io/%E9%80%86%E5%90%91%E4%BA%AC%E9%BA%A6%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%90%E5%8F%96%E4%BA%AC%E4%B8%9C%E8%81%8A%E5%A4%A9%E8%A1%A8%E6%83%85%E6%98%A0%E5%B0%84%E8%A1%A8/",
+    "date": "2026-04-29T07:30:00Z",
+    "description": "本文全部内容由Opus 4.7 技术总结生成 最近在做电商客服质检的项目,对接京东平台拉取客服和顾客的聊天记录,准备喂给 LLM 分析意图、打标签。跑起来看样本数据,发现消息文本里经常混着 #E-s38 、 #E-b07 、 #E-a10 这种奇怪的字符串。 一开始以为是乱码或者没处理干净的转义,仔细看才意识到这是京东自有的表情符号占位。最头疼的是,翻遍京东开放平台文档,压根没给映射表。"
+  },
+  {
+    "title": "独立博客，难在不够独立",
+    "url": "https://blog.solazy.me/20260429/",
+    "date": "2026-04-29T07:00:00Z",
+    "description": "前两天看到一个说独立博客难的话题，今天展开来说说我的想法"
+  },
+  {
+    "title": "Ronan Space Systems 当远古岩画，重写太空美学",
+    "url": "https://www.iyeslogo.com/ronan-space-systems/",
+    "date": "2026-04-29T02:09:15Z",
+    "description": "模糊、流动的视觉系统不仅承载品牌野心，更挑战航天领域固有审美范式，证明未来探索可从古老文明汲取力量。"
+  },
+  {
+    "title": "世界是一个巨大的 Yes/No",
+    "url": "https://mobius.blog/23324.html",
+    "date": "2026-04-29T01:00:00Z",
+    "description": "小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "DeepSeek优惠期延长至北京时间 2026/05/31 23:59",
+    "url": "https://blog.rustfisher.com/news/deepseek-price-date-20260429/",
+    "date": "2026-04-29T00:44:59Z",
+    "description": "当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59"
+  },
+  {
+    "title": "NVIDIA 推出 Nemotron 3 Nano Omni 模型",
+    "url": "https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/",
+    "date": "2026-04-29T00:00:59Z",
+    "description": "开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程"
+  }
+]
