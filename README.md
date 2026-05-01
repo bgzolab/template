@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-01 | [假期从折腾Obsidian开始](https://hux.ink/posts/obsidian-sync/) | 五一假期第一天，折腾升级 Obsidian。 我日常 PC 端用 Windows，移动端用 iOS。使用 Obsidian 时，由于苹果的封闭性，PC 与移动端的同步一直是个难题。很早以前我用过 Remotely Save 插件通过 Onedrive 同步，但它不太稳定，经常出 Bug。担心丢文件，… |
 | 2026-05-01 | [无法消失的现代人](https://mobius.blog/23376.html) | 现代人不是无法消失，或许是从未真正出现过。 此时此刻，我又是在咖啡厅码字，大概是节假日前的最后一天。咖啡厅明显 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-30 | [当 AI 什么都能做，人还剩下什么？](https://www.linggandianbo.com/newsletter-121/) | 从关系经济、社会智能、AGI 时间线到文学与制度防守，理解机器越强之后，人为什么反而不能缺席｜灵感电波 #121 |
 | 2026-04-30 | [深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用](https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/) | 本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Mot… |
