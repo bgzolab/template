@@ -28,6 +28,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-02 | [深入 SwiftWork（第 2 篇）：事件时间线——18 种事件的可视化与性能](https://gptkit.eth.limo/6EF0434F-164C-4AC4-8043-A9095CF12118/) | 本文是「深入 SwiftWork」系列第 2 篇。 系列目录见这里 。 第 1 篇讲了 AgentBridge 怎么把 SDK 的 AsyncStream 变成 [AgentEvent] 。这篇看 [AgentEvent] 变成什么——TimelineView 怎么渲染 18 种事件、怎么处理滚屏行… |
 | 2026-05-02 | [【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/) | 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。 |
 | 2026-05-02 | [童真易满 成人难欢](https://hux.ink/posts/tong-zhen-yi-man/) | 昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官… |
+| 2026-05-02 | [suede演唱会](https://www.aowugong.top/posts/blog-2026-04-25/) | https://cdn.aowugong.top/gh/howie110/obsidian_img/cdnimg/fdd1ce95534d75e9cb1d4a500d783e4e.jpg |
 | 2026-05-02 | [Memos #2026-05-01](https://www.taober.blog/memos) | 13:25 五一劳动节，深圳开火第一顿：酸菜萝卜丝炒吊龙！ |
 | 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
 | 2026-05-01 | [五一流水账 0501](https://blog.solazy.me/20260501/) | 难得的小长假！ |
