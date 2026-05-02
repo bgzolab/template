@@ -103,6 +103,7 @@ def sync_bangumi_command(
         list(sync_targets),
         dry_run=dry_run,
         client=client,
+        log=click.echo,
     )
     click.echo(render_sync_summary(run_result))
     if report_output is not None:

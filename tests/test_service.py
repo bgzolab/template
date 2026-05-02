@@ -57,6 +57,26 @@ def test_run_sync_marks_dry_run_updates_without_writing(sample_archive, monkeypa
     assert client.upserts == []
 
 
+def test_run_sync_emits_progress_logs_for_low_confidence_matches(sample_archive, monkeypatch) -> None:
+    monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
+    client = FakeBangumiClient(subjects=[BangumiSubject(123, "海贼王 特别篇", None)])
+    logs: list[str] = []
+
+    result = run_sync(
+        sample_archive,
+        [SyncTarget("DONE", "done")],
+        dry_run=True,
+        client=client,
+        log=logs.append,
+    )
+
+    assert result.counts["skipped"] == 1
+    assert any("[start] loaded 1 candidate(s)" in message for message in logs)
+    assert any("Bangumi returned 1 candidate(s)" in message for message in logs)
+    assert any("low confidence candidates: 123:海贼王 特别篇" in message for message in logs)
+    assert any(message.startswith("[done] ") for message in logs)
+
+
 def test_run_sync_skips_already_synced_items(sample_archive, monkeypatch) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
     client = FakeBangumiClient(

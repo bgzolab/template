@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import Callable
 
 from ..constants import STATE_TO_BANGUMI_TYPE
 from ..models import SyncItemResult, SyncRunResult, SyncTarget
@@ -16,16 +17,33 @@ def run_sync(
     *,
     dry_run: bool,
     client: BangumiClient,
+    log: Callable[[str], None] | None = None,
 ) -> SyncRunResult:
     candidates = load_sync_candidates(archive_path, sync_targets)
     run_result = SyncRunResult(archive_path=archive_path, dry_run=dry_run)
+    emit = log or (lambda _message: None)
 
-    for candidate in candidates:
+    emit(f"[start] archive={archive_path} dry_run={dry_run}")
+    emit(f"[start] loaded {len(candidates)} candidate(s)")
+
+    for index, candidate in enumerate(candidates, start=1):
         search_request = build_search_request(candidate)
+        candidate_label = format_candidate_label(candidate)
+        emit(
+            f"[item {index}/{len(candidates)}] searching {candidate_label} "
+            f"with keyword={search_request.keyword!r}"
+        )
         try:
             subjects = client.search_subjects(search_request)
+            emit(
+                f"[item {index}/{len(candidates)}] Bangumi returned {len(subjects)} candidate(s)"
+            )
             match = match_search_result(search_request, subjects)
             if match.status != "matched":
+                emit(
+                    f"[item {index}/{len(candidates)}] skip {candidate_label}: "
+                    f"{describe_match_status(match.status, match.candidate_subjects)}"
+                )
                 run_result.item_results.append(
                     SyncItemResult(
                         candidate=candidate,
@@ -39,6 +57,10 @@ def run_sync(
             target_type = STATE_TO_BANGUMI_TYPE[candidate.target_state]
             current_type = extract_collection_type(current_collection)
             if current_type == target_type:
+                emit(
+                    f"[item {index}/{len(candidates)}] skip {candidate_label}: already synced "
+                    f"to state={candidate.target_state} subject_id={match.subject.subject_id}"
+                )
                 run_result.item_results.append(
                     SyncItemResult(
                         candidate=candidate,
@@ -51,6 +73,10 @@ def run_sync(
                 continue
 
             if dry_run:
+                emit(
+                    f"[item {index}/{len(candidates)}] would update {candidate_label} -> "
+                    f"subject_id={match.subject.subject_id} state={candidate.target_state}"
+                )
                 run_result.item_results.append(
                     SyncItemResult(
                         candidate=candidate,
@@ -63,6 +89,10 @@ def run_sync(
                 continue
 
             client.upsert_subject_collection(match.subject.subject_id, candidate.target_state)
+            emit(
+                f"[item {index}/{len(candidates)}] updated {candidate_label} -> "
+                f"subject_id={match.subject.subject_id} state={candidate.target_state}"
+            )
             run_result.item_results.append(
                 SyncItemResult(
                     candidate=candidate,
@@ -73,6 +103,7 @@ def run_sync(
                 )
             )
         except BangumiClientError as exc:
+            emit(f"[item {index}/{len(candidates)}] failed {candidate_label}: {exc}")
             run_result.item_results.append(
                 SyncItemResult(
                     candidate=candidate,
@@ -81,7 +112,41 @@ def run_sync(
                 )
             )
 
+    emit(
+        "[done] "
+        f"updated={run_result.counts['updated']} "
+        f"would_update={run_result.counts['would_update']} "
+        f"skipped={run_result.counts['skipped']} "
+        f"failed={run_result.counts['failed']}"
+    )
     return run_result
+
+
+def format_candidate_label(item: SyncItemResult | SyncTarget | object) -> str:
+    candidate = item.candidate if isinstance(item, SyncItemResult) else item
+    name = getattr(candidate, "name", None) or getattr(candidate, "record_id", None) or "<unknown>"
+    source_table = getattr(candidate, "source_table", "<unknown>")
+    target_state = getattr(candidate, "target_state", "<unknown>")
+    return f"{source_table}:{name} -> {target_state}"
+
+
+def describe_match_status(status: str, subjects: list[object]) -> str:
+    if status == "skipped_no_result":
+        return "no Bangumi subject matched the search keyword"
+    if status == "skipped_ambiguous":
+        return f"multiple exact matches: {format_subjects(subjects)}"
+    if status == "skipped_low_confidence":
+        return f"low confidence candidates: {format_subjects(subjects)}"
+    return status
+
+
+def format_subjects(subjects: list[object]) -> str:
+    if not subjects:
+        return "none"
+    return ", ".join(
+        f"{getattr(subject, 'subject_id', '?')}:{getattr(subject, 'name', '?')}"
+        for subject in subjects[:5]
+    )
 
 
 def extract_collection_type(collection: dict[str, object] | None) -> int | None:
