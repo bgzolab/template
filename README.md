@@ -7,37 +7,24 @@
 
 ![Playground Name Screen Shot](https://img.bgzo.cc/2025/202508021439235.JPG)
 
-# Playground
+# Venera Parser for Bangumi
 
-Here is a template repository for my projects. It contains a basic structure and some common files that I use in all my projects. You can use this template to create your own projects by forking it or cloning it.
-
-## Getting Started
-
-Before you start, make sure you have Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
-
-Add the remote repository:
-
-```shell
-git remote add origin git@github.com:bGZo/playground.git
-```
-
-Fetch the `template` branch from the remote repository:
-
-```shell
-git fetch origin template
-```
-
-Merge the `template` branch into your local repository to get started:
-
-```shell
-git merge origin/template --allow-unrelated-histories
-```
+A script to parse the data exported from Bangumi's Venera app, which includes users' watching history, ratings, collections, and more. The parsed data can be used for various purposes such as data analysis, visualization, or migration to other platforms.
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Parser
 
-_For more examples, please refer to the [Documentation](https://github.com/bGZo/playground)_
+```shell
+# 查看摘要
+python3 parser.py summary 20575-2273.venera
+
+# 导出完整 JSON
+python3 parser.py dump 20575-2273.venera --include-rows --pretty -o venera_dump.json
+
+# 连 cookie.db 一起解析
+# 在上面的命令后追加 --include-cookie-db
+```
 
 <!--
 ## Vibe Coding
