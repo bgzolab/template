@@ -21,7 +21,13 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-02 | [深入 SwiftWork（第 1 篇）：SDK 集成层——把 AsyncStream 接进 SwiftUI](https://gptkit.eth.limo/B0266B1F-C82E-4C98-A3F3-C2A87BF61434/) | 本文是「深入 SwiftWork」系列第 1 篇。 系列目录见这里 。 第 0 篇画了全景图—— AsyncStream → AgentBridge → EventMapper → SwiftUI 。这篇拆开中间两层：AgentBridge 和 EventMapper，看它们怎么把 SDK 的消息流… |
+| 2026-05-02 | [深入 SwiftWork（第 0 篇）：用 SwiftUI 构建一个 Agent 可视化工作台](https://gptkit.eth.limo/7914B020-3118-44B1-B30F-458B99DB49AE/) | 本文是「深入 SwiftWork」系列第 0 篇。 系列目录见这里 。 前面七篇文章加上番外篇，我们把 Open Agent SDK 的内部机制翻了个底朝天——Agent Loop、工具系统、MCP 集成、多 Agent 协作、会话持久化、多 LLM 支持。番外篇还把 SDK 塞进了一个 macOS… |
+| 2026-05-02 | [深入 SwiftWork（第 4 篇）：数据层与服务——SwiftData、状态恢复与 Markdown 渲染](https://gptkit.eth.limo/62F3FC56-7EC1-4BDE-AC7C-74727C594796/) | 本文是「深入 SwiftWork」系列第 4 篇（完结篇）。 系列目录见这里 。 前三篇讲了事件怎么从 SDK 流到 UI、时间线怎么渲染、工具卡片怎么可视化。这篇收尾，看 SwiftWork 的基础设施——数据怎么存、状态怎么恢复、Markdown 怎么渲染、代码怎么高亮、API Key 怎么管。… |
+| 2026-05-02 | [深入 SwiftWork（第 3 篇）：Tool Card——可扩展的工具可视化系统](https://gptkit.eth.limo/80C258D2-E57E-44CE-96DF-68D8E70B8343/) | 本文是「深入 SwiftWork」系列第 3 篇。 系列目录见这里 。 前两篇讲了事件怎么从 SDK 流到 UI。这篇聚焦其中一类事件——工具调用的可视化。 Agent 调工具是 Agent 应用里最频繁的操作。一次典型任务可能调用二三十次工具——读文件、写文件、执行命令、搜索代码。如果每次工具调用… |
+| 2026-05-02 | [深入 SwiftWork（第 2 篇）：事件时间线——18 种事件的可视化与性能](https://gptkit.eth.limo/6EF0434F-164C-4AC4-8043-A9095CF12118/) | 本文是「深入 SwiftWork」系列第 2 篇。 系列目录见这里 。 第 1 篇讲了 AgentBridge 怎么把 SDK 的 AsyncStream 变成 [AgentEvent] 。这篇看 [AgentEvent] 变成什么——TimelineView 怎么渲染 18 种事件、怎么处理滚屏行… |
 | 2026-05-02 | [【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/) | 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。 |
+| 2026-05-02 | [童真易满 成人难欢](https://hux.ink/posts/tong-zhen-yi-man/) | 昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官… |
 | 2026-05-02 | [Memos #2026-05-01](https://www.taober.blog/memos) | 13:25 五一劳动节，深圳开火第一顿：酸菜萝卜丝炒吊龙！ |
 | 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
 | 2026-05-01 | [五一流水账 0501](https://blog.solazy.me/20260501/) | 难得的小长假！ |

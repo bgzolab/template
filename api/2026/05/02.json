@@ -6,10 +6,46 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "深入 SwiftWork（第 1 篇）：SDK 集成层——把 AsyncStream 接进 SwiftUI",
+    "url": "https://gptkit.eth.limo/B0266B1F-C82E-4C98-A3F3-C2A87BF61434/",
+    "date": "2026-05-02T04:43:20Z",
+    "description": "本文是「深入 SwiftWork」系列第 1 篇。 系列目录见这里 。 第 0 篇画了全景图—— AsyncStream → AgentBridge → EventMapper → SwiftUI 。这篇拆开中间两层：AgentBridge 和 EventMapper，看它们怎么把 SDK 的消息流变成 SwiftUI 可以直接消费的事件列表。 先说结论：AgentBridge 是整个应用里最复杂的单个文件。它同时做了五件事——消费 Stream、映射事件、配对工具内容、持久化数据、管理内存。每一件都不难，但五件叠在一起要处理不少状态。这篇文章逐个讲清楚。 从 SDK 到 AgentBridge：接口在哪 回顾一下 SDK 提供的核心接口（第 1 篇讲过的）： // SDK 的 Agent.stream() 返回 AsyncStream let agent = createAgent(options: ...) for await message in agent.stream(\"hello\") { switch message { case .assistant(let data):"
+  },
+  {
+    "title": "深入 SwiftWork（第 0 篇）：用 SwiftUI 构建一个 Agent 可视化工作台",
+    "url": "https://gptkit.eth.limo/7914B020-3118-44B1-B30F-458B99DB49AE/",
+    "date": "2026-05-02T04:43:20Z",
+    "description": "本文是「深入 SwiftWork」系列第 0 篇。 系列目录见这里 。 前面七篇文章加上番外篇，我们把 Open Agent SDK 的内部机制翻了个底朝天——Agent Loop、工具系统、MCP 集成、多 Agent 协作、会话持久化、多 LLM 支持。番外篇还把 SDK 塞进了一个 macOS 原生应用 Motive 里跑了跑。 但 Motive 只是一个替换后端的实验。真正的问题是： 拿到 SDK 之后，怎么从零开始构建一个完整的 Agent 应用？ SDK 给了你 Agent 的\"大脑\"——但用户看到的不是 Agent Loop，而是一个界面。Agent 在调工具、读文件、执行命令的时候，用户需要知道它在干什么、进展如何、结果是什么。 这就是 SwiftWork 要解决的问题——一个 macOS 原生的 Agent 可视化工作台。 SwiftWork 是什么 SwiftWork 是一个 macOS 原生的 AI Agent 桌面应用。它做的事情用一句话概括： 让用户看到 Agent 正在做什么。 具体来说： 用户在输入框输入 prompt Agent 在后台跑 Agent L"
+  },
+  {
+    "title": "深入 SwiftWork（第 4 篇）：数据层与服务——SwiftData、状态恢复与 Markdown 渲染",
+    "url": "https://gptkit.eth.limo/62F3FC56-7EC1-4BDE-AC7C-74727C594796/",
+    "date": "2026-05-02T04:43:20Z",
+    "description": "本文是「深入 SwiftWork」系列第 4 篇（完结篇）。 系列目录见这里 。 前三篇讲了事件怎么从 SDK 流到 UI、时间线怎么渲染、工具卡片怎么可视化。这篇收尾，看 SwiftWork 的基础设施——数据怎么存、状态怎么恢复、Markdown 怎么渲染、代码怎么高亮、API Key 怎么管。 这些组件各自独立，但都是\"让应用可用\"的必要部分。 SwiftData 模型层 SwiftWork 用 SwiftData 做持久化，注册了四个模型： // SwiftWorkApp.swift .modelContainer(for: [ Session.self, Event.self, AppConfiguration.self, PermissionRule.self ]) Session @Model final class Session { @Attribute(.unique) var id: UUID var title: String var createdAt: Date var updatedAt: Date var workspacePath: String? @"
+  },
+  {
+    "title": "深入 SwiftWork（第 3 篇）：Tool Card——可扩展的工具可视化系统",
+    "url": "https://gptkit.eth.limo/80C258D2-E57E-44CE-96DF-68D8E70B8343/",
+    "date": "2026-05-02T04:43:20Z",
+    "description": "本文是「深入 SwiftWork」系列第 3 篇。 系列目录见这里 。 前两篇讲了事件怎么从 SDK 流到 UI。这篇聚焦其中一类事件——工具调用的可视化。 Agent 调工具是 Agent 应用里最频繁的操作。一次典型任务可能调用二三十次工具——读文件、写文件、执行命令、搜索代码。如果每次工具调用都显示成一样的灰色方块，用户很难快速区分\"Bash 在跑什么命令\"、\"Edit 在改哪个文件\"。 SwiftWork 的解决方案是一套可扩展的工具渲染系统：每种工具注册一个渲染器，ToolCardView 根据工具名称查找对应的渲染器来显示。新增工具类型时，只需要写一个实现 ToolRenderable 协议的 struct，注册到 ToolRendererRegistry ，不用改 TimelineView 的任何代码。 从问题出发：为什么不用统一的工具视图 最简单的做法是给所有工具调用用同一个视图——显示工具名称、输入参数、输出结果。第 2 篇里的 ToolCallView 就是这个角色： struct ToolCallView: View { let event: AgentEvent"
+  },
+  {
+    "title": "深入 SwiftWork（第 2 篇）：事件时间线——18 种事件的可视化与性能",
+    "url": "https://gptkit.eth.limo/6EF0434F-164C-4AC4-8043-A9095CF12118/",
+    "date": "2026-05-02T04:43:19Z",
+    "description": "本文是「深入 SwiftWork」系列第 2 篇。 系列目录见这里 。 第 1 篇讲了 AgentBridge 怎么把 SDK 的 AsyncStream 变成 [AgentEvent] 。这篇看 [AgentEvent] 变成什么——TimelineView 怎么渲染 18 种事件、怎么处理滚屏行为、怎么在事件量很大时保持流畅。 TimelineView 的结构 TimelineView 是工作区的主体，占满了侧边栏和输入框之间的所有空间。它的视图层级很浅： TimelineView ├── ScrollView │ ├── topPlaceholder (虚拟化占位) │ ├── LazyVStack │ │ └── ForEach(virtualizedEvents) → eventView(for:) │ ├── bottomPlaceholder (虚拟化占位) │ ├── StreamingTextView (流式文本) │ └── bottom-anchor (滚动锚点) └── returnToBottomButton (回到底部) 没有事件时显示空状态：\"发送消息开始"
+  },
+  {
     "title": "【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确",
     "url": "https://shansan.top/2026/05/02/cluacov-branch-coverage/",
     "date": "2026-05-02T03:59:00Z",
     "description": "深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。"
+  },
+  {
+    "title": "童真易满 成人难欢",
+    "url": "https://hux.ink/posts/tong-zhen-yi-man/",
+    "date": "2026-05-02T02:56:00Z",
+    "description": "昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官盛宴。居高临下的独特视角，让窗外风光缓缓掠过，与平时平视的观感截然不同。孩子一路满心欢喜，幸福感简单又纯粹。 细细想来，孩子与成年人的快乐阈值，早已截然不同。 孩子是体验的拓荒者。他们的“人生库存”尚且留白，神经系统对世界保持着极其敏感的初值。一场双层巴士之旅，便是一次“从 0 到 1”的探索。这种极高的稀缺度，只需日常微光便能跨越奖励阈值。而大人阅历饱和，大脑为了节省能耗，自动开启“习惯化”过滤。当我们在巨大的存量基数上做加法，边际快乐自然被无限摊薄，难以在平庸中觉察惊喜。 孩子更是天生的“正念大师”。他们 100% 的内存都用来处理当下的感官，感知颗粒度被无限放大；而大人的后台永远运行着“功利”的进程：盘算指标、权衡利弊、回望过去或焦虑未来。因为心不在现场，感官便随之钝化。 孩子的心愿朴"
   },
   {
     "title": "Memos #2026-05-01",
