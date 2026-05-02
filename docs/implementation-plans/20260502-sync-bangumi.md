@@ -37,6 +37,76 @@ tags:
 3. 交互式人工挑选搜索结果。
 4. 自动修复错误匹配后的回滚系统。
 
+## 实施记录
+
+### 2026-05-02 Step 1 完成
+
+已完成内容：
+
+1. 在 `src/parser.py` 中新增 `sync-bangumi` 子命令。
+2. 新增 `--sync <table>=<state>` 参数，并限制状态值为 `wish`、`done`、`doing`、`on_hold`、`dropped`。
+3. 新增 `--dry-run` 参数。
+4. 修复 `main()` 中 `sync-bangumi` 与既有解析路径的分支控制流。
+
+已通过验收：
+
+1. `sync-bangumi --help` 可显示预期参数。
+2. 缺少 `--sync` 时命令会以非零退出。
+3. 非法状态值会以非零退出并提示允许值。
+4. 合法调用可以进入 `sync-bangumi` 自身执行分支。
+
+### 2026-05-02 Step 2 完成
+
+已完成内容：
+
+1. 新增从 `.venera` 中提取 `local_favorite.db` 的逻辑。
+2. 可按 `--sync` 指定的动态表读取收藏记录。
+3. 提取结果已统一为结构化同步候选项，包含来源表和目标状态。
+4. 不存在的表会返回明确错误，而不是静默跳过。
+
+已通过验收：
+
+1. 样本包中 `Doing` 提取为 74 条，`DONE` 提取为 1 条，与 sqlite 实际行数一致。
+2. 指定不存在的表时会输出明确错误并非零退出。
+3. 提取出的候选记录已确认包含 `source_table` 和 `target_state`。
+
+### 2026-05-02 Step 3 完成
+
+已完成内容：
+
+1. 新增搜索输入模型 `SyncSearchRequest`。
+2. 新增 Bangumi subject 简化模型和匹配结果模型。
+3. 实现标题规范化和本地匹配判定函数。
+4. 已区分 `matched`、`skipped_no_result`、`skipped_ambiguous`、`skipped_low_confidence` 四类结果。
+
+已通过验收：
+
+1. 本地伪造样本下，唯一精确命中会进入 `matched`。
+2. 零结果会进入 `skipped_no_result`。
+3. 多结果精确命中会进入 `skipped_ambiguous`。
+
+### 2026-05-02 Step 4 进行中
+
+已完成内容：
+
+1. 新增 `BangumiClient`，基于 Python 标准库封装最小 API 调用。
+2. 已实现搜索条目、读取当前用户收藏、更新收藏状态三个客户端方法。
+3. 已固定 `Authorization: Bearer <token>` 和显式 `User-Agent`。
+4. `sync-bangumi` 现在会先检查 `ACCESS_TOKEN` 是否存在，再继续后续流程。
+
+已通过验收：
+
+1. 未设置 `ACCESS_TOKEN` 时，命令会在发请求前失败。
+2. 使用无效 token 时，最小读请求会返回明确的鉴权错误。
+
+待完成验收：
+
+1. 使用有效 token 对真实 Bangumi API 发起最小读请求，并确认响应能被解析。
+
+阻塞原因：
+
+1. 当前终端环境中 `ACCESS_TOKEN` 未设置，因此无法完成这一步的正向 smoke test。
+
 ## 实施步骤
 
 ### 步骤 1：固化 Bangumi 同步命令接口

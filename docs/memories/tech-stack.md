@@ -20,7 +20,7 @@ tags:
 ### 当前已采用
 
 1. Python 3 作为唯一实现语言；当前环境已验证可运行在 Python 3.14。
-2. 标准库为主：`argparse`、`json`、`sqlite3`、`zipfile`、`tempfile`、`pathlib`。
+2. 标准库为主：`argparse`、`json`、`sqlite3`、`zipfile`、`tempfile`、`pathlib`、`urllib.request`。
 3. SQLite 作为 Venera 导出数据中的嵌入式数据库格式。
 4. JSON 作为结构化中间输出格式。
 5. 单文件 CLI 入口：`src/parser.py`。
@@ -40,6 +40,8 @@ tags:
 1. 能用标准库完成，就不引入第三方依赖。
 2. 如果 Bangumi API 客户端代码因标准库过于笨重或可测试性过差，再引入单一 HTTP 库。
 3. 只有当测试真正落地到仓库时，才把对应测试框架写入技术栈文档。
+
+当前 Bangumi API 客户端已经按这个原则实现，暂未引入第三方 HTTP 依赖。
 
 ### Bangumi API 接入约束
 

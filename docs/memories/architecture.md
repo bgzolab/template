@@ -59,6 +59,7 @@ tags:
 
 1. `summary`：打印可读摘要。
 2. `dump`：导出完整 JSON。
+3. `sync-bangumi`：读取指定 `local_favorite.db` 动态表，提取同步候选项，并准备 Bangumi 搜索请求。
 
 ### `20575-2273.venera`
 
@@ -140,6 +141,15 @@ Venera 导出文件是 zip 归档，不是自定义二进制协议。当前解�
 4. `parse_databases()` 将数据库临时落盘。
 5. `parse_sqlite_database()` 读取 schema、列、行数和可选行数据。
 6. `print_summary()` 或 `dump_json()` 输出结果。
+
+`sync-bangumi` 分支当前的局部数据流如下：
+
+1. 解析 `--sync <table>=<state>`。
+2. 从归档中提取 `local_favorite.db`。
+3. 读取指定动态表并转换为 `SyncCandidate`。
+4. 将候选项转换为 `SyncSearchRequest`。
+5. 通过 `BangumiClient.from_env()` 校验 `ACCESS_TOKEN`。
+6. 当前已具备 Bangumi API 客户端，但尚未进入完整同步写入阶段。
 
 后续 Bangumi 同步功能应沿着现有 CLI 入口扩展，不应绕过当前解析层直接操作原始 zip 内容。
 
