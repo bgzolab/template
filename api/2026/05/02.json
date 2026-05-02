@@ -1,0 +1,140 @@
+[
+  {
+    "title": "the-story-of-me",
+    "url": "https://m4p1e.com/2066/05/04/the-story-of-me/",
+    "date": "2066-05-04T19:39:44Z",
+    "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
+  },
+  {
+    "title": "【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确",
+    "url": "https://shansan.top/2026/05/02/cluacov-branch-coverage/",
+    "date": "2026-05-02T03:59:00Z",
+    "description": "深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。"
+  },
+  {
+    "title": "Memos #2026-05-01",
+    "url": "https://www.taober.blog/memos",
+    "date": "2026-05-02T00:00:00Z",
+    "description": "13:25 五一劳动节，深圳开火第一顿：酸菜萝卜丝炒吊龙！"
+  },
+  {
+    "title": "不要坚持",
+    "url": "https://yinji.org/do-not-insist.html",
+    "date": "2026-05-01T16:09:26Z",
+    "description": "当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者在描述事实的同时强调了“坚持”，为什么要坚持？自己喜欢做的事情直接去做就行了，我骑行了1个月，是因为我喜欢骑自行车，而不是出于什么原因让我“坚持”做。 过去我也经常陷入这样一个怪圈，信誓旦旦的对自己说，今年要坚持骑行 xx 公里，然后计算每个月需要骑多少，平均每天需要骑多少，看似把目标分解，但实际在...... 继续阅读»»»"
+  },
+  {
+    "title": "五一流水账 0501",
+    "url": "https://blog.solazy.me/20260501/",
+    "date": "2026-05-01T10:00:00Z",
+    "description": "难得的小长假！"
+  },
+  {
+    "title": "报道称，马克·扎克伯格表示，人工智能成本是导致公司裁员8000人的原因之一",
+    "url": "https://blog.rustfisher.com/news/meta-mark-zuckerberg-says-ai-costs-contributed-to-layoffs-of-8000-staffers-report-says-20260501/",
+    "date": "2026-05-01T08:10:59Z",
+    "description": "据 《华尔街日报》 报道，Meta 首席执行官马克·扎克伯格在周四的一次内部会议录音中承认，该公司在人工智能方面的支出导致了 Meta 的裁员。该录音详细介绍了该公司的资本支出和人工智能投资情况"
+  },
+  {
+    "title": "Parallels Desktop 26 官网限时 5.5 折！新功能汇总 / Mac 虚拟机升级",
+    "url": "https://www.iplaysoft.com/p/parallels-desktop-26",
+    "date": "2026-05-01T07:10:29Z",
+    "description": "作为一名长期使用 Mac 却离不开使用各种 Windows 软件的用户，我算是 Parallels Desktop 的老朋友了。从 Intel 芯片时代用到现在的苹果芯片 Apple Silicon，PD 一步步变得越发强大。 「新版 PD26 官网限时 5.5 折特价！历史新低」 获取：PD26 虚拟机激活码 最新的 Parallels Desktop 26 for Mac 也是一次重大更新！不仅完美…… 「 前往查看原文.... 」 异次元首页 | 微信公众号 | 关注微博 | 软件精选 | 软件激活码折扣"
+  },
+  {
+    "title": "假期从折腾Obsidian开始",
+    "url": "https://hux.ink/posts/obsidian-sync/",
+    "date": "2026-05-01T03:05:00Z",
+    "description": "五一假期第一天，折腾升级 Obsidian。 我日常 PC 端用 Windows，移动端用 iOS。使用 Obsidian 时，由于苹果的封闭性，PC 与移动端的同步一直是个难题。很早以前我用过 Remotely Save 插件通过 Onedrive 同步，但它不太稳定，经常出 Bug。担心丢文件，我就放弃了这个方案，也就长期不在移动端使用 Obsidian 了。 自上次弃用后，我很久没再关注 Remotely Save。最近发现它已经支持 Webdav。我的 Obsidian 笔记库原本就依靠家里的群晖 NAS（通过 Synology Drive）在公司和家里电脑间同步。既然插件支持 WebDAV，那理论上只要在 iPhone 上配置好插件，不就能顺理成章打通 Windows 与 iOS，实现双向同步了吗？ 说干就干，配置过程中踩了两个坑： 踩坑一：路径配置不全。 一开始，WebDAV 服务器地址我只填了 域名:5006 ，结果一直报错无法连接。转念一想，估计是少了 NAS 上的具体路径。果不其然，补全库文件的绝对路径后，连接测试顺利通过。 踩坑二：同步了个寂寞。 连接虽然成功，点击"
+  },
+  {
+    "title": "无法消失的现代人",
+    "url": "https://mobius.blog/23376.html",
+    "date": "2026-05-01T01:00:00Z",
+    "description": "现代人不是无法消失，或许是从未真正出现过。 此时此刻，我又是在咖啡厅码字，大概是节假日前的最后一天。咖啡厅明显 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "AI agent 不缺代码，它缺工程记忆",
+    "url": "https://huoru.me/posts/mainline-intent-memory/",
+    "date": "2026-05-01T00:00:00Z",
+    "description": "AI agent 不缺代码，它缺工程记忆 在 RAG 或 grep 之前，先给 agent 工程意图 AI 编程正在变快。 快到什么程度？ 一个需求，几分钟出代码。 一个 bug，几轮对话就修。 一个重构，agent 可以通宵跑完。 但越用我越发现： AI agent 最大的问题，不是写不出代码。 它最大的问题是： 它不知道昨天为什么这么写。 它不知道哪个方案试过又放弃了。 它不知道哪个旧实现已经被替代了。 它不知道哪个兼容路径看起来丑，但不能删。 它不知道 reviewer 曾经明确说过：这里不能动。 它不知道队友正在推进一个相关方向。 它不知道代码背后的工程意图。 于是它会很自信地重复旧错误。 AI agent 会重复你昨天放弃的方案 这是最危险的地方。 不是它不会写。 是它太会写。 看到半成品，它会补完。 看到 TODO，它会推进。 看到 deprecated，它会删。 看到两个实现并存，它会两边都改。 看到历史包袱，它会“优化”掉。 从代码角度看，它很合理。 从工程历史角度看，它在犯错。 因为代码只告诉它： 现在是什么样。 但工程真正重要的是： 为什么是这样。 RAG 找代码，"
+  },
+  {
+    "title": "当 AI 什么都能做，人还剩下什么？",
+    "url": "https://www.linggandianbo.com/newsletter-121/",
+    "date": "2026-04-30T23:30:04Z",
+    "description": "从关系经济、社会智能、AGI 时间线到文学与制度防守，理解机器越强之后，人为什么反而不能缺席｜灵感电波 #121"
+  },
+  {
+    "title": "深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用",
+    "url": "https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/",
+    "date": "2026-04-30T18:22:07Z",
+    "description": "本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Motive ——的完整过程：从理解原有架构到实现替换，以及一路上踩过的坑。 Motive 是什么 Motive 是一个 macOS 原生的 AI Agent 桌面应用，用 SwiftUI 写的。它的核心交互是：用户输入 prompt → Agent 在后台跑 Agent Loop（调工具、读文件、执行命令）→ 流式输出结果到 UI。 在集成 SDK 之前，Motive 的 Agent 后端长这样： Motive App (SwiftUI) └── OpenCodeBridge (actor) ├── OpenCodeServer — 启动外部 opencode 二进制进程 (opencode serve) ├── SSEClient — 通过 Server-Sent Events 接收流式事件 "
+  },
+  {
+    "title": "QoderWake：把 Agent 做成“同事”的那条路",
+    "url": "https://www.evan.xin/4948/",
+    "date": "2026-04-30T15:58:33Z",
+    "description": "我最近看 QoderWake 的介绍时，一个感觉很强：它不是在卖“更聪明的模型”，而是在把 AI 放进组织里最 […]"
+  },
+  {
+    "title": "再见面板：Debian构建WordPress",
+    "url": "https://www.xiaozonglin.cn/build-wordpress-with-pure-commandline/",
+    "date": "2026-04-30T15:42:30Z",
+    "description": "任务要求：使用Debian纯命令行构建自己的WordPress网站，并通过一些方法支持http://linli […] 再见面板：Debian构建WordPress 最先出现在 林林杂语 。"
+  },
+  {
+    "title": "国内独立开发圈子太烂了",
+    "url": "https://blog.solazy.me/20260430/",
+    "date": "2026-04-30T15:00:00Z",
+    "description": "昨天说到了独立博客，今天索性接着聊聊独立开发者"
+  },
+  {
+    "title": "Album#37 - Scenery(シーナリィ)",
+    "url": "https://taxodium.ink/album-37.html",
+    "date": "2026-04-30T14:00:00Z",
+    "description": "Album#37 Scenery(シーナリィ) 图1 《Scenery(シーナリィ)》専輯封面 专辑信息 专辑名称： Scenery (シーナリィ) 歌手： 福居良 (Ryo Fukui) 年份： 1967-01-01 风格： 爵士 (Jazz)、鋼琴 时长： 41:20 福居(ふくい)良(りょう) (Ryo Fukui) 是我很喜欢的一个日本爵士乐鋼琴演奏家，最开始知道他是隨机聴到了他的 My Back Pages (Live) (出自専輯 Live at Nika )，這首曲子長達 18:23，一开始是低音提琴的獨奏，聲音低沉，聴不出什麽旋律，快 7:30 的時候出現掌聲和琴聲，大概是福居良上場了，接著架子鼓也就位，开始了精彩的即興，气氛一下子就明亮了起來，我也就此愛上了這首曲子，知道了福居良。 My Back Pages 本身是 Bob Dylan 的一首歌，副歌歌詞是 \"Ah, but I was so much older then, I'm younger than that now.\"，福居良也很好把歌詞的含義演绎了出來，副歌的旋律在曲子裡反覆地出現，也是我很喜歡的一段旋"
+  },
+  {
+    "title": "我（不）想让 AI 帮我做",
+    "url": "https://www.geedea.pro/article/no-ai-for-my-joy/",
+    "date": "2026-04-30T09:07:12Z",
+    "description": "标题之所以没有使用 LLM 这个在如今大多数情况下更准确的词，是因为我想讨论更宽泛的技术。帮人做事的不只是大语言模型，对于个别人来说，还有可能是文生图模型、图像视觉模型等等。所以我使用了 AI 这个词。 如果你读过本博客其他有关 AI 的文章，你会发现我大部分时候都没什么好话说。我为什么不喜欢这门 不少人都相信即将翻天覆地地改变世界 的技术呢？我就从我最熟悉的领域说起吧。编程，也正是如今受 LLM 影响最大的技能之一，是我从小学五年级就开始做的事情。我喜欢编程，一开始是因为我喜欢创造的感觉，我还记得我写第一个易语言程序的时候（很不幸，这的确是我的启蒙编程语言），我把 UI 拼成自己喜欢的样子时有多高兴。后来，我意识到自己代码能力太弱，那时的我连分支和循环结构都不知道是什么。 我仍然喜欢创造，但我很快迷上了另一项可以称作是智识锻炼的活动——写代码本身。我喜欢用代码让机器做我想让它做的事，我喜欢思考编程语言和自然语言的关系，我总是在思考什么样的代码是好的代码。可如今，当我放下 Bob 大叔写的《代码整洁之道》时，我叹息。函数体里的代码应该位于同一抽象层上，函数应该简短，一个文件的长度不应该"
+  },
+  {
+    "title": "Plants vs. Zombies updated",
+    "url": "https://macsourceports.com/game/pvz",
+    "date": "2026-04-30T04:49:46Z",
+    "description": "The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.22 of the project"
+  },
+  {
+    "title": "Chris Sawyer's Locomotion updated",
+    "url": "https://macsourceports.com/game/locomotion",
+    "date": "2026-04-30T03:05:06Z",
+    "description": "The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.04 of the project"
+  },
+  {
+    "title": "为什么说《炊事班的故事》中的洪班长是设计师最好的领导",
+    "url": "https://www.iyeslogo.com/good-leader-for-designers/",
+    "date": "2026-04-30T02:35:33Z",
+    "description": "他的管理核心不是KPI，而是对人的理解和尊重，这正是现代设计管理者最需要的能力。"
+  },
+  {
+    "title": "怎样才算是不惮以最坏的恶意来推测中国人？",
+    "url": "https://mobius.blog/23338.html",
+    "date": "2026-04-30T01:00:00Z",
+    "description": "这两天在网上看到见趣事，但说起来又挺可悲。 大致是一个学生在学校没有拿到当天的作业试卷，在回家的路上，他想让自 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "人工智能支出创下纪录，且看不到尽头 - nytimes",
+    "url": "https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/",
+    "date": "2026-04-30T00:44:59Z",
+    "description": "谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出"
+  },
+  {
+    "title": "我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起",
+    "url": "https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/",
+    "date": "2026-04-30T00:25:11Z",
+    "description": "这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社区、让个人得到成长。"
+  }
+]

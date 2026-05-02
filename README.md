@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-02 | [【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/) | 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。 |
+| 2026-05-02 | [Memos #2026-05-01](https://www.taober.blog/memos) | 13:25 五一劳动节，深圳开火第一顿：酸菜萝卜丝炒吊龙！ |
 | 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
 | 2026-05-01 | [五一流水账 0501](https://blog.solazy.me/20260501/) | 难得的小长假！ |
 | 2026-05-01 | [报道称，马克·扎克伯格表示，人工智能成本是导致公司裁员8000人的原因之一](https://blog.rustfisher.com/news/meta-mark-zuckerberg-says-ai-costs-contributed-to-layoffs-of-8000-staffers-report-says-20260501/) | 据 《华尔街日报》 报道，Meta 首席执行官马克·扎克伯格在周四的一次内部会议录音中承认，该公司在人工智能方面的支出导致了 Meta 的裁员。该录音详细介绍了该公司的资本支出和人工智能投资情况 |
@@ -42,7 +43,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-30 | [怎样才算是不惮以最坏的恶意来推测中国人？](https://mobius.blog/23338.html) | 这两天在网上看到见趣事，但说起来又挺可悲。 大致是一个学生在学校没有拿到当天的作业试卷，在回家的路上，他想让自 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-30 | [人工智能支出创下纪录，且看不到尽头 - nytimes](https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/) | 谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出 |
 | 2026-04-30 | [我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起](https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/) | 这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社… |
-| 2026-04-30 | [Memos #2026-04-29](https://www.taober.blog/memos) | 00:41 我的人生总是阶段性的，期待着一个又一个节点的到来，而做不到享受当下。 |
 | 2026-04-29 | [Warp 开源了！高性能现代化设计的跨平台 AI 终端工具 (视频使用教程)](https://www.iplaysoft.com/warp.html) | 你上一次认真把玩 命令行终端 软件是什么时候？估计大部分人的答案都是：不折腾，能用就行。毕竟终端这玩意儿，从 70 年代到现在，核心交互就没变过：一个黑框框，敲命令，看输出。 而最近一款 Rust 开发的高性能、 原生 AI 驱动的现代化 SSH 终端软件 Warp ，突然宣布 开源 ！GitHub… |
 | 2026-04-29 | [PVE 9.1 LXC 显卡共享: 部署Steam Headless](https://brain-zhang.github.io/blog/2026/04/29/pve-9-dot-1-lxc-xian-qia-gong-xiang-bu-shu-steam-headless/) | 这是一种非常折腾的做法，目前来看这么折腾的人真不多; 最终实现的效果就是在PVE环境中，用数个LXC容器将一张消费级GPU (我是一张RTX 3060 12GB) 切分到不同的Linux系统实例中，同时这些实例还能共享显卡的算力和显存；同时，最妙的 —- 这张显卡的算力和显存是动态分配的； 这比显卡… |
 | 2026-04-29 | [有了Ai，出门都不用担心忘了关门](https://krya.com/post/tools/) | 出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个"百宝工具箱"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床… |
@@ -102,22 +102,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-25 | [微软计划首次对美国员工进行自愿买断，涉及至多7%的员工](https://blog.rustfisher.com/news/microsoft-retire-plan-20260425/) | 据一位知情人士透露，约有7%的美国员工符合资格。由于具体数字尚未公开，该人士要求匿名。这项一次性退休计划于周四在一份备忘录中宣布，将面向美国高级总监及以下级别的员工，前提是他们的工龄和年龄总和达到或超过70年。 |
 | 2026-04-25 | [记录 typecho 1.2.0 升级到 1.3.0 过程](https://hellodk.cn/post/1213) | 主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty... |
 | 2026-04-25 | [第一千篇](https://mobius.blog/23260.html) | 如果这篇文章能发表出来，那就意味着这个博客发布了第一千篇文章。现在是2021年的12月26日，发表完《写在20 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-24 | [学习周刊-总第260期-2026年第17周](https://wiki.eryajf.net/pages/907f99/) | 如要阅读全文，点击标题跳转。 学习周刊-总第260期 &#124; kite-desktop &#124; zerobrew &#124; dnet &#124; voicekey &#124; pdfcraft &#124; explain-error-plugin &#124; ezbookkeeping &#124; server-survival &#124; Droppy &#124;… |
-| 2026-04-24 | [关于第三辆车的想象](https://blog.solazy.me/20260424/) | 今天聊聊我的两台车，和可能短期内不太会有的第三台车 |
-| 2026-04-24 | [RISC-V 虚拟机无法代替 EVM 虚拟机](https://smallyu.net/2026/04/24/RISC-V%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E4%BB%A3%E6%9B%BFEVM%E8%99%9A%E6%8B%9F%E6%9C%BA/) | RISC-V 太复杂，非常依赖于虚拟机沙盒环境的标准化，但是现在还没有统一的规范 EVM 经过多年百亿级别金融生态的磨练，从开发到审计已经比较成熟，切换到 RISC-V 的成本很高 RISC-V |
-| 2026-04-24 | [DeepSeek V4 Pro 来了！标配百万上下文，国产模型再次刷新开源 AI 天花板？](https://www.iplaysoft.com/deepseek-v4.html) | 今天一大消息就是 开源 AI 大模型圈的“卷王” DeepSeek ，憋了 15 个月后，终于把全新系列模型 DeepSeek-V4 正式公布出来了，而且照惯例，同步开源！ 一时间朋友圈、技术群各种消息满天飞。现在 DeepSeek 官网 和 API 都直接能用 v4 了！包括 众多第三方算力平台… |
-| 2026-04-24 | [Living Clojure](https://www.geedea.pro/library/2026/living-clojure/) | 还不错的 Clojure 入门书籍，适合有较强编程基础（我认为至少要熟悉一两门编程语言，有实际开发经验）的人用来快速了解 Clojure 各方面的特性和编程模式。作者用《爱丽丝梦游仙境》的例子串起了 Clojure 的许多知识，通俗但对不了解这个故事的读者可能有些摸不着头脑，而且大部分例子都不是实际… |
-| 2026-04-24 | [Anthropic 关于近期 Claude Code 质量报告的最新进展](https://blog.rustfisher.com/news/anthropic-claude-code-quality-reports-20260424/) | 追踪了近期有关 Claude Code 质量问题的报告，发现这些问题源于三项不同的变更。以下是变更详情以及我们正在进行的更改。 |
-| 2026-04-24 | [工具人](https://mobius.blog/23255.html) | 网友：特地将孙女放坐在玄关，等待父母到访。开门见到孙女的瞬间，外婆开心地手舞足蹈不知所措，她身后的外公激动地挤 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-24 | [飞塔分流配置实战](https://lxnchan.cn/fortigate-oversea.html) | 需求描述：出口为运营商的ONT，下面是Fortigate做多合一网关，在下面有一台Linux服务器，运行PVE，虚拟机内连接另一城市的外部网络，同时在Fortigate上做分流，使得同局域网下其他设备能够访问外部网络。 |
-| 2026-04-24 | [深入 Open Agent SDK（一）：Agent Loop 内核——从 prompt 到多轮对话的完整运转机制](https://gptkit.eth.limo/366BF72F-76A4-4E5B-9D4D-867637D4DDBE/) | 本文是「深入 Open Agent SDK (Swift)」系列第一篇。 系列目录见这里 。 大多数 LLM 封装库做的事情是：发请求、拿响应、结束。但一个真正的 Agent 不止于此——它要能自己判断需不需要调工具、执行完工具后把结果喂回 LLM、循环往复直到拿到最终答案。这个循环就是 Agent… |
-| 2026-04-24 | [深入 Open Agent SDK（六）：多 LLM 提供商与运行时控制](https://gptkit.eth.limo/E12E5AFD-4893-44A9-9EA6-0226B0BE2AF7/) | 本文是「深入 Open Agent SDK (Swift)」系列第六篇（完结篇）。 系列目录见这里 。 一个 Agent 不应该绑定单一 LLM 提供商。不同任务适合不同模型——简单问题用便宜模型，复杂推理用贵模型，有些场景甚至需要本地模型。而且运行时的需求也在变化：用户可能中途要求更深度的思考，可… |
-| 2026-04-24 | [深入 Open Agent SDK（五）：会话持久化与安全防线](https://gptkit.eth.limo/74B0725C-34AE-492C-94BA-AE47C9CE7BD1/) | 本文是「深入 Open Agent SDK (Swift)」系列第五篇。 系列目录见这里 。 Agent 不只是一次性问答工具。真正有用的 Agent 要做到三件事：记住上下文（上次聊到哪了）、控制权限（哪些操作能做）、审计行为（谁在什么时候干了什么）。Open Agent SDK 用四个子系统来覆… |
-| 2026-04-24 | [深入 Open Agent SDK（四）：多 Agent 协作——子代理、团队与任务编排](https://gptkit.eth.limo/C155E8B0-998A-4A06-8938-4216A0CAC2DC/) | 本文是「深入 Open Agent SDK (Swift)」系列第四篇。 系列目录见这里 。 单个 Agent 再强，也只是一个执行者。真实的开发任务往往是多步骤、多角色的：先有人探索代码库，有人设计方案，再有人写代码、跑测试。一个 Agent 单干，上下文容易膨胀，效率也上不去。 Open Age… |
-| 2026-04-24 | [深入 Open Agent SDK（三）：MCP 集成实战——让 Agent 连接万物](https://gptkit.eth.limo/D9AE0B75-28C0-4202-83DF-7401673EAC73/) | 本文是「深入 Open Agent SDK (Swift)」系列第三篇。 系列目录见这里 。 上一篇看了 SDK 内置的 34 个工具——文件读写、Bash 执行、代码搜索，覆盖了常见的开发场景。但 Agent 的能力不可能只靠内置工具撑满。你需要连接数据库、调用企业 API、操作内部系统——这些事… |
-| 2026-04-24 | [深入 Open Agent SDK（二）：34 个工具的背后——工具协议、三层架构与自定义扩展](https://gptkit.eth.limo/6B7CBA30-B740-4FC7-A5D8-2A89AA4D7D36/) | 本文是「深入 Open Agent SDK (Swift)」系列第二篇。 系列目录见这里 。 上一篇分析了 Agent Loop 的运转机制，其中有一个环节是"执行工具"——LLM 说"我要调 Bash"，SDK 就真的起一个进程跑命令。但这背后的工具系统远不止"调个函数"那么简单。34 个内置工具… |
-| 2026-04-24 | [Open Agent SDK (Swift)：用原生 Swift 构建 AI Agent 应用](https://gptkit.eth.limo/6350C74A-BB1D-453D-996F-5139D42DC729/) | 如果你是一名 Swift 开发者，想要在自己的 macOS 应用中集成 AI Agent 能力，选择并不多。大多数 Agent 框架都是 Python 或 TypeScript 的，Swift 生态几乎没有成熟的解决方案。 Open Agent SDK (Swift) 正是为了填补这个空白而生的。… |
-| 2026-04-24 | [因为恐惧被关系伤害，所以选择独自面对](https://mobius.blog/23145.html) | 前段时间，因为有朋友在《自卑的人在恐惧什么？》下评论道：因为恐惧被关系伤害，所以选择独自面对。我觉得这开启了一 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
