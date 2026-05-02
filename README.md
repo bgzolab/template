@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-02 | [最近使用debian系统的一些心得](https://hellodk.cn/post/1215) | 我将分为三个方面来简单聊聊：多系统共存和debian安装、驱动我的硬件、程序使用。多系统共存和debian系统安装现在都 2026年了，虽然这两年固态硬盘涨价了，但我还是建议使用 whole s... |
 | 2026-05-02 | [深入 SwiftWork（第 1 篇）：SDK 集成层——把 AsyncStream 接进 SwiftUI](https://gptkit.eth.limo/B0266B1F-C82E-4C98-A3F3-C2A87BF61434/) | 本文是「深入 SwiftWork」系列第 1 篇。 系列目录见这里 。 第 0 篇画了全景图—— AsyncStream → AgentBridge → EventMapper → SwiftUI 。这篇拆开中间两层：AgentBridge 和 EventMapper，看它们怎么把 SDK 的消息流… |
 | 2026-05-02 | [深入 SwiftWork（第 0 篇）：用 SwiftUI 构建一个 Agent 可视化工作台](https://gptkit.eth.limo/7914B020-3118-44B1-B30F-458B99DB49AE/) | 本文是「深入 SwiftWork」系列第 0 篇。 系列目录见这里 。 前面七篇文章加上番外篇，我们把 Open Agent SDK 的内部机制翻了个底朝天——Agent Loop、工具系统、MCP 集成、多 Agent 协作、会话持久化、多 LLM 支持。番外篇还把 SDK 塞进了一个 macOS… |
 | 2026-05-02 | [深入 SwiftWork（第 4 篇）：数据层与服务——SwiftData、状态恢复与 Markdown 渲染](https://gptkit.eth.limo/62F3FC56-7EC1-4BDE-AC7C-74727C594796/) | 本文是「深入 SwiftWork」系列第 4 篇（完结篇）。 系列目录见这里 。 前三篇讲了事件怎么从 SDK 流到 UI、时间线怎么渲染、工具卡片怎么可视化。这篇收尾，看 SwiftWork 的基础设施——数据怎么存、状态怎么恢复、Markdown 怎么渲染、代码怎么高亮、API Key 怎么管。… |
