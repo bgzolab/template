@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import difflib
 import json
 import re
 import unicodedata
@@ -14,6 +15,13 @@ _S2T = OpenCC("s2t")
 _T2S = OpenCC("t2s")
 _PAREN_PATTERN = re.compile(r"\s*[\(（\[【].*?[\)）\]】]\s*")
 _NON_WORD_PATTERN = re.compile(r"[^\w\u3400-\u9fff]+")
+_SEARCH_SUFFIX_PATTERN = re.compile(r"\s*(单行本版|單行本版|单行本|單行本|総集編|总集篇|總集篇|漫畫版|漫画版|漫畫|漫画)\s*$")
+_SEARCH_KEYWORD_OVERRIDES = {
+    "为这美好世界献上祝福": ["祝福这个美好的世界"],
+    "异世界归来的舅舅": ["异世界舅舅", "异世界叔叔"],
+    "转生成蜘蛛又怎样": ["我是蜘蛛又怎样？"],
+    "野生的最终boss出现了": ["野生のラスボスが現れた！"],
+}
 
 
 def string_or_none(value: Any) -> str | None:
@@ -91,17 +99,33 @@ def build_search_keywords(value: str | None) -> list[str]:
         return []
 
     raw = unicodedata.normalize("NFKC", value).strip()
-    candidates = [raw]
     simplified = to_simplified(raw)
     traditional = to_traditional(raw)
-    candidates.extend([simplified, traditional])
+    candidates: list[str] = []
 
     normalized = normalize_search_text(raw)
-    candidates.append(normalized)
-    candidates.append(normalize_search_text(simplified))
-    candidates.append(normalize_search_text(traditional))
+    normalized_simplified = normalize_search_text(simplified)
+    normalized_traditional = normalize_search_text(traditional)
 
-    for text in (raw, simplified, traditional, normalized):
+    stripped_candidates = [
+        _SEARCH_SUFFIX_PATTERN.sub("", text).strip()
+        for text in (raw, simplified, traditional, normalized)
+        if text
+    ]
+
+    override_keys = {
+        normalize_match_title(text)
+        for text in [raw, simplified, traditional, normalized, *stripped_candidates]
+        if text
+    }
+    for key, overrides in _SEARCH_KEYWORD_OVERRIDES.items():
+        if key in override_keys:
+            candidates.extend(overrides)
+
+    candidates.extend([simplified, raw, traditional, normalized, normalized_simplified, normalized_traditional])
+    candidates.extend(text for text in stripped_candidates if text)
+
+    for text in (raw, simplified, traditional, normalized, normalized_simplified, normalized_traditional):
         if not text:
             continue
         for token in re.split(r"\s+", text):
@@ -118,6 +142,43 @@ def build_search_keywords(value: str | None) -> list[str]:
         seen.add(item)
         keywords.append(item)
     return keywords
+
+
+def similarity_ratio(left: str | None, right: str | None) -> float:
+    left_normalized = normalize_match_title(left)
+    right_normalized = normalize_match_title(right)
+    if not left_normalized or not right_normalized:
+        return 0.0
+    return difflib.SequenceMatcher(None, left_normalized, right_normalized).ratio()
+
+
+def cjk_substring_overlap(left: str | None, right: str | None) -> float:
+    left_normalized = normalize_match_title(left)
+    right_normalized = normalize_match_title(right)
+    if not left_normalized or not right_normalized:
+        return 0.0
+    common = longest_common_substring(left_normalized, right_normalized)
+    if common < 2:
+        return 0.0
+    return common / max(len(left_normalized), len(right_normalized))
+
+
+def longest_common_substring(left: str, right: str) -> int:
+    if not left or not right:
+        return 0
+    lengths = [0] * (len(right) + 1)
+    best = 0
+    for left_char in left:
+        previous = 0
+        for index, right_char in enumerate(right, start=1):
+            current = lengths[index]
+            if left_char == right_char:
+                lengths[index] = previous + 1
+                best = max(best, lengths[index])
+            else:
+                lengths[index] = 0
+            previous = current
+    return best
 
 
 def dump_json(data: dict[str, Any], output: Path | None, pretty: bool) -> None:

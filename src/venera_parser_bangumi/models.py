@@ -44,6 +44,8 @@ class BangumiSubject:
     name: str
     name_cn: str | None = None
     platform: str | None = None
+    authors: list[str] = field(default_factory=list)
+    aliases: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

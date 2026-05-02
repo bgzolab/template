@@ -52,7 +52,8 @@ class BangumiClient:
         self, search_request: SyncSearchRequest, *, limit: int = 100
     ) -> list[BangumiSubject]:
         subjects_by_id: dict[int, BangumiSubject] = {}
-        for keyword in build_search_keywords(search_request.keyword):
+        ranking_by_id: dict[int, tuple[int, int]] = {}
+        for keyword_index, keyword in enumerate(build_search_keywords(search_request.keyword)):
             payload = {
                 "keyword": keyword,
                 "sort": "match",
@@ -67,12 +68,19 @@ class BangumiClient:
             data = response.get("data", []) if isinstance(response, dict) else []
             if not isinstance(data, list):
                 continue
-            for item in data:
+            for item_index, item in enumerate(data):
                 subject = parse_subject_payload(item)
                 if subject is None:
                     continue
                 subjects_by_id.setdefault(subject.subject_id, subject)
-        return list(subjects_by_id.values())
+                ranking_by_id[subject.subject_id] = min(
+                    ranking_by_id.get(subject.subject_id, (item_index, keyword_index)),
+                    (item_index, keyword_index),
+                )
+        return sorted(
+            subjects_by_id.values(),
+            key=lambda subject: ranking_by_id.get(subject.subject_id, (10**9, 10**9)),
+        )
 
     def get_subject(self, subject_id: int) -> BangumiSubject:
         response = self.request_json("GET", f"/subjects/{subject_id}")
@@ -174,4 +182,60 @@ def parse_subject_payload(item: object) -> BangumiSubject | None:
         name=name,
         name_cn=string_or_none(item.get("name_cn")),
         platform=string_or_none(item.get("platform")),
+        authors=parse_subject_authors(item),
+        aliases=parse_subject_aliases(item),
     )
+
+
+def parse_subject_authors(item: object) -> list[str]:
+    if not isinstance(item, dict):
+        return []
+    infobox = item.get("infobox")
+    if not isinstance(infobox, list):
+        return []
+    authors: list[str] = []
+    for entry in infobox:
+        if not isinstance(entry, dict):
+            continue
+        key = string_or_none(entry.get("key")) or ""
+        if key not in {"作者", "原作", "作画", "漫画", "人物原案", "原案"}:
+            continue
+        authors.extend(flatten_infobox_values(entry.get("value")))
+    return list(dict.fromkeys(filter(None, authors)))
+
+
+def parse_subject_aliases(item: object) -> list[str]:
+    if not isinstance(item, dict):
+        return []
+    aliases: list[str] = []
+    infobox = item.get("infobox")
+    if isinstance(infobox, list):
+        for entry in infobox:
+            if not isinstance(entry, dict):
+                continue
+            key = string_or_none(entry.get("key")) or ""
+            if key not in {"别名", "別名"}:
+                continue
+            aliases.extend(flatten_infobox_values(entry.get("value")))
+    return list(dict.fromkeys(filter(None, aliases)))
+
+
+def flatten_infobox_values(value: object) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, str):
+        text = string_or_none(value)
+        return [text] if text else []
+    if isinstance(value, list):
+        flattened: list[str] = []
+        for item in value:
+            flattened.extend(flatten_infobox_values(item))
+        return flattened
+    if isinstance(value, dict):
+        flattened: list[str] = []
+        for key in ("v", "name", "value"):
+            if key in value:
+                flattened.extend(flatten_infobox_values(value[key]))
+        return flattened
+    text = string_or_none(value)
+    return [text] if text else []

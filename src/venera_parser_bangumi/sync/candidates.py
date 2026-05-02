@@ -62,11 +62,16 @@ def load_sync_candidates(
 
 def build_search_request(candidate: SyncCandidate) -> SyncSearchRequest:
     keyword = candidate.name or candidate.record_id or ""
-    author_hints = [candidate.author] if candidate.author else []
+    author_hints = []
+    if candidate.author:
+        author_hints.append(candidate.author)
+    for tag in [*candidate.tags, *candidate.translated_tags]:
+        if tag.startswith("作者:"):
+            author_hints.append(tag.removeprefix("作者:").strip())
     tag_hints = [*candidate.tags, *candidate.translated_tags]
     return SyncSearchRequest(
         candidate=candidate,
         keyword=keyword,
-        author_hints=author_hints,
+        author_hints=list(dict.fromkeys(filter(None, author_hints))),
         tag_hints=tag_hints,
     )

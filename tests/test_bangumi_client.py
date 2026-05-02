@@ -97,4 +97,45 @@ def test_search_subjects_merges_results_from_keyword_variants(monkeypatch) -> No
     results = client.search_subjects(type("Req", (), {"keyword": "想要成為影之實力者"})())
 
     assert results[0].subject_id == 270199
-    assert seen_keywords[:2] == ["想要成為影之實力者", "想要成为影之实力者"]
+    assert seen_keywords[:2] == ["想要成为影之实力者", "想要成為影之實力者"]
+
+
+def test_search_subjects_prefers_better_rank_from_later_keyword_variants(monkeypatch) -> None:
+    client = BangumiClient("token")
+
+    def fake_request_json(method: str, path: str, *, payload=None, query=None):
+        assert method == "POST"
+        assert path == "/search/subjects"
+        assert query == {"limit": "100", "offset": "0"}
+        if payload["keyword"] == "为这美好世界献上祝福":
+            return {
+                "data": [
+                    {
+                        "id": 107681,
+                        "name": "この素晴らしい世界に祝福を!",
+                        "name_cn": "为美好的世界献上祝福！",
+                    }
+                ]
+            }
+        if payload["keyword"] == "祝福这个美好的世界":
+            return {
+                "data": [
+                    {
+                        "id": 143035,
+                        "name": "この素晴らしい世界に祝福を!",
+                        "name_cn": "为美好的世界献上祝福！",
+                    },
+                    {
+                        "id": 107681,
+                        "name": "この素晴らしい世界に祝福を!",
+                        "name_cn": "为美好的世界献上祝福！",
+                    },
+                ]
+            }
+        return {"data": []}
+
+    monkeypatch.setattr(client, "request_json", fake_request_json)
+
+    results = client.search_subjects(type("Req", (), {"keyword": "為這美好世界獻上祝福"})())
+
+    assert [subject.subject_id for subject in results[:2]] == [143035, 107681]
