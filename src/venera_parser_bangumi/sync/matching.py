@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from ..helpers import normalize_title
+from ..helpers import build_search_keywords, normalize_match_title
 from ..models import BangumiSubject, MatchResult, SyncSearchRequest
 
 
@@ -15,12 +15,15 @@ def match_search_result(
             candidate_subjects=[],
         )
 
-    keyword = normalize_title(search_request.keyword)
+    keyword_variants = {
+        normalize_match_title(keyword)
+        for keyword in build_search_keywords(search_request.keyword)
+        if normalize_match_title(keyword)
+    }
     exact_matches = [
         subject
         for subject in subjects
-        if keyword
-        and keyword in {normalize_title(subject.name), normalize_title(subject.name_cn)}
+        if is_exact_match(keyword_variants, subject)
     ]
     if len(exact_matches) == 1:
         return MatchResult(
@@ -40,13 +43,7 @@ def match_search_result(
     near_matches = [
         subject
         for subject in subjects
-        if keyword
-        and (
-            keyword in normalize_title(subject.name)
-            or keyword in normalize_title(subject.name_cn)
-            or normalize_title(subject.name) in keyword
-            or normalize_title(subject.name_cn) in keyword
-        )
+        if is_near_match(keyword_variants, subject)
     ]
     return MatchResult(
         status="skipped_low_confidence" if near_matches else "skipped_no_result",
@@ -54,3 +51,30 @@ def match_search_result(
         subject=None,
         candidate_subjects=near_matches,
     )
+
+
+def is_exact_match(keyword_variants: set[str], subject: BangumiSubject) -> bool:
+    subject_titles = subject_match_titles(subject)
+    return bool(keyword_variants and subject_titles and keyword_variants & subject_titles)
+
+
+def is_near_match(keyword_variants: set[str], subject: BangumiSubject) -> bool:
+    if not keyword_variants:
+        return False
+    subject_titles = subject_match_titles(subject)
+    for keyword in keyword_variants:
+        for subject_title in subject_titles:
+            if keyword in subject_title or subject_title in keyword:
+                return True
+    return False
+
+
+def subject_match_titles(subject: BangumiSubject) -> set[str]:
+    return {
+        normalized
+        for normalized in (
+            normalize_match_title(subject.name),
+            normalize_match_title(subject.name_cn),
+        )
+        if normalized
+    }

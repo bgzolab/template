@@ -12,8 +12,10 @@ class FakeBangumiClient:
         self.collection = collection
         self.fail_on_search = fail_on_search
         self.upserts: list[tuple[int, str]] = []
+        self.search_limit_calls: list[int] = []
 
-    def search_subjects(self, search_request: SyncSearchRequest, *, limit: int = 10):
+    def search_subjects(self, search_request: SyncSearchRequest, *, limit: int = 100):
+        self.search_limit_calls.append(limit)
         if self.fail_on_search is not None:
             raise self.fail_on_search
         return self.subjects
@@ -77,6 +79,7 @@ def test_run_sync_marks_dry_run_updates_without_writing(sample_archive, monkeypa
 
     assert result.counts["would_update"] == 1
     assert client.upserts == []
+    assert client.search_limit_calls == [100]
 
 
 def test_run_sync_emits_progress_logs_for_low_confidence_matches(sample_archive, monkeypatch) -> None:

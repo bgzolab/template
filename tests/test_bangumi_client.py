@@ -46,3 +46,55 @@ def test_parse_subject_payload_reads_platform() -> None:
     assert subject is not None
     assert subject.subject_id == 171069
     assert subject.platform == "小说"
+
+
+def test_get_my_subject_collection_uses_authenticated_username(monkeypatch) -> None:
+    client = BangumiClient("token")
+    calls: list[tuple[str, str]] = []
+
+    def fake_request_json(method: str, path: str, **_kwargs):
+        calls.append((method, path))
+        if path == "/me":
+            return {"username": "bool"}
+        if path == "/users/bool/collections/192211":
+            return {"type": 3, "subject_id": 192211}
+        raise AssertionError(path)
+
+    monkeypatch.setattr(client, "request_json", fake_request_json)
+
+    assert client.get_my_subject_collection(192211) == {"type": 3, "subject_id": 192211}
+    assert calls == [
+        ("GET", "/me"),
+        ("GET", "/users/bool/collections/192211"),
+    ]
+
+
+def test_search_subjects_merges_results_from_keyword_variants(monkeypatch) -> None:
+    client = BangumiClient("token")
+    seen_keywords: list[str] = []
+
+    def fake_request_json(method: str, path: str, *, payload=None, query=None):
+        assert method == "POST"
+        assert path == "/search/subjects"
+        assert query == {"limit": "100", "offset": "0"}
+        seen_keywords.append(payload["keyword"])
+        if payload["keyword"] == "想要成為影之實力者":
+            return {"data": []}
+        if payload["keyword"] == "想要成为影之实力者":
+            return {
+                "data": [
+                    {
+                        "id": 270199,
+                        "name": "陰の実力者になりたくて!",
+                        "name_cn": "想要成为影之实力者！",
+                    }
+                ]
+            }
+        return {"data": []}
+
+    monkeypatch.setattr(client, "request_json", fake_request_json)
+
+    results = client.search_subjects(type("Req", (), {"keyword": "想要成為影之實力者"})())
+
+    assert results[0].subject_id == 270199
+    assert seen_keywords[:2] == ["想要成為影之實力者", "想要成为影之实力者"]

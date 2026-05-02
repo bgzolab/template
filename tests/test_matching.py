@@ -81,11 +81,12 @@ def test_match_search_result_reports_no_result_when_only_cross_script_title_exis
         ],
     )
 
-    assert result.status == "skipped_no_result"
-    assert result.candidate_subjects == []
+    assert result.status == "matched"
+    assert result.subject is not None
+    assert result.subject.subject_id == 312835
 
 
-def test_match_search_result_reports_low_confidence_for_partial_chinese_substrings() -> None:
+def test_match_search_result_reports_ambiguous_for_simplified_traditional_punctuation_variants() -> None:
     request = make_request("再見龍生你好人生")
     result = match_search_result(
         request,
@@ -103,5 +104,35 @@ def test_match_search_result_reports_low_confidence_for_partial_chinese_substrin
         ],
     )
 
-    assert result.status == "skipped_low_confidence"
-    assert [subject.subject_id for subject in result.candidate_subjects] == [27427, 115815, 499432, 595059]
+    assert result.status == "skipped_ambiguous"
+    assert [subject.subject_id for subject in result.candidate_subjects] == [171069, 235408]
+
+
+def test_match_search_result_matches_alias_token_variant() -> None:
+    request = make_request("SPYXFAMILY 間諜過家家")
+    result = match_search_result(
+        request,
+        [
+            BangumiSubject(279379, "SPY×FAMILY", "间谍过家家"),
+            BangumiSubject(637171, "妹よ、その侯爵家令息は間諜です"),
+        ],
+    )
+
+    assert result.status == "matched"
+    assert result.subject is not None
+    assert result.subject.subject_id == 279379
+
+
+def test_match_search_result_avoids_false_positive_for_unrelated_partial_titles() -> None:
+    request = make_request("黃泉的使者")
+    result = match_search_result(
+        request,
+        [
+            BangumiSubject(448305, "让一让，你挡了我的黄泉路", "让一让，你挡了我的黄泉路"),
+            BangumiSubject(598574, "浮生夢之黃泉", "浮生梦之黄泉"),
+            BangumiSubject(318656, "六仙卷二：冥府黃泉一遊禁止攜帶危險物品"),
+        ],
+    )
+
+    assert result.status == "skipped_no_result"
+    assert result.candidate_subjects == []

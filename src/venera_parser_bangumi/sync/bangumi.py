@@ -12,7 +12,7 @@ from ..constants import (
     DEFAULT_USER_AGENT,
     STATE_TO_BANGUMI_TYPE,
 )
-from ..helpers import string_or_none
+from ..helpers import build_search_keywords, string_or_none
 from ..models import BangumiSubject, SyncSearchRequest
 
 
@@ -39,6 +39,7 @@ class BangumiClient:
         self.access_token = access_token
         self.base_url = base_url.rstrip("/")
         self.user_agent = user_agent
+        self._username: str | None = None
 
     @classmethod
     def from_env(cls) -> "BangumiClient":
@@ -48,27 +49,30 @@ class BangumiClient:
         return cls(access_token)
 
     def search_subjects(
-        self, search_request: SyncSearchRequest, *, limit: int = 10
+        self, search_request: SyncSearchRequest, *, limit: int = 100
     ) -> list[BangumiSubject]:
-        payload = {
-            "keyword": search_request.keyword,
-            "sort": "match",
-            "filter": {"type": [1]},
-        }
-        response = self.request_json(
-            "POST",
-            "/search/subjects",
-            payload=payload,
-            query={"limit": str(limit), "offset": "0"},
-        )
-        data = response.get("data", []) if isinstance(response, dict) else []
-        subjects: list[BangumiSubject] = []
-        if isinstance(data, list):
+        subjects_by_id: dict[int, BangumiSubject] = {}
+        for keyword in build_search_keywords(search_request.keyword):
+            payload = {
+                "keyword": keyword,
+                "sort": "match",
+                "filter": {"type": [1]},
+            }
+            response = self.request_json(
+                "POST",
+                "/search/subjects",
+                payload=payload,
+                query={"limit": str(limit), "offset": "0"},
+            )
+            data = response.get("data", []) if isinstance(response, dict) else []
+            if not isinstance(data, list):
+                continue
             for item in data:
                 subject = parse_subject_payload(item)
-                if subject is not None:
-                    subjects.append(subject)
-        return subjects
+                if subject is None:
+                    continue
+                subjects_by_id.setdefault(subject.subject_id, subject)
+        return list(subjects_by_id.values())
 
     def get_subject(self, subject_id: int) -> BangumiSubject:
         response = self.request_json("GET", f"/subjects/{subject_id}")
@@ -81,7 +85,9 @@ class BangumiClient:
 
     def get_my_subject_collection(self, subject_id: int) -> dict[str, Any] | None:
         try:
-            response = self.request_json("GET", f"/users/-/collections/{subject_id}")
+            response = self.request_json(
+                "GET", f"/users/{self.get_username()}/collections/{subject_id}"
+            )
         except BangumiRequestError as exc:
             if str(exc).startswith("404 "):
                 return None
@@ -91,6 +97,18 @@ class BangumiClient:
         if not isinstance(response, dict):
             raise BangumiRequestError("Unexpected collection response format")
         return response
+
+    def get_username(self) -> str:
+        if self._username:
+            return self._username
+        response = self.request_json("GET", "/me")
+        if not isinstance(response, dict):
+            raise BangumiRequestError("Unexpected /me response format")
+        username = string_or_none(response.get("username"))
+        if not username:
+            raise BangumiRequestError("Authenticated user response is missing username")
+        self._username = username
+        return username
 
     def upsert_subject_collection(self, subject_id: int, state: str) -> None:
         self.request_json(

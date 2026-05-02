@@ -2,9 +2,18 @@ from __future__ import annotations
 
 import base64
 import json
+import re
 import unicodedata
 from pathlib import Path
 from typing import Any
+
+from opencc import OpenCC
+
+
+_S2T = OpenCC("s2t")
+_T2S = OpenCC("t2s")
+_PAREN_PATTERN = re.compile(r"\s*[\(（\[【].*?[\)）\]】]\s*")
+_NON_WORD_PATTERN = re.compile(r"[^\w\u3400-\u9fff]+")
 
 
 def string_or_none(value: Any) -> str | None:
@@ -49,6 +58,66 @@ def normalize_title(value: str | None) -> str:
         return ""
     normalized = unicodedata.normalize("NFKC", value).casefold().strip()
     return "".join(normalized.split())
+
+
+def normalize_search_text(value: str | None) -> str:
+    if value is None:
+        return ""
+    normalized = unicodedata.normalize("NFKC", value).strip()
+    normalized = _PAREN_PATTERN.sub(" ", normalized)
+    normalized = _NON_WORD_PATTERN.sub(" ", normalized)
+    return " ".join(normalized.split())
+
+
+def normalize_match_title(value: str | None) -> str:
+    normalized = normalize_search_text(to_simplified(value))
+    return normalized.replace(" ", "")
+
+
+def to_simplified(value: str | None) -> str:
+    if not value:
+        return ""
+    return _T2S.convert(value)
+
+
+def to_traditional(value: str | None) -> str:
+    if not value:
+        return ""
+    return _S2T.convert(value)
+
+
+def build_search_keywords(value: str | None) -> list[str]:
+    if value is None:
+        return []
+
+    raw = unicodedata.normalize("NFKC", value).strip()
+    candidates = [raw]
+    simplified = to_simplified(raw)
+    traditional = to_traditional(raw)
+    candidates.extend([simplified, traditional])
+
+    normalized = normalize_search_text(raw)
+    candidates.append(normalized)
+    candidates.append(normalize_search_text(simplified))
+    candidates.append(normalize_search_text(traditional))
+
+    for text in (raw, simplified, traditional, normalized):
+        if not text:
+            continue
+        for token in re.split(r"\s+", text):
+            token = token.strip()
+            if len(token) >= 3:
+                candidates.append(token)
+
+    seen: set[str] = set()
+    keywords: list[str] = []
+    for item in candidates:
+        item = item.strip()
+        if not item or item in seen:
+            continue
+        seen.add(item)
+        keywords.append(item)
+    return keywords
 
 
 def dump_json(data: dict[str, Any], output: Path | None, pretty: bool) -> None:
