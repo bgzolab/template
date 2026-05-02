@@ -88,3 +88,7 @@ Gopkg.lock
 
 # Copilot
 .github/.bak/**/*.md
+
+# Export files
+*.venera
+*.json
