@@ -5,7 +5,7 @@ from urllib import error as urllib_error
 
 import pytest
 
-from venera_parser_bangumi.sync.bangumi import BangumiAuthError, BangumiClient
+from venera_parser_bangumi.sync.bangumi import BangumiAuthError, BangumiClient, parse_subject_payload
 
 
 def test_bangumi_client_requires_access_token(monkeypatch) -> None:
@@ -31,3 +31,18 @@ def test_bangumi_client_reports_auth_failure(monkeypatch) -> None:
 
     with pytest.raises(BangumiAuthError, match="401 authentication failed"):
         client.get_my_subject_collection(1)
+
+
+def test_parse_subject_payload_reads_platform() -> None:
+    subject = parse_subject_payload(
+        {
+            "id": 171069,
+            "name": "さようなら竜生、こんにちは人生",
+            "name_cn": "再见龙生，你好人生",
+            "platform": "小说",
+        }
+    )
+
+    assert subject is not None
+    assert subject.subject_id == 171069
+    assert subject.platform == "小说"

@@ -43,6 +43,7 @@ class BangumiSubject:
     subject_id: int
     name: str
     name_cn: str | None = None
+    platform: str | None = None
 
 
 @dataclass(frozen=True)

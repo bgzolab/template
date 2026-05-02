@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Callable
 
 from ..constants import STATE_TO_BANGUMI_TYPE
-from ..models import SyncItemResult, SyncRunResult, SyncTarget
+from ..models import BangumiSubject, SyncItemResult, SyncRunResult, SyncTarget
 from .bangumi import BangumiClient, BangumiClientError
 from .candidates import build_search_request, load_sync_candidates
 from .matching import match_search_result
@@ -39,7 +39,8 @@ def run_sync(
                 f"[item {index}/{len(candidates)}] Bangumi returned {len(subjects)} candidate(s)"
             )
             match = match_search_result(search_request, subjects)
-            if match.status != "matched":
+            subject = resolve_subject_for_sync(client, match)
+            if subject is None and match.status != "matched":
                 emit(
                     f"[item {index}/{len(candidates)}] skip {candidate_label}: "
                     f"{describe_match_status(match.status, match.candidate_subjects)}"
@@ -53,20 +54,43 @@ def run_sync(
                 )
                 continue
 
-            current_collection = client.get_my_subject_collection(match.subject.subject_id)
+            if subject is None:
+                subject = client.get_subject(match.subject.subject_id)
+            subject_media_type = classify_subject_media_type(subject)
+            if subject_media_type != "manga":
+                emit(
+                    f"[item {index}/{len(candidates)}] skip {candidate_label}: "
+                    f"matched subject platform={subject.platform or 'unknown'} "
+                    f"classified as {subject_media_type}, not syncing"
+                )
+                run_result.item_results.append(
+                    SyncItemResult(
+                        candidate=candidate,
+                        status="skipped",
+                        reason=(
+                            "non_manga_subject"
+                            if subject_media_type == "novel"
+                            else "unknown_subject_media_type"
+                        ),
+                        subject=subject,
+                    )
+                )
+                continue
+
+            current_collection = client.get_my_subject_collection(subject.subject_id)
             target_type = STATE_TO_BANGUMI_TYPE[candidate.target_state]
             current_type = extract_collection_type(current_collection)
             if current_type == target_type:
                 emit(
                     f"[item {index}/{len(candidates)}] skip {candidate_label}: already synced "
-                    f"to state={candidate.target_state} subject_id={match.subject.subject_id}"
+                    f"to state={candidate.target_state} subject_id={subject.subject_id}"
                 )
                 run_result.item_results.append(
                     SyncItemResult(
                         candidate=candidate,
                         status="skipped",
                         reason="already_synced",
-                        subject=match.subject,
+                        subject=subject,
                         current_type=current_type,
                     )
                 )
@@ -75,30 +99,30 @@ def run_sync(
             if dry_run:
                 emit(
                     f"[item {index}/{len(candidates)}] would update {candidate_label} -> "
-                    f"subject_id={match.subject.subject_id} state={candidate.target_state}"
+                    f"subject_id={subject.subject_id} state={candidate.target_state}"
                 )
                 run_result.item_results.append(
                     SyncItemResult(
                         candidate=candidate,
                         status="would_update",
                         reason="dry_run",
-                        subject=match.subject,
+                        subject=subject,
                         current_type=current_type,
                     )
                 )
                 continue
 
-            client.upsert_subject_collection(match.subject.subject_id, candidate.target_state)
+            client.upsert_subject_collection(subject.subject_id, candidate.target_state)
             emit(
                 f"[item {index}/{len(candidates)}] updated {candidate_label} -> "
-                f"subject_id={match.subject.subject_id} state={candidate.target_state}"
+                f"subject_id={subject.subject_id} state={candidate.target_state}"
             )
             run_result.item_results.append(
                 SyncItemResult(
                     candidate=candidate,
                     status="updated",
                     reason="updated",
-                    subject=match.subject,
+                    subject=subject,
                     current_type=current_type,
                 )
             )
@@ -138,6 +162,40 @@ def describe_match_status(status: str, subjects: list[object]) -> str:
     if status == "skipped_low_confidence":
         return f"low confidence candidates: {format_subjects(subjects)}"
     return status
+
+
+def resolve_subject_for_sync(
+    client: BangumiClient, match
+) -> BangumiSubject | None:
+    if match.status == "matched" and match.subject is not None:
+        return None
+    if match.status != "skipped_ambiguous":
+        return None
+
+    detailed_subjects = [client.get_subject(subject.subject_id) for subject in match.candidate_subjects]
+    manga_subjects = [
+        subject
+        for subject in detailed_subjects
+        if classify_subject_media_type(subject) == "manga"
+    ]
+    if len(manga_subjects) == 1:
+        return manga_subjects[0]
+    return None
+
+
+def classify_subject_media_type(subject: BangumiSubject) -> str:
+    signals = [subject.platform or ""]
+    normalized_signals = [signal.casefold() for signal in signals if signal]
+
+    if any("漫画" in signal or "comic" in signal for signal in normalized_signals):
+        return "manga"
+    if any(
+        token in signal
+        for signal in normalized_signals
+        for token in ("小说", "轻小说", "novel", "文库")
+    ):
+        return "novel"
+    return "unknown"
 
 
 def format_subjects(subjects: list[object]) -> str:

@@ -65,20 +65,19 @@ class BangumiClient:
         subjects: list[BangumiSubject] = []
         if isinstance(data, list):
             for item in data:
-                if not isinstance(item, dict):
-                    continue
-                subject_id = item.get("id")
-                name = item.get("name")
-                if subject_id is None or not isinstance(name, str):
-                    continue
-                subjects.append(
-                    BangumiSubject(
-                        subject_id=int(subject_id),
-                        name=name,
-                        name_cn=string_or_none(item.get("name_cn")),
-                    )
-                )
+                subject = parse_subject_payload(item)
+                if subject is not None:
+                    subjects.append(subject)
         return subjects
+
+    def get_subject(self, subject_id: int) -> BangumiSubject:
+        response = self.request_json("GET", f"/subjects/{subject_id}")
+        if not isinstance(response, dict):
+            raise BangumiRequestError("Unexpected subject response format")
+        subject = parse_subject_payload(response)
+        if subject is None:
+            raise BangumiRequestError("Subject response is missing required fields")
+        return subject
 
     def get_my_subject_collection(self, subject_id: int) -> dict[str, Any] | None:
         try:
@@ -143,3 +142,18 @@ class BangumiClient:
             return json.loads(raw.decode("utf-8"))
         except json.JSONDecodeError as exc:
             raise BangumiRequestError("Response is not valid JSON") from exc
+
+
+def parse_subject_payload(item: object) -> BangumiSubject | None:
+    if not isinstance(item, dict):
+        return None
+    subject_id = item.get("id")
+    name = item.get("name")
+    if subject_id is None or not isinstance(name, str):
+        return None
+    return BangumiSubject(
+        subject_id=int(subject_id),
+        name=name,
+        name_cn=string_or_none(item.get("name_cn")),
+        platform=string_or_none(item.get("platform")),
+    )
