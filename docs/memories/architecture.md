@@ -9,7 +9,7 @@ tags:
 
 ## 项目定位
 
-该仓库当前是一个单脚本工具项目，用于解析 Venera 导出的 `.venera` 数据包，并为后续同步到 Bangumi 做数据准备。
+该仓库当前是一个多模块 Python CLI 工具项目，用于解析 Venera 导出的 `.venera` 数据包，并按指定收藏夹表同步到 Bangumi。
 
 当前已实现的能力：
 
@@ -18,11 +18,10 @@ tags:
 3. 解析 `history.db`、`local_favorite.db`，可选解析 `cookie.db`。
 4. 以摘要或 JSON dump 的方式输出解析结果。
 
-当前未实现但已进入设计范围的能力：
+当前未完全解决的能力：
 
-1. 从 `local_favorite.db` 指定文件夹表读取待同步条目。
-2. 使用 Bangumi API 搜索条目并同步收藏状态。
-3. 对模糊匹配、已存在收藏和失败请求产出可审计结果。
+1. 对跨语言标题差异较大的作品提升匹配成功率。
+2. 在不引入误写风险的前提下增加更强的候选过滤策略。
 
 ## 目录结构
 
@@ -31,6 +30,7 @@ tags:
 ├── 20575-2273.venera
 ├── LICENCE
 ├── README.md
+├── pyproject.toml
 ├── docs/
 │   ├── implementation-plans/
 │   │   └── 20260502-sync-bangumi.md
@@ -39,7 +39,28 @@ tags:
 │       ├── design.md
 │       └── tech-stack.md
 ├── src/
-│   └── parser.py
+│   ├── parser.py
+│   └── venera_parser_bangumi/
+│       ├── __init__.py
+│       ├── archive.py
+│       ├── cli.py
+│       ├── constants.py
+│       ├── helpers.py
+│       ├── models.py
+│       └── sync/
+│           ├── __init__.py
+│           ├── bangumi.py
+│           ├── candidates.py
+│           ├── matching.py
+│           └── service.py
+├── tests/
+│   ├── conftest.py
+│   ├── test_archive.py
+│   ├── test_bangumi_client.py
+│   ├── test_cli.py
+│   ├── test_matching.py
+│   ├── test_service.py
+│   └── test_sync_candidates.py
 └── venera_dump.json
 ```
 
@@ -47,19 +68,37 @@ tags:
 
 ### `src/parser.py`
 
-当前唯一的程序入口，负责：
+当前为薄入口，只负责：
 
-1. CLI 参数解析。
-2. 打开 `.venera` 归档。
-3. 读取 zip 成员清单。
-4. 解析 `appdata.json`。
-5. 将 sqlite 数据库解压到临时目录并读取 schema、列信息、行数，以及可选完整行数据。
+1. 保持脚本执行入口稳定。
+2. 转发到 `venera_parser_bangumi.cli:main`。
+
+### `src/venera_parser_bangumi/cli.py`
+
+当前 CLI 主入口，负责：
+
+1. 用 `click` 声明 `summary`、`dump`、`sync-bangumi` 三个命令。
+2. 校验归档路径和 `--sync <table>=<state>` 输入。
+3. 串接归档解析和 Bangumi 同步服务。
+
+### `src/venera_parser_bangumi/archive.py`
+
+负责归档、`appdata.json`、sqlite 表结构与行数据的解析。
+
+### `src/venera_parser_bangumi/sync/*.py`
+
+同步子模块已经按职责拆分：
+
+1. `candidates.py`：从 `local_favorite.db` 动态表提取 `SyncCandidate`。
+2. `matching.py`：执行标题规范化和候选匹配判定。
+3. `bangumi.py`：封装 Bangumi 最小 HTTP 客户端。
+4. `service.py`：编排 dry-run、幂等跳过、更新和报告输出。
 
 当前 CLI 子命令：
 
 1. `summary`：打印可读摘要。
 2. `dump`：导出完整 JSON。
-3. `sync-bangumi`：读取指定 `local_favorite.db` 动态表，提取同步候选项，并准备 Bangumi 搜索请求。
+3. `sync-bangumi`：读取指定 `local_favorite.db` 动态表，搜索 Bangumi，做幂等判定，并输出摘要或 JSON 报告。
 
 ### `20575-2273.venera`
 
@@ -78,6 +117,17 @@ tags:
 1. 观察当前解析结构。
 2. 编写过滤和映射逻辑。
 3. 为同步计划补充字段依据。
+
+### `tests/*.py`
+
+自动验收入口，当前覆盖：
+
+1. `click` 参数约束。
+2. `.venera` 样本解析。
+3. 动态收藏夹提取。
+4. 标题匹配逻辑。
+5. Bangumi 鉴权失败路径。
+6. dry-run 和幂等更新编排。
 
 ### `docs/memories/*.md`
 
@@ -135,12 +185,13 @@ Venera 导出文件是 zip 归档，不是自定义二进制协议。当前解�
 
 当前主数据流如下：
 
-1. CLI 解析子命令和通用参数。
-2. `parse_archive()` 打开归档并调度成员解析。
-3. `parse_appdata()` 处理 JSON 设置摘要。
-4. `parse_databases()` 将数据库临时落盘。
-5. `parse_sqlite_database()` 读取 schema、列、行数和可选行数据。
-6. `print_summary()` 或 `dump_json()` 输出结果。
+1. `click` CLI 解析子命令和参数。
+2. `archive.py` 打开归档并调度成员解析。
+3. `helpers.py` 负责通用规范化和 JSON 输出。
+4. `sync/candidates.py` 提取目标表候选项。
+5. `sync/matching.py` 产出匹配决策。
+6. `sync/bangumi.py` 调用 Bangumi API。
+7. `sync/service.py` 汇总 `updated`、`would_update`、`skipped`、`failed`。
 
 `sync-bangumi` 分支当前的局部数据流如下：
 
@@ -149,7 +200,10 @@ Venera 导出文件是 zip 归档，不是自定义二进制协议。当前解�
 3. 读取指定动态表并转换为 `SyncCandidate`。
 4. 将候选项转换为 `SyncSearchRequest`。
 5. 通过 `BangumiClient.from_env()` 校验 `ACCESS_TOKEN`。
-6. 当前已具备 Bangumi API 客户端，但尚未进入完整同步写入阶段。
+6. 搜索 Bangumi subject 并做匹配判定。
+7. 查询当前收藏状态。
+8. 根据幂等规则决定 `would_update`、`updated` 或 `skipped`。
+9. 可选写出 JSON 报告。
 
 后续 Bangumi 同步功能应沿着现有 CLI 入口扩展，不应绕过当前解析层直接操作原始 zip 内容。
 

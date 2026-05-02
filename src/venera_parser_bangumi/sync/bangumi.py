@@ -1,0 +1,145 @@
+from __future__ import annotations
+
+import json
+import os
+from typing import Any
+from urllib import error as urllib_error
+from urllib import parse as urllib_parse
+from urllib import request as urllib_request
+
+from ..constants import (
+    DEFAULT_BANGUMI_API_BASE_URL,
+    DEFAULT_USER_AGENT,
+    STATE_TO_BANGUMI_TYPE,
+)
+from ..helpers import string_or_none
+from ..models import BangumiSubject, SyncSearchRequest
+
+
+class BangumiClientError(RuntimeError):
+    pass
+
+
+class BangumiAuthError(BangumiClientError):
+    pass
+
+
+class BangumiRequestError(BangumiClientError):
+    pass
+
+
+class BangumiClient:
+    def __init__(
+        self,
+        access_token: str,
+        *,
+        base_url: str = DEFAULT_BANGUMI_API_BASE_URL,
+        user_agent: str = DEFAULT_USER_AGENT,
+    ) -> None:
+        self.access_token = access_token
+        self.base_url = base_url.rstrip("/")
+        self.user_agent = user_agent
+
+    @classmethod
+    def from_env(cls) -> "BangumiClient":
+        access_token = os.environ.get("ACCESS_TOKEN", "").strip()
+        if not access_token:
+            raise BangumiAuthError("ACCESS_TOKEN environment variable is required")
+        return cls(access_token)
+
+    def search_subjects(
+        self, search_request: SyncSearchRequest, *, limit: int = 10
+    ) -> list[BangumiSubject]:
+        payload = {
+            "keyword": search_request.keyword,
+            "sort": "match",
+            "filter": {"type": [1]},
+        }
+        response = self.request_json(
+            "POST",
+            "/search/subjects",
+            payload=payload,
+            query={"limit": str(limit), "offset": "0"},
+        )
+        data = response.get("data", []) if isinstance(response, dict) else []
+        subjects: list[BangumiSubject] = []
+        if isinstance(data, list):
+            for item in data:
+                if not isinstance(item, dict):
+                    continue
+                subject_id = item.get("id")
+                name = item.get("name")
+                if subject_id is None or not isinstance(name, str):
+                    continue
+                subjects.append(
+                    BangumiSubject(
+                        subject_id=int(subject_id),
+                        name=name,
+                        name_cn=string_or_none(item.get("name_cn")),
+                    )
+                )
+        return subjects
+
+    def get_my_subject_collection(self, subject_id: int) -> dict[str, Any] | None:
+        try:
+            response = self.request_json("GET", f"/users/-/collections/{subject_id}")
+        except BangumiRequestError as exc:
+            if str(exc).startswith("404 "):
+                return None
+            raise
+        if response is None:
+            return None
+        if not isinstance(response, dict):
+            raise BangumiRequestError("Unexpected collection response format")
+        return response
+
+    def upsert_subject_collection(self, subject_id: int, state: str) -> None:
+        self.request_json(
+            "POST",
+            f"/users/-/collections/{subject_id}",
+            payload={"type": STATE_TO_BANGUMI_TYPE[state]},
+        )
+
+    def request_json(
+        self,
+        method: str,
+        path: str,
+        *,
+        payload: dict[str, Any] | None = None,
+        query: dict[str, str] | None = None,
+    ) -> Any:
+        url = self.base_url + path
+        if query:
+            url += "?" + urllib_parse.urlencode(query)
+        body = None
+        headers = {
+            "Accept": "application/json",
+            "Authorization": f"Bearer {self.access_token}",
+            "User-Agent": self.user_agent,
+        }
+        if payload is not None:
+            body = json.dumps(payload).encode("utf-8")
+            headers["Content-Type"] = "application/json"
+
+        request = urllib_request.Request(url, data=body, headers=headers, method=method)
+        try:
+            with urllib_request.urlopen(request) as response:
+                raw = response.read()
+        except urllib_error.HTTPError as exc:
+            message = exc.read().decode("utf-8", errors="replace").strip()
+            if exc.code in {401, 403}:
+                raise BangumiAuthError(
+                    f"{exc.code} authentication failed: {message or exc.reason}"
+                ) from exc
+            raise BangumiRequestError(
+                f"{exc.code} request failed: {message or exc.reason}"
+            ) from exc
+        except urllib_error.URLError as exc:
+            raise BangumiRequestError(f"Network error: {exc.reason}") from exc
+
+        if not raw:
+            return None
+        try:
+            return json.loads(raw.decode("utf-8"))
+        except json.JSONDecodeError as exc:
+            raise BangumiRequestError("Response is not valid JSON") from exc

@@ -1,0 +1,17 @@
+[project]
+name = "venera-parser-bangumi"
+version = "0.1.0"
+description = "Parse Venera exports and sync selected favorites to Bangumi."
+requires-python = ">=3.12"
+dependencies = [
+  "click>=8.1,<9",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

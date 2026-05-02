@@ -85,27 +85,71 @@ tags:
 2. 零结果会进入 `skipped_no_result`。
 3. 多结果精确命中会进入 `skipped_ambiguous`。
 
-### 2026-05-02 Step 4 进行中
+### 2026-05-02 Step 4 完成
 
 已完成内容：
 
-1. 新增 `BangumiClient`，基于 Python 标准库封装最小 API 调用。
+1. 已将 Bangumi 客户端拆分到 `src/venera_parser_bangumi/sync/bangumi.py`。
 2. 已实现搜索条目、读取当前用户收藏、更新收藏状态三个客户端方法。
 3. 已固定 `Authorization: Bearer <token>` 和显式 `User-Agent`。
 4. `sync-bangumi` 现在会先检查 `ACCESS_TOKEN` 是否存在，再继续后续流程。
+5. 已补充 `pytest` 覆盖缺 token、鉴权失败等验收路径。
 
 已通过验收：
 
 1. 未设置 `ACCESS_TOKEN` 时，命令会在发请求前失败。
 2. 使用无效 token 时，最小读请求会返回明确的鉴权错误。
+3. 使用 `.env` 中有效 token 执行真实 `sync-bangumi --dry-run` 时，认证和搜索链路可正常返回结果。
 
-待完成验收：
+额外观察：
 
-1. 使用有效 token 对真实 Bangumi API 发起最小读请求，并确认响应能被解析。
+1. 样本 `DONE: 電鋸人` 在真实 API 中落为 `skipped_low_confidence`，这是当前标题别名差异导致的匹配限制，不是客户端或鉴权故障。
 
-阻塞原因：
+### 2026-05-02 Step 5 完成
 
-1. 当前终端环境中 `ACCESS_TOKEN` 未设置，因此无法完成这一步的正向 smoke test。
+已完成内容：
+
+1. 已在 `src/venera_parser_bangumi/sync/service.py` 中接线幂等判定流程。
+2. 对每个已匹配 subject，会先读取当前收藏状态。
+3. 已实现 `already_synced` 跳过分支和实际更新分支。
+4. 单条失败不会中断整批结果汇总。
+
+已通过验收：
+
+1. 通过 `pytest` 伪造客户端验证：目标状态一致时不会发送写请求。
+2. 通过 `pytest` 伪造客户端验证：状态不一致时会发送一次更新请求。
+3. 失败条目会进入 `failed` 计数，而不是使程序提前退出。
+
+说明：
+
+1. 未对真实 Bangumi 账号执行写入 smoke test，以避免未经确认修改用户线上收藏状态。
+
+### 2026-05-02 Step 6 完成
+
+已完成内容：
+
+1. 已实现 `--dry-run`，会执行解析、搜索、匹配和当前状态查询，但不发送写请求。
+2. 已实现结果汇总，覆盖 `updated`、`would_update`、`skipped`、`failed`。
+3. 已为每条记录保留跳过或失败原因。
+4. 已支持通过 `--report-output` 导出 JSON 报告。
+
+已通过验收：
+
+1. `pytest` 已验证 dry-run 仅产生 `would_update`，不会调用写请求。
+2. 真实 `.env` dry-run 烟测能输出完整统计摘要并正常结束。
+3. 汇总结果中的计数与候选处理结果一致。
+
+### 2026-05-02 Step 7 部分完成
+
+已完成内容：
+
+1. 已更新 `README.md` 的 CLI 用法，补充 `sync-bangumi`、`ACCESS_TOKEN` 和测试命令。
+2. 已更新 `docs/memories` 中的架构、设计和技术栈说明。
+3. 已将验收基线切换为 `pytest`，手工命令只保留为烟测。
+
+待完成内容：
+
+1. 如果要把该功能视为“真实可用同步”，仍需继续优化跨语言标题匹配，以降低真实样本中的 `skipped_low_confidence`。
 
 ## 实施步骤
 

@@ -14,22 +14,26 @@ tags:
 3. 允许从单文件脚本开始，但当职责明显分叉时要及时拆分模块。
 4. 任何新增功能都需要配套最小可执行验证，而不是只靠肉眼检查。
 5. 对外部 API 的写操作默认要求幂等、防误写和清晰日志。
+6. 注重模块化（多文件）和禁止单体巨文件（monolith），代码行数 < 1000；
+7. 任何代码必须包含单元测试，且测试覆盖率尽量达到 100%；
+8. 任何大段的代码必须包含文档注释，且注释内容须易于理解、准确，最好使用简体中文；
 
 ## Tech Stack
 
 ### 当前已采用
 
 1. Python 3 作为唯一实现语言；当前环境已验证可运行在 Python 3.14。
-2. 标准库为主：`argparse`、`json`、`sqlite3`、`zipfile`、`tempfile`、`pathlib`、`urllib.request`。
+2. 标准库为主：`json`、`sqlite3`、`zipfile`、`tempfile`、`pathlib`、`urllib.request`。
 3. SQLite 作为 Venera 导出数据中的嵌入式数据库格式。
 4. JSON 作为结构化中间输出格式。
-5. 单文件 CLI 入口：`src/parser.py`。
+5. `click` 作为 CLI 框架。
+6. `pytest` 作为自动化测试框架。
+7. 多模块包结构位于 `src/venera_parser_bangumi/`，`src/parser.py` 仅保留薄入口。
 
 ### 当前未采用
 
-1. 仓库内目前没有 `pyproject.toml`、`requirements.txt` 或 Poetry 配置。
-2. 仓库内目前没有测试框架依赖声明。
-3. 当前实现没有 HTTP 客户端依赖，因为还未接入 Bangumi API。
+1. 当前仍未引入 Poetry 或第三方 HTTP 客户端库。
+2. 当前仍以标准库 `urllib.request` 完成 Bangumi API 访问。
 
 因此，不能把 Poetry、发布流程或第三方 HTTP 库当成既成事实写入项目记忆。
 
@@ -49,10 +53,12 @@ tags:
 2. 请求必须携带 `Authorization: Bearer <token>`。
 3. 请求必须显式设置项目自己的 `User-Agent`，不能依赖默认值。
 4. 所有写操作前都要先做读检查，以保证幂等。
+5. 真实 Bangumi 搜索结果会受到简繁体和别名差异影响，低置信度跳过是允许且预期的结果。
 
 ### 工程化约定
 
 1. 临时解压文件可以放在受控的临时目录中，但同步逻辑不能依赖不可追踪的人工临时文件。
 2. 如果后续引入新的命令或模块，需要同时更新 `README.md` 和 `docs/memories`。
 3. 如果后续引入 Bangumi subject 本地映射缓存，需要单独记录其存储格式、生命周期和失效策略。
+4. 功能验收默认以自动化测试为准，手工命令只作为补充烟测，不能替代测试。
 

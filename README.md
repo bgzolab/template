@@ -17,13 +17,43 @@ A script to parse the data exported from Bangumi's Venera app, which includes us
 
 ```shell
 # 查看摘要
-python3 parser.py summary 20575-2273.venera
+python3 src/parser.py summary 20575-2273.venera
 
 # 导出完整 JSON
-python3 parser.py dump 20575-2273.venera --include-rows --pretty -o venera_dump.json
+python3 src/parser.py dump 20575-2273.venera --include-rows --pretty -o venera_dump.json
 
 # 连 cookie.db 一起解析
 # 在上面的命令后追加 --include-cookie-db
+```
+
+### Bangumi Sync
+
+```shell
+# 安装运行依赖
+python3 -m pip install -e .
+
+# dry-run，同步本地 DONE 表到 Bangumi done
+export ACCESS_TOKEN="your-token"
+python3 src/parser.py sync-bangumi 20575-2273.venera --sync DONE=done --dry-run
+
+# 同步多个表，并输出审计报告
+python3 src/parser.py sync-bangumi 20575-2273.venera \
+  --sync Doing=doing \
+  --sync DONE=done \
+  --dry-run \
+  --report-output reports/dry-run.json
+```
+
+说明：
+
+1. `ACCESS_TOKEN` 只从环境变量读取。
+2. `--dry-run` 会执行解析、搜索、匹配和当前收藏读取，但不会发写请求。
+3. 当前项目已切换为 `click` CLI，所有自动验收以 `pytest` 为准。
+
+### Tests
+
+```shell
+python3 -m pytest
 ```
 
 <!--
