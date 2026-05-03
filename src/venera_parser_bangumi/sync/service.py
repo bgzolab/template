@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from dataclasses import replace
 from pathlib import Path
 from typing import Callable
@@ -51,6 +50,31 @@ def run_sync(
                 f"[item {index}/{len(candidates)}] Bangumi returned {len(subjects)} candidate(s)"
             )
             match = match_search_result(search_request, subjects)
+            matched_subject = None
+            if match.status == "matched" and match.subject is not None:
+                matched_subject = client.get_subject(match.subject.subject_id)
+                target_type = STATE_TO_BANGUMI_TYPE[candidate.target_state]
+                current_collection = client.get_my_subject_collection(matched_subject.subject_id)
+                current_type = extract_collection_type(current_collection)
+                if current_type == target_type:
+                    emit(
+                        f"[item {index}/{len(candidates)}] skip {candidate_label}: already synced "
+                        f"to state={candidate.target_state} subject_id={matched_subject.subject_id}"
+                    )
+                    run_result.item_results.append(
+                        cache_and_return_result(
+                            cached_results,
+                            cache_key,
+                            SyncItemResult(
+                                candidate=candidate,
+                                status="skipped",
+                                reason="already_synced",
+                                subject=matched_subject,
+                                current_type=current_type,
+                            ),
+                        )
+                    )
+                    continue
             subject = resolve_subject_for_sync(client, search_request, subjects, match)
             if subject is None and match.status != "matched":
                 emit(
@@ -71,7 +95,7 @@ def run_sync(
                 continue
 
             if subject is None:
-                subject = client.get_subject(match.subject.subject_id)
+                subject = matched_subject or client.get_subject(match.subject.subject_id)
             subject_media_type = classify_subject_media_type(subject)
             if subject_media_type != "manga":
                 emit(

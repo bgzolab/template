@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from venera_parser_bangumi.models import BangumiSubject, SyncCandidate, SyncSearchRequest, SyncTarget
 from venera_parser_bangumi.sync import service
 from venera_parser_bangumi.sync.service import (
@@ -152,6 +154,27 @@ def test_run_sync_reuses_cached_results_for_normalized_duplicate_titles(sample_a
     assert result.counts["skipped"] == 2
     assert client.search_limit_calls == [100]
     assert client.collection_calls == [356902]
+
+
+def test_run_sync_checks_collection_before_further_resolution_for_direct_match(sample_archive, monkeypatch) -> None:
+    monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
+    client = FakeBangumiClient(
+        subjects=[BangumiSubject(123, "ONE PIECE", "海贼王")],
+        subject_detail=BangumiSubject(123, "ONE PIECE", "海贼王", "漫画"),
+        collection={"type": 2},
+    )
+
+    result = run_sync(
+        sample_archive,
+        [SyncTarget("DONE", "done")],
+        dry_run=False,
+        client=client,
+    )
+
+    assert result.counts["skipped"] == 1
+    assert result.item_results[0].reason == "already_synced"
+    assert client.search_limit_calls == [100]
+    assert client.collection_calls == [123]
 
 
 def test_run_sync_updates_when_status_differs(sample_archive, monkeypatch) -> None:
