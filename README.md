@@ -21,16 +21,20 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-03 | [猫鱼周刊 vol. 097 五一快乐](https://ameow.xyz/archives/weekly-097) | 关于本刊 这是猫鱼周刊的第 98 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 博客： 阿猫的博客-猫鱼周刊 RSS： 猫鱼周刊 邮件订阅： 猫鱼周刊 微信公众号： 猫兄的和谐号列车 私信： leslieleung@proton.me INIT 摄于香港九龙城区保良局颜宝铃书院外，… |
+| 2026-05-03 | [五一流水账 0503](https://blog.solazy.me/20260503/) | 假期不知不觉来到第三天 |
 | 2026-05-03 | [歪马精酿 全麦原浆](https://7gugu.com/index.php/2026/05/03/%e6%ad%aa%e9%a9%ac%e7%b2%be%e9%85%bf-%e5%85%a8%e9%ba%a6%e5%8e%9f%e6%b5%86/) | 外观：深黄色 清澈透光 气泡消散慢 闻香：麦味 口感：强沙口感 味道：清澈的啤酒花味，无杂味 总结：口感清爽的 … 继续阅读 “歪马精酿 全麦原浆” |
 | 2026-05-03 | [苹果公司在人工智能热潮导致供应短缺后，将 Mac Mini 的起售价提高至 799 美元](https://blog.rustfisher.com/news/apple-mac-price-20260503/) | 苹果公司将 Mac mini 台式机的起售价从 599 美元提高到 799 美元，以应对人工智能需求和处理器供应紧张导致的库存短缺 |
 | 2026-05-03 | [关于养狗](https://lomus.cc/archives/764) | 一般来说五一期间由于人流过多等原因，我不太会出去玩，但我会回老家待几天。 回家的生活基本可以预知，无非就是图个 […] 关于养狗 最先出现在 Lumos's Blog 。 |
 | 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/2026/05/03/23391/) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-03 | [2026年第17、18周](https://blog.sakoamc.com/posts/261718/) | 题记：无题。 |
 | 2026-05-02 | [深夜](https://www.l1ch40.com/2026/05/blog-post.html) | 我每次都是临新年的前一天回到家，但我今年记错了新年的日子，等到家时发现回来早了。 回到了家，我父母没有催我找对象的事情，可能是我之前的非暴力不合作的行为起了作用，但是说实话内心却有些不对味，好像我真被这个时代淘汰了一样，他妈的，狗屁的时代。 日子稀里糊涂地过。我天天找发小喝酒，喝到失重，仿佛喝完就能… |
+| 2026-05-02 | [May Day memories--Always remember to look up at the stars](https://tianheg.co/posts/may-day-memories-en/) | Shenzhen to Hangzhou On the evening of April 29th, I set off for home, carrying an old backpack. I couldn't remember how many years I'd had it — I onl… |
+| 2026-05-02 | [五一回忆——永远记得抬头看天上的星星](https://tianheg.co/posts/may-day-memories/) | 深圳飞杭州 四月二十九日晚我启程回家，背了一个旧书包，不知道用了几年，只知道这次回来差点把它的拎手扯断。包里装着换下还没洗的衣服，还有一套换洗衣服（短袖、短裤、内裤和袜子），外加一条短裤、长裤和一个剃须刀。除此之外，还背了一个斜挎小包，里面装着墨水屏阅读器、3C充电宝、深圳家的钥匙。 晚上没加班，八… |
 | 2026-05-02 | [不想再流浪](https://www.geedea.pro/article/stray-no-more/) | 如今每次回家，我爸都会想方设法在餐桌上提起我的不念家，这次在我姑姑家，问我表哥，现在回家的时候还会不会有激动的感觉，我表哥说可能有点吧，我爸说，我已经没有了。也不知道是不是圆滑，我表哥说我爸应该感到高兴，因为成功、理性的人就是这样的，不念家——总之我说不出这种话来。我已经接受，这些已经活到四十多岁，… |
 | 2026-05-02 | [macOS 上玩 PC 游戏：植物大战僵尸（Plants vs. Zombies）](https://springwood.me/pc-plants-vs-zombies/) | 有大神开发出了可以在 macOS 上原生运行的版本。 |
 | 2026-05-02 | [早晚拿下大行 P10](https://hux.ink/posts/go-to-buy-dahang-p10/) | 下午去离家最近的大行线下门店看了一下，离家三公里，其实可以走路或者扫共享单车过去，然后骑新车回来。但是选择了骑小电驴过去，能避免当场“Shut up and take my money”的情况出现。 主要是看 P8 和 P10，我对折叠车不了解，大行好像是绕不过去的牌子。 为什么考虑折叠车呢，主因是… |
-| 2026-05-02 | [桐乡旅游流水账 0502](https://blog.solazy.me/20260502/) | 闪现桐乡！ |
+| 2026-05-02 | [五一流水账 0502](https://blog.solazy.me/20260502/) | 闪现桐乡！ |
 | 2026-05-02 | [最近使用debian系统的一些心得](https://hellodk.cn/post/1215) | 我将分为三个方面来简单聊聊：多系统共存和debian安装、驱动我的硬件、程序使用。多系统共存和debian系统安装现在都 2026年了，虽然这两年固态硬盘涨价了，但我还是建议使用 whole s... |
 | 2026-05-02 | [深入 SwiftWork（第 1 篇）：SDK 集成层——把 AsyncStream 接进 SwiftUI](https://gptkit.eth.limo/B0266B1F-C82E-4C98-A3F3-C2A87BF61434/) | 本文是「深入 SwiftWork」系列第 1 篇。 系列目录见这里 。 第 0 篇画了全景图—— AsyncStream → AgentBridge → EventMapper → SwiftUI 。这篇拆开中间两层：AgentBridge 和 EventMapper，看它们怎么把 SDK 的消息流… |
 | 2026-05-02 | [深入 SwiftWork（第 0 篇）：用 SwiftUI 构建一个 Agent 可视化工作台](https://gptkit.eth.limo/7914B020-3118-44B1-B30F-458B99DB49AE/) | 本文是「深入 SwiftWork」系列第 0 篇。 系列目录见这里 。 前面七篇文章加上番外篇，我们把 Open Agent SDK 的内部机制翻了个底朝天——Agent Loop、工具系统、MCP 集成、多 Agent 协作、会话持久化、多 LLM 支持。番外篇还把 SDK 塞进了一个 macOS… |
