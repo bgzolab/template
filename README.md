@@ -11,7 +11,42 @@
 
 A script to parse the data exported from Bangumi's Venera app, which includes users' watching history, ratings, collections, and more. The parsed data can be used for various purposes such as data analysis, visualization, or migration to other platforms.
 
+## Quick Start
+
+1. Install from frok
+
+```shell
+git clone --branch 2026/05/venera-parser-bangumi-sync https://github.com/bGZo/playground.git
+cd playground
+pipx install . 
+```
+
+2. Install from PyPI
+
+```shell
+pipx install venera-parser-bangumi
+```
+
 ## Usage
+
+> [!NOTE]
+> Use `venera-sync-bangumi` replace `python3 src/parser.py` after installation from PyPI.
+
+```shell
+❯ venera-sync-bangumi --help
+Usage: venera-sync-bangumi [OPTIONS] COMMAND [ARGS]...
+
+  Parse Venera exported archives and sync selected
+  favorites to Bangumi.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  dump
+  summary
+  sync-bangumi
+```
 
 ### Parser
 
