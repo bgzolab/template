@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "venera-parser-bangumi"
-version = "0.1.1"
+version = "0.1.2"
 description = "Parse Venera exports and sync selected favorites to Bangumi."
 authors = [
     {name = "hx",email = "im@bgzo.cc"}

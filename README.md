@@ -5,8 +5,6 @@
 [![Licence](https://img.shields.io/github/license/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/blob/template/LICENCE)
 [![Telegram](https://img.shields.io/badge/-telegram-black.svg?style=for-the-badge&logo=telegram&colorB=555)](https://t.me/imbGZo)
 
-![Playground Name Screen Shot](https://img.bgzo.cc/2025/202508021439235.JPG)
-
 # Venera Parser for Bangumi
 
 A script to parse the data exported from Bangumi's Venera app, which includes users' watching history, ratings, collections, and more. The parsed data can be used for various purposes such as data analysis, visualization, or migration to other platforms.
