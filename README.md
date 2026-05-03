@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-02 | [深夜](https://www.l1ch40.com/2026/05/blog-post.html) | 我每次都是临新年的前一天回到家，但我今年记错了新年的日子，等到家时发现回来早了。 回到了家，我父母没有催我找对象的事情，可能是我之前的非暴力不合作的行为起了作用，但是说实话内心却有些不对味，好像我真被这个时代淘汰了一样，他妈的，狗屁的时代。 日子稀里糊涂地过。我天天找发小喝酒，喝到失重，仿佛喝完就能… |
 | 2026-05-02 | [不想再流浪](https://www.geedea.pro/article/stray-no-more/) | 如今每次回家，我爸都会想方设法在餐桌上提起我的不念家，这次在我姑姑家，问我表哥，现在回家的时候还会不会有激动的感觉，我表哥说可能有点吧，我爸说，我已经没有了。也不知道是不是圆滑，我表哥说我爸应该感到高兴，因为成功、理性的人就是这样的，不念家——总之我说不出这种话来。我已经接受，这些已经活到四十多岁，… |
 | 2026-05-02 | [macOS 上玩 PC 游戏：植物大战僵尸（Plants vs. Zombies）](https://springwood.me/pc-plants-vs-zombies/) | 有大神开发出了可以在 macOS 上原生运行的版本。 |
 | 2026-05-02 | [早晚拿下大行 P10](https://hux.ink/posts/go-to-buy-dahang-p10/) | 下午去离家最近的大行线下门店看了一下，离家三公里，其实可以走路或者扫共享单车过去，然后骑新车回来。但是选择了骑小电驴过去，能避免当场“Shut up and take my money”的情况出现。 主要是看 P8 和 P10，我对折叠车不了解，大行好像是绕不过去的牌子。 为什么考虑折叠车呢，主因是… |
@@ -33,7 +34,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-02 | [深入 SwiftWork（第 2 篇）：事件时间线——18 种事件的可视化与性能](https://gptkit.eth.limo/6EF0434F-164C-4AC4-8043-A9095CF12118/) | 本文是「深入 SwiftWork」系列第 2 篇。 系列目录见这里 。 第 1 篇讲了 AgentBridge 怎么把 SDK 的 AsyncStream 变成 [AgentEvent] 。这篇看 [AgentEvent] 变成什么——TimelineView 怎么渲染 18 种事件、怎么处理滚屏行… |
 | 2026-05-02 | [【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/) | 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。 |
 | 2026-05-02 | [童真易满 成人难欢](https://hux.ink/posts/tong-zhen-yi-man/) | 昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官… |
-| 2026-05-02 | [EPIC 大气！《霍格沃茨之遗》免费领取，必玩“哈利波特”魔法世界游戏大作！](https://www.iplaysoft.com/hogwarts-legacy.html) | 为庆祝哈利波特 25 周年，Epic 游戏商城搞了一个“王炸”级的福利！这次免费赠送给玩家的是——《霍格沃茨之遗》(Hogwarts Legacy)！ 这可是原价￥384 元的 3A 游戏大作啊！而且还是基于「哈利波特」世界观的精良制作。不得不说，E 宝送游戏是真够大气！刚宣布限免 Epic 服务器… |
+| 2026-05-02 | [EPIC 大气！《霍格沃茨之遗》免费领取，必玩“哈利波特”魔法世界游戏大作！](https://www.iplaysoft.com/hogwarts-legacy.html) | 为庆祝哈利波特 25 周年， Epic 游戏商城搞了一个“王炸”级的福利！这次免费赠送给玩家的是——《 霍格沃茨之遗 》(Hogwarts Legacy)！ 这可是原价￥384 元的 3A 游戏 大作啊！而且还是基于「 哈利波特 」世界观的精良制作。不得不说，E 宝送游戏是真够大气！上一次刚宣布限免… |
 | 2026-05-02 | [suede演唱会](https://www.aowugong.top/posts/blog-2026-04-25/) | https://cdn.aowugong.top/gh/howie110/obsidian_img/cdnimg/fdd1ce95534d75e9cb1d4a500d783e4e.jpg |
 | 2026-05-02 | [Memos #2026-05-01](https://www.taober.blog/memos) | 13:25 五一劳动节，深圳开火第一顿：酸菜萝卜丝炒吊龙！ |
 | 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
@@ -105,16 +106,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-26 | [自深深处](https://kaix.in/2026/0426/) | 奥斯卡·王尔德大名鼎鼎，但这《自深深处》是我读完过他的第一本作品。才华、学识，轮不到我去评价，但是人在情感上的脆弱和必然遭遇的悲剧，啊，我（作为一个社交场所的经营者）见的或许比王尔德还要多一些。所以大概读到五分之一，我已经知道他之后还会和波西纠缠不清——读完本书去查资料，果然得到证实： 妳辜负了我；… |
 | 2026-04-26 | [西瓜备份 - 免费替代 iCloud！将 iPhone 相册备份到 WebDAV / SMB 或外置硬盘](https://www.iplaysoft.com/p/watermelon-backup) | 我们知道，直接买大容量的 iPhone 手机贵得让人肉疼，而每个月花钱订阅 iCloud 云服务又觉得像是在交永远停不下来的租金；不少人会选择夸克、百度网盘、115 网盘等第三方网盘。 而如果你自己有外置硬盘、局域网电脑、NAS 或 VPS 服务器，还可以将 iPhone 相册的照片视频备份到它们上… |
 | 2026-04-26 | [和H小姐的约会](https://1900.live/he-hxiao-jie-de-yue-hui/) | Photo by Jose P. Ortiz / Unsplash 首先承认这次的标题是900%具有标题党嫌疑的，但是这样写我觉得会更有意思，而且除开不能牵手等显示层面的动作，至少符合私密、聊心事、聊八卦等等。 H小姐指的是我最近搭建的 Hermes Agent ，这是一款类似OpenClaw的AI… |
-| 2026-04-25 | [2026.4.25](https://www.justzht.com/2026-4-25/) | Cayman 修好回来了，多了两千块的账单。坏的这个倒车雷达大概率还是之前 Porsche Fremont 的 Collision Center 拆保险杠搞出来的，但他们很鸡 |
-| 2026-04-25 | [下一代人有可能是人类演化的又一次分叉：论 AI 对教育和人性的威胁](https://pathos.page/blog/ai-education-humanity/) | AI让“说出正确句子”的传统教育失去动力，但人类理解的根基在于试错，它是思想与神经秩序的塑造过程。若下一代放弃这种痛苦的学习，将丧失人性生成的契机。坚持内化思考者与外包思考者，其大脑与生命体验将根本分化，可能成为人类演化的分叉起点。 |
-| 2026-04-25 | [周末流水账 0425](https://blog.solazy.me/20260425/) | 周六了！ |
-| 2026-04-25 | [日本关西系列｜Day 4 奈良的小鹿乖乖](https://blog.yasking.org/a/series-kansai-travel-day4.html) | 中午起来，在附近搜索到评价还不错的面馆，味道尚可，就是这个肉有些肥腻，点的小食鸡块味道很好！ 今天的行程是去奈良 … |
-| 2026-04-25 | [设计素材周刊【#009期】](https://www.iyeslogo.com/dtw-009/) | 「设计周刊」是我利用零碎时间尝试做的新版快，梳理记录一些对设计师有启发或者比较实用的网站、工具或前沿动态。目的是为以后更好构建自己知识体系，也为了将这些内容分享给你 |
-| 2026-04-25 | [Zine#48](https://taxodium.ink/48.html) | Zine#48 🎵 Sometimes It Snows in April - Prince News &#124; Article 目录 The 'Paperwork Flood': How I Drowned a Bureaucrat before dinner. by Robert Kingett Wr… |
-| 2026-04-25 | [浏览器通过WebGPU上做AI推理](https://blog.est.im/2026/stdout-14) | 先说结论，在2026Q2这个时间点，通过浏览器webgpu 做 AI 不值得。 本来看 官方demo 跑得好好的，自己搓下来也觉得没啥，就一个小问题，fp32的模型有点大，最好换 q8 的。 q8的不能在 webgpu上跑，wasm也凑合用。原因是缺少一些矩阵乘法算子。开源库嘛，也理解。只是速度就慢… |
-| 2026-04-25 | [微软计划首次对美国员工进行自愿买断，涉及至多7%的员工](https://blog.rustfisher.com/news/microsoft-retire-plan-20260425/) | 据一位知情人士透露，约有7%的美国员工符合资格。由于具体数字尚未公开，该人士要求匿名。这项一次性退休计划于周四在一份备忘录中宣布，将面向美国高级总监及以下级别的员工，前提是他们的工龄和年龄总和达到或超过70年。 |
-| 2026-04-25 | [记录 typecho 1.2.0 升级到 1.3.0 过程](https://hellodk.cn/post/1213) | 主要过程我的 typecho 是基于 docker compose 部署安装的。当前的 compose 文件如下services: typecho: container_name: ty... |
-| 2026-04-25 | [第一千篇](https://mobius.blog/23260.html) | 如果这篇文章能发表出来，那就意味着这个博客发布了第一千篇文章。现在是2021年的12月26日，发表完《写在20 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
