@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import pytest
 
 from venera_parser_bangumi.models import BangumiSubject, SyncCandidate, SyncSearchRequest, SyncTarget
@@ -43,6 +45,13 @@ class FakeBangumiClient:
         self.upserts.append((subject_id, state))
 
 
+@pytest.fixture
+def isolated_cache_path(tmp_path, request):
+    cache_path = tmp_path / f"{request.node.name}.bangumi-sync-cache.json"
+    cache_path.unlink(missing_ok=True)
+    return cache_path
+
+
 def make_candidates() -> list[SyncCandidate]:
     return [
         SyncCandidate(
@@ -73,7 +82,11 @@ def make_novel_candidates() -> list[SyncCandidate]:
     ]
 
 
-def test_run_sync_marks_dry_run_updates_without_writing(sample_archive, monkeypatch) -> None:
+def test_run_sync_marks_dry_run_updates_without_writing(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
     client = FakeBangumiClient(
         subjects=[BangumiSubject(123, "ONE PIECE", "海贼王")],
@@ -86,6 +99,7 @@ def test_run_sync_marks_dry_run_updates_without_writing(sample_archive, monkeypa
         [SyncTarget("DONE", "done")],
         dry_run=True,
         client=client,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["would_update"] == 1
@@ -93,7 +107,11 @@ def test_run_sync_marks_dry_run_updates_without_writing(sample_archive, monkeypa
     assert client.search_limit_calls == [100]
 
 
-def test_run_sync_emits_progress_logs_for_low_confidence_matches(sample_archive, monkeypatch) -> None:
+def test_run_sync_emits_progress_logs_for_low_confidence_matches(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
     client = FakeBangumiClient(subjects=[BangumiSubject(123, "海贼王 特别篇", None)])
     logs: list[str] = []
@@ -104,6 +122,7 @@ def test_run_sync_emits_progress_logs_for_low_confidence_matches(sample_archive,
         dry_run=True,
         client=client,
         log=logs.append,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["skipped"] == 1
@@ -113,7 +132,11 @@ def test_run_sync_emits_progress_logs_for_low_confidence_matches(sample_archive,
     assert any(message.startswith("[done] ") for message in logs)
 
 
-def test_run_sync_skips_already_synced_items(sample_archive, monkeypatch) -> None:
+def test_run_sync_skips_already_synced_items(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
     client = FakeBangumiClient(
         subjects=[BangumiSubject(123, "ONE PIECE", "海贼王")],
@@ -126,13 +149,18 @@ def test_run_sync_skips_already_synced_items(sample_archive, monkeypatch) -> Non
         [SyncTarget("DONE", "done")],
         dry_run=False,
         client=client,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["skipped"] == 1
     assert client.upserts == []
 
 
-def test_run_sync_reuses_cached_results_for_normalized_duplicate_titles(sample_archive, monkeypatch) -> None:
+def test_run_sync_reuses_cached_results_for_normalized_duplicate_titles(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     duplicate_candidates = [
         SyncCandidate("Doing", "doing", "1", "黃泉的使者", None, 0, [], []),
         SyncCandidate("Doing", "doing", "2", "黄泉的使者", None, 0, [], []),
@@ -149,6 +177,7 @@ def test_run_sync_reuses_cached_results_for_normalized_duplicate_titles(sample_a
         [SyncTarget("Doing", "doing")],
         dry_run=True,
         client=client,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["skipped"] == 2
@@ -156,7 +185,11 @@ def test_run_sync_reuses_cached_results_for_normalized_duplicate_titles(sample_a
     assert client.collection_calls == [356902]
 
 
-def test_run_sync_checks_collection_before_further_resolution_for_direct_match(sample_archive, monkeypatch) -> None:
+def test_run_sync_checks_collection_before_further_resolution_for_direct_match(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
     client = FakeBangumiClient(
         subjects=[BangumiSubject(123, "ONE PIECE", "海贼王")],
@@ -169,6 +202,7 @@ def test_run_sync_checks_collection_before_further_resolution_for_direct_match(s
         [SyncTarget("DONE", "done")],
         dry_run=False,
         client=client,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["skipped"] == 1
@@ -177,7 +211,61 @@ def test_run_sync_checks_collection_before_further_resolution_for_direct_match(s
     assert client.collection_calls == [123]
 
 
-def test_run_sync_updates_when_status_differs(sample_archive, monkeypatch) -> None:
+def test_run_sync_uses_persistent_subject_cache_to_skip_searches(
+    sample_archive,
+    monkeypatch,
+    tmp_path,
+) -> None:
+    monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
+    cache_path = tmp_path / "sample.bangumi-sync-cache.json"
+    cache_path.write_text(
+        json.dumps(
+            {
+                "items": [
+                    {
+                        "title_key": "海贼王",
+                        "author_keys": ["尾田荣一郎"],
+                        "target_state": "done",
+                        "subject": {
+                            "subject_id": 123,
+                            "name": "ONE PIECE",
+                            "name_cn": "海贼王",
+                            "platform": "漫画",
+                            "authors": ["尾田荣一郎"],
+                            "aliases": [],
+                        },
+                    }
+                ]
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    client = FakeBangumiClient(
+        subjects=[BangumiSubject(999, "wrong", "wrong")],
+        subject_detail=BangumiSubject(123, "ONE PIECE", "海贼王", "漫画"),
+        collection={"type": 2},
+    )
+
+    result = run_sync(
+        sample_archive,
+        [SyncTarget("DONE", "done")],
+        dry_run=False,
+        client=client,
+        cache_path=cache_path,
+    )
+
+    assert result.counts["skipped"] == 1
+    assert result.item_results[0].reason == "already_synced"
+    assert client.search_limit_calls == []
+    assert client.collection_calls == [123]
+
+
+def test_run_sync_updates_when_status_differs(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_candidates())
     client = FakeBangumiClient(
         subjects=[BangumiSubject(123, "ONE PIECE", "海贼王")],
@@ -190,6 +278,7 @@ def test_run_sync_updates_when_status_differs(sample_archive, monkeypatch) -> No
         [SyncTarget("DONE", "done")],
         dry_run=False,
         client=client,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["updated"] == 1
@@ -202,7 +291,11 @@ def test_extract_collection_type_handles_missing_data() -> None:
     assert extract_collection_type({"type": 3}) == 3
 
 
-def test_run_sync_skips_novel_subjects(sample_archive, monkeypatch) -> None:
+def test_run_sync_skips_novel_subjects(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_novel_candidates())
     client = FakeBangumiClient(
         subjects=[BangumiSubject(171069, "さようなら竜生、こんにちは人生", "再见龙生，你好人生")],
@@ -217,6 +310,7 @@ def test_run_sync_skips_novel_subjects(sample_archive, monkeypatch) -> None:
         dry_run=False,
         client=client,
         log=logs.append,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["skipped"] == 1
@@ -231,7 +325,11 @@ def test_classify_subject_media_type_prefers_platform_signal() -> None:
     assert classify_subject_media_type(BangumiSubject(3, "baz", platform=None)) == "unknown"
 
 
-def test_run_sync_resolves_ambiguous_exact_matches_to_single_manga(sample_archive, monkeypatch) -> None:
+def test_run_sync_resolves_ambiguous_exact_matches_to_single_manga(
+    sample_archive,
+    monkeypatch,
+    isolated_cache_path,
+) -> None:
     monkeypatch.setattr(service, "load_sync_candidates", lambda *_args, **_kwargs: make_novel_candidates())
     client = FakeBangumiClient(
         subjects=[
@@ -250,6 +348,7 @@ def test_run_sync_resolves_ambiguous_exact_matches_to_single_manga(sample_archiv
         [SyncTarget("DONE", "done")],
         dry_run=True,
         client=client,
+        cache_path=isolated_cache_path,
     )
 
     assert result.counts["would_update"] == 1

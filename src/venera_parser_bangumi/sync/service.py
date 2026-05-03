@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from dataclasses import replace
 from pathlib import Path
 from typing import Callable
@@ -19,10 +20,13 @@ def run_sync(
     dry_run: bool,
     client: BangumiClient,
     log: Callable[[str], None] | None = None,
+    cache_path: Path | None = None,
 ) -> SyncRunResult:
     candidates = load_sync_candidates(archive_path, sync_targets)
     run_result = SyncRunResult(archive_path=archive_path, dry_run=dry_run)
     cached_results: dict[tuple[str, tuple[str, ...], str], SyncItemResult] = {}
+    persistent_subject_cache = load_subject_cache(cache_path or default_subject_cache_path(archive_path))
+    subject_cache_dirty = False
     emit = log or (lambda _message: None)
 
     emit(f"[start] archive={archive_path} dry_run={dry_run}")
@@ -40,6 +44,105 @@ def run_sync(
             )
             run_result.item_results.append(replace(cached_result, candidate=candidate))
             continue
+
+        cached_subject = persistent_subject_cache.get(cache_key)
+        if cached_subject is not None:
+            emit(
+                f"[item {index}/{len(candidates)}] cache hit for {candidate_label} -> "
+                f"subject_id={cached_subject.subject_id}"
+            )
+            target_type = STATE_TO_BANGUMI_TYPE[candidate.target_state]
+            current_collection = client.get_my_subject_collection(cached_subject.subject_id)
+            current_type = extract_collection_type(current_collection)
+            if current_type == target_type:
+                emit(
+                    f"[item {index}/{len(candidates)}] skip {candidate_label}: already synced "
+                    f"to state={candidate.target_state} subject_id={cached_subject.subject_id}"
+                )
+                run_result.item_results.append(
+                    cache_and_return_result(
+                        cached_results,
+                        cache_key,
+                        SyncItemResult(
+                            candidate=candidate,
+                            status="skipped",
+                            reason="already_synced",
+                            subject=cached_subject,
+                            current_type=current_type,
+                        ),
+                    )
+                )
+                continue
+
+            subject = client.get_subject(cached_subject.subject_id)
+            persistent_subject_cache[cache_key] = subject
+            subject_cache_dirty = True
+            subject_media_type = classify_subject_media_type(subject)
+            if subject_media_type != "manga":
+                emit(
+                    f"[item {index}/{len(candidates)}] skip {candidate_label}: "
+                    f"matched subject platform={subject.platform or 'unknown'} "
+                    f"classified as {subject_media_type}, not syncing"
+                )
+                run_result.item_results.append(
+                    cache_and_return_result(
+                        cached_results,
+                        cache_key,
+                        SyncItemResult(
+                            candidate=candidate,
+                            status="skipped",
+                            reason=(
+                                "non_manga_subject"
+                                if subject_media_type == "novel"
+                                else "unknown_subject_media_type"
+                            ),
+                            subject=subject,
+                        ),
+                    )
+                )
+                continue
+
+            if dry_run:
+                emit(
+                    f"[item {index}/{len(candidates)}] would update {candidate_label} -> "
+                    f"subject_id={subject.subject_id} state={candidate.target_state}"
+                )
+                run_result.item_results.append(
+                    cache_and_return_result(
+                        cached_results,
+                        cache_key,
+                        SyncItemResult(
+                            candidate=candidate,
+                            status="would_update",
+                            reason="dry_run",
+                            subject=subject,
+                            current_type=current_type,
+                        ),
+                    )
+                )
+                continue
+
+            client.upsert_subject_collection(subject.subject_id, candidate.target_state)
+            emit(
+                f"[item {index}/{len(candidates)}] updated {candidate_label} -> "
+                f"subject_id={subject.subject_id} state={candidate.target_state}"
+            )
+            run_result.item_results.append(
+                cache_and_return_result(
+                    cached_results,
+                    cache_key,
+                    SyncItemResult(
+                        candidate=candidate,
+                        status="updated",
+                        reason="updated",
+                        subject=subject,
+                        current_type=current_type,
+                    ),
+                    updated_target_type=target_type,
+                )
+            )
+            continue
+
         emit(
             f"[item {index}/{len(candidates)}] searching {candidate_label} "
             f"with keyword={search_request.keyword!r}"
@@ -57,6 +160,8 @@ def run_sync(
                 current_collection = client.get_my_subject_collection(matched_subject.subject_id)
                 current_type = extract_collection_type(current_collection)
                 if current_type == target_type:
+                    persistent_subject_cache[cache_key] = matched_subject
+                    subject_cache_dirty = True
                     emit(
                         f"[item {index}/{len(candidates)}] skip {candidate_label}: already synced "
                         f"to state={candidate.target_state} subject_id={matched_subject.subject_id}"
@@ -96,6 +201,8 @@ def run_sync(
 
             if subject is None:
                 subject = matched_subject or client.get_subject(match.subject.subject_id)
+            persistent_subject_cache[cache_key] = subject
+            subject_cache_dirty = True
             subject_media_type = classify_subject_media_type(subject)
             if subject_media_type != "manga":
                 emit(
@@ -204,6 +311,8 @@ def run_sync(
         f"skipped={run_result.counts['skipped']} "
         f"failed={run_result.counts['failed']}"
     )
+    if subject_cache_dirty:
+        save_subject_cache(cache_path or default_subject_cache_path(archive_path), persistent_subject_cache)
     return run_result
 
 
@@ -339,6 +448,107 @@ def build_candidate_cache_key(search_request: SyncSearchRequest) -> tuple[str, t
         )
     )
     return title_key, author_keys, search_request.candidate.target_state
+
+
+def default_subject_cache_path(archive_path: Path) -> Path:
+    return archive_path.with_suffix(".bangumi-sync-cache.json")
+
+
+def load_subject_cache(
+    cache_path: Path,
+) -> dict[tuple[str, tuple[str, ...], str], BangumiSubject]:
+    if not cache_path.exists():
+        return {}
+    try:
+        payload = json.loads(cache_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+    items = payload.get("items") if isinstance(payload, dict) else None
+    if not isinstance(items, list):
+        return {}
+
+    cache: dict[tuple[str, tuple[str, ...], str], BangumiSubject] = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        title_key = item.get("title_key")
+        author_keys = item.get("author_keys")
+        target_state = item.get("target_state")
+        subject_payload = item.get("subject")
+        if (
+            not isinstance(title_key, str)
+            or not isinstance(author_keys, list)
+            or not all(isinstance(author_key, str) for author_key in author_keys)
+            or not isinstance(target_state, str)
+            or not isinstance(subject_payload, dict)
+        ):
+            continue
+        subject = subject_from_cache_payload(subject_payload)
+        if subject is None:
+            continue
+        cache[(title_key, tuple(author_keys), target_state)] = subject
+    return cache
+
+
+def save_subject_cache(
+    cache_path: Path,
+    cache: dict[tuple[str, tuple[str, ...], str], BangumiSubject],
+) -> None:
+    payload = {
+        "items": [
+            {
+                "title_key": title_key,
+                "author_keys": list(author_keys),
+                "target_state": target_state,
+                "subject": subject_to_cache_payload(subject),
+            }
+            for (title_key, author_keys, target_state), subject in sorted(
+                cache.items(),
+                key=lambda item: (item[0][0], item[0][1], item[0][2]),
+            )
+        ]
+    }
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def subject_to_cache_payload(subject: BangumiSubject) -> dict[str, object]:
+    return {
+        "subject_id": subject.subject_id,
+        "name": subject.name,
+        "name_cn": subject.name_cn,
+        "platform": subject.platform,
+        "authors": subject.authors,
+        "aliases": subject.aliases,
+    }
+
+
+def subject_from_cache_payload(payload: dict[str, object]) -> BangumiSubject | None:
+    subject_id = payload.get("subject_id")
+    name = payload.get("name")
+    if not isinstance(subject_id, int) or not isinstance(name, str):
+        return None
+
+    name_cn = payload.get("name_cn")
+    platform = payload.get("platform")
+    authors = payload.get("authors")
+    aliases = payload.get("aliases")
+    return BangumiSubject(
+        subject_id=subject_id,
+        name=name,
+        name_cn=name_cn if isinstance(name_cn, str) else None,
+        platform=platform if isinstance(platform, str) else None,
+        authors=[author for author in authors if isinstance(author, str)]
+        if isinstance(authors, list)
+        else [],
+        aliases=[alias for alias in aliases if isinstance(alias, str)]
+        if isinstance(aliases, list)
+        else [],
+    )
 
 
 def cache_and_return_result(
