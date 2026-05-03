@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         BangumiCleaner (Delete Auto-generated Timeline Only)
-// @namespace    https://github.com/Adachi-Git/BangumiCleaner
+// @namespace    https://github.com/bgzo/playground
 // @version      0.7
 // @description  保留自己发的状态(.status)，删除其它自动生成时间线；自动翻页直到清空
-// @author       Adachi
-// @match        *://bgm.tv/user/*/timeline*
+// @author       bgzo
+// @match        *://bangumi.tv/user/*/timeline
+// @match        *://bgm.tv/user/*/timeline
+// @match        *://chii.in/user/*/timeline
 // @grant        none
 // @license      MIT
 // ==/UserScript==
