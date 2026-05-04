@@ -102,20 +102,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-27 | [2026.4.26](https://www.justzht.com/2026-4-26/) | 周日的下午直接睡过去了。然后现在晚上八点了，天色也只是刚开始黑。开始逐渐有夏天的感觉了，似乎日落到午 |
 | 2026-04-27 | [稻草人周刊 Vol.78](https://www.geedea.pro/weekly/78/) | 又过去一周了吗？时间仿佛有意志一般，在我最脆弱的时候以极快的速度流动，。 上周去美术馆 的事情到这周日才写，这周一感觉效率很高、状态很好，在周二周三上了两天课之后就失去动力，神智不清了，在周四周五的时候才意识到：这周就这么过去了啊。 止语 THIS MUSIC MAY CONTAIN HOPE. 专… |
 | 2026-04-27 | [她不是安陵容](https://mobius.blog/23303.html) | 老婆在客厅看《浪姐》，我在书房总是会分出一根线程去听“发生了什么”。 昨天那一期，淘汰的是当初《甄嬛传》里安陵 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-26 | [踏入迷途橘 《Summer Pockets》 圣地巡礼之国营常陆海滨公园](https://www.wikimoe.com/post/b-te1ibpro) | 2026年4月19日，天气晴，今天去位于茨城县常陆那珂市的国营常陆海滨公园看花，同时这里也是游戏《Summer Pockets》的迷途橘的取景地。 如何前往国营常陆海滨公园 从东京出发大致有2套方案。 方案一 从东京前往国营常陆海滨公园，可从东京站或上野站搭乘JR常磐线特急「ひたち号」或「ときわ号」… |
-| 2026-04-26 | [哥本哈根的朝九晚五美的不像话](https://cufezhusy.github.io/issue-21/) | 最近这两天哥本哈根感觉春天来了，起码出去的时候可以穿一件外套就不觉得冷了。 这周三的时候去了原单位开一个会，待了十年的单位，还是认识好多人，好多人都以为我回原单位上班了，其实没有这回事，就是去开个会，蹭点吃的喝的，跟原来的老同事catch up一下。 都说金融圈里人脉很重要，认识人还是挺重要的。有的… |
-| 2026-04-26 | [机械革命无界14Pro笔记本debian forky成功驱动内置扬声器和麦克风](https://hellodk.cn/post/1214) | 我的机械革命无界14Pro笔记本安装了debian forky（当下的 debian testing 系统，也是未来的 debian 14代号），今天终于成功驱动了扬声器和麦克风。先贴出 fas... |
-| 2026-04-26 | [猫鱼周刊 vol. 096 AI 无法取代胶片](https://ameow.xyz/archives/weekly-096) | 关于本刊 这是猫鱼周刊的第 97 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 博客： 阿猫的博客-猫鱼周刊 RSS： 猫鱼周刊 邮件订阅： 猫鱼周刊 微信公众号： 猫兄的和谐号列车 私信： leslieleung@proton.me INIT 好久不见。 这张图摄于香港赤柱浅水湾… |
-| 2026-04-26 | [FE Bits Vol.33 &#124; Vercel 四月安全事件、sizes auto 终结响应式图片之痛](https://ysx.cosine.ren/weekly-33/) | 关于本周刊 本期网址 https://blog.cosine.ren/post/weekly-33 本周刊更新时间期望是在每周天。 推荐订阅本周刊的 RSS 。 公众号 前端周周谈 FE Bits，点击阅读原文链接可查看原文。 QQ 讨论小群 598022684 / Discord 群 本周刊文章内… |
-| 2026-04-26 | [Pensieve: 2604](https://xiaket.github.io/2026/pensieve-2604.html) | 所读所观所玩 |
-| 2026-04-26 | [我们摆出不被理解的面孔自得其乐](https://www.geedea.pro/article/gallery-trip/) | 上周末出门遛弯，去了趟美术馆。尽管有些路程，但我预约看展的次数还不少，这类活动既满足了出门摸草的需求，也不需要和人打交道，即便是出在公共空间，也是在和自己的思绪和感受独处，总之是很高质量的体验。 我去的时候，美术馆一共有三场展览，第一场是长期的美术馆的馆藏展示，第二场是某个品牌赞助的雕塑展，第三场是… |
-| 2026-04-26 | [Freqtrade 出入场信号颜色说明](https://lililib.github.io/Freqtrade%E5%87%BA%E5%85%A5%E5%9C%BA%E4%BF%A1%E5%8F%B7%E9%A2%9C%E8%89%B2%E8%AF%B4%E6%98%8E/) | 记录 FreqUI 图表上各种箭头、矩形、形状、颜色的含义。FreqUI 在同一张 K 线图上叠加了多组图层。 |
-| 2026-04-26 | [周末流水账 0426](https://blog.solazy.me/20260426/) | 周日了！ |
-| 2026-04-26 | [游记｜在宜兴度过一个平淡的假期](https://blog.ops-coffee.com/r/city-china-jiangsu-wuxi-yixing-tuanjiu.html) |  |
-| 2026-04-26 | [Vol.100 Agent走向生产：GPT-5.5、DeepSeek V4、Kimi K2.6与智能体基础设施爆发](https://liduos.com/weekly/the-weekly-gradient-100) | 本期内容聚焦AI模型与Agent基础设施的集中爆发，涵盖OpenAI GPT-5.5、DeepSeek V4的1M上下文、Kimi K2.6长程编码与Agent集群，以及智能体云、Harness Engineering、Token Maxing等前沿议题。 |
-| 2026-04-26 | [自深深处](https://kaix.in/2026/0426/) | 奥斯卡·王尔德大名鼎鼎，但这《自深深处》是我读完过他的第一本作品。才华、学识，轮不到我去评价，但是人在情感上的脆弱和必然遭遇的悲剧，啊，我（作为一个社交场所的经营者）见的或许比王尔德还要多一些。所以大概读到五分之一，我已经知道他之后还会和波西纠缠不清——读完本书去查资料，果然得到证实： 妳辜负了我；… |
-| 2026-04-26 | [西瓜备份 - 免费替代 iCloud！将 iPhone 相册备份到 WebDAV / SMB 或外置硬盘](https://www.iplaysoft.com/p/watermelon-backup) | 我们知道，直接买大容量的 iPhone 手机贵得让人肉疼，而每个月花钱订阅 iCloud 云服务又觉得像是在交永远停不下来的租金；不少人会选择夸克、百度网盘、115 网盘等第三方网盘。 而如果你自己有外置硬盘、局域网电脑、NAS 或 VPS 服务器，还可以将 iPhone 相册的照片视频备份到它们上… |
-| 2026-04-26 | [和H小姐的约会](https://1900.live/he-hxiao-jie-de-yue-hui/) | Photo by Jose P. Ortiz / Unsplash 首先承认这次的标题是900%具有标题党嫌疑的，但是这样写我觉得会更有意思，而且除开不能牵手等显示层面的动作，至少符合私密、聊心事、聊八卦等等。 H小姐指的是我最近搭建的 Hermes Agent ，这是一款类似OpenClaw的AI… |
 
 ## Vibe Coding
 
