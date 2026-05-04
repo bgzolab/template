@@ -24,6 +24,12 @@
     "description": "紧接着《无法消失的现代人》，聊起另一个有些哲学的话题。 前几天（其实是 10 分钟前）完成的内容，其实是 Ge […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
   },
   {
+    "title": "开一场线上展览",
+    "url": "http://www.uncoverman.com/ready-to-host-an-online-exhibition.html",
+    "date": "2026-05-03T16:00:00Z",
+    "description": "一张图片，可以定格时间，可以让人联想自己的经历，可以传达比文字更丰富的信息，所以一直想要做一个版块，集中展示自己的图片——gallery 画廊功能， 自己做自己的策展人 。 以前没能力实现，在网上找了几款 Hexo 插件，诸如 hexo-light-gallery 、 hexo-album-page ，不是安装不成功，就是效果跟自己期望的有偏差。所幸现在是 AI 时代，执行比以前要容易，关键看有没有想法。 我用的 AI 工具是 OpenCode，免费模型，在对应的代码工程下，告诉它自己的需求，它会直接读取目录文件，编写代码，实现想要的功能。最终帮我写了 5 个文件，800+ 行代码。 gallery.js //交互控制 gallery.scss //样式控制 gallery.pug //模板控制 gallery.yaml //内容配置 gallery/index.md //基础配置 这个时候才发现，很难一次性把需求描述清楚，只有通过不断迭代，才能得到自己想要的结果： 响应式布局，自动适配电脑"
+  },
+  {
     "title": "猫鱼周刊 vol. 097 五一快乐",
     "url": "https://ameow.xyz/archives/weekly-097",
     "date": "2026-05-03T15:28:10Z",
