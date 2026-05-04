@@ -21,7 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-04 | [读《金阁寺》](https://www.kawabangga.com/posts/7246) | 读其他的书知道了《金阁寺》这本书，就找来读了。读完合上最后一页，心里久久不能平静。说这本书是「惊世骇俗」一点也 […] Continue reading... |
 | 2026-05-04 | [Anthropic 公司宣布与华尔街公司成立 15 亿美元合资企业](https://blog.rustfisher.com/news/anthropic-nears-1-5-billion-joint-venture-20260504/) | Anthropic、Blackstone 和 Hellman & Friedman 预计各自投资约 3 亿美元；高盛也是投资者之一 |
+| 2026-05-04 | [R#100 零散思绪](https://blog.sakanano.moe/journals/random_100) | 2026.4.28 ~ 2026.5.4 |
 | 2026-05-04 | [凭感觉炒股](https://jubeny.com/2026/05/trade-stocks-based-on-intuition/) | 四月上证指数又涨上了4100点，在感觉买什么都可以赚的行情里，我却是亏损的。重仓股比亚迪画了一个左高右低的”W“，虽然做T降了一点成本，相比股价的下跌不值一提。工业富联在中段一日买卖，完全不知它正处于上升中的热门赛道，错过一波行情。老凤祥全仓做T卖飞，亏损一个多点，因为在这支股上赚过一点钱，总是对它… |
 | 2026-05-04 | [五一流水账 0504](https://blog.solazy.me/20260504/) | 假期第四天 |
 | 2026-05-04 | [Claude Code statusline](https://blog.zebedy.com/post/a71ab14f.html) | Claude Code statusline 配置 |
