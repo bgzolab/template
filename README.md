@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-05 | [五一假期：南京之行](https://www.xiaozonglin.cn/labor-day-nanjing-tour/) | 游玩南京，拍了一些照片。 五一假期：南京之行 最先出现在 林林杂语 。 |
+| 2026-05-04 | [My Way](https://soops.sol.build/FB31040B-876D-4D8F-92AA-1CB9516E89EE/) | YEN TOWN BAND |
 | 2026-05-04 | [读《金阁寺》](https://www.kawabangga.com/posts/7246) | 读其他的书知道了《金阁寺》这本书，就找来读了。读完合上最后一页，心里久久不能平静。说这本书是「惊世骇俗」一点也 […] Continue reading... |
 | 2026-05-04 | [Anthropic 公司宣布与华尔街公司成立 15 亿美元合资企业](https://blog.rustfisher.com/news/anthropic-nears-1-5-billion-joint-venture-20260504/) | Anthropic、Blackstone 和 Hellman & Friedman 预计各自投资约 3 亿美元；高盛也是投资者之一 |
 | 2026-05-04 | [R#100 零散思绪](https://blog.sakanano.moe/journals/random_100) | 2026.4.28 ~ 2026.5.4 |
@@ -98,21 +100,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-28 | [半学期记：春日校园](https://www.xiaozonglin.cn/photos-of-campus-2026-spring/) | 分享自己半个学期以来拍的照片。 半学期记：春日校园 最先出现在 林林杂语 。 |
 | 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
 | 2026-04-28 | [知识，也是有幻觉率](https://mobius.blog/23315.html) | 我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-27 | [韩国爆火的SetLog：为何没有新的社交巨头](https://mazzzystar.com/2026/04/27/setlog/) | 这个时代不会再产生新的社交巨头了吗 ？ <h2 |
-| 2026-04-27 | [H3C TC2101调整分区（OpenIPC系列二）](https://blog.cubestone.wang/2026/04/28/openipc-two/) | 前言 前文已经完成了设备的第一次刷机，但是除有线网络外，其它的外设均不能用，需要参考已有的SSC337版本进行适配或者手动测试找出对应引脚。因为之后涉及到自定义固件的编译，故需要先对设备的分区配置进行了解，以便之后的操作。 |
-| 2026-04-27 | [Ubuntu 26.04 LTS 新功能汇总，值得升级吗？ (上手体验视频)](https://www.iplaysoft.com/p/ubuntu-2604-lts-updates) | 说起 Linux 桌面系统，就一定绕不开 Ubuntu。这次发布 26.04 LTS（代号 Resolute Raccoon，坚毅浣熊）不是那种小打小闹的增量更新，而是从内核到桌面、从安全到 AI 的全维度大洗牌。 Ubuntu 26.04 LTS (长期维护版) 把桌面体验、底层内核、开发与 AI… |
-| 2026-04-27 | [给灵感找个落脚点](https://blog.solazy.me/20260427/) | 今天想检讨一下自己 |
-| 2026-04-27 | [Ubuntu 26.04 LTS 中文桌面版/服务器正式版ISO镜像下载 - 流行易入门的 Linux 系统](https://www.iplaysoft.com/ubuntu.html) | 说到最红火的 Linux 发行版当属 Ubuntu 了！它拥有漂亮的 UI 界面，跟 macOS 风格相比也有过之而无不及，而当你试过这款 操作系统 后，可能会对 Linux 刻板枯燥的印象产生巨大的改变。 在 Ubuntu 的世界里，已经不再只是简陋的界面+命令行，而是一款时尚易用同时又足够实用的… |
-| 2026-04-27 | [AI Infra：2026 Token 经济生态分析（二）](https://luweiqing.com/gossip/2026-Token-Economic-Ecosystem-Analysis-Part-Two.html) | 2026年核心变化已经很明显：重心从 训练 → 推理 → Agent 工作流 迁移“系统能力”开始替代“模型能力”成为核心变量一、关键结构变化是从推理层迁移到应用开发层价值核心从 “token ... |
-| 2026-04-27 | [R#099 合理休假](https://blog.sakanano.moe/journals/random_099) | 2026.4.21 ~ 2026.4.27 |
-| 2026-04-27 | [H3C TC2101刷机（OpenIPC系列一）](https://blog.cubestone.wang/2026/04/27/openipc-one/) | 起因 最近在 什么值得买 上刷到了一篇运营商的家用摄像头的文章，二手价格便宜还提到了能刷机。顺着文章的内容去看了看对应的开源项目 OpenIPC ，觉得正好符合很久前自己想完全掌控摄像头的想法，而且该项目内容比较完善，刷机配置难度应该不大。故在 咸鱼 上花了30大洋买了台二手的 H3C TC2101… |
-| 2026-04-27 | [AI 也该有护照了](https://1q43.blog/post/12323/) | 权利从登记表开始。 |
-| 2026-04-27 | [DeepSeek近期对API服务进行了大幅降价](https://blog.rustfisher.com/news/deepseek-price-20260427/) | 全系列模型，输入缓存命中的价格已降至首发价格的 1/10 |
-| 2026-04-27 | [我的母亲](https://predicate.pro/posts/my-mother/) |  |
-| 2026-04-27 | [ACID #2《复音的全球南方：技术交流的空间》正式发行](https://caa-ins.org/archives/13380) | “复音的全球南方”不是地理标签，而是一种方法论。当 Balaji Srinivasan 的「网络国家」许诺以股东制取代公民权、以私人主权铲除民主协商，当矽谷修辞把 1% 的财富集中包装成「去中心化」，ACID 第二期把第九届网络社会年会选集连同一般论文放回「南方」这个复数的位置上。 这里的南方，是菲… |
-| 2026-04-27 | [2026.4.26](https://www.justzht.com/2026-4-26/) | 周日的下午直接睡过去了。然后现在晚上八点了，天色也只是刚开始黑。开始逐渐有夏天的感觉了，似乎日落到午 |
-| 2026-04-27 | [稻草人周刊 Vol.78](https://www.geedea.pro/weekly/78/) | 又过去一周了吗？时间仿佛有意志一般，在我最脆弱的时候以极快的速度流动，。 上周去美术馆 的事情到这周日才写，这周一感觉效率很高、状态很好，在周二周三上了两天课之后就失去动力，神智不清了，在周四周五的时候才意识到：这周就这么过去了啊。 止语 THIS MUSIC MAY CONTAIN HOPE. 专… |
-| 2026-04-27 | [她不是安陵容](https://mobius.blog/23303.html) | 老婆在客厅看《浪姐》，我在书房总是会分出一根线程去听“发生了什么”。 昨天那一期，淘汰的是当初《甄嬛传》里安陵 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
