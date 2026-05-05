@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-05 | [我的万象方案配置（裁切）](https://blog.prayhand13013.top/20260505T184715--我的万象方案配置（裁切）__blog.html) |  |
+| 2026-05-05 | [如何温和地结束一个长假](https://blog.solazy.me/20260505/) | 与其在假期的尾声机械记录流水账，不如通过重建生活秩序，将这最后一天转化为从松弛到有序的温和过渡，优雅地开启下个阶段。 |
 | 2026-05-05 | [山间摩旅追风，偶遇一场绚烂晚霞](https://hellodk.cn/post/1216) | 我发现老家附近有个两县交界公路，很想去探索一翻，不知道今天那边还有多少人居住。这次恰逢五一假期，又得闲，便骑着摩托去转转。每次去县城，或者去合肥都会经过的“灌溉用水渠桥”。我们这边是群山环抱的，... |
 | 2026-05-05 | [SwiftMTP - 开源原生 Mac 安卓文件管理传输利器 (比 OpenMTP 更轻快)](https://www.iplaysoft.com/p/swiftmtp) | 说到在 macOS 上管理安卓手机的文件，大家的第一反应可能是那个万年不更新、界面简陋到极致的 Google 官方 Android File Transfer。随后，优秀的开源替代品 OpenMTP 横空出世，凭借双栏设计和更稳的连接，一度成为了 Mac 用户的标配。 但遗憾的是，OpenMTP 近… |
 | 2026-05-05 | [Anthropico 和 FIS 正在开发一款人工智能代理，以帮助银行打击金融犯罪](https://blog.rustfisher.com/news/anthropic-fis-20260505/) | 人工智能巨头与金融软件提供商 FIS 达成合作，共同开发面向银行的新工具 |
