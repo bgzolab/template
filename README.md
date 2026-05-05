@@ -21,8 +21,11 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-05 | [山间摩旅追风，偶遇一场绚烂晚霞](https://hellodk.cn/post/1216) | 我发现老家附近有个两县交界公路，很想去探索一翻，不知道今天那边还有多少人居住。这次恰逢五一假期，又得闲，便骑着摩托去转转。每次去县城，或者去合肥都会经过的“灌溉用水渠桥”。我们这边是群山环抱的，... |
+| 2026-05-05 | [SwiftMTP - 开源原生 Mac 安卓文件管理传输利器 (比 OpenMTP 更轻快)](https://www.iplaysoft.com/p/swiftmtp) | 说到在 macOS 上管理安卓手机的文件，大家的第一反应可能是那个万年不更新、界面简陋到极致的 Google 官方 Android File Transfer。随后，优秀的开源替代品 OpenMTP 横空出世，凭借双栏设计和更稳的连接，一度成为了 Mac 用户的标配。 但遗憾的是，OpenMTP 近… |
 | 2026-05-05 | [Anthropico 和 FIS 正在开发一款人工智能代理，以帮助银行打击金融犯罪](https://blog.rustfisher.com/news/anthropic-fis-20260505/) | 人工智能巨头与金融软件提供商 FIS 达成合作，共同开发面向银行的新工具 |
 | 2026-05-05 | [2026.5.4](https://www.justzht.com/2026-5-4/) | 最近工作还行，两个奔头一个在六月一个在十月，因此倒也没有多厌世，只是加班比较多而已。 之前说摄影阳痿， |
+| 2026-05-05 | [Toots 417 2026 Apr.26 - May.2](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260502/) | 「诗好轻便！」 |
 | 2026-05-05 | [介绍一下我做的 AI 中转站 4AICode](https://blog.forecho.com/introducing-4aicode-ai-proxy.html) | 引言 先上地址： 网站： 4aicode.com 4AICode 是我新做的一个 AI 中转站，主要面向 Vibe Coding 场景，目前支持 ChatGPT AI 模型和 gpt-image-2 图片生成模型。 名字也很直白，4AICode 可以理解成 for AI code，意思就是为 AI… |
 | 2026-05-05 | [飞湾计划：把一趟大湾区之行，顺手变成港澳开户探索路线](https://blog.debuginn.com/p/fly-bay/) | 大家好呀，我是 Meng小羽。 之前写过一篇 《港卡开卡指南》 ，当时主要是自己去香港旅游，顺手把港卡办了，回来之后把材料、流程、踩坑点都整理了一遍。没想到后来陆陆续续有很多朋友来问：现在还能不能开？需要准备什么？去香港还是去澳门？如果顺便开港美股账户，流程会不会很麻烦？ 问得多了之后，我发现这件事… |
 | 2026-05-05 | [细嗦下MLIR的环境搭建](https://mocusez.site/zh-CN/posts/4faf) | pixi package managment |

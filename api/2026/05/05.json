@@ -6,6 +6,18 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "山间摩旅追风，偶遇一场绚烂晚霞",
+    "url": "https://hellodk.cn/post/1216",
+    "date": "2026-05-05T09:49:00Z",
+    "description": "我发现老家附近有个两县交界公路，很想去探索一翻，不知道今天那边还有多少人居住。这次恰逢五一假期，又得闲，便骑着摩托去转转。每次去县城，或者去合肥都会经过的“灌溉用水渠桥”。我们这边是群山环抱的，..."
+  },
+  {
+    "title": "SwiftMTP - 开源原生 Mac 安卓文件管理传输利器 (比 OpenMTP 更轻快)",
+    "url": "https://www.iplaysoft.com/p/swiftmtp",
+    "date": "2026-05-05T09:31:15Z",
+    "description": "说到在 macOS 上管理安卓手机的文件，大家的第一反应可能是那个万年不更新、界面简陋到极致的 Google 官方 Android File Transfer。随后，优秀的开源替代品 OpenMTP 横空出世，凭借双栏设计和更稳的连接，一度成为了 Mac 用户的标配。 但遗憾的是，OpenMTP 近两年似乎进入了“长眠期”，版本停更、基于 Electro…… 「 前往查看原文.... 」 异次元首页 | 微信公众号 | 关注微博 | 软件精选 | 软件激活码折扣"
+  },
+  {
     "title": "Anthropico 和 FIS 正在开发一款人工智能代理，以帮助银行打击金融犯罪",
     "url": "https://blog.rustfisher.com/news/anthropic-fis-20260505/",
     "date": "2026-05-05T07:32:59Z",
@@ -16,6 +28,12 @@
     "url": "https://www.justzht.com/2026-5-4/",
     "date": "2026-05-05T07:25:47Z",
     "description": "最近工作还行，两个奔头一个在六月一个在十月，因此倒也没有多厌世，只是加班比较多而已。 之前说摄影阳痿，"
+  },
+  {
+    "title": "Toots 417 2026 Apr.26 - May.2",
+    "url": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260502/",
+    "date": "2026-05-05T06:16:27Z",
+    "description": "「诗好轻便！」"
   },
   {
     "title": "介绍一下我做的 AI 中转站 4AICode",
