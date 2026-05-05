@@ -44,6 +44,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-03 | [苹果公司在人工智能热潮导致供应短缺后，将 Mac Mini 的起售价提高至 799 美元](https://blog.rustfisher.com/news/apple-mac-price-20260503/) | 苹果公司将 Mac mini 台式机的起售价从 599 美元提高到 799 美元，以应对人工智能需求和处理器供应紧张导致的库存短缺 |
 | 2026-05-03 | [Vol.101 AI次方变革：组织中年撞上技术青春期，Harness Engineering与Agent系统重塑工程范式](https://liduos.com/weekly/the-weekly-gradient-101) | 本期内容围绕杨斌提出的AI次方变革概念，探讨组织如何应对技术青春期；涵盖Karpathy的Software 3.0、Demis的AGI时间表、工程实践应用及企业生产实战，深入思辨Skill蒸馏与Agent范式。 |
 | 2026-05-03 | [关于养狗](https://lomus.cc/archives/764) | 一般来说五一期间由于人流过多等原因，我不太会出去玩，但我会回老家待几天。 回家的生活基本可以预知，无非就是图个 […] 关于养狗 最先出现在 Lumos's Blog 。 |
+| 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/23391.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/2026/05/03/23391/) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-03 | [2026年第17、18周](https://blog.sakoamc.com/posts/261718/) | 题记：无题。 |
 | 2026-05-02 | [深夜](https://www.l1ch40.com/2026/05/blog-post.html) | 我每次都是临新年的前一天回到家，但我今年记错了新年的日子，等到家时发现回来早了。 回到了家，我父母没有催我找对象的事情，可能是我之前的非暴力不合作的行为起了作用，但是说实话内心却有些不对味，好像我真被这个时代淘汰了一样，他妈的，狗屁的时代。 日子稀里糊涂地过。我天天找发小喝酒，喝到失重，仿佛喝完就能… |
