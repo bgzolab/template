@@ -21,6 +21,10 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-05 | [介绍一下我做的 AI 中转站 4AICode](https://blog.forecho.com/introducing-4aicode-ai-proxy.html) | 引言 先上地址： 网站： 4aicode.com 4AICode 是我新做的一个 AI 中转站，主要面向 Vibe Coding 场景，目前支持 ChatGPT AI 模型和 gpt-image-2 图片生成模型。 它的目标很简单：让国内用户更容易、更低成本地用上国外的 AI 模型。 为什么做这个… |
+| 2026-05-05 | [飞湾计划：把一趟大湾区之行，顺手变成港澳开户探索路线](https://blog.debuginn.com/p/fly-bay/) | 大家好呀，我是 Meng小羽。 之前写过一篇 《港卡开卡指南》 ，当时主要是自己去香港旅游，顺手把港卡办了，回来之后把材料、流程、踩坑点都整理了一遍。没想到后来陆陆续续有很多朋友来问：现在还能不能开？需要准备什么？去香港还是去澳门？如果顺便开港美股账户，流程会不会很麻烦？ 问得多了之后，我发现这件事… |
+| 2026-05-05 | [细嗦下MLIR的环境搭建](https://mocusez.site/zh-CN/posts/4faf) | pixi package managment |
+| 2026-05-05 | [性癖纵横观 VIII](https://mobius.blog/23424.html) | Previously on 性癖纵横观 先回顾一下之前提到的那个“性癖坐标轴”。 举个例子，高跟鞋作为一种性癖 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-05 | [五一假期：南京之行](https://www.xiaozonglin.cn/labor-day-nanjing-tour/) | 游玩南京，拍了一些照片。 五一假期：南京之行 最先出现在 林林杂语 。 |
 | 2026-05-04 | [My Way](https://soops.sol.build/FB31040B-876D-4D8F-92AA-1CB9516E89EE/) | YEN TOWN BAND |
 | 2026-05-04 | [读《金阁寺》](https://www.kawabangga.com/posts/7246) | 读其他的书知道了《金阁寺》这本书，就找来读了。读完合上最后一页，心里久久不能平静。说这本书是「惊世骇俗」一点也 […] Continue reading... |
