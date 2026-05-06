@@ -28,6 +28,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-06 | [一个新的 AI 记忆层概念：哈勃半径](https://1q43.blog/post/12336/) | AI 需要知道，以我为圆心的世界是什么样子的。 |
 | 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-06 | [AMD 利润和营收因数据中心业务增长而大幅提升](https://blog.rustfisher.com/news/amd-wsj-20260506/) | 芯片制造商表示，由于人工智能推动需求增长，该领域销售额飙升57% |
+| 2026-05-06 | [利息与个税](https://hux.ink/posts/interest-and-tax/) | 前不久刚做完 2025 年度的个税汇算清缴，退税 4800 元。这笔“意外之财”主要来自两个项目。 第一项是住房贷款利息专项扣除。可能是上一年集中办理降息操作，导致贷款合同号变更，每个月 1000 元的抵扣项目当时没能申报成功，这次一次性退税 2400 元。 第二项是个人养老金缴存。我是按 1200… |
 | 2026-05-06 | [Memos #2026-05-05](https://www.taober.blog/memos) | 23:38 五一做得不错的： 开始做饭 瓦重回钻石 Vibe App 中 做的差的： 没管理住欲望 每天晚睡 没出去走走 |
 | 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
 | 2026-05-05 | [Venera 无法在 iOS/iPad OS 上保存图片](https://blog.bgzo.cc/20260505-fix-venera-download-long-photos-on-iOS-iPadOS.html) | 我之前不是说用魔改的 venera 客户端「漫阅」吗？它和官方都有一个问题，在漫画名特别长的时候，下载图片会不显示保存按钮，也就是置灰状态： 很头疼啊，我的一个坏毛病就是看到好看的章节直接下载到本地，不用官方自带的图片收藏，漫阅这个东西已经发布至少半年了，就没有一个人发现这玩意有问题吗？？？ 还好… |
