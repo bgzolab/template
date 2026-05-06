@@ -6,6 +6,18 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "电商语料VOC标签分类方案",
+    "url": "https://lililib.github.io/%E7%94%B5%E5%95%86%E8%AF%AD%E6%96%99VOC%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E6%96%B9%E6%A1%88/",
+    "date": "2026-05-06T09:01:28Z",
+    "description": "VOC(Voice of Customer,客户之声)的目标是通过分析客服与顾客的聊天记录、订单评价等内容,识别顾客意图并归类打标,帮助商家洞察用户真实需求,反哺产品迭代和客服话术优化。 本文记录在对接淘宝平台实时消息队列、做电商场景 VOC 标签分类时,踩过的坑以及最终落地的「 反向打标签 + RAG 」方案。"
+  },
+  {
+    "title": "Sentry 替代品 Bugsink 安装配置",
+    "url": "https://blog.est.im/2026/stdout-15",
+    "date": "2026-05-06T08:21:00Z",
+    "description": "如果你像我一样需要一个线上异常 traceback 跟踪工具，又没法忍受 Kafka/ClickHouse/Snuba/Zookeeper 这一坨依赖，那么归根结底有 三个选择 ： sentry glitchtip 除了错误跟踪也支持 uptime 等 bugsink。不支持 Android/Java 的在线符号化（无 mapping 上传） 最后选了 bugsink 。记录一下 pip 安装部署 的坑 下面的配置指 bugsink-create-conf 命令生成的 bugsinkconf.py 避免安装 MySQLdb docker编译环境一坨，改纯py的 pymysql 代替，在配置顶部写 import pymysql; pymysql.installasMySQLdb() CSRF 前面有一层 nginx 反代，然后一直报 CSRF 错误，因为 X-Forwarded-Proto 没值，所以 django csrf middleware 当成http给拦了。修改方法是配置里加一行 SECUREPROXYSSLHEADER = (\"HTTPORIGIN\", BUGSINK['BA"
+  },
+  {
     "title": "FreeSpace 2 updated",
     "url": "https://macsourceports.com/game/freespace2",
     "date": "2026-05-06T01:42:14Z",

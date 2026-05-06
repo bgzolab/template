@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-06 | [电商语料VOC标签分类方案](https://lililib.github.io/%E7%94%B5%E5%95%86%E8%AF%AD%E6%96%99VOC%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E6%96%B9%E6%A1%88/) | VOC(Voice of Customer,客户之声)的目标是通过分析客服与顾客的聊天记录、订单评价等内容,识别顾客意图并归类打标,帮助商家洞察用户真实需求,反哺产品迭代和客服话术优化。 本文记录在对接淘宝平台实时消息队列、做电商场景 VOC 标签分类时,踩过的坑以及最终落地的「 反向打标签 + R… |
+| 2026-05-06 | [Sentry 替代品 Bugsink 安装配置](https://blog.est.im/2026/stdout-15) | 如果你像我一样需要一个线上异常 traceback 跟踪工具，又没法忍受 Kafka/ClickHouse/Snuba/Zookeeper 这一坨依赖，那么归根结底有 三个选择 ： sentry glitchtip 除了错误跟踪也支持 uptime 等 bugsink。不支持 Android/Jav… |
 | 2026-05-06 | [FreeSpace 2 updated](https://macsourceports.com/game/freespace2) | The build of FreeSpace 2 Source Code Project for FreeSpace 2 has been updated to version release250_1 of the project |
 | 2026-05-06 | [一个新的 AI 记忆层概念：哈勃半径](https://1q43.blog/post/12336/) | AI 需要知道，以我为圆心的世界是什么样子的。 |
 | 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
