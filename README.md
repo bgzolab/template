@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-06 | [FreeSpace 2 updated](https://macsourceports.com/game/freespace2) | The build of FreeSpace 2 Source Code Project for FreeSpace 2 has been updated to version release250_1 of the project |
+| 2026-05-06 | [一个新的 AI 记忆层概念：哈勃半径](https://1q43.blog/post/12336/) | AI 需要知道，以我为圆心的世界是什么样子的。 |
+| 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-06 | [AMD 利润和营收因数据中心业务增长而大幅提升](https://blog.rustfisher.com/news/amd-wsj-20260506/) | 芯片制造商表示，由于人工智能推动需求增长，该领域销售额飙升57% |
 | 2026-05-06 | [Memos #2026-05-05](https://www.taober.blog/memos) | 23:38 五一做得不错的： 开始做饭 瓦重回钻石 Vibe App 中 做的差的： 没管理住欲望 每天晚睡 没出去走走 |
 | 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
