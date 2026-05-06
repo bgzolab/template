@@ -21,12 +21,16 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-06 | [AMD 利润和营收因数据中心业务增长而大幅提升](https://blog.rustfisher.com/news/amd-wsj-20260506/) | 芯片制造商表示，由于人工智能推动需求增长，该领域销售额飙升57% |
+| 2026-05-06 | [Memos #2026-05-05](https://www.taober.blog/memos) | 23:38 五一做得不错的： 开始做饭 瓦重回钻石 Vibe App 中 做的差的： 没管理住欲望 每天晚睡 没出去走走 |
+| 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
 | 2026-05-05 | [Venera 无法在 iOS/iPad OS 上保存图片](https://blog.bgzo.cc/20260505-fix-venera-download-long-photos-on-iOS-iPadOS.html) | 我之前不是说用魔改的 venera 客户端「漫阅」吗？它和官方都有一个问题，在漫画名特别长的时候，下载图片会不显示保存按钮，也就是置灰状态： 很头疼啊，我的一个坏毛病就是看到好看的章节直接下载到本地，不用官方自带的图片收藏，漫阅这个东西已经发布至少半年了，就没有一个人发现这玩意有问题吗？？？ 还好… |
 | 2026-05-05 | [Su7 Ultra U南向北](https://elmagnifico.tech/2026/05/06/Su7-Ultra-UN2S/) | Foreword 由于保时捷包场，珠海赛道没机会玩，五月前我基本没去过其他赛道。四月初得知五一有U南向北活动，三天连刷北京三个赛道，这种强度很少见，我当场就决定去。 U南向北 5月2日到5月4日，北京三天畅跑三个赛道（凯泽、新金港、老金港），一个赛道一天，费用3000，超值。唯一的问题就一个：怎么把… |
 | 2026-05-05 | [我的万象方案配置（裁切）](https://blog.prayhand13013.top/20260505T184715--我的万象方案配置（裁切）__blog.html) |  |
 | 2026-05-05 | [如何温和地结束一个长假](https://blog.solazy.me/20260505/) | 与其在假期的尾声机械记录流水账，不如通过重建生活秩序，将这最后一天转化为从松弛到有序的温和过渡，优雅地开启下个阶段。 |
 | 2026-05-05 | [山间摩旅追风，偶遇一场绚烂晚霞](https://hellodk.cn/post/1216) | 我发现老家附近有个两县交界公路，很想去探索一翻，不知道今天那边还有多少人居住。这次恰逢五一假期，又得闲，便骑着摩托去转转。每次去县城，或者去合肥都会经过的“灌溉用水渠桥”。我们这边是群山环抱的，... |
 | 2026-05-05 | [SwiftMTP - 开源原生 Mac 安卓文件管理传输利器 (比 OpenMTP 更轻快)](https://www.iplaysoft.com/p/swiftmtp) | 说到在 macOS 上管理安卓手机的文件，大家的第一反应可能是那个万年不更新、界面简陋到极致的 Google 官方 Android File Transfer。随后，优秀的开源替代品 OpenMTP 横空出世，凭借双栏设计和更稳的连接，一度成为了 Mac 用户的标配。 但遗憾的是，OpenMTP 近… |
+| 2026-05-05 | [热带风铃的潮响：吉隆坡大将书行](https://macin.org/2026/05/05/da-jiang-shu-xing/) | 顶着旧病未愈的溃疡，和同一天生日的小伙伴吃完烤鱼午餐，出来站在门口，太阳已经大得很了，一时想不出下一站去哪里。雨季将尽，吉隆坡的天总是这样，前脚还在落雨，后脚就烈日当空。 要去的地方说来也说不清楚是什么时候存进手机里的，只记得是一家叫”大将”的小书屋，地图上看 |
 | 2026-05-05 | [Anthropico 和 FIS 正在开发一款人工智能代理，以帮助银行打击金融犯罪](https://blog.rustfisher.com/news/anthropic-fis-20260505/) | 人工智能巨头与金融软件提供商 FIS 达成合作，共同开发面向银行的新工具 |
 | 2026-05-05 | [2026.5.4](https://www.justzht.com/2026-5-4/) | 最近工作还行，两个奔头一个在六月一个在十月，因此倒也没有多厌世，只是加班比较多而已。 之前说摄影阳痿， |
 | 2026-05-05 | [Toots 417 2026 Apr.26 - May.2](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260502/) | 「诗好轻便！」 |
@@ -75,7 +79,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-02 | [童真易满 成人难欢](https://hux.ink/posts/tong-zhen-yi-man/) | 昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官… |
 | 2026-05-02 | [EPIC 大气！《霍格沃茨之遗》免费领取，必玩“哈利波特”魔法世界游戏大作！](https://www.iplaysoft.com/hogwarts-legacy.html) | 为庆祝哈利波特 25 周年， Epic 游戏商城搞了一个“王炸”级的福利！这次免费赠送给玩家的是——《 霍格沃茨之遗 》(Hogwarts Legacy)！ 这可是原价￥384 元的 3A 游戏 大作啊！而且还是基于「 哈利波特 」世界观的精良制作。不得不说，E 宝送游戏是真够大气！上一次刚宣布限免… |
 | 2026-05-02 | [suede演唱会](https://www.aowugong.top/posts/blog-2026-04-25/) | https://cdn.aowugong.top/gh/howie110/obsidian_img/cdnimg/fdd1ce95534d75e9cb1d4a500d783e4e.jpg |
-| 2026-05-02 | [Memos #2026-05-01](https://www.taober.blog/memos) | 13:25 五一劳动节，深圳开火第一顿：酸菜萝卜丝炒吊龙！ |
 | 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
 | 2026-05-01 | [五一流水账 0501](https://blog.solazy.me/20260501/) | 难得的小长假！ |
 | 2026-05-01 | [报道称，马克·扎克伯格表示，人工智能成本是导致公司裁员8000人的原因之一](https://blog.rustfisher.com/news/meta-mark-zuckerberg-says-ai-costs-contributed-to-layoffs-of-8000-staffers-report-says-20260501/) | 据 《华尔街日报》 报道，Meta 首席执行官马克·扎克伯格在周四的一次内部会议录音中承认，该公司在人工智能方面的支出导致了 Meta 的裁员。该录音详细介绍了该公司的资本支出和人工智能投资情况 |
@@ -105,17 +108,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-29 | [世界是一个巨大的 Yes/No](https://mobius.blog/23324.html) | 小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
 | 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
-| 2026-04-28 | [失去的20年](https://blog.thetbw.xyz/archives/the-lost-20-years) | 今夜也是有点失眠，索性写点东西，由于各种原因，最近的精神状态实在算不上好。 今天的话题，也是标题，从最近看到一张图说起，说是 中国房地产市场已跌至至少过去20年来的最低价格 我搜下了信息的来源，具体信息来自 这里 ，数据来自国际清算银行。 当然，你我都知道，数据感觉上不算准确，尤其是你拿北京上海的房… |
-| 2026-04-28 | [emacs-动态设置org-agenda-files](https://blog.prayhand13013.top/20260428T211543--emacs-动态设置org-agenda-files__blog.html) |  |
-| 2026-04-28 | [Browser’s Bookmark Manager Is Actually Good](https://www.geedea.pro/en/article/browser-bookmarks/) | I deleted Linkding . It’s been running on my VPS for quite a few months and I decided to retire it. To be fair, Linkding is really nice, and it comes… |
-| 2026-04-28 | [emacs-在org文件中利用ob-gptel保存调用LLM聊天对话（deepseek为例）](https://blog.prayhand13013.top/20260428T171017--emacs-在org文件中利用ob-gptel保存调用llm聊天对话（deepseek为例）__blog.html) |  |
-| 2026-04-28 | [闷声发大财](https://blog.solazy.me/20260428/) | 今天聊聊闷声发大财 |
-| 2026-04-28 | [最近惦念 20260418](https://z.arlmy.me/posts/TILs/thoughts/20260418_Recently/) | 「万事需释。」 |
-| 2026-04-28 | [Toots 416 2026 Apr.19 - Apr.25](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260425/) | 「懂得做人的人可以成为人。」 |
-| 2026-04-28 | [OpenAI 在冲击 IPO 的关键冲刺中未能达成关键营收和用户目标](https://blog.rustfisher.com/news/openai-20260428/) | 面对增长放缓，公司首席财务官和董事会对大规模数据中心支出的合理性提出了质疑 |
-| 2026-04-28 | [半学期记：春日校园](https://www.xiaozonglin.cn/photos-of-campus-2026-spring/) | 分享自己半个学期以来拍的照片。 半学期记：春日校园 最先出现在 林林杂语 。 |
-| 2026-04-28 | [一句顶一万句](https://www.lazydaily.cn/2026/04/28/FFevldwozqcSb9Xa/) | <p class="book-no |
-| 2026-04-28 | [知识，也是有幻觉率](https://mobius.blog/23315.html) | 我前两天在创作者频道聊了聊这件事：出于工作原因，我最近看了太多“高密度概念、低程度论证”的玩意儿。 这类文章都 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
