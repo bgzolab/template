@@ -33,6 +33,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-06 | [Memos #2026-05-05](https://www.taober.blog/memos) | 23:38 五一做得不错的： 开始做饭 瓦重回钻石 Vibe App 中 做的差的： 没管理住欲望 每天晚睡 没出去走走 |
 | 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
 | 2026-05-05 | [Venera 无法在 iOS/iPad OS 上保存图片](https://blog.bgzo.cc/20260505-fix-venera-download-long-photos-on-iOS-iPadOS.html) | 我之前不是说用魔改的 venera 客户端「漫阅」吗？它和官方都有一个问题，在漫画名特别长的时候，下载图片会不显示保存按钮，也就是置灰状态： 很头疼啊，我的一个坏毛病就是看到好看的章节直接下载到本地，不用官方自带的图片收藏，漫阅这个东西已经发布至少半年了，就没有一个人发现这玩意有问题吗？？？ 还好… |
+| 2026-05-05 | [好久不见](https://blog.zopiya.com/hao-jiu-bu-jian-8d30659a/) | 我已经很久没有写一篇博客了。 久到现在重新打开编辑器，反而有点不知道该从哪里写起。说“我回来了”，好像有点正式；说“最近比较忙”吧，又显得太敷衍。想来想去，还是老老实实承认：确实停了很久，也确实有一阵子不知道该怎么继续写。 |
 | 2026-05-05 | [Su7 Ultra U南向北](https://elmagnifico.tech/2026/05/06/Su7-Ultra-UN2S/) | Foreword 由于保时捷包场，珠海赛道没机会玩，五月前我基本没去过其他赛道。四月初得知五一有U南向北活动，三天连刷北京三个赛道，这种强度很少见，我当场就决定去。 U南向北 5月2日到5月4日，北京三天畅跑三个赛道（凯泽、新金港、老金港），一个赛道一天，费用3000，超值。唯一的问题就一个：怎么把… |
 | 2026-05-05 | [我的万象方案配置（裁切）](https://blog.prayhand13013.top/20260505T184715--我的万象方案配置（裁切）__blog.html) |  |
 | 2026-05-05 | [如何温和地结束一个长假](https://blog.solazy.me/20260505/) | 与其在假期的尾声机械记录流水账，不如通过重建生活秩序，将这最后一天转化为从松弛到有序的温和过渡，优雅地开启下个阶段。 |
