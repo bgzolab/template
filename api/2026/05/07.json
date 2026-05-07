@@ -48,6 +48,12 @@
     "description": "VOC(Voice of Customer,客户之声)的目标是通过分析客服与顾客的聊天记录、订单评价等内容,识别顾客意图并归类打标,帮助商家洞察用户真实需求,反哺产品迭代和客服话术优化。 本文记录在对接淘宝平台实时消息队列、做电商场景 VOC 标签分类时,踩过的坑以及最终落地的「 反向打标签 + RAG 」方案。"
   },
   {
+    "title": "我的Windows平台磁盘空间分析管理工具",
+    "url": "https://www.iyeslogo.com/space-software/",
+    "date": "2026-05-06T08:36:45Z",
+    "description": "本文介绍了三款磁盘空间分析工具"
+  },
+  {
     "title": "Sentry 替代品 Bugsink 安装配置",
     "url": "https://blog.est.im/2026/stdout-15",
     "date": "2026-05-06T08:21:00Z",
