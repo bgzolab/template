@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-07 | [GPT‑5.5 Instant 发布](https://blog.rustfisher.com/news/gpt-5-5-instant-20260507/) | 正在更新 ChatGPT 的默认模型（所有人都可以使用），使其更智能、更准确，提供更清晰、更简洁的答案，让您感觉更贴合自身需求。 |
+| 2026-05-06 | [China to Invest in DeepSeek at $50 Billion Valuation](https://blog.rustfisher.com/news/deepseek-wsj-20260507/) | 人工智能初创公司与北京合作，推动技术自主化 |
 | 2026-05-06 | [一盘走天下 OnePE - 一个 U 盘搞定 20 年新老电脑维护装机 (5合1 PE 启动盘)](https://www.iplaysoft.com/onepe.html) | 很多人装机可能都遇到过这样的状况，一些老旧电脑，自己手里制作好的 Win PE 启动盘 不兼容，要么 Legacy 模式进不去，要么驱动缺失找不到硬盘，只能特意找旧版的 PE 去制作启动盘。 而遇到新款笔记本想 重装系统 ，结果这老版 PE 系统又不支持新的 NVMe 和 VMD 驱动。于是你桌上多… |
 | 2026-05-06 | [Memos: 重新学习下 Git 的使用](https://blog.yasking.org/a/1778066975.html) | 这些年一直没有系统学习过 Git，遇到问题就 Google、翻 Stack Overflow，然后大部分时间都在使用 GUI 进行操作，现在有 AI 更是可以无脑让它 … |
 | 2026-05-06 | [电商语料VOC标签分类方案](https://lililib.github.io/%E7%94%B5%E5%95%86%E8%AF%AD%E6%96%99VOC%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E6%96%B9%E6%A1%88/) | VOC(Voice of Customer,客户之声)的目标是通过分析客服与顾客的聊天记录、订单评价等内容,识别顾客意图并归类打标,帮助商家洞察用户真实需求,反哺产品迭代和客服话术优化。 本文记录在对接淘宝平台实时消息队列、做电商场景 VOC 标签分类时,踩过的坑以及最终落地的「 反向打标签 + R… |
@@ -109,15 +111,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-04-30 | [怎样才算是不惮以最坏的恶意来推测中国人？](https://mobius.blog/23338.html) | 这两天在网上看到见趣事，但说起来又挺可悲。 大致是一个学生在学校没有拿到当天的作业试卷，在回家的路上，他想让自 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-04-30 | [人工智能支出创下纪录，且看不到尽头 - nytimes](https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/) | 谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出 |
 | 2026-04-30 | [我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起](https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/) | 这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社… |
-| 2026-04-29 | [Warp 开源了！高性能现代化设计的跨平台 AI 终端工具 (视频使用教程)](https://www.iplaysoft.com/warp.html) | 你上一次认真把玩 命令行终端 软件是什么时候？估计大部分人的答案都是：不折腾，能用就行。毕竟终端这玩意儿，从 70 年代到现在，核心交互就没变过：一个黑框框，敲命令，看输出。 而最近一款 Rust 开发的高性能、 原生 AI 驱动的现代化 SSH 终端软件 Warp ，突然宣布 开源 ！GitHub… |
-| 2026-04-29 | [PVE 9.1 LXC 显卡共享: 部署Steam Headless](https://brain-zhang.github.io/blog/2026/04/29/pve-9-dot-1-lxc-xian-qia-gong-xiang-bu-shu-steam-headless/) | 这是一种非常折腾的做法，目前来看这么折腾的人真不多; 最终实现的效果就是在PVE环境中，用数个LXC容器将一张消费级GPU (我是一张RTX 3060 12GB) 切分到不同的Linux系统实例中，同时这些实例还能共享显卡的算力和显存；同时，最妙的 —- 这张显卡的算力和显存是动态分配的； 这比显卡… |
-| 2026-04-29 | [有了Ai，出门都不用担心忘了关门](https://krya.com/post/tools/) | 出门在外，突然想起门好像没关。 这种焦虑感，相信很多人都有过。我也是，每次出门后都要反复回忆，到底有没有锁门？甚至有时候都出了小区还要跑回家看一看。 为了解决这个问题，我做了一个"百宝工具箱"，把家里的门锁状态、温度、路由器信息全都整合到一个页面里，随时随地都能查看。 故事要从一个图床说起。 从图床… |
-| 2026-04-29 | [逆向京麦客户端提取京东聊天表情映射表](https://lililib.github.io/%E9%80%86%E5%90%91%E4%BA%AC%E9%BA%A6%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8F%90%E5%8F%96%E4%BA%AC%E4%B8%9C%E8%81%8A%E5%A4%A9%E8%A1%A8%E6%83%85%E6%98%A0%E5%B0%84%E8%A1%A8/) | 本文全部内容由Opus 4.7 技术总结生成 最近在做电商客服质检的项目,对接京东平台拉取客服和顾客的聊天记录,准备喂给 LLM 分析意图、打标签。跑起来看样本数据,发现消息文本里经常混着 #E-s38 、 #E-b07 、 #E-a10 这种奇怪的字符串。 一开始以为是乱码或者没处理干净的转义,仔… |
-| 2026-04-29 | [独立博客，难在不够独立](https://blog.solazy.me/20260429/) | 前两天看到一个说独立博客难的话题，今天展开来说说我的想法 |
-| 2026-04-29 | [Ronan Space Systems 当远古岩画，重写太空美学](https://www.iyeslogo.com/ronan-space-systems/) | 模糊、流动的视觉系统不仅承载品牌野心，更挑战航天领域固有审美范式，证明未来探索可从古老文明汲取力量。 |
-| 2026-04-29 | [世界是一个巨大的 Yes/No](https://mobius.blog/23324.html) | 小袁给了我一个网站，说很有趣，而且我们每个人都会有一个不一样的角度去研究它。这是一个很好研究群体价值观、集体潜 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-29 | [DeepSeek优惠期延长至北京时间 2026/05/31 23:59](https://blog.rustfisher.com/news/deepseek-price-date-20260429/) | 当前 deepseek-v4-pro 模型 2.5 折，优惠期延长至北京时间 2026/05/31 23:59 |
-| 2026-04-29 | [NVIDIA 推出 Nemotron 3 Nano Omni 模型](https://blog.rustfisher.com/news/nvidia-nemotron-3-nano-omni-multimodal-ai-agents-20260429/) | 开放式全模态推理模型可提供最高的效率和准确性，从而支持计算机使用、文档智能和音视频推理等智能体工作流程 |
 
 ## Vibe Coding
 
