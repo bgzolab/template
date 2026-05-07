@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-07 | [代码](https://mobius.blog/23473.html) | “AI 写的程序不进行审查就随便上线，是不负责任的，而且是没办法用的。” “你意思是，我们这些没学过编程的文科 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-07 | [善于发现生活中的冲突](https://mobius.blog/23469.html) | 在剧本写作里，有一句经典的关于“什么是故事”的描述： 猫坐在自己的垫子上，故事是不能这样开始的。猫坐在狗垫子上 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-07 | [GPT‑5.5 Instant 发布](https://blog.rustfisher.com/news/gpt-5-5-instant-20260507/) | 正在更新 ChatGPT 的默认模型（所有人都可以使用），使其更智能、更准确，提供更清晰、更简洁的答案，让您感觉更贴合自身需求。 |
 | 2026-05-07 | [Claude Code 对接 DeepSeek 使用教程](https://blog.oofo.cc/posts/claude-code-deepseek) | ## 概述 Claude Code 是一个运行在终端里的 AI 编程助手。正常情况下，它会连接 Anthropic 官方服务；如果你想使用 DeepSeek 的模型，可以通过 DeepSeek 提供的 Anthropic 兼容接口，把 Claude Code 的请求转发到 DeepSeek。 这篇文… |
@@ -38,8 +39,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-06 | [Memos #2026-05-05](https://www.taober.blog/memos) | 23:38 五一做得不错的： 开始做饭 瓦重回钻石 Vibe App 中 做的差的： 没管理住欲望 每天晚睡 没出去走走 |
 | 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
 | 2026-05-05 | [Venera 无法在 iOS/iPad OS 上保存图片](https://blog.bgzo.cc/20260505-fix-venera-download-long-photos-on-iOS-iPadOS.html) | 我之前不是说用魔改的 venera 客户端「漫阅」吗？它和官方都有一个问题，在漫画名特别长的时候，下载图片会不显示保存按钮，也就是置灰状态： 很头疼啊，我的一个坏毛病就是看到好看的章节直接下载到本地，不用官方自带的图片收藏，漫阅这个东西已经发布至少半年了，就没有一个人发现这玩意有问题吗？？？ 还好… |
-| 2026-05-05 | [Su7 Ultra U南向北](https://elmagnifico.tech/2026/05/06/Su7-Ultra-UN2S/) | Foreword 由于保时捷包场，珠海赛道没机会玩，五月前我基本没去过其他赛道。四月初得知五一有U南向北活动，三天连刷北京三个赛道，这种强度很少见，我当场就决定去。 U南向北 5月2日到5月4日，北京三天畅跑三个赛道（凯泽、新金港、老金港），一个赛道一天，费用3000，超值。唯一的问题就一个：怎么把… |
 | 2026-05-05 | [好久不见](https://blog.zopiya.com/hao-jiu-bu-jian-8d30659a/) | 我已经很久没有写一篇博客了。 久到现在重新打开编辑器，反而有点不知道该从哪里写起。说“我回来了”，好像有点正式；说“最近比较忙”吧，又显得太敷衍。想来想去，还是老老实实承认：确实停了很久，也确实有一阵子不知道该怎么继续写。 |
+| 2026-05-05 | [Su7 Ultra U南向北](https://elmagnifico.tech/2026/05/06/Su7-Ultra-UN2S/) | Foreword 由于保时捷包场，珠海赛道没机会玩，五月前我基本没去过其他赛道。四月初得知五一有U南向北活动，三天连刷北京三个赛道，这种强度很少见，我当场就决定去。 U南向北 5月2日到5月4日，北京三天畅跑三个赛道（凯泽、新金港、老金港），一个赛道一天，费用3000，超值。唯一的问题就一个：怎么把… |
 | 2026-05-05 | [我的万象方案配置（裁切）](https://blog.prayhand13013.top/20260505T184715--我的万象方案配置（裁切）__blog.html) |  |
 | 2026-05-05 | [如何温和地结束一个长假](https://blog.solazy.me/20260505/) | 与其在假期的尾声机械记录流水账，不如通过重建生活秩序，将这最后一天转化为从松弛到有序的温和过渡，优雅地开启下个阶段。 |
 | 2026-05-05 | [山间摩旅追风，偶遇一场绚烂晚霞](https://hellodk.cn/post/1216) | 我发现老家附近有个两县交界公路，很想去探索一翻，不知道今天那边还有多少人居住。这次恰逢五一假期，又得闲，便骑着摩托去转转。每次去县城，或者去合肥都会经过的“灌溉用水渠桥”。我们这边是群山环抱的，... |
