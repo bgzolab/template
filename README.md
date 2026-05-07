@@ -22,6 +22,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-08 | [升级桌面硬件设备](https://krya.com/post/updatehardware/) | 上一次买Macbook Pro还是2014年，当时年少轻狂，又喜欢宝马貂裘，斥12000元巨资购买。不过因为工作环境，Mac生态缺乏很多我需要的程序，买了两年也没有收回成本，于是送人了。 最近我沉迷Vibe coding，尝试用Windows电脑上的GTX 1650 4G内存的显卡运行qwen2.5… |
+| 2026-05-07 | [2026年五一长假小记](https://www.quji.org/archives/8761?pk_campaign=feed&pk_kwd=2026%25e5%25b9%25b4%25e4%25ba%2594%25e4%25b8%2580%25e9%2595%25bf%25e5%2581%2587%25e5%25b0%258f%25e8%25ae%25b0) | 这个五一长假，对其他人来说是轰轰烈烈，对我来讲却是跌宕起伏。参加同学婚礼、相亲失败、见到了奶奶大伯哥哥、见到了同事。1号上午依旧是在工地值班，和往常一样，工地的苦逼干过的都知道。 |
+| 2026-05-07 | [误会是表达者的宿命](https://blog.solazy.me/20260507/) | 今天想聊聊表达这件事 |
 | 2026-05-07 | [我买基金从不亏钱](https://blog.ops-coffee.com/r/fund-5-year-from-50-percent-loss-to-profit.html) | 这是一篇酝酿了超过5年的复盘 |
 | 2026-05-07 | [代码](https://mobius.blog/23473.html) | “AI 写的程序不进行审查就随便上线，是不负责任的，而且是没办法用的。” “你意思是，我们这些没学过编程的文科 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-07 | [善于发现生活中的冲突](https://mobius.blog/23469.html) | 在剧本写作里，有一句经典的关于“什么是故事”的描述： 猫坐在自己的垫子上，故事是不能这样开始的。猫坐在狗垫子上 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
@@ -30,6 +32,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-07 | [Claude Code 对接 DeepSeek 使用教程](https://blog.oofo.cc/posts/claude-code-deepseek) | ## 概述 Claude Code 是一个运行在终端里的 AI 编程助手。正常情况下，它会连接 Anthropic 官方服务；如果你想使用 DeepSeek 的模型，可以通过 DeepSeek 提供的 Anthropic 兼容接口，把 Claude Code 的请求转发到 DeepSeek。 这篇文… |
 | 2026-05-06 | [China to Invest in DeepSeek at $50 Billion Valuation](https://blog.rustfisher.com/news/deepseek-wsj-20260507/) | 人工智能初创公司与北京合作，推动技术自主化 |
 | 2026-05-06 | [一盘走天下 OnePE - 一个 U 盘搞定 20 年新老电脑维护装机 (5合1 PE 启动盘)](https://www.iplaysoft.com/onepe.html) | 很多人装机可能都遇到过这样的状况，一些老旧电脑，自己手里制作好的 Win PE 启动盘 不兼容，要么 Legacy 模式进不去，要么驱动缺失找不到硬盘，只能特意找旧版的 PE 去制作启动盘。 而遇到新款笔记本想 重装系统 ，结果这老版 PE 系统又不支持新的 NVMe 和 VMD 驱动。于是你桌上多… |
+| 2026-05-06 | [喜剧的内核是悲剧](https://blog.solazy.me/20260506/) | 在关于喜剧的诸多探讨中，「喜剧的内核是悲剧」这句断言流传最广，也最容易被误读。它似乎为那些看似轻浮的笑声披上了一层严肃的外衣，让喜剧在艺术殿堂里获得了一席之地。然而，当我们剥开这层外衣，会发现这不仅是一个创作层面的技巧，更是一套关于生存的哲学。 喜剧与悲剧，在形式上往往呈现出一种奇妙的对称。悲剧展示… |
 | 2026-05-06 | [Memos: 重新学习下 Git 的使用](https://blog.yasking.org/a/1778066975.html) | 这些年一直没有系统学习过 Git，遇到问题就 Google、翻 Stack Overflow，然后大部分时间都在使用 GUI 进行操作，现在有 AI 更是可以无脑让它 … |
 | 2026-05-06 | [电商语料VOC标签分类方案](https://lililib.github.io/%E7%94%B5%E5%95%86%E8%AF%AD%E6%96%99VOC%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E6%96%B9%E6%A1%88/) | VOC(Voice of Customer,客户之声)的目标是通过分析客服与顾客的聊天记录、订单评价等内容,识别顾客意图并归类打标,帮助商家洞察用户真实需求,反哺产品迭代和客服话术优化。 本文记录在对接淘宝平台实时消息队列、做电商场景 VOC 标签分类时,踩过的坑以及最终落地的「 反向打标签 + R… |
 | 2026-05-06 | [我的Windows平台磁盘空间分析管理工具](https://www.iyeslogo.com/space-software/) | 本文介绍了三款磁盘空间分析工具 |
