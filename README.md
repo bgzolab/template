@@ -24,6 +24,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-07 | [代码](https://mobius.blog/23473.html) | “AI 写的程序不进行审查就随便上线，是不负责任的，而且是没办法用的。” “你意思是，我们这些没学过编程的文科 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-07 | [善于发现生活中的冲突](https://mobius.blog/23469.html) | 在剧本写作里，有一句经典的关于“什么是故事”的描述： 猫坐在自己的垫子上，故事是不能这样开始的。猫坐在狗垫子上 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-07 | [GPT‑5.5 Instant 发布](https://blog.rustfisher.com/news/gpt-5-5-instant-20260507/) | 正在更新 ChatGPT 的默认模型（所有人都可以使用），使其更智能、更准确，提供更清晰、更简洁的答案，让您感觉更贴合自身需求。 |
+| 2026-05-07 | [Study English Plan - Beginner Level](https://www.jtxyh.com/58318/) | Claude Give Me A Plan to Study English - For Beginner Learners — Shadowing Method |
 | 2026-05-07 | [Claude Code 对接 DeepSeek 使用教程](https://blog.oofo.cc/posts/claude-code-deepseek) | ## 概述 Claude Code 是一个运行在终端里的 AI 编程助手。正常情况下，它会连接 Anthropic 官方服务；如果你想使用 DeepSeek 的模型，可以通过 DeepSeek 提供的 Anthropic 兼容接口，把 Claude Code 的请求转发到 DeepSeek。 这篇文… |
 | 2026-05-06 | [China to Invest in DeepSeek at $50 Billion Valuation](https://blog.rustfisher.com/news/deepseek-wsj-20260507/) | 人工智能初创公司与北京合作，推动技术自主化 |
 | 2026-05-06 | [一盘走天下 OnePE - 一个 U 盘搞定 20 年新老电脑维护装机 (5合1 PE 启动盘)](https://www.iplaysoft.com/onepe.html) | 很多人装机可能都遇到过这样的状况，一些老旧电脑，自己手里制作好的 Win PE 启动盘 不兼容，要么 Legacy 模式进不去，要么驱动缺失找不到硬盘，只能特意找旧版的 PE 去制作启动盘。 而遇到新款笔记本想 重装系统 ，结果这老版 PE 系统又不支持新的 NVMe 和 VMD 驱动。于是你桌上多… |
