@@ -22,6 +22,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-08 | [升级桌面硬件设备](https://krya.com/post/updatehardware/) | 上一次买Macbook Pro还是2014年，当时年少轻狂，又喜欢宝马貂裘，斥12000元巨资购买。不过因为工作环境，Mac生态缺乏很多我需要的程序，买了两年也没有收回成本，于是送人了。 最近我沉迷Vibe coding，尝试用Windows电脑上的GTX 1650 4G内存的显卡运行qwen2.5… |
+| 2026-05-08 | [埃隆·马斯克的 SpaceX 计划投资 550 亿美元制造人工智能芯片](https://blog.rustfisher.com/news/spacex-20260508/) | 这家火箭公司新建的半导体工厂名为 Terafab，是这位亿万富翁不断加大力度主导人工智能领域的一部分 |
+| 2026-05-08 | [Memos #2026-05-07](https://www.taober.blog/memos) | 23:51 Cool～ |
+| 2026-05-07 | [当一切都开始循环，人在哪里按下暂停？](https://www.linggandianbo.com/newsletter-122/) | 从 AI agent、持续学习、生物计算到炼油厂和盯墙术，理解技术真正改变的不是速度，而是人和系统之间的边界｜灵感电波 #122 |
 | 2026-05-07 | [2026年五一长假小记](https://www.quji.org/archives/8761?pk_campaign=feed&pk_kwd=2026%25e5%25b9%25b4%25e4%25ba%2594%25e4%25b8%2580%25e9%2595%25bf%25e5%2581%2587%25e5%25b0%258f%25e8%25ae%25b0) | 这个五一长假，对其他人来说是轰轰烈烈，对我来讲却是跌宕起伏。参加同学婚礼、相亲失败、见到了奶奶大伯哥哥、见到了同事。1号上午依旧是在工地值班，和往常一样，工地的苦逼干过的都知道。 |
 | 2026-05-07 | [误会是表达者的宿命](https://blog.solazy.me/20260507/) | 今天想聊聊表达这件事 |
 | 2026-05-07 | [我买基金从不亏钱](https://blog.ops-coffee.com/r/fund-5-year-from-50-percent-loss-to-profit.html) | 这是一篇酝酿了超过5年的复盘 |
@@ -42,7 +45,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-06 | [AMD 利润和营收因数据中心业务增长而大幅提升](https://blog.rustfisher.com/news/amd-wsj-20260506/) | 芯片制造商表示，由于人工智能推动需求增长，该领域销售额飙升57% |
 | 2026-05-06 | [利息与个税](https://hux.ink/posts/interest-and-tax/) | 前不久刚做完 2025 年度的个税汇算清缴，退税 4800 元。这笔“意外之财”主要来自两个项目。 第一项是住房贷款利息专项扣除。可能是上一年集中办理降息操作，导致贷款合同号变更，每个月 1000 元的抵扣项目当时没能申报成功，这次一次性退税 2400 元。 第二项是个人养老金缴存。我是按 1200… |
-| 2026-05-06 | [Memos #2026-05-05](https://www.taober.blog/memos) | 23:38 五一做得不错的： 开始做饭 瓦重回钻石 Vibe App 中 做的差的： 没管理住欲望 每天晚睡 没出去走走 |
 | 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
 | 2026-05-05 | [Venera 无法在 iOS/iPad OS 上保存图片](https://blog.bgzo.cc/20260505-fix-venera-download-long-photos-on-iOS-iPadOS.html) | 我之前不是说用魔改的 venera 客户端「漫阅」吗？它和官方都有一个问题，在漫画名特别长的时候，下载图片会不显示保存按钮，也就是置灰状态： 很头疼啊，我的一个坏毛病就是看到好看的章节直接下载到本地，不用官方自带的图片收藏，漫阅这个东西已经发布至少半年了，就没有一个人发现这玩意有问题吗？？？ 还好… |
 | 2026-05-05 | [好久不见](https://blog.zopiya.com/hao-jiu-bu-jian-8d30659a/) | 我已经很久没有写一篇博客了。 久到现在重新打开编辑器，反而有点不知道该从哪里写起。说“我回来了”，好像有点正式；说“最近比较忙”吧，又显得太敷衍。想来想去，还是老老实实承认：确实停了很久，也确实有一阵子不知道该怎么继续写。 |
@@ -108,19 +110,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-01 | [假期从折腾Obsidian开始](https://hux.ink/posts/obsidian-sync/) | 五一假期第一天，折腾升级 Obsidian。 我日常 PC 端用 Windows，移动端用 iOS。使用 Obsidian 时，由于苹果的封闭性，PC 与移动端的同步一直是个难题。很早以前我用过 Remotely Save 插件通过 Onedrive 同步，但它不太稳定，经常出 Bug。担心丢文件，… |
 | 2026-05-01 | [无法消失的现代人](https://mobius.blog/23376.html) | 现代人不是无法消失，或许是从未真正出现过。 此时此刻，我又是在咖啡厅码字，大概是节假日前的最后一天。咖啡厅明显 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-01 | [AI agent 不缺代码，它缺工程记忆](https://huoru.me/posts/mainline-intent-memory/) | AI agent 不缺代码，它缺工程记忆 在 RAG 或 grep 之前，先给 agent 工程意图 AI 编程正在变快。 快到什么程度？ 一个需求，几分钟出代码。 一个 bug，几轮对话就修。 一个重构，agent 可以通宵跑完。 但越用我越发现： AI agent 最大的问题，不是写不出代码。… |
-| 2026-04-30 | [当 AI 什么都能做，人还剩下什么？](https://www.linggandianbo.com/newsletter-121/) | 从关系经济、社会智能、AGI 时间线到文学与制度防守，理解机器越强之后，人为什么反而不能缺席｜灵感电波 #121 |
-| 2026-04-30 | [深入 Open Agent SDK（番外篇）：实战验证——把 SDK 塞进一个 macOS 原生 Agent 应用](https://gptkit.eth.limo/6C329293-C2C6-41E1-BAFE-60CA58FC5EBE/) | 本文是「深入 Open Agent SDK (Swift)」系列番外篇。 系列目录见这里 。 前七篇文章从各个子系统分析了 Open Agent SDK 的设计。但 SDK 写得好不好，最终得放到真实项目里验证。这篇文章记录我把 SDK 集成到一个开源 macOS 原生 Agent 应用—— Mot… |
-| 2026-04-30 | [QoderWake：把 Agent 做成“同事”的那条路](https://www.evan.xin/4948/) | 我最近看 QoderWake 的介绍时，一个感觉很强：它不是在卖“更聪明的模型”，而是在把 AI 放进组织里最 […] |
-| 2026-04-30 | [再见面板：Debian构建WordPress](https://www.xiaozonglin.cn/build-wordpress-with-pure-commandline/) | 任务要求：使用Debian纯命令行构建自己的WordPress网站，并通过一些方法支持http://linli […] 再见面板：Debian构建WordPress 最先出现在 林林杂语 。 |
-| 2026-04-30 | [国内独立开发圈子太烂了](https://blog.solazy.me/20260430/) | 昨天说到了独立博客，今天索性接着聊聊独立开发者 |
-| 2026-04-30 | [Album#37 - Scenery(シーナリィ)](https://taxodium.ink/album-37.html) | Album#37 Scenery(シーナリィ) 图1 《Scenery(シーナリィ)》専輯封面 专辑信息 专辑名称： Scenery (シーナリィ) 歌手： 福居良 (Ryo Fukui) 年份： 1967-01-01 风格： 爵士 (Jazz)、鋼琴 时长： 41:20 福居(ふくい)良(りょう)… |
-| 2026-04-30 | [我（不）想让 AI 帮我做](https://www.geedea.pro/article/no-ai-for-my-joy/) | 标题之所以没有使用 LLM 这个在如今大多数情况下更准确的词，是因为我想讨论更宽泛的技术。帮人做事的不只是大语言模型，对于个别人来说，还有可能是文生图模型、图像视觉模型等等。所以我使用了 AI 这个词。 如果你读过本博客其他有关 AI 的文章，你会发现我大部分时候都没什么好话说。我为什么不喜欢这门… |
-| 2026-04-30 | [Plants vs. Zombies updated](https://macsourceports.com/game/pvz) | The build of PvZ Portable for Plants vs. Zombies has been updated to version 0.1.22 of the project |
-| 2026-04-30 | [Chris Sawyer's Locomotion updated](https://macsourceports.com/game/locomotion) | The build of OpenLoco for Chris Sawyer's Locomotion has been updated to version v26.04 of the project |
-| 2026-04-30 | [为什么说《炊事班的故事》中的洪班长是设计师最好的领导](https://www.iyeslogo.com/good-leader-for-designers/) | 他的管理核心不是KPI，而是对人的理解和尊重，这正是现代设计管理者最需要的能力。 |
-| 2026-04-30 | [怎样才算是不惮以最坏的恶意来推测中国人？](https://mobius.blog/23338.html) | 这两天在网上看到见趣事，但说起来又挺可悲。 大致是一个学生在学校没有拿到当天的作业试卷，在回家的路上，他想让自 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-04-30 | [人工智能支出创下纪录，且看不到尽头 - nytimes](https://blog.rustfisher.com/news/nytimes-ai-spending-record-20260430/) | 谷歌、亚马逊、微软和 Meta 周三公布的季度资本支出总额超过 1300 亿美元，用于建设人工智能数据中心。未来还将有更多支出 |
-| 2026-04-30 | [我的第一个 Linux 内核补丁：从一个 TCP Listener 的 Bug 说起](https://jt26wzz.com/posts/0016-my-first-linux-kernel-patch-fixing-a-tcp-listener-bug/) | 这篇博客记录了我第一次给 Linux 内核贡献 Bugfix 补丁的全过程。第一部分记录我是怎么发现这个 TCP Listener 的 Bug，第二部分详细记录了我给内核提交补丁的完整过程和心得总结，第三部分分享我对开源社区运作的新理解，包括它和商业化组织里的工作有什么不同，以及如何更好地参与开源社… |
 
 ## Vibe Coding
 
