@@ -12,6 +12,30 @@
     "description": "上一次买Macbook Pro还是2014年，当时年少轻狂，又喜欢宝马貂裘，斥12000元巨资购买。不过因为工作环境，Mac生态缺乏很多我需要的程序，买了两年也没有收回成本，于是送人了。 最近我沉迷Vibe coding，尝试用Windows电脑上的GTX 1650 4G内存的显卡运行qwen2.5vl:3b视觉模型识别物品，没想到720P的图片，居然需要两分钟才能识别出来，分辨率高一点，直接爆显存。于是就萌生了升级硬件的想法。 运行更大的模型，需要更大的内存。目前内存比黄金还贵，普通人花巨资搭建自己的本地高端大模型，从性价比来说，非常不划算。并且另一方面，花一两万搭的本地模型也不可能有云端模型更快更强悍。 去年Mac mini 补贴完2600多的时候，我曾想购买一台，但是考虑到实用性，依旧没有买。今年因为 OpenClaw 的火热造成了Mac mini的涨价，并且自己有Linux主机，也可以运行 OpenClaw，所以一直没有实现。 但是这次，我终于找到了购买它的理由，它有16G内存，足以运行qwen2.5vl:7b模型，几秒钟就能做一张720p图片识别。所以我毫不犹豫地在闲鱼上以3"
   },
   {
+    "title": "GiffGaff 英国 eSIM 手机卡注册并迁移到实体卡",
+    "url": "https://blog.yasking.org/a/giffgaff-register-and-transfer.html",
+    "date": "2026-05-08T03:00:00Z",
+    "description": "2026 年 5 月 31 号之前，通过邀请链接注册开卡，你我都将获得 £10 的赠送金： http://www.giffgaff.com/orders/affiliate/kissb994_1776743498119 先说一下我的场景，有可以临时使 …"
+  },
+  {
+    "title": "debian13(debian trixie)安装了nvidia闭源驱动后从x11切换到wayland的方法",
+    "url": "https://hellodk.cn/post/1217",
+    "date": "2026-05-08T02:58:00Z",
+    "description": "我的 debian 13环境如下Debian 13 (Trixie)GNOME Shell 48.7NVIDIA 550.163RTX 3060 LaptopIntel(i7-11800H) +..."
+  },
+  {
+    "title": "如何篡改集体记忆？",
+    "url": "https://mobius.blog/23484.html",
+    "date": "2026-05-08T02:37:23Z",
+    "description": "在我的灵感记事本里，有一条一直没有写，但也没有被我删掉的灵感： 楼下有人排队做核酸，已经排了 2 小时的队了， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。"
+  },
+  {
+    "title": "new-api Docker Compose 部署",
+    "url": "https://199604.com/3566",
+    "date": "2026-05-08T01:41:04Z",
+    "description": "new-api Docker Compose 部署 说明：本文件用于指导在本机或服务器上通过 Docker C […]"
+  },
+  {
     "title": "埃隆·马斯克的 SpaceX 计划投资 550 亿美元制造人工智能芯片",
     "url": "https://blog.rustfisher.com/news/spacex-20260508/",
     "date": "2026-05-08T00:08:59Z",
