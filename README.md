@@ -21,13 +21,14 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-08 | [二次创作的 tab-out：让我的”标签页囤积症”康复了](https://www.evan.xin/4966/) | 为什么做这个 我属于那种「标签页越开越多，越不想关」的人。Chrome 自带的标签页管理基本等于没有，找东西全 […] |
 | 2026-05-08 | [升级桌面硬件设备](https://krya.com/post/updatehardware/) | 上一次买Macbook Pro还是2014年，当时年少轻狂，又喜欢宝马貂裘，斥12000元巨资购买。不过因为工作环境，Mac生态缺乏很多我需要的程序，买了两年也没有收回成本，于是送人了。 最近我沉迷Vibe coding，尝试用Windows电脑上的GTX 1650 4G内存的显卡运行qwen2.5… |
 | 2026-05-08 | [Instruct 的意义](https://blog.est.im/2026/stdin-12) | 回顾AI这一波潮流，NLP CV ML DL 一路到 gpt2 gpt3 我都勉强能看懂怎么个事。 ChatGPT 就完全不懂了，剩下的只有惊叹。 但是 o1 之后感觉又能看懂了，reasoning无非是每个受过正规教育的学生都会的，面对答题之前要打草稿；sora之类的VLA world model… |
-| 2026-05-08 | [急救电话](https://mobius.blog/23477.html) | 事到如今，东东的奶奶突发心脏病，东东拨打急救电话是，最需要说的是？ A、地址 B、电话 C、病情 D、爸爸的工 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-05-08 | [急救电话](https://mobius.blog/23477.html) | 事到如今，东东的奶奶突发心脏病，东东拨打急救电话是，最需要说的是？ A、地址 B、电话 C、病情 D、爸爸的工 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-08 | [Memos: 6月1日起 PIR 注册局提高 .org 域名批发价](https://blog.yasking.org/a/1778207518.html) | 早上看到 Namesilo 发来邮件通知 org 域名即将涨价，了解到是其注册局将批发价从 $9.93/年上涨到 $11.00/年（ 来源 ），下游的 Namesilo 价格将从 … |
 | 2026-05-08 | [GiffGaff 英国 eSIM 手机卡注册并迁移到实体卡](https://blog.yasking.org/a/giffgaff-register-and-transfer.html) | 2026 年 5 月 31 号之前，通过邀请链接注册开卡，你我都将获得 £10 的赠送金： http://www.giffgaff.com/orders/affiliate/kissb994_1776743498119 先说一下我的场景，有可以临时使 … |
 | 2026-05-08 | [debian13(debian trixie)安装了nvidia闭源驱动后从x11切换到wayland的方法](https://hellodk.cn/post/1217) | 我的 debian 13环境如下Debian 13 (Trixie)GNOME Shell 48.7NVIDIA 550.163RTX 3060 LaptopIntel(i7-11800H) +... |
-| 2026-05-08 | [如何篡改集体记忆？](https://mobius.blog/23484.html) | 在我的灵感记事本里，有一条一直没有写，但也没有被我删掉的灵感： 楼下有人排队做核酸，已经排了 2 小时的队了， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-05-08 | [如何篡改集体记忆？](https://mobius.blog/23484.html) | 在我的灵感记事本里，有一条一直没有写，但也没有被我删掉的灵感： 楼下有人排队做核酸，已经排了 2 小时的队了， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-08 | [new-api Docker Compose 部署](https://199604.com/3566) | new-api Docker Compose 部署 说明：本文件用于指导在本机或服务器上通过 Docker C […] |
 | 2026-05-08 | [埃隆·马斯克的 SpaceX 计划投资 550 亿美元制造人工智能芯片](https://blog.rustfisher.com/news/spacex-20260508/) | 这家火箭公司新建的半导体工厂名为 Terafab，是这位亿万富翁不断加大力度主导人工智能领域的一部分 |
 | 2026-05-08 | [Memos #2026-05-07](https://www.taober.blog/memos) | 23:51 Cool～ |
@@ -35,8 +36,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-07 | [2026年五一长假小记](https://www.quji.org/archives/8761?pk_campaign=feed&pk_kwd=2026%25e5%25b9%25b4%25e4%25ba%2594%25e4%25b8%2580%25e9%2595%25bf%25e5%2581%2587%25e5%25b0%258f%25e8%25ae%25b0) | 这个五一长假，对其他人来说是轰轰烈烈，对我来讲却是跌宕起伏。参加同学婚礼、相亲失败、见到了奶奶大伯哥哥、见到了同事。1号上午依旧是在工地值班，和往常一样，工地的苦逼干过的都知道。 |
 | 2026-05-07 | [误会是表达者的宿命](https://blog.solazy.me/20260507/) | 今天想聊聊表达这件事 |
 | 2026-05-07 | [我买基金从不亏钱](https://blog.ops-coffee.com/r/fund-5-year-from-50-percent-loss-to-profit.html) | 这是一篇酝酿了超过5年的复盘 |
-| 2026-05-07 | [代码](https://mobius.blog/23473.html) | “AI 写的程序不进行审查就随便上线，是不负责任的，而且是没办法用的。” “你意思是，我们这些没学过编程的文科 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-05-07 | [善于发现生活中的冲突](https://mobius.blog/23469.html) | 在剧本写作里，有一句经典的关于“什么是故事”的描述： 猫坐在自己的垫子上，故事是不能这样开始的。猫坐在狗垫子上 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-05-07 | [代码](https://mobius.blog/23473.html) | “AI 写的程序不进行审查就随便上线，是不负责任的，而且是没办法用的。” “你意思是，我们这些没学过编程的文科 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
+| 2026-05-07 | [善于发现生活中的冲突](https://mobius.blog/23469.html) | 在剧本写作里，有一句经典的关于“什么是故事”的描述： 猫坐在自己的垫子上，故事是不能这样开始的。猫坐在狗垫子上 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-07 | [GPT‑5.5 Instant 发布](https://blog.rustfisher.com/news/gpt-5-5-instant-20260507/) | 正在更新 ChatGPT 的默认模型（所有人都可以使用），使其更智能、更准确，提供更清晰、更简洁的答案，让您感觉更贴合自身需求。 |
 | 2026-05-07 | [Study English Plan - Beginner Level](https://www.jtxyh.com/58318/) | Claude Give Me A Plan to Study English - For Beginner Learners — Shadowing Method |
 | 2026-05-07 | [Claude Code 对接 DeepSeek 使用教程](https://blog.oofo.cc/posts/claude-code-deepseek) | ## 概述 Claude Code 是一个运行在终端里的 AI 编程助手。正常情况下，它会连接 Anthropic 官方服务；如果你想使用 DeepSeek 的模型，可以通过 DeepSeek 提供的 Anthropic 兼容接口，把 Claude Code 的请求转发到 DeepSeek。 这篇文… |
@@ -45,12 +46,13 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-06 | [我把博客重新整理了很多遍哈哈哈](https://blog.zopiya.com/blog-reorganized-again-19fc343e/) | 上一篇算是重新开门。 这一篇，就简单说一下这个博客这次都改了什么。 我最早用的是 WordPress，后来也用过 Typecho、Halo，以及一些别的方案。一路折腾下来，其实也算是把主流的博客系统都用了一遍。 |
 | 2026-05-06 | [喜剧的内核是悲剧](https://blog.solazy.me/20260506/) | 在关于喜剧的诸多探讨中，「喜剧的内核是悲剧」这句断言流传最广，也最容易被误读。它似乎为那些看似轻浮的笑声披上了一层严肃的外衣，让喜剧在艺术殿堂里获得了一席之地。然而，当我们剥开这层外衣，会发现这不仅是一个创作层面的技巧，更是一套关于生存的哲学。 喜剧与悲剧，在形式上往往呈现出一种奇妙的对称。悲剧展示… |
 | 2026-05-06 | [Memos: 重新学习下 Git 的使用](https://blog.yasking.org/a/1778066975.html) | 这些年一直没有系统学习过 Git，遇到问题就 Google、翻 Stack Overflow，然后大部分时间都在使用 GUI 进行操作，现在有 AI 更是可以无脑让它 … |
+| 2026-05-06 | [全民插管](https://victor42.eth.limo/post-en/real-matrix/) | 1. 敦刻尔克大招魂 2. 全民插管 3. 笑死 4.让一部分人先赛博起来 5.真的高手都远程 6.怪物文明 7.Are they getting along? 8.现代女巫 9.人虫合作 10. 源远流长 前几天在新闻听到中国和拉美国家高层往来互访。 今天就非常应景，在一家餐馆墙上看到这样一幅画，… |
 | 2026-05-06 | [电商语料VOC标签分类方案](https://lililib.github.io/%E7%94%B5%E5%95%86%E8%AF%AD%E6%96%99VOC%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E6%96%B9%E6%A1%88/) | VOC(Voice of Customer,客户之声)的目标是通过分析客服与顾客的聊天记录、订单评价等内容,识别顾客意图并归类打标,帮助商家洞察用户真实需求,反哺产品迭代和客服话术优化。 本文记录在对接淘宝平台实时消息队列、做电商场景 VOC 标签分类时,踩过的坑以及最终落地的「 反向打标签 + R… |
 | 2026-05-06 | [我的Windows平台磁盘空间分析管理工具](https://www.iyeslogo.com/space-software/) | 本文介绍了三款磁盘空间分析工具 |
 | 2026-05-06 | [Sentry 替代品 Bugsink 安装配置](https://blog.est.im/2026/stdout-15) | 如果你像我一样需要一个线上异常 traceback 跟踪工具，又没法忍受 Kafka/ClickHouse/Snuba/Zookeeper 这一坨依赖，那么归根结底有 三个选择 ： sentry glitchtip 除了错误跟踪也支持 uptime 等 bugsink。不支持 Android/Jav… |
 | 2026-05-06 | [FreeSpace 2 updated](https://macsourceports.com/game/freespace2) | The build of FreeSpace 2 Source Code Project for FreeSpace 2 has been updated to version release250_1 of the project |
 | 2026-05-06 | [一个新的 AI 记忆层概念：哈勃半径](https://1q43.blog/post/12336/) | AI 需要知道，以我为圆心的世界是什么样子的。 |
-| 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
+| 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-06 | [AMD 利润和营收因数据中心业务增长而大幅提升](https://blog.rustfisher.com/news/amd-wsj-20260506/) | 芯片制造商表示，由于人工智能推动需求增长，该领域销售额飙升57% |
 | 2026-05-06 | [利息与个税](https://hux.ink/posts/interest-and-tax/) | 前不久刚做完 2025 年度的个税汇算清缴，退税 4800 元。这笔“意外之财”主要来自两个项目。 第一项是住房贷款利息专项扣除。可能是上一年集中办理降息操作，导致贷款合同号变更，每个月 1000 元的抵扣项目当时没能申报成功，这次一次性退税 2400 元。 第二项是个人养老金缴存。我是按 1200… |
 | 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
