@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-08 | [升级桌面硬件设备](https://krya.com/post/updatehardware/) | 上一次买Macbook Pro还是2014年，当时年少轻狂，又喜欢宝马貂裘，斥12000元巨资购买。不过因为工作环境，Mac生态缺乏很多我需要的程序，买了两年也没有收回成本，于是送人了。 最近我沉迷Vibe coding，尝试用Windows电脑上的GTX 1650 4G内存的显卡运行qwen2.5… |
+| 2026-05-08 | [Memos: 6月1日起 PIR 注册局提高 .org 域名批发价](https://blog.yasking.org/a/1778207518.html) | 早上看到 Namesilo 发来邮件通知 org 域名即将涨价，了解到是其注册局将批发价从 $9.93/年上涨到 $11.00/年（ 来源 ），下游的 Namesilo 价格将从 … |
 | 2026-05-08 | [GiffGaff 英国 eSIM 手机卡注册并迁移到实体卡](https://blog.yasking.org/a/giffgaff-register-and-transfer.html) | 2026 年 5 月 31 号之前，通过邀请链接注册开卡，你我都将获得 £10 的赠送金： http://www.giffgaff.com/orders/affiliate/kissb994_1776743498119 先说一下我的场景，有可以临时使 … |
 | 2026-05-08 | [debian13(debian trixie)安装了nvidia闭源驱动后从x11切换到wayland的方法](https://hellodk.cn/post/1217) | 我的 debian 13环境如下Debian 13 (Trixie)GNOME Shell 48.7NVIDIA 550.163RTX 3060 LaptopIntel(i7-11800H) +... |
 | 2026-05-08 | [如何篡改集体记忆？](https://mobius.blog/23484.html) | 在我的灵感记事本里，有一条一直没有写，但也没有被我删掉的灵感： 楼下有人排队做核酸，已经排了 2 小时的队了， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
