@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-08 | [升级桌面硬件设备](https://krya.com/post/updatehardware/) | 上一次买Macbook Pro还是2014年，当时年少轻狂，又喜欢宝马貂裘，斥12000元巨资购买。不过因为工作环境，Mac生态缺乏很多我需要的程序，买了两年也没有收回成本，于是送人了。 最近我沉迷Vibe coding，尝试用Windows电脑上的GTX 1650 4G内存的显卡运行qwen2.5… |
+| 2026-05-08 | [Instruct 的意义](https://blog.est.im/2026/stdin-12) | 回顾AI这一波潮流，NLP CV ML DL 一路到 gpt2 gpt3 我都勉强能看懂怎么个事。 ChatGPT 就完全不懂了，剩下的只有惊叹。 但是 o1 之后感觉又能看懂了，reasoning无非是每个受过正规教育的学生都会的，面对答题之前要打草稿；sora之类的VLA world model… |
 | 2026-05-08 | [急救电话](https://mobius.blog/23477.html) | 事到如今，东东的奶奶突发心脏病，东东拨打急救电话是，最需要说的是？ A、地址 B、电话 C、病情 D、爸爸的工 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-08 | [Memos: 6月1日起 PIR 注册局提高 .org 域名批发价](https://blog.yasking.org/a/1778207518.html) | 早上看到 Namesilo 发来邮件通知 org 域名即将涨价，了解到是其注册局将批发价从 $9.93/年上涨到 $11.00/年（ 来源 ），下游的 Namesilo 价格将从 … |
 | 2026-05-08 | [GiffGaff 英国 eSIM 手机卡注册并迁移到实体卡](https://blog.yasking.org/a/giffgaff-register-and-transfer.html) | 2026 年 5 月 31 号之前，通过邀请链接注册开卡，你我都将获得 £10 的赠送金： http://www.giffgaff.com/orders/affiliate/kissb994_1776743498119 先说一下我的场景，有可以临时使 … |
