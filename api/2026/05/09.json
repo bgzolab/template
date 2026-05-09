@@ -12,6 +12,18 @@
     "description": "简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn"
   },
   {
+    "title": "「过往」“狗日的”腾讯",
+    "url": "https://www.wdssmq.com/post/20221005708.html",
+    "date": "2026-05-09T13:49:20Z",
+    "description": "翻旧文件时发现的脚本命令，当年一不小心就会被安装腾讯管家，应对方法是直接在对应路径创建空文件夹，然后把权限设置为拒绝访问…… 虽然已经忘记为什么有个 20191015 文件夹了「- -」 set path1=\"c:\\Program Files (x86)\\Tencent\\QQPCMgr\" set path2=\"c:\\20191015\" REM Takeown /F %path% /r /d y REM cacls %path% /t /e /g Administrators:F REM rd /s %path% md %path1% md %path2% echo y|cacls %path1% /d everyone>nul echo y|cacls %path2% /d everyone>nul pause"
+  },
+  {
+    "title": "今天是个好日子",
+    "url": "https://blog.thetbw.xyz/archives/good-day",
+    "date": "2026-05-09T07:49:39Z",
+    "description": "论文终于过了，悬着的心终于可以放下了，自考两年半，也是结束了，就等后面的毕业证和学位证了。 暂时还不知道后面干嘛，打算先玩玩，可以看看后面还有什么人生的方向。 明天刚好母亲节，跟我妈去吃点好的。 哦，我可以过两天去更新一下我简历上的学历了😗"
+  },
+  {
     "title": "在AI回复之前，在世界发生之前，在你意识到之前",
     "url": "https://www.banzhuanriji.com/blog/before-things-happning/",
     "date": "2026-05-09T03:45:08Z",
