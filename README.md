@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-09 | [Memos #2026-05-08](https://www.taober.blog/memos) | 21:57 有一个能力强又性格好的同事太爽了！ |
+| 2026-05-08 | [2026.5.8](https://www.justzht.com/2026-5-8/) | 买了个莱卡 Q3 43 的无线充电手柄，就是一个手柄提供握把支撑，但底座有三个触点可以和相机的电子线路连接，并 |
+| 2026-05-08 | [鸟](https://z.arlmy.me/posts/Poems/2026/20260426_Niao/) | 「鸟来自上古。」 |
 | 2026-05-08 | [聊聊那些翻山越岭的神奇操作（下）-前篇](https://blog.kenxu.top/post/bypass-gfw-p3/) | 越过长城，走向世界 |
 | 2026-05-08 | [罗马-佛罗伦萨-梵蒂冈之旅（一）](https://eduardoqian.com/archives/luo-ma-fo-luo-lun-sa-fan-di-gang-zhi-lu-yi) | 在5月2日——5月7日，我独自前往罗马，开启五天的旅途。 前往罗马的动机其实没有什么特别的，来了瑞典有了将近一年，却没出过瑞典旅游。到了4月下旬时，天气转暖，搜了一下瑞安的航班，发现从哥德堡直飞罗马的飞机往返仅需不到1000元，这个价格正合适，且最近的学习压力也没那么大，于是就定了到罗马的机票，美中 |
 | 2026-05-08 | [别让爱只剩下「早知道」](https://blog.solazy.me/20260508/) | 今天的思考来源于一条频道推送 |
@@ -35,7 +38,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-08 | [如何篡改集体记忆？](https://mobius.blog/23484.html) | 在我的灵感记事本里，有一条一直没有写，但也没有被我删掉的灵感： 楼下有人排队做核酸，已经排了 2 小时的队了， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-08 | [new-api Docker Compose 部署](https://199604.com/3566) | new-api Docker Compose 部署 说明：本文件用于指导在本机或服务器上通过 Docker C […] |
 | 2026-05-08 | [埃隆·马斯克的 SpaceX 计划投资 550 亿美元制造人工智能芯片](https://blog.rustfisher.com/news/spacex-20260508/) | 这家火箭公司新建的半导体工厂名为 Terafab，是这位亿万富翁不断加大力度主导人工智能领域的一部分 |
-| 2026-05-08 | [Memos #2026-05-07](https://www.taober.blog/memos) | 23:51 Cool～ |
 | 2026-05-07 | [当一切都开始循环，人在哪里按下暂停？](https://www.linggandianbo.com/newsletter-122/) | 从 AI agent、持续学习、生物计算到炼油厂和盯墙术，理解技术真正改变的不是速度，而是人和系统之间的边界｜灵感电波 #122 |
 | 2026-05-07 | [2026年五一长假小记](https://www.quji.org/archives/8761?pk_campaign=feed&pk_kwd=2026%25e5%25b9%25b4%25e4%25ba%2594%25e4%25b8%2580%25e9%2595%25bf%25e5%2581%2587%25e5%25b0%258f%25e8%25ae%25b0) | 这个五一长假，对其他人来说是轰轰烈烈，对我来讲却是跌宕起伏。参加同学婚礼、相亲失败、见到了奶奶大伯哥哥、见到了同事。1号上午依旧是在工地值班，和往常一样，工地的苦逼干过的都知道。 |
 | 2026-05-07 | [误会是表达者的宿命](https://blog.solazy.me/20260507/) | 今天想聊聊表达这件事 |
@@ -117,13 +119,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-02 | [童真易满 成人难欢](https://hux.ink/posts/tong-zhen-yi-man/) | 昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官… |
 | 2026-05-02 | [EPIC 大气！《霍格沃茨之遗》免费领取，必玩“哈利波特”魔法世界游戏大作！](https://www.iplaysoft.com/hogwarts-legacy.html) | 为庆祝哈利波特 25 周年， Epic 游戏商城搞了一个“王炸”级的福利！这次免费赠送给玩家的是——《 霍格沃茨之遗 》(Hogwarts Legacy)！ 这可是原价￥384 元的 3A 游戏 大作啊！而且还是基于「 哈利波特 」世界观的精良制作。不得不说，E 宝送游戏是真够大气！上一次刚宣布限免… |
 | 2026-05-02 | [suede演唱会](https://www.aowugong.top/posts/blog-2026-04-25/) | https://cdn.aowugong.top/gh/howie110/obsidian_img/cdnimg/fdd1ce95534d75e9cb1d4a500d783e4e.jpg |
-| 2026-05-01 | [不要坚持](https://yinji.org/do-not-insist.html) | 当做一件事情需要坚持，那就是勉强，勉强就不可能有好结果。 这是我在和菜头的文章《在和菜头的激励下》中了解到的一个观点。 反反复复读了很多遍，一开始不以为然，但随着最近博客写的越来越少，骑车越来越多，对此体会也越来越深刻。汉字博大精深，“我骑行了1个月”和“我坚持骑行了1个月”，前者是在描述事实，后者… |
-| 2026-05-01 | [五一流水账 0501](https://blog.solazy.me/20260501/) | 难得的小长假！ |
-| 2026-05-01 | [报道称，马克·扎克伯格表示，人工智能成本是导致公司裁员8000人的原因之一](https://blog.rustfisher.com/news/meta-mark-zuckerberg-says-ai-costs-contributed-to-layoffs-of-8000-staffers-report-says-20260501/) | 据 《华尔街日报》 报道，Meta 首席执行官马克·扎克伯格在周四的一次内部会议录音中承认，该公司在人工智能方面的支出导致了 Meta 的裁员。该录音详细介绍了该公司的资本支出和人工智能投资情况 |
-| 2026-05-01 | [Parallels Desktop 26 官网限时 5.5 折！新功能汇总 / Mac 虚拟机升级](https://www.iplaysoft.com/p/parallels-desktop-26) | 作为一名长期使用 Mac 却离不开使用各种 Windows 软件的用户，我算是 Parallels Desktop 的老朋友了。从 Intel 芯片时代用到现在的苹果芯片 Apple Silicon，PD 一步步变得越发强大。 「新版 PD26 官网限时 5.5 折特价！历史新低」 获取：PD26… |
-| 2026-05-01 | [假期从折腾Obsidian开始](https://hux.ink/posts/obsidian-sync/) | 五一假期第一天，折腾升级 Obsidian。 我日常 PC 端用 Windows，移动端用 iOS。使用 Obsidian 时，由于苹果的封闭性，PC 与移动端的同步一直是个难题。很早以前我用过 Remotely Save 插件通过 Onedrive 同步，但它不太稳定，经常出 Bug。担心丢文件，… |
-| 2026-05-01 | [无法消失的现代人](https://mobius.blog/23376.html) | 现代人不是无法消失，或许是从未真正出现过。 此时此刻，我又是在咖啡厅码字，大概是节假日前的最后一天。咖啡厅明显 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-05-01 | [AI agent 不缺代码，它缺工程记忆](https://huoru.me/posts/mainline-intent-memory/) | AI agent 不缺代码，它缺工程记忆 在 RAG 或 grep 之前，先给 agent 工程意图 AI 编程正在变快。 快到什么程度？ 一个需求，几分钟出代码。 一个 bug，几轮对话就修。 一个重构，agent 可以通宵跑完。 但越用我越发现： AI agent 最大的问题，不是写不出代码。… |
 
 ## Vibe Coding
 
