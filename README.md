@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-10 | [如何拥有铁一样的肠胃？](https://www.geedea.pro/article/hacking-digestive-system/) | 应该是在读过《控糖革命》之后，我开始有意识地增加膳食纤维摄入，因为提前食用富含膳食纤维的食物可以减缓血糖上升速度，而控糖的好处就不多言了。由于我不总是能严格控制饮食，精力稳定和体脂率下降的好处我倒是没怎么体验到，但我身体的另一个系统却因此变得异常强大，这是我始料未及的。 这个系统就是（ 因为标题已经… |
 | 2026-05-10 | [Predict Next Word](https://blog.est.im/2026/stdin-13) | 一个流传很广的视频 小朋友识字，笑死我了。其实他一个不认识，只是记性好 1 2 摘录一些评论 妈妈：NOR FLASH；姐姐：NAND FLASH；小孩：磁带 链式存储，不支持随机查找 随机提问，你手机号的第五位是什么 正常，元素周期表中铝上个是什么 上辈子是个磁带 别笑，现在立刻问你周期表21号元… |
 | 2026-05-10 | [最近惦念 20260425](https://z.arlmy.me/posts/TILs/thoughts/20260425_Recently/) | 「完美的对面是：生命力。」 |
 | 2026-05-10 | [Toots 418 2026 May.3 - May.9](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260509/) | 「能单盘了！」 |
