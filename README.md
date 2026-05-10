@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-10 | [Predict Next Word](https://blog.est.im/2026/stdin-13) | 一个流传很广的视频 小朋友识字，笑死我了。其实他一个不认识，只是记性好 1 2 摘录一些评论 妈妈：NOR FLASH；姐姐：NAND FLASH；小孩：磁带 链式存储，不支持随机查找 随机提问，你手机号的第五位是什么 正常，元素周期表中铝上个是什么 上辈子是个磁带 别笑，现在立刻问你周期表21号元… |
 | 2026-05-10 | [最近惦念 20260425](https://z.arlmy.me/posts/TILs/thoughts/20260425_Recently/) | 「完美的对面是：生命力。」 |
 | 2026-05-10 | [Toots 418 2026 May.3 - May.9](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260509/) | 「能单盘了！」 |
 | 2026-05-10 | [小东西：用FreshRSS实现带AI摘要的订阅推送](https://www.xiaozonglin.cn/xdsec-push-bot/) | 用FreshRSS + Python + Napcat实现带AI摘要的订阅QQ群推送 小东西：用FreshRSS实现带AI摘要的订阅推送 最先出现在 林林杂语 。 |
@@ -28,6 +29,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-10 | [玩游戏玩出的结论](https://mobius.blog/23506.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-09 | [20260509的胡言乱语](https://www.bboy.app/2026/05/09/20260509%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/) | 简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn |
 | 2026-05-09 | [「过往」“狗日的”腾讯](https://www.wdssmq.com/post/20221005708.html) | 翻旧文件时发现的脚本命令，当年一不小心就会被安装腾讯管家，应对方法是直接在对应路径创建空文件夹，然后把权限设置为拒绝访问…… 虽然已经忘记为什么有个 20191015 文件夹了「- -」 set path1="c:\Program Files (x86)\Tencent\QQPCMgr" set p… |
+| 2026-05-09 | [使用Codex一个月，我真的废了](http://www.5had0w.com/posts/2531b4c0.html) | 当初手写代码、抓 bug 的成就感，已经没了。 而第一次写出 Hello World 的感觉，我早已不记得了。 上个月开始，公司全力推动 AI 编程，给我们每个人都配备了 Codex，凡是新的功能模块，必须 100% 由 AI 开发。哪 |
 | 2026-05-09 | [今天是个好日子](https://blog.thetbw.xyz/archives/good-day) | 论文终于过了，悬着的心终于可以放下了，自考两年半，也是结束了，就等后面的毕业证和学位证了。 暂时还不知道后面干嘛，打算先玩玩，可以看看后面还有什么人生的方向。 明天刚好母亲节，跟我妈去吃点好的。 哦，我可以过两天去更新一下我简历上的学历了😗 |
 | 2026-05-09 | [在AI回复之前，在世界发生之前，在你意识到之前](https://www.banzhuanriji.com/blog/before-things-happning/) | SQLite 或许真正的好东西，往往不是“组织”出来的 前几天刚和朋友讨论完，SQLite和Linux哪个是安装最多的软件。最近发现X上都在讨论SQLite。 在这个结论之前，先说一个你可能没想过的问题：SQLite——那个藏在几十亿台手机、电脑、电视、汽车甚至浏览器里的数据库——核心开发团队有几个… |
 | 2026-05-09 | [昨夜噩梦](https://yipai.me/post/2511.html) | 最近半年噩梦似乎多了一些。昨晚又连续做了两个噩梦。 第一个梦发生在一片胡同里。前半段还算平静，到了后面，整个场 […] |
