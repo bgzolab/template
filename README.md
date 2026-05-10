@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-10 | [小东西：用FreshRSS实现带AI摘要的订阅推送](https://www.xiaozonglin.cn/xdsec-push-bot/) | 用FreshRSS + Python + Napcat实现带AI摘要的订阅QQ群推送 小东西：用FreshRSS实现带AI摘要的订阅推送 最先出现在 林林杂语 。 |
 | 2026-05-10 | [2026 欧洲之旅：坐高铁](https://www.ixiqin.com/2026/05/10/2026-european-tour-riding-high-speed-rail/) | 忙了一段时间，终于有空把之前挖的坑给填了。。。 如果你在欧洲旅行，除了租车自驾/坐大巴以外，坐公共交通中的高铁 […] |
 | 2026-05-10 | [玩游戏玩出的结论](https://mobius.blog/23506.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-09 | [20260509的胡言乱语](https://www.bboy.app/2026/05/09/20260509%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/) | 简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn |
