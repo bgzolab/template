@@ -21,6 +21,11 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-10 | [Ubuntu 26.04 Desktop使用体验](https://blog.keepchen.com/a/Ubuntu-26.04-Desktop-User-Experience.html) | 在Ubuntu 26.04正式版发布前，我已经使用Ubuntu 24.04又快一年的时间了。为什么说又呢，那是因为在此之前也是在工作电脑上长期使用Ubuntu Desktop版本。趁着26.04版本刚发布不久，赶紧安装尝鲜试试体验如何。 |
+| 2026-05-10 | [学习周刊-总第262期-2026年第19周](https://wiki.eryajf.net/pages/7c16d3/) | 如要阅读全文，点击标题跳转。 学习周刊-总第262期 &#124; easyshell &#124; RapidRAW &#124; hiclaw &#124; Proma &#124; xiaoyaoprivatebill &#124; djump &#124; openclaw-kasmvnc &#124; hive &#124; moraya &#124; memsearch &#124; full-… |
+| 2026-05-10 | [学习周刊-总第261期-2026年第18周](https://wiki.eryajf.net/pages/71aed3/) | 如要阅读全文，点击标题跳转。 学习周刊-总第261期 &#124; paperclip &#124; openocta &#124; neo &#124; video-helper &#124; agent-browser &#124; defuddle &#124; bounty-hunter-skill &#124; Scrapling &#124; agency-agents &#124;… |
+| 2026-05-10 | [稻草人周刊 Vol.80](https://www.geedea.pro/weekly/80/) | 在开始之前我需要警告读者，这期周刊的大多数内容都在批评（甚至攻击），带有不少负面情绪，请谨慎阅读，或者你也可以跳过「连接」这个栏目。不过该说不说，带着一点攻击性写文让我找回了几个月前写博客的感觉。 止语 Whole World As Vigil Lauren Auder Bandcamp 又是一张在… |
+| 2026-05-10 | [周末流水账 0510](https://blog.solazy.me/20260510/) | 这是个单休的周末 |
 | 2026-05-10 | [如何拥有铁一样的肠胃？](https://www.geedea.pro/article/hacking-digestive-system/) | 应该是在读过《控糖革命》之后，我开始有意识地增加膳食纤维摄入，因为提前食用富含膳食纤维的食物可以减缓血糖上升速度，而控糖的好处就不多言了。由于我不总是能严格控制饮食，精力稳定和体脂率下降的好处我倒是没怎么体验到，但我身体的另一个系统却因此变得异常强大，这是我始料未及的。 这个系统就是（ 因为标题已经… |
 | 2026-05-10 | [Predict Next Word](https://blog.est.im/2026/stdin-13) | 一个流传很广的视频 小朋友识字，笑死我了。其实他一个不认识，只是记性好 1 2 摘录一些评论 妈妈：NOR FLASH；姐姐：NAND FLASH；小孩：磁带 链式存储，不支持随机查找 随机提问，你手机号的第五位是什么 正常，元素周期表中铝上个是什么 上辈子是个磁带 别笑，现在立刻问你周期表21号元… |
 | 2026-05-10 | [最近惦念 20260425](https://z.arlmy.me/posts/TILs/thoughts/20260425_Recently/) | 「完美的对面是：生命力。」 |
@@ -29,6 +34,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-10 | [2026 欧洲之旅：坐高铁](https://www.ixiqin.com/2026/05/10/2026-european-tour-riding-high-speed-rail/) | 忙了一段时间，终于有空把之前挖的坑给填了。。。 如果你在欧洲旅行，除了租车自驾/坐大巴以外，坐公共交通中的高铁 […] |
 | 2026-05-10 | [玩游戏玩出的结论](https://mobius.blog/23506.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-09 | [20260509的胡言乱语](https://www.bboy.app/2026/05/09/20260509%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/) | 简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn |
+| 2026-05-09 | [饭灵根](https://blog.solazy.me/20260509/) | 这两天遇到一个有点意思的名词，今天索性来聊聊。 |
 | 2026-05-09 | [「过往」“狗日的”腾讯](https://www.wdssmq.com/post/20221005708.html) | 翻旧文件时发现的脚本命令，当年一不小心就会被安装腾讯管家，应对方法是直接在对应路径创建空文件夹，然后把权限设置为拒绝访问…… 虽然已经忘记为什么有个 20191015 文件夹了「- -」 set path1="c:\Program Files (x86)\Tencent\QQPCMgr" set p… |
 | 2026-05-09 | [使用Codex一个月，我真的废了](http://www.5had0w.com/posts/2531b4c0.html) | 当初手写代码、抓 bug 的成就感，已经没了。 而第一次写出 Hello World 的感觉，我早已不记得了。 上个月开始，公司全力推动 AI 编程，给我们每个人都配备了 Codex，凡是新的功能模块，必须 100% 由 AI 开发。哪 |
 | 2026-05-09 | [今天是个好日子](https://blog.thetbw.xyz/archives/good-day) | 论文终于过了，悬着的心终于可以放下了，自考两年半，也是结束了，就等后面的毕业证和学位证了。 暂时还不知道后面干嘛，打算先玩玩，可以看看后面还有什么人生的方向。 明天刚好母亲节，跟我妈去吃点好的。 哦，我可以过两天去更新一下我简历上的学历了😗 |
