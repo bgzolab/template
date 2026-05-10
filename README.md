@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-10 | [玩游戏玩出的结论](https://mobius.blog/23506.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-09 | [20260509的胡言乱语](https://www.bboy.app/2026/05/09/20260509%E7%9A%84%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/) | 简介 欢迎关注我的频道，不时发送垃圾消息 https://t.me/bboyapp 或者关注我的 twitter https://twitter.com/bboysoulcn |
 | 2026-05-09 | [「过往」“狗日的”腾讯](https://www.wdssmq.com/post/20221005708.html) | 翻旧文件时发现的脚本命令，当年一不小心就会被安装腾讯管家，应对方法是直接在对应路径创建空文件夹，然后把权限设置为拒绝访问…… 虽然已经忘记为什么有个 20191015 文件夹了「- -」 set path1="c:\Program Files (x86)\Tencent\QQPCMgr" set p… |
 | 2026-05-09 | [今天是个好日子](https://blog.thetbw.xyz/archives/good-day) | 论文终于过了，悬着的心终于可以放下了，自考两年半，也是结束了，就等后面的毕业证和学位证了。 暂时还不知道后面干嘛，打算先玩玩，可以看看后面还有什么人生的方向。 明天刚好母亲节，跟我妈去吃点好的。 哦，我可以过两天去更新一下我简历上的学历了😗 |
@@ -107,23 +108,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/23391.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/2026/05/03/23391/) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-03 | [2026年第17、18周](https://blog.sakoamc.com/posts/261718/) | 题记：无题。 |
-| 2026-05-02 | [深夜](https://www.l1ch40.com/2026/05/blog-post.html) | 我每次都是临新年的前一天回到家，但我今年记错了新年的日子，等到家时发现回来早了。 回到了家，我父母没有催我找对象的事情，可能是我之前的非暴力不合作的行为起了作用，但是说实话内心却有些不对味，好像我真被这个时代淘汰了一样，他妈的，狗屁的时代。 日子稀里糊涂地过。我天天找发小喝酒，喝到失重，仿佛喝完就能… |
-| 2026-05-02 | [May Day memories--Always remember to look up at the stars](https://tianheg.co/posts/may-day-memories-en/) | Shenzhen to Hangzhou On the evening of April 29th, I set off for home, carrying an old backpack. I couldn't remember how many years I'd had it — I onl… |
-| 2026-05-02 | [五一回忆——永远记得抬头看天上的星星](https://tianheg.co/posts/may-day-memories/) | 深圳飞杭州 四月二十九日晚我启程回家，背了一个旧书包，不知道用了几年，只知道这次回来差点把它的拎手扯断。包里装着换下还没洗的衣服，还有一套换洗衣服（短袖、短裤、内裤和袜子），外加一条短裤、长裤和一个剃须刀。除此之外，还背了一个斜挎小包，里面装着墨水屏阅读器、3C充电宝、深圳家的钥匙。 晚上没加班，八… |
-| 2026-05-02 | [不想再流浪](https://www.geedea.pro/article/stray-no-more/) | 如今每次回家，我爸都会想方设法在餐桌上提起我的不念家，这次在我姑姑家，问我表哥，现在回家的时候还会不会有激动的感觉，我表哥说可能有点吧，我爸说，我已经没有了。也不知道是不是圆滑，我表哥说我爸应该感到高兴，因为成功、理性的人就是这样的，不念家——总之我说不出这种话来。我已经接受，这些已经活到四十多岁，… |
-| 2026-05-02 | [macOS 上玩 PC 游戏：植物大战僵尸（Plants vs. Zombies）](https://springwood.me/pc-plants-vs-zombies/) | 有大神开发出了可以在 macOS 上原生运行的版本。 |
-| 2026-05-02 | [早晚拿下大行 P10](https://hux.ink/posts/go-to-buy-dahang-p10/) | 下午去离家最近的大行线下门店看了一下，离家三公里，其实可以走路或者扫共享单车过去，然后骑新车回来。但是选择了骑小电驴过去，能避免当场“Shut up and take my money”的情况出现。 主要是看 P8 和 P10，我对折叠车不了解，大行好像是绕不过去的牌子。 为什么考虑折叠车呢，主因是… |
-| 2026-05-02 | [五一流水账 0502](https://blog.solazy.me/20260502/) | 闪现桐乡！ |
-| 2026-05-02 | [最近使用debian系统的一些心得](https://hellodk.cn/post/1215) | 我将分为三个方面来简单聊聊：多系统共存和debian安装、驱动我的硬件、程序使用。多系统共存和debian系统安装现在都 2026年了，虽然这两年固态硬盘涨价了，但我还是建议使用 whole s... |
-| 2026-05-02 | [深入 SwiftWork（第 4 篇）：数据层与服务——SwiftData、状态恢复与 Markdown 渲染](https://gptkit.eth.limo/62F3FC56-7EC1-4BDE-AC7C-74727C594796/) | 本文是「深入 SwiftWork」系列第 4 篇（完结篇）。 系列目录见这里 。 前三篇讲了事件怎么从 SDK 流到 UI、时间线怎么渲染、工具卡片怎么可视化。这篇收尾，看 SwiftWork 的基础设施——数据怎么存、状态怎么恢复、Markdown 怎么渲染、代码怎么高亮、API Key 怎么管。… |
-| 2026-05-02 | [深入 SwiftWork（第 3 篇）：Tool Card——可扩展的工具可视化系统](https://gptkit.eth.limo/80C258D2-E57E-44CE-96DF-68D8E70B8343/) | 本文是「深入 SwiftWork」系列第 3 篇。 系列目录见这里 。 前两篇讲了事件怎么从 SDK 流到 UI。这篇聚焦其中一类事件——工具调用的可视化。 Agent 调工具是 Agent 应用里最频繁的操作。一次典型任务可能调用二三十次工具——读文件、写文件、执行命令、搜索代码。如果每次工具调用… |
-| 2026-05-02 | [深入 SwiftWork（第 2 篇）：事件时间线——18 种事件的可视化与性能](https://gptkit.eth.limo/6EF0434F-164C-4AC4-8043-A9095CF12118/) | 本文是「深入 SwiftWork」系列第 2 篇。 系列目录见这里 。 第 1 篇讲了 AgentBridge 怎么把 SDK 的 AsyncStream 变成 [AgentEvent] 。这篇看 [AgentEvent] 变成什么——TimelineView 怎么渲染 18 种事件、怎么处理滚屏行… |
-| 2026-05-02 | [深入 SwiftWork（第 1 篇）：SDK 集成层——把 AsyncStream 接进 SwiftUI](https://gptkit.eth.limo/B0266B1F-C82E-4C98-A3F3-C2A87BF61434/) | 本文是「深入 SwiftWork」系列第 1 篇。 系列目录见这里 。 第 0 篇画了全景图—— AsyncStream → AgentBridge → EventMapper → SwiftUI 。这篇拆开中间两层：AgentBridge 和 EventMapper，看它们怎么把 SDK 的消息流… |
-| 2026-05-02 | [深入 SwiftWork（第 0 篇）：用 SwiftUI 构建一个 Agent 可视化工作台](https://gptkit.eth.limo/7914B020-3118-44B1-B30F-458B99DB49AE/) | 本文是「深入 SwiftWork」系列第 0 篇。 系列目录见这里 。 前面七篇文章加上番外篇，我们把 Open Agent SDK 的内部机制翻了个底朝天——Agent Loop、工具系统、MCP 集成、多 Agent 协作、会话持久化、多 LLM 支持。番外篇还把 SDK 塞进了一个 macOS… |
-| 2026-05-02 | [【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/) | 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。 |
-| 2026-05-02 | [童真易满 成人难欢](https://hux.ink/posts/tong-zhen-yi-man/) | 昨晚读到“招财大屁股”的夜报，其中提到的两个话题，恰好都与我的生活轨迹重合，感触颇深。 其一，是关于双层巴士与孩子的感官红利。 去年 9 月，我和中秋曾连续两天带安安坐遍深圳的四条双层巴士线。每逢到站，他便拉着我直奔二层最前排的“全景座”。那一刻，窗外流动的街景在孩子眼中不是通勤路径，而是宏大的感官… |
-| 2026-05-02 | [EPIC 大气！《霍格沃茨之遗》免费领取，必玩“哈利波特”魔法世界游戏大作！](https://www.iplaysoft.com/hogwarts-legacy.html) | 为庆祝哈利波特 25 周年， Epic 游戏商城搞了一个“王炸”级的福利！这次免费赠送给玩家的是——《 霍格沃茨之遗 》(Hogwarts Legacy)！ 这可是原价￥384 元的 3A 游戏 大作啊！而且还是基于「 哈利波特 」世界观的精良制作。不得不说，E 宝送游戏是真够大气！上一次刚宣布限免… |
-| 2026-05-02 | [suede演唱会](https://www.aowugong.top/posts/blog-2026-04-25/) | https://cdn.aowugong.top/gh/howie110/obsidian_img/cdnimg/fdd1ce95534d75e9cb1d4a500d783e4e.jpg |
 
 ## Vibe Coding
 
