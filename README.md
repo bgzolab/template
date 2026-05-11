@@ -21,7 +21,10 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-11 | [真的存在过保就坏的“定时自毁功能”吗？](https://mobius.blog/23517.html) | 虽然我家上一台小米电视，确实在过保前一周突然坏了，还被拖回厂商免费维修过。 但至今并没有一项明确的证据，证明某 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
+| 2026-05-11 | [Memos #2026-05-10](https://www.taober.blog/memos) | 02:53 喝酒聊天=微醺=开心！ |
 | 2026-05-10 | [Ubuntu 26.04 Desktop使用体验](https://blog.keepchen.com/a/Ubuntu-26.04-Desktop-User-Experience.html) | 在Ubuntu 26.04正式版发布前，我已经使用Ubuntu 24.04又快一年的时间了。为什么说又呢，那是因为在此之前也是在工作电脑上长期使用Ubuntu Desktop版本。趁着26.04版本刚发布不久，赶紧安装尝鲜试试体验如何。 |
+| 2026-05-10 | [百合盛典 Prism Garden ― 光庭花开，一瓣情思](https://www.wikimoe.com/post/b-tet73zn0) | 2026年5月3日，天气多云，今天去大宫看Prism Garden ― 光庭花开，一瓣情思。 关于活动 「Prism Garden ― 光庭花开，一瓣情思」（Prism Garden ― 光の庭に咲く、ひとひらの想い）是由 Melonbooks 主办的百合作品主题展示活动，于 2026 年 5 月… |
 | 2026-05-10 | [学习周刊-总第262期-2026年第19周](https://wiki.eryajf.net/pages/7c16d3/) | 如要阅读全文，点击标题跳转。 学习周刊-总第262期 &#124; easyshell &#124; RapidRAW &#124; hiclaw &#124; Proma &#124; xiaoyaoprivatebill &#124; djump &#124; openclaw-kasmvnc &#124; hive &#124; moraya &#124; memsearch &#124; full-… |
 | 2026-05-10 | [学习周刊-总第261期-2026年第18周](https://wiki.eryajf.net/pages/71aed3/) | 如要阅读全文，点击标题跳转。 学习周刊-总第261期 &#124; paperclip &#124; openocta &#124; neo &#124; video-helper &#124; agent-browser &#124; defuddle &#124; bounty-hunter-skill &#124; Scrapling &#124; agency-agents &#124;… |
 | 2026-05-10 | [邮件人周报 Vol.53](https://www.mailer.su/article/weekly-vol-53/) | Wino Mail 发布 2.0 Beta; 当占位符邮件地址的域名被抢注; Apple 账户通知邮件滥用; 通过 Android 凭据管理器支持验证 Gmail 地址; Temu 面临垃圾邮件诉讼; Microsoft 发布 2026 年第一季度电子邮件威胁报告; Proton Mail 推进后量… |
@@ -43,7 +46,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-09 | [今天是个好日子](https://blog.thetbw.xyz/archives/good-day) | 论文终于过了，悬着的心终于可以放下了，自考两年半，也是结束了，就等后面的毕业证和学位证了。 暂时还不知道后面干嘛，打算先玩玩，可以看看后面还有什么人生的方向。 明天刚好母亲节，跟我妈去吃点好的。 哦，我可以过两天去更新一下我简历上的学历了😗 |
 | 2026-05-09 | [在AI回复之前，在世界发生之前，在你意识到之前](https://www.banzhuanriji.com/blog/before-things-happning/) | SQLite 或许真正的好东西，往往不是“组织”出来的 前几天刚和朋友讨论完，SQLite和Linux哪个是安装最多的软件。最近发现X上都在讨论SQLite。 在这个结论之前，先说一个你可能没想过的问题：SQLite——那个藏在几十亿台手机、电脑、电视、汽车甚至浏览器里的数据库——核心开发团队有几个… |
 | 2026-05-09 | [昨夜噩梦](https://yipai.me/post/2511.html) | 最近半年噩梦似乎多了一些。昨晚又连续做了两个噩梦。 第一个梦发生在一片胡同里。前半段还算平静，到了后面，整个场 […] |
-| 2026-05-09 | [Memos #2026-05-08](https://www.taober.blog/memos) | 21:57 有一个能力强又性格好的同事太爽了！ |
 | 2026-05-08 | [2026.5.8](https://www.justzht.com/2026-5-8/) | 买了个莱卡 Q3 43 的无线充电手柄，就是一个手柄提供握把支撑，但底座有三个触点可以和相机的电子线路连接，并 |
 | 2026-05-08 | [鸟](https://z.arlmy.me/posts/Poems/2026/20260426_Niao/) | 「鸟来自上古。」 |
 | 2026-05-08 | [聊聊那些翻山越岭的神奇操作（下）-前篇](https://blog.kenxu.top/post/bypass-gfw-p3/) | 越过长城，走向世界 |
@@ -113,17 +115,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-04 | [周报 #108 - AI 与创作的困境](https://www.pseudoyu.com/posts/weekly_review_108) | 前言 本篇是对 2026-04-20 到 2026-05-04 这两周生活的记录与思考。 高度依赖 AI 之后似乎陷入了一种困境，每天有大量信息涌入，产出效率也成倍增长，但自己似乎只是在其中一个无意义的载体，失去了时间流动的实感与创作的源泉。 AI 与创作的困境 上周日午后太阳正好，刻意找了一家有大… |
 | 2026-05-04 | [稻草人周刊 Vol.79](https://www.geedea.pro/weekly/79/) | 周刊临近 80 期了，如今周刊的样子和最初的几期已经有很大不同了，技术类的内容也多了不少，对读者来说兴许是门槛，所以我特意把不懂技术的读者也能读懂、大多数人都关心的话题放在了最前面，较小众的内容放在靠后的位置，希望能让你更容易找到感兴趣的链接。 此外，自本期起周刊撤销 第 73 期 下达的 LLM… |
 | 2026-05-04 | [消失的现代人](https://mobius.blog/23409.html) | 紧接着《无法消失的现代人》，聊起另一个有些哲学的话题。 前几天（其实是 10 分钟前）完成的内容，其实是 Ge […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-05-03 | [开一场线上展览](http://www.uncoverman.com/ready-to-host-an-online-exhibition.html) | 一张图片，可以定格时间，可以让人联想自己的经历，可以传达比文字更丰富的信息，所以一直想要做一个版块，集中展示自己的图片——gallery 画廊功能， 自己做自己的策展人 。 以前没能力实现，在网上找了几款 Hexo 插件，诸如 hexo-light-gallery 、 hexo-album-page… |
-| 2026-05-03 | [猫鱼周刊 vol. 097 五一快乐](https://ameow.xyz/archives/weekly-097) | 关于本刊 这是猫鱼周刊的第 98 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 博客： 阿猫的博客-猫鱼周刊 RSS： 猫鱼周刊 邮件订阅： 猫鱼周刊 微信公众号： 猫兄的和谐号列车 私信： leslieleung@proton.me INIT 摄于香港九龙城区保良局颜宝铃书院外，… |
-| 2026-05-03 | [五一流水账 0503](https://blog.solazy.me/20260503/) | 假期不知不觉来到第三天 |
-| 2026-05-03 | [歪马精酿 全麦原浆](https://7gugu.com/index.php/2026/05/03/%e6%ad%aa%e9%a9%ac%e7%b2%be%e9%85%bf-%e5%85%a8%e9%ba%a6%e5%8e%9f%e6%b5%86/) | 外观：深黄色 清澈透光 气泡消散慢 闻香：麦味 口感：强沙口感 味道：清澈的啤酒花味，无杂味 总结：口感清爽的 … 继续阅读 “歪马精酿 全麦原浆” |
-| 2026-05-03 | [苹果公司在人工智能热潮导致供应短缺后，将 Mac Mini 的起售价提高至 799 美元](https://blog.rustfisher.com/news/apple-mac-price-20260503/) | 苹果公司将 Mac mini 台式机的起售价从 599 美元提高到 799 美元，以应对人工智能需求和处理器供应紧张导致的库存短缺 |
-| 2026-05-03 | [我的输入法快捷用法](https://www.iyeslogo.com/pilipala/) | 本文介绍了多种提升输入效率的方法 |
-| 2026-05-03 | [Vol.101 AI次方变革：组织中年撞上技术青春期，Harness Engineering与Agent系统重塑工程范式](https://liduos.com/weekly/the-weekly-gradient-101) | 本期内容围绕杨斌提出的AI次方变革概念，探讨组织如何应对技术青春期；涵盖Karpathy的Software 3.0、Demis的AGI时间表、工程实践应用及企业生产实战，深入思辨Skill蒸馏与Agent范式。 |
-| 2026-05-03 | [关于养狗](https://lomus.cc/archives/764) | 一般来说五一期间由于人流过多等原因，我不太会出去玩，但我会回老家待几天。 回家的生活基本可以预知，无非就是图个 […] 关于养狗 最先出现在 Lumos's Blog 。 |
-| 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/23391.html) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-05-03 | [彻底失去了看电影的乐趣](https://mobius.blog/2026/05/03/23391/) | Humachine 里整理的是原本发布在 Telegram 频道的内容，积累到足够的时候，就可以分类整理成册。 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-05-03 | [2026年第17、18周](https://blog.sakoamc.com/posts/261718/) | 题记：无题。 |
 
 ## Vibe Coding
 
