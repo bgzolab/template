@@ -21,6 +21,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-11 | [车祸 XI](https://mobius.blog/23556.html) | （2026-全国卷）下列哪些是提升电动车品牌效应的方法： A、通过分析起火/爆炸事故数据，改进电池安全； B、 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
+| 2026-05-11 | [Album#38 - Gospel According to Don Shirley](https://taxodium.ink/album-38.html) | Album#38 Gospel According to Don Shirley 图1 《Gospel According to Don Shirley》専輯封面 专辑信息 专辑名称： Gospel According to Don Shirley 歌手： Don Shirley 年份： 1968-… |
 | 2026-05-11 | [Design.md 资源导航](https://www.evan.xin/4976/) | Design.md 规范、示例库、提取工具与插件都在这一张表里面了。如有补充可以留言谢谢🙏 分类 项目/资源 […] |
 | 2026-05-11 | [Memos: 用 npx 做了一个终端里的 About Me](https://blog.yasking.org/a/1778468059.html) | 上周做了个小工具： $ npx @donxdone/aboutme-cli 在终端打印我的个人介绍。 起因是逛到这个博客： $ curl -N https://jt26wzz.com/aboutme 感觉这种 “终端名片” 很有意思。但 … |
 | 2026-05-11 | [Design.md + Refero：让 AI 设计网站告别“AI 味”，输出更像专业作品](https://www.evan.xin/4974/) | 当你用 AI（Cursor / Claude Code / 各类 Agent）做网站时，最尴尬的不是“写不出代 […] |
