@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-11 | [Design.md 资源导航](https://www.evan.xin/4976/) | Design.md 规范、示例库、提取工具与插件都在这一张表里面了。如有补充可以留言谢谢🙏 分类 项目/资源 […] |
+| 2026-05-11 | [Memos: 用 npx 做了一个终端里的 About Me](https://blog.yasking.org/a/1778468059.html) | 上周做了个小工具： $ npx @donxdone/aboutme-cli 在终端打印我的个人介绍。 起因是逛到这个博客： $ curl -N https://jt26wzz.com/aboutme 感觉这种 “终端名片” 很有意思。但 … |
 | 2026-05-11 | [Design.md + Refero：让 AI 设计网站告别“AI 味”，输出更像专业作品](https://www.evan.xin/4974/) | 当你用 AI（Cursor / Claude Code / 各类 Agent）做网站时，最尴尬的不是“写不出代 […] |
 | 2026-05-11 | [由于 Linux 桌面环境下没有一个好用的语音输入法，做了一个 web 浏览器版本的](https://hellodk.cn/post/1218) | 功能比较简单，基于百度实时语音识别 wss API 实现的 web 浏览器“语音输入法”，支持简体中文（普通话和部分方言）和英语，将语音实时转成文字。GitHub地址： https://gith... |
 | 2026-05-11 | [FC 游戏：星之卡比 梦之泉之物语（Kirby’s Adventure）](https://springwood.me/fc-kirbys-adventure/) | 小霸王时代又一个无缘的经典系列之一，比马里奥简单很多，现在千万不要错过。 |
