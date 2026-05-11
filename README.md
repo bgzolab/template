@@ -21,6 +21,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-11 | [Louis Alexander 谈英语学习](https://blog.est.im/2026/stdin-14) | 外语的课堂教学 基本原理 学习外语的传统方法根深蒂固。早在 1921 年，Harold E. Palmer就指出，理解一种语言是如何运作的与学会如何使用这种语言之间存在着巨大的差别。从那时以来，人们已经找到了许多卓有成效的方法教授学生外语。根据当代所作的深入细微的研究，没有人会对自Palmer以来发… |
 | 2026-05-11 | [狐蒂云破产清算，你还能用什么主机？](https://www.evan.xin/4983/) | 狐蒂云（www.szhdy.com）这事儿最近沸沸扬扬，5月7号凌晨官方群里甩出一张"死亡公告"，创始人一句" […] |
 | 2026-05-11 | [R#101 重整财务](https://blog.sakanano.moe/journals/random_101) | 2026.5.5 ~ 2026.5.11 |
 | 2026-05-11 | [使用 AI 的兴奋、上瘾与焦虑](https://lomus.cc/archives/773) | 最近几个月我一直在一个状态里，就是沉迷 AI。仔细想想，进入这个状态大概是从 Claude code，skil […] 使用 AI 的兴奋、上瘾与焦虑 最先出现在 Lumos's Blog 。 |
