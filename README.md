@@ -22,13 +22,21 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-12 | [git commit自动切换Name、Email](https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/) | 前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过 |
+| 2026-05-12 | [拔牙-提车](https://yovey.me/hurt-and-heal/) | 王小波说过生活就是个缓慢受锤的过程。 躺在牙科椅上的三小时，切实地体会到了。 被迫扩张的下颌骨，毫无知觉的半张 … Continue reading "拔牙-提车" |
+| 2026-05-12 | [Album#39 - 海马森林 (SEAHORSE FOREST)](https://taxodium.ink/album-39.html) | Album#39 海马森林 (SEAHORSE FOREST) 图1 《海马森林》専輯封面 专辑信息 专辑名称： 海马森林 (SEAHORSE FOREST) 歌手： 表情银行 MimikBanka 年份： 2024-04-23 风格： 流行、搖滾 时长： 約 36 分鍾 最近又聴到《海马森林》這張… |
+| 2026-05-12 | [「诚实」的机器](https://www.geedea.pro/article/honest-machine/) | 四月底收到了一位读者的约稿请求（姑且称作约稿吧），起因是他在某个 Elon Musk 收购前后都没好过的 社交媒体上看到了一条 帖子 1 ，并希望听听我的看法。来回几封邮件交流过后，我觉得值得一写，于是把这篇文章列入了待办清单。 然后我就后悔了。 我不是在责备这位投稿的读者，我只是很久没有这么赤裸裸… |
+| 2026-05-12 | [我对你无能的细节没兴趣](https://blog.solazy.me/20260512/) | 今天讲讲职场上遇到的一类人 |
 | 2026-05-12 | [左翼不左翼，进步又退步](https://eduardoqian.com/archives/zuo-yi-bu-zuo-yi-jin-bu-you-tui-bu) | 这篇文章主要是想吐槽一下，一些持有左翼进步阵营理念的人，却又在一些理念议题上持有保守甚至极右的思想。 在之前，女权主义在绝大多数情况下无疑是进步的，甚至可以说比共产主义仍然进步一些，比如就点出了一些工人回家之后对妻子的打骂压迫行为，还有一些早年工人运动者嘲笑妇女应该回家做好饭，洗好衣服，而不是跟着他 |
 | 2026-05-12 | [1517 Fund：Thiel Fellowship操盘手打造的另类VC](https://wenfeixiang.com/2026/05/1517-fund-by-thiel-fellowship/) | 最近看到了一些国外的特色 VC 深度报道，此前没怎么听说、基金规模也不大，但业绩能在 TOP 前列、基金也打出 […] |
+| 2026-05-12 | [摘：《永不再来：对医学屠杀的生命伦理学反思》](https://z.arlmy.me/posts/Note/Note_TessaCheloucheAndGeoffreyBrahmer_NeverAgainBioethicalReflectionsOnMedicalAtrocities/) | 「脊背发凉。」 |
 | 2026-05-12 | [推漫：塔之迷宫](https://www.nodealpha.me/Manga-TowerDungeon.html) | 二叔最新力作，喜欢Blame或者希德尼娅的骑士的请不要错过。 |
 | 2026-05-12 | [如何给 Notion AI 接入第三方 API?](https://1q43.blog/post/12346/) | 我之前讲过将「哈勃半径」作为一种私人信息宇宙，并将它接入 Notion AI。 但问题是，Notion AI […] |
 | 2026-05-12 | [每个人都有想要逃往的星露谷](https://mobius.blog/23542.html) | 前几天我在我的创作者频道聊到了这件事： 我突然很想玩《星露谷物语》，我意识到“情况不对”了。最近一定有什么比较 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
+| 2026-05-11 | [摘：《生而为熊》](https://z.arlmy.me/posts/Note/Note_R%C3%A9myMarion_LoursLautreDelhomme/) | 「。」 |
 | 2026-05-11 | [AI 加持的「有道翻译」，已经进化到这么厉害了吗？！ (免费 / 划词 / 文档视频翻译)](https://www.iplaysoft.com/youdao-fanyi.html) | 网易 出品的 有道翻译 / 有道词典 一直都是 翻译工具 软件类产品中的佼佼者了。随着 AI 的大规模爆发，有道翻译也从传统的机器翻译，进化到全面 融合 AI 能力，实现了超级无敌大蜕变！ 相比过去生硬的机器翻译， 有道翻译 在质量上获得了显著的突破！除最常见的 文本翻译 、 查单词 外，现在有道翻… |
 | 2026-05-11 | [罗马-佛罗伦萨-梵蒂冈之旅（二）](https://eduardoqian.com/archives/luo-ma-fo-luo-lun-sa-fan-di-gang-zhi-lu-er) | 在罗马暴走了一天之后，我第二天上午，我吃完酒店的自助餐，因为只有一上午的时间，我去了威尼托街附近闲逛，目的主要是在那附近的嘉布遣兄弟会博物馆和人骨教堂。早上去的时间早，就在威尼托街附近逛了逛。这里的感觉和火车站附近完全不一样，更有“欧洲街道”的感觉，附近是美国大使馆，外交区。相比于火车站，两边是林荫 |
+| 2026-05-11 | [摘：《猫在故纸堆》](https://z.arlmy.me/posts/Note/Note_LiuChaoFei_MaoZaiGuZhiDui/) | 「以猫之名。」 |
+| 2026-05-11 | [摘：《波兰诗选》](https://z.arlmy.me/posts/Note/Note_BoLanShiXuan/) | 「诗人不应是人，应是春天。。」 |
 | 2026-05-11 | [Louis Alexander 谈英语学习](https://blog.est.im/2026/stdin-14) | 外语的课堂教学 基本原理 学习外语的传统方法根深蒂固。早在 1921 年，Harold E. Palmer就指出，理解一种语言是如何运作的与学会如何使用这种语言之间存在着巨大的差别。从那时以来，人们已经找到了许多卓有成效的方法教授学生外语。根据当代所作的深入细微的研究，没有人会对自Palmer以来发… |
 | 2026-05-11 | [狐蒂云破产清算，你还能用什么主机？](https://www.evan.xin/4983/) | 狐蒂云（www.szhdy.com）这事儿最近沸沸扬扬，5月7号凌晨官方群里甩出一张"死亡公告"，创始人一句" […] |
 | 2026-05-11 | [R#101 重整财务](https://blog.sakanano.moe/journals/random_101) | 2026.5.5 ~ 2026.5.11 |
