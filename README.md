@@ -22,6 +22,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-12 | [git commit自动切换Name、Email](https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/) | 前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过 |
+| 2026-05-12 | [1517 Fund：Thiel Fellowship操盘手打造的另类VC](https://wenfeixiang.com/2026/05/1517-fund-by-thiel-fellowship/) | 最近看到了一些国外的特色 VC 深度报道，此前没怎么听说、基金规模也不大，但业绩能在 TOP 前列、基金也打出 […] |
+| 2026-05-12 | [推漫：塔之迷宫](https://www.nodealpha.me/Manga-TowerDungeon.html) | 二叔最新力作，喜欢Blame或者希德尼娅的骑士的请不要错过。 |
 | 2026-05-12 | [如何给 Notion AI 接入第三方 API?](https://1q43.blog/post/12346/) | 我之前讲过将「哈勃半径」作为一种私人信息宇宙，并将它接入 Notion AI。 但问题是，Notion AI […] |
 | 2026-05-12 | [每个人都有想要逃往的星露谷](https://mobius.blog/23542.html) | 前几天我在我的创作者频道聊到了这件事： 我突然很想玩《星露谷物语》，我意识到“情况不对”了。最近一定有什么比较 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-11 | [AI 加持的「有道翻译」，已经进化到这么厉害了吗？！ (免费 / 划词 / 文档视频翻译)](https://www.iplaysoft.com/youdao-fanyi.html) | 网易 出品的 有道翻译 / 有道词典 一直都是 翻译工具 软件类产品中的佼佼者了。随着 AI 的大规模爆发，有道翻译也从传统的机器翻译，进化到全面 融合 AI 能力，实现了超级无敌大蜕变！ 相比过去生硬的机器翻译， 有道翻译 在质量上获得了显著的突破！除最常见的 文本翻译 、 查单词 外，现在有道翻… |
