@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-12 | [git commit自动切换Name、Email](https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/) | 前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过 |
+| 2026-05-12 | [左翼不左翼，进步又退步](https://eduardoqian.com/archives/zuo-yi-bu-zuo-yi-jin-bu-you-tui-bu) | 这篇文章主要是想吐槽一下，一些持有左翼进步阵营理念的人，却又在一些理念议题上持有保守甚至极右的思想。 在之前，女权主义在绝大多数情况下无疑是进步的，甚至可以说比共产主义仍然进步一些，比如就点出了一些工人回家之后对妻子的打骂压迫行为，还有一些早年工人运动者嘲笑妇女应该回家做好饭，洗好衣服，而不是跟着他 |
 | 2026-05-12 | [1517 Fund：Thiel Fellowship操盘手打造的另类VC](https://wenfeixiang.com/2026/05/1517-fund-by-thiel-fellowship/) | 最近看到了一些国外的特色 VC 深度报道，此前没怎么听说、基金规模也不大，但业绩能在 TOP 前列、基金也打出 […] |
 | 2026-05-12 | [推漫：塔之迷宫](https://www.nodealpha.me/Manga-TowerDungeon.html) | 二叔最新力作，喜欢Blame或者希德尼娅的骑士的请不要错过。 |
 | 2026-05-12 | [如何给 Notion AI 接入第三方 API?](https://1q43.blog/post/12346/) | 我之前讲过将「哈勃半径」作为一种私人信息宇宙，并将它接入 Notion AI。 但问题是，Notion AI […] |
