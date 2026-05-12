@@ -117,18 +117,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-05 | [细嗦下MLIR的环境搭建](https://mocusez.site/zh-CN/posts/4faf) | pixi package managment |
 | 2026-05-05 | [性癖纵横观 VIII](https://mobius.blog/23424.html) | Previously on 性癖纵横观 先回顾一下之前提到的那个“性癖坐标轴”。 举个例子，高跟鞋作为一种性癖 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 | 2026-05-05 | [五一假期：南京之行](https://www.xiaozonglin.cn/labor-day-nanjing-tour/) | 游玩南京，拍了一些照片。 五一假期：南京之行 最先出现在 林林杂语 。 |
-| 2026-05-04 | [My Way](https://soops.sol.build/FB31040B-876D-4D8F-92AA-1CB9516E89EE/) | YEN TOWN BAND |
-| 2026-05-04 | [读《金阁寺》](https://www.kawabangga.com/posts/7246) | 读其他的书知道了《金阁寺》这本书，就找来读了。读完合上最后一页，心里久久不能平静。说这本书是「惊世骇俗」一点也 […] Continue reading... |
-| 2026-05-04 | [Anthropic 公司宣布与华尔街公司成立 15 亿美元合资企业](https://blog.rustfisher.com/news/anthropic-nears-1-5-billion-joint-venture-20260504/) | Anthropic、Blackstone 和 Hellman & Friedman 预计各自投资约 3 亿美元；高盛也是投资者之一 |
-| 2026-05-04 | [R#100 零散思绪](https://blog.sakanano.moe/journals/random_100) | 2026.4.28 ~ 2026.5.4 |
-| 2026-05-04 | [凭感觉炒股](https://jubeny.com/2026/05/trade-stocks-based-on-intuition/) | 四月上证指数又涨上了4100点，在感觉买什么都可以赚的行情里，我却是亏损的。重仓股比亚迪画了一个左高右低的”W“，虽然做T降了一点成本，相比股价的下跌不值一提。工业富联在中段一日买卖，完全不知它正处于上升中的热门赛道，错过一波行情。老凤祥全仓做T卖飞，亏损一个多点，因为在这支股上赚过一点钱，总是对它… |
-| 2026-05-04 | [五一流水账 0504](https://blog.solazy.me/20260504/) | 假期第四天 |
-| 2026-05-04 | [Claude Code statusline](https://blog.zebedy.com/post/a71ab14f.html) | Claude Code statusline 配置 |
-| 2026-05-04 | [桌面宠物](https://kaix.in/2026/0504/) | Codex Pet 是 OpenAI 为 Codex 推出的一项桌面端 体验功能 ，本质上是一个像素风的桌面互动陪伴宠物。 我突然想起前两天偶然翻到的 2007 年的一篇文章里 写 到： 如果能有一个桌面宠物——没有程序边框的，宠物活动的时候也不影响进行其它程序操作的——集成一些实用的功能，并且带有… |
-| 2026-05-04 | [同步 Venera 进度到 Bangumi](https://blog.bgzo.cc/20260503-venera-to-bangumi.html) | 其实我一直在 iPad 上用魔改的 venera (漫阅 ) 看漫画，他其实已经提供了追踪器跟踪的功能，只是不太好用（需要手动关联，总是失败），加上开发者长时间不修，也不看群，我感觉已经不再维护。 一致挺喜欢 venera 的，得益于 Flutter 跨平台，它提供了 ipa，可以在 iPad 上测… |
-| 2026-05-04 | [周报 #108 - AI 与创作的困境](https://www.pseudoyu.com/posts/weekly_review_108) | 前言 本篇是对 2026-04-20 到 2026-05-04 这两周生活的记录与思考。 高度依赖 AI 之后似乎陷入了一种困境，每天有大量信息涌入，产出效率也成倍增长，但自己似乎只是在其中一个无意义的载体，失去了时间流动的实感与创作的源泉。 AI 与创作的困境 上周日午后太阳正好，刻意找了一家有大… |
-| 2026-05-04 | [稻草人周刊 Vol.79](https://www.geedea.pro/weekly/79/) | 周刊临近 80 期了，如今周刊的样子和最初的几期已经有很大不同了，技术类的内容也多了不少，对读者来说兴许是门槛，所以我特意把不懂技术的读者也能读懂、大多数人都关心的话题放在了最前面，较小众的内容放在靠后的位置，希望能让你更容易找到感兴趣的链接。 此外，自本期起周刊撤销 第 73 期 下达的 LLM… |
-| 2026-05-04 | [消失的现代人](https://mobius.blog/23409.html) | 紧接着《无法消失的现代人》，聊起另一个有些哲学的话题。 前几天（其实是 10 分钟前）完成的内容，其实是 Ge […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
 
 ## Vibe Coding
 
