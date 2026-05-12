@@ -6,6 +6,18 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "如何给 Notion AI 接入第三方 API?",
+    "url": "https://1q43.blog/post/12346/",
+    "date": "2026-05-12T01:07:10Z",
+    "description": "我之前讲过将「哈勃半径」作为一种私人信息宇宙，并将它接入 Notion AI。 但问题是，Notion AI […]"
+  },
+  {
+    "title": "每个人都有想要逃往的星露谷",
+    "url": "https://mobius.blog/23542.html",
+    "date": "2026-05-12T01:00:00Z",
+    "description": "前几天我在我的创作者频道聊到了这件事： 我突然很想玩《星露谷物语》，我意识到“情况不对”了。最近一定有什么比较 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。"
+  },
+  {
     "title": "AI 加持的「有道翻译」，已经进化到这么厉害了吗？！ (免费 / 划词 / 文档视频翻译)",
     "url": "https://www.iplaysoft.com/youdao-fanyi.html",
     "date": "2026-05-11T20:39:35Z",
@@ -138,6 +150,12 @@
     "description": "在开始之前我需要警告读者，这期周刊的大多数内容都在批评（甚至攻击），带有不少负面情绪，请谨慎阅读，或者你也可以跳过「连接」这个栏目。不过该说不说，带着一点攻击性写文让我找回了几个月前写博客的感觉。 止语 Whole World As Vigil Lauren Auder Bandcamp 又是一张在上个 Bandcamp Friday 购买的专辑，名字翻译过来应该是「整个世界为守夜」，因为第六首曲子《candles》里有这样一句歌词： You saw the whole world as vigil. 你视整个世界为守夜。 整体上还不错的一张专辑，制作（production）也很棒，其实我还挺喜欢的，但貌似没有印象特别深刻的曲子，整体打分的话是 3.5~4 的样子。 听完两遍之后去看作者简介，才发现 Lauren Auder 是位跨性别女性，专辑里的声音是男性声线。真好啊。 最喜欢《praxis》《no outline》。 连接 被社交媒体禁令遗忘的孩子 📻 《词与物》VOL39.想象的“离线以后”：社媒禁令与那些被遗忘的 又是一期讨论社交媒体年龄禁令的播客 1 ，但这档节目更关注青少"
   },
   {
+    "title": "成为我",
+    "url": "https://blog.zopiya.com/becoming-me-7f780627/",
+    "date": "2026-05-10T16:00:00Z",
+    "description": "记忆从一张被撕掉的试卷开始 # 如果真要说我是谁，从哪里来，也许要从很早很早以前说起，早到我还没有能力问出这个问题的时候。"
+  },
+  {
     "title": "北京自驾游",
     "url": "https://elmagnifico.tech/2026/05/11/Beijing-Self-driving-Travel/",
     "date": "2026-05-10T16:00:00Z",
@@ -178,6 +196,12 @@
     "url": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260509/",
     "date": "2026-05-10T06:37:27Z",
     "description": "「能单盘了！」"
+  },
+  {
+    "title": "小东西：用FreshRSS实现带AI摘要的订阅推送",
+    "url": "https://www.xiaozonglin.cn/xdsec-push-bot/",
+    "date": "2026-05-10T04:38:40Z",
+    "description": "用FreshRSS + Python + Napcat实现带AI摘要的订阅QQ群推送 小东西：用FreshRSS实现带AI摘要的订阅推送 最先出现在 林林杂语 。"
   },
   {
     "title": "2026 欧洲之旅：坐高铁",
