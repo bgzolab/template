@@ -45,8 +45,8 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-10 | [学习周刊-总第261期-2026年第18周](https://wiki.eryajf.net/pages/71aed3/) | 如要阅读全文，点击标题跳转。 学习周刊-总第261期 &#124; paperclip &#124; openocta &#124; neo &#124; video-helper &#124; agent-browser &#124; defuddle &#124; bounty-hunter-skill &#124; Scrapling &#124; agency-agents &#124;… |
 | 2026-05-10 | [邮件人周报 Vol.53](https://www.mailer.su/article/weekly-vol-53/) | Wino Mail 发布 2.0 Beta; 当占位符邮件地址的域名被抢注; Apple 账户通知邮件滥用; 通过 Android 凭据管理器支持验证 Gmail 地址; Temu 面临垃圾邮件诉讼; Microsoft 发布 2026 年第一季度电子邮件威胁报告; Proton Mail 推进后量… |
 | 2026-05-10 | [稻草人周刊 Vol.80](https://www.geedea.pro/weekly/80/) | 在开始之前我需要警告读者，这期周刊的大多数内容都在批评（甚至攻击），带有不少负面情绪，请谨慎阅读，或者你也可以跳过「连接」这个栏目。不过该说不说，带着一点攻击性写文让我找回了几个月前写博客的感觉。 止语 Whole World As Vigil Lauren Auder Bandcamp 又是一张在… |
-| 2026-05-10 | [成为我](https://blog.zopiya.com/becoming-me-7f780627/) | 记忆从一张被撕掉的试卷开始 # 如果真要说我是谁，从哪里来，也许要从很早很早以前说起，早到我还没有能力问出这个问题的时候。 |
 | 2026-05-10 | [北京自驾游](https://elmagnifico.tech/2026/05/11/Beijing-Self-driving-Travel/) | Foreword 车在北京，顺便周边自驾转转，看看北方发展成什么样了。从北京去了保定，打算从西南边逛起，再回北京见同学，接着往西北边逛了一圈，然后直奔秦皇岛。 保定 保定虽然就在北京旁边，自古以来也是守卫京畿的重地，主要景点基本都在中心城区。但保定给我的感觉和去粤西、揭阳那会儿差不多：有点破，有点穷… |
+| 2026-05-10 | [成为我](https://blog.zopiya.com/becoming-me-7f780627/) | 记忆从一张被撕掉的试卷开始 # 如果真要说我是谁，从哪里来，也许要从很早很早以前说起，早到我还没有能力问出这个问题的时候。 |
 | 2026-05-10 | [周末流水账 0510](https://blog.solazy.me/20260510/) | 这是个单休的周末 |
 | 2026-05-10 | [如何拥有铁一样的肠胃？](https://www.geedea.pro/article/hacking-digestive-system/) | 应该是在读过《控糖革命》之后，我开始有意识地增加膳食纤维摄入，因为提前食用富含膳食纤维的食物可以减缓血糖上升速度，而控糖的好处就不多言了。由于我不总是能严格控制饮食，精力稳定和体脂率下降的好处我倒是没怎么体验到，但我身体的另一个系统却因此变得异常强大，这是我始料未及的。 这个系统就是（ 因为标题已经… |
 | 2026-05-10 | [Predict Next Word](https://blog.est.im/2026/stdin-13) | 一个流传很广的视频 小朋友识字，笑死我了。其实他一个不认识，只是记性好 1 2 摘录一些评论 妈妈：NOR FLASH；姐姐：NAND FLASH；小孩：磁带 链式存储，不支持随机查找 随机提问，你手机号的第五位是什么 正常，元素周期表中铝上个是什么 上辈子是个磁带 别笑，现在立刻问你周期表21号元… |
