@@ -30,12 +30,6 @@
     "description": "23:52 那些无法改变的事是真让人痛苦啊，更痛苦的是没有勇气去做更多，往心底里要的那块去靠。 时间在流逝。"
   },
   {
-    "title": "git commit自动切换Name、Email",
-    "url": "https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/",
-    "date": "2026-05-12T15:06:15Z",
-    "description": "前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过"
-  },
-  {
     "title": "拔牙-提车",
     "url": "https://yovey.me/hurt-and-heal/",
     "date": "2026-05-12T14:20:52Z",
@@ -76,6 +70,12 @@
     "url": "https://z.arlmy.me/posts/Note/Note_TessaCheloucheAndGeoffreyBrahmer_NeverAgainBioethicalReflectionsOnMedicalAtrocities/",
     "date": "2026-05-12T09:57:46Z",
     "description": "「脊背发凉。」"
+  },
+  {
+    "title": "git commit自动切换Name、Email",
+    "url": "https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/",
+    "date": "2026-05-12T07:06:15Z",
+    "description": "前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过"
   },
   {
     "title": "推漫：塔之迷宫",
