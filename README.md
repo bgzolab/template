@@ -21,6 +21,9 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | Date | Title | Summary |
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
+| 2026-05-13 | [那些令人反感的“我不提供观点”](https://mobius.blog/23587.html) | 前两天，一个朋友向我抱怨，他所在的学习小组里，有一个总是把“我只是提供视角，我不提供观点”挂在嘴边的“嘉豪”， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
+| 2026-05-13 | [《随兴旅》圣地巡礼之高松玉藻城](https://www.wikimoe.com/post/b-teto449f) | 2026年5月4日天气阴，今天去高松进行《随兴旅》的圣地巡礼。 开局小插曲 此次行程的线路是从东京乘坐新干线到冈山，然后在冈山乘坐快速电车到高松。 结果那一天濑户大桥的风特别大，导致电车停运。一直到了下午才通车，属于是有惊无险了。 不过毕竟是大风天，在大风天乘坐电车驶过濑户大桥的时候，摇晃伴随大风呼… |
+| 2026-05-13 | [Memos #2026-05-12](https://www.taober.blog/memos) | 23:52 那些无法改变的事是真让人痛苦啊，更痛苦的是没有勇气去做更多，往心底里要的那块去靠。 时间在流逝。 |
 | 2026-05-12 | [git commit自动切换Name、Email](https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/) | 前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过 |
 | 2026-05-12 | [拔牙-提车](https://yovey.me/hurt-and-heal/) | 王小波说过生活就是个缓慢受锤的过程。 躺在牙科椅上的三小时，切实地体会到了。 被迫扩张的下颌骨，毫无知觉的半张 … Continue reading "拔牙-提车" |
 | 2026-05-12 | [Album#39 - 海马森林 (SEAHORSE FOREST)](https://taxodium.ink/album-39.html) | Album#39 海马森林 (SEAHORSE FOREST) 图1 《海马森林》専輯封面 专辑信息 专辑名称： 海马森林 (SEAHORSE FOREST) 歌手： 表情银行 MimikBanka 年份： 2024-04-23 风格： 流行、搖滾 时长： 約 36 分鍾 最近又聴到《海马森林》這張… |
@@ -51,7 +54,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-11 | [由于 Linux 桌面环境下没有一个好用的语音输入法，做了一个 web 浏览器版本的](https://hellodk.cn/post/1218) | 功能比较简单，基于百度实时语音识别 wss API 实现的 web 浏览器“语音输入法”，支持简体中文（普通话和部分方言）和英语，将语音实时转成文字。GitHub地址： https://gith... |
 | 2026-05-11 | [FC 游戏：星之卡比 梦之泉之物语（Kirby’s Adventure）](https://springwood.me/fc-kirbys-adventure/) | 小霸王时代又一个无缘的经典系列之一，比马里奥简单很多，现在千万不要错过。 |
 | 2026-05-11 | [真的存在过保就坏的“定时自毁功能”吗？](https://mobius.blog/23517.html) | 虽然我家上一台小米电视，确实在过保前一周突然坏了，还被拖回厂商免费维修过。 但至今并没有一项明确的证据，证明某 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
-| 2026-05-11 | [Memos #2026-05-10](https://www.taober.blog/memos) | 02:53 喝酒聊天=微醺=开心！ |
 | 2026-05-10 | [Ubuntu 26.04 Desktop使用体验](https://blog.keepchen.com/a/Ubuntu-26.04-Desktop-User-Experience.html) | 在Ubuntu 26.04正式版发布前，我已经使用Ubuntu 24.04又快一年的时间了。为什么说又呢，那是因为在此之前也是在工作电脑上长期使用Ubuntu Desktop版本。趁着26.04版本刚发布不久，赶紧安装尝鲜试试体验如何。 |
 | 2026-05-10 | [百合盛典 Prism Garden ― 光庭花开，一瓣情思](https://www.wikimoe.com/post/b-tet73zn0) | 2026年5月3日，天气多云，今天去大宫看Prism Garden ― 光庭花开，一瓣情思。 关于活动 「Prism Garden ― 光庭花开，一瓣情思」（Prism Garden ― 光の庭に咲く、ひとひらの想い）是由 Melonbooks 主办的百合作品主题展示活动，于 2026 年 5 月… |
 | 2026-05-10 | [学习周刊-总第262期-2026年第19周](https://wiki.eryajf.net/pages/7c16d3/) | 如要阅读全文，点击标题跳转。 学习周刊-总第262期 &#124; easyshell &#124; RapidRAW &#124; hiclaw &#124; Proma &#124; xiaoyaoprivatebill &#124; djump &#124; openclaw-kasmvnc &#124; hive &#124; moraya &#124; memsearch &#124; full-… |
@@ -115,24 +117,6 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-06 | [玩俄罗斯轮盘的幸存者要为死者负责吗？](https://mobius.blog/23448.html) | 依旧本着越不正经的标题，聊越正经的话题，今天来聊一个关于哲学与法学之间最为明显分界线问题。 前几天我目睹了一场 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-06 | [AMD 利润和营收因数据中心业务增长而大幅提升](https://blog.rustfisher.com/news/amd-wsj-20260506/) | 芯片制造商表示，由于人工智能推动需求增长，该领域销售额飙升57% |
 | 2026-05-06 | [利息与个税](https://hux.ink/posts/interest-and-tax/) | 前不久刚做完 2025 年度的个税汇算清缴，退税 4800 元。这笔“意外之财”主要来自两个项目。 第一项是住房贷款利息专项扣除。可能是上一年集中办理降息操作，导致贷款合同号变更，每个月 1000 元的抵扣项目当时没能申报成功，这次一次性退税 2400 元。 第二项是个人养老金缴存。我是按 1200… |
-| 2026-05-05 | [Zuma updated](https://macsourceports.com/game/zuma) | The build of Zuma Portable for Zuma has been updated to version 0.5 of the project |
-| 2026-05-05 | [Venera 无法在 iOS/iPad OS 上保存图片](https://blog.bgzo.cc/20260505-fix-venera-download-long-photos-on-iOS-iPadOS.html) | 我之前不是说用魔改的 venera 客户端「漫阅」吗？它和官方都有一个问题，在漫画名特别长的时候，下载图片会不显示保存按钮，也就是置灰状态： 很头疼啊，我的一个坏毛病就是看到好看的章节直接下载到本地，不用官方自带的图片收藏，漫阅这个东西已经发布至少半年了，就没有一个人发现这玩意有问题吗？？？ 还好… |
-| 2026-05-05 | [好久不见](https://blog.zopiya.com/hao-jiu-bu-jian-8d30659a/) | 我已经很久没有写一篇博客了。 久到现在重新打开编辑器，反而有点不知道该从哪里写起。说“我回来了”，好像有点正式；说“最近比较忙”吧，又显得太敷衍。想来想去，还是老老实实承认：确实停了很久，也确实有一阵子不知道该怎么继续写。 |
-| 2026-05-05 | [Su7 Ultra U南向北](https://elmagnifico.tech/2026/05/06/Su7-Ultra-UN2S/) | Foreword 由于保时捷包场，珠海赛道没机会玩，五月前我基本没去过其他赛道。四月初得知五一有U南向北活动，三天连刷北京三个赛道，这种强度很少见，我当场就决定去。 U南向北 5月2日到5月4日，北京三天畅跑三个赛道（凯泽、新金港、老金港），一个赛道一天，费用3000，超值。唯一的问题就一个：怎么把… |
-| 2026-05-05 | [我的万象方案配置（裁切）](https://blog.prayhand13013.top/20260505T184715--我的万象方案配置（裁切）__blog.html) |  |
-| 2026-05-05 | [如何温和地结束一个长假](https://blog.solazy.me/20260505/) | 与其在假期的尾声机械记录流水账，不如通过重建生活秩序，将这最后一天转化为从松弛到有序的温和过渡，优雅地开启下个阶段。 |
-| 2026-05-05 | [山间摩旅追风，偶遇一场绚烂晚霞](https://hellodk.cn/post/1216) | 我发现老家附近有个两县交界公路，很想去探索一翻，不知道今天那边还有多少人居住。这次恰逢五一假期，又得闲，便骑着摩托去转转。每次去县城，或者去合肥都会经过的“灌溉用水渠桥”。我们这边是群山环抱的，... |
-| 2026-05-05 | [SwiftMTP - 开源原生 Mac 安卓文件管理传输利器 (比 OpenMTP 更轻快)](https://www.iplaysoft.com/p/swiftmtp) | 说到在 macOS 上管理安卓手机的文件，大家的第一反应可能是那个万年不更新、界面简陋到极致的 Google 官方 Android File Transfer。随后，优秀的开源替代品 OpenMTP 横空出世，凭借双栏设计和更稳的连接，一度成为了 Mac 用户的标配。 但遗憾的是，OpenMTP 近… |
-| 2026-05-05 | [283、立夏](https://1900.live/283-li-xia/) | null 立夏 槐荫初密，蝉翼未鸣，天地悄然换了一袭青衫。 今日5月5日，太阳行至黄经45°，岁次乙巳，夏序第一叩。 麦浪暗涌于郊野，而春衣渐收进箱底；蔷薇攀满东墙，而青梅正煮着新酸。 天地以“立”为誓，见“夏”如晤，人间自此有了蓬勃的伏笔。 此刻，不妨： 把倦意留给暮春的尾梢，向第一声蝉鸣借一份清… |
-| 2026-05-05 | [热带风铃的潮响：吉隆坡大将书行](https://macin.org/2026/05/05/da-jiang-shu-xing/) | 顶着旧病未愈的溃疡，和同一天生日的小伙伴吃完烤鱼午餐，出来站在门口，太阳已经大得很了，一时想不出下一站去哪里。雨季将尽，吉隆坡的天总是这样，前脚还在落雨，后脚就烈日当空。 要去的地方说来也说不清楚是什么时候存进手机里的，只记得是一家叫”大将”的小书屋，地图上看 |
-| 2026-05-05 | [Anthropico 和 FIS 正在开发一款人工智能代理，以帮助银行打击金融犯罪](https://blog.rustfisher.com/news/anthropic-fis-20260505/) | 人工智能巨头与金融软件提供商 FIS 达成合作，共同开发面向银行的新工具 |
-| 2026-05-05 | [2026.5.4](https://www.justzht.com/2026-5-4/) | 最近工作还行，两个奔头一个在六月一个在十月，因此倒也没有多厌世，只是加班比较多而已。 之前说摄影阳痿， |
-| 2026-05-05 | [Toots 417 2026 Apr.26 - May.2](https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260502/) | 「诗好轻便！」 |
-| 2026-05-05 | [介绍一下我做的 AI 中转站 4AICode](https://blog.forecho.com/introducing-4aicode-ai-proxy.html) | 引言 先上地址： 网站： 4aicode.com 4AICode 是我新做的一个 AI 中转站，主要面向 Vibe Coding 场景，目前支持 ChatGPT AI 模型和 gpt-image-2 图片生成模型。 名字也很直白，4AICode 可以理解成 for AI code，意思就是为 AI… |
-| 2026-05-05 | [飞湾计划：把一趟大湾区之行，顺手变成港澳开户探索路线](https://blog.debuginn.com/p/fly-bay/) | 大家好呀，我是 Meng小羽。 之前写过一篇 《港卡开卡指南》 ，当时主要是自己去香港旅游，顺手把港卡办了，回来之后把材料、流程、踩坑点都整理了一遍。没想到后来陆陆续续有很多朋友来问：现在还能不能开？需要准备什么？去香港还是去澳门？如果顺便开港美股账户，流程会不会很麻烦？ 问得多了之后，我发现这件事… |
-| 2026-05-05 | [细嗦下MLIR的环境搭建](https://mocusez.site/zh-CN/posts/4faf) | pixi package managment |
-| 2026-05-05 | [性癖纵横观 VIII](https://mobius.blog/23424.html) | Previously on 性癖纵横观 先回顾一下之前提到的那个“性癖坐标轴”。 举个例子，高跟鞋作为一种性癖 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 Telegram频道 ，或 站内私信 联系。 |
-| 2026-05-05 | [五一假期：南京之行](https://www.xiaozonglin.cn/labor-day-nanjing-tour/) | 游玩南京，拍了一些照片。 五一假期：南京之行 最先出现在 林林杂语 。 |
 
 ## Vibe Coding
 
