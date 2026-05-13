@@ -22,6 +22,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | --- | --- | --- |
 | 2066-05-04 | [the-story-of-me](https://m4p1e.com/2066/05/04/the-story-of-me/) | 先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是 |
 | 2026-05-13 | [那些令人反感的“我不提供观点”](https://mobius.blog/23587.html) | 前两天，一个朋友向我抱怨，他所在的学习小组里，有一个总是把“我只是提供视角，我不提供观点”挂在嘴边的“嘉豪”， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
+| 2026-05-13 | [Ubuntu22下安装DM数据库](https://blog.wo0ow.com/22899.html) | 部分参考博客： DM8在Ubuntu上的安装部署 系统环境 Ubuntu 22 |
 | 2026-05-13 | [《随兴旅》圣地巡礼之高松玉藻城](https://www.wikimoe.com/post/b-teto449f) | 2026年5月4日天气阴，今天去高松进行《随兴旅》的圣地巡礼。 开局小插曲 此次行程的线路是从东京乘坐新干线到冈山，然后在冈山乘坐快速电车到高松。 结果那一天濑户大桥的风特别大，导致电车停运。一直到了下午才通车，属于是有惊无险了。 不过毕竟是大风天，在大风天乘坐电车驶过濑户大桥的时候，摇晃伴随大风呼… |
 | 2026-05-13 | [Memos #2026-05-12](https://www.taober.blog/memos) | 23:52 那些无法改变的事是真让人痛苦啊，更痛苦的是没有勇气去做更多，往心底里要的那块去靠。 时间在流逝。 |
 | 2026-05-12 | [git commit自动切换Name、Email](https://www.lazydaily.cn/2026/05/12/SARL8lMpw1G39hrp/) | 前言 在公司使用 GitLab，平时个人使用 Github，git 提交时候附带 user.name，user.email 不同。git 可以通过 |
@@ -36,6 +37,7 @@ The latest blog collected by v2ex is https://www.v2ex.com/xna/s/543, yet the pub
 | 2026-05-12 | [如何给 Notion AI 接入第三方 API?](https://1q43.blog/post/12346/) | 我之前讲过将「哈勃半径」作为一种私人信息宇宙，并将它接入 Notion AI。 但问题是，Notion AI […] |
 | 2026-05-12 | [每个人都有想要逃往的星露谷](https://mobius.blog/23542.html) | 前几天我在我的创作者频道聊到了这件事： 我突然很想玩《星露谷物语》，我意识到“情况不对”了。最近一定有什么比较 […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。 |
 | 2026-05-11 | [摘：《生而为熊》](https://z.arlmy.me/posts/Note/Note_R%C3%A9myMarion_LoursLautreDelhomme/) | 「。」 |
+| 2026-05-11 | [修复 Joplin on KDE 菜单栏显示问题](https://frytea.com/archives/1666/) | 在 KDE 桌面下默认使用全局菜单显示应用程序的菜单栏，但是唯独 Joplin 无法显示。 最后在这里找到了解决方案，下面简单记录： sudo vim /usr/share/applications/joplin-desktop.desktop --Exec=/usr/bin/joplin-desk… |
 | 2026-05-11 | [AI 加持的「有道翻译」，已经进化到这么厉害了吗？！ (免费 / 划词 / 文档视频翻译)](https://www.iplaysoft.com/youdao-fanyi.html) | 网易 出品的 有道翻译 / 有道词典 一直都是 翻译工具 软件类产品中的佼佼者了。随着 AI 的大规模爆发，有道翻译也从传统的机器翻译，进化到全面 融合 AI 能力，实现了超级无敌大蜕变！ 相比过去生硬的机器翻译， 有道翻译 在质量上获得了显著的突破！除最常见的 文本翻译 、 查单词 外，现在有道翻… |
 | 2026-05-11 | [罗马-佛罗伦萨-梵蒂冈之旅（二）](https://eduardoqian.com/archives/luo-ma-fo-luo-lun-sa-fan-di-gang-zhi-lu-er) | 在罗马暴走了一天之后，我第二天上午，我吃完酒店的自助餐，因为只有一上午的时间，我去了威尼托街附近闲逛，目的主要是在那附近的嘉布遣兄弟会博物馆和人骨教堂。早上去的时间早，就在威尼托街附近逛了逛。这里的感觉和火车站附近完全不一样，更有“欧洲街道”的感觉，附近是美国大使馆，外交区。相比于火车站，两边是林荫 |
 | 2026-05-11 | [摘：《猫在故纸堆》](https://z.arlmy.me/posts/Note/Note_LiuChaoFei_MaoZaiGuZhiDui/) | 「以猫之名。」 |

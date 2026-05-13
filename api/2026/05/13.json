@@ -12,6 +12,12 @@
     "description": "前两天，一个朋友向我抱怨，他所在的学习小组里，有一个总是把“我只是提供视角，我不提供观点”挂在嘴边的“嘉豪”， […] —— 感谢订阅 莫比乌斯 ，如你有任何疑问、观点交流，请前往 创作者频道 ，或 私信 联系。"
   },
   {
+    "title": "Ubuntu22下安装DM数据库",
+    "url": "https://blog.wo0ow.com/22899.html",
+    "date": "2026-05-13T00:43:39Z",
+    "description": "部分参考博客： DM8在Ubuntu上的安装部署 系统环境 Ubuntu 22"
+  },
+  {
     "title": "《随兴旅》圣地巡礼之高松玉藻城",
     "url": "https://www.wikimoe.com/post/b-teto449f",
     "date": "2026-05-13T00:03:46Z",
@@ -94,6 +100,12 @@
     "url": "https://z.arlmy.me/posts/Note/Note_R%C3%A9myMarion_LoursLautreDelhomme/",
     "date": "2026-05-11T23:47:46Z",
     "description": "「。」"
+  },
+  {
+    "title": "修复 Joplin on KDE 菜单栏显示问题",
+    "url": "https://frytea.com/archives/1666/",
+    "date": "2026-05-11T21:56:06Z",
+    "description": "在 KDE 桌面下默认使用全局菜单显示应用程序的菜单栏，但是唯独 Joplin 无法显示。 最后在这里找到了解决方案，下面简单记录： sudo vim /usr/share/applications/joplin-desktop.desktop --Exec=/usr/bin/joplin-desktop ++Exec=/usr/bin/joplin-desktop --gtk-version=3 --ozone-platform=x11 启动程序增加这两个参数即可解决。"
   },
   {
     "title": "AI 加持的「有道翻译」，已经进化到这么厉害了吗？！ (免费 / 划词 / 文档视频翻译)",
