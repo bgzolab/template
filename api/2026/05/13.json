@@ -6,6 +6,18 @@
     "description": "先讲一个2016年博客刚开的故事: 这里先讲一个故事，一个关于我的故事，一个摸爬滚打的“黑客”成长的故事。我很早就接触过这个专业的内容，准确来说是从初中开始接触网络安全的，那时我因为想玩私服，导致中毒了（还记得是"
   },
   {
+    "title": "JDK1.8报错Illegal key size处理",
+    "url": "https://blog.wo0ow.com/37002.html",
+    "date": "2026-05-13T08:46:46Z",
+    "description": "使用的JDK 1.8版本，项目中日志报错信息 Illegal key size"
+  },
+  {
+    "title": "微信支付v3平台证书过期启用公钥平滑切换",
+    "url": "https://blog.wo0ow.com/1389.html",
+    "date": "2026-05-13T07:04:48Z",
+    "description": "收到平台证书过期通知应如何处理? <a href=\""
+  },
+  {
     "title": "唐宋之变",
     "url": "https://blog.est.im/2026/stderr-16",
     "date": "2026-05-13T05:27:00Z",
