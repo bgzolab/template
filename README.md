@@ -1,15 +1,17 @@
-[![Contributors](https://img.shields.io/github/contributors/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/network/members)
-[![Stargazers](https://img.shields.io/github/stars/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/stargazers)
-[![Issues](https://img.shields.io/github/issues/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/issues)
-[![Licence](https://img.shields.io/github/license/bGZo/playground.svg?style=for-the-badge)](https://github.com/bGZo/playground/blob/template/LICENCE)
+# Template: everything based here.
+
+[![Contributors](https://img.shields.io/github/contributors/bgzolab/template.svg?style=for-the-badge)](https://github.com/bgzolab/template/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/bgzolab/template.svg?style=for-the-badge)](https://github.com/bgzolab/template/network/members)
+[![Stargazers](https://img.shields.io/github/stars/bgzolab/template.svg?style=for-the-badge)](https://github.com/bgzolab/template/stargazers)
+[![Issues](https://img.shields.io/github/issues/bgzolab/template.svg?style=for-the-badge)](https://github.com/bgzolab/template/issues)
+[![Licence](https://img.shields.io/github/license/bgzolab/template.svg?style=for-the-badge)](https://github.com/bgzolab/template/blob/template/LICENCE)
 [![Telegram](https://img.shields.io/badge/-telegram-black.svg?style=for-the-badge&logo=telegram&colorB=555)](https://t.me/imbGZo)
 
-![Playground Name Screen Shot](https://pub-89c11651a8434f18a530bd6f93e399da.r2.dev/2025/1753254271482.JPG)
+![template Name Screen Shot](https://pub-89c11651a8434f18a530bd6f93e399da.r2.dev/2025/1753254271482.JPG)
 
-# Playground
+A template repository for my projects, whch contains a basic structure and some common files used in all my projects.
 
-Here is a template repository for my projects. It contains a basic structure and some common files that I use in all my projects. You can use this template to create your own projects by forking it or cloning it.
+You can use this template to create your own projects by forking it or cloning it.
 
 ## Getting Started
 
@@ -18,7 +20,7 @@ Before you start, make sure you have Git installed on your machine. You can down
 Add the remote repository:
 
 ```shell
-git remote add origin git@github.com:bGZo/playground.git
+git remote add origin git@github.com:bgzolab/template.git
 ```
 
 Fetch the `template` branch from the remote repository:
@@ -37,7 +39,7 @@ git merge origin/template --allow-unrelated-histories
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://github.com/bGZo/playground)_
+_For more examples, please refer to the [Documentation](https://github.com/bgzolab/template)_
 
 ## Contributing
 
@@ -54,8 +56,8 @@ Don't forget to give the project a star! Thanks again!
 
 Top contributors:
 
-<a href="https://github.com/bGZo/playground/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=bGZo/playground" alt="contrib.rocks image" />
+<a href="https://github.com/bgzolab/template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bgzolab/template" alt="contrib.rocks image" />
 </a>
 
 ## License
