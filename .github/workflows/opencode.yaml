@@ -41,3 +41,8 @@ jobs:
         with:
           model: opencode-go/glm-5.2
           use_github_token: true
+          prompt: |
+            请审查这个 Pull Request：
+            - 检查代码质量、潜在 bug 和可改进之处
+            - 所有审查意见请使用中文撰写
+            - 意见保持简洁、具体，附上改进建议
