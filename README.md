@@ -52,16 +52,21 @@ The repo ships with a few GitHub Actions workflows under `.github/workflows/`:
 ### PR-Agent backed by opencode-go
 
 PR-Agent calls opencode-go's OpenAI-compatible endpoint instead of OpenAI
-itself; the model/token config is inlined in the workflow via `PR_AGENT__CONFIG__*`
-env vars. It needs these repository settings:
+itself; the model/token config is inlined in the workflow via `SECTION__KEY` env
+vars (PR-Agent uses no env prefix). It needs these repository settings:
 
 | Setting | Kind | Example |
 | --- | --- | --- |
 | `OPENCODE_API_BASE` | Repo **variable** | `https://opencode-go.example.com/v1` |
 | `OPENCODE_API_KEY` | Repo **secret** | same key used by the opencode workflows |
-| `GITHUB_TOKEN` | Repo **secret** | a token with `pull-requests: write` |
+| `GITHUB_TOKEN` | Auto | GitHub Actions token |
 
-The action posts its review as a comment on the pull request.
+> Note: PR-Agent's runner reads `OPENAI_KEY` (single underscore) directly and it
+> overrides any `OPENAI_KEY` repo/org secret. The workflow sets
+> `OPENAI_KEY` to `OPENCODE_API_KEY`, so an existing `OPENAI_KEY` secret is ignored.
+
+The action is event-driven and auto-runs on PR events; it posts its review as a
+comment on the pull request.
 
 ## Contributing
 

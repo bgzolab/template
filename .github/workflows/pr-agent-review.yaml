@@ -21,14 +21,19 @@ jobs:
       - name: PR Agent review
         uses: the-pr-agent/pr-agent@main
         env:
-          # Model / token config is inlined via PR_AGENT__CONFIG__* env vars.
-          # If this grows (extra_instructions, pr_reviewer sections, ...), it can
-          # be split out into a root .pr_agent.toml, or into your dotfiles.
-          PR_AGENT__CONFIG__MODEL: "openai/glm-5.3-flash"
-          PR_AGENT__CONFIG__FALLBACK_MODELS: '["openai/glm-5.3-flash"]'
-          PR_AGENT__CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
+          # The action is event-driven: on pull_request events it auto-runs its
+          # tools (describe/review/improve). There is no `command` input. PR-Agent
+          # reads settings env vars with NO prefix (envvar_prefix=False), so use
+          # SECTION__KEY, not PR_AGENT__SECTION__KEY. This is inlined here; if it
+          # grows, it can be split out into a root .pr_agent.toml or your dotfiles.
+          CONFIG__MODEL: "openai/glm-5.3-flash"
+          CONFIG__FALLBACK_MODELS: '["openai/glm-5.3-flash"]'
+          CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
+          GITHUB_ACTION_CONFIG__AUTO_DESCRIBE: "false"
+          GITHUB_ACTION_CONFIG__AUTO_IMPROVE: "false"
+          # Route to the opencode-go OpenAI-compatible endpoint.
+          # OPENAI_KEY (single underscore) is read by the runner and overrides any
+          # repo/org OPENAI_KEY secret, so point it at opencode-go.
+          OPENAI_KEY: ${{ secrets.OPENCODE_API_KEY }}
           OPENAI__API_BASE: ${{ vars.OPENCODE_API_BASE }}
-          OPENAI__KEY: ${{ secrets.OPENCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          command: review
