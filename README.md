@@ -66,7 +66,9 @@ vars (PR-Agent uses no env prefix). It needs these repository settings:
 > `OPENAI_KEY` to `OPENCODE_API_KEY`, so an existing `OPENAI_KEY` secret is ignored.
 
 The action is event-driven and auto-runs on PR events; it posts its review as a
-comment on the pull request.
+comment on the pull request. Manual re-runs (**Actions → Run workflow** with a PR
+number) execute PR-Agent's CLI instead, because the action itself ignores
+`workflow_dispatch`.
 
 ## Contributing
 

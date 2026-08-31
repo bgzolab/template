@@ -24,41 +24,37 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - name: Prepare PR event for manual trigger
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          python3 - "${{ inputs.pr_number }}" <<'EOF'
-          import json, os, sys
-          pr = sys.argv[1]
-          repo = os.environ["GITHUB_REPOSITORY"]
-          payload = {
-              "action": "reopened",
-              "pull_request": {
-                  "url": f"https://api.github.com/repos/{repo}/pulls/{pr}",
-                  "html_url": f"https://github.com/{repo}/pull/{pr}",
-              },
-          }
-          with open(os.environ["GITHUB_EVENT_PATH"], "w") as f:
-              json.dump(payload, f)
-          EOF
-      - name: PR Agent review
+      - name: PR Agent review (auto)
+        if: github.event_name == 'pull_request'
         uses: the-pr-agent/pr-agent@main
         env:
-          # The action is event-driven: on pull_request events it auto-runs its
-          # tools (describe/review/improve). Manual `workflow_dispatch` triggers
-          # synthesize a pull_request event via the step above. PR-Agent reads
-          # settings env vars with NO prefix (envvar_prefix=False), so use
-          # SECTION__KEY, not PR_AGENT__SECTION__KEY. Inlined here; if it grows,
-          # split it into a root .pr_agent.toml or your dotfiles.
-          GITHUB_EVENT_NAME: pull_request
+          # Event-driven: on pull_request events it auto-runs its tools.
+          # PR-Agent reads settings env vars with NO prefix (envvar_prefix=False),
+          # so use SECTION__KEY, not PR_AGENT__SECTION__KEY. Do NOT set
+          # CONFIG__FALLBACK_MODELS: env lists merge with the defaults, which
+          # would re-add gpt-5.6-terra as a fallback.
           CONFIG__MODEL: "openai/glm-5.3-flash"
-          CONFIG__FALLBACK_MODELS: '["openai/glm-5.3-flash"]'
           CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
           GITHUB_ACTION_CONFIG__AUTO_DESCRIBE: "false"
           GITHUB_ACTION_CONFIG__AUTO_IMPROVE: "false"
-          # Route to the opencode-go OpenAI-compatible endpoint.
-          # OPENAI_KEY (single underscore) is read by the runner and overrides any
-          # repo/org OPENAI_KEY secret, so point it at opencode-go.
+          # OPENAI_KEY (single underscore) is read by the runner and overrides
+          # any repo/org OPENAI_KEY secret; OPENAI__API_BASE routes the request.
           OPENAI_KEY: ${{ secrets.OPENCODE_API_KEY }}
           OPENAI__API_BASE: ${{ vars.OPENCODE_API_BASE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: PR Agent review (manual)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          # The action ignores workflow_dispatch, so run the CLI directly.
+          python3 -m venv /tmp/pr-agent-venv
+          /tmp/pr-agent-venv/bin/pip install --quiet pr-agent
+          /tmp/pr-agent-venv/bin/pr-agent \
+            --pr_url "https://github.com/${{ github.repository }}/pull/${{ inputs.pr_number }}" \
+            review
+        env:
+          CONFIG__MODEL: "openai/glm-5.3-flash"
+          CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
+          OPENAI_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENAI__API_BASE: ${{ vars.OPENCODE_API_BASE }}
+          GITHUB__USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
