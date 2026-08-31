@@ -41,6 +41,28 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://github.com/bgzolab/template)_
 
+## CI / GitHub Actions
+
+The repo ships with a few GitHub Actions workflows under `.github/workflows/`:
+
+- `opencode-review.yaml` — PR review by opencode.
+- `opencode-comment.yaml` — on-demand opencode runs triggered by `/oc` comments.
+- `pr-agent-review.yaml` — PR review by [PR-Agent](https://github.com/the-pr-agent/pr-agent), an OpenAI-format third-party tool.
+
+### PR-Agent backed by opencode-go
+
+PR-Agent calls opencode-go's OpenAI-compatible endpoint instead of OpenAI
+itself; the model/token config is inlined in the workflow via `PR_AGENT__CONFIG__*`
+env vars. It needs these repository settings:
+
+| Setting | Kind | Example |
+| --- | --- | --- |
+| `OPENCODE_API_BASE` | Repo **variable** | `https://opencode-go.example.com/v1` |
+| `OPENCODE_API_KEY` | Repo **secret** | same key used by the opencode workflows |
+| `GITHUB_TOKEN` | Repo **secret** | a token with `pull-requests: write` |
+
+The action posts its review as a comment on the pull request.
+
 ## Contributing
 
 Any contributions made are **greatly appreciated**.
