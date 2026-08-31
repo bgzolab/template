@@ -1,0 +1,75 @@
+name: opencode-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  opencode-review:
+    if: github.event.pull_request.user.login == 'bgzo'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: read
+      issues: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Configure opencode CI permissions (deny rm)
+        run: |
+          cat > opencode.json <<'EOF'
+          {
+            "$schema": "https://opencode.ai/config.json",
+            "permission": {
+              "bash": {
+                "rm *": "deny",
+                "rmdir *": "deny",
+                "shred *": "deny",
+                "truncate *": "deny",
+                "*": "allow"
+              },
+              "read": "allow",
+              "edit": "allow",
+              "glob": "allow",
+              "grep": "allow",
+              "list": "allow",
+              "task": "allow",
+              "external_directory": "allow",
+              "todowrite": "allow",
+              "question": "allow",
+              "webfetch": "allow",
+              "websearch": "allow",
+              "lsp": "allow",
+              "doom_loop": "allow",
+              "skill": "allow"
+            }
+          }
+          EOF
+      - name: Run opencode
+        uses: anomalyco/opencode/github@latest
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          model: opencode-go/glm-5.3-flash
+          use_github_token: false
+          prompt: |
+            Review this PR. Focus on issues, not on evaluating the PR itself.
+
+            Find correctness, regression, security, robustness, maintainability, and test issues. Also suggest meaningful improvements.
+
+            P0/P1 = blocking.
+            P2 = non-blocking TODO.
+
+            Review the current HEAD independently.
+            Do not treat previous reviews as authoritative.
+            Do not report speculative or purely stylistic concerns.
+
+            Every comment must include: file path + line number, what the issue is, why it is an issue, and a concrete fix suggestion. If a specific line cannot be identified, describe the location.
+
+            BLOCK if P0/P1 exists.
+            LGTM otherwise.
+            Reply in Simplified Chinese.
