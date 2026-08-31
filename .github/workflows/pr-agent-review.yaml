@@ -1,0 +1,34 @@
+name: pr-agent-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  pr-agent-review:
+    if: github.event.pull_request.user.login == 'bgzo'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: PR Agent review
+        uses: the-pr-agent/pr-agent@main
+        env:
+          # Model / token config is inlined via PR_AGENT__CONFIG__* env vars.
+          # If this grows (extra_instructions, pr_reviewer sections, ...), it can
+          # be split out into a root .pr_agent.toml, or into your dotfiles.
+          PR_AGENT__CONFIG__MODEL: "openai/glm-5.3-flash"
+          PR_AGENT__CONFIG__FALLBACK_MODELS: '["openai/glm-5.3-flash"]'
+          PR_AGENT__CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
+          OPENAI__API_BASE: ${{ vars.OPENCODE_API_BASE }}
+          OPENAI__KEY: ${{ secrets.OPENCODE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          command: review
