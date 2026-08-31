@@ -47,7 +47,7 @@ The repo ships with a few GitHub Actions workflows under `.github/workflows/`:
 
 - `opencode-review.yaml` — PR review by opencode.
 - `opencode-comment.yaml` — on-demand opencode runs triggered by `/oc` comments.
-- `pr-agent-review.yaml` — PR review by [PR-Agent](https://github.com/the-pr-agent/pr-agent), an OpenAI-format third-party tool.
+- `pr-agent-review.yaml` — PR review by [PR-Agent](https://github.com/the-pr-agent/pr-agent), an OpenAI-format third-party tool. Auto-runs on PR events, and supports manual re-run via **Actions → Run workflow** (enter the PR number).
 
 ### PR-Agent backed by opencode-go
 
