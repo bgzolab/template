@@ -41,6 +41,35 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://github.com/bgzolab/template)_
 
+## CI / GitHub Actions
+
+The repo ships with a few GitHub Actions workflows under `.github/workflows/`:
+
+- `opencode-review.yaml` — PR review by opencode.
+- `opencode-comment.yaml` — on-demand opencode runs triggered by `/oc` comments.
+- `pr-agent-review.yaml` — PR review by [PR-Agent](https://github.com/the-pr-agent/pr-agent), an OpenAI-format third-party tool. Auto-runs on PR events, and supports manual re-run via **Actions → Run workflow** (enter the PR number).
+
+### PR-Agent backed by opencode-go
+
+PR-Agent calls opencode-go's OpenAI-compatible endpoint instead of OpenAI
+itself; the model/token config is inlined in the workflow via `SECTION__KEY` env
+vars (PR-Agent uses no env prefix). It needs these repository settings:
+
+| Setting | Kind | Example |
+| --- | --- | --- |
+| `OPENCODE_API_BASE` | Repo **variable** | `https://opencode-go.example.com/v1` |
+| `OPENCODE_API_KEY` | Repo **secret** | same key used by the opencode workflows |
+| `GITHUB_TOKEN` | Auto | GitHub Actions token |
+
+> Note: PR-Agent's runner reads `OPENAI_KEY` (single underscore) directly and it
+> overrides any `OPENAI_KEY` repo/org secret. The workflow sets
+> `OPENAI_KEY` to `OPENCODE_API_KEY`, so an existing `OPENAI_KEY` secret is ignored.
+
+The action is event-driven and auto-runs on PR events; it posts its review as a
+comment on the pull request. Manual re-runs (**Actions → Run workflow** with a PR
+number) execute PR-Agent's CLI instead, because the action itself ignores
+`workflow_dispatch`.
+
 ## Contributing
 
 Any contributions made are **greatly appreciated**.

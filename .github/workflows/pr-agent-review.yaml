@@ -1,0 +1,68 @@
+name: pr-agent-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to review'
+        required: true
+        type: string
+
+jobs:
+  pr-agent-review:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.user.login == 'bgzo'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: PR Agent review (auto)
+        if: github.event_name == 'pull_request'
+        uses: the-pr-agent/pr-agent@main
+        env:
+          # Event-driven: on pull_request events it auto-runs its tools.
+          # PR-Agent reads settings env vars with NO prefix (envvar_prefix=False),
+          # so use SECTION__KEY, not PR_AGENT__SECTION__KEY. Do NOT set
+          # CONFIG__FALLBACK_MODELS: env lists merge with the defaults, which
+          # would re-add gpt-5.6-terra as a fallback.
+          CONFIG__MODEL: "openai/glm-5.3-flash"
+          CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
+          CONFIG__RESPONSE_LANGUAGE: "zh-cn"
+          GITHUB_ACTION_CONFIG__AUTO_DESCRIBE: "false"
+          GITHUB_ACTION_CONFIG__AUTO_IMPROVE: "false"
+          # OPENAI_KEY (single underscore) is read by the action runner and
+          # overrides any repo/org OPENAI_KEY secret; OPENAI__KEY (double) is
+          # what the CLI/dynaconf reads. Set both so either path works.
+          # OPENAI__API_BASE routes the request to opencode-go.
+          OPENAI_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENAI__KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENAI__API_BASE: ${{ vars.OPENCODE_API_BASE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: PR Agent review (manual)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          # The action ignores workflow_dispatch, so run the CLI directly.
+          python3 -m venv /tmp/pr-agent-venv
+          /tmp/pr-agent-venv/bin/pip install --quiet pr-agent
+          /tmp/pr-agent-venv/bin/pr-agent \
+            --pr_url "https://github.com/${{ github.repository }}/pull/${{ inputs.pr_number }}" \
+            review
+        env:
+          CONFIG__MODEL: "openai/glm-5.3-flash"
+          CONFIG__CUSTOM_MODEL_MAX_TOKENS: "32768"
+          CONFIG__RESPONSE_LANGUAGE: "zh-cn"
+          # The CLI reads the key via dynaconf (OPENAI__KEY, double underscore).
+          # OPENAI_KEY is also set for the action runner / CLI parity.
+          OPENAI_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENAI__KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENAI__API_BASE: ${{ vars.OPENCODE_API_BASE }}
+          GITHUB__USER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
