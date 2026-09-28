@@ -18,18 +18,24 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - name: Configure opencode CI permissions (deny rm)
+      - name: Configure opencode CI permissions (deny rm / git commit / git push)
         run: |
           cat > opencode.json <<'EOF'
           {
             "$schema": "https://opencode.ai/config.json",
             "permission": {
               "bash": {
+                "*": "allow",
                 "rm *": "deny",
                 "rmdir *": "deny",
                 "shred *": "deny",
                 "truncate *": "deny",
-                "*": "allow"
+                "git commit": "deny",
+                "git commit *": "deny",
+                "git * commit*": "deny",
+                "git push": "deny",
+                "git push *": "deny",
+                "git * push*": "deny"
               },
               "read": "allow",
               "edit": "allow",
@@ -39,7 +45,7 @@ jobs:
               "task": "allow",
               "external_directory": "allow",
               "todowrite": "allow",
-              "question": "allow",
+              "question": "deny",
               "webfetch": "allow",
               "websearch": "allow",
               "lsp": "allow",
@@ -67,6 +73,8 @@ jobs:
             Review the current HEAD independently.
             Do not treat previous reviews as authoritative.
             Do not report speculative or purely stylistic concerns.
+
+            Do not run git commit or git push under any circumstances. Review only; never create commits or push. Never comment on or modify remote branches or history. Never ask the user questions or request confirmation; there is no one to answer in CI, so produce the final review directly.
 
             Every comment must include: file path + line number, what the issue is, why it is an issue, and a concrete fix suggestion. If a specific line cannot be identified, describe the location.
 
