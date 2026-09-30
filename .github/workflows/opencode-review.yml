@@ -1,0 +1,205 @@
+name: opencode-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  opencode-review:
+    if: github.event.pull_request.user.login == 'bgzo' && !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    # 两次尝试（最长 16 + 11 分钟）加初始化开销：最坏路径也留有余量，保证双超时时
+    # 仍能走到显式的门禁校验步骤，而不是被 job 上限中途取消；正常一次 2-10 分钟完成
+    timeout-minutes: 35
+    # 同一 PR 连续推送时，取消旧的审查，避免重复评论与配额浪费
+    concurrency:
+      group: opencode-review-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+    permissions:
+      # 只读 contents：即使工作区变脏，opencode 也无法 push
+      contents: read
+      # 评论需要写权限
+      pull-requests: write
+      issues: write
+    env:
+      OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      MODEL: opencode-go/glm-5.3-flash
+      # 版本查询三连失败时的固定回退版本，保证任何路径下安装版本可复现
+      OPENCODE_FALLBACK_VERSION: "1.18.33"
+      # 思考等级：glm-5.3-flash 支持 low/high/max
+      VARIANT: high
+      # 用 workflow 的 GITHUB_TOKEN（contents: read），不再用 OpenCode App token：
+      # App token 有写权限，能绕开下面的 bash deny 规则直接 commit/push
+      USE_GITHUB_TOKEN: "true"
+      PROMPT: |
+        Review this PR. Focus on issues, not on evaluating the PR itself.
+
+        Find correctness, regression, security, robustness, maintainability, and test issues. Also suggest meaningful improvements.
+
+        P0/P1 = blocking.
+        P2 = non-blocking TODO.
+
+        Review the current HEAD independently.
+        Do not treat previous reviews as authoritative.
+        Do not report speculative or purely stylistic concerns.
+
+        Do not run git commit or git push under any circumstances. Review only; never create commits or push. Never create, edit or delete repository files, and never comment on or modify remote branches or history. Never ask the user questions or request confirmation; there is no one to answer in CI, so produce the final review directly.
+
+        Every comment must include: file path + line number, what the issue is, why it is an issue, and a concrete fix suggestion. If a specific line cannot be identified, describe the location.
+
+        BLOCK if P0/P1 exists.
+        LGTM otherwise.
+        Reply in Simplified Chinese.
+
+        Your final reply is posted verbatim as the PR comment, so it must BE the complete review (verdict plus any P0/P1/P2 items). Finish with a line exactly like `结论：LGTM` or `结论：BLOCK`. Never end with a plan/status note such as "正准备汇总…", and never end on a tool call.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      # 配置写到全局目录（~/.config/opencode/opencode.json），不要写进仓库目录：
+      # opencode 结束时会对「变脏的工作区」执行 git add/commit/push，写进仓库会把自己提交上去
+      - name: Configure opencode CI permissions (deny rm / git commit / git push)
+        run: |
+          mkdir -p "$HOME/.config/opencode"
+          cat > "$HOME/.config/opencode/opencode.json" <<'EOF'
+          {
+            "$schema": "https://opencode.ai/config.json",
+            "permission": {
+              "bash": {
+                "*": "allow",
+                "rm *": "deny",
+                "rmdir *": "deny",
+                "shred *": "deny",
+                "truncate *": "deny",
+                "git commit": "deny",
+                "git commit *": "deny",
+                "git * commit*": "deny",
+                "*git commit*": "deny",
+                "git push": "deny",
+                "git push *": "deny",
+                "git * push*": "deny",
+                "*git push*": "deny"
+              },
+              "read": "allow",
+              "edit": "deny",
+              "glob": "allow",
+              "grep": "allow",
+              "list": "allow",
+              "task": "allow",
+              "external_directory": "allow",
+              "todowrite": "allow",
+              "question": "deny",
+              "webfetch": "allow",
+              "websearch": "allow",
+              "lsp": "allow",
+              "doom_loop": "allow",
+              "skill": "allow"
+            }
+          }
+          EOF
+      # 说明：下面内联了 anomalyco/opencode/github 的 composite 步骤
+      # （v1.18.33 / 51ef4be1d3c122f18fefb510dca8d778571f4f18）。原 action 的
+      # 「Get opencode version」步骤用未认证 curl 请求 GitHub API，共享 runner 上
+      # 容易触发限流（60 次/小时）并让整步直接失败，而 action 没有对应 input 可用。
+      # 内联后：版本查询走 gh api（认证额度 5000 次/小时）且失败不中断 job。
+      - name: Get opencode version (authenticated, non-fatal)
+        id: version
+        run: |
+          VERSION=""
+          for attempt in 1 2 3; do
+            if VERSION=$(gh api repos/anomalyco/opencode/releases/latest --jq '.tag_name' 2>/dev/null) && [ -n "${VERSION}" ]; then
+              break
+            fi
+
+            VERSION=""
+            if [ "${attempt}" -lt 3 ]; then
+              echo "opencode version lookup attempt ${attempt} failed; retrying" >&2
+              sleep 2
+            fi
+          done
+          # 三连失败时回退到已知良好的固定版本：保证任何路径下安装版本可复现，
+          # 第三方安装端点只影响下载、不影响版本选择
+          if [ -z "${VERSION}" ]; then
+            VERSION="${OPENCODE_FALLBACK_VERSION}"
+            echo "::warning::Could not resolve the opencode release tag; falling back to ${VERSION}."
+          fi
+          VERSION="${VERSION#v}"
+          # 记录本 run 的起始时间（github 上下文没有 run_started_at），供重试前 /
+          # 门禁校验判断本 run 是否已发出审查结论使用。
+          {
+            echo "version=${VERSION}"
+            echo "started_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } >> "$GITHUB_OUTPUT"
+      - name: Cache opencode
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.opencode/bin
+          key: opencode-${{ runner.os }}-${{ runner.arch }}-${{ steps.version.outputs.version }}
+      - name: Install opencode
+        if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          PINNED_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          # 版本始终固定（查询失败时为 OPENCODE_FALLBACK_VERSION）
+          curl -fsSL https://opencode.ai/install | bash -s -- --version "${PINNED_VERSION}"
+      - name: Add opencode to PATH
+        run: echo "$HOME/.opencode/bin" >> "$GITHUB_PATH"
+      # provider 卡死/网络抖动时最多损失一次尝试的时长，失败后自动进入第二次。
+      - name: Run opencode review (attempt 1)
+        id: review_attempt_1
+        continue-on-error: true
+        timeout-minutes: 16
+        run: opencode github run
+      # attempt 1 失败时可能已经发出过评论，但评论有两种：真正的审查结论（带
+      # `结论：` 签名）与上游 handler 的「失败通报」评论。守卫只认前者，并且必须
+      # 绑定到本 run（评论页脚含 /actions/runs/<run id>），避免被并发取消的旧 run
+      # 迟到的结论误判。查询失败记为 unknown 并保守重试，最终由门禁校验兜底。
+      - name: Check whether attempt 1 posted a review verdict
+        id: verdict
+        if: steps.review_attempt_1.outcome == 'failure'
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+        run: |
+          if FOUND=$(bash .github/scripts/review_verdict.sh "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
+            if [ -n "${FOUND}" ]; then
+              echo "found=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "found=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "found=unknown" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Reset workspace before the retry
+        if: steps.review_attempt_1.outcome == 'failure' && steps.verdict.outputs.found != 'true'
+        run: |
+          git reset --hard HEAD
+          git clean -fd
+      - name: Run opencode review (attempt 2)
+        id: review_attempt_2
+        if: steps.review_attempt_1.outcome == 'failure' && steps.verdict.outputs.found != 'true'
+        continue-on-error: true
+        timeout-minutes: 11
+        run: opencode github run
+      # 门禁：本次 run 必须产出一条带结论签名且绑定本 run 的审查评论；无论 attempt
+      # 路径如何（重复评论被跳过、守卫查询失败、两次尝试均失败）都以此为准，避免静默放过。
+      - name: Verify a review verdict was posted
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+        run: |
+          if FOUND=$(bash .github/scripts/review_verdict.sh "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
+            if [ -n "${FOUND}" ]; then
+              echo "Review verdict comment found for this run."
+              exit 0
+            fi
+
+            echo "No review verdict was posted by this run; failing the gate." >&2
+            exit 1
+          fi
+
+          echo "Verdict lookup failed; failing the gate." >&2
+          exit 1
