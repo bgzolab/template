@@ -16,19 +16,77 @@ jobs:
        contains(github.event.comment.body, ' /opencode') ||
        startsWith(github.event.comment.body, '/opencode'))
     runs-on: ubuntu-latest
+    # 安装 + 一次会话的上限：provider 卡死或编码死循环时不会占满默认的 6 小时
+    timeout-minutes: 20
+    # 只读 contents：即使工作区变脏或 agent 被注入，opencode 也无法 push
     permissions:
-      id-token: write
-      contents: write
+      contents: read
+      # 评论需要写权限
       pull-requests: write
       issues: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+      MODEL: opencode-go/glm-5.3-flash
+      # 用 workflow 的 GITHUB_TOKEN（contents: read），不再用 OpenCode App token：
+      # App token 有写权限，能绕开 bash deny 规则直接 commit/push
+      USE_GITHUB_TOKEN: "true"
+      # 版本查询三连失败时的固定回退版本，保证任何路径下安装版本可复现
+      OPENCODE_FALLBACK_VERSION: "1.18.33"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - name: Run opencode
-        uses: anomalyco/opencode/github@latest
-        env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+      # deny 规则与只读 agent（default_agent=ci-readonly）和 review workflow 共用同一
+      # 脚本。只读原因：handler 在 chat 之后会对任何变脏的工作区执行 commit/push，而
+      # 只读 token 推不上去，push 失败会用 git 报错顶掉真正的回答；因此这一侧必须只读，
+      # 需要改代码时由 agent 在回复里给出 diff。
+      - name: Configure opencode CI permissions (read-only agent, deny rm / git commit / git push)
+        run: bash .github/scripts/configure-opencode-permissions.sh
+      # 说明：下面内联了 anomalyco/opencode/github 的 composite 步骤
+      # （v1.18.33 / 51ef4be1d3c122f18fefb510dca8d778571f4f18）。原 action 的
+      # 「Get opencode version」步骤用未认证 curl 请求 GitHub API，共享 runner 上
+      # 容易触发限流（60 次/小时）并让整步直接失败；内联后版本查询走 gh api（认证
+      # 额度 5000 次/小时）且失败不中断，安装固定版本并限时。
+      - name: Get opencode version (authenticated, non-fatal)
+        id: version
+        run: |
+          VERSION=""
+          for attempt in 1 2 3; do
+            if VERSION=$(gh api repos/anomalyco/opencode/releases/latest --jq '.tag_name' 2>/dev/null) && [ -n "${VERSION}" ]; then
+              break
+            fi
+
+            VERSION=""
+            if [ "${attempt}" -lt 3 ]; then
+              echo "opencode version lookup attempt ${attempt} failed; retrying" >&2
+              sleep 2
+            fi
+          done
+          if [ -z "${VERSION}" ]; then
+            VERSION="${OPENCODE_FALLBACK_VERSION}"
+            echo "::warning::Could not resolve the opencode release tag; falling back to ${VERSION}."
+          fi
+          VERSION="${VERSION#v}"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+      - name: Cache opencode
+        id: cache
+        uses: actions/cache@v4
         with:
-          model: opencode-go/glm-5.3-flash
+          path: ~/.opencode/bin
+          key: opencode-${{ runner.os }}-${{ runner.arch }}-${{ steps.version.outputs.version }}
+      - name: Install opencode
+        if: steps.cache.outputs.cache-hit != 'true'
+        # 安装必须有时限：curl 默认无最大时长，挂起会吃掉整个 job 的 20 分钟
+        timeout-minutes: 5
+        env:
+          PINNED_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -o pipefail
+          # 版本固定；--retry-max-time 把最坏重试总耗时压在 step 上限内
+          curl -fsSL --max-time 90 --retry 2 --retry-delay 2 --retry-max-time 240 https://opencode.ai/install | bash -s -- --version "${PINNED_VERSION}"
+      - name: Add opencode to PATH
+        run: echo "$HOME/.opencode/bin" >> "$GITHUB_PATH"
+      - name: Run opencode
+        run: opencode github run

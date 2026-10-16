@@ -8,9 +8,10 @@ jobs:
   opencode-review:
     if: github.event.pull_request.user.login == 'bgzo' && !github.event.pull_request.draft
     runs-on: ubuntu-latest
-    # 两次尝试（最长 16 + 11 分钟）加初始化开销：最坏路径也留有余量，保证双超时时
-    # 仍能走到显式的门禁校验步骤，而不是被 job 上限中途取消；正常一次 2-10 分钟完成
-    timeout-minutes: 35
+    # 三轮审查预算 20 + 25 + 15 = 60 分钟，加初始化 / 会话导出开销：最坏路径也留有余量，
+    # 保证三轮都超时时仍能走到「会话快照 + 门禁校验」步骤，而不是被 job 上限中途取消；
+    # 正常一次 2-10 分钟完成。
+    timeout-minutes: 80
     # 同一 PR 连续推送时，取消旧的审查，避免重复评论与配额浪费
     concurrency:
       group: opencode-review-${{ github.event.pull_request.number }}
@@ -48,6 +49,8 @@ jobs:
 
         Every comment must include: file path + line number, what the issue is, why it is an issue, and a concrete fix suggestion. If a specific line cannot be identified, describe the location.
 
+        Keep track of which files and modules you have not reviewed yet: a later turn may have to finalize this review with only partial coverage.
+
         BLOCK if P0/P1 exists.
         LGTM otherwise.
         Reply in Simplified Chinese.
@@ -58,47 +61,21 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-      # 配置写到全局目录（~/.config/opencode/opencode.json），不要写进仓库目录：
-      # opencode 结束时会对「变脏的工作区」执行 git add/commit/push，写进仓库会把自己提交上去
-      - name: Configure opencode CI permissions (deny rm / git commit / git push)
+      # deny 规则与只读 agent（default_agent=ci-readonly）由脚本统一写入全局配置
+      # （~/.config/opencode/opencode.json），不要写进仓库目录：opencode 结束时会对
+      # 「变脏的工作区」执行 git add/commit/push，写进仓库会把自己提交上去。
+      # 与 opencode-comment 共用同一脚本，避免安全策略漂移。
+      - name: Configure opencode CI permissions (read-only agent, deny rm / git commit / git push)
+        run: bash .github/scripts/configure-opencode-permissions.sh
+      # opencode github run 会把工作区切到 PR 的 head 分支（日志中的
+      # "Checking out local branch..."）。如果 head 分支不含这些脚本（例如从旧基线
+      # 拉出的分支），后面的门禁 / 续跑步骤会因 "No such file or directory" 误判失败。
+      # 因此在运行 opencode 之前先把脚本复制到工作区之外，后续一律使用副本。
+      - name: Stash the review helper scripts outside the workspace
         run: |
-          mkdir -p "$HOME/.config/opencode"
-          cat > "$HOME/.config/opencode/opencode.json" <<'EOF'
-          {
-            "$schema": "https://opencode.ai/config.json",
-            "permission": {
-              "bash": {
-                "*": "allow",
-                "rm *": "deny",
-                "rmdir *": "deny",
-                "shred *": "deny",
-                "truncate *": "deny",
-                "git commit": "deny",
-                "git commit *": "deny",
-                "git * commit*": "deny",
-                "*git commit*": "deny",
-                "git push": "deny",
-                "git push *": "deny",
-                "git * push*": "deny",
-                "*git push*": "deny"
-              },
-              "read": "allow",
-              "edit": "deny",
-              "glob": "allow",
-              "grep": "allow",
-              "list": "allow",
-              "task": "allow",
-              "external_directory": "allow",
-              "todowrite": "allow",
-              "question": "deny",
-              "webfetch": "allow",
-              "websearch": "allow",
-              "lsp": "allow",
-              "doom_loop": "allow",
-              "skill": "allow"
-            }
-          }
-          EOF
+          mkdir -p "$RUNNER_TEMP/review"
+          cp .github/scripts/review_verdict.sh "$RUNNER_TEMP/review/review_verdict.sh"
+          cp .github/scripts/opencode_review_turn.sh "$RUNNER_TEMP/review/opencode_review_turn.sh"
       # 说明：下面内联了 anomalyco/opencode/github 的 composite 步骤
       # （v1.18.33 / 51ef4be1d3c122f18fefb510dca8d778571f4f18）。原 action 的
       # 「Get opencode version」步骤用未认证 curl 请求 GitHub API，共享 runner 上
@@ -127,7 +104,8 @@ jobs:
           fi
           VERSION="${VERSION#v}"
           # 记录本 run 的起始时间（github 上下文没有 run_started_at），供重试前 /
-          # 门禁校验判断本 run 是否已发出审查结论使用。
+          # 门禁校验判断本 run 是否已发出审查结论使用；版本号还会写进会话快照，
+          # 供 opencode-review-rescue 安装完全一致的版本。
           {
             echo "version=${VERSION}"
             echo "started_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
@@ -140,31 +118,40 @@ jobs:
           key: opencode-${{ runner.os }}-${{ runner.arch }}-${{ steps.version.outputs.version }}
       - name: Install opencode
         if: steps.cache.outputs.cache-hit != 'true'
+        # 安装必须有时限：curl 默认无最大时长，挂起会吃掉 attempt 与门禁的余量
+        timeout-minutes: 5
         env:
           PINNED_VERSION: ${{ steps.version.outputs.version }}
         run: |
-          # 版本始终固定（查询失败时为 OPENCODE_FALLBACK_VERSION）
-          curl -fsSL https://opencode.ai/install | bash -s -- --version "${PINNED_VERSION}"
+          set -o pipefail
+          # 版本始终固定（查询失败时为 OPENCODE_FALLBACK_VERSION）；
+          # --retry-max-time 把最坏重试总耗时（≤240s + 安装）压在 step 上限内
+          curl -fsSL --max-time 90 --retry 2 --retry-delay 2 --retry-max-time 240 https://opencode.ai/install | bash -s -- --version "${PINNED_VERSION}"
       - name: Add opencode to PATH
         run: echo "$HOME/.opencode/bin" >> "$GITHUB_PATH"
-      # provider 卡死/网络抖动时最多损失一次尝试的时长，失败后自动进入第二次。
-      - name: Run opencode review (attempt 1)
+      # 第一轮（20 分钟）：完整审查。handler 自己负责发评论；provider 卡死/网络抖动
+      # 时最多损失这一轮，失败后进入「续跑」而不是从零重来。
+      - name: "Run opencode review (attempt 1: full review, 20 min)"
         id: review_attempt_1
         continue-on-error: true
-        timeout-minutes: 16
-        run: opencode github run
+        timeout-minutes: 20
+        run: |
+          set -o pipefail
+          # stdout 落盘：后续轮次需要从日志里取出 session id 来续跑同一会话
+          opencode github run 2>&1 | tee "$RUNNER_TEMP/attempt1.log"
       # attempt 1 失败时可能已经发出过评论，但评论有两种：真正的审查结论（带
       # `结论：` 签名）与上游 handler 的「失败通报」评论。守卫只认前者，并且必须
       # 绑定到本 run（评论页脚含 /actions/runs/<run id>），避免被并发取消的旧 run
       # 迟到的结论误判。查询失败记为 unknown 并保守重试，最终由门禁校验兜底。
+      # 这一检查对所有 outcome 都执行：attempt 1 正常结束但没有评论时同样要续跑。
       - name: Check whether attempt 1 posted a review verdict
         id: verdict
-        if: steps.review_attempt_1.outcome == 'failure'
+        if: always()
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
         run: |
-          if FOUND=$(bash .github/scripts/review_verdict.sh "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
+          if FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
             if [ -n "${FOUND}" ]; then
               echo "found=true" >> "$GITHUB_OUTPUT"
             else
@@ -173,33 +160,320 @@ jobs:
           else
             echo "found=unknown" >> "$GITHUB_OUTPUT"
           fi
-      - name: Reset workspace before the retry
-        if: steps.review_attempt_1.outcome == 'failure' && steps.verdict.outputs.found != 'true'
+      # attempt 1 被超时中断时，它的会话上下文仍保存在本地存储里。记下 session id，
+      # 后续轮次直接续这个会话出结论，而不是从零重读 diff 和仓库；这个 id 还会写进
+      # step summary，供手动触发 opencode-review-rescue 收尾。
+      - name: Extract the attempt 1 session id (for resume / rescue)
+        id: attempt1_session
+        if: always()
         run: |
-          git reset --hard HEAD
-          git clean -fd
-      - name: Run opencode review (attempt 2)
+          SESSION_ID=""
+          if [ -f "$RUNNER_TEMP/attempt1.log" ]; then
+            SESSION_ID=$(grep -oE 'opencode session ses_[A-Za-z0-9]+' "$RUNNER_TEMP/attempt1.log" | head -1 | awk '{print $NF}')
+          fi
+          echo "session_id=${SESSION_ID}" >> "$GITHUB_OUTPUT"
+          if [ -n "${SESSION_ID}" ]; then
+            echo "Captured attempt 1 session: ${SESSION_ID}"
+          else
+            echo "::warning::Could not capture the attempt 1 session id; later turns start a fresh review."
+          fi
+      # 第二轮（25 分钟）：续 attempt 1 的会话继续审查，探索成本只付一次。
+      # 如果本轮就得出完整结论，直接发评论落地；否则把会话留给第三轮强制收尾。
+      - name: "Run opencode review (attempt 2: continue the session, 25 min)"
         id: review_attempt_2
-        if: steps.review_attempt_1.outcome == 'failure' && steps.verdict.outputs.found != 'true'
+        if: steps.verdict.outputs.found != 'true'
         continue-on-error: true
-        timeout-minutes: 11
-        run: opencode github run
-      # 门禁：本次 run 必须产出一条带结论签名且绑定本 run 的审查评论；无论 attempt
-      # 路径如何（重复评论被跳过、守卫查询失败、两次尝试均失败）都以此为准，避免静默放过。
-      - name: Verify a review verdict was posted
+        # 脚本内部 timeout 25m 强杀，给解析 / 评论留时间；step 上限只作兜底
+        timeout-minutes: 27
+        env:
+          SESSION_ID: ${{ steps.attempt1_session.outputs.session_id }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+          TURN_TIMEOUT: 25m
+        run: |
+          set -uo pipefail
+          git reset --hard HEAD >/dev/null 2>&1 || true
+          git clean -fd >/dev/null 2>&1 || true
+
+          # 迟到的结论可能已经出现（attempt 1 的进程在超时后才把评论补发出去）：
+          # 先查一次，避免白跑 25 分钟；回合结束后的二次检查仍然保留。
+          FOUND=""
+          FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}") || FOUND=""
+          if [ -n "${FOUND}" ]; then
+            echo "A verdict comment already exists (id=${FOUND}); skipping attempt 2."
+            exit 0
+          fi
+
+          if [ -z "${SESSION_ID}" ]; then
+            # 没有可续的会话：退回一次完整审查（handler 自己发评论），
+            # 并尝试从日志里抓 session id 给后续轮次 / 快照使用
+            FALLBACK_STATUS=0
+            opencode github run 2>&1 | tee "$RUNNER_TEMP/attempt2.log" || FALLBACK_STATUS=$?
+            SID=$(grep -oE 'opencode session ses_[A-Za-z0-9]+' "$RUNNER_TEMP/attempt2.log" | head -1 | awk '{print $NF}')
+            echo "session_id=${SID}" >> "$GITHUB_OUTPUT"
+            if [ -z "${SID}" ]; then
+              echo "::warning::Could not capture the session id from the fallback run log; attempt 3 starts a fresh review."
+            fi
+            # 兜底审查期间 attempt 1 被超时干掉的处理进程仍可能补发迟到结论：
+            # 无法回滚已发出的评论，但记一条 warning 便于解释重复评论的来源。
+            FOUND=""
+            FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}") || FOUND=""
+            if [ -n "${FOUND}" ]; then
+              echo "::warning::A verdict comment (id=${FOUND}) already exists after the fallback run; duplicate comments may exist but the gate accepts any of them."
+            fi
+            # 兜底失败不要吞掉：step 保持可见的红色，后续 attempt 3 / 门禁照常接管
+            if [ "${FALLBACK_STATUS}" -ne 0 ]; then
+              echo "::warning::The fallback full review failed with ${FALLBACK_STATUS}; attempt 3 will take over." >&2
+              exit 1
+            fi
+            exit 0
+          fi
+
+          set +e
+          bash "$RUNNER_TEMP/review/opencode_review_turn.sh" continue \
+            "${SESSION_ID}" "$RUNNER_TEMP/attempt2.json" "$RUNNER_TEMP/attempt2.md"
+          TURN_STATUS=$?
+          set -e
+
+          if [ "${TURN_STATUS}" -ne 0 ]; then
+            echo "::warning::The continuation turn did not produce a 结论： signature; the finalization turn will take over."
+            exit 1
+          fi
+
+          # 若本 run 已有一条迟到结论（例如 attempt 1 的进程在超时后补发），不要重复评论
+          FOUND=""
+          FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}") || FOUND=""
+          if [ -n "${FOUND}" ]; then
+            echo "A verdict comment already exists (id=${FOUND}); skipping the duplicate."
+            exit 0
+          fi
+
+          # 页脚必须带上本 run 链接，门禁（review_verdict.sh）据此识别
+          printf '\n\n[github run](%s/%s/actions/runs/%s)\n' "${GITHUB_SERVER_URL}" "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}" >> "$RUNNER_TEMP/attempt2.md"
+          gh pr comment "${PR_NUMBER}" --body-file "$RUNNER_TEMP/attempt2.md"
+      - name: Check whether attempt 2 posted a review verdict
+        id: verdict2
+        if: always()
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
         run: |
-          if FOUND=$(bash .github/scripts/review_verdict.sh "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
+          if FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
+            if [ -n "${FOUND}" ]; then
+              echo "found=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "found=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "found=unknown" >> "$GITHUB_OUTPUT"
+          fi
+      # 第三轮（15 分钟）：最后通牒。必须停止剩余审查、直接输出结论，并列出未覆盖范围。
+      # 结论照常发评论；如果连结论都产不出来，就发一条不含结论签名的补救评论，
+      # 把 session id 暴露出来，供 opencode-review-rescue 手动收尾。
+      - name: "Run opencode review (attempt 3: final ultimatum, 15 min)"
+        id: review_attempt_3
+        if: steps.verdict.outputs.found != 'true' && steps.verdict2.outputs.found != 'true'
+        continue-on-error: true
+        # 脚本内部 timeout 15m 强杀，给解析 / 评论留时间；step 上限只作兜底
+        timeout-minutes: 17
+        env:
+          SESSION_ID: ${{ steps.attempt1_session.outputs.session_id || steps.review_attempt_2.outputs.session_id }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+          TURN_TIMEOUT: 15m
+        run: |
+          set -uo pipefail
+          git reset --hard HEAD >/dev/null 2>&1 || true
+          git clean -fd >/dev/null 2>&1 || true
+
+          if [ -z "${SESSION_ID}" ]; then
+            # 没有可续的会话、只剩一轮 15 分钟：完整审查跑不完，用降级 prompt 抢一个
+            # 「P0/P1 + 未审核到位 + 结论」。兜底不保证成功，但比完整审查有机会。
+            export PROMPT='时间预算只剩 15 分钟。快速审查本 PR：跳过全面探索，优先检查高风险区域（安全、正确性、CI 权限与超时逻辑），只报告 P0/P1。如果无法完整覆盖，必须单独写「未审核到位」小节列出未覆盖范围；全部覆盖则写「无」。最后一行必须恰好是 结论：LGTM 或 结论：BLOCK；不要写计划或状态说明。'
+            FALLBACK_STATUS=0
+            opencode github run 2>&1 | tee "$RUNNER_TEMP/attempt3.log" || FALLBACK_STATUS=$?
+            SID=$(grep -oE 'opencode session ses_[A-Za-z0-9]+' "$RUNNER_TEMP/attempt3.log" | head -1 | awk '{print $NF}')
+            echo "session_id=${SID}" >> "$GITHUB_OUTPUT"
+            if [ -z "${SID}" ]; then
+              echo "::warning::Could not capture the session id from the fallback run log; no rescue snapshot will be available."
+            fi
+            # 兜底期间 attempt 1/2 的迟到结论可能补发；无法回滚，仅记 warning
+            FOUND=""
+            FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}") || FOUND=""
+            if [ -n "${FOUND}" ]; then
+              echo "::warning::A verdict comment (id=${FOUND}) already exists after the fallback run; duplicate comments may exist but the gate accepts any of them."
+            fi
+            if [ "${FALLBACK_STATUS}" -ne 0 ]; then
+              echo "::warning::The fallback review failed with ${FALLBACK_STATUS}; the gate will report the missing verdict." >&2
+              exit 1
+            fi
+            exit 0
+          fi
+
+          set +e
+          bash "$RUNNER_TEMP/review/opencode_review_turn.sh" finalize \
+            "${SESSION_ID}" "$RUNNER_TEMP/attempt3.json" "$RUNNER_TEMP/attempt3.md"
+          TURN_STATUS=$?
+          set -e
+
+          if [ "${TURN_STATUS}" -eq 0 ]; then
+            FOUND=""
+            FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}") || FOUND=""
+            if [ -n "${FOUND}" ]; then
+              echo "A verdict comment already exists (id=${FOUND}); skipping the duplicate."
+              exit 0
+            fi
+            printf '\n\n[github run](%s/%s/actions/runs/%s)\n' "${GITHUB_SERVER_URL}" "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}" >> "$RUNNER_TEMP/attempt3.md"
+            gh pr comment "${PR_NUMBER}" --body-file "$RUNNER_TEMP/attempt3.md"
+            exit 0
+          fi
+
+          # 连最后通牒都没能收尾：发一条不含「结论：」的补救评论，暴露 session id 和已有输出。
+          # 注意：正文里绝不能出现「结论：」，否则会被门禁误当成正式结论。
+          if [ -s "$RUNNER_TEMP/attempt3.md" ]; then
+            {
+              echo "⚠️ 自动审查在 20 + 25 + 15 分钟预算内仍未能产出正式结论。以下是从会话中截取的最后一段输出（**不是**审查判定，不能作为合并依据）："
+              echo
+              echo "<details><summary>未完成的输出</summary>"
+              echo
+              cat "$RUNNER_TEMP/attempt3.md"
+              echo
+              echo "</details>"
+              echo
+              echo "- session id: \`${SESSION_ID}\`"
+              echo "- 收尾入口：Actions → **opencode-review-rescue** → Run workflow（session_id 填 \`${SESSION_ID}\`，pr_number 可留空自动识别）"
+              printf '\n[github run](%s/%s/actions/runs/%s)\n' "${GITHUB_SERVER_URL}" "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}"
+            } > "$RUNNER_TEMP/attempt3-salvage.md"
+            gh pr comment "${PR_NUMBER}" --body-file "$RUNNER_TEMP/attempt3-salvage.md"
+          fi
+          exit 1
+      # attempt 3 可能通过续跑回合发结论，也可能在无 session 的降级路径里由 handler
+      # 直接发；这里统一查一次，快照只对「确实没结论」的 run 生成，避免无谓制品。
+      - name: Check whether attempt 3 posted a review verdict
+        id: verdict3
+        if: always()
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+        run: |
+          if FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
+            if [ -n "${FOUND}" ]; then
+              echo "found=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "found=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "found=unknown" >> "$GITHUB_OUTPUT"
+          fi
+      # 三步都结束后统一解析可用的 session id：写进 step summary，失败 run 的页面上
+      # 能直接看到，供手动触发 opencode-review-rescue 收尾。
+      - name: Resolve the review session id
+        id: session
+        if: always()
+        env:
+          S1: ${{ steps.attempt1_session.outputs.session_id }}
+          S2: ${{ steps.review_attempt_2.outputs.session_id }}
+          S3: ${{ steps.review_attempt_3.outputs.session_id }}
+          FOUND3: ${{ steps.verdict3.outputs.found }}
+        run: |
+          SESSION_ID="${S1:-${S2:-${S3:-}}}"
+          echo "session_id=${SESSION_ID}" >> "$GITHUB_OUTPUT"
+          if [ -n "${SESSION_ID}" ]; then
+            {
+              echo "### opencode review session"
+              echo ""
+              echo "- session id: \`${SESSION_ID}\`"
+              echo "- 若本次审查未能输出结论，可运行 **opencode-review-rescue** 工作流，填入 session_id（pr_number 可留空自动识别）强制收尾。"
+            } >> "$GITHUB_STEP_SUMMARY"
+          elif [ "${FOUND3}" != "true" ]; then
+            # 没有 session id 时 rescue 无法工作（没有可 import 的会话）：只能重跑一轮
+            {
+              echo "### opencode review session"
+              echo ""
+              echo "- 未能从日志里捕获 session id（handler 可能没有真正启动），无法使用 opencode-review-rescue 收尾。"
+              echo "- 请推送新提交，或关闭后重新打开 PR，触发一轮新的完整审查。"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+      # 失败路径才会走到这里：把会话导出成 JSON + 元数据作为制品（保留 14 天），
+      # opencode-review-rescue 用同一版本 import 后即可续跑收尾。成功路径不用快照。
+      - name: Stage the session snapshot (rescue artifact)
+        id: snapshot
+        if: always() && steps.session.outputs.session_id != '' && steps.verdict.outputs.found != 'true' && steps.verdict2.outputs.found != 'true' && steps.verdict3.outputs.found != 'true'
+        # export 是本地存储读取，正常秒级完成；限时避免挂起吃掉门禁前的余量。
+        # continue-on-error：快照只是救援素材，成败由门禁决定，不能吞掉门禁的失败信息。
+        timeout-minutes: 3
+        continue-on-error: true
+        env:
+          SESSION_ID: ${{ steps.session.outputs.session_id }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          HEAD_BRANCH: ${{ github.head_ref }}
+          VERSION: ${{ steps.version.outputs.version }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+        run: |
+          set -uo pipefail
+          stage="$RUNNER_TEMP/session-snapshot"
+          rm -rf "$stage"
+          mkdir -p "$stage"
+
+          # export 失败不打断流水线（门禁仍以评论为准），只是没有可救援的快照
+          if ! opencode export "${SESSION_ID}" > "$stage/session.json" 2> "$stage/export.err"; then
+            echo "::warning::opencode export failed; no rescue snapshot will be uploaded."
+            cat "$stage/export.err" >&2 || true
+            rm -f "$stage/session.json"
+          fi
+
+          jq -n \
+            --arg session_id "${SESSION_ID}" \
+            --arg pr_number "${PR_NUMBER}" \
+            --arg head_sha "${HEAD_SHA}" \
+            --arg head_branch "${HEAD_BRANCH}" \
+            --arg opencode_version "${VERSION}" \
+            --arg model "${MODEL}" \
+            --arg variant "${VARIANT}" \
+            --arg review_run_id "${GITHUB_RUN_ID}" \
+            --arg started_at "${RUN_STARTED_AT}" \
+            --arg uploaded_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{session_id: $session_id, pr_number: $pr_number, head_sha: $head_sha, head_branch: $head_branch, opencode_version: $opencode_version, model: $model, variant: $variant, review_run_id: $review_run_id, started_at: $started_at, uploaded_at: $uploaded_at}' \
+            > "$stage/meta.json"
+
+          if [ -s "$stage/session.json" ]; then
+            echo "snapshot_ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "snapshot_ready=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Upload the session snapshot (for opencode-review-rescue)
+        if: always() && steps.snapshot.outputs.snapshot_ready == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: opencode-session-${{ steps.session.outputs.session_id }}
+          path: ${{ runner.temp }}/session-snapshot/
+          retention-days: 14
+          if-no-files-found: warn
+          # 重跑同一 run 时覆盖旧制品，避免同名冲突
+          overwrite: true
+      # 门禁：本次 run 必须产出一条带结论签名且绑定本 run 的审查评论；无论 attempt
+      # 路径如何（重复评论被跳过、守卫查询失败、三轮均失败）都以此为准，避免静默放过。
+      - name: Verify a review verdict was posted
+        if: always()
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_STARTED_AT: ${{ steps.version.outputs.started_at }}
+          SESSION_ID: ${{ steps.session.outputs.session_id }}
+        run: |
+          if FOUND=$(bash "$RUNNER_TEMP/review/review_verdict.sh" "${PR_NUMBER}" "${RUN_STARTED_AT}"); then
             if [ -n "${FOUND}" ]; then
               echo "Review verdict comment found for this run."
               exit 0
             fi
 
-            echo "No review verdict was posted by this run; failing the gate." >&2
+            if [ -n "${SESSION_ID}" ]; then
+              echo "::error::No review verdict was posted by this run. session_id=${SESSION_ID}. Use the opencode-review-rescue workflow with this session id to force a conclusion." >&2
+            else
+              echo "::error::No review verdict was posted and no opencode session id could be captured (the handler may not have started). Push a new commit or close and reopen the PR to trigger a fresh full review." >&2
+            fi
             exit 1
           fi
 
-          echo "Verdict lookup failed; failing the gate." >&2
+          echo "::error::Verdict lookup failed; failing the gate." >&2
           exit 1

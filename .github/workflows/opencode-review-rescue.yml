@@ -1,0 +1,219 @@
+name: opencode-review-rescue
+
+# 手动收尾：主审查 run（20 + 25 + 15 分钟）结束后如果仍没有结论评论，用这个
+# 工作流恢复审查会话的快照，强制 Agent 立刻输出「已完成的结论 + 未审核到位范围」，
+# 并把结果作为 PR 评论发布。不依赖失败 run 的 runner。
+#
+# 用法：Actions → opencode-review-rescue → Run workflow
+#   - session_id：失败 run 的 step summary / 补救评论 / 日志里的 `ses_...`
+#   - pr_number： 可选；留空则从快照元数据读取
+#   - note：      可选备注，附在收尾评论里
+run-name: rescue review session ${{ inputs.session_id }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      session_id:
+        description: "要收尾的 opencode 会话 id（ses_...，见失败 run 的 step summary / 日志 / 补救评论）"
+        required: true
+        type: string
+      pr_number:
+        description: "PR 编号；留空则用快照里记录的编号，收尾结论评论到该 PR"
+        required: false
+        type: string
+        default: ""
+      note:
+        description: "可选备注，附在收尾评论里（例如触发原因）"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  # 列出 / 下载快照制品需要 actions: read；显式 permissions 块下未声明的权限为 none，
+  # 缺少它时 artifact API 会 403，救援链在第一步就会挂掉
+  actions: read
+  contents: read
+  pull-requests: write
+  issues: write
+
+concurrency:
+  # 同一会话重复触发时取消前一次，避免收尾评论打架。工作流仅维护者可触发，
+  # session id 由第一个 step 校验格式；即使输入不规范，最坏也只是 group 名不同，
+  # 不影响取消语义，无实际影响。
+  group: opencode-review-rescue-${{ inputs.session_id }}
+  cancel-in-progress: true
+
+jobs:
+  rescue:
+    runs-on: ubuntu-latest
+    # 下载快照 + 安装 + 15 分钟收尾回合：留宽裕余量
+    timeout-minutes: 35
+    env:
+      OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      MODEL: opencode-go/glm-5.3-flash
+      VARIANT: high
+      # 用 workflow 的 GITHUB_TOKEN（contents: read），不再用 OpenCode App token
+      USE_GITHUB_TOKEN: "true"
+      # 快照里没有记录版本时的固定回退版本
+      OPENCODE_FALLBACK_VERSION: "1.18.33"
+    steps:
+      - name: Validate the session id
+        env:
+          SESSION_ID: ${{ inputs.session_id }}
+        run: |
+          set -euo pipefail
+          if ! [[ "${SESSION_ID}" =~ ^ses_[A-Za-z0-9]+$ ]]; then
+            echo "::error::session_id 不合法（应形如 ses_...）：${SESSION_ID}"
+            exit 1
+          fi
+      # 快照由 opencode-review 的失败路径上传，制品名即会话 id；取最新一个未过期的。
+      - name: Download the session snapshot
+        id: snapshot
+        env:
+          SESSION_ID: ${{ inputs.session_id }}
+          INPUT_PR_NUMBER: ${{ inputs.pr_number }}
+        run: |
+          set -euo pipefail
+          tmp="$RUNNER_TEMP/rescue"
+          mkdir -p "$tmp"
+          ARTIFACT_ID=$(gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=opencode-session-${SESSION_ID}&per_page=100" \
+            --jq '[.artifacts[] | select(.expired == false)] | sort_by(.created_at) | last | .id // empty')
+          if [ -z "${ARTIFACT_ID}" ]; then
+            echo "::error::没有找到未过期的快照制品 opencode-session-${SESSION_ID}（保留 14 天），或审查 run 没来得及上传。"
+            exit 1
+          fi
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${ARTIFACT_ID}/zip" > "$tmp/snapshot.zip"
+          unzip -o -q "$tmp/snapshot.zip" -d "$tmp/snapshot"
+          test -s "$tmp/snapshot/session.json" || { echo "::error::快照里缺少 session.json"; exit 1; }
+          test -s "$tmp/snapshot/meta.json" || { echo "::error::快照里缺少 meta.json"; exit 1; }
+
+          # 优先用显式传入的 PR 编号；否则用审查 run 记录的
+          PR_NUMBER="${INPUT_PR_NUMBER:-$(jq -r '.pr_number // empty' "$tmp/snapshot/meta.json")}"
+          if ! [[ "${PR_NUMBER}" =~ ^[0-9]+$ ]]; then
+            echo "::error::pr_number 缺失或不是数字：'${PR_NUMBER}'；请在触发时显式传入。"
+            exit 1
+          fi
+
+          HEAD_SHA=$(jq -r '.head_sha // empty' "$tmp/snapshot/meta.json")
+          if [ -z "${HEAD_SHA}" ]; then
+            HEAD_SHA=$(gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${ARTIFACT_ID}" --jq '.workflow_run.head_sha // empty')
+          fi
+          VERSION=$(jq -r '.opencode_version // empty' "$tmp/snapshot/meta.json")
+          MODEL_RECORDED=$(jq -r '.model // empty' "$tmp/snapshot/meta.json")
+          VARIANT_RECORDED=$(jq -r '.variant // empty' "$tmp/snapshot/meta.json")
+          {
+            echo "artifact_id=${ARTIFACT_ID}"
+            echo "pr_number=${PR_NUMBER}"
+            echo "head_sha=${HEAD_SHA}"
+            echo "version=${VERSION:-${OPENCODE_FALLBACK_VERSION}}"
+            echo "model=${MODEL_RECORDED}"
+            echo "variant=${VARIANT_RECORDED}"
+          } >> "$GITHUB_OUTPUT"
+          echo "Snapshot ${ARTIFACT_ID} for session ${SESSION_ID} (PR #${PR_NUMBER}, source ${VERSION:-${OPENCODE_FALLBACK_VERSION}})."
+      # 先按 workflow 所在 ref 签出，拿到仓库里的共享脚本：被审查的 head 分支
+      # 可能不存在这些脚本（快照创建时工作流可能是旧版），不能依赖它。
+      - name: Checkout the workflow ref (for the helper scripts)
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Stash the helper scripts outside the workspace
+        run: |
+          mkdir -p "$RUNNER_TEMP/review"
+          cp .github/scripts/configure-opencode-permissions.sh "$RUNNER_TEMP/review/configure-opencode-permissions.sh"
+          cp .github/scripts/opencode_review_turn.sh "$RUNNER_TEMP/review/opencode_review_turn.sh"
+      # 再签出快照记录的提交：import 会把会话的项目 / 目录重写到当前工作区，
+      # 上下文与当初一致时收尾结果最可信（收尾 agent 无工具，不会改文件）。
+      # head 可能已被 force-push 掉而取不到；失败不阻断救援，评论里已注明基线 SHA。
+      - name: Checkout the reviewed commit
+        if: steps.snapshot.outputs.head_sha != ''
+        continue-on-error: true
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.snapshot.outputs.head_sha }}
+          persist-credentials: false
+      - name: Configure opencode CI permissions (read-only agent, ci-finalize)
+        run: bash "$RUNNER_TEMP/review/configure-opencode-permissions.sh"
+      - name: Cache opencode
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.opencode/bin
+          key: opencode-${{ runner.os }}-${{ runner.arch }}-${{ steps.snapshot.outputs.version }}
+      - name: Install opencode (the version recorded in the snapshot)
+        if: steps.cache.outputs.cache-hit != 'true'
+        # 安装必须有时限，避免挂起吃掉收尾预算
+        timeout-minutes: 5
+        env:
+          PINNED_VERSION: ${{ steps.snapshot.outputs.version }}
+        run: |
+          set -o pipefail
+          curl -fsSL --max-time 90 --retry 2 --retry-delay 2 --retry-max-time 240 https://opencode.ai/install | bash -s -- --version "${PINNED_VERSION}"
+      - name: Add opencode to PATH
+        run: echo "$HOME/.opencode/bin" >> "$GITHUB_PATH"
+      # 用与审查 run 完全一致的 opencode 版本 import，避免跨版本 schema 不兼容
+      - name: Import the session snapshot
+        run: |
+          set -euo pipefail
+          opencode import "$RUNNER_TEMP/rescue/snapshot/session.json"
+      # 收尾回合：无工具 agent + 最后通牒 prompt。15 分钟预算内拿到结论就发正式
+      # 评论；拿不到就发不含结论签名的补救评论并让 job 失败，方便再次重跑。
+      - name: Run the rescue turn and post the result
+        id: rescue_turn
+        timeout-minutes: 20
+        env:
+          SESSION_ID: ${{ inputs.session_id }}
+          PR_NUMBER: ${{ steps.snapshot.outputs.pr_number }}
+          NOTE: ${{ inputs.note }}
+          HEAD_SHA: ${{ steps.snapshot.outputs.head_sha }}
+          RECORDED_MODEL: ${{ steps.snapshot.outputs.model }}
+          RECORDED_VARIANT: ${{ steps.snapshot.outputs.variant }}
+          TURN_TIMEOUT: 15m
+        run: |
+          set -uo pipefail
+
+          # 快照里记录了审查 run 当时使用的模型 / 档位；缺失时回退到 job 默认值
+          export MODEL="${RECORDED_MODEL:-${MODEL:-opencode-go/glm-5.3-flash}}"
+          export VARIANT="${RECORDED_VARIANT:-${VARIANT:-high}}"
+
+          set +e
+          bash "$RUNNER_TEMP/review/opencode_review_turn.sh" finalize \
+            "${SESSION_ID}" "$RUNNER_TEMP/rescue.json" "$RUNNER_TEMP/rescue.md"
+          TURN_STATUS=$?
+          set -e
+
+          if [ "${TURN_STATUS}" -eq 0 ]; then
+            {
+              echo "🔁 本次结论由 **opencode-review-rescue** 基于审查会话 \`${SESSION_ID}\` 收尾（审查基线 \`${HEAD_SHA}\`，可能已不是 PR 最新提交）。"
+              if [ -n "${NOTE:-}" ]; then
+                echo
+                echo "> ${NOTE}"
+              fi
+              echo
+              cat "$RUNNER_TEMP/rescue.md"
+              printf '\n\n[github run](%s/%s/actions/runs/%s)\n' "${GITHUB_SERVER_URL}" "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}"
+            } > "$RUNNER_TEMP/rescue-post.md"
+            gh pr comment "${PR_NUMBER}" --body-file "$RUNNER_TEMP/rescue-post.md"
+            echo "Rescue verdict posted on PR #${PR_NUMBER}."
+            exit 0
+          fi
+
+          echo "::error::收尾回合仍未产出结论（session ${SESSION_ID}）。可以稍后重跑本工作流。" >&2
+          # 补救评论里绝不能出现「结论：」，避免被当成正式结论
+          if [ -s "$RUNNER_TEMP/rescue.md" ]; then
+            {
+              echo "⚠️ **opencode-review-rescue** 的收尾回合仍未能产出正式结论。以下是从会话中截取的最后一段输出（**不是**审查判定，不能作为合并依据）："
+              echo
+              echo "<details><summary>未完成的输出</summary>"
+              echo
+              cat "$RUNNER_TEMP/rescue.md"
+              echo
+              echo "</details>"
+              echo
+              echo "- session id: \`${SESSION_ID}\`"
+              echo "- 可稍后再次运行 Actions → **opencode-review-rescue** 收尾"
+              printf '\n[github run](%s/%s/actions/runs/%s)\n' "${GITHUB_SERVER_URL}" "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}"
+            } > "$RUNNER_TEMP/rescue-salvage.md"
+            gh pr comment "${PR_NUMBER}" --body-file "$RUNNER_TEMP/rescue-salvage.md"
+          fi
+          exit 1
