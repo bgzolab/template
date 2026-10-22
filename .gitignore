@@ -198,6 +198,8 @@ docs/implement-plans/*
 docs/implementation-plans/*
 docs/sessions/*
 .opencode/plans/*
+# OpenCode codebase index (local, not committed)
+.opencode/index/
 
 # hide folder
 .bgzo/
